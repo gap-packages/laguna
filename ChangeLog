@@ -1,4 +1,4 @@
-$Id: ChangeLog,v 1.24 2007/02/07 17:15:13 alexk Exp $
+$Id: ChangeLog,v 1.26 2009/05/30 21:13:39 alexk Exp $
 
                     Brief history of the LAGUNA package 
 
@@ -148,3 +148,10 @@ $Id: ChangeLog,v 1.24 2007/02/07 17:15:13 alexk Exp $
 3.4 (February 2007)
     * Fixed a bug in Left/RightIdealBySybgroup
     * Added 3-argument version of BicyclicUnitOfType1, BicyclicUnitOfType2
+
+3.5.0 (May 2009)
+    * Corrected handling of zero element in InverseOp
+    * Speeded up PcNormalizedUnit by unsing collectors
+      and constructing the resulting group by GroupByRwsNC
+      instead of PcGroupFpGroup
+    

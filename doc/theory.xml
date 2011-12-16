@@ -1,4 +1,4 @@
-<!-- $Id: theory.xml,v 1.11 2005/04/19 21:32:53 alexk Exp $ -->
+<!-- $Id: theory.xml,v 1.12 2007/02/21 20:05:44 alexk Exp $ -->
 <Chapter Label="Theory">
 <Heading>The basic theory behind &LAGUNA;</Heading>    
 
@@ -82,7 +82,7 @@ generators <M>y_1, \ldots, y_{|G|-1} </M> and two types of relations:
 for <M> 1 \leq i \leq |G|-1 </M>, and 
 <M> [y_j,y_i]=(y_{j+1})^{\alpha_{j,i,j+1}} \cdots
               (y_{|G|-1})^{\alpha_{j,i,|G|-1}} </M>
-for <M> 1 \leq i&tlt;j \leq |G|-1</M>,
+for <M> 1 \leq i &lt; j \leq |G|-1</M>,
 where the exponents <M>\alpha_{i,k}</M> and <M>\alpha_{i,j,k}</M> are
 elements of the set <M>\{0,\ldots,p-1\}</M>. Having such a presentation, it 
 is possible to carry out efficient computations in the finite <M>p</M>-group
@@ -257,7 +257,7 @@ commutator presentation for the normalized unit group <M>V</M> of a
 First we compute the polycyclic generating
 sequence <M>y_1,\ldots,y_{|G|-1}</M> as in Section 
 <Ref Sect="TheoryThird"/>. Then for
-each <M>y_i</M> and for each <M>y_j,\ y_i</M> such that <M>i&tlt;j</M>
+each <M>y_i</M> and for each <M>y_j,\ y_i</M> such that <M>i&lt;j</M>
 we compute the canonical form for <M>y_i^p</M> and <M>[y_j,y_i]</M>
 as described in Section <Ref Sect="TheoryFourth"/>. <P/>
 
