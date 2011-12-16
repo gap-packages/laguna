@@ -184,7 +184,7 @@ InstallMethod( Augmentation,
     true,
     [ IsElementOfMagmaRingModuloRelations and IsMagmaRingObjDefaultRep ], 
     0,
-    elt -> Sum( CoefficientsBySupport( elt ) ) * One( elt) );   
+    elt -> Sum( CoefficientsBySupport( elt ) ) );   
 
 
 #############################################################################
@@ -281,6 +281,10 @@ InstallOtherMethod (IsUnit,
         function( elt )
         
         local S;
+	
+        if IsZero(elt) then
+          return false;
+        fi;  
         
         # if we have element of the form coefficient*group element
         # we switch to use standart method for magma rings

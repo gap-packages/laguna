@@ -17,9 +17,6 @@
 - add Embedding of the group G to NormalizedUnitgroup 
   and PCNormalizedUnitGroup
 
-- if G is abelian, whether another system of generators for the
-  unit group could be more efficient ?
-
 - construction of bicycle units and bicycle unit group
 
 - construction of the unitary subgroup
@@ -37,12 +34,6 @@
   - NumberOfConjugacyClassesPPowers( <G> )
   - RoggenkampParameter( <G> )
   
-- add something like this:
-     InstallImmediateMethod( IsGroupRing,
-     IsFreeMagmaRing, 0,
-     R -> HasUnderlyingMagma(R) and IsGroup(UnderlyingMagma(R)));
-  for group rings which "does not know" that they are group rings
-
 - add calculation of pc-presentation of factorgroups of the 
   normalized unit group over the subgroups 1+I^n, where I is the
   augmentation ideal (curently included in tst.g, AK)
