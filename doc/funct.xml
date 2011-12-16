@@ -686,9 +686,8 @@ true
    </Returns>
    <Description>
          The argument <A>KG</A> must be a <M>p</M>-modular 
-	 group algebra. 
-         <P/>
-	 For a group algebra <M>KG</M>, let <M>A</M> denote the 
+	 group algebra.<P/>
+	       For a group algebra <M>KG</M>, let <M>A</M> denote the 
 	 augmentation ideal, and assume that <M>c</M> is the 
 	 smallest number such that <M>A^c=0</M>. Then a weighted 
 	 basis of <M>KG</M> is some basis <M> b_1, \ldots, b_n </M> 
@@ -705,12 +704,11 @@ true
 	 <A>KG</A> itself. Since the augmentation ideal has 
 	 co-dimension 1 in <C>KG</C>, a basis for <C>KG</C> can
 	 be easily obtained by adjoining the identity element of 
-	 the group.
-	 <P/>
+	 the group.<P/>
          The method returns a record whose basis entry is the basis
 	 and the weights entry is a list of the corresponding weights 
-	 the of basis elements. See Section <Ref Sect="TheoryThird" /> 
-	 for more details.
+	 the of basis elements.<P/>
+	 			 For more details, see Section <Ref Sect="TheoryThird" />. 
    </Description>
 </ManSection>
 
@@ -1357,25 +1355,25 @@ gap> Length( last );
    <Meth Name="LieAlgebraByDomain" 
          Arg="A" />
    <Description>
-         This method takes an associative algebra as its argument, 
-	 and constructs its associated Lie algebra in which the product 
-	 is the bracket operation: <M>[a,b]=ab-ba</M>.
+         This method takes a group algebra as its argument, 
+	       and constructs its associated Lie algebra in which the product 
+	       is the bracket operation: <M>[a,b]=ab-ba</M>.
          It is recommended that the user never calls this method. 
-	 The Lie algebra for an associative algebra should normally 
-	 be created using <C>LieAlgebra( A )</C>. 
-	 When <C>LieAlgebra</C> is first invoked, it constructs the 
-	 Lie algebra for <A>A</A> using <C>LieAlgebraByDomain</C>. 
+	       The Lie algebra for an associative algebra should normally 
+	       be created using <C>LieAlgebra( A )</C>. 
+	       When <C>LieAlgebra</C> is first invoked, it constructs the 
+	       Lie algebra for <A>A</A> using <C>LieAlgebraByDomain</C>. 
          After that it stores this Lie algebra and simply returns it
-	 if <C>LieAlgebra</C> is called again.
+	       if <C>LieAlgebra</C> is called again.
    </Description>
 </ManSection>
 
 <Example>
 <![CDATA[
-gap> M := MatrixAlgebra( GF( 3 ), 3 );
-( GF(3)^[ 3, 3 ] )
-gap> L := LieAlgebra( M );
-<Lie algebra over GF(3)>
+gap> G := SymmetricGroup(3);; FG := GroupRing( GF( 2 ), G );
+<algebra-with-one over GF(2), with 2 generators>
+gap> L := LieAlgebra( FG );
+<Lie algebra over GF(2)>
 ]]>
 </Example>
 
@@ -1393,12 +1391,12 @@ gap> L := LieAlgebra( M );
 
 <Example>
 <![CDATA[
-gap> M := MatrixAlgebra( GF( 3 ), 3 );
-( GF(3)^[ 3, 3 ] )
-gap> L := LieAlgebra( M );
+gap> KG := GroupRing( GF(3), DihedralGroup(16) );
+<algebra-with-one over GF(3), with 4 generators>
+gap> L := LieAlgebra ( KG );
 <Lie algebra over GF(3)>
 gap> IsLieAlgebraByAssociativeAlgebra( L );
-true   
+true
 ]]>
 </Example>
 
@@ -1418,12 +1416,12 @@ true
 
 <Example>
 <![CDATA[
-gap> M := MatrixAlgebra( GF( 3 ), 3 );
-<algebra-with-one over GF(3), with 2 generators>
-gap> L := LieAlgebra( M );
-<Lie algebra over GF(3)>
+gap> KG := GroupRing( GF(2), DihedralGroup(16) ); 
+<algebra-with-one over GF(2), with 4 generators>
+gap> L := LieAlgebra ( KG );
+<Lie algebra over GF(2)>
 gap> UnderlyingAssociativeAlgebra( L );
-( GF(3)^[ 3, 3 ] )
+<algebra-with-one over GF(2), with 4 generators>
 gap> last = M;
 true  
 ]]>

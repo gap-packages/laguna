@@ -1,18 +1,20 @@
 %!PS-Adobe-2.0
-%%Creator: dvips(k) 5.92b Copyright 2002 Radical Eye Software
+%%Creator: dvips(k) 5.95b Copyright 2005 Radical Eye Software
 %%Title: manual.dvi
 %%Pages: 49
 %%PageOrder: Ascend
-%%BoundingBox: 0 0 596 842
+%%BoundingBox: 0 0 595 842
 %%DocumentFonts: Helvetica-Bold Times-Bold Times-Roman Symbol Courier
 %%+ Helvetica-Oblique Helvetica Times-Italic CMSY10 CMR10 CMMI10 CMEX10
 %%+ MSAM10
+%%DocumentPaperSizes: a4
 %%EndComments
 %DVIPSWebPage: (www.radicaleye.com)
 %DVIPSCommandLine: dvips -o manual.ps manual
-%DVIPSParameters: dpi=600, comments removed
-%DVIPSSource:  TeX output 2005.05.11:0717
-%%BeginProcSet: tex.pro
+%DVIPSParameters: dpi=600
+%DVIPSSource:  TeX output 2006.02.28:1749
+%%BeginProcSet: tex.pro 0 0
+%!
 /TeXDict 300 dict def TeXDict begin/N{def}def/B{bind def}N/S{exch}N/X{S
 N}B/A{dup}B/TR{translate}N/isls false N/vsize 11 72 mul N/hsize 8.5 72
 mul N/landplus90{false}def/@rigin{isls{[0 landplus90{1 -1}{-1 1}ifelse 0
@@ -57,17 +59,25 @@ p -2 w}B/o{p -1 w}B/q{p 1 w}B/r{p 2 w}B/s{p 3 w}B/t{p 4 w}B/x{0 S
 rmoveto}B/y{3 2 roll p a}B/bos{/SS save N}B/eos{SS restore}B end
 
 %%EndProcSet
-%%BeginProcSet: 8r.enc
-% File  8r.enc as of 2002-03-12 for PSNFSS 9
+%%BeginProcSet: 8r.enc 0 0
+% File 8r.enc  TeX Base 1 Encoding  Revision 2.0  2002-10-30
 %
-% This is the encoding vector for Type1 and TrueType fonts to be used
-% with TeX.  This file is part of the PSNFSS bundle, version 9
+% @@psencodingfile@{
+%   author    = "S. Rahtz, P. MacKay, Alan Jeffrey, B. Horn, K. Berry,
+%                W. Schmidt, P. Lehman",
+%   version   = "2.0",
+%   date      = "30 October 2002",
+%   filename  = "8r.enc",
+%   email     = "tex-fonts@@tug.org",
+%   docstring = "This is the encoding vector for Type1 and TrueType
+%                fonts to be used with TeX.  This file is part of the
+%                PSNFSS bundle, version 9"
+% @}
 % 
-% Authors: S. Rahtz, P. MacKay, Alan Jeffrey, B. Horn, K. Berry, W. Schmidt
-%
-% Idea is to have all the characters normally included in Type 1 fonts
+% The idea is to have all the characters normally included in Type 1 fonts
 % available for typesetting. This is effectively the characters in Adobe
-% Standard Encoding + ISO Latin 1 + extra characters from Lucida + Euro.
+% Standard encoding, ISO Latin 1, Windows ANSI including the euro symbol,
+% MacRoman, and some extra characters from Lucida.
 % 
 % Character code assignments were made as follows:
 % 
@@ -85,77 +95,95 @@ rmoveto}B/y{3 2 roll p a}B/bos{/SS save N}B/eos{SS restore}B end
 % (3) Y&Y Lucida Bright includes some extra text characters; in the
 % hopes that other PostScript fonts, perhaps created for public
 % consumption, will include them, they are included starting at 0x12.
+% These are /dotlessj /ff /ffi /ffl.
 % 
-% (4) Remaining positions left undefined are for use in (hopefully)
-% upward-compatible revisions, if someday more characters are generally
-% available.
-% 
-% (5) hyphen appears twice for compatibility with both ASCII and Windows.
+% (4) hyphen appears twice for compatibility with both ASCII and Windows.
 %
-% (6) /Euro is assigned to 128, as in Windows ANSI
-% 
+% (5) /Euro was assigned to 128, as in Windows ANSI
+%
+% (6) Missing characters from MacRoman encoding incorporated as follows:
+%
+%     PostScript      MacRoman        TeXBase1
+%     --------------  --------------  --------------
+%     /notequal       173             0x16
+%     /infinity       176             0x17
+%     /lessequal      178             0x18
+%     /greaterequal   179             0x19
+%     /partialdiff    182             0x1A
+%     /summation      183             0x1B
+%     /product        184             0x1C
+%     /pi             185             0x1D
+%     /integral       186             0x81
+%     /Omega          189             0x8D
+%     /radical        195             0x8E
+%     /approxequal    197             0x8F
+%     /Delta          198             0x9D
+%     /lozenge        215             0x9E
+%
 /TeXBase1Encoding [
-% 0x00 (encoded characters from Adobe Standard not in Windows 3.1)
-  /.notdef /dotaccent /fi /fl
-  /fraction /hungarumlaut /Lslash /lslash
-  /ogonek /ring /.notdef
-  /breve /minus /.notdef 
-% These are the only two remaining unencoded characters, so may as
-% well include them.
-  /Zcaron /zcaron 
+% 0x00
+ /.notdef /dotaccent /fi /fl
+ /fraction /hungarumlaut /Lslash /lslash
+ /ogonek /ring /.notdef /breve
+ /minus /.notdef /Zcaron /zcaron
 % 0x10
- /caron /dotlessi 
-% (unusual TeX characters available in, e.g., Lucida Bright)
- /dotlessj /ff /ffi /ffl 
- /.notdef /.notdef /.notdef /.notdef
- /.notdef /.notdef /.notdef /.notdef
- % very contentious; it's so painful not having quoteleft and quoteright
- % at 96 and 145 that we move the things normally found there down to here.
- /grave /quotesingle 
-% 0x20 (ASCII begins)
+ /caron /dotlessi /dotlessj /ff
+ /ffi /ffl /notequal /infinity
+ /lessequal /greaterequal /partialdiff /summation
+ /product /pi /grave /quotesingle
+% 0x20
  /space /exclam /quotedbl /numbersign
  /dollar /percent /ampersand /quoteright
- /parenleft /parenright /asterisk /plus /comma /hyphen /period /slash
+ /parenleft /parenright /asterisk /plus
+ /comma /hyphen /period /slash
 % 0x30
- /zero /one /two /three /four /five /six /seven
- /eight /nine /colon /semicolon /less /equal /greater /question
+ /zero /one /two /three
+ /four /five /six /seven
+ /eight /nine /colon /semicolon
+ /less /equal /greater /question
 % 0x40
- /at /A /B /C /D /E /F /G /H /I /J /K /L /M /N /O
+ /at /A /B /C
+ /D /E /F /G
+ /H /I /J /K
+ /L /M /N /O
 % 0x50
- /P /Q /R /S /T /U /V /W
- /X /Y /Z /bracketleft /backslash /bracketright /asciicircum /underscore
+ /P /Q /R /S
+ /T /U /V /W
+ /X /Y /Z /bracketleft
+ /backslash /bracketright /asciicircum /underscore
 % 0x60
- /quoteleft /a /b /c /d /e /f /g /h /i /j /k /l /m /n /o
+ /quoteleft /a /b /c
+ /d /e /f /g
+ /h /i /j /k
+ /l /m /n /o
 % 0x70
- /p /q /r /s /t /u /v /w
- /x /y /z /braceleft /bar /braceright /asciitilde
- /.notdef % rubout; ASCII ends
+ /p /q /r /s
+ /t /u /v /w
+ /x /y /z /braceleft
+ /bar /braceright /asciitilde /.notdef
 % 0x80
- /Euro /.notdef /quotesinglbase /florin
+ /Euro /integral /quotesinglbase /florin
  /quotedblbase /ellipsis /dagger /daggerdbl
  /circumflex /perthousand /Scaron /guilsinglleft
- /OE /.notdef /.notdef /.notdef
+ /OE /Omega /radical /approxequal
 % 0x90
  /.notdef /.notdef /.notdef /quotedblleft
  /quotedblright /bullet /endash /emdash
  /tilde /trademark /scaron /guilsinglright
- /oe /.notdef /.notdef /Ydieresis
+ /oe /Delta /lozenge /Ydieresis
 % 0xA0
- /.notdef % nobreakspace
- /exclamdown /cent /sterling
+ /.notdef /exclamdown /cent /sterling
  /currency /yen /brokenbar /section
  /dieresis /copyright /ordfeminine /guillemotleft
- /logicalnot
- /hyphen % Y&Y (also at 45); Windows' softhyphen
- /registered
- /macron
+ /logicalnot /hyphen /registered /macron
 % 0xD0
  /degree /plusminus /twosuperior /threesuperior
  /acute /mu /paragraph /periodcentered
  /cedilla /onesuperior /ordmasculine /guillemotright
  /onequarter /onehalf /threequarters /questiondown
 % 0xC0
- /Agrave /Aacute /Acircumflex /Atilde /Adieresis /Aring /AE /Ccedilla
+ /Agrave /Aacute /Acircumflex /Atilde
+ /Adieresis /Aring /AE /Ccedilla
  /Egrave /Eacute /Ecircumflex /Edieresis
  /Igrave /Iacute /Icircumflex /Idieresis
 % 0xD0
@@ -175,131 +203,10 @@ rmoveto}B/y{3 2 roll p a}B/bos{/SS save N}B/eos{SS restore}B end
  /udieresis /yacute /thorn /ydieresis
 ] def
 
-%%EndProcSet
-%%BeginProcSet: bbad153f.enc
-% Thomas Esser, Dec 2002. public domain
-%
-% Encoding for:
-%     cmsy10 cmsy5 cmsy6 cmsy7 cmsy8 cmsy9
-%
-/TeXbbad153fEncoding [
-/minus /periodcentered /multiply /asteriskmath /divide /diamondmath
-/plusminus /minusplus /circleplus /circleminus /circlemultiply
-/circledivide /circledot /circlecopyrt /openbullet /bullet
-/equivasymptotic /equivalence /reflexsubset /reflexsuperset /lessequal
-/greaterequal /precedesequal /followsequal /similar /approxequal
-/propersubset /propersuperset /lessmuch /greatermuch /precedes /follows
-/arrowleft /arrowright /arrowup /arrowdown /arrowboth /arrownortheast
-/arrowsoutheast /similarequal /arrowdblleft /arrowdblright /arrowdblup
-/arrowdbldown /arrowdblboth /arrownorthwest /arrowsouthwest /proportional
-/prime /infinity /element /owner /triangle /triangleinv /negationslash
-/mapsto /universal /existential /logicalnot /emptyset /Rfractur /Ifractur
-/latticetop /perpendicular /aleph /A /B /C /D /E /F /G /H /I /J /K
-/L /M /N /O /P /Q /R /S /T /U /V /W /X /Y /Z /union /intersection
-/unionmulti /logicaland /logicalor /turnstileleft /turnstileright
-/floorleft /floorright /ceilingleft /ceilingright /braceleft /braceright
-/angbracketleft /angbracketright /bar /bardbl /arrowbothv /arrowdblbothv
-/backslash /wreathproduct /radical /coproduct /nabla /integral
-/unionsq /intersectionsq /subsetsqequal /supersetsqequal /section
-/dagger /daggerdbl /paragraph /club /diamond /heart /spade /arrowleft
-/.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef
-/.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef
-/.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef
-/.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef
-/minus /periodcentered /multiply /asteriskmath /divide /diamondmath
-/plusminus /minusplus /circleplus /circleminus /.notdef /.notdef
-/circlemultiply /circledivide /circledot /circlecopyrt /openbullet
-/bullet /equivasymptotic /equivalence /reflexsubset /reflexsuperset
-/lessequal /greaterequal /precedesequal /followsequal /similar
-/approxequal /propersubset /propersuperset /lessmuch /greatermuch
-/precedes /follows /arrowleft /spade /.notdef /.notdef /.notdef /.notdef
-/.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef
-/.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef
-/.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef
-/.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef
-/.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef
-/.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef
-/.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef
-] def
 
 %%EndProcSet
-%%BeginProcSet: f7b6d320.enc
-% Thomas Esser, Dec 2002. public domain
-%
-% Encoding for:
-%     cmb10 cmbx10 cmbx12 cmbx5 cmbx6 cmbx7 cmbx8 cmbx9 cmbxsl10
-%     cmdunh10 cmr10 cmr12 cmr17cmr6 cmr7 cmr8 cmr9 cmsl10 cmsl12 cmsl8
-%     cmsl9 cmss10cmss12 cmss17 cmss8 cmss9 cmssbx10 cmssdc10 cmssi10
-%     cmssi12 cmssi17 cmssi8cmssi9 cmssq8 cmssqi8 cmvtt10
-%
-/TeXf7b6d320Encoding [
-/Gamma /Delta /Theta /Lambda /Xi /Pi /Sigma /Upsilon /Phi /Psi /Omega
-/ff /fi /fl /ffi /ffl /dotlessi /dotlessj /grave /acute /caron /breve
-/macron /ring /cedilla /germandbls /ae /oe /oslash /AE /OE /Oslash
-/suppress /exclam /quotedblright /numbersign /dollar /percent /ampersand
-/quoteright /parenleft /parenright /asterisk /plus /comma /hyphen
-/period /slash /zero /one /two /three /four /five /six /seven /eight
-/nine /colon /semicolon /exclamdown /equal /questiondown /question /at
-/A /B /C /D /E /F /G /H /I /J /K /L /M /N /O /P /Q /R /S /T /U /V /W /X
-/Y /Z /bracketleft /quotedblleft /bracketright /circumflex /dotaccent
-/quoteleft /a /b /c /d /e /f /g /h /i /j /k /l /m /n /o /p /q /r /s /t /u
-/v /w /x /y /z /endash /emdash /hungarumlaut /tilde /dieresis /suppress
-/.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef
-/.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef
-/.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef
-/.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /space
-/Gamma /Delta /Theta /Lambda /Xi /Pi /Sigma /Upsilon /Phi /Psi /.notdef
-/.notdef /Omega /ff /fi /fl /ffi /ffl /dotlessi /dotlessj /grave /acute
-/caron /breve /macron /ring /cedilla /germandbls /ae /oe /oslash /AE
-/OE /Oslash /suppress /dieresis /.notdef /.notdef /.notdef /.notdef
-/.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef
-/.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef
-/.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef
-/.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef
-/.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef
-/.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef
-/.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef
-] def
-
-%%EndProcSet
-%%BeginProcSet: aae443f0.enc
-% Thomas Esser, Dec 2002. public domain
-%
-% Encoding for:
-%     cmmi10 cmmi12 cmmi5 cmmi6 cmmi7 cmmi8 cmmi9 cmmib10
-%
-/TeXaae443f0Encoding [
-/Gamma /Delta /Theta /Lambda /Xi /Pi /Sigma /Upsilon /Phi /Psi /Omega
-/alpha /beta /gamma /delta /epsilon1 /zeta /eta /theta /iota /kappa
-/lambda /mu /nu /xi /pi /rho /sigma /tau /upsilon /phi /chi /psi
-/omega /epsilon /theta1 /pi1 /rho1 /sigma1 /phi1 /arrowlefttophalf
-/arrowleftbothalf /arrowrighttophalf /arrowrightbothalf /arrowhookleft
-/arrowhookright /triangleright /triangleleft /zerooldstyle /oneoldstyle
-/twooldstyle /threeoldstyle /fouroldstyle /fiveoldstyle /sixoldstyle
-/sevenoldstyle /eightoldstyle /nineoldstyle /period /comma /less /slash
-/greater /star /partialdiff /A /B /C /D /E /F /G /H /I /J /K /L /M /N
-/O /P /Q /R /S /T /U /V /W /X /Y /Z /flat /natural /sharp /slurbelow
-/slurabove /lscript /a /b /c /d /e /f /g /h /i /j /k /l /m /n /o /p
-/q /r /s /t /u /v /w /x /y /z /dotlessi /dotlessj /weierstrass /vector
-/tie /psi /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef
-/.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef
-/.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef
-/.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef
-/space /Gamma /Delta /Theta /Lambda /Xi /Pi /Sigma /Upsilon /Phi /Psi
-/.notdef /.notdef /Omega /alpha /beta /gamma /delta /epsilon1 /zeta /eta
-/theta /iota /kappa /lambda /mu /nu /xi /pi /rho /sigma /tau /upsilon
-/phi /chi /psi /tie /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef
-/.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef
-/.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef
-/.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef
-/.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef
-/.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef
-/.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef
-/.notdef /.notdef /.notdef /.notdef /.notdef
-] def
-
-%%EndProcSet
-%%BeginProcSet: texps.pro
+%%BeginProcSet: texps.pro 0 0
+%!
 TeXDict begin/rf{findfont dup length 1 add dict begin{1 index/FID ne 2
 index/UniqueID ne and{def}{pop pop}ifelse}forall[1 index 0 6 -1 roll
 exec 0 exch 5 -1 roll VResolution Resolution div mul neg 0 0]FontType 0
@@ -315,7 +222,8 @@ forall Encoding{]exch pop}{cleartomark}ifelse}if/Encoding exch def}def
 end
 
 %%EndProcSet
-%%BeginProcSet: special.pro
+%%BeginProcSet: special.pro 0 0
+%!
 TeXDict begin/SDict 200 dict N SDict begin/@SpecialDefaults{/hs 612 N
 /vs 792 N/ho 0 N/vo 0 N/hsc 1 N/vsc 1 N/ang 0 N/CLIP 0 N/rwiSeen false N
 /rhiSeen false N/letter{}N/note{}N/a4{}N/legal{}N}B/@scaleunit 100 N
@@ -373,7 +281,8 @@ matrix currentmatrix N TR xrad yrad scale 0 0 1 startangle endangle arc
 savematrix setmatrix}N end
 
 %%EndProcSet
-%%BeginProcSet: color.pro
+%%BeginProcSet: color.pro 0 0
+%!
 TeXDict begin/setcmykcolor where{pop}{/setcmykcolor{dup 10 eq{pop
 setrgbcolor}{1 sub 4 1 roll 3{3 index add neg dup 0 lt{pop 0}if 3 1 roll
 }repeat setrgbcolor pop}ifelse}B}ifelse/TeXcolorcmyk{setcmykcolor}def
@@ -463,7 +372,6 @@ dup 6 /diamond put
 dup 66 /triangleright put
 readonly def
 /FontBBox{8 -463 1331 1003}readonly def
-/UniqueID 5031981 def
 currentdict end
 currentfile eexec
 D9D66F633B846A97B686A97E45A3D0AA052A014267B7904EB3C0D3BD0B83D891
@@ -534,10 +442,27 @@ end readonly def
 /FontMatrix [0.001 0 0 0.001 0 0] readonly def
 /Encoding 256 array
 0 1 255 {1 index exch /.notdef put} for
-dup 0 /.notdef put
+dup 0 /minus put
+dup 1 /periodcentered put
+dup 2 /multiply put
+dup 3 /asteriskmath put
+dup 13 /circlecopyrt put
+dup 17 /equivalence put
+dup 20 /lessequal put
+dup 21 /greaterequal put
+dup 33 /arrowright put
+dup 48 /prime put
+dup 50 /element put
+dup 54 /negationslash put
+dup 55 /mapsto put
+dup 102 /braceleft put
+dup 103 /braceright put
+dup 104 /angbracketleft put
+dup 105 /angbracketright put
+dup 106 /bar put
+dup 110 /backslash put
 readonly def
 /FontBBox{-29 -960 1116 775}readonly def
-/UniqueID 5000820 def
 currentdict end
 currentfile eexec
 D9D66F633B846A97B686A97E45A3D0AA052F09F9C8ADE9D907C058B87E9B6964
@@ -662,10 +587,14 @@ end readonly def
 /FontMatrix [0.001 0 0 0.001 0 0] readonly def
 /Encoding 256 array
 0 1 255 {1 index exch /.notdef put} for
-dup 0 /.notdef put
+dup 40 /parenleft put
+dup 41 /parenright put
+dup 43 /plus put
+dup 61 /equal put
+dup 91 /bracketleft put
+dup 93 /bracketright put
 readonly def
 /FontBBox{-251 -250 1009 969}readonly def
-/UniqueID 5000793 def
 currentdict end
 currentfile eexec
 D9D66F633B846A97B686A97E45A3D0AA052A014267B7904EB3C0D3BD0B83D891
@@ -748,10 +677,12 @@ end readonly def
 /FontMatrix [0.001 0 0 0.001 0 0] readonly def
 /Encoding 256 array
 0 1 255 {1 index exch /.notdef put} for
-dup 0 /.notdef put
+dup 58 /period put
+dup 59 /comma put
+dup 60 /less put
+dup 61 /slash put
 readonly def
 /FontBBox{-32 -250 1048 750}readonly def
-/UniqueID 5087385 def
 currentdict end
 currentfile eexec
 D9D66F633B846A97B686A97E45A3D0AA0529731C99A784CCBE85B4993B2EEBDE
@@ -831,7 +762,6 @@ dup 40 /braceleftBigg put
 dup 41 /bracerightBigg put
 readonly def
 /FontBBox{-24 -2960 1454 772}readonly def
-/UniqueID 5000774 def
 currentdict end
 currentfile eexec
 D9D66F633B846A97B686A97E45A3D0AA052A014267B7904EB3C0D3BD0B83D891
@@ -901,98 +831,90 @@ cleartomark
 %%EndFont 
 TeXDict begin 39158280 55380996 1000 600 600 (manual.dvi)
 @start /Fa 189[71 59[61 6[{}2 90.9091 /MSAM10 rf /Fb
-149[14 105[39{ TeXbbad153fEncoding ReEncodeFont }2 49.8132
-/CMSY10 rf /Fc 212[39 43[{ TeXf7b6d320Encoding ReEncodeFont }1
-49.8132 /CMR10 rf /Fd 205[25 25 49[{ TeXBase1Encoding ReEncodeFont }2
-49.8132 /Times-Roman rf /Fe 196[14 59[{
- TeXaae443f0Encoding ReEncodeFont }1 49.8132 /CMMI10
+149[14 105[39{}2 49.8132 /CMSY10 rf /Fc 212[39 43[{}1
+49.8132 /CMR10 rf /Fd 205[25 25 49[{TeXBase1Encoding ReEncodeFont}2
+49.8132 /Times-Roman rf /Fe 196[14 59[{}1 49.8132 /CMMI10
 rf /Ff 140[19 19 1[25 3[14 22 14 14 33[36 71[{
- TeXBase1Encoding ReEncodeFont }8 49.8132 /Times-Italic
-rf /Fh 143[60 25[73 14[86 73 70[{ TeXBase1Encoding ReEncodeFont }4
+TeXBase1Encoding ReEncodeFont}8 49.8132 /Times-Italic
+rf /Fh 143[60 25[73 14[86 73 70[{TeXBase1Encoding ReEncodeFont}4
 119.552 /Times-Italic rf /Fj 26[93 229[{}1 130.908 /Symbol
 rf /Fk 214[73 73 6[72 72 32[{}4 90.9091 /CMEX10 rf /Fl
 103[46 15[46 13[46 46 46 46 46 46 46 46 46 1[46 46 46
 46 46 46 46 46 46 46 46 46 46 46 46 46 3[46 1[46 3[46
 46 46 46 46 46 1[46 46 46 46 46 46 1[46 46 46 46 46 46
 46 46 46 6[46 6[46 46 46 1[46 46 46 46 46 1[46 46 40[{
- .85 ExtendFont TeXBase1Encoding ReEncodeFont }61 90.9091
-/Courier rf /Fm 196[18 59[{ TeXaae443f0Encoding ReEncodeFont }1
-66.4176 /CMMI10 rf /Fn 140[26 26 1[33 1[33 48 18 29 18
-18 33 33 2[33 29 1[33 20[37 3[48 48 71[{ TeXBase1Encoding ReEncodeFont }
-17 66.4176 /Times-Italic rf /Fo 145[45 3[25 35 35 45
-45 46[0 0 3[61 16[91 11[71 71 2[71 13[45 71 25 71{
- TeXbbad153fEncoding ReEncodeFont }17 90.9091 /CMSY10
-rf /Fp 162[18 1[18 29[52 17[52 1[26 26 40[{
- TeXf7b6d320Encoding ReEncodeFont }6 66.4176 /CMR10 rf
-/Fq 162[25 1[25 29[71 17[71 1[35 35 40[{
- TeXf7b6d320Encoding ReEncodeFont }6 90.9091 /CMR10 rf
-/Fr 158[42 97[{}1 66.4176 /Symbol rf /Fs 149[18 55[44
-1[18 44[33 2[52{ TeXbbad153fEncoding ReEncodeFont }5
-66.4176 /CMSY10 rf /Ft 178[65 7[44 3[53 65[{
- TeXBase1Encoding ReEncodeFont }3 72.7272 /Times-Roman
-rf /Fu 144[45 11[41 9[55 3[59 1[55 2[55 64 59 1[45 2[23
-59 64 2[59 2[55 19[27 45[{ TeXBase1Encoding ReEncodeFont }15
-81.8175 /Helvetica rf /Fv 139[57 1[76 1[96 7[96 2[76
-3[86 29[124 14[86 86 86 86 49[{ TeXBase1Encoding ReEncodeFont }11
-172.188 /Times-Bold rf /Fw 194[45 71 25 25 58[{
- TeXaae443f0Encoding ReEncodeFont }4 90.9091 /CMMI10
-rf /Fx 134[40 40 61 40 45 25 35 35 1[45 45 45 66 25 40
-25 25 45 45 25 40 45 40 45 45 3[35 1[35 51 2[76 56 66
-51 45 2[56 1[61 76 51 61 40 30 66 66 56 56 66 61 56 56
-7[45 45 2[45 3[45 2[23 30 23 2[30 30 37[45 2[{
- TeXBase1Encoding ReEncodeFont }57 90.9091 /Times-Italic
-rf /Fy 155[45 50 1[57 97[{}3 90.9091 /Symbol rf /Fz 170[59
-6[59 1[50 4[64 5[59 65[{ TeXBase1Encoding ReEncodeFont }5
-81.8175 /Helvetica-Bold rf /FA 134[45 1[66 1[51 30 35
-40 1[51 45 51 76 25 2[25 51 1[30 40 51 40 51 45 12[61
-1[66 8[35 7[66 6[30 1[45 1[45 1[45 45 45 45 49[{
- TeXBase1Encoding ReEncodeFont }30 90.9091 /Times-Bold
-rf /FB 134[103 103 149 1[115 69 80 92 1[115 103 115 172
-57 2[57 115 1[69 92 115 92 115 103 12[138 1[149 8[80
-5[149 1[149 65[{ TeXBase1Encoding ReEncodeFont }25 206.559
-/Times-Bold rf /FC 242[83 13[{ TeXbbad153fEncoding ReEncodeFont }1
-83.022 /CMSY10 rf /FD 104[74 33[42 23 32 32 1[42 42 42
-1[23 2[23 1[42 23 37 42 1[42 42 10[51 60 6[55 1[46 4[60
-5[51 5[28 7[42 1[42 2[21 1[21 44[{ TeXBase1Encoding ReEncodeFont }27
-83.022 /Times-Italic rf /FE 134[33 3[33 18 26 22 1[33
-33 33 52 18 2[18 33 33 22 29 33 29 33 29 29[44 12[33
-2[33 33 33 33 6[22 22 40[{ TeXBase1Encoding ReEncodeFont }27
-66.4176 /Times-Roman rf /FF 170[54 4[50 1[54 1[42 4[58
-5[50 65[{ TeXBase1Encoding ReEncodeFont }6 74.7193 /Helvetica
-rf /FG 170[43 6[43 1[33 4[47 5[40 65[{ TeXBase1Encoding ReEncodeFont }5
+.85 ExtendFont TeXBase1Encoding ReEncodeFont}61 90.9091
+/Courier rf /Fm 196[18 59[{}1 66.4176 /CMMI10 rf /Fn
+140[26 26 1[33 1[33 48 18 29 18 18 33 33 2[33 29 1[33
+20[37 3[48 48 71[{TeXBase1Encoding ReEncodeFont}17 66.4176
+/Times-Italic rf /Fo 145[45 3[25 35 35 45 45 46[0 0 3[61
+16[91 11[71 71 2[71 13[45 71 25 71{}17 90.9091 /CMSY10
+rf /Fp 162[18 1[18 29[52 17[52 1[26 26 40[{}6 66.4176
+/CMR10 rf /Fq 162[25 1[25 29[71 17[71 1[35 35 40[{}6
+90.9091 /CMR10 rf /Fr 158[42 97[{}1 66.4176 /Symbol rf
+/Fs 149[18 55[44 1[18 44[33 2[52{}5 66.4176 /CMSY10 rf
+/Ft 178[65 7[44 3[53 65[{TeXBase1Encoding ReEncodeFont}3
+72.7272 /Times-Roman rf /Fu 144[45 11[41 9[55 3[59 1[55
+2[55 64 59 1[45 2[23 59 64 2[59 2[55 19[27 45[{
+TeXBase1Encoding ReEncodeFont}15 81.8175 /Helvetica rf
+/Fv 139[57 1[76 1[96 7[96 2[76 3[86 29[124 14[86 86 86
+86 49[{TeXBase1Encoding ReEncodeFont}11 172.188 /Times-Bold
+rf /Fw 194[45 71 25 25 58[{}4 90.9091 /CMMI10 rf /Fx
+134[40 40 61 40 45 25 35 35 1[45 45 45 66 25 40 25 25
+45 45 25 40 45 40 45 45 3[35 1[35 51 2[76 56 66 51 45
+2[56 1[61 76 51 61 40 30 66 66 56 56 66 61 56 56 7[45
+45 2[45 3[45 2[23 30 23 2[30 30 37[45 2[{TeXBase1Encoding ReEncodeFont}
+57 90.9091 /Times-Italic rf /Fy 155[45 50 1[57 97[{}3
+90.9091 /Symbol rf /Fz 170[59 6[59 1[50 4[64 5[59 65[{
+TeXBase1Encoding ReEncodeFont}5 81.8175 /Helvetica-Bold
+rf /FA 134[45 1[66 1[51 30 35 40 1[51 45 51 76 25 2[25
+51 1[30 40 51 40 51 45 12[61 1[66 8[35 7[66 6[30 1[45
+1[45 1[45 45 45 45 49[{TeXBase1Encoding ReEncodeFont}30
+90.9091 /Times-Bold rf /FB 134[103 103 149 1[115 69 80
+92 1[115 103 115 172 57 2[57 115 1[69 92 115 92 115 103
+12[138 1[149 8[80 5[149 1[149 65[{TeXBase1Encoding ReEncodeFont}25
+206.559 /Times-Bold rf /FC 242[83 13[{}1 83.022 /CMSY10
+rf /FD 104[74 33[42 23 32 32 1[42 42 42 1[23 2[23 1[42
+23 37 42 1[42 42 10[51 60 6[55 1[46 4[60 5[51 5[28 7[42
+42 3[21 1[21 44[{TeXBase1Encoding ReEncodeFont}27 83.022
+/Times-Italic rf /FE 134[33 3[33 18 26 22 1[33 33 33
+52 18 2[18 33 33 22 29 33 29 33 29 29[44 12[33 2[33 33
+33 33 6[22 22 40[{TeXBase1Encoding ReEncodeFont}27 66.4176
+/Times-Roman rf /FF 170[54 4[50 1[54 1[42 4[58 5[50 65[{
+TeXBase1Encoding ReEncodeFont}6 74.7193 /Helvetica rf
+/FG 170[43 6[43 1[33 4[47 5[40 65[{TeXBase1Encoding ReEncodeFont}5
 59.7754 /Helvetica-Oblique rf /FH 103[42 15[42 13[42
 42 42 42 42 42 42 42 42 1[42 42 42 42 42 42 42 42 42
 42 42 42 42 42 42 42 3[42 42 42 42 2[42 42 42 42 42 42
 1[42 42 42 42 42 42 1[42 42 42 42 42 42 42 42 42 42 1[42
 42 42 42 42 42 42 42 42 42 42 42 42 42 42 42 42 42 42
 42 42 42 42 42 3[42 42 42 33[{
- .85 ExtendFont TeXBase1Encoding ReEncodeFont }80 83.022
+.85 ExtendFont TeXBase1Encoding ReEncodeFont}80 83.022
 /Courier rf /FJ 87[28 16[83 42 1[37 37 24[37 42 42 60
 42 42 23 32 28 1[42 42 42 65 23 42 1[23 42 42 28 37 42
 37 42 37 6[51 2[78 60 60 51 46 55 1[46 60 60 74 51 60
 1[28 60 60 46 51 60 55 55 60 5[23 23 42 42 42 42 42 42
 42 42 42 42 23 21 28 21 2[28 28 28 36[46 2[{
- TeXBase1Encoding ReEncodeFont }71 83.022 /Times-Roman
+TeXBase1Encoding ReEncodeFont}71 83.022 /Times-Roman
 rf /FK 135[42 1[42 1[28 32 37 2[42 46 69 23 2[23 46 2[37
 46 37 46 42 10[60 2[46 60 6[65 7[60 55 60 65[{
- TeXBase1Encoding ReEncodeFont }23 83.022 /Times-Bold
-rf /FL 133[44 50 50 72 50 55 33 39 44 1[55 50 55 83 28
-1[33 28 55 50 33 44 55 44 55 50 9[100 72 72 66 55 72
-1[61 78 72 94 66 78 1[39 78 78 61 66 72 72 66 72 7[50
-50 50 50 50 50 50 50 50 50 1[25 4[33 33 37[55 2[{
- TeXBase1Encoding ReEncodeFont }59 99.6264 /Times-Bold
+TeXBase1Encoding ReEncodeFont}23 83.022 /Times-Bold rf
+/FL 133[44 50 50 72 50 55 33 39 44 1[55 50 55 83 28 1[33
+28 55 50 33 44 55 44 55 50 9[100 72 72 66 55 72 1[61
+78 72 94 66 78 1[39 78 78 61 66 72 72 66 72 7[50 50 50
+50 50 50 50 50 50 50 1[25 4[33 33 37[55 2[{
+TeXBase1Encoding ReEncodeFont}59 99.6264 /Times-Bold
 rf /FM 87[30 17[45 27[40 45 45 66 45 45 25 35 30 45 45
 45 45 71 25 45 25 25 45 45 30 40 45 40 45 40 30 2[30
 1[30 2[66 86 66 66 56 51 61 1[51 66 66 81 56 66 35 30
 66 66 51 56 66 61 61 66 5[25 25 45 45 45 45 45 45 45
-45 45 45 25 23 30 23 2[30 30 30 36[51 2[{
- TeXBase1Encoding ReEncodeFont }74 90.9091 /Times-Roman
-rf /FN 133[53 60 1[86 1[66 40 47 53 66 66 60 66 100 33
-66 1[33 66 60 40 53 66 53 66 60 10[86 86 80 3[73 93 86
-1[80 2[47 1[93 3[86 1[86 10[60 60 60 60 60 60 2[30 40
-42[66 2[{ TeXBase1Encoding ReEncodeFont }43 119.552 /Times-Bold
-rf /FO 170[134 6[134 1[114 4[145 5[134 65[{
- TeXBase1Encoding ReEncodeFont }5 185.902 /Helvetica-Bold
+45 45 45 25 23 30 23 2[30 30 30 36[51 2[{TeXBase1Encoding ReEncodeFont}
+74 90.9091 /Times-Roman rf /FN 133[53 60 1[86 1[66 40
+47 53 66 66 60 66 100 33 66 1[33 66 60 40 53 66 53 66
+60 10[86 86 80 3[73 93 86 1[80 2[47 1[93 3[86 1[86 10[60
+60 60 60 60 60 2[30 40 42[66 2[{TeXBase1Encoding ReEncodeFont}43
+119.552 /Times-Bold rf /FO 170[134 6[134 1[114 4[145
+5[134 65[{TeXBase1Encoding ReEncodeFont}5 185.902 /Helvetica-Bold
 rf end
 %%EndProlog
 %%BeginSetup
@@ -1008,9 +930,9 @@ version(.)search{exch pop exch pop(3011)eq{gsave newpath 0 0 moveto
 closepath clip/Courier findfont 10 scalefont setfont 72 72 moveto(.)show
 grestore}if}{pop}ifelse}{pop}ifelse}if end
  0 0 a 0 0 a
-SDict begin [ /Title (LAGUNA) /Subject () /Creator (LaTeX with hyperref package / GAPDoc)
-/Author (Victor Bovdi ; Alexander Konovalov ; Richard Rossmanith ; Csaba Schneider)
-/Producer (dvips + Distiller) /Keywords () /DOCINFO pdfmark end
+SDict begin [ /Title (Written with GAPDoc) /Subject () /Creator (LaTeX with hyperref package)
+/Author () /Producer (dvips + Distiller) /Keywords () /DOCINFO pdfmark
+end
  0 0 a Black 0
 TeXcolorgray 75 100 a
 SDict begin H.S end
@@ -1025,8 +947,7 @@ a
 SDict begin [ /Page 1 /View [ /Fit ] /PageMode /UseNone /DOCVIEW pdfmark
 end
  75 307 a 75 307 a
-SDict begin [ {Catalog} << /ViewerPreferences << >> >> /PUT pdfmark
-end
+SDict begin [ {Catalog} << >> /PUT pdfmark end
  75 307 a 75 307 a
 SDict begin H.S end
  75 307 a 75 307
@@ -1037,8 +958,8 @@ SDict begin [ /View [/XYZ H.V] /Dest (Doc-Start) cvn H.B /DEST pdfmark
 end
  75 307 a Black Black 1520 445 a FO(LA)-9
 b(GUNA)821 794 y FN(Lie)30 b(AlGebras)g(and)h(UNits)f(of)f(gr)n(oup)i
-(Algebras)1671 1143 y FM(V)-10 b(ersion)25 b(3.3.1)1727
-1492 y(May)e(2005)1642 2427 y FL(V)l(ictor)j(Bo)o(vdi)1452
+(Algebras)1671 1143 y FM(V)-10 b(ersion)25 b(3.3.2)1692
+1492 y(March)f(2006)1642 2427 y FL(V)l(ictor)i(Bo)o(vdi)1452
 2540 y(Alexander)f(K)n(ono)o(v)o(alo)o(v)1474 2653 y(Richard)g
 (Rossmanith)1567 2766 y(Csaba)f(Schneider)75 3475 y FK(V)m(ictor)c(Bo)o
 (vdi)41 b FJ(\227)21 b(Email:)p 0.6179 0.0236 0.0894
@@ -1181,8 +1102,8 @@ a 75 1572 a
 SDict begin [ /View [/XYZ H.V] /Dest (section*.2) cvn H.B /DEST pdfmark
 end
  75 1572 a 98 1645 a FJ(c)75 1648 y FC(\015)g
-FJ(2003)e(by)g(V)-5 b(ictor)20 b(Bo)o(vdi,)g(Ale)o(xander)e(K)m(ono)o
-(v)n(alo)o(v)-5 b(,)16 b(Richard)k(Rossmanith,)g(and)f(Csaba)i
+FJ(2003-2006)16 b(by)k(V)-5 b(ictor)20 b(Bo)o(vdi,)f(Ale)o(xander)f(K)m
+(ono)o(v)n(alo)o(v)-5 b(,)17 b(Richard)j(Rossmanith,)f(and)h(Csaba)h
 (Schneider)216 1747 y(W)-7 b(e)21 b(adopt)f(the)g(cop)o(yright)e(re)o
 (gulations)h(of)g FF(GAP)i FJ(from)e(the)h(cop)o(yright)e(notice)i(in)h
 (the)f FF(GAP)g FJ(manual.)216 1847 y(If)g(you)f(obtained)g
@@ -1195,7 +1116,7 @@ FJ(,)f(please)i(cite)f(it)h(in)g(the)f(follo)n(wing)75
 (alo)o(v)-5 b(,)19 b(R.)24 b(Rossmanith)e(and)g(C.)h(Schneider)-5
 b(.)31 b FD(LA)m(GUN)n(A)22 b(\227)h(Lie)g(AlGebr)o(as)f(and)g(UNits)i
 (of)e(gr)l(oup)75 2245 y(Alg)o(ebr)o(as,)d(V)-9 b(er)o(sion)20
-b(3.3.1;)f FJ(2005)f(\()p 0.6179 0.0236 0.0894 TeXcolorrgb
+b(3.3.2;)f FJ(2006)f(\()p 0.6179 0.0236 0.0894 TeXcolorrgb
 1112 2258 a
 SDict begin H.S end
  1112 2258 a 0.6179 0.0236 0.0894 TeXcolorrgb
@@ -2841,7 +2762,7 @@ SDict begin [ /H /I /Border [0 0 0] /Color [0 1 1] /Action << /Subtype
 H.B /ANN pdfmark end
  2704 4202 a Black FM(.)129
 b(T)-7 b(o)54 b(unpack)j(the)e(archi)n(v)o(e)75 4315
-y Fl(laguna-3.3.1.zoo)34 b FM(you)c(need)g(the)f(program)i
+y Fl(laguna-3.3.2.zoo)34 b FM(you)c(need)g(the)f(program)i
 Fl(unzoo)p FM(,)g(which)f(can)f(be)g(obtained)j(from)d(the)g
 Fu(GAP)e FM(homepage)p 0.6179 0.0236 0.0894 TeXcolorrgb
 75 4441 a
@@ -2861,7 +2782,7 @@ n(v)o(e)75 4540 y(into)23 b(the)f Fl(pkg)h FM(subdirectory)j(of)c(your)
 h Fu(GAP)p FM(4.4)e(installation.)31 b(The)22 b(subdirectory)k
 Fl(laguna)e FM(will)e(be)g(created)i(in)e(the)75 4653
 y Fl(pkg)i FM(directory)i(after)e(the)g(follo)n(wing)h(command:)216
-4766 y Fl(unzoo)48 b(-x)f(laguna-3.3.1.zoo)p Black Black
+4766 y Fl(unzoo)48 b(-x)f(laguna-3.3.2.zoo)p Black Black
 eop end
 %%Page: 8 8
 TeXDict begin 8 7 bop 0 0 a
@@ -5017,7 +4938,7 @@ SDict begin [ /View [/XYZ H.V] /Dest (subsection.4.3.3) cvn H.B /DEST
 pdfmark end
  75 1182 a 116 x FL(4.3.3)p 0.0 0.0 1.0
 TeXcolorrgb 99 w(RadicalOfAlgebra)p Black 1.0 0.0 0.0
-TeXcolorrgb 75 1473 a Fa(\006)22 b Fl(RadicalOfAlgebra\()53
+TeXcolorrgb 75 1472 a Fa(\006)22 b Fl(RadicalOfAlgebra\()53
 b(KG)47 b(\))2308 b FE(\(attrib)o(ute\))p Black 216 1585
 a FA(Retur)o(ns:)51 b FM(an)24 b(ideal)g(of)f(a)h(group)g(algebra)216
 1698 y(This)19 b(method)h(impro)o(v)o(es)g(a)f(standard)i
@@ -5028,91 +4949,89 @@ Fu(GAP)c FM(functionality)23 b(for)d(modular)g(group)h(algebras)g(of)e
 (the)h(algebra)h Fl(KG)e FM(is)h(a)31 b Fx(p)p FM(-modular)26
 b(group)f(algebra,)i(and,)d(if)g(yes,)h(it)f(returns)i(the)f
 (augmentation)75 2037 y(ideal;)g(otherwise,)g(the)e(standard)j
-Fu(GAP)c FM(method)i(will)f(be)h(used.)p 75 2151 1648
-4 v 1764 2156 a FH(Example)p 2102 2151 V 75 2176 4 25
-v 3747 2176 V 75 2276 4 100 v 3747 2276 V 75 2375 V 188
-2345 a(gap>)44 b(KG)f(:=)g(GroupRing\()i(GF\()f(2)e(\),)h
-(DihedralGroup\()48 b(16)43 b(\))f(\);)p 3747 2375 V
-75 2475 V 188 2445 a(<algebra-with-one)48 b(over)c(GF\(2\),)g(with)g(4)
-f(generators>)p 3747 2475 V 75 2574 V 188 2545 a(gap>)h
-(RadicalOfAlgebra\()k(KG)43 b(\);)p 3747 2574 V 75 2674
-V 188 2644 a(<two-sided)j(ideal)e(in)f(<algebra-with-one)48
+Fu(GAP)c FM(method)i(will)f(be)h(used.)p 75 2148 1648
+4 v 1764 2153 a FH(Example)p 2102 2148 V 75 2173 4 25
+v 3747 2173 V 75 2272 4 100 v 3747 2272 V 75 2372 V 188
+2342 a(gap>)44 b(KG)f(:=)g(GroupRing\()i(GF\()f(2)e(\),)h
+(DihedralGroup\()48 b(16)43 b(\))f(\);)p 3747 2372 V
+75 2472 V 188 2442 a(<algebra-with-one)48 b(over)c(GF\(2\),)g(with)g(4)
+f(generators>)p 3747 2472 V 75 2571 V 188 2541 a(gap>)h
+(RadicalOfAlgebra\()k(KG)43 b(\);)p 3747 2571 V 75 2671
+V 188 2641 a(<two-sided)j(ideal)e(in)f(<algebra-with-one)48
 b(of)43 b(dimension)i(16)e(over)h(GF\(2\)>,)h(\(dimension)h(15\)>)p
-3747 2674 V 75 2774 V 188 2744 a(gap>)e(RadicalOfAlgebra\()k(KG)43
+3747 2671 V 75 2770 V 188 2741 a(gap>)e(RadicalOfAlgebra\()k(KG)43
 b(\))f(=)h(AugmentationIdeal\()49 b(KG)43 b(\);)p 3747
-2774 V 75 2873 V 188 2843 a(true)p 3747 2873 V 75 2973
-V 3747 2973 V 75 2998 4 25 v 3747 2998 V 75 3001 3675
-4 v 75 3134 a
+2770 V 75 2870 V 188 2840 a(true)p 3747 2870 V 75 2970
+V 3747 2970 V 75 2995 4 25 v 3747 2995 V 75 2998 3675
+4 v 75 3130 a
 SDict begin H.S end
- 75 3134 a 75 3134 a
+ 75 3130 a 75 3130 a
 SDict begin 13.6 H.A end
- 75 3134 a 75 3134 a
+ 75 3130 a 75 3130 a
 SDict begin [ /View [/XYZ H.V] /Dest (subsection.4.3.4) cvn H.B /DEST
 pdfmark end
 
-75 3134 a 116 x FL(4.3.4)p 0.0 0.0 1.0 TeXcolorrgb 99
+75 3130 a 116 x FL(4.3.4)p 0.0 0.0 1.0 TeXcolorrgb 99
 w(W)-6 b(eightedBasis)p Black 1.0 0.0 0.0 TeXcolorrgb
-75 3424 a Fa(\006)22 b Fl(WeightedBasis\()52 b(KG)47
-b(\))2447 b FE(\(attrib)o(ute\))p Black 216 3537 a FA(Retur)o(ns:)51
+75 3421 a Fa(\006)22 b Fl(WeightedBasis\()52 b(KG)47
+b(\))2447 b FE(\(attrib)o(ute\))p Black 216 3534 a FA(Retur)o(ns:)51
 b FM(a)23 b(record)i(of)e(tw)o(o)h(components:)31 b(weighted)25
-b(basis)g(elements)g(and)f(their)g(weights)216 3650 y(The)f(ar)n
+b(basis)g(elements)g(and)f(their)g(weights)216 3646 y(The)f(ar)n
 (gument)j Fl(KG)d FM(must)h(be)f(a)30 b Fx(p)p FM(-modular)c(group)e
-(algebra.)216 3763 y(F)o(or)29 b(a)g(group)i(algebra)h
+(algebra.)216 3759 y(F)o(or)29 b(a)g(group)i(algebra)h
 Fx(K)5 b(G)p FM(,)29 b(let)h Fx(A)f FM(denote)i(the)f(augmentation)j
 (ideal,)f(and)e(assume)h(that)f Fx(c)f FM(is)h(the)g(smallest)75
-3876 y(number)25 b(such)h(that)f Fx(A)783 3843 y Fn(c)837
-3876 y Fq(=)20 b FM(0.)32 b(Then)24 b(a)g(weighted)i(basis)g(of)e
-Fx(K)5 b(G)23 b FM(is)i(some)f(basis)i Fx(b)2670 3890
-y FE(1)2708 3876 y Fw(;)10 b(:)g(:)g(:)h(;)f Fx(b)2929
-3890 y Fn(n)2991 3876 y FM(for)24 b(the)h(augmentation)75
-3989 y(ideal)j Fx(A)p FM(,)d(for)i(which)g(there)h(are)e(indices)j
-Fx(i)1415 4003 y FE(1)1474 3989 y Fq(=)22 b FM(1)p Fw(;)10
-b(:)g(:)g(:)h(;)f Fx(i)1813 4003 y Fn(c)p Fs(\000)p FE(1)1958
-3989 y FM(such)28 b(that)f Fx(b)2358 4003 y Fn(i)2376
-4014 y Ff(k)2408 3989 y Fw(;)10 b(:)g(:)g(:)h(;)f Fx(b)2629
-4003 y Fn(n)2693 3989 y FM(is)26 b(a)h(basis)g(for)g
-Fx(A)3241 3956 y Fn(k)3275 3989 y FM(.)37 b(The)27 b(weight)75
-4102 y(of)g(an)g(element)h Fx(b)648 4116 y Fn(i)698 4102
+3872 y(number)25 b(such)h(that)f Fx(A)783 3839 y Fn(c)837
+3872 y Fq(=)20 b FM(0.)32 b(Then)24 b(a)g(weighted)i(basis)g(of)e
+Fx(K)5 b(G)23 b FM(is)i(some)f(basis)i Fx(b)2670 3886
+y FE(1)2708 3872 y Fw(;)10 b(:)g(:)g(:)h(;)f Fx(b)2929
+3886 y Fn(n)2991 3872 y FM(for)24 b(the)h(augmentation)75
+3985 y(ideal)j Fx(A)p FM(,)d(for)i(which)g(there)h(are)e(indices)j
+Fx(i)1415 3999 y FE(1)1474 3985 y Fq(=)22 b FM(1)p Fw(;)10
+b(:)g(:)g(:)h(;)f Fx(i)1813 3999 y Fn(c)p Fs(\000)p FE(1)1958
+3985 y FM(such)28 b(that)f Fx(b)2358 3999 y Fn(i)2376
+4010 y Ff(k)2408 3985 y Fw(;)10 b(:)g(:)g(:)h(;)f Fx(b)2629
+3999 y Fn(n)2693 3985 y FM(is)26 b(a)h(basis)g(for)g
+Fx(A)3241 3952 y Fn(k)3275 3985 y FM(.)37 b(The)27 b(weight)75
+4098 y(of)g(an)g(element)h Fx(b)648 4112 y Fn(i)698 4098
 y FM(of)f(a)g(weighted)h(basis)g(is)f(the)h(unique)g(inte)o(ger)h
-Fx(w)d FM(such)i(that)g Fx(b)2698 4116 y Fn(i)2747 4102
+Fx(w)d FM(such)i(that)g Fx(b)2698 4112 y Fn(i)2747 4098
 y FM(belongs)h(to)e Fx(w)p FM(-th)g(po)n(wer)g(of)g Fx(A)75
-4215 y FM(b)n(ut)d(does)g(not)g(belong)i(to)d(its)h Fq(\()p
+4211 y FM(b)n(ut)d(does)g(not)g(belong)i(to)d(its)h Fq(\()p
 Fx(w)13 b Fq(+)g FM(1)p Fq(\))p FM(-th)23 b(po)n(wer)-5
-b(.)216 4328 y(Note)24 b(that)h(this)f(function)i(actually)g
+b(.)216 4324 y(Note)24 b(that)h(this)f(function)i(actually)g
 (constructs)h(a)d(basis)h(for)f(the)g Fx(augmentation)j(ideal)e
-FM(of)f Fl(KG)g FM(and)h(not)f(for)g Fl(KG)75 4440 y
+FM(of)f Fl(KG)g FM(and)h(not)f(for)g Fl(KG)75 4437 y
 FM(itself.)29 b(Since)22 b(the)h(augmentation)i(ideal)e(has)f
 (co-dimension)k(1)21 b(in)h Fl(KG)p FM(,)g(a)g(basis)h(for)f
-Fl(KG)g FM(can)g(be)g(easily)i(obtained)g(by)75 4553
+Fl(KG)g FM(can)g(be)g(easily)i(obtained)g(by)75 4550
 y(adjoining)i(the)e(identity)i(element)e(of)g(the)f(group.)216
-4666 y(The)28 b(method)i(returns)g(a)e(record)j(whose)e(basis)g(entry)h
+4663 y(The)28 b(method)i(returns)g(a)e(record)j(whose)e(basis)g(entry)h
 (is)f(the)f(basis)i(and)f(the)g(weights)h(entry)g(is)e(a)g(list)h(of)g
-(the)75 4779 y(corresponding)f(weights)c(the)g(of)g(basis)g(elements.)
-30 b(See)23 b(Section)p 0.0236 0.0894 0.6179 TeXcolorrgb
-2184 4780 a
+(the)75 4776 y(corresponding)f(weights)c(the)g(of)g(basis)g(elements.)
+216 4888 y(F)o(or)f(more)g(details,)i(see)f(Section)p
+0.0236 0.0894 0.6179 TeXcolorrgb 1290 4889 a
 SDict begin H.S end
- 2184 4780 a 0.0236 0.0894 0.6179 TeXcolorrgb
--1 x FM(3.3)p 0.0236 0.0894 0.6179 TeXcolorrgb 2297 4717
-a
+ 1290 4889
+a 0.0236 0.0894 0.6179 TeXcolorrgb -1 x FM(3.3)p 0.0236 0.0894 0.6179
+TeXcolorrgb 1403 4826 a
 SDict begin H.R end
- 2297 4717 a 2297 4779 a
+ 1403 4826 a 1403 4888 a
 SDict begin [ /Color [1 0 0] /H /I /Border [0 0 0] /Subtype /Link /Dest
 (section.3.3) cvn H.B /ANN pdfmark end
- 2297 4779 a Black 23 w FM(for)h(more)f
-(details.)p 75 4900 1648 4 v 1764 4905 a FH(Example)p
-2102 4900 V 75 4925 4 25 v 3747 4925 V 75 5024 4 100
-v 3747 5024 V 75 5124 V 188 5094 a(gap>)44 b(KG)f(:=)g(GroupRing\()i
+ 1403
+4888 a Black FM(.)p 75 5000 1648 4 v 1764 5005 a FH(Example)p
+2102 5000 V 75 5024 4 25 v 3747 5024 V 75 5124 4 100
+v 3747 5124 V 75 5224 V 188 5194 a(gap>)44 b(KG)f(:=)g(GroupRing\()i
 (GF\()f(2)e(\),)h(ElementaryAbelianG)q(rou)q(p\()49 b(4)42
-b(\))h(\);)p 3747 5124 V 75 5224 V 188 5194 a(<algebra-with-one)48
-b(over)c(GF\(2\),)g(with)g(2)f(generators>)p 3747 5224
-V 75 5323 V 188 5293 a(gap>)h(WeightedBasis\()j(KG)c(\);)p
-3747 5323 V 75 5423 V 188 5393 a(rec\()p 3747 5423 V
-75 5523 V 273 5493 a(weightedBasis)j(:=)d([)g
+b(\))h(\);)p 3747 5224 V 75 5323 V 188 5293 a(<algebra-with-one)48
+b(over)c(GF\(2\),)g(with)g(2)f(generators>)p 3747 5323
+V 75 5423 V 188 5393 a(gap>)h(WeightedBasis\()j(KG)c(\);)p
+3747 5423 V 75 5523 V 188 5493 a(rec\()p 3747 5523 V
+75 5622 V 273 5592 a(weightedBasis)j(:=)d([)g
 (\(Z\(2\)\2100\)*<identity>)49 b(of)43 b(...+\(Z\(2\)\2100\)*f2,)48
-b(\(Z\(2\)\2100\)*<identity>)h(of\\)p 3746 5523 V 75
-5622 V 230 5592 a(...+\(Z\(2\)\2100\)*f1,)f(\(Z\(2\)\2100\)*<identity>)
-h(of)43 b(...+\(Z\(2\)\2100\)*f1+\(Z\(2)q(\)\2100)q(\)*f)q(2+\()q(Z\(2)
-q(\)\210)p 3747 5622 V Black Black eop end
+b(\(Z\(2\)\2100\)*<identity>)h(of\\)p 3746 5622 V Black
+Black eop end
 %%Page: 27 27
 TeXDict begin 27 26 bop 0 0 a
 SDict begin /product where{pop product(Distiller)search{pop pop pop
@@ -5129,102 +5048,103 @@ SDict begin H.R end
 SDict begin [ /View [/XYZ H.V] /Dest (page.27) cvn H.B /DEST pdfmark
 end
  75 100 a Black 1662 w FG(LA)n(GUNA)1678
-b FM(27)p Black 75 428 4 100 v 527 399 a FH(0\)*f1*f2)45
-b(],)e(weights)h(:=)f([)g(1,)g(1,)g(2)g(])g(\))p 3747
-428 V 75 528 V 3747 528 V 75 553 4 25 v 3747 553 V 75
-556 3675 4 v 75 687 a
+b FM(27)p Black 75 428 4 100 v 230 399 a FH(...+\(Z\(2\)\2100\)*f1,)48
+b(\(Z\(2\)\2100\)*<identity>)h(of)43 b(...+\(Z\(2\)\2100\)*f1+\(Z\(2)q
+(\)\2100)q(\)*f)q(2+\()q(Z\(2)q(\)\210)p 3747 428 V 75
+528 V 527 498 a(0\)*f1*f2)i(],)e(weights)h(:=)f([)g(1,)g(1,)g(2)g(])g
+(\))p 3747 528 V 75 628 V 3747 628 V 75 653 4 25 v 3747
+653 V 75 656 3675 4 v 75 787 a
 SDict begin H.S end
- 75 687 a 75 687 a
+ 75 787 a 75 787 a
 SDict begin 13.6 H.A end
- 75 687 a 75 687
-a
+ 75 787
+a 75 787 a
 SDict begin [ /View [/XYZ H.V] /Dest (subsection.4.3.5) cvn H.B /DEST
 pdfmark end
- 75 687 a 117 x FL(4.3.5)p 0.0 0.0 1.0 TeXcolorrgb 99
-w(A)-5 b(ugmentationIdealP)n(o)o(werSeries)p Black 1.0 0.0 0.0
-TeXcolorrgb 75 978 a Fa(\006)22 b Fl(AugmentationIdeal)q(Pow)q(erS)q
-(eri)q(es)q(\()52 b(KG)47 b(\))1752 b FE(\(attrib)o(ute\))p
-Black 216 1091 a FA(Retur)o(ns:)51 b FM(a)23 b(list)h(of)f(ideals)i(of)
-f(a)f(group)i(algebra)216 1204 y(The)e(ar)n(gument)j
+ 75 787 a 116 x FL(4.3.5)p 0.0 0.0 1.0 TeXcolorrgb
+99 w(A)-5 b(ugmentationIdealP)n(o)o(werSeries)p Black
+1.0 0.0 0.0 TeXcolorrgb 75 1078 a Fa(\006)22 b Fl(AugmentationIdeal)q
+(Pow)q(erS)q(eri)q(es)q(\()52 b(KG)47 b(\))1752 b FE(\(attrib)o(ute\))p
+Black 216 1190 a FA(Retur)o(ns:)51 b FM(a)23 b(list)h(of)f(ideals)i(of)
+f(a)f(group)i(algebra)216 1303 y(The)e(ar)n(gument)j
 Fl(KG)e FM(is)f(a)31 b Fx(p)p FM(-modular)25 b(group)g(algebra.)32
 b(The)23 b(method)i(returns)g(a)e(list)i(whose)f(elements)h(are)f(the)
-75 1317 y(terms)i(of)g(the)g(augmentation)j(ideal)e(\002ltration)g(of)f
+75 1416 y(terms)i(of)g(the)g(augmentation)j(ideal)e(\002ltration)g(of)f
 Fl(KG)p FM(,)g(that)g(is)g Fl(AugmentationIdealPo)q(we)q(rSe)q(rie)q
-(s\(A)q(\)[)q(i])31 b FM(is)75 1430 y(the)24 b Fx(i)p
+(s\(A)q(\)[)q(i])31 b FM(is)75 1529 y(the)24 b Fx(i)p
 FM(-th)g(po)n(wer)f(of)h(the)g(augmentation)i(ideal)f(of)e
-Fl(KG)q FM(.)p 75 1541 1648 4 v 1764 1546 a FH(Example)p
-2102 1541 V 75 1566 4 25 v 3747 1566 V 75 1666 4 100
-v 3747 1666 V 75 1766 V 188 1736 a(gap>)44 b(KG)f(:=)g(GroupRing\()i
+Fl(KG)q FM(.)p 75 1641 1648 4 v 1764 1646 a FH(Example)p
+2102 1641 V 75 1666 4 25 v 3747 1666 V 75 1766 4 100
+v 3747 1766 V 75 1865 V 188 1835 a(gap>)44 b(KG)f(:=)g(GroupRing\()i
 (GF\()f(2)e(\),)h(DihedralGroup\()48 b(16)43 b(\))f(\);)p
-3747 1766 V 75 1865 V 188 1835 a(<algebra-with-one)48
-b(over)c(GF\(2\),)g(with)g(4)f(generators>)p 3747 1865
-V 75 1965 V 188 1935 a(gap>)h(AugmentationIdealPowe)q(rSe)q(rie)q(s\()
-49 b(KG)43 b(\);)p 3747 1965 V 75 2064 V 188 2035 a([)g(<algebra)i(of)e
+3747 1865 V 75 1965 V 188 1935 a(<algebra-with-one)48
+b(over)c(GF\(2\),)g(with)g(4)f(generators>)p 3747 1965
+V 75 2064 V 188 2035 a(gap>)h(AugmentationIdealPowe)q(rSe)q(rie)q(s\()
+49 b(KG)43 b(\);)p 3747 2064 V 75 2164 V 188 2134 a([)g(<algebra)i(of)e
 (dimension)i(15)e(over)h(GF\(2\)>,)h(<algebra)g(of)e(dimension)i(13)e
-(over)h(GF\(2\)>,)p 3747 2064 V 75 2164 V 273 2134 a(<algebra)h(of)e
+(over)h(GF\(2\)>,)p 3747 2164 V 75 2264 V 273 2234 a(<algebra)h(of)e
 (dimension)i(11)e(over)h(GF\(2\)>,)h(<algebra)g(of)e(dimension)i(9)e
-(over)g(GF\(2\)>,)p 3747 2164 V 75 2264 V 273 2234 a(<algebra)i(of)e
+(over)g(GF\(2\)>,)p 3747 2264 V 75 2363 V 273 2333 a(<algebra)i(of)e
 (dimension)i(7)e(over)g(GF\(2\)>,)i(<algebra)g(of)e(dimension)j(5)c
-(over)i(GF\(2\)>,)p 3747 2264 V 75 2363 V 273 2333 a(<algebra)h(of)e
+(over)i(GF\(2\)>,)p 3747 2363 V 75 2463 V 273 2433 a(<algebra)h(of)e
 (dimension)i(3)e(over)g(GF\(2\)>,)i(<algebra)g(of)e(dimension)j(1)c
-(over)i(GF\(2\)>,)p 3747 2363 V 75 2463 V 273 2433 a(<algebra)h(over)e
-(GF\(2\)>)i(])p 3747 2463 V 75 2563 V 188 2533 a(gap>)f
-(Length\(last\);)p 3747 2563 V 75 2662 V 188 2632 a(9)p
-3747 2662 V 75 2762 V 3747 2762 V 75 2787 4 25 v 3747
-2787 V 75 2790 3675 4 v 75 2921 a
+(over)i(GF\(2\)>,)p 3747 2463 V 75 2563 V 273 2533 a(<algebra)h(over)e
+(GF\(2\)>)i(])p 3747 2563 V 75 2662 V 188 2632 a(gap>)f
+(Length\(last\);)p 3747 2662 V 75 2762 V 188 2732 a(9)p
+3747 2762 V 75 2861 V 3747 2861 V 75 2886 4 25 v 3747
+2886 V 75 2889 3675 4 v 75 3021 a
 SDict begin H.S end
- 75 2921 a 75 2921 a
+ 75 3021 a 75 3021 a
 SDict begin 13.6 H.A end
 
-75 2921 a 75 2921 a
+75 3021 a 75 3021 a
 SDict begin [ /View [/XYZ H.V] /Dest (subsection.4.3.6) cvn H.B /DEST
 pdfmark end
- 75 2921 a 117 x FL(4.3.6)p 0.0 0.0 1.0
+ 75 3021 a 116 x FL(4.3.6)p 0.0 0.0 1.0
 TeXcolorrgb 99 w(A)-5 b(ugmentationIdealNilpotencyIndex)p
-Black 1.0 0.0 0.0 TeXcolorrgb 75 3212 a Fa(\006)22 b
+Black 1.0 0.0 0.0 TeXcolorrgb 75 3311 a Fa(\006)22 b
 Fl(AugmentationIdeal)q(Nil)q(pot)q(enc)q(yI)q(nde)q(x\()53
-b(KG)47 b(\))1566 b FE(\(attrib)o(ute\))p Black 216 3438
+b(KG)47 b(\))1566 b FE(\(attrib)o(ute\))p Black 216 3537
 a FM(F)o(or)26 b(the)34 b Fx(p)p FM(-modular)29 b(group)f(algebra)h
 Fl(KG)e FM(the)g(method)h(returns)h(the)e(smallest)h(number)g
-Fx(n)f FM(such)h(that)f Fx(A)3530 3405 y Fn(n)3589 3438
-y Fq(=)22 b FM(0,)75 3551 y(where)h Fx(A)f FM(is)g(the)h(augmentation)j
+Fx(n)f FM(such)h(that)f Fx(A)3530 3504 y Fn(n)3589 3537
+y Fq(=)22 b FM(0,)75 3650 y(where)h Fx(A)f FM(is)g(the)h(augmentation)j
 (ideal)e(of)f Fl(KG)p FM(.)28 b(This)23 b(can)g(be)f(done)i(using)g
 (Jenning')-5 b(s)26 b(theory)e(without)g(the)f(e)o(xplicit)75
-3663 y(calculations)k(of)c(the)h(po)n(wers)g(of)g(the)g(augmentation)i
-(ideal.)p 75 3775 1648 4 v 1764 3780 a FH(Example)p 2102
-3775 V 75 3800 4 25 v 3747 3800 V 75 3900 4 100 v 3747
-3900 V 75 3999 V 188 3970 a(gap>)44 b(KG)f(:=)g(GroupRing\()i(GF\()f(2)
+3763 y(calculations)k(of)c(the)h(po)n(wers)g(of)g(the)g(augmentation)i
+(ideal.)p 75 3875 1648 4 v 1764 3880 a FH(Example)p 2102
+3875 V 75 3900 4 25 v 3747 3900 V 75 3999 4 100 v 3747
+3999 V 75 4099 V 188 4069 a(gap>)44 b(KG)f(:=)g(GroupRing\()i(GF\()f(2)
 e(\),)h(DihedralGroup\()48 b(16)43 b(\))f(\);)p 3747
-3999 V 75 4099 V 188 4069 a(<algebra-with-one)48 b(over)c(GF\(2\),)g
-(with)g(4)f(generators>)p 3747 4099 V 75 4199 V 188 4169
+4099 V 75 4199 V 188 4169 a(<algebra-with-one)48 b(over)c(GF\(2\),)g
+(with)g(4)f(generators>)p 3747 4199 V 75 4298 V 188 4268
 a(gap>)h(AugmentationIdealNilp)q(ote)q(ncy)q(In)q(dex)q(\()k(KG)43
-b(\);)p 3747 4199 V 75 4298 V 188 4268 a(9)p 3747 4298
-V 75 4398 V 3747 4398 V 75 4423 4 25 v 3747 4423 V 75
-4426 3675 4 v 75 4557 a
+b(\);)p 3747 4298 V 75 4398 V 188 4368 a(9)p 3747 4398
+V 75 4498 V 3747 4498 V 75 4522 4 25 v 3747 4522 V 75
+4525 3675 4 v 75 4657 a
 SDict begin H.S end
- 75 4557 a 75 4557 a
+ 75 4657 a 75 4657 a
 SDict begin 13.6 H.A end
- 75 4557 a
-75 4557 a
+ 75 4657 a
+75 4657 a
 SDict begin [ /View [/XYZ H.V] /Dest (subsection.4.3.7) cvn H.B /DEST
 pdfmark end
- 75 4557 a 117 x FL(4.3.7)p 0.0 0.0 1.0 TeXcolorrgb
+ 75 4657 a 116 x FL(4.3.7)p 0.0 0.0 1.0 TeXcolorrgb
 99 w(A)-5 b(ugmentationIdealOfDeri)o(v)o(edSubgr)n(oupNilpotencyIndex)p
-Black 1.0 0.0 0.0 TeXcolorrgb 75 4848 a Fa(\006)22 b
+Black 1.0 0.0 0.0 TeXcolorrgb 75 4947 a Fa(\006)22 b
 Fl(AugmentationIdeal)q(OfD)q(eri)q(ved)q(Su)q(bgr)q(oup)q(Nil)q(po)q
 (ten)q(cyI)q(nde)q(x\()53 b(KG)47 b(\))778 b FE(\(attrib)o(ute\))p
-Black 216 5074 a FM(F)o(or)23 b(the)31 b Fx(p)p FM(-modular)25
+Black 216 5173 a FM(F)o(or)23 b(the)31 b Fx(p)p FM(-modular)25
 b(group)g(algebra)g Fl(KG)f FM(this)g(attrib)n(ute)i(stores)f(the)f
 (nilpotenc)o(y)i(inde)o(x)f(of)e(the)h(augmentation)75
-5187 y(ideal)g(of)g Fx(K)5 b(G)505 5154 y Fs(0)549 5187
-y FM(where)24 b Fx(G)860 5154 y Fs(0)905 5187 y FM(denotes)h(the)f
-(deri)n(v)o(ed)h(subgroup)h(of)d Fx(G)p FM(.)p 75 5298
-1648 4 v 1764 5303 a FH(Example)p 2102 5298 V 75 5323
-4 25 v 3747 5323 V 75 5423 4 100 v 3747 5423 V 75 5523
-V 188 5493 a(gap>)44 b(KG)f(:=)g(GroupRing\()i(GF\()f(2)e(\),)h
-(DihedralGroup\()48 b(16)43 b(\))f(\);)p 3747 5523 V
-75 5622 V 188 5592 a(<algebra-with-one)48 b(over)c(GF\(2\),)g(with)g(4)
-f(generators>)p 3747 5622 V Black Black eop end
+5286 y(ideal)g(of)g Fx(K)5 b(G)505 5253 y Fs(0)549 5286
+y FM(where)24 b Fx(G)860 5253 y Fs(0)905 5286 y FM(denotes)h(the)f
+(deri)n(v)o(ed)h(subgroup)h(of)d Fx(G)p FM(.)p 75 5398
+1648 4 v 1764 5403 a FH(Example)p 2102 5398 V 75 5423
+4 25 v 3747 5423 V 75 5523 4 100 v 3747 5523 V 75 5622
+V 188 5592 a(gap>)44 b(KG)f(:=)g(GroupRing\()i(GF\()f(2)e(\),)h
+(DihedralGroup\()48 b(16)43 b(\))f(\);)p 3747 5622 V
+Black Black eop end
 %%Page: 28 28
 TeXDict begin 28 27 bop 0 0 a
 SDict begin /product where{pop product(Distiller)search{pop pop pop
@@ -5241,86 +5161,87 @@ SDict begin H.R end
 SDict begin [ /View [/XYZ H.V] /Dest (page.28) cvn H.B /DEST pdfmark
 end
  75 100 a Black 1662 w FG(LA)n(GUNA)1678
-b FM(28)p Black 75 428 4 100 v 188 399 a FH(gap>)44 b
-(AugmentationIdealOfDe)q(riv)q(edS)q(ub)q(gro)q(upN)q(ilp)q(ote)q(ncy)q
-(Ind)q(ex\()49 b(KG)43 b(\);)p 3747 428 V 75 528 V 188
-498 a(4)p 3747 528 V 75 628 V 188 598 a(gap>)h(D)e(:=)h
-(DerivedSubgroup\()48 b(G)43 b(\);)p 3747 628 V 75 727
-V 188 697 a(Group\([)i(f3,)e(f4)g(]\))p 3747 727 V 75
-827 V 188 797 a(gap>)h(KD)f(:=)g(GroupRing\()i(GF\()f(2)e(\),)h(D)g
-(\);)p 3747 827 V 75 927 V 188 897 a(<algebra-with-one)48
-b(over)c(GF\(2\),)g(with)g(2)f(generators>)p 3747 927
-V 75 1026 V 188 996 a(gap>)h(AugmentationIdealNilp)q(ote)q(ncy)q(In)q
-(dex)q(\()k(KD)43 b(\);)p 3747 1026 V 75 1126 V 188 1096
-a(4)p 3747 1126 V 75 1225 V 3747 1225 V 75 1250 4 25
-v 3747 1250 V 75 1253 3675 4 v 75 1387 a
+b FM(28)p Black 75 428 4 100 v 188 399 a FH(<algebra-with-one)48
+b(over)c(GF\(2\),)g(with)g(4)f(generators>)p 3747 428
+V 75 528 V 188 498 a(gap>)h(AugmentationIdealOfDe)q(riv)q(edS)q(ub)q
+(gro)q(upN)q(ilp)q(ote)q(ncy)q(Ind)q(ex\()49 b(KG)43
+b(\);)p 3747 528 V 75 628 V 188 598 a(4)p 3747 628 V
+75 727 V 188 697 a(gap>)h(D)e(:=)h(DerivedSubgroup\()48
+b(G)43 b(\);)p 3747 727 V 75 827 V 188 797 a(Group\([)i(f3,)e(f4)g(]\))
+p 3747 827 V 75 927 V 188 897 a(gap>)h(KD)f(:=)g(GroupRing\()i(GF\()f
+(2)e(\),)h(D)g(\);)p 3747 927 V 75 1026 V 188 996 a(<algebra-with-one)
+48 b(over)c(GF\(2\),)g(with)g(2)f(generators>)p 3747
+1026 V 75 1126 V 188 1096 a(gap>)h(AugmentationIdealNilp)q(ote)q(ncy)q
+(In)q(dex)q(\()k(KD)43 b(\);)p 3747 1126 V 75 1225 V
+188 1196 a(4)p 3747 1225 V 75 1325 V 3747 1325 V 75 1350
+4 25 v 3747 1350 V 75 1353 3675 4 v 75 1486 a
 SDict begin H.S end
- 75 1387 a 75
-1387 a
+ 75 1486
+a 75 1486 a
 SDict begin 13.6 H.A end
- 75 1387 a 75 1387 a
+ 75 1486 a 75 1486 a
 SDict begin [ /View [/XYZ H.V] /Dest (subsection.4.3.8) cvn H.B /DEST
 pdfmark end
- 75 1387 a 116 x FL(4.3.8)p
+ 75 1486 a 116 x FL(4.3.8)p
 0.0 0.0 1.0 TeXcolorrgb 99 w(LeftIdealBySubgr)n(oup)p
-Black 1.0 0.0 0.0 TeXcolorrgb 75 1677 a Fa(\006)22 b
+Black 1.0 0.0 0.0 TeXcolorrgb 75 1777 a Fa(\006)22 b
 Fl(LeftIdealBySubgro)q(up\()53 b(KG,)47 b(H)g(\))1999
 b FE(\(operation\))p Black 1.0 0.0 0.0 TeXcolorrgb 75
-1790 a Fa(\006)22 b Fl(RightIdealBySubgr)q(oup)q(\()52
+1890 a Fa(\006)22 b Fl(RightIdealBySubgr)q(oup)q(\()52
 b(KG,)c(H)f(\))1952 b FE(\(operation\))p Black 1.0 0.0 0.0
-TeXcolorrgb 75 1903 a Fa(\006)22 b Fl(TwoSidedIdalBySub)q(gro)q(up\()53
+TeXcolorrgb 75 2003 a Fa(\006)22 b Fl(TwoSidedIdalBySub)q(gro)q(up\()53
 b(KG,)48 b(H)e(\))1860 b FE(\(operation\))p Black 1.0 0.0 0.0
-TeXcolorrgb 75 2016 a Fa(\006)22 b Fl(LeftIdealBySubgro)q(up\()53
+TeXcolorrgb 75 2115 a Fa(\006)22 b Fl(LeftIdealBySubgro)q(up\()53
 b(KG,)47 b(H)g(\))1999 b FE(\(operation\))p Black 216
-2129 a FA(Retur)o(ns:)51 b FM(an)24 b(ideal)g(of)f(a)h(group)g(ring)216
-2242 y(Let)e Fl(KG)g FM(be)h(a)f(group)h(ring)g(of)g(a)f(group)h
+2228 a FA(Retur)o(ns:)51 b FM(an)24 b(ideal)g(of)f(a)h(group)g(ring)216
+2341 y(Let)e Fl(KG)g FM(be)h(a)f(group)h(ring)g(of)g(a)f(group)h
 Fx(G)f FM(o)o(v)o(er)g(the)h(ring)g Fx(K)5 b FM(,)21
 b(and)i Fl(H)f FM(be)g(a)g(subgroup)j(of)d Fx(G)p FM(.)28
-b(Then)22 b(the)h(set)f Fx(J)3581 2256 y Fn(l)3607 2242
-y Fq(\()p Fx(H)7 b Fq(\))75 2355 y FM(of)23 b(all)h(elements)h(of)e
-Fl(KG)h FM(of)f(the)h(form)1693 2487 y Fj(\345)1675 2562
-y Fn(h)p Fs(2)p Fn(H)1815 2467 y Fx(x)1855 2481 y Fn(h)1893
-2467 y Fq(\()p Fx(h)13 b Fo(\000)g FM(1)p Fq(\))75 2704
+b(Then)22 b(the)h(set)f Fx(J)3581 2355 y Fn(l)3607 2341
+y Fq(\()p Fx(H)7 b Fq(\))75 2454 y FM(of)23 b(all)h(elements)h(of)e
+Fl(KG)h FM(of)f(the)h(form)1693 2586 y Fj(\345)1675 2661
+y Fn(h)p Fs(2)p Fn(H)1815 2567 y Fx(x)1855 2581 y Fn(h)1893
+2567 y Fq(\()p Fx(h)13 b Fo(\000)g FM(1)p Fq(\))75 2804
 y FM(is)29 b(the)h(left)g(ideal)g(in)f Fl(KG)h FM(generated)i(by)d(all)
 h(elements)h Fx(h)15 b Fo(\000)g FM(1)28 b(with)i Fx(h)f
 FM(in)g Fx(H)7 b FM(.)45 b(The)29 b(right)h(ideal)g Fx(J)3190
-2718 y Fn(r)3222 2704 y Fq(\()p Fx(H)7 b Fq(\))28 b FM(is)h(de\002ned)
-75 2817 y(analogously)-6 b(.)37 b(These)25 b(operations)j(are)d(used)h
+2818 y Fn(r)3222 2804 y Fq(\()p Fx(H)7 b Fq(\))28 b FM(is)h(de\002ned)
+75 2917 y(analogously)-6 b(.)37 b(These)25 b(operations)j(are)d(used)h
 (to)f(consrtuct)i(such)f(ideals,)g(taking)h(into)f(account)g(the)g(f)o
-(act,)f(that)h(the)75 2930 y(ideal)j Fx(J)317 2944 y
-Fn(l)343 2930 y Fq(\()p Fx(H)7 b Fq(\))27 b FM(is)g(tw)o(o-sided)j(if)e
+(act,)f(that)h(the)75 3030 y(ideal)j Fx(J)317 3044 y
+Fn(l)343 3030 y Fq(\()p Fx(H)7 b Fq(\))27 b FM(is)g(tw)o(o-sided)j(if)e
 (and)g(only)h(if)f Fl(H)f FM(is)h(normal)g(in)g Fx(G)p
 FM(.)41 b(An)27 b(attempt)i(of)f(constructing)k(tw)o(o-sided)d(ideal)75
-3043 y(for)24 b(a)f(non-normal)j(subgroup)g Fl(H)d FM(will)g(lead)h(to)
-g(an)f(error)i(message.)p 75 3166 1648 4 v 1764 3171
-a FH(Example)p 2102 3166 V 75 3191 4 25 v 3747 3191 V
-75 3290 4 100 v 3747 3290 V 75 3390 V 188 3360 a(gap>)44
+3143 y(for)24 b(a)f(non-normal)j(subgroup)g Fl(H)d FM(will)g(lead)h(to)
+g(an)f(error)i(message.)p 75 3265 1648 4 v 1764 3270
+a FH(Example)p 2102 3265 V 75 3290 4 25 v 3747 3290 V
+75 3390 4 100 v 3747 3390 V 75 3490 V 188 3460 a(gap>)44
 b(KG)f(:=)g(GroupRing\()i(GF\(2\),)g(DihedralGroup\(16\))j(\);)p
-3747 3390 V 75 3490 V 188 3460 a(<algebra-with-one)g(over)c(GF\(2\),)g
-(with)g(4)f(generators>)p 3747 3490 V 75 3589 V 188 3559
-a(gap>)h(G)e(:=)h(DihedralGroup\(16\);)p 3747 3589 V
-75 3689 V 188 3659 a(<pc)g(group)h(of)f(size)h(16)f(with)h(4)e
-(generators>)p 3747 3689 V 75 3788 V 188 3759 a(gap>)i(KG)f(:=)g
-(GroupRing\()i(GF\(2\),)g(G)d(\);)p 3747 3788 V 75 3888
-V 188 3858 a(<algebra-with-one)48 b(over)c(GF\(2\),)g(with)g(4)f
-(generators>)p 3747 3888 V 75 3988 V 188 3958 a(gap>)h(D)e(:=)h
-(DerivedSubgroup\()48 b(G)43 b(\);)p 3747 3988 V 75 4087
-V 188 4057 a(Group\([)i(f3,)e(f4)g(]\))p 3747 4087 V
-75 4187 V 188 4157 a(gap>)h(LeftIdealBySubgroup\()49
-b(KG,)43 b(D)g(\);)p 3747 4187 V 75 4287 V 188 4257 a(<two-sided)j
+3747 3490 V 75 3589 V 188 3559 a(<algebra-with-one)g(over)c(GF\(2\),)g
+(with)g(4)f(generators>)p 3747 3589 V 75 3689 V 188 3659
+a(gap>)h(G)e(:=)h(DihedralGroup\(16\);)p 3747 3689 V
+75 3788 V 188 3759 a(<pc)g(group)h(of)f(size)h(16)f(with)h(4)e
+(generators>)p 3747 3788 V 75 3888 V 188 3858 a(gap>)i(KG)f(:=)g
+(GroupRing\()i(GF\(2\),)g(G)d(\);)p 3747 3888 V 75 3988
+V 188 3958 a(<algebra-with-one)48 b(over)c(GF\(2\),)g(with)g(4)f
+(generators>)p 3747 3988 V 75 4087 V 188 4057 a(gap>)h(D)e(:=)h
+(DerivedSubgroup\()48 b(G)43 b(\);)p 3747 4087 V 75 4187
+V 188 4157 a(Group\([)i(f3,)e(f4)g(]\))p 3747 4187 V
+75 4287 V 188 4257 a(gap>)h(LeftIdealBySubgroup\()49
+b(KG,)43 b(D)g(\);)p 3747 4287 V 75 4386 V 188 4356 a(<two-sided)j
 (ideal)e(in)f(<algebra-with-one)48 b(over)c(GF\(2\),)g(with)g(4)e
-(generators>,)p 3747 4287 V 75 4386 V 273 4356 a(\(dimension)j(3\)>)p
-3747 4386 V 75 4486 V 188 4456 a(gap>)f(H)e(:=)h(Subgroup\()j(G,)d([)f
-(GeneratorsOfGroup\()q(G\)[)q(1])49 b(]\);)p 3747 4486
-V 75 4585 V 188 4556 a(Group\([)c(f1)e(]\))p 3747 4585
-V 75 4685 V 188 4655 a(gap>)h(IsNormal\()h(G,)e(H)g(\);)p
-3747 4685 V 75 4785 V 188 4755 a(false)p 3747 4785 V
-75 4884 V 188 4854 a(gap>)h(LeftIdealBySubgroup\()49
-b(KG,)43 b(H)g(\);)p 3747 4884 V 75 4984 V 188 4954 a(<left)h(ideal)g
+(generators>,)p 3747 4386 V 75 4486 V 273 4456 a(\(dimension)j(3\)>)p
+3747 4486 V 75 4585 V 188 4556 a(gap>)f(H)e(:=)h(Subgroup\()j(G,)d([)f
+(GeneratorsOfGroup\()q(G\)[)q(1])49 b(]\);)p 3747 4585
+V 75 4685 V 188 4655 a(Group\([)c(f1)e(]\))p 3747 4685
+V 75 4785 V 188 4755 a(gap>)h(IsNormal\()h(G,)e(H)g(\);)p
+3747 4785 V 75 4884 V 188 4854 a(false)p 3747 4884 V
+75 4984 V 188 4954 a(gap>)h(LeftIdealBySubgroup\()49
+b(KG,)43 b(H)g(\);)p 3747 4984 V 75 5084 V 188 5054 a(<left)h(ideal)g
 (in)f(<algebra-with-one)48 b(over)c(GF\(2\),)g(with)g(4)f(generators>,)
-p 3747 4984 V 75 5084 V 273 5054 a(\(dimension)i(1\)>)p
-3747 5084 V 75 5183 V 3747 5183 V 75 5208 4 25 v 3747
-5208 V 75 5211 3675 4 v Black Black eop end
+p 3747 5084 V 75 5183 V 273 5153 a(\(dimension)i(1\)>)p
+3747 5183 V 75 5283 V 3747 5283 V 75 5308 4 25 v 3747
+5308 V 75 5311 3675 4 v Black Black eop end
 %%Page: 29 29
 TeXDict begin 29 28 bop 0 0 a
 SDict begin /product where{pop product(Distiller)search{pop pop pop
@@ -6196,27 +6117,28 @@ pdfmark end
 2561 a 92 x FL(4.5.1)p 0.0 0.0 1.0 TeXcolorrgb 99 w(LieAlgebraByDomain)
 p Black 1.0 0.0 0.0 TeXcolorrgb 75 2827 a Fa(\006)22
 b Fl(LieAlgebraByDomai)q(n\()53 b(A)46 b(\))2283 b FE(\(method\))p
-Black 216 3053 a FM(This)28 b(method)g(tak)o(es)h(an)f(associati)n(v)o
-(e)i(algebra)f(as)f(its)f(ar)n(gument,)k(and)d(constructs)i(its)e
-(associated)i(Lie)d(alge-)75 3166 y(bra)i(in)f(which)h(the)g(product)i
-(is)d(the)h(brack)o(et)h(operation:)42 b Fq([)p Fx(a)p
-Fw(;)10 b Fx(b)p Fq(])25 b(=)e Fx(ab)14 b Fo(\000)g Fx(ba)p
-FM(.)45 b(It)28 b(is)h(recommended)i(that)e(the)g(user)75
-3279 y(ne)n(v)o(er)i(calls)h(this)f(method.)51 b(The)30
-b(Lie)h(algebra)h(for)f(an)g(associati)n(v)o(e)i(algebra)f(should)h
-(normally)f(be)f(created)h(us-)75 3392 y(ing)c Fl(LieAlgebra\()51
-b(A)46 b(\))p FM(.)28 b(When)g Fl(LieAlgebra)i FM(is)e(\002rst)g(in)l
-(v)n(ok)o(ed,)j(it)d(constructs)i(the)f(Lie)e(algebra)i(for)g
-Fl(A)e FM(using)75 3505 y Fl(LieAlgebraByDomain)q FM(.)56
-b(After)31 b(that)h(it)f(stores)h(this)g(Lie)f(algebra)h(and)g(simply)g
-(returns)h(it)e(if)f Fl(LieAlgebra)k FM(is)75 3618 y(called)25
-b(again.)p 75 3740 1648 4 v 1764 3745 a FH(Example)p
-2102 3740 V 75 3765 4 25 v 3747 3765 V 75 3865 4 100
-v 3747 3865 V 75 3965 V 188 3935 a(gap>)44 b(M)e(:=)h(MatrixAlgebra\()k
-(GF\()d(3)e(\),)i(3)e(\);)p 3747 3965 V 75 4064 V 188
-4034 a(\()h(GF\(3\)\210[)h(3,)f(3)g(])g(\))p 3747 4064
-V 75 4164 V 188 4134 a(gap>)h(L)e(:=)h(LieAlgebra\()j(M)d(\);)p
-3747 4164 V 75 4264 V 188 4234 a(<Lie)h(algebra)g(over)g(GF\(3\)>)p
+Black 216 3053 a FM(This)38 b(method)g(tak)o(es)h(a)e(group)i(algebra)g
+(as)f(its)g(ar)n(gument,)43 b(and)38 b(constructs)i(its)e(associated)i
+(Lie)d(algebra)75 3166 y(in)f(which)h(the)f(product)i(is)e(the)h(brack)
+o(et)h(operation:)57 b Fq([)p Fx(a)p Fw(;)10 b Fx(b)p
+Fq(])29 b(=)e Fx(ab)18 b Fo(\000)f Fx(ba)p FM(.)67 b(It)36
+b(is)g(recommended)i(that)f(the)g(user)75 3279 y(ne)n(v)o(er)31
+b(calls)h(this)f(method.)51 b(The)30 b(Lie)h(algebra)h(for)f(an)g
+(associati)n(v)o(e)i(algebra)f(should)h(normally)f(be)f(created)h(us-)
+75 3392 y(ing)c Fl(LieAlgebra\()51 b(A)46 b(\))p FM(.)28
+b(When)g Fl(LieAlgebra)i FM(is)e(\002rst)g(in)l(v)n(ok)o(ed,)j(it)d
+(constructs)i(the)f(Lie)e(algebra)i(for)g Fl(A)e FM(using)75
+3505 y Fl(LieAlgebraByDomain)q FM(.)56 b(After)31 b(that)h(it)f(stores)
+h(this)g(Lie)f(algebra)h(and)g(simply)g(returns)h(it)e(if)f
+Fl(LieAlgebra)k FM(is)75 3618 y(called)25 b(again.)p
+75 3740 1648 4 v 1764 3745 a FH(Example)p 2102 3740 V
+75 3765 4 25 v 3747 3765 V 75 3865 4 100 v 3747 3865
+V 75 3965 V 188 3935 a(gap>)44 b(G)e(:=)h(SymmetricGroup\(3\);;)49
+b(FG)43 b(:=)g(GroupRing\()j(GF\()d(2)g(\),)g(G)g(\);)p
+3747 3965 V 75 4064 V 188 4034 a(<algebra-with-one)48
+b(over)c(GF\(2\),)g(with)g(2)f(generators>)p 3747 4064
+V 75 4164 V 188 4134 a(gap>)h(L)e(:=)h(LieAlgebra\()j(FG)d(\);)p
+3747 4164 V 75 4264 V 188 4234 a(<Lie)h(algebra)g(over)g(GF\(2\)>)p
 3747 4264 V 75 4363 V 3747 4363 V 75 4388 4 25 v 3747
 4388 V 75 4391 3675 4 v 75 4524 a
 SDict begin H.S end
@@ -6237,9 +6159,10 @@ g(with)75 5154 y(an)24 b(associati)n(v)o(e)i(algebra)f(\(this)f(piece)h
 (of)e(information)j(cannot)f(be)f(obtained)i(later\).)p
 75 5276 1648 4 v 1764 5281 a FH(Example)p 2102 5276 V
 75 5301 4 25 v 3747 5301 V 75 5401 4 100 v 3747 5401
-V 75 5500 V 188 5470 a(gap>)44 b(M)e(:=)h(MatrixAlgebra\()k(GF\()d(3)e
-(\),)i(3)e(\);)p 3747 5500 V 75 5600 V 188 5570 a(\()h(GF\(3\)\210[)h
-(3,)f(3)g(])g(\))p 3747 5600 V Black Black eop end
+V 75 5500 V 188 5470 a(gap>)44 b(KG)f(:=)g(GroupRing\()i(GF\(3\),)g
+(DihedralGroup\(16\))j(\);)p 3747 5500 V 75 5600 V 188
+5570 a(<algebra-with-one)g(over)c(GF\(3\),)g(with)g(4)f(generators>)p
+3747 5600 V Black Black eop end
 %%Page: 36 36
 TeXDict begin 36 35 bop 0 0 a
 SDict begin /product where{pop product(Distiller)search{pop pop pop
@@ -6257,21 +6180,21 @@ SDict begin [ /View [/XYZ H.V] /Dest (page.36) cvn H.B /DEST pdfmark
 end
  75 100 a Black 1662 w FG(LA)n(GUNA)1678
 b FM(36)p Black 75 428 4 100 v 188 399 a FH(gap>)44 b(L)e(:=)h
-(LieAlgebra\()j(M)d(\);)p 3747 428 V 75 528 V 188 498
-a(<Lie)h(algebra)g(over)g(GF\(3\)>)p 3747 528 V 75 628
-V 188 598 a(gap>)g(IsLieAlgebraByAssocia)q(tiv)q(eAl)q(ge)q(bra)q(\()k
-(L)43 b(\);)p 3747 628 V 75 727 V 188 697 a(true)p 3747
-727 V 75 827 V 3747 827 V 75 852 4 25 v 3747 852 V 75
-855 3675 4 v 75 985 a
+(LieAlgebra)j(\()d(KG)g(\);)p 3747 428 V 75 528 V 188
+498 a(<Lie)h(algebra)g(over)g(GF\(3\)>)p 3747 528 V 75
+628 V 188 598 a(gap>)g(IsLieAlgebraByAssocia)q(tiv)q(eAl)q(ge)q(bra)q
+(\()k(L)43 b(\);)p 3747 628 V 75 727 V 188 697 a(true)p
+3747 727 V 75 827 V 3747 827 V 75 852 4 25 v 3747 852
+V 75 855 3675 4 v 75 985 a
 SDict begin H.S end
  75 985 a 75 985 a
 SDict begin 13.6 H.A end
- 75 985 a 75 985
-a
+ 75 985 a
+75 985 a
 SDict begin [ /View [/XYZ H.V] /Dest (subsection.4.5.3) cvn H.B /DEST
 pdfmark end
- 75 985 a 116 x FL(4.5.3)p 0.0 0.0 1.0 TeXcolorrgb 99
-w(UnderlyingAssociati)o(v)o(eAlgebra)p Black 1.0 0.0 0.0
+ 75 985 a 116 x FL(4.5.3)p 0.0 0.0 1.0 TeXcolorrgb
+99 w(UnderlyingAssociati)o(v)o(eAlgebra)p Black 1.0 0.0 0.0
 TeXcolorrgb 75 1276 a Fa(\006)22 b Fl(UnderlyingAssocia)q(tiv)q(eAl)q
 (geb)q(ra)q(\()52 b(L)47 b(\))1798 b FE(\(attrib)o(ute\))p
 Black 216 1389 a FA(Retur)o(ns:)51 b FM(the)24 b(underlying)i
@@ -6282,40 +6205,40 @@ Black 216 1389 a FA(Retur)o(ns:)51 b FM(the)24 b(underlying)i
 (its)h(attrib)n(utes.)p 75 1719 1648 4 v 1764 1724 a
 FH(Example)p 2102 1719 V 75 1744 4 25 v 3747 1744 V 75
 1844 4 100 v 3747 1844 V 75 1944 V 188 1914 a(gap>)44
-b(M)e(:=)h(MatrixAlgebra\()k(GF\()d(3)e(\),)i(3)e(\);)p
-3747 1944 V 75 2043 V 188 2013 a(<algebra-with-one)48
-b(over)c(GF\(3\),)g(with)g(2)f(generators>)p 3747 2043
-V 75 2143 V 188 2113 a(gap>)h(L)e(:=)h(LieAlgebra\()j(M)d(\);)p
-3747 2143 V 75 2242 V 188 2213 a(<Lie)h(algebra)g(over)g(GF\(3\)>)p
+b(KG)f(:=)g(GroupRing\()i(GF\(2\),)g(DihedralGroup\(16\))j(\);)p
+3747 1944 V 75 2043 V 188 2013 a(<algebra-with-one)g(over)c(GF\(2\),)g
+(with)g(4)f(generators>)p 3747 2043 V 75 2143 V 188 2113
+a(gap>)h(L)e(:=)h(LieAlgebra)j(\()d(KG)g(\);)p 3747 2143
+V 75 2242 V 188 2213 a(<Lie)h(algebra)g(over)g(GF\(2\)>)p
 3747 2242 V 75 2342 V 188 2312 a(gap>)g(UnderlyingAssociative)q(Alg)q
 (ebr)q(a\()49 b(L)43 b(\);)p 3747 2342 V 75 2442 V 188
-2412 a(\()g(GF\(3\)\210[)h(3,)f(3)g(])g(\))p 3747 2442
-V 75 2541 V 188 2511 a(gap>)h(last)f(=)g(M;)p 3747 2541
-V 75 2641 V 188 2611 a(true)p 3747 2641 V 75 2741 V 3747
-2741 V 75 2765 4 25 v 3747 2765 V 75 2768 3675 4 v 75
-2899 a
+2412 a(<algebra-with-one)48 b(over)c(GF\(2\),)g(with)g(4)f(generators>)
+p 3747 2442 V 75 2541 V 188 2511 a(gap>)h(last)f(=)g(M;)p
+3747 2541 V 75 2641 V 188 2611 a(true)p 3747 2641 V 75
+2741 V 3747 2741 V 75 2765 4 25 v 3747 2765 V 75 2768
+3675 4 v 75 2899 a
 SDict begin H.S end
  75 2899 a 75 2899 a
 SDict begin 13.6 H.A end
- 75 2899 a 75 2899 a
+ 75 2899 a 75 2899
+a
 SDict begin [ /View [/XYZ H.V] /Dest (subsection.4.5.4) cvn H.B /DEST
 pdfmark end
- 75 2899
-a 116 x FL(4.5.4)p 0.0 0.0 1.0 TeXcolorrgb 99 w(NaturalBijectionT)-9
-b(oLieAlgebra)p Black 1.0 0.0 0.0 TeXcolorrgb 75 3189
-a Fa(\006)22 b Fl(NaturalBijectionT)q(oLi)q(eAl)q(geb)q(ra)q(\()52
-b(A)47 b(\))1798 b FE(\(attrib)o(ute\))p Black 216 3302
-a FA(Retur)o(ns:)51 b FM(a)23 b(mapping)216 3415 y(The)k(natural)i
-(linear)g(bijection)h(between)f(the)e(\(isomorphic,)k(b)n(ut)d(not)g
-(equal\))h(underlying)i(v)o(ector)d(spaces)h(of)75 3528
-y(an)24 b(associati)n(v)o(e)i(algebra)f Fl(A)f FM(and)g(its)g
-(associated)i(Lie)d(algebra)j(is)e(stored)h(as)e(an)h(attrib)n(ute)i
-(of)e Fl(A)p FM(.)29 b(Note)23 b(that)i(this)f(is)g(a)75
-3641 y(v)o(ector)h(space)f(isomorphism)i(between)e(tw)o(o)g(algebras,)h
-(b)n(ut)f(not)g(an)f(algebra)j(isomorphism.)p 75 3746
-1648 4 v 1764 3751 a FH(Example)p 2102 3746 V 75 3771
-4 25 v 3747 3771 V 75 3870 4 100 v 3747 3870 V 75 3970
-V 188 3940 a(gap>)44 b(F)e(:=)h(GF\()h(2)e(\);)h(G)g(:=)g
+ 75 2899 a 116 x FL(4.5.4)p 0.0 0.0 1.0 TeXcolorrgb
+99 w(NaturalBijectionT)-9 b(oLieAlgebra)p Black 1.0 0.0 0.0
+TeXcolorrgb 75 3189 a Fa(\006)22 b Fl(NaturalBijectionT)q(oLi)q(eAl)q
+(geb)q(ra)q(\()52 b(A)47 b(\))1798 b FE(\(attrib)o(ute\))p
+Black 216 3302 a FA(Retur)o(ns:)51 b FM(a)23 b(mapping)216
+3415 y(The)k(natural)i(linear)g(bijection)h(between)f(the)e
+(\(isomorphic,)k(b)n(ut)d(not)g(equal\))h(underlying)i(v)o(ector)d
+(spaces)h(of)75 3528 y(an)24 b(associati)n(v)o(e)i(algebra)f
+Fl(A)f FM(and)g(its)g(associated)i(Lie)d(algebra)j(is)e(stored)h(as)e
+(an)h(attrib)n(ute)i(of)e Fl(A)p FM(.)29 b(Note)23 b(that)i(this)f(is)g
+(a)75 3641 y(v)o(ector)h(space)f(isomorphism)i(between)e(tw)o(o)g
+(algebras,)h(b)n(ut)f(not)g(an)f(algebra)j(isomorphism.)p
+75 3746 1648 4 v 1764 3751 a FH(Example)p 2102 3746 V
+75 3771 4 25 v 3747 3771 V 75 3870 4 100 v 3747 3870
+V 75 3970 V 188 3940 a(gap>)44 b(F)e(:=)h(GF\()h(2)e(\);)h(G)g(:=)g
 (SymmetricGroup\()48 b(3)42 b(\);)h(FG)g(:=)g(GroupRing\()j(F,)d(G)g
 (\);)p 3747 3970 V 75 4070 V 188 4040 a(GF\(2\))p 3747
 4070 V 75 4169 V 188 4139 a(Sym\()h([)e(1)h(..)g(3)g(])f(\))p
@@ -7132,7 +7055,7 @@ SDict begin H.R end
 SDict begin [ /Color [0 1 0] /H /I /Border [0 0 0] /Subtype /Link /Dest
 (cite.Du) cvn H.B /ANN pdfmark end
  829 3125 a Black 1 w
-FM(])g(the)g(Jennings')j(conjecture)f(w)o(as)e(pro)o(v)o(ed,)h(which)f
+FM(])g(the)g(Jennings')i(conjecture)h(w)o(as)d(pro)o(v)o(ed,)h(which)f
 (means)g(that)h(the)f(nilpotenc)o(y)i(class)f(of)75 3238
 y(the)d(normalized)i(unit)e(group)h(of)e(the)h(modular)h(group)f
 (algebra)i Fx(K)5 b(G)22 b FM(is)h(equal)i(to)c Fx(t)2696
@@ -7595,16 +7518,16 @@ end
  75 1395 a 113 x FM([CS])p Black 182 w(Francesco)25
 b(Catino)f(and)g(Ernesto)h(Spinelli.)34 b(Upper)24 b(lie)g(codimension)
 i(subgroups.)36 b Fx(T)-8 b(o)23 b(appear)p FM(.)p 0.0236 0.0894 0.6179
-TeXcolorrgb 3604 1509 a
+TeXcolorrgb 3582 1509 a
 SDict begin H.S end
- 3604 1509 a 0.0236 0.0894 0.6179
+ 3582 1509 a 0.0236 0.0894 0.6179
 TeXcolorrgb -1 x FM(45)p 0.0236 0.0894 0.6179 TeXcolorrgb
-3694 1446 a
+3672 1446 a
 SDict begin H.R end
- 3694 1446 a 3694 1508 a
+ 3672 1446 a 3672 1508 a
 SDict begin [ /Color [1 0 0] /H /I /Border [0 0 0] /Subtype /Link /Dest
 (page.45) cvn H.B /ANN pdfmark end
- 3694 1508 a Black
+ 3672 1508 a Black
 Black 75 1582 a
 SDict begin H.S end
  75 1582 a 75 1582 a
@@ -7616,27 +7539,27 @@ end
  75 1582 a 113 x FM([Du92])p Black 93 w(X.)f(Du.)33
 b(The)23 b(centers)i(of)e(radical)i(ring.)34 b Fx(Canad.)24
 b(Math.)g(Bull.)p FM(,)e(35:174\226179,)27 b(1992.)p
-0.0236 0.0894 0.6179 TeXcolorrgb 3206 1696 a
+0.0236 0.0894 0.6179 TeXcolorrgb 3183 1696 a
 SDict begin H.S end
- 3206 1696
+ 3183 1696
 a 0.0236 0.0894 0.6179 TeXcolorrgb -1 x FM(43)p 0.0236 0.0894 0.6179
-TeXcolorrgb 3296 1633 a
+TeXcolorrgb 3273 1633 a
 SDict begin H.R end
- 3296 1633 a 3296 1695 a
+ 3273 1633 a 3273 1695 a
 SDict begin [ /Color [1 0 0] /H /I /Border [0 0 0] /Subtype /Link /Dest
 (page.43) cvn H.B /ANN pdfmark end
- 3296
+ 3273
 1695 a Black FM(,)p 0.0236 0.0894 0.6179 TeXcolorrgb
-3342 1696 a
+3320 1696 a
 SDict begin H.S end
- 3342 1696 a 0.0236 0.0894 0.6179 TeXcolorrgb
--1 x FM(45)p 0.0236 0.0894 0.6179 TeXcolorrgb 3432 1633
+ 3320 1696 a 0.0236 0.0894 0.6179 TeXcolorrgb
+-1 x FM(45)p 0.0236 0.0894 0.6179 TeXcolorrgb 3410 1633
 a
 SDict begin H.R end
- 3432 1633 a 3432 1695 a
+ 3410 1633 a 3410 1695 a
 SDict begin [ /Color [1 0 0] /H /I /Border [0 0 0] /Subtype /Link /Dest
 (page.45) cvn H.B /ANN pdfmark end
- 3432 1695 a Black Black 75
+ 3410 1695 a Black Black 75
 1770 a
 SDict begin H.S end
  75 1770 a 75 1770 a
@@ -7651,27 +7574,27 @@ FM(,)e(v)n(olume)i(242)f(of)g Fx(Grundlehr)m(en)429 1996
 y(der)d(Mathematisc)o(hen)j(W)-5 b(issensc)o(haften)34
 b([Fundamental)e(Principles)g(of)f(Mathematical)h(Sciences])p
 FM(.)429 2109 y(Springer)n(-V)-10 b(erlag,)26 b(Berlin,)e(1982.)34
-b(AMD,)22 b(44.)p 0.0236 0.0894 0.6179 TeXcolorrgb 1990
+b(AMD,)22 b(44.)p 0.0236 0.0894 0.6179 TeXcolorrgb 1967
 2110 a
 SDict begin H.S end
- 1990 2110 a 0.0236 0.0894 0.6179 TeXcolorrgb -1
-x FM(15)p 0.0236 0.0894 0.6179 TeXcolorrgb 2080 2047
+ 1967 2110 a 0.0236 0.0894 0.6179 TeXcolorrgb -1
+x FM(15)p 0.0236 0.0894 0.6179 TeXcolorrgb 2057 2047
 a
 SDict begin H.R end
- 2080 2047 a 2080 2109 a
+ 2057 2047 a 2057 2109 a
 SDict begin [ /Color [1 0 0] /H /I /Border [0 0 0] /Subtype /Link /Dest
 (page.15) cvn H.B /ANN pdfmark end
- 2080 2109 a Black FM(,)p 0.0236 0.0894 0.6179
-TeXcolorrgb 2126 2110 a
+ 2057 2109 a Black FM(,)p 0.0236 0.0894 0.6179
+TeXcolorrgb 2103 2110 a
 SDict begin H.S end
- 2126 2110 a 0.0236 0.0894 0.6179
+ 2103 2110 a 0.0236 0.0894 0.6179
 TeXcolorrgb -1 x FM(16)p 0.0236 0.0894 0.6179 TeXcolorrgb
-2216 2047 a
+2193 2047 a
 SDict begin H.R end
- 2216 2047 a 2216 2109 a
+ 2193 2047 a 2193 2109 a
 SDict begin [ /Color [1 0 0] /H /I /Border [0 0 0] /Subtype /Link /Dest
 (page.16) cvn H.B /ANN pdfmark end
- 2216 2109 a Black
+ 2193 2109 a Black
 Black 75 2183 a
 SDict begin H.S end
  75 2183 a 75 2183 a
@@ -7685,37 +7608,37 @@ b(Le)n(vin)h(and)h(G.)e(Rosenber)n(ger)-5 b(.)52 b(Lie)28
 b(metabelian)j(group)e(rings.)50 b(In)29 b Fx(Gr)l(oup)g(and)g(semigr)l
 (oup)h(rings)429 2409 y(\(J)n(ohannesb)n(ur)m(g)o(,)d(1985\))p
 FM(,)e(pages)g(153\226161.)g(North-Holland,)h(Amsterdam,)e(1986.)p
-0.0236 0.0894 0.6179 TeXcolorrgb 3173 2410 a
+0.0236 0.0894 0.6179 TeXcolorrgb 3150 2410 a
 SDict begin H.S end
- 3173 2410
+ 3150 2410
 a 0.0236 0.0894 0.6179 TeXcolorrgb -1 x FM(7)p 0.0236 0.0894 0.6179
-TeXcolorrgb 3218 2349 a
+TeXcolorrgb 3195 2349 a
 SDict begin H.R end
- 3218 2349 a 3218 2409 a
+ 3195 2349 a 3195 2409 a
 SDict begin [ /Color [1 0 0] /H /I /Border [0 0 0] /Subtype /Link /Dest
 (page.7) cvn H.B /ANN pdfmark end
- 3218
+ 3195
 2409 a Black FM(,)p 0.0236 0.0894 0.6179 TeXcolorrgb
-3264 2410 a
+3241 2410 a
 SDict begin H.S end
- 3264 2410 a 0.0236 0.0894 0.6179 TeXcolorrgb
--1 x FM(17)p 0.0236 0.0894 0.6179 TeXcolorrgb 3354 2347
+ 3241 2410 a 0.0236 0.0894 0.6179 TeXcolorrgb
+-1 x FM(17)p 0.0236 0.0894 0.6179 TeXcolorrgb 3331 2347
 a
 SDict begin H.R end
- 3354 2347 a 3354 2409 a
+ 3331 2347 a 3331 2409 a
 SDict begin [ /Color [1 0 0] /H /I /Border [0 0 0] /Subtype /Link /Dest
 (page.17) cvn H.B /ANN pdfmark end
- 3354 2409 a Black FM(,)p 0.0236 0.0894 0.6179
-TeXcolorrgb 3400 2409 a
+ 3331 2409 a Black FM(,)p 0.0236 0.0894 0.6179
+TeXcolorrgb 3377 2409 a
 SDict begin H.S end
- 3400 2409 a 0.0236 0.0894 0.6179
+ 3377 2409 a 0.0236 0.0894 0.6179
 TeXcolorrgb FM(41)p 0.0236 0.0894 0.6179 TeXcolorrgb
-3490 2347 a
+3467 2347 a
 SDict begin H.R end
- 3490 2347 a 3490 2409 a
+ 3467 2347 a 3467 2409 a
 SDict begin [ /Color [1 0 0] /H /I /Border [0 0 0] /Subtype /Link /Dest
 (page.41) cvn H.B /ANN pdfmark end
- 3490 2409 a Black
+ 3467 2409 a Black
 Black 75 2484 a
 SDict begin H.S end
  75 2484 a 75 2484 a
@@ -7728,37 +7651,37 @@ end
 (D.)e(S.)h(P)o(assman,)h(and)g(S.)f(K.)f(Sehgal.)38 b(Lie)24
 b(solv)n(able)j(group)g(rings.)38 b Fx(Canad.)26 b(J)n(.)e(Math.)p
 FM(,)429 2710 y(25:748\226757,)j(1973.)p 0.0236 0.0894 0.6179
-TeXcolorrgb 1169 2711 a
+TeXcolorrgb 1146 2711 a
 SDict begin H.S end
- 1169 2711 a 0.0236 0.0894 0.6179
+ 1146 2711 a 0.0236 0.0894 0.6179
 TeXcolorrgb -1 x FM(7)p 0.0236 0.0894 0.6179 TeXcolorrgb
-1214 2649 a
+1191 2649 a
 SDict begin H.R end
- 1214 2649 a 1214 2710 a
+ 1191 2649 a 1191 2710 a
 SDict begin [ /Color [1 0 0] /H /I /Border [0 0 0] /Subtype /Link /Dest
 (page.7) cvn H.B /ANN pdfmark end
- 1214 2710 a Black
-FM(,)p 0.0236 0.0894 0.6179 TeXcolorrgb 1260 2711 a
+ 1191 2710 a Black
+FM(,)p 0.0236 0.0894 0.6179 TeXcolorrgb 1237 2711 a
 SDict begin H.S end
- 1260
+ 1237
 2711 a 0.0236 0.0894 0.6179 TeXcolorrgb -1 x FM(17)p
-0.0236 0.0894 0.6179 TeXcolorrgb 1350 2648 a
+0.0236 0.0894 0.6179 TeXcolorrgb 1327 2648 a
 SDict begin H.R end
- 1350 2648
-a 1350 2710 a
+ 1327 2648
+a 1327 2710 a
 SDict begin [ /Color [1 0 0] /H /I /Border [0 0 0] /Subtype /Link /Dest
 (page.17) cvn H.B /ANN pdfmark end
- 1350 2710 a Black FM(,)p 0.0236 0.0894 0.6179
-TeXcolorrgb 1396 2711 a
+ 1327 2710 a Black FM(,)p 0.0236 0.0894 0.6179
+TeXcolorrgb 1373 2711 a
 SDict begin H.S end
- 1396 2711 a 0.0236 0.0894 0.6179
+ 1373 2711 a 0.0236 0.0894 0.6179
 TeXcolorrgb -1 x FM(40)p 0.0236 0.0894 0.6179 TeXcolorrgb
-1486 2648 a
+1463 2648 a
 SDict begin H.R end
- 1486 2648 a 1486 2710 a
+ 1463 2648 a 1463 2710 a
 SDict begin [ /Color [1 0 0] /H /I /Border [0 0 0] /Subtype /Link /Dest
 (page.40) cvn H.B /ANN pdfmark end
- 1486 2710 a Black
+ 1463 2710 a Black
 Black 75 2785 a
 SDict begin H.S end
  75 2785 a 75 2785 a
@@ -7771,16 +7694,16 @@ end
 b Fx(Centr)m(e-by-metabelian)27 b(gr)l(oup)c(alg)o(ebr)o(as)p
 FM(.)33 b(PhD)22 b(thesis,)h(Friedrich-Schiller)n(-)429
 3010 y(Uni)n(v)o(ersit)5 b(\250)-35 b(at)25 b(Jena,)f(1997.)p
-0.0236 0.0894 0.6179 TeXcolorrgb 1319 3011 a
+0.0236 0.0894 0.6179 TeXcolorrgb 1296 3011 a
 SDict begin H.S end
- 1319 3011
+ 1296 3011
 a 0.0236 0.0894 0.6179 TeXcolorrgb -1 x FM(6)p 0.0236 0.0894 0.6179
-TeXcolorrgb 1364 2948 a
+TeXcolorrgb 1341 2948 a
 SDict begin H.R end
- 1364 2948 a 1364 3010 a
+ 1341 2948 a 1341 3010 a
 SDict begin [ /Color [1 0 0] /H /I /Border [0 0 0] /Subtype /Link /Dest
 (page.6) cvn H.B /ANN pdfmark end
- 1364
+ 1341
 3010 a Black Black 75 3085 a
 SDict begin H.S end
  75 3085 a 75 3085 a
@@ -7793,27 +7716,27 @@ end
 b(Rossmanith.)48 b(Lie)28 b(centre-by-metabelian)33 b(group)c(algebras)
 h(in)e(e)n(v)o(en)g(characteristic.)k(I,)27 b(II.)429
 3311 y Fx(Isr)o(ael)d(J)n(.)f(Math.)p FM(,)g(115:51\22675,)j(77\22699,)
-f(2000.)p 0.0236 0.0894 0.6179 TeXcolorrgb 1973 3312
+f(2000.)p 0.0236 0.0894 0.6179 TeXcolorrgb 1950 3312
 a
 SDict begin H.S end
- 1973 3312 a 0.0236 0.0894 0.6179 TeXcolorrgb -1 x FM(7)p
-0.0236 0.0894 0.6179 TeXcolorrgb 2018 3250 a
+ 1950 3312 a 0.0236 0.0894 0.6179 TeXcolorrgb -1 x FM(7)p
+0.0236 0.0894 0.6179 TeXcolorrgb 1995 3250 a
 SDict begin H.R end
- 2018 3250
-a 2018 3311 a
+ 1995 3250
+a 1995 3311 a
 SDict begin [ /Color [1 0 0] /H /I /Border [0 0 0] /Subtype /Link /Dest
 (page.7) cvn H.B /ANN pdfmark end
- 2018 3311 a Black FM(,)p 0.0236 0.0894 0.6179
-TeXcolorrgb 2064 3312 a
+ 1995 3311 a Black FM(,)p 0.0236 0.0894 0.6179
+TeXcolorrgb 2041 3312 a
 SDict begin H.S end
- 2064 3312 a 0.0236 0.0894 0.6179
+ 2041 3312 a 0.0236 0.0894 0.6179
 TeXcolorrgb -1 x FM(17)p 0.0236 0.0894 0.6179 TeXcolorrgb
-2154 3249 a
+2131 3249 a
 SDict begin H.R end
- 2154 3249 a 2154 3311 a
+ 2131 3249 a 2131 3311 a
 SDict begin [ /Color [1 0 0] /H /I /Border [0 0 0] /Subtype /Link /Dest
 (page.17) cvn H.B /ANN pdfmark end
- 2154 3311 a Black
+ 2131 3311 a Black
 Black 75 3386 a
 SDict begin H.S end
  75 3386 a 75 3386 a
@@ -7826,16 +7749,16 @@ end
 b(Lie)27 b(centre-by-metabelian)33 b(group)c(algebras)g(o)o(v)o(er)f
 (commutati)n(v)o(e)g(rings.)47 b Fx(J)n(.)429 3611 y(Alg)o(ebr)o(a)p
 FM(,)24 b(251\(2\):503\226508,)k(2002.)p 0.0236 0.0894 0.6179
-TeXcolorrgb 1656 3611 a
+TeXcolorrgb 1634 3611 a
 SDict begin H.S end
- 1656 3611 a 0.0236 0.0894 0.6179
+ 1634 3611 a 0.0236 0.0894 0.6179
 TeXcolorrgb FM(41)p 0.0236 0.0894 0.6179 TeXcolorrgb
-1746 3549 a
+1724 3549 a
 SDict begin H.R end
- 1746 3549 a 1746 3611 a
+ 1724 3549 a 1724 3611 a
 SDict begin [ /Color [1 0 0] /H /I /Border [0 0 0] /Subtype /Link /Dest
 (page.41) cvn H.B /ANN pdfmark end
- 1746 3611 a Black
+ 1724 3611 a Black
 Black 75 3686 a
 SDict begin H.S end
  75 3686 a 75 3686 a
@@ -7849,16 +7772,16 @@ b(.)42 b(Lie)26 b(dimension)i(subgroups,)h(lie)e(nilpotenc)o(y)h
 (indices,)h(and)d(the)h(e)o(xponent)h(of)e(the)h(group)429
 3912 y(of)c(normalized)j(units.)34 b Fx(J)n(.)23 b(London)h(Math.)g
 (Soc.)p FM(,)f(43:23\22636,)j(1991.)p 0.0236 0.0894 0.6179
-TeXcolorrgb 2661 3913 a
+TeXcolorrgb 2638 3913 a
 SDict begin H.S end
- 2661 3913 a 0.0236 0.0894 0.6179
+ 2638 3913 a 0.0236 0.0894 0.6179
 TeXcolorrgb -1 x FM(43)p 0.0236 0.0894 0.6179 TeXcolorrgb
-2751 3850 a
+2728 3850 a
 SDict begin H.R end
- 2751 3850 a 2751 3912 a
+ 2728 3850 a 2728 3912 a
 SDict begin [ /Color [1 0 0] /H /I /Border [0 0 0] /Subtype /Link /Dest
 (page.43) cvn H.B /ANN pdfmark end
- 2751 3912 a Black
+ 2728 3912 a Black
 Black 75 3987 a
 SDict begin H.S end
  75 3987 a 75 3987 a
@@ -7870,29 +7793,29 @@ end
  75 3987 a 113 x FM([Sim94])p Black 57 w(Charles)j(C.)e(Sims.)47
 b Fx(Computation)30 b(with)e(\002nitely)i(pr)m(esented)h(gr)l(oups)p
 FM(,)f(v)n(olume)g(48)e(of)g Fx(Encyclopedia)429 4213
-y(of)23 b(Mathematics)i(and)f(its)f(Applications)p FM(.)35
-b(Cambridge)24 b(Uni)n(v)o(ersity)h(Press,)e(Cambridge,)h(1994.)p
-0.0236 0.0894 0.6179 TeXcolorrgb 3569 4214 a
+y(of)23 b(Mathematics)j(and)e(its)f(Applications)p FM(.)37
+b(Cambridge)24 b(Uni)n(v)o(ersity)h(Press,)f(Cambridge,)g(1994.)p
+0.0236 0.0894 0.6179 TeXcolorrgb 3551 4214 a
 SDict begin H.S end
- 3569 4214
+ 3551 4214
 a 0.0236 0.0894 0.6179 TeXcolorrgb -1 x FM(7)p 0.0236 0.0894 0.6179
-TeXcolorrgb 3614 4152 a
+TeXcolorrgb 3596 4152 a
 SDict begin H.R end
- 3614 4152 a 3614 4213 a
+ 3596 4152 a 3596 4213 a
 SDict begin [ /Color [1 0 0] /H /I /Border [0 0 0] /Subtype /Link /Dest
 (page.7) cvn H.B /ANN pdfmark end
- 3614
+ 3596
 4213 a Black FM(,)p 0.0236 0.0894 0.6179 TeXcolorrgb
-3659 4214 a
+3642 4214 a
 SDict begin H.S end
- 3659 4214 a 0.0236 0.0894 0.6179 TeXcolorrgb
--1 x FM(15)p 0.0236 0.0894 0.6179 TeXcolorrgb 3749 4151
+ 3642 4214 a 0.0236 0.0894 0.6179 TeXcolorrgb
+-1 x FM(15)p 0.0236 0.0894 0.6179 TeXcolorrgb 3732 4151
 a
 SDict begin H.R end
- 3749 4151 a 3749 4213 a
+ 3732 4151 a 3732 4213 a
 SDict begin [ /Color [1 0 0] /H /I /Border [0 0 0] /Subtype /Link /Dest
 (page.15) cvn H.B /ANN pdfmark end
- 3749 4213 a Black Black 75
+ 3732 4213 a Black Black 75
 4287 a
 SDict begin H.S end
  75 4287 a 75 4287 a
@@ -7907,16 +7830,16 @@ b(an)23 b(algorithm)i(and)e(its)g(application)j(to)429
 4513 y(groups)f(of)f(order)g(2)1057 4480 y FE(6)1095
 4513 y FM(.)32 b Fx(J)n(.)23 b(Symbolic)i(Comp.)p FM(,)d
 (15:211\226227,)27 b(1993.)p 0.0236 0.0894 0.6179 TeXcolorrgb
-2615 4514 a
+2592 4514 a
 SDict begin H.S end
- 2615 4514 a 0.0236 0.0894 0.6179 TeXcolorrgb
--1 x FM(6)p 0.0236 0.0894 0.6179 TeXcolorrgb 2660 4451
+ 2592 4514 a 0.0236 0.0894 0.6179 TeXcolorrgb
+-1 x FM(6)p 0.0236 0.0894 0.6179 TeXcolorrgb 2637 4451
 a
 SDict begin H.R end
- 2660 4451 a 2660 4513 a
+ 2637 4451 a 2637 4513 a
 SDict begin [ /Color [1 0 0] /H /I /Border [0 0 0] /Subtype /Link /Dest
 (page.6) cvn H.B /ANN pdfmark end
- 2660 4513 a Black Black 1867
+ 2637 4513 a Black Black 1867
 5841 a FM(47)p Black eop end
 %%Page: 48 48
 TeXDict begin 48 47 bop 0 0 a
@@ -8320,361 +8243,361 @@ SDict begin H.R end
 SDict begin [ /Color [1 0 0] /H /I /Border [0 0 0] /Subtype /Link /Dest
 (page.32) cvn H.B /ANN pdfmark end
  1694 5592 a Black Black Black
-2058 1288 a Fl(IsPModularGroupAlge)q(bra)q FM(,)p 0.0236 0.0894 0.6179
-TeXcolorrgb 3123 1290 a
+1954 1288 a Fl(IsPModularGroupAlg)q(ebr)q(a)p FM(,)p
+0.0236 0.0894 0.6179 TeXcolorrgb 3019 1290 a
 SDict begin H.S end
- 3123 1290 a 0.0236 0.0894 0.6179
-TeXcolorrgb -2 x FM(19)p 0.0236 0.0894 0.6179 TeXcolorrgb
-3213 1226 a
+ 3019 1290
+a 0.0236 0.0894 0.6179 TeXcolorrgb -2 x FM(19)p 0.0236 0.0894 0.6179
+TeXcolorrgb 3109 1226 a
 SDict begin H.R end
- 3213 1226 a 3213 1288 a
+ 3109 1226 a 3109 1288 a
 SDict begin [ /Color [1 0 0] /H /I /Border [0 0 0] /Subtype /Link /Dest
 (page.19) cvn H.B /ANN pdfmark end
- 3213 1288 a Black
-2058 1400 a Fl(IsSymmetric)p FM(,)p 0.0236 0.0894 0.6179
-TeXcolorrgb 2613 1401 a
+ 3109
+1288 a Black 1954 1400 a Fl(IsSymmetric)p FM(,)p 0.0236 0.0894 0.6179
+TeXcolorrgb 2509 1401 a
 SDict begin H.S end
- 2613 1401 a 0.0236 0.0894 0.6179
+ 2509 1401 a 0.0236 0.0894 0.6179
 TeXcolorrgb -1 x FM(23)p 0.0236 0.0894 0.6179 TeXcolorrgb
-2703 1338 a
+2599 1338 a
 SDict begin H.R end
- 2703 1338 a 2703 1400 a
+ 2599 1338 a 2599 1400 a
 SDict begin [ /Color [1 0 0] /H /I /Border [0 0 0] /Subtype /Link /Dest
 (page.23) cvn H.B /ANN pdfmark end
- 2703 1400 a Black
-2058 1513 a Fl(IsUnit)p FM(,)p 0.0236 0.0894 0.6179 TeXcolorrgb
-2381 1514 a
+ 2599 1400 a Black
+1954 1513 a Fl(IsUnit)p FM(,)p 0.0236 0.0894 0.6179 TeXcolorrgb
+2278 1514 a
 SDict begin H.S end
- 2381 1514 a 0.0236 0.0894 0.6179 TeXcolorrgb
--1 x FM(23)p 0.0236 0.0894 0.6179 TeXcolorrgb 2471 1451
+ 2278 1514 a 0.0236 0.0894 0.6179 TeXcolorrgb
+-1 x FM(23)p 0.0236 0.0894 0.6179 TeXcolorrgb 2368 1451
 a
 SDict begin H.R end
- 2471 1451 a 2471 1513 a
+ 2368 1451 a 2368 1513 a
 SDict begin [ /Color [1 0 0] /H /I /Border [0 0 0] /Subtype /Link /Dest
 (page.23) cvn H.B /ANN pdfmark end
- 2471 1513 a Black 2058 1626
+ 2368 1513 a Black 1954 1626
 a Fl(IsUnitary)p FM(,)p 0.0236 0.0894 0.6179 TeXcolorrgb
-2521 1627 a
+2417 1627 a
 SDict begin H.S end
- 2521 1627 a 0.0236 0.0894 0.6179 TeXcolorrgb
--1 x FM(23)p 0.0236 0.0894 0.6179 TeXcolorrgb 2611 1564
+ 2417 1627 a 0.0236 0.0894 0.6179 TeXcolorrgb
+-1 x FM(23)p 0.0236 0.0894 0.6179 TeXcolorrgb 2507 1564
 a
 SDict begin H.R end
- 2611 1564 a 2611 1626 a
+ 2507 1564 a 2507 1626 a
 SDict begin [ /Color [1 0 0] /H /I /Border [0 0 0] /Subtype /Link /Dest
 (page.23) cvn H.B /ANN pdfmark end
- 2611 1626 a Black 2058 1739
-a Fl(IsUnitGroupOfGroupR)q(ing)q FM(,)p 0.0236 0.0894 0.6179
-TeXcolorrgb 3123 1740 a
+ 2507 1626 a Black 1954 1739
+a Fl(IsUnitGroupOfGroup)q(Rin)q(g)p FM(,)p 0.0236 0.0894 0.6179
+TeXcolorrgb 3019 1740 a
 SDict begin H.S end
- 3123 1740 a 0.0236 0.0894 0.6179
+ 3019 1740 a 0.0236 0.0894 0.6179
 TeXcolorrgb -1 x FM(32)p 0.0236 0.0894 0.6179 TeXcolorrgb
-3213 1677 a
+3109 1677 a
 SDict begin H.R end
- 3213 1677 a 3213 1739 a
+ 3109 1677 a 3109 1739 a
 SDict begin [ /Color [1 0 0] /H /I /Border [0 0 0] /Subtype /Link /Dest
 (page.32) cvn H.B /ANN pdfmark end
- 3213 1739 a Black
-2058 1935 a FM(Jennings)h(series,)p 0.0236 0.0894 0.6179
-TeXcolorrgb 2651 1936 a
+ 3109 1739 a Black
+1954 1935 a FM(Jennings)h(series,)p 0.0236 0.0894 0.6179
+TeXcolorrgb 2547 1936 a
 SDict begin H.S end
- 2651 1936 a 0.0236 0.0894 0.6179
+ 2547 1936 a 0.0236 0.0894 0.6179
 TeXcolorrgb -1 x FM(15)p 0.0236 0.0894 0.6179 TeXcolorrgb
-2741 1873 a
+2637 1873 a
 SDict begin H.R end
- 2741 1873 a 2741 1935 a
+ 2637 1873 a 2637 1935 a
 SDict begin [ /Color [1 0 0] /H /I /Border [0 0 0] /Subtype /Link /Dest
 (page.15) cvn H.B /ANN pdfmark end
- 2741 1935 a Black
-2058 2131 a Fl(LAGInfo)p FM(,)p 0.0236 0.0894 0.6179
-TeXcolorrgb 2428 2132 a
+ 2637 1935 a Black
+1954 2131 a Fl(LAGInfo)p FM(,)p 0.0236 0.0894 0.6179
+TeXcolorrgb 2324 2132 a
 SDict begin H.S end
- 2428 2132 a 0.0236 0.0894 0.6179
+ 2324 2132 a 0.0236 0.0894 0.6179
 TeXcolorrgb -1 x FM(46)p 0.0236 0.0894 0.6179 TeXcolorrgb
-2518 2069 a
+2414 2069 a
 SDict begin H.R end
- 2518 2069 a 2518 2131 a
+ 2414 2069 a 2414 2131 a
 SDict begin [ /Color [1 0 0] /H /I /Border [0 0 0] /Subtype /Link /Dest
 (page.46) cvn H.B /ANN pdfmark end
- 2518 2131 a Black
-2058 2244 a Fu(LA)n(GUNA)21 b FM(package,)p 0.0236 0.0894 0.6179
-TeXcolorrgb 2758 2244 a
+ 2414 2131 a Black
+1954 2244 a Fu(LA)n(GUNA)c FM(package,)p 0.0236 0.0894 0.6179
+TeXcolorrgb 2654 2244 a
 SDict begin H.S end
- 2758 2244 a 0.0236 0.0894 0.6179
-TeXcolorrgb FM(2)p 0.0236 0.0894 0.6179 TeXcolorrgb 2803
+ 2654 2244 a 0.0236 0.0894 0.6179
+TeXcolorrgb FM(2)p 0.0236 0.0894 0.6179 TeXcolorrgb 2699
 2182 a
 SDict begin H.R end
- 2803 2182 a 2803 2244 a
+ 2699 2182 a 2699 2244 a
 SDict begin [ /Color [1 0 0] /H /I /Border [0 0 0] /Subtype /Link /Dest
 (page.2) cvn H.B /ANN pdfmark end
- 2803 2244 a Black 2058
+ 2699 2244 a Black 1954
 2357 a Fl(LAGUNABuildManual)p FM(,)p 0.0236 0.0894 0.6179
-TeXcolorrgb 2891 2358 a
+TeXcolorrgb 2788 2358 a
 SDict begin H.S end
- 2891 2358 a 0.0236 0.0894 0.6179
+ 2788 2358 a 0.0236 0.0894 0.6179
 TeXcolorrgb -1 x FM(46)p 0.0236 0.0894 0.6179 TeXcolorrgb
-2981 2295 a
+2878 2295 a
 SDict begin H.R end
- 2981 2295 a 2981 2357 a
+ 2878 2295 a 2878 2357 a
 SDict begin [ /Color [1 0 0] /H /I /Border [0 0 0] /Subtype /Link /Dest
 (page.46) cvn H.B /ANN pdfmark end
- 2981 2357 a Black
-2058 2470 a Fl(LAGUNABuildManualHT)q(ML)p FM(,)p 0.0236 0.0894 0.6179
-TeXcolorrgb 3077 2471 a
+ 2878 2357 a Black
+1954 2470 a Fl(LAGUNABuildManualH)q(TML)q FM(,)p 0.0236 0.0894 0.6179
+TeXcolorrgb 2973 2471 a
 SDict begin H.S end
- 3077 2471 a 0.0236 0.0894 0.6179
+ 2973 2471 a 0.0236 0.0894 0.6179
 TeXcolorrgb -1 x FM(46)p 0.0236 0.0894 0.6179 TeXcolorrgb
-3167 2408 a
+3063 2408 a
 SDict begin H.R end
- 3167 2408 a 3167 2470 a
+ 3063 2408 a 3063 2470 a
 SDict begin [ /Color [1 0 0] /H /I /Border [0 0 0] /Subtype /Link /Dest
 (page.46) cvn H.B /ANN pdfmark end
- 3167 2470 a Black
-2058 2583 a Fl(LeftIdealBySubgroup)q FM(,)p 0.0236 0.0894 0.6179
-TeXcolorrgb 2984 2584 a
+ 3063 2470 a Black
+1954 2583 a Fl(LeftIdealBySubgrou)q(p)p FM(,)p 0.0236 0.0894 0.6179
+TeXcolorrgb 2880 2584 a
 SDict begin H.S end
- 2984 2584 a 0.0236 0.0894 0.6179
+ 2880 2584 a 0.0236 0.0894 0.6179
 TeXcolorrgb -1 x FM(28)p 0.0236 0.0894 0.6179 TeXcolorrgb
-3074 2521 a
+2970 2521 a
 SDict begin H.R end
- 3074 2521 a 3074 2583 a
+ 2970 2521 a 2970 2583 a
 SDict begin [ /Color [1 0 0] /H /I /Border [0 0 0] /Subtype /Link /Dest
 (page.28) cvn H.B /ANN pdfmark end
- 3074 2583 a Black
-2058 2696 a Fl(Length)p FM(,)p 0.0236 0.0894 0.6179 TeXcolorrgb
-2381 2696 a
+ 2970 2583 a Black
+1954 2696 a Fl(Length)p FM(,)p 0.0236 0.0894 0.6179 TeXcolorrgb
+2278 2696 a
 SDict begin H.S end
- 2381 2696 a 0.0236 0.0894 0.6179 TeXcolorrgb
-FM(21)p 0.0236 0.0894 0.6179 TeXcolorrgb 2471 2634 a
+ 2278 2696 a 0.0236 0.0894 0.6179 TeXcolorrgb
+FM(21)p 0.0236 0.0894 0.6179 TeXcolorrgb 2368 2634 a
 SDict begin H.R end
 
-2471 2634 a 2471 2696 a
+2368 2634 a 2368 2696 a
 SDict begin [ /Color [1 0 0] /H /I /Border [0 0 0] /Subtype /Link /Dest
 (page.21) cvn H.B /ANN pdfmark end
- 2471 2696 a Black 2058 2808 a
-FM(Lie)i(deri)n(v)o(ed)h(length,)p 0.0236 0.0894 0.6179
-TeXcolorrgb 2766 2809 a
+ 2368 2696 a Black 1954 2808 a
+FM(Lie)h(deri)n(v)o(ed)i(length,)p 0.0236 0.0894 0.6179
+TeXcolorrgb 2662 2809 a
 SDict begin H.S end
- 2766 2809 a 0.0236 0.0894 0.6179
+ 2662 2809 a 0.0236 0.0894 0.6179
 TeXcolorrgb -1 x FM(43)p 0.0236 0.0894 0.6179 TeXcolorrgb
-2856 2746 a
+2752 2746 a
 SDict begin H.R end
- 2856 2746 a 2856 2808 a
+ 2752 2746 a 2752 2808 a
 SDict begin [ /Color [1 0 0] /H /I /Border [0 0 0] /Subtype /Link /Dest
 (page.43) cvn H.B /ANN pdfmark end
- 2856 2808 a Black
-2058 2921 a FM(Lie)f(deri)n(v)o(ed)h(series,)p 0.0236 0.0894 0.6179
-TeXcolorrgb 2746 2922 a
+ 2752 2808 a Black
+1954 2921 a FM(Lie)e(deri)n(v)o(ed)i(series,)p 0.0236 0.0894 0.6179
+TeXcolorrgb 2642 2922 a
 SDict begin H.S end
- 2746 2922 a 0.0236 0.0894 0.6179
+ 2642 2922 a 0.0236 0.0894 0.6179
 TeXcolorrgb -1 x FM(43)p 0.0236 0.0894 0.6179 TeXcolorrgb
-2836 2859 a
+2732 2859 a
 SDict begin H.R end
- 2836 2859 a 2836 2921 a
+ 2732 2859 a 2732 2921 a
 SDict begin [ /Color [1 0 0] /H /I /Border [0 0 0] /Subtype /Link /Dest
 (page.43) cvn H.B /ANN pdfmark end
- 2836 2921 a Black
-2058 3034 a Fl(LieAlgebraByDomain)p FM(,)p 0.0236 0.0894 0.6179
-TeXcolorrgb 2938 3035 a
+ 2732 2921 a Black
+1954 3034 a Fl(LieAlgebraByDomain)q FM(,)p 0.0236 0.0894 0.6179
+TeXcolorrgb 2834 3035 a
 SDict begin H.S end
- 2938 3035 a 0.0236 0.0894 0.6179
+ 2834 3035 a 0.0236 0.0894 0.6179
 TeXcolorrgb -1 x FM(35)p 0.0236 0.0894 0.6179 TeXcolorrgb
-3028 2972 a
+2924 2972 a
 SDict begin H.R end
- 3028 2972 a 3028 3034 a
+ 2924 2972 a 2924 3034 a
 SDict begin [ /Color [1 0 0] /H /I /Border [0 0 0] /Subtype /Link /Dest
 (page.35) cvn H.B /ANN pdfmark end
- 3028 3034 a Black
-2058 3147 a Fl(LieCentre)p FM(,)p 0.0236 0.0894 0.6179
-TeXcolorrgb 2521 3148 a
+ 2924 3034 a Black
+1954 3147 a Fl(LieCentre)p FM(,)p 0.0236 0.0894 0.6179
+TeXcolorrgb 2417 3148 a
 SDict begin H.S end
- 2521 3148 a 0.0236 0.0894 0.6179
+ 2417 3148 a 0.0236 0.0894 0.6179
 TeXcolorrgb -1 x FM(38)p 0.0236 0.0894 0.6179 TeXcolorrgb
-2611 3085 a
+2507 3085 a
 SDict begin H.R end
- 2611 3085 a 2611 3147 a
+ 2507 3085 a 2507 3147 a
 SDict begin [ /Color [1 0 0] /H /I /Border [0 0 0] /Subtype /Link /Dest
 (page.38) cvn H.B /ANN pdfmark end
- 2611 3147 a Black
-2058 3260 a Fl(LieDerivedLength)p FM(,)p 0.0236 0.0894 0.6179
-TeXcolorrgb 2845 3261 a
+ 2507 3147 a Black
+1954 3260 a Fl(LieDerivedLength)p FM(,)p 0.0236 0.0894 0.6179
+TeXcolorrgb 2741 3261 a
 SDict begin H.S end
- 2845 3261 a 0.0236 0.0894 0.6179
+ 2741 3261 a 0.0236 0.0894 0.6179
 TeXcolorrgb -1 x FM(43)p 0.0236 0.0894 0.6179 TeXcolorrgb
-2935 3198 a
+2831 3198 a
 SDict begin H.R end
- 2935 3198 a 2935 3260 a
+ 2831 3198 a 2831 3260 a
 SDict begin [ /Color [1 0 0] /H /I /Border [0 0 0] /Subtype /Link /Dest
 (page.43) cvn H.B /ANN pdfmark end
- 2935 3260 a Black
-2058 3373 a Fl(LieDerivedSubalgebr)q(a)p FM(,)p 0.0236 0.0894 0.6179
-TeXcolorrgb 3031 3375 a
+ 2831 3260 a Black
+1954 3373 a Fl(LieDerivedSubalgeb)q(ra)p FM(,)p 0.0236 0.0894 0.6179
+TeXcolorrgb 2927 3375 a
 SDict begin H.S end
- 3031 3375 a 0.0236 0.0894 0.6179
+ 2927 3375 a 0.0236 0.0894 0.6179
 TeXcolorrgb -2 x FM(39)p 0.0236 0.0894 0.6179 TeXcolorrgb
-3121 3311 a
+3017 3311 a
 SDict begin H.R end
- 3121 3311 a 3121 3373 a
+ 3017 3311 a 3017 3373 a
 SDict begin [ /Color [1 0 0] /H /I /Border [0 0 0] /Subtype /Link /Dest
 (page.39) cvn H.B /ANN pdfmark end
- 3121 3373 a Black
-2058 3486 a Fl(LieDimensionSubgrou)q(ps)p FM(,)p 0.0236 0.0894 0.6179
-TeXcolorrgb 3077 3487 a
+ 3017 3373 a Black
+1954 3486 a Fl(LieDimensionSubgro)q(ups)q FM(,)p 0.0236 0.0894 0.6179
+TeXcolorrgb 2973 3487 a
 SDict begin H.S end
- 3077 3487 a 0.0236 0.0894 0.6179
+ 2973 3487 a 0.0236 0.0894 0.6179
 TeXcolorrgb -1 x FM(45)p 0.0236 0.0894 0.6179 TeXcolorrgb
-3167 3424 a
+3063 3424 a
 SDict begin H.R end
- 3167 3424 a 3167 3486 a
+ 3063 3424 a 3063 3486 a
 SDict begin [ /Color [1 0 0] /H /I /Border [0 0 0] /Subtype /Link /Dest
 (page.45) cvn H.B /ANN pdfmark end
- 3167 3486 a Black
-2058 3599 a Fl(LieLowerNilpotencyI)q(nde)q(x)p FM(,)p
-0.0236 0.0894 0.6179 TeXcolorrgb 3170 3600 a
+ 3063 3486 a Black
+1954 3599 a Fl(LieLowerNilpotency)q(Ind)q(ex)p FM(,)p
+0.0236 0.0894 0.6179 TeXcolorrgb 3066 3600 a
 SDict begin H.S end
- 3170 3600
+ 3066 3600
 a 0.0236 0.0894 0.6179 TeXcolorrgb -1 x FM(43)p 0.0236 0.0894 0.6179
-TeXcolorrgb 3260 3537 a
+TeXcolorrgb 3156 3537 a
 SDict begin H.R end
- 3260 3537 a 3260 3599 a
+ 3156 3537 a 3156 3599 a
 SDict begin [ /Color [1 0 0] /H /I /Border [0 0 0] /Subtype /Link /Dest
 (page.43) cvn H.B /ANN pdfmark end
- 3260
-3599 a Black 2058 3712 a Fl(LieUpperCodimension)q(Ser)q(ie)q(s)p
-FM(,)p 0.0236 0.0894 0.6179 TeXcolorrgb 3262 3713 a
+ 3156
+3599 a Black 1954 3712 a Fl(LieUpperCodimensio)q(nSe)q(rie)q(s)p
+FM(,)p 0.0236 0.0894 0.6179 TeXcolorrgb 3159 3713 a
 SDict begin H.S end
- 3262
+ 3159
 3713 a 0.0236 0.0894 0.6179 TeXcolorrgb -1 x FM(45)p
-0.0236 0.0894 0.6179 TeXcolorrgb 3352 3650 a
+0.0236 0.0894 0.6179 TeXcolorrgb 3249 3650 a
 SDict begin H.R end
- 3352 3650
-a 3352 3712 a
+ 3249 3650
+a 3249 3712 a
 SDict begin [ /Color [1 0 0] /H /I /Border [0 0 0] /Subtype /Link /Dest
 (page.45) cvn H.B /ANN pdfmark end
- 3352 3712 a Black 2058 3825 a Fl(LieUpperNilpotencyI)q
-(nde)q(x)p FM(,)p 0.0236 0.0894 0.6179 TeXcolorrgb 3170
+ 3249 3712 a Black 1954 3825 a Fl(LieUpperNilpotency)q
+(Ind)q(ex)p FM(,)p 0.0236 0.0894 0.6179 TeXcolorrgb 3066
 3826 a
 SDict begin H.S end
- 3170 3826 a 0.0236 0.0894 0.6179 TeXcolorrgb -1
-x FM(43)p 0.0236 0.0894 0.6179 TeXcolorrgb 3260 3763
+ 3066 3826 a 0.0236 0.0894 0.6179 TeXcolorrgb -1
+x FM(43)p 0.0236 0.0894 0.6179 TeXcolorrgb 3156 3763
 a
 SDict begin H.R end
- 3260 3763 a 3260 3825 a
+ 3156 3763 a 3156 3825 a
 SDict begin [ /Color [1 0 0] /H /I /Border [0 0 0] /Subtype /Link /Dest
 (page.43) cvn H.B /ANN pdfmark end
- 3260 3825 a Black 2058 3938
-a FM(lo)n(wer)f(Lie)g(po)n(wer)h(series,)p 0.0236 0.0894 0.6179
-TeXcolorrgb 2929 3939 a
+ 3156 3825 a Black 1954 3938
+a FM(lo)n(wer)e(Lie)g(po)n(wer)h(series,)p 0.0236 0.0894 0.6179
+TeXcolorrgb 2825 3939 a
 SDict begin H.S end
- 2929 3939 a 0.0236 0.0894 0.6179
+ 2825 3939 a 0.0236 0.0894 0.6179
 TeXcolorrgb -1 x FM(43)p 0.0236 0.0894 0.6179 TeXcolorrgb
-3019 3876 a
+2915 3876 a
 SDict begin H.R end
- 3019 3876 a 3019 3938 a
+ 2915 3876 a 2915 3938 a
 SDict begin [ /Color [1 0 0] /H /I /Border [0 0 0] /Subtype /Link /Dest
 (page.43) cvn H.B /ANN pdfmark end
- 3019 3938 a Black
-2058 4133 a FM(modular)h(group)f(algebra,)p 0.0236 0.0894 0.6179
-TeXcolorrgb 2931 4134 a
+ 2915 3938 a Black
+1954 4133 a FM(modular)h(group)g(algebra,)p 0.0236 0.0894 0.6179
+TeXcolorrgb 2828 4134 a
 SDict begin H.S end
- 2931 4134 a 0.0236 0.0894 0.6179
+ 2828 4134 a 0.0236 0.0894 0.6179
 TeXcolorrgb -1 x FM(18)p 0.0236 0.0894 0.6179 TeXcolorrgb
-3021 4071 a
+2918 4071 a
 SDict begin H.R end
- 3021 4071 a 3021 4133 a
+ 2918 4071 a 2918 4133 a
 SDict begin [ /Color [1 0 0] /H /I /Border [0 0 0] /Subtype /Link /Dest
 (page.18) cvn H.B /ANN pdfmark end
- 3021 4133 a Black
-2058 4329 a Fl(NaturalBijectionToA)q(sso)q(ci)q(ati)q(veA)q(lge)q(br)q
-(a)p FM(,)p 0.0236 0.0894 0.6179 TeXcolorrgb 2390 4443
+ 2918 4133 a Black
+1954 4329 a Fl(NaturalBijectionTo)q(Ass)q(oci)q(ati)q(ve)q(Alg)q(ebr)q
+(a)p FM(,)p 0.0236 0.0894 0.6179 TeXcolorrgb 2286 4443
 a
 SDict begin H.S end
- 2390 4443 a 0.0236 0.0894 0.6179 TeXcolorrgb -1 x FM(37)p
-0.0236 0.0894 0.6179 TeXcolorrgb 2480 4380 a
+ 2286 4443 a 0.0236 0.0894 0.6179 TeXcolorrgb -1 x FM(37)p
+0.0236 0.0894 0.6179 TeXcolorrgb 2376 4380 a
 SDict begin H.R end
- 2480 4380
-a 2480 4442 a
+ 2376 4380
+a 2376 4442 a
 SDict begin [ /Color [1 0 0] /H /I /Border [0 0 0] /Subtype /Link /Dest
 (page.37) cvn H.B /ANN pdfmark end
- 2480 4442 a Black 2058 4555 a Fl(NaturalBijectionToL)q
-(ieA)q(lg)q(ebr)q(a)p FM(,)p 0.0236 0.0894 0.6179 TeXcolorrgb
-3401 4556 a
+ 2376 4442 a Black 1954 4555 a Fl(NaturalBijectionTo)q
+(Lie)q(Alg)q(ebr)q(a)p FM(,)p 0.0236 0.0894 0.6179 TeXcolorrgb
+3298 4556 a
 SDict begin H.S end
- 3401 4556 a 0.0236 0.0894 0.6179 TeXcolorrgb
--1 x FM(36)p 0.0236 0.0894 0.6179 TeXcolorrgb 3491 4493
+ 3298 4556 a 0.0236 0.0894 0.6179 TeXcolorrgb
+-1 x FM(36)p 0.0236 0.0894 0.6179 TeXcolorrgb 3388 4493
 a
 SDict begin H.R end
- 3491 4493 a 3491 4555 a
+ 3388 4493 a 3388 4555 a
 SDict begin [ /Color [1 0 0] /H /I /Border [0 0 0] /Subtype /Link /Dest
 (page.36) cvn H.B /ANN pdfmark end
- 3491 4555 a Black 2058 4668
-a Fl(NaturalBijectionToN)q(orm)q(al)q(ize)q(dUn)q(itG)q(ro)q(up)p
-FM(,)p 0.0236 0.0894 0.6179 TeXcolorrgb 2390 4782 a
+ 3388 4555 a Black 1954 4668
+a Fl(NaturalBijectionTo)q(Nor)q(mal)q(ize)q(dU)q(nit)q(Gro)q(up)p
+FM(,)p 0.0236 0.0894 0.6179 TeXcolorrgb 2286 4782 a
 SDict begin H.S end
- 2390
+ 2286
 4782 a 0.0236 0.0894 0.6179 TeXcolorrgb -1 x FM(30)p
-0.0236 0.0894 0.6179 TeXcolorrgb 2480 4719 a
+0.0236 0.0894 0.6179 TeXcolorrgb 2376 4719 a
 SDict begin H.R end
- 2480 4719
-a 2480 4781 a
+ 2376 4719
+a 2376 4781 a
 SDict begin [ /Color [1 0 0] /H /I /Border [0 0 0] /Subtype /Link /Dest
 (page.30) cvn H.B /ANN pdfmark end
- 2480 4781 a Black 2058 4894 a Fl(NaturalBijectionToP)q
-(cNo)q(rm)q(ali)q(zed)q(Uni)q(tG)q(rou)q(p)p FM(,)p 0.0236 0.0894 0.6179
-TeXcolorrgb 2390 5009 a
+ 2376 4781 a Black 1954 4894 a Fl(NaturalBijectionTo)q
+(PcN)q(orm)q(ali)q(ze)q(dUn)q(itG)q(rou)q(p)p FM(,)p
+0.0236 0.0894 0.6179 TeXcolorrgb 2286 5009 a
 SDict begin H.S end
- 2390 5009 a 0.0236 0.0894 0.6179
-TeXcolorrgb -2 x FM(29)p 0.0236 0.0894 0.6179 TeXcolorrgb
-2480 4945 a
+ 2286 5009
+a 0.0236 0.0894 0.6179 TeXcolorrgb -2 x FM(29)p 0.0236 0.0894 0.6179
+TeXcolorrgb 2376 4945 a
 SDict begin H.R end
- 2480 4945 a 2480 5007 a
+ 2376 4945 a 2376 5007 a
 SDict begin [ /Color [1 0 0] /H /I /Border [0 0 0] /Subtype /Link /Dest
 (page.29) cvn H.B /ANN pdfmark end
- 2480 5007 a Black
-2058 5120 a FM(normalised)i(unit,)p 0.0236 0.0894 0.6179
-TeXcolorrgb 2671 5120 a
+ 2376
+5007 a Black 1954 5120 a FM(normalised)h(unit,)p 0.0236 0.0894 0.6179
+TeXcolorrgb 2568 5120 a
 SDict begin H.S end
- 2671 5120 a 0.0236 0.0894 0.6179
+ 2568 5120 a 0.0236 0.0894 0.6179
 TeXcolorrgb FM(14)p 0.0236 0.0894 0.6179 TeXcolorrgb
-2761 5058 a
+2658 5058 a
 SDict begin H.R end
- 2761 5058 a 2761 5120 a
+ 2658 5058 a 2658 5120 a
 SDict begin [ /Color [1 0 0] /H /I /Border [0 0 0] /Subtype /Link /Dest
 (page.14) cvn H.B /ANN pdfmark end
- 2761 5120 a Black
-2058 5233 a FM(normalised)g(unit)e(group,)p 0.0236 0.0894 0.6179
-TeXcolorrgb 2906 5233 a
+ 2658 5120 a Black
+1954 5233 a FM(normalised)g(unit)e(group,)p 0.0236 0.0894 0.6179
+TeXcolorrgb 2802 5233 a
 SDict begin H.S end
- 2906 5233 a 0.0236 0.0894 0.6179
+ 2802 5233 a 0.0236 0.0894 0.6179
 TeXcolorrgb FM(14)p 0.0236 0.0894 0.6179 TeXcolorrgb
-2996 5171 a
+2892 5171 a
 SDict begin H.R end
- 2996 5171 a 2996 5233 a
+ 2892 5171 a 2892 5233 a
 SDict begin [ /Color [1 0 0] /H /I /Border [0 0 0] /Subtype /Link /Dest
 (page.14) cvn H.B /ANN pdfmark end
- 2996 5233 a Black
-2058 5346 a Fl(NormalizedUnitGroup)q FM(,)p 0.0236 0.0894 0.6179
-TeXcolorrgb 2984 5348 a
+ 2892 5233 a Black
+1954 5346 a Fl(NormalizedUnitGrou)q(p)p FM(,)p 0.0236 0.0894 0.6179
+TeXcolorrgb 2880 5348 a
 SDict begin H.S end
- 2984 5348 a 0.0236 0.0894 0.6179
+ 2880 5348 a 0.0236 0.0894 0.6179
 TeXcolorrgb -2 x FM(29)p 0.0236 0.0894 0.6179 TeXcolorrgb
-3074 5284 a
+2970 5284 a
 SDict begin H.R end
- 3074 5284 a 3074 5346 a
+ 2970 5284 a 2970 5346 a
 SDict begin [ /Color [1 0 0] /H /I /Border [0 0 0] /Subtype /Link /Dest
 (page.29) cvn H.B /ANN pdfmark end
- 3074 5346 a Black
-2065 5542 a Fx(p)p FM(-modular)h(group)g(algebra,)p 0.0236 0.0894 0.6179
-TeXcolorrgb 3014 5543 a
+ 2970 5346 a Black
+1961 5542 a Fx(p)p FM(-modular)h(group)g(algebra,)p 0.0236 0.0894 0.6179
+TeXcolorrgb 2910 5543 a
 SDict begin H.S end
- 3014 5543 a 0.0236 0.0894 0.6179
+ 2910 5543 a 0.0236 0.0894 0.6179
 TeXcolorrgb -1 x FM(15)p 0.0236 0.0894 0.6179 TeXcolorrgb
-3104 5480 a
+3000 5480 a
 SDict begin H.R end
- 3104 5480 a 3104 5542 a
+ 3000 5480 a 3000 5542 a
 SDict begin [ /Color [1 0 0] /H /I /Border [0 0 0] /Subtype /Link /Dest
 (page.15) cvn H.B /ANN pdfmark end
- 3104 5542 a Black
+ 3000 5542 a Black
 Black 1867 5841 a FM(48)p Black eop end
 %%Page: 49 49
 TeXDict begin 49 48 bop 0 0 a
