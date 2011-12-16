@@ -6,10 +6,10 @@
                     [1m[4m[31mLie AlGebras and UNits of group Algebras[0m
   
   
-                                 Version 3.2.2
+                                  Version 3.3
   
   
-                                   April 2004
+                                   April 2005
   
   
                                   Victor Bovdi
@@ -46,12 +46,12 @@
   
   
   Csaba Schneider
-      Email:    [34mmailto:csaba@maths.uwa.edu.au[0m
-      Homepage: [34mhttp://www.maths.uwa.edu.au/~csaba/[0m
-      Address:  School of Mathematics and Statistics
-                The University of Western Australia
-                35 Stirling Highway
-                6009 Crawley Western Australia
+      Email:    [34mmailto:csaba.schneider@sztaki.hu[0m
+      Homepage: [34mhttp://www.sztaki.hu/~schneider[0m
+      Address:  Informatics Laboratory
+                Computer and Automation Research Institute
+                The Hungarian Academy of Sciences
+                1111 Budapest, Lagymanyosi u. 11, Hungary
   
   
   
@@ -85,7 +85,7 @@
   [1mLAGUNA[0m, please cite it in the following form:
   
   V.  Bovdi,  A.  Konovalov,  R.  Rossmanith  and C. Schneider. [22m[36mLAGUNA --- Lie
-  AlGebras    and    UNits    of   group   Algebras,   Version   3.2.2;[0m   2003
+  AlGebras    and    UNits    of    group    Algebras,   Version   3.3;[0m   2005
   ([34mhttp://ukrgap.exponenta.ru/laguna.htm[0m).
   
   
@@ -108,7 +108,7 @@
   referee for careful testing [1mLAGUNA[0m and useful suggestions.
   
   A  part  of  the  work  on  upgrading  [1mLAG[0m to [1mLAGUNA[0m was done in 2002 during
-  Alexander  Konovalov's  visits  to  Debrecen,  St.\  Andrews  and  Stuttgart
+  Alexander   Konovalov's   visits  to  Debrecen,  St  Andrews  and  Stuttgart
   Universities.  He  would like to express his gratitude to Adalbert Bovdi and
   Victor  Bovdi,  Colin  Campbell, Edmund Robertson and Steve Linton, Wolfgang
   Kimmerle, Martin Hertweck and Stefan Kohl for their warm hospitality, and to
@@ -149,11 +149,13 @@
       4.2-3 TraceOfMagmaRingElement
       4.2-4 Length
       4.2-5 Augmentation
-      4.2-6 Involution
-      4.2-7 IsSymmetric
-      4.2-8 IsUnitary
-      4.2-9 IsUnit
-      4.2-10 InverseOp
+      4.2-6 PartialAugmentations
+      4.2-7 Involution
+      4.2-8 IsSymmetric
+      4.2-9 IsUnitary
+      4.2-10 IsUnit
+      4.2-11 InverseOp
+      4.2-12 BicyclicUnitOfType1
     4.3 Important attributes of group algebras
       4.3-1 AugmentationHomomorphism
       4.3-2 AugmentationIdeal
@@ -162,18 +164,22 @@
       4.3-5 AugmentationIdealPowerSeries
       4.3-6 AugmentationIdealNilpotencyIndex
       4.3-7 AugmentationIdealOfDerivedSubgroupNilpotencyIndex
+      4.3-8 LeftIdealBySubgroup
     4.4 Computations with the unit group
       4.4-1 NormalizedUnitGroup
       4.4-2 PcNormalizedUnitGroup
       4.4-3 NaturalBijectionToPcNormalizedUnitGroup
       4.4-4 NaturalBijectionToNormalizedUnitGroup
-      4.4-5 Units
-      4.4-6 PcUnits
-      4.4-7 IsGroupOfUnitsOfMagmaRing
-      4.4-8 IsUnitGroupOfGroupRing
-      4.4-9 IsNormalizedUnitGroupOfGroupRing
-      4.4-10 UnderlyingGroupRing
-      4.4-11 GroupBases
+      4.4-5 Embedding
+      4.4-6 Units
+      4.4-7 PcUnits
+      4.4-8 IsGroupOfUnitsOfMagmaRing
+      4.4-9 IsUnitGroupOfGroupRing
+      4.4-10 IsNormalizedUnitGroupOfGroupRing
+      4.4-11 UnderlyingGroupRing
+      4.4-12 UnitarySubgroup
+      4.4-13 BicyclicUnitGroup
+      4.4-14 GroupBases
     4.5 The Lie algebra of a group algebra
       4.5-1 LieAlgebraByDomain
       4.5-2 IsLieAlgebraByAssociativeAlgebra
@@ -195,14 +201,16 @@
       4.5-18 StructureConstantsTable
       4.5-19 LieUpperNilpotencyIndex
       4.5-20 LieLowerNilpotencyIndex
+      4.5-21 LieDerivedLength
     4.6 Other commands
       4.6-1 SubgroupsOfIndexTwo
       4.6-2 DihedralDepth
       4.6-3 DimensionBasis
       4.6-4 LieDimensionSubgroups
-      4.6-5 LAGInfo
-      4.6-6 LAGUNABuildManual
-      4.6-7 LAGUNABuildManualHTML
+      4.6-5 LieUpperCodimensionSeries
+      4.6-6 LAGInfo
+      4.6-7 LAGUNABuildManual
+      4.6-8 LAGUNABuildManualHTML
   
   
   -------------------------------------------------------

@@ -5,7 +5,7 @@
 #W                                                         Richard Rossmanith
 #W                                                            Csaba Schneider
 ##
-#H  $Id: laguna.g,v 1.5 2003/06/11 13:54:19 stefan Exp $
+#H  $Id: laguna.g,v 1.19 2004/09/14 08:35:43 alexk Exp $
 ##
 #############################################################################
 
@@ -37,6 +37,7 @@ local emb;
 return emb;
 end;
 
+
 #############################################################################
 ##
 ##  LAGUNABuildManual()
@@ -50,6 +51,7 @@ laguna_files:=["intro.xml", "example.xml", "theory.xml", "funct.xml"];
 laguna_bookname:="LAGUNA";
 MakeGAPDocDoc(laguna_path, laguna_main, laguna_files, laguna_bookname);  
 end;
+
 
 #############################################################################
 ##
@@ -73,6 +75,3 @@ end;
 ##
 #E
 ##
-
-
-

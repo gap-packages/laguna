@@ -10,21 +10,26 @@
   [1m[34mAugmentationIdealNilpotencyIndex[0m  4.3-6
   [1m[34mAugmentationIdealOfDerivedSubgroupNilpotencyIndex[0m  4.3-7
   [1m[34mAugmentationIdealPowerSeries[0m  4.3-5
+  bicyclic unit  4.2-12
+  [1m[34mBicyclicUnitGroup[0m  4.4-13
+  [1m[34mBicyclicUnitOfType1[0m  4.2-12
+  [1m[34mBicyclicUnitOfType2[0m  4.2-12
   [1m[34mCanonicalBasis[0m  4.5-16
   [1m[34mCoefficientsBySupport[0m  4.2-2
   [1m[34mDihedralDepth[0m  4.6-2
   dimension basis  3.3
   [1m[34mDimensionBasis[0m  4.6-3
+  [1m[34mEmbedding[0m  4.4-5
   [1m[34mEmbedding[0m  4.5-8
   group algebra  3.1
-  [1m[34mGroupBases[0m  4.4-11
-  [1m[34mInverseOp[0m  4.2-10
-  [1m[34mInvolution[0m  4.2-6
-  [1m[34mInvolution[0m  4.2-6
+  [1m[34mGroupBases[0m  4.4-14
+  [1m[34mInverseOp[0m  4.2-11
+  [1m[34mInvolution[0m  4.2-7
+  [1m[34mInvolution[0m  4.2-7
   [1m[34mIsBasisOfLieAlgebraOfGroupRing[0m  4.5-17
   [1m[34mIsFModularGroupAlgebra[0m  4.1-2
   [1m[34mIsGroupAlgebra[0m  4.1-1
-  [1m[34mIsGroupOfUnitsOfMagmaRing[0m  4.4-7
+  [1m[34mIsGroupOfUnitsOfMagmaRing[0m  4.4-8
   [1m[34mIsLieAbelian[0m  4.5-11
   [1m[34mIsLieAlgebraByAssociativeAlgebra[0m  4.5-2
   [1m[34mIsLieAlgebraOfGroupRing[0m  4.5-6
@@ -32,24 +37,31 @@
   [1m[34mIsLieMetabelian[0m  4.5-14
   [1m[34mIsLieNilpotent[0m  4.5-13
   [1m[34mIsLieSolvable[0m  4.5-12
-  [1m[34mIsNormalizedUnitGroupOfGroupRing[0m  4.4-9
+  [1m[34mIsNormalizedUnitGroupOfGroupRing[0m  4.4-10
   [1m[34mIsPModularGroupAlgebra[0m  4.1-3
-  [1m[34mIsSymmetric[0m  4.2-7
-  [1m[34mIsUnit[0m  4.2-9
-  [1m[34mIsUnit[0m  4.2-9
-  [1m[34mIsUnitary[0m  4.2-8
-  [1m[34mIsUnitGroupOfGroupRing[0m  4.4-8
+  [1m[34mIsSymmetric[0m  4.2-8
+  [1m[34mIsUnit[0m  4.2-10
+  [1m[34mIsUnit[0m  4.2-10
+  [1m[34mIsUnitary[0m  4.2-9
+  [1m[34mIsUnitGroupOfGroupRing[0m  4.4-9
   Jennings series  3.3
-  [1m[34mLAGInfo[0m  4.6-5
+  [1m[34mLAGInfo[0m  4.6-6
   [1mLAGUNA[0m package  -1
-  [1m[34mLAGUNABuildManual[0m  4.6-6
-  [1m[34mLAGUNABuildManualHTML[0m  4.6-7
+  [1m[34mLAGUNABuildManual[0m  4.6-7
+  [1m[34mLAGUNABuildManualHTML[0m  4.6-8
+  [1m[34mLeftIdealBySubgroup[0m  4.3-8
+  [1m[34mLeftIdealBySubgroup[0m  4.3-8
   [1m[34mLength[0m  4.2-4
+  Lie derived length  4.5-21
+  Lie derived series  4.5-21
   [1m[34mLieAlgebraByDomain[0m  4.5-1
   [1m[34mLieCentre[0m  4.5-9
+  [1m[34mLieDerivedLength[0m  4.5-21
   [1m[34mLieDerivedSubalgebra[0m  4.5-10
   [1m[34mLieDimensionSubgroups[0m  4.6-4
   [1m[34mLieLowerNilpotencyIndex[0m  4.5-20
+  [1m[34mLieUpperCodimensionSeries[0m  4.6-5
+  [1m[34mLieUpperCodimensionSeries[0m  4.6-5
   [1m[34mLieUpperNilpotencyIndex[0m  4.5-19
   lower Lie power series  4.5-20
   modular group algebra  4.1-2
@@ -61,27 +73,32 @@
   normalised unit group  3.1
   [1m[34mNormalizedUnitGroup[0m  4.4-1
   p-modular group algebra  3.2
+  partial augmentation  4.2-6
+  [1m[34mPartialAugmentations[0m  4.2-6
   [1m[34mPcNormalizedUnitGroup[0m  4.4-2
-  [1m[34mPcUnits[0m  4.4-6
+  [1m[34mPcUnits[0m  4.4-7
   power-commutator presentation  3.2
   [1m[34mRadicalOfAlgebra[0m  4.3-3
+  [1m[34mRightIdealBySubgroup[0m  4.3-8
   [1mSISYPHOS[0m package  1.1
   standard product  3.3
   [1m[34mStructureConstantsTable[0m  4.5-18
   [1m[34mSubgroupsOfIndexTwo[0m  4.6-1
   [1m[34mSupport[0m  4.2-1
-  symmetric element  4.2-6
+  symmetric element  4.2-8
   [1m[34mTraceOfMagmaRingElement[0m  4.2-3
+  [1m[34mTwoSidedIdalBySubgroup[0m  4.3-8
   [1m[34mUnderlyingAssociativeAlgebra[0m  4.5-3
   [1m[34mUnderlyingField[0m  4.1-6
   [1m[34mUnderlyingGroup[0m (of a group ring)  4.1-4
   [1m[34mUnderlyingGroup[0m (of Lie algebra of a group ring)  4.5-7
-  [1m[34mUnderlyingGroupRing[0m  4.4-10
+  [1m[34mUnderlyingGroupRing[0m  4.4-11
   [1m[34mUnderlyingRing[0m  4.1-5
   unit  3.1
   unit group  3.1
-  unitary element  4.2-7
-  [1m[34mUnits[0m  4.4-5
+  unitary element  4.2-9
+  [1m[34mUnitarySubgroup[0m  4.4-12
+  [1m[34mUnits[0m  4.4-6
   upper Lie power series  4.5-19
   weight, of dimension basis element  3.3
   [1m[34mWeightedBasis[0m  4.3-4

@@ -25,6 +25,7 @@
 
 \usepackage[
         a4paper=true,bookmarks=false,pdftitle={Written with GAPDoc},
+        pdfcreator={LaTeX with hyperref package / GAPDoc},
         colorlinks=true,backref=page,breaklinks=true,linkcolor=RoyalBlue,
         citecolor=RoyalGreen,filecolor=RoyalRed,
         urlcolor=RoyalRed,pagecolor=RoyalBlue]{hyperref}
@@ -52,15 +53,17 @@
 \logpage{[ 0, 0, 0 ]}
 \begin{titlepage}
 \begin{center}{\Huge \textbf{\textsf{LAGUNA}}}\\[1cm]
+\hypersetup{pdftitle=\textsf{LAGUNA}}
 \markright{\scriptsize \mbox{}\hfill \textsf{LAGUNA} \hfill\mbox{}}
 {\Large \textbf{Lie AlGebras and UNits of group Algebras}}\\[1cm]
-{Version 3.2.2}\\[1cm]
-{April 2004}\\[1cm]
+{Version 3.3}\\[1cm]
+{April 2005}\\[1cm]
 \mbox{}\\[2cm]
 {\large \textbf{Victor Bovdi   }}\\
 {\large \textbf{Alexander Konovalov    }}\\
 {\large \textbf{Richard Rossmanith   }}\\
 {\large \textbf{ Csaba Schneider    }}\\
+\hypersetup{pdfauthor=Victor Bovdi   ; Alexander Konovalov    ; Richard Rossmanith   ;  Csaba Schneider    }
 \end{center}\vfill
 
 \mbox{}\\
@@ -88,13 +91,13 @@
  Germany \end{minipage}
 }\\
 {\mbox{}\\
-\small \noindent \textbf{ Csaba Schneider    } --- Email: \href{mailto://csaba@maths.uwa.edu.au}{\texttt{csaba@maths.uwa.edu.au}}\\
- --- Homepage: \href{http://www.maths.uwa.edu.au/~csaba/}{\texttt{http://www.maths.uwa.edu.au/\~{}csaba/}}\\
+\small \noindent \textbf{ Csaba Schneider    } --- Email: \href{mailto://csaba.schneider@sztaki.hu}{\texttt{csaba.schneider@sztaki.hu}}\\
+ --- Homepage: \href{http://www.sztaki.hu/~schneider}{\texttt{http://www.sztaki.hu/\~{}schneider}}\\
  --- Address: \begin{minipage}[t]{8cm}\noindent
- School of Mathematics and Statistics\\
- The University of Western Australia\\
- 35 Stirling Highway \\
- 6009 Crawley Western Australia \end{minipage}
+ Informatics Laboratory\\
+ Computer and Automation Research Institute\\
+ The Hungarian Academy of Sciences\\
+ 1111 Budapest, Lagymanyosi u. 11, Hungary \end{minipage}
 }\\
 \end{titlepage}
 
@@ -123,7 +126,7 @@ Schneider
 
  If you publish a result which was partially obtained with the usage of \textsf{LAGUNA}, please cite it in the following form:
 
- V. Bovdi, A. Konovalov, R. Rossmanith and C. Schneider. \emph{LAGUNA --- Lie AlGebras and UNits of group Algebras, Version 3.2.2;} 2003 (\href{http://ukrgap.exponenta.ru/laguna.htm}{\texttt{http://ukrgap.exponenta.ru/laguna.htm}}). }\\[1cm]
+ V. Bovdi, A. Konovalov, R. Rossmanith and C. Schneider. \emph{LAGUNA --- Lie AlGebras and UNits of group Algebras, Version 3.3;} 2005 (\href{http://ukrgap.exponenta.ru/laguna.htm}{\texttt{http://ukrgap.exponenta.ru/laguna.htm}}). }\\[1cm]
 {\small 
 \section*{Acknowledgements}
 \logpage{[ 0, 0, 3 ]}
@@ -138,7 +141,7 @@ Linton, Frank Lübeck, Max Neunhöffer and many other colleagues for helpful
 comments and advise. We acknowledge very much Herbert Pahlings for
 communicating the package and the referee for careful testing \textsf{LAGUNA} and useful suggestions. 
 
- A part of the work on upgrading \textsf{LAG} to \textsf{LAGUNA} was done in 2002 during Alexander Konovalov's visits to Debrecen, St.\ Andrews
+ A part of the work on upgrading \textsf{LAG} to \textsf{LAGUNA} was done in 2002 during Alexander Konovalov's visits to Debrecen, St Andrews
 and Stuttgart Universities. He would like to express his gratitude to Adalbert
 Bovdi and Victor Bovdi, Colin Campbell, Edmund Robertson and Steve Linton,
 Wolfgang Kimmerle, Martin Hertweck and Stefan Kohl for their warm hospitality,
@@ -161,7 +164,7 @@ and to the DAAD for the support of these visits.
 \section{\textcolor{Chapter }{General aims}}\label{IntroFirst}
 \logpage{[ 1, 1, 0 ]}
 {
-  \textsf{LAGUNA} -- \textsc{L}ie \textsc{A}l\textsc{G}ebras and \textsc{UN}its of group \textsc{A}lgebras -- is the new name of the \textsf{GAP}4 package \textsf{LAG}. The \textsf{LAG} package arose as a byproduct of the third author's PhD thesis  \cite{Ros97}. Its first version was ported to \textsf{GAP}4 and was brought into the standard \textsf{GAP}4 package format during his visit to St.\ Andrews in September 1998. 
+  \textsf{LAGUNA} -- \textsc{L}ie \textsc{A}l\textsc{G}ebras and \textsc{UN}its of group \textsc{A}lgebras -- is the new name of the \textsf{GAP}4 package \textsf{LAG}. The \textsf{LAG} package arose as a byproduct of the third author's PhD thesis  \cite{Ros97}. Its first version was ported to \textsf{GAP}4 and was brought into the standard \textsf{GAP}4 package format during his visit to St Andrews in September 1998. 
 
  The main objective of \textsf{LAG} is to deal with Lie algebras associated with some associative algebras, and,
 in particular, Lie algebras of group algebras. Using \textsf{LAG} it is possible to verify some properties or calculate certain Lie ideals of
@@ -215,9 +218,9 @@ the type of the operation system. It is designed for \textsf{GAP}4.4 and no comp
 
  To use the \textsf{LAGUNA} online help it is necessary to install the \textsf{GAP}4 package \textsf{GAPDoc} by Frank L\"ubeck and Max Neunh\"offer, which is available from the \textsf{GAP} site or from \href{http://www.math.rwth-aachen.de/~Frank.Luebeck/GAPDoc/}{\texttt{http://www.math.rwth-aachen.de/\~{}Frank.Luebeck/GAPDoc/}}. 
 
- \textsf{LAGUNA} is distributed in standard formats (\texttt{zoo}, \texttt{tar.gz}, \texttt{tar.bz2}, \texttt{-win.zip}) and can be obtained from \href{http://ukrgap.exponenta.ru/laguna.htm}{\texttt{http://ukrgap.exponenta.ru/laguna.htm}}. To unpack the archive \texttt{laguna-3.2.2.zoo} you need the program \texttt{unzoo}, which can be obtained from the \textsf{GAP} homepage \href{http://www.gap-system.org/}{\texttt{http://www.gap-system.org/}} (see section `Distribution'). To install \textsf{LAGUNA}, copy this archive into the \texttt{pkg} subdirectory of your \textsf{GAP}4.4 installation. The subdirectory \texttt{laguna} will be created in the \texttt{pkg} directory after the following command: 
+ \textsf{LAGUNA} is distributed in standard formats (\texttt{zoo}, \texttt{tar.gz}, \texttt{tar.bz2}, \texttt{-win.zip}) and can be obtained from \href{http://ukrgap.exponenta.ru/laguna.htm}{\texttt{http://ukrgap.exponenta.ru/laguna.htm}}. To unpack the archive \texttt{laguna-3.3.zoo} you need the program \texttt{unzoo}, which can be obtained from the \textsf{GAP} homepage \href{http://www.gap-system.org/}{\texttt{http://www.gap-system.org/}} (see section `Distribution'). To install \textsf{LAGUNA}, copy this archive into the \texttt{pkg} subdirectory of your \textsf{GAP}4.4 installation. The subdirectory \texttt{laguna} will be created in the \texttt{pkg} directory after the following command: 
 
- \texttt{unzoo -x laguna-3.2.2.zoo} 
+ \texttt{unzoo -x laguna-3.3.zoo} 
 
  }
 
@@ -407,7 +410,7 @@ between the outputs of \texttt{NormalizedUnitGroup} and \texttt{PcNormalizedUnit
     f1*f2*f7, f1*f2*f3*f7, f2*f3*f7, f1*f3*f7, f1*f2 ]   
   
 \end{Verbatim}
- The second isomorphism is the inverse of the first. 
+ \newpage The second isomorphism is the inverse of the first. 
 \begin{Verbatim}[fontsize=\small,frame=single,label=Example]
   gap> f := NaturalBijectionToNormalizedUnitGroup( KG );
   [ f1, f2, f3, f4, f5, f6, f7, f8, f9, f10, f11, f12, f13, f14, f15 ] ->
@@ -452,8 +455,8 @@ calculated very quickly.
     Group([ f11*f15, f13*f15, f14*f15 ]), Group([ <identity> of ... ]) ]  
   
 \end{Verbatim}
- Let's now compute, for instance, a minimal system of generators of the centre
-of the normalised unit group. Fist we carry out the computation in the group
+ \newpage Let's now compute, for instance, a minimal system of generators of the centre
+of the normalised unit group. First we carry out the computation in the group
 which is determined by the power-commutator presentation, then we map the
 result into our group algebra. 
 \begin{Verbatim}[fontsize=\small,frame=single,label=Example]
@@ -553,11 +556,11 @@ nil-ring. The chain $A^i$ gives rise to a series of normal subgroups in $V$:
 (x_{k,1}-1)^{\alpha_{k,1}}\cdots(x_{k,l_k}-1)^{\alpha_{k,l_k}} \]
  where $0\leq \alpha_{i,j}\leq p-1$ is said to be \emph{standard}. Clearly, a standard product is an element of the augmentation ideal $A$. The weight of the standard product $u$ is 
 \[ \sum_{i=1}^k i(\alpha_{i,1}+\cdots+\alpha_{i,l_i}). \]
- The total number of standard products is $|G|-1$ . 
+ The total number of standard products is $|G|-1$. 
 
- \bigskip \textsc{Lemma (}\cite[Theorem VIII.2.6]{HB}\textsc{).} For $i\leq c$, the set $S_i$ of standard products of weight at least $i$ forms a basis for $A^i$. Moreover, the set $1+S_i=\{1+s\ |\ s \in S_i\}$ is a polycyclic generating set for $1+A^i$. In particular $1+S_1$ is a polycyclic generating set for $V$. 
+ \textsc{Lemma (}\cite[Theorem VIII.2.6]{HB}\textsc{).} For $i\leq c$, the set $S_i$ of standard products of weight at least $i$ forms a basis for $A^i$. Moreover, the set $1+S_i=\{1+s\ |\ s \in S_i\}$ is a polycyclic generating set for $1+A^i$. In particular $1+S_1$ is a polycyclic generating set for $V$. 
 
- \bigskip A basis for $A$ consisting of the standard products is referred to as a \emph{weighted basis}. Note that a weighted basis is a basis for the augmentation ideal, and not
+ A basis for $A$ consisting of the standard products is referred to as a \emph{weighted basis}. Note that a weighted basis is a basis for the augmentation ideal, and not
 for the whole group algebra.
 
  Let $x_1,\ldots,x_{{|G|}-1}$ denote the standard products where we choose the indices so that the weight of $x_i$ is not larger than the weight of $x_{i+1}$ for all $i$, and set $y_i=1+x_i$. Then every element $v$ of $V$ can be uniquely written in the form 
@@ -572,13 +575,13 @@ for the whole group algebra.
   We show how to compute the canonical form of a normalised unit with respect to
 the polycyclic generating set $y_1,\ldots,y_{|G|-1}$. We use the following elementary lemma. 
 
- \bigskip \textsc{Lemma.} Let $i\leq c$ and suppose that $w \in A^i$. Assume that $x_{s_i},x_{s_i+1}\ldots,x_{r_i}$ are the standard products with weight $i$ and for $s_i\leq j\leq r_i$ set $y_j=1+x_j$. Then for all $\alpha_{s_i},\ldots,\alpha_{r_i}\in\{0,\ldots,p-1\}$ we have that 
+ \textsc{Lemma.} Let $i\leq c$ and suppose that $w \in A^i$. Assume that $x_{s_i},x_{s_i+1}\ldots,x_{r_i}$ are the standard products with weight $i$ and for $s_i\leq j\leq r_i$ set $y_j=1+x_j$. Then for all $\alpha_{s_i},\ldots,\alpha_{r_i}\in\{0,\ldots,p-1\}$ we have that 
 \[ w\equiv \alpha_{s_i}x_{s_i}+\cdots+\alpha_{r_i}x_{r_i}\quad \bmod \quad
 A^{i+1} \]
  if an only if 
 \[ 1+w\equiv (y_{s_i})^{\alpha_{s_i}}\cdots (y_{r_i})^{\alpha_{r_i}}\quad \bmod
 \quad 1+A^{i+1}. \]
- \bigskip 
+ 
 
  Suppose that $w$ is an element of the augmentation ideal $A$ and $1+w$ is a normalised unit. Let $x_1,\ldots,x_{r_1}$ be the standard products of weight 1, and let $y_1,\ldots,y_{r_1}$ be the corresponding elements in the polycyclic generating set. Then using the
 previous lemma, we find $\alpha_1,\ldots,\alpha_{r_1}$ such that 
@@ -881,7 +884,7 @@ applicable to elements of magma rings. }
 
  The augmentation of a group ring element $ x = \alpha_1 \cdot g_1 + \alpha_2 \cdot g_2 + \cdots + \alpha_k \cdot g_k$ is the sum of its coefficients $ \alpha_1 + \alpha_2 + \cdots + \alpha_k $. The method is also applicable to elements of magma rings. }
 
- \newpage 
+ 
 \begin{Verbatim}[fontsize=\small,frame=single,label=Example]
   
   gap> x;
@@ -892,8 +895,35 @@ applicable to elements of magma rings. }
 \end{Verbatim}
  
 
-\subsection{\textcolor{Chapter }{Involution}}
+\subsection{\textcolor{Chapter }{PartialAugmentations}}
 \logpage{[ 4, 2, 6 ]}\nobreak
+{\noindent\textcolor{FuncColor}{$\Diamond$\ \texttt{PartialAugmentations( KG, x )\index{PartialAugmentations@\texttt{PartialAugmentations}}
+\label{PartialAugmentations}
+}\hfill{\scriptsize (operation)}}\\
+\textbf{\indent Returns:\ }
+ a list of partial augmentations and a list of conjugacy class representatives 
+
+
+
+ \index{partial augmentation} The partial augmentation of an element $ x = \alpha_1 \cdot g_1 + \alpha_2 \cdot g_2 + \cdots + \alpha_k \cdot g_k$ of the group ring $KG$, corresponding to the conjugacy class of an element $g$ from the underlying group $G$ is the sum of coefficients $\alpha_i$ taken over all $g_i$ such that $g_i$ is conjugated to $g$. The function returns a list of two lists, the first one is a list of partial
+augmentations, and the second is a list of representatives of appropriate
+conjugacy classes of elements of the group $G$. }
+
+ 
+\begin{Verbatim}[fontsize=\small,frame=single,label=Example]
+  
+  gap> y := x + a*b^2;
+  (Z(2)^0)*<identity> of ...+(Z(2)^0)*f1+(Z(2)^0)*f2+(Z(2)^0)*f1*f2+(Z(2)^
+  0)*f1*f3
+  gap> PartialAugmentations( KG, y );
+  [ [ Z(2)^0, 0*Z(2), Z(2)^0, Z(2)^0 ], [ <identity> of ..., f1, f2, f1*f2 ]
+   ]    
+  
+\end{Verbatim}
+ 
+
+\subsection{\textcolor{Chapter }{Involution}}
+\logpage{[ 4, 2, 7 ]}\nobreak
 {\noindent\textcolor{FuncColor}{$\Diamond$\ \texttt{Involution( x, f )\index{Involution@\texttt{Involution}}
 \label{Involution}
 }\hfill{\scriptsize (operation)}}\\
@@ -927,16 +957,16 @@ involution, which is the involution induced by the map $ x \mapsto x^{-1}$. }
   [ (Z(2)^0)*f1, (Z(2)^0)*f2*f3*f4 ]     
   
 \end{Verbatim}
- \index{symmetric element} 
+ 
 
 \subsection{\textcolor{Chapter }{IsSymmetric}}
-\logpage{[ 4, 2, 7 ]}\nobreak
+\logpage{[ 4, 2, 8 ]}\nobreak
 {\noindent\textcolor{FuncColor}{$\Diamond$\ \texttt{IsSymmetric( x )\index{IsSymmetric@\texttt{IsSymmetric}}
 \label{IsSymmetric}
 }\hfill{\scriptsize (attribute)}}\\
 
 
- An element of a group ring is called \emph{symmetric} if it is fixed under the classical involution. This property is checked here. }
+ \index{symmetric element} An element of a group ring is called \emph{symmetric} if it is fixed under the classical involution. This property is checked here. }
 
  
 \begin{Verbatim}[fontsize=\small,frame=single,label=Example]
@@ -947,16 +977,16 @@ involution, which is the involution induced by the map $ x \mapsto x^{-1}$. }
   true     
   
 \end{Verbatim}
- \index{unitary element} 
+ 
 
 \subsection{\textcolor{Chapter }{IsUnitary}}
-\logpage{[ 4, 2, 8 ]}\nobreak
+\logpage{[ 4, 2, 9 ]}\nobreak
 {\noindent\textcolor{FuncColor}{$\Diamond$\ \texttt{IsUnitary( x )\index{IsUnitary@\texttt{IsUnitary}}
 \label{IsUnitary}
 }\hfill{\scriptsize (attribute)}}\\
 
 
- A unit of a group ring is called unitary if the classical involution inverts
+ \index{unitary element} A unit of a group ring is called unitary if the classical involution inverts
 it. This property is checked here. }
 
  
@@ -974,7 +1004,7 @@ it. This property is checked here. }
  
 
 \subsection{\textcolor{Chapter }{IsUnit}}
-\logpage{[ 4, 2, 9 ]}\nobreak
+\logpage{[ 4, 2, 10 ]}\nobreak
 {\noindent\textcolor{FuncColor}{$\Diamond$\ \texttt{IsUnit( KG, x )\index{IsUnit@\texttt{IsUnit}}
 \label{IsUnit}
 }\hfill{\scriptsize (method)}}\\
@@ -1006,7 +1036,7 @@ of the element \mbox{\texttt{x}} is non-zero.
  
 
 \subsection{\textcolor{Chapter }{InverseOp}}
-\logpage{[ 4, 2, 10 ]}\nobreak
+\logpage{[ 4, 2, 11 ]}\nobreak
 {\noindent\textcolor{FuncColor}{$\Diamond$\ \texttt{InverseOp( x )\index{InverseOp@\texttt{InverseOp}}
 \label{InverseOp}
 }\hfill{\scriptsize (method)}}\\
@@ -1018,7 +1048,7 @@ of the element \mbox{\texttt{x}} is non-zero.
  This method improves a standard \textsf{GAP} functionality for modular group algebras. It calculates the inverse of a group
 algebra element. The user can also invoke this function by typing \texttt{ x{\textasciicircum}-1 }. }
 
- \newpage 
+ 
 \begin{Verbatim}[fontsize=\small,frame=single,label=Example]
   
   gap> y;
@@ -1029,6 +1059,43 @@ algebra element. The user can also invoke this function by typing \texttt{ x{\te
   0)*f1*f2*f3*f4
   gap> y * y^-1;
   (Z(2)^0)*<identity> of ...    
+  
+\end{Verbatim}
+ 
+
+\subsection{\textcolor{Chapter }{BicyclicUnitOfType1}}
+\logpage{[ 4, 2, 12 ]}\nobreak
+{\noindent\textcolor{FuncColor}{$\Diamond$\ \texttt{BicyclicUnitOfType1( a, g )\index{BicyclicUnitOfType1@\texttt{BicyclicUnitOfType1}}
+\label{BicyclicUnitOfType1}
+}\hfill{\scriptsize (operation)}}\\
+\noindent\textcolor{FuncColor}{$\Diamond$\ \texttt{BicyclicUnitOfType2( a, g )\index{BicyclicUnitOfType2@\texttt{BicyclicUnitOfType2}}
+\label{BicyclicUnitOfType2}
+}\hfill{\scriptsize (operation)}}\\
+\textbf{\indent Returns:\ }
+ an element of a group ring 
+
+
+
+ \index{bicyclic unit} let $a$ be an element of order $n$ of a group $G$. We put $\alpha = 1 + a + a^2 + ... +a^{n-1} $. Then $(a-1)*g*\alpha$ and $\alpha*g*(a-1)$ are nilpotent of index two for any element $g$ of the group $G$ not containing in the normalizer $N_G(\langle a \rangle)$, and the units $u_{a,g} = 1 + (a-1) * g * \alpha $ and $v_{a,g} = 1 + \alpha * g * (a-1) $ are called bicyclic units. Note that $u_{a,g}$ and $v_{a,g}$ may coincide for some $a$ and $g$, but in general this does not hold. These methods construct bicyclic units of
+both types when \mbox{\texttt{a}} and \mbox{\texttt{g}} are elements of the underlying group $G$ of a group ring $KG$, already embedded to the group ring $KG$ using the mapping \texttt{Embedding( G, KG )}. Note that it is not actually checked that $g$ is not contained in $N_G(\langle a \rangle)$, because this is verified in \texttt{BicyclicUnitGroup} (\ref{BicyclicUnitGroup}). }
+
+ 
+\begin{Verbatim}[fontsize=\small,frame=single,label=Example]
+  
+  gap> G := SmallGroup(32,6);
+  <pc group of size 32 with 5 generators>
+  gap> KG := GroupRing( GF(2), G );
+  <algebra-with-one over GF(2), with 5 generators>
+  gap> g := MinimalGeneratingSet( G );
+  [ f1, f2 ]
+  gap> g[1] in Normalizer( G, Subgroup( G, [g[2]] ) );
+  false
+  gap> g[2] in Normalizer( G, Subgroup( G, [g[1]] ) );
+  false
+  gap> g := List( g, x -> x^Embedding( G, KG ) );
+  [ (Z(2)^0)*f1, (Z(2)^0)*f2 ]
+  gap> BicyclicUnitOfType1(g[1],g[2]) = BicyclicUnitOfType2(g[1],g[2]);
+  false                                                                       
   
 \end{Verbatim}
  }
@@ -1240,6 +1307,55 @@ the powers of the augmentation ideal. }
   4       
   
 \end{Verbatim}
+ 
+
+\subsection{\textcolor{Chapter }{LeftIdealBySubgroup}}
+\logpage{[ 4, 3, 8 ]}\nobreak
+{\noindent\textcolor{FuncColor}{$\Diamond$\ \texttt{LeftIdealBySubgroup( KG, H )\index{LeftIdealBySubgroup@\texttt{LeftIdealBySubgroup}}
+\label{LeftIdealBySubgroup}
+}\hfill{\scriptsize (operation)}}\\
+\noindent\textcolor{FuncColor}{$\Diamond$\ \texttt{RightIdealBySubgroup( KG, H )\index{RightIdealBySubgroup@\texttt{RightIdealBySubgroup}}
+\label{RightIdealBySubgroup}
+}\hfill{\scriptsize (operation)}}\\
+\noindent\textcolor{FuncColor}{$\Diamond$\ \texttt{TwoSidedIdalBySubgroup( KG, H )\index{TwoSidedIdalBySubgroup@\texttt{TwoSidedIdalBySubgroup}}
+\label{TwoSidedIdalBySubgroup}
+}\hfill{\scriptsize (operation)}}\\
+\noindent\textcolor{FuncColor}{$\Diamond$\ \texttt{LeftIdealBySubgroup( KG, H )\index{LeftIdealBySubgroup@\texttt{LeftIdealBySubgroup}}
+\label{LeftIdealBySubgroup}
+}\hfill{\scriptsize (operation)}}\\
+\textbf{\indent Returns:\ }
+ an ideal of a group ring 
+
+
+
+ Let \mbox{\texttt{KG}} be a group ring of a group $G$ over the ring $K$, and \mbox{\texttt{H}} be a subgroup of $G$. Then the set $J_l(H)$ of all elements of \mbox{\texttt{KG}} of the form 
+\[ \sum_{h \in H} x_h(h-1) \]
+ is the left ideal in \mbox{\texttt{KG}} generated by all elements $h-1$ with $h$ in $H$. The right ideal $J_r(H)$ is defined analogously. These operations are used to consrtuct such ideals,
+taking into account the fact, that the ideal $J_l(H)$ is two-sided if and only if \mbox{\texttt{H}} is normal in $G$. An attempt of constructing two-sided ideal for a non-normal subgroup \mbox{\texttt{H}} will lead to an error message. }
+
+ 
+\begin{Verbatim}[fontsize=\small,frame=single,label=Example]
+  
+  gap> KG := GroupRing( GF(2), DihedralGroup(16) );
+  <algebra-with-one over GF(2), with 4 generators>
+  gap> G := DihedralGroup(16);
+  <pc group of size 16 with 4 generators>
+  gap> KG := GroupRing( GF(2), G );
+  <algebra-with-one over GF(2), with 4 generators>
+  gap> D := DerivedSubgroup( G );
+  Group([ f3, f4 ])
+  gap> LeftIdealBySubgroup( KG, D );
+  <two-sided ideal in <algebra-with-one over GF(2), with 4 generators>,
+    (dimension 3)>                              
+  gap> H := Subgroup( G, [ GeneratorsOfGroup(G)[1] ]);
+  Group([ f1 ])
+  gap> IsNormal( G, H );
+  false
+  gap> LeftIdealBySubgroup( KG, H );
+  <left ideal in <algebra-with-one over GF(2), with 4 generators>,
+    (dimension 1)>
+  
+\end{Verbatim}
  }
 
   
@@ -1357,8 +1473,52 @@ group. This method returns the bijection from \texttt{NormalizedUnitGroup(\mbox{
 \end{Verbatim}
  
 
-\subsection{\textcolor{Chapter }{Units}}
+\subsection{\textcolor{Chapter }{Embedding}}
 \logpage{[ 4, 4, 5 ]}\nobreak
+{\noindent\textcolor{FuncColor}{$\Diamond$\ \texttt{Embedding( H, V )\index{Embedding@\texttt{Embedding}}
+\label{Embedding}
+}\hfill{\scriptsize (operation)}}\\
+\textbf{\indent Returns:\ }
+ a homomorphism from an underlying group to a normalized unit group in
+pc-presentation 
+
+
+
+ Let \mbox{\texttt{H}} be a subgroup of a group $G$ and \mbox{\texttt{V}} be the normalized unit group of the group algebra $KG$ given by the power-commutator presentation (see \texttt{PcNormalizedUnitGroup} (\ref{PcNormalizedUnitGroup}). Then \texttt{Embedding( H, V )} returns the homomorphism from \mbox{\texttt{H}} to \mbox{\texttt{V}}, which is the composition of \texttt{Embedding( H, KG )} and \texttt{NaturalBijectionToPcNormalizedUnitGroup( KG )}. }
+
+ 
+\begin{Verbatim}[fontsize=\small,frame=single,label=Example]
+  
+  gap> G := DihedralGroup( 16 );
+  <pc group of size 16 with 4 generators>
+  gap> KG := GroupRing( GF( 2 ), G );
+  <algebra-with-one over GF(2), with 4 generators>
+  gap> V:=PcNormalizedUnitGroup( KG );
+  <pc group of size 32768 with 15 generators>
+  gap> ucs := UpperCentralSeries( V );
+  [ <pc group of size 32768 with 15 generators>,
+    <pc group of size 4096 with 12 generators>,
+    Group([ f3*f5*f13*f15, f7, f11, f13, f14, f15, f12, f9*f12, f10 ]),
+    Group([ f3*f5*f13*f15, f7, f15, f13*f15, f14*f15, f11*f13*f14*f15 ]),
+    Group([  ]) ]
+  gap> f := Embedding( G, V );
+  [ f1, f2, f3, f4 ] -> [ f2, f1, f3, f7 ]
+  gap> G1 := Image( f, G ); 
+  Group([ f2, f1, f3, f7 ])
+  gap> H := Intersection( ucs[2], G1 ); 
+  Group([ f3, f7, f3*f7 ])
+  # H is the intersection of G and the 3rd centre of V(KG)
+  gap> T:=PreImage( f, H );
+  Group([ f3, f4, f3*f4 ])
+  # and T is its preimage in G
+  gap> IdGroup( T ); 
+  [ 4, 1 ]
+  
+\end{Verbatim}
+ 
+
+\subsection{\textcolor{Chapter }{Units}}
+\logpage{[ 4, 4, 6 ]}\nobreak
 {\noindent\textcolor{FuncColor}{$\Diamond$\ \texttt{Units( KG )\index{Units@\texttt{Units}}
 \label{Units}
 }\hfill{\scriptsize (attribute)}}\\
@@ -1393,7 +1553,7 @@ group. This method returns the bijection from \texttt{NormalizedUnitGroup(\mbox{
  
 
 \subsection{\textcolor{Chapter }{PcUnits}}
-\logpage{[ 4, 4, 6 ]}\nobreak
+\logpage{[ 4, 4, 7 ]}\nobreak
 {\noindent\textcolor{FuncColor}{$\Diamond$\ \texttt{PcUnits( KG )\index{PcUnits@\texttt{PcUnits}}
 \label{PcUnits}
 }\hfill{\scriptsize (attribute)}}\\
@@ -1423,7 +1583,7 @@ group. This method returns the bijection from \texttt{NormalizedUnitGroup(\mbox{
  
 
 \subsection{\textcolor{Chapter }{IsGroupOfUnitsOfMagmaRing}}
-\logpage{[ 4, 4, 7 ]}\nobreak
+\logpage{[ 4, 4, 8 ]}\nobreak
 {\noindent\textcolor{FuncColor}{$\Diamond$\ \texttt{IsGroupOfUnitsOfMagmaRing( U )\index{IsGroupOfUnitsOfMagmaRing@\texttt{IsGroupOfUnitsOfMagmaRing}}
 \label{IsGroupOfUnitsOfMagmaRing}
 }\hfill{\scriptsize (property)}}\\
@@ -1443,7 +1603,7 @@ group. This method returns the bijection from \texttt{NormalizedUnitGroup(\mbox{
  
 
 \subsection{\textcolor{Chapter }{IsUnitGroupOfGroupRing}}
-\logpage{[ 4, 4, 8 ]}\nobreak
+\logpage{[ 4, 4, 9 ]}\nobreak
 {\noindent\textcolor{FuncColor}{$\Diamond$\ \texttt{IsUnitGroupOfGroupRing( U )\index{IsUnitGroupOfGroupRing@\texttt{IsUnitGroupOfGroupRing}}
 \label{IsUnitGroupOfGroupRing}
 }\hfill{\scriptsize (property)}}\\
@@ -1463,7 +1623,7 @@ group. This method returns the bijection from \texttt{NormalizedUnitGroup(\mbox{
  
 
 \subsection{\textcolor{Chapter }{IsNormalizedUnitGroupOfGroupRing}}
-\logpage{[ 4, 4, 9 ]}\nobreak
+\logpage{[ 4, 4, 10 ]}\nobreak
 {\noindent\textcolor{FuncColor}{$\Diamond$\ \texttt{IsNormalizedUnitGroupOfGroupRing( U )\index{IsNormalizedUnitGroupOfGroupRing@\texttt{IsNormalizedUnitGroupOfGroupRing}}
 \label{IsNormalizedUnitGroupOfGroupRing}
 }\hfill{\scriptsize (property)}}\\
@@ -1483,7 +1643,7 @@ group. This method returns the bijection from \texttt{NormalizedUnitGroup(\mbox{
  
 
 \subsection{\textcolor{Chapter }{UnderlyingGroupRing}}
-\logpage{[ 4, 4, 10 ]}\nobreak
+\logpage{[ 4, 4, 11 ]}\nobreak
 {\noindent\textcolor{FuncColor}{$\Diamond$\ \texttt{UnderlyingGroupRing( U )\index{UnderlyingGroupRing@\texttt{UnderlyingGroupRing}}
 \label{UnderlyingGroupRing}
 }\hfill{\scriptsize (attribute)}}\\
@@ -1509,8 +1669,79 @@ group. This method returns the bijection from \texttt{NormalizedUnitGroup(\mbox{
 \end{Verbatim}
  
 
+\subsection{\textcolor{Chapter }{UnitarySubgroup}}
+\logpage{[ 4, 4, 12 ]}\nobreak
+{\noindent\textcolor{FuncColor}{$\Diamond$\ \texttt{UnitarySubgroup( U )\index{UnitarySubgroup@\texttt{UnitarySubgroup}}
+\label{UnitarySubgroup}
+}\hfill{\scriptsize (attribute)}}\\
+\textbf{\indent Returns:\ }
+ the subgroup of the unit group 
+
+
+
+ Let \mbox{\texttt{U}} be the normalized unit group of a group ring in either natural (see \texttt{NormalizedUnitGroup} (\ref{NormalizedUnitGroup})) or power-commutator (see \texttt{PcNormalizedUnitGroup} (\ref{PcNormalizedUnitGroup})) presentation. The attribute stores the unitary subgroup of \mbox{\texttt{U}}, generated by all unitary units of \mbox{\texttt{U}} (see \texttt{IsUnitary} (\ref{IsUnitary})). The method is straightforward, so it is not recommended to run it for large
+groups. }
+
+ 
+\begin{Verbatim}[fontsize=\small,frame=single,label=Example]
+  
+  gap> KG := GroupRing( GF( 2 ), DihedralGroup( 8 ) );
+  <algebra-with-one over GF(2), with 3 generators>
+  gap> U := NormalizedUnitGroup( KG );
+  <group of size 128 with 7 generators>
+  gap> HU := UnitarySubgroup( U );
+  <group with 5 generators>
+  gap> IdGroup( HU );
+  [ 64, 261 ]
+  gap> V := PcNormalizedUnitGroup( KG );
+  <pc group of size 128 with 7 generators>
+  gap> HV := UnitarySubgroup( V );
+  Group([ f1, f2, f5, f6, f7 ])
+  gap> IdGroup( HV );
+  [ 64, 261 ]
+  gap> Image(NaturalBijectionToPcNormalizedUnitGroup( KG ), HU ) = HV;
+  true
+  
+\end{Verbatim}
+ 
+
+\subsection{\textcolor{Chapter }{BicyclicUnitGroup}}
+\logpage{[ 4, 4, 13 ]}\nobreak
+{\noindent\textcolor{FuncColor}{$\Diamond$\ \texttt{BicyclicUnitGroup( U )\index{BicyclicUnitGroup@\texttt{BicyclicUnitGroup}}
+\label{BicyclicUnitGroup}
+}\hfill{\scriptsize (attribute)}}\\
+\textbf{\indent Returns:\ }
+ the subgroup of the unit group, generated by bicyclic units 
+
+
+
+ Let \mbox{\texttt{U}} be the normalized unit group of a group ring in either natural (see \texttt{NormalizedUnitGroup} (\ref{NormalizedUnitGroup})) or power-commutator (see \texttt{PcNormalizedUnitGroup} (\ref{PcNormalizedUnitGroup})) presentation. The attribute stores the subgroup of \mbox{\texttt{U}}, generated by all bicyclic units $u_{g,h}$ and $v_{g,h}$ (see \texttt{BicyclicUnitOfType1} (\ref{BicyclicUnitOfType1}) and \texttt{BicyclicUnitOfType1} (\ref{BicyclicUnitOfType1})), where $g$ and $h$ run over the elements of the underlying group, and $h$ do not belongs to the normalizer of $ \langle g \rangle $ in $G$. }
+
+ 
+\begin{Verbatim}[fontsize=\small,frame=single,label=Example]
+  
+  gap> KG := GroupRing( GF( 2 ), DihedralGroup( 8 ) );
+  <algebra-with-one over GF(2), with 3 generators>
+  gap> U := NormalizedUnitGroup( KG );
+  <group of size 128 with 7 generators>
+  gap> BU := BicyclicUnitGroup( U );
+  <group with 2 generators>
+  gap> IdGroup( BU );
+  [ 4, 2 ]
+  gap> V := PcNormalizedUnitGroup( KG );
+  <pc group of size 128 with 7 generators>
+  gap> BV := BicyclicUnitGroup( V );
+  Group([ f5*f6, f6*f7 ])
+  gap> IdGroup( BV );
+  [ 4, 2 ]
+  gap> Image( NaturalBijectionToPcNormalizedUnitGroup( KG ), BU ) = BV;
+  true
+  
+\end{Verbatim}
+ 
+
 \subsection{\textcolor{Chapter }{GroupBases}}
-\logpage{[ 4, 4, 11 ]}\nobreak
+\logpage{[ 4, 4, 14 ]}\nobreak
 {\noindent\textcolor{FuncColor}{$\Diamond$\ \texttt{GroupBases( KG )\index{GroupBases@\texttt{GroupBases}}
 \label{GroupBases}
 }\hfill{\scriptsize (attribute)}}\\
@@ -1758,7 +1989,7 @@ this group ring; see \texttt{UnderlyingGroup} (\ref{UnderlyingGroup:of a group r
 
  Let $FG$ be a group ring, let \mbox{\texttt{U}} be a submagma of $G$, and let \mbox{\texttt{L}} be the Lie algebra associated with $FG$. Then \texttt{Embedding(\mbox{\texttt{U}}, \mbox{\texttt{L}} )} returns the obvious mapping from \mbox{\texttt{U}} to \mbox{\texttt{L}} (as the composition of the mappings \texttt{Embedding( \mbox{\texttt{U}}, FG )} and \texttt{NaturalBijectionToLieAlgebra( FG )}). }
 
- \newpage 
+ 
 \begin{Verbatim}[fontsize=\small,frame=single,label=Example]
   
   gap> F := GF( 2 ); G := SymmetricGroup( 3 ); FG := GroupRing( F, G );
@@ -1889,7 +2120,7 @@ group. }
 method uses their classification, making it considerably faster than the more
 elementary method which just calculates Lie commutators. }
 
- \newpage 
+ 
 \begin{Verbatim}[fontsize=\small,frame=single,label=Example]
   
   gap> G := SmallGroup( 256, 400 ); FG := GroupRing( GF( 2 ), G ); 
@@ -2079,7 +2310,7 @@ the Lie algebra \texttt{L} associated with a group ring with respect to its cano
 
  \index{upper Lie power series} In a modular group algebra $KG$ the \emph{upper Lie power series} is defined as follows: $KG^{(1)}=KG$, $KG^{(n+1)}$ is the associative ideal, generated by $[KG^{(n)},KG]$. The upper Lie nilpotency index $t^L(G)$ of the group algebra $KG$ is defined to be the smallest number $n$ such that $KG^{(n)}=0$. It can be calculated very fast using Lie dimension subgroups \cite{Shalev91}, that is, using only information about the underlying group; see \texttt{LieDimensionSubgroups} (\ref{LieDimensionSubgroups}). This is why it is stored as an attribute of the group algebra \mbox{\texttt{KG}} rather than that of its associated Lie algebra. }
 
- \newpage 
+ 
 \begin{Verbatim}[fontsize=\small,frame=single,label=Example]
   
   gap> KG := GroupRing( GF( 2 ), DihedralGroup( 16 ) );
@@ -2112,6 +2343,30 @@ algebra \mbox{\texttt{KG}}. }
   <algebra-with-one over GF(2), with 4 generators>
   gap> LieLowerNilpotencyIndex( KG );
   5     
+  
+\end{Verbatim}
+ 
+
+\subsection{\textcolor{Chapter }{LieDerivedLength}}
+\logpage{[ 4, 5, 21 ]}\nobreak
+{\noindent\textcolor{FuncColor}{$\Diamond$\ \texttt{LieDerivedLength( L )\index{LieDerivedLength@\texttt{LieDerivedLength}}
+\label{LieDerivedLength}
+}\hfill{\scriptsize (attribute)}}\\
+
+
+ \index{Lie derived series} \index{Lie derived length} Let $L$ be a Lie algebra. The \emph{Lie derived series} of $L$ is defined as follows: $\delta^{[0]}(L) = L$ and $\delta^{[n]}(L) = [\delta^{[n-1]}(L), \delta^{[n-1]}(L)]$. $L$ is called Lie solvable if there exists an integer $m$ such that $ \delta^{[m]}(L) = 0 $. In this case the integer $m$ is called the \emph{Lie derived length} of $L$, and it is returned by this function. }
+
+ \newpage 
+\begin{Verbatim}[fontsize=\small,frame=single,label=Example]
+  
+  gap> KG := GroupRing( GF ( 2 ), DihedralGroup( 16 ) );
+  <algebra-with-one over GF(2), with 4 generators>
+  gap> L := LieAlgebra( KG );
+  #I  LAGUNA package: Constructing Lie algebra ...
+  <Lie algebra over GF(2)>
+  gap> LieDerivedLength( L );
+  #I  LAGUNA package: Computing the Lie derived subalgebra ...
+  3                                                            
   
 \end{Verbatim}
  }
@@ -2172,7 +2427,8 @@ structure of the group algebra $KG$ in the case when the underlying field $K$ ha
 \label{DimensionBasis}
 }\hfill{\scriptsize (method)}}\\
 \textbf{\indent Returns:\ }
- 
+ record with two components: `dimensionBasis' (list of group elements) and
+`weights' (list of weights) 
 
 
 
@@ -2195,7 +2451,7 @@ structure of the group algebra $KG$ in the case when the underlying field $K$ ha
 \label{LieDimensionSubgroups}
 }\hfill{\scriptsize (attribute)}}\\
 \textbf{\indent Returns:\ }
- 
+ list of subgroups 
 
 
 
@@ -2213,8 +2469,41 @@ structure of the group algebra $KG$ in the case when the underlying field $K$ ha
 \end{Verbatim}
  
 
-\subsection{\textcolor{Chapter }{LAGInfo}}
+\subsection{\textcolor{Chapter }{LieUpperCodimensionSeries}}
 \logpage{[ 4, 6, 5 ]}\nobreak
+{\noindent\textcolor{FuncColor}{$\Diamond$\ \texttt{LieUpperCodimensionSeries( KG )\index{LieUpperCodimensionSeries@\texttt{LieUpperCodimensionSeries}}
+\label{LieUpperCodimensionSeries}
+}\hfill{\scriptsize (attribute)}}\\
+\noindent\textcolor{FuncColor}{$\Diamond$\ \texttt{LieUpperCodimensionSeries( G )\index{LieUpperCodimensionSeries@\texttt{LieUpperCodimensionSeries}}
+\label{LieUpperCodimensionSeries}
+}\hfill{\scriptsize (attribute)}}\\
+\textbf{\indent Returns:\ }
+ list of subgroups 
+
+
+
+ A notion of upper Lie codimension subgroups was introduced in \cite{CS}. For a finite $p$-group \mbox{\texttt{G}}, $C_i$ is the set of all elements $g$ in \mbox{\texttt{G}}, such that the Lie commutator $[ g, g_1, ..., g_i ]$ of the length $i+1$ is equal to zero for all $g_1, ..., g_i$ from \mbox{\texttt{G}}, and $ C_0 = {1} $. By Du's theorem (see \cite{Du}), $C_i$ coincides with the intersection of $G$ and the i-th term of the upper central series ${1}=Z_0 < Z_1 < Z_2 < ... < Z_n = V(KG)$ of the normalized unit group $V(KG)$. This fact is used in \textsf{LAGUNA} to speed up computation of this series. Since $V(KG)$ is involved in computation, for the first time the argiment should be the
+group ring \mbox{\texttt{KG}}, but later you can also apply it to the group \mbox{\texttt{G}} itself. }
+
+ 
+\begin{Verbatim}[fontsize=\small,frame=single,label=Example]
+  
+  gap> G := DihedralGroup(16);
+  <pc group of size 16 with 4 generators>
+  gap> KG := GroupRing( GF(2), G );
+  <algebra-with-one over GF(2), with 4 generators>
+  gap> LieUpperCodimensionSeries( KG );
+  [ Group([ f1, f2, f3, f4 ]), Group([ f3, f4, f3*f4 ]), Group([ f4 ]), 
+    Group([ f4 ]), Group([  ]) ]
+  gap> LieUpperCodimensionSeries( G );
+  [ Group([ f1, f2, f3, f4 ]), Group([ f3, f4, f3*f4 ]), Group([ f4 ]), 
+    Group([ f4 ]), Group([  ]) ]
+  
+\end{Verbatim}
+ 
+
+\subsection{\textcolor{Chapter }{LAGInfo}}
+\logpage{[ 4, 6, 6 ]}\nobreak
 {\noindent\textcolor{FuncColor}{$\Diamond$\ \texttt{LAGInfo\index{LAGInfo@\texttt{LAGInfo}}
 \label{LAGInfo}
 }\hfill{\scriptsize (info class)}}\\
@@ -2244,7 +2533,7 @@ structure of the group algebra $KG$ in the case when the underlying field $K$ ha
  
 
 \subsection{\textcolor{Chapter }{LAGUNABuildManual}}
-\logpage{[ 4, 6, 6 ]}\nobreak
+\logpage{[ 4, 6, 7 ]}\nobreak
 {\noindent\textcolor{FuncColor}{$\Diamond$\ \texttt{LAGUNABuildManual(  )\index{LAGUNABuildManual@\texttt{LAGUNABuildManual}}
 \label{LAGUNABuildManual}
 }\hfill{\scriptsize (function)}}\\
@@ -2259,7 +2548,7 @@ This is the only function of \textsf{LAGUNA} which requires UNIX/Linux environme
  
 
 \subsection{\textcolor{Chapter }{LAGUNABuildManualHTML}}
-\logpage{[ 4, 6, 7 ]}\nobreak
+\logpage{[ 4, 6, 8 ]}\nobreak
 {\noindent\textcolor{FuncColor}{$\Diamond$\ \texttt{LAGUNABuildManualHTML(  )\index{LAGUNABuildManualHTML@\texttt{LAGUNABuildManualHTML}}
 \label{LAGUNABuildManualHTML}
 }\hfill{\scriptsize (function)}}\\

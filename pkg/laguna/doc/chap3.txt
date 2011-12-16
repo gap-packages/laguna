@@ -123,15 +123,15 @@
        \sum_{i=1}^k i(\alpha_{i,1}+\cdots+\alpha_{i,l_i}).
   \]
   
-  The total number of standard products is |G|-1 .
+  The total number of standard products is |G|-1.
   
-  \bigskip  [1m[46mLemma  ([0m[HB82,  Theorem  VIII.2.6][1m[46m).[0m  For  i<=  c,  the set S_i of
-  standard  products of weight at least i forms a basis for A^i. Moreover, the
-  set  1+S_i=1+s  |  s  in  S_i  is  a polycyclic generating set for 1+A^i. In
-  particular 1+S_1 is a polycyclic generating set for V.
+  [1m[46mLemma  ([0m[HB82,  Theorem  VIII.2.6][1m[46m).[0m  For  i<=  c,  the  set S_i of standard
+  products  of  weight  at  least  i  forms a basis for A^i. Moreover, the set
+  1+S_i=1+s | s in S_i is a polycyclic generating set for 1+A^i. In particular
+  1+S_1 is a polycyclic generating set for V.
   
-  \bigskip A basis for A consisting of the standard products is referred to as
-  a [22m[36mweighted basis[0m. Note that a weighted basis is a basis for the augmentation
+  A  basis  for  A  consisting  of  the  standard products is referred to as a
+  [22m[36mweighted  basis[0m.  Note that a weighted basis is a basis for the augmentation
   ideal, and not for the whole group algebra.
   
   Let  x_1,...,x_{|G|-1  denote  the  standard  products  where  we choose the
@@ -155,7 +155,7 @@
   to  the  polycyclic  generating  set  y_1,...,y_|G|-1.  We use the following
   elementary lemma.
   
-  \bigskip  [1m[46mLemma.[0m  Let  i<=  c  and  suppose  that  w  in  A^i.  Assume  that
+  [1m[46mLemma.[0m   Let   i<=   c   and   suppose   that   w   in   A^i.   Assume  that
   x_s_i,x_s_i+1...,x_r_i are the standard products with weight i and for s_i<=
   j<=  r_i  set  y_j=1+x_j. Then for all alpha_s_i,...,alpha_r_iin0,...,p-1 we
   have that
@@ -171,8 +171,6 @@
        1+w\equiv (y_{s_i})^{\alpha_{s_i}}\cdots
        (y_{r_i})^{\alpha_{r_i}}\quad \bmod \quad 1+A^{i+1}.
   \]
-  
-  \bigskip
   
   Suppose  that  w  is  an  element  of  the augmentation ideal A and 1+w is a
   normalised unit. Let x_1,...,x_r_1 be the standard products of weight 1, and

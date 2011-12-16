@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
-                      "DTD/xhtml1-strict.dtd">
+         "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
 <head>
 <title>GAP (LAGUNA) - Chapter 4: LAGUNA functions</title>
 <meta http-equiv="content-type" content="text/html; charset=iso-8859-1" />
@@ -271,7 +271,31 @@ gap&gt; Augmentation( x );
 
 <p><a id="s2ss6" name="s2ss6"></a></p>
 
-<h5>4.2-6 Involution</h5>
+<h5>4.2-6 PartialAugmentations</h5>
+
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&gt; PartialAugmentations</code>( <var>KG, x</var> )</td><td class="tdright">( operation )</td></tr></table></div>
+<p><b>Returns: </b>a list of partial augmentations and a list of conjugacy class representatives</p>
+
+<p>The partial augmentation of an element x = alpha_1 * g_1 + alpha_2 * g_2 + cdots + alpha_k * g_k of the group ring KG, corresponding to the conjugacy class of an element g from the underlying group G is the sum of coefficients alpha_i taken over all g_i such that g_i is conjugated to g. The function returns a list of two lists, the first one is a list of partial augmentations, and the second is a list of representatives of appropriate conjugacy classes of elements of the group G.</p>
+
+
+<table class="example">
+<tr><td><pre>
+
+
+gap&gt; y := x + a*b^2;
+(Z(2)^0)*&lt;identity&gt; of ...+(Z(2)^0)*f1+(Z(2)^0)*f2+(Z(2)^0)*f1*f2+(Z(2)^
+0)*f1*f3
+gap&gt; PartialAugmentations( KG, y );
+[ [ Z(2)^0, 0*Z(2), Z(2)^0, Z(2)^0 ], [ &lt;identity&gt; of ..., f1, f2, f1*f2 ]
+ ]    
+
+
+</pre></td></tr></table>
+
+<p><a id="s2ss7" name="s2ss7"></a></p>
+
+<h5>4.2-7 Involution</h5>
 
 <div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&gt; Involution</code>( <var>x, f</var> )</td><td class="tdright">( operation )</td></tr></table></div>
 <div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&gt; Involution</code>( <var>x</var> )</td><td class="tdright">( operation )</td></tr></table></div>
@@ -301,9 +325,9 @@ gap&gt; List( l, g -&gt; g^-1 );
 
 </pre></td></tr></table>
 
-<p><a id="s2ss7" name="s2ss7"></a></p>
+<p><a id="s2ss8" name="s2ss8"></a></p>
 
-<h5>4.2-7 IsSymmetric</h5>
+<h5>4.2-8 IsSymmetric</h5>
 
 <div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&gt; IsSymmetric</code>( <var>x</var> )</td><td class="tdright">( attribute )</td></tr></table></div>
 <p>An element of a group ring is called <em>symmetric</em> if it is fixed under the classical involution. This property is checked here.</p>
@@ -321,9 +345,9 @@ true
 
 </pre></td></tr></table>
 
-<p><a id="s2ss8" name="s2ss8"></a></p>
+<p><a id="s2ss9" name="s2ss9"></a></p>
 
-<h5>4.2-8 IsUnitary</h5>
+<h5>4.2-9 IsUnitary</h5>
 
 <div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&gt; IsUnitary</code>( <var>x</var> )</td><td class="tdright">( attribute )</td></tr></table></div>
 <p>A unit of a group ring is called unitary if the classical involution inverts it. This property is checked here.</p>
@@ -344,9 +368,9 @@ gap&gt; List(l,IsUnitary);
 
 </pre></td></tr></table>
 
-<p><a id="s2ss9" name="s2ss9"></a></p>
+<p><a id="s2ss10" name="s2ss10"></a></p>
 
-<h5>4.2-9 IsUnit</h5>
+<h5>4.2-10 IsUnit</h5>
 
 <div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&gt; IsUnit</code>( <var>KG, x</var> )</td><td class="tdright">( method )</td></tr></table></div>
 <div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&gt; IsUnit</code>( <var>x</var> )</td><td class="tdright">( method )</td></tr></table></div>
@@ -373,9 +397,9 @@ true
 
 </pre></td></tr></table>
 
-<p><a id="s2ss10" name="s2ss10"></a></p>
+<p><a id="s2ss11" name="s2ss11"></a></p>
 
-<h5>4.2-10 InverseOp</h5>
+<h5>4.2-11 InverseOp</h5>
 
 <div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&gt; InverseOp</code>( <var>x</var> )</td><td class="tdright">( method )</td></tr></table></div>
 <p><b>Returns: </b>the inverse element of an element of a group ring</p>
@@ -395,6 +419,39 @@ Z(2)^0)*f1*f4+(Z(2)^0)*f2*f4+(Z(2)^0)*f1*f2*f4+(Z(2)^0)*f2*f3*f4+(Z(2)^
 0)*f1*f2*f3*f4
 gap&gt; y * y^-1;
 (Z(2)^0)*&lt;identity&gt; of ...    
+
+
+</pre></td></tr></table>
+
+<p><a id="s2ss12" name="s2ss12"></a></p>
+
+<h5>4.2-12 BicyclicUnitOfType1</h5>
+
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&gt; BicyclicUnitOfType1</code>( <var>a, g</var> )</td><td class="tdright">( operation )</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&gt; BicyclicUnitOfType2</code>( <var>a, g</var> )</td><td class="tdright">( operation )</td></tr></table></div>
+<p><b>Returns: </b>an element of a group ring</p>
+
+<p>let a be an element of order n of a group G. We put alpha = 1 + a + a^2 + ... +a^n-1. Then (a-1)*g*alpha and alpha*g*(a-1) are nilpotent of index two for any element g of the group G not containing in the normalizer N_G(&lt; a &gt;), and the units u_a,g = 1 + (a-1) * g * alpha and v_a,g = 1 + alpha * g * (a-1) are called bicyclic units. Note that u_a,g and v_a,g may coincide for some a and g, but in general this does not hold. These methods construct bicyclic units of both types when <var>a</var> and <var>g</var> are elements of the underlying group G of a group ring KG, already embedded to the group ring KG using the mapping <code class="code">Embedding( G, KG )</code>. Note that it is not actually checked that g is not contained in N_G(&lt; a &gt;), because this is verified in <code class="func">BicyclicUnitGroup</code> (<a href="chap4.html#s4ss13"><b>4.4-13</b></a>).</p>
+
+
+<table class="example">
+<tr><td><pre>
+
+
+gap&gt; G := SmallGroup(32,6);
+&lt;pc group of size 32 with 5 generators&gt;
+gap&gt; KG := GroupRing( GF(2), G );
+&lt;algebra-with-one over GF(2), with 5 generators&gt;
+gap&gt; g := MinimalGeneratingSet( G );
+[ f1, f2 ]
+gap&gt; g[1] in Normalizer( G, Subgroup( G, [g[2]] ) );
+false
+gap&gt; g[2] in Normalizer( G, Subgroup( G, [g[1]] ) );
+false
+gap&gt; g := List( g, x -&gt; x^Embedding( G, KG ) );
+[ (Z(2)^0)*f1, (Z(2)^0)*f2 ]
+gap&gt; BicyclicUnitOfType1(g[1],g[2]) = BicyclicUnitOfType2(g[1],g[2]);
+false                                                                       
 
 
 </pre></td></tr></table>
@@ -593,6 +650,51 @@ gap&gt; AugmentationIdealNilpotencyIndex( KD );
 
 </pre></td></tr></table>
 
+<p><a id="s3ss8" name="s3ss8"></a></p>
+
+<h5>4.3-8 LeftIdealBySubgroup</h5>
+
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&gt; LeftIdealBySubgroup</code>( <var>KG, H</var> )</td><td class="tdright">( operation )</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&gt; RightIdealBySubgroup</code>( <var>KG, H</var> )</td><td class="tdright">( operation )</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&gt; TwoSidedIdalBySubgroup</code>( <var>KG, H</var> )</td><td class="tdright">( operation )</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&gt; LeftIdealBySubgroup</code>( <var>KG, H</var> )</td><td class="tdright">( operation )</td></tr></table></div>
+<p><b>Returns: </b>an ideal of a group ring</p>
+
+<p>Let <var>KG</var> be a group ring of a group G over the ring K, and <var>H</var> be a subgroup of G. Then the set J_l(H) of all elements of <var>KG</var> of the form</p>
+
+<p class="pcenter">\[
+         \sum_{h \in H} x_h(h-1)
+          \]</p>
+
+<p>is the left ideal in <var>KG</var> generated by all elements h-1 with h in H. The right ideal J_r(H) is defined analogously. These operations are used to consrtuct such ideals, taking into account the fact, that the ideal J_l(H) is two-sided if and only if <var>H</var> is normal in G. An attempt of constructing two-sided ideal for a non-normal subgroup <var>H</var> will lead to an error message.</p>
+
+
+<table class="example">
+<tr><td><pre>
+
+
+gap&gt; KG := GroupRing( GF(2), DihedralGroup(16) );
+&lt;algebra-with-one over GF(2), with 4 generators&gt;
+gap&gt; G := DihedralGroup(16);
+&lt;pc group of size 16 with 4 generators&gt;
+gap&gt; KG := GroupRing( GF(2), G );
+&lt;algebra-with-one over GF(2), with 4 generators&gt;
+gap&gt; D := DerivedSubgroup( G );
+Group([ f3, f4 ])
+gap&gt; LeftIdealBySubgroup( KG, D );
+&lt;two-sided ideal in &lt;algebra-with-one over GF(2), with 4 generators&gt;,
+  (dimension 3)&gt;                              
+gap&gt; H := Subgroup( G, [ GeneratorsOfGroup(G)[1] ]);
+Group([ f1 ])
+gap&gt; IsNormal( G, H );
+false
+gap&gt; LeftIdealBySubgroup( KG, H );
+&lt;left ideal in &lt;algebra-with-one over GF(2), with 4 generators&gt;,
+  (dimension 1)&gt;
+
+
+</pre></td></tr></table>
+
 <p><a id="s4ss0" name="s4ss0"></a></p>
 
 <h4>4.4 Computations with the unit group</h4>
@@ -697,7 +799,49 @@ true
 
 <p><a id="s4ss5" name="s4ss5"></a></p>
 
-<h5>4.4-5 Units</h5>
+<h5>4.4-5 Embedding</h5>
+
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&gt; Embedding</code>( <var>H, V</var> )</td><td class="tdright">( operation )</td></tr></table></div>
+<p><b>Returns: </b>a homomorphism from an underlying group to a normalized unit group in pc-presentation</p>
+
+<p>Let <var>H</var> be a subgroup of a group G and <var>V</var> be the normalized unit group of the group algebra KG given by the power-commutator presentation (see <code class="func">PcNormalizedUnitGroup</code> (<a href="chap4.html#s4ss2"><b>4.4-2</b></a>). Then <code class="code">Embedding( H, V )</code> returns the homomorphism from <var>H</var> to <var>V</var>, which is the composition of <code class="code">Embedding( H, KG )</code> and <code class="code">NaturalBijectionToPcNormalizedUnitGroup( KG )</code>.</p>
+
+
+<table class="example">
+<tr><td><pre>
+
+
+gap&gt; G := DihedralGroup( 16 );
+&lt;pc group of size 16 with 4 generators&gt;
+gap&gt; KG := GroupRing( GF( 2 ), G );
+&lt;algebra-with-one over GF(2), with 4 generators&gt;
+gap&gt; V:=PcNormalizedUnitGroup( KG );
+&lt;pc group of size 32768 with 15 generators&gt;
+gap&gt; ucs := UpperCentralSeries( V );
+[ &lt;pc group of size 32768 with 15 generators&gt;,
+  &lt;pc group of size 4096 with 12 generators&gt;,
+  Group([ f3*f5*f13*f15, f7, f11, f13, f14, f15, f12, f9*f12, f10 ]),
+  Group([ f3*f5*f13*f15, f7, f15, f13*f15, f14*f15, f11*f13*f14*f15 ]),
+  Group([  ]) ]
+gap&gt; f := Embedding( G, V );
+[ f1, f2, f3, f4 ] -&gt; [ f2, f1, f3, f7 ]
+gap&gt; G1 := Image( f, G ); 
+Group([ f2, f1, f3, f7 ])
+gap&gt; H := Intersection( ucs[2], G1 ); 
+Group([ f3, f7, f3*f7 ])
+# H is the intersection of G and the 3rd centre of V(KG)
+gap&gt; T:=PreImage( f, H );
+Group([ f3, f4, f3*f4 ])
+# and T is its preimage in G
+gap&gt; IdGroup( T ); 
+[ 4, 1 ]
+
+
+</pre></td></tr></table>
+
+<p><a id="s4ss6" name="s4ss6"></a></p>
+
+<h5>4.4-6 Units</h5>
 
 <div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&gt; Units</code>( <var>KG</var> )</td><td class="tdright">( attribute )</td></tr></table></div>
 <p><b>Returns: </b>the unit group of a group ring</p>
@@ -729,9 +873,9 @@ true # this is the way to get the corresponding element of FH
 
 </pre></td></tr></table>
 
-<p><a id="s4ss6" name="s4ss6"></a></p>
+<p><a id="s4ss7" name="s4ss7"></a></p>
 
-<h5>4.4-6 PcUnits</h5>
+<h5>4.4-7 PcUnits</h5>
 
 <div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&gt; PcUnits</code>( <var>KG</var> )</td><td class="tdright">( attribute )</td></tr></table></div>
 <p><b>Returns: </b>a group given by power-commutator presentation</p>
@@ -758,9 +902,9 @@ Tuple( [ Z(3)^0, f1 ] )
 
 </pre></td></tr></table>
 
-<p><a id="s4ss7" name="s4ss7"></a></p>
+<p><a id="s4ss8" name="s4ss8"></a></p>
 
-<h5>4.4-7 IsGroupOfUnitsOfMagmaRing</h5>
+<h5>4.4-8 IsGroupOfUnitsOfMagmaRing</h5>
 
 <div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&gt; IsGroupOfUnitsOfMagmaRing</code>( <var>U</var> )</td><td class="tdright">( property )</td></tr></table></div>
 <p>This property will be automatically set <code class="keyw">true</code>, if <var>U</var> is a group generated by some units of a magma ring, including <code class="code">Units(KG)</code> and <code class="code">NormalizedUnitgroup(KG)</code>. Otherwise this property will not be bound.</p>
@@ -778,9 +922,9 @@ true
 
 </pre></td></tr></table>
 
-<p><a id="s4ss8" name="s4ss8"></a></p>
+<p><a id="s4ss9" name="s4ss9"></a></p>
 
-<h5>4.4-8 IsUnitGroupOfGroupRing</h5>
+<h5>4.4-9 IsUnitGroupOfGroupRing</h5>
 
 <div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&gt; IsUnitGroupOfGroupRing</code>( <var>U</var> )</td><td class="tdright">( property )</td></tr></table></div>
 <p>This property will be automatically set <code class="keyw">true</code>, if <var>U</var> is the unit group of a p-modular group algebra, obtained either by <code class="code">Units(KG)</code> or by <code class="code">PcUnits(KG)</code>. Otherwise this property will not be bound.</p>
@@ -798,9 +942,9 @@ true
 
 </pre></td></tr></table>
 
-<p><a id="s4ss9" name="s4ss9"></a></p>
+<p><a id="s4ss10" name="s4ss10"></a></p>
 
-<h5>4.4-9 IsNormalizedUnitGroupOfGroupRing</h5>
+<h5>4.4-10 IsNormalizedUnitGroupOfGroupRing</h5>
 
 <div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&gt; IsNormalizedUnitGroupOfGroupRing</code>( <var>U</var> )</td><td class="tdright">( property )</td></tr></table></div>
 <p>This property will be automatically set <code class="keyw">true</code>, if <var>U</var> is the normalized unit group of a p-modular group algebra, obtained either by <code class="code">NormalizedUnitGroup(KG)</code> or by <code class="code">PcNormalizedUnitGroup(KG)</code>. Otherwise this property will not be bound.</p>
@@ -818,9 +962,9 @@ true
 
 </pre></td></tr></table>
 
-<p><a id="s4ss10" name="s4ss10"></a></p>
+<p><a id="s4ss11" name="s4ss11"></a></p>
 
-<h5>4.4-10 UnderlyingGroupRing</h5>
+<h5>4.4-11 UnderlyingGroupRing</h5>
 
 <div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&gt; UnderlyingGroupRing</code>( <var>U</var> )</td><td class="tdright">( attribute )</td></tr></table></div>
 <p><b>Returns: </b>a group ring</p>
@@ -844,9 +988,77 @@ gap&gt; UnderlyingGroupRing( PcNormalizedUnitGroup( KG ) );
 
 </pre></td></tr></table>
 
-<p><a id="s4ss11" name="s4ss11"></a></p>
+<p><a id="s4ss12" name="s4ss12"></a></p>
 
-<h5>4.4-11 GroupBases</h5>
+<h5>4.4-12 UnitarySubgroup</h5>
+
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&gt; UnitarySubgroup</code>( <var>U</var> )</td><td class="tdright">( attribute )</td></tr></table></div>
+<p><b>Returns: </b>the subgroup of the unit group</p>
+
+<p>Let <var>U</var> be the normalized unit group of a group ring in either natural (see <code class="func">NormalizedUnitGroup</code> (<a href="chap4.html#s4ss1"><b>4.4-1</b></a>)) or power-commutator (see <code class="func">PcNormalizedUnitGroup</code> (<a href="chap4.html#s4ss2"><b>4.4-2</b></a>)) presentation. The attribute stores the unitary subgroup of <var>U</var>, generated by all unitary units of <var>U</var> (see <code class="func">IsUnitary</code> (<a href="chap4.html#s2ss9"><b>4.2-9</b></a>)). The method is straightforward, so it is not recommended to run it for large groups.</p>
+
+
+<table class="example">
+<tr><td><pre>
+
+
+gap&gt; KG := GroupRing( GF( 2 ), DihedralGroup( 8 ) );
+&lt;algebra-with-one over GF(2), with 3 generators&gt;
+gap&gt; U := NormalizedUnitGroup( KG );
+&lt;group of size 128 with 7 generators&gt;
+gap&gt; HU := UnitarySubgroup( U );
+&lt;group with 5 generators&gt;
+gap&gt; IdGroup( HU );
+[ 64, 261 ]
+gap&gt; V := PcNormalizedUnitGroup( KG );
+&lt;pc group of size 128 with 7 generators&gt;
+gap&gt; HV := UnitarySubgroup( V );
+Group([ f1, f2, f5, f6, f7 ])
+gap&gt; IdGroup( HV );
+[ 64, 261 ]
+gap&gt; Image(NaturalBijectionToPcNormalizedUnitGroup( KG ), HU ) = HV;
+true
+
+
+</pre></td></tr></table>
+
+<p><a id="s4ss13" name="s4ss13"></a></p>
+
+<h5>4.4-13 BicyclicUnitGroup</h5>
+
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&gt; BicyclicUnitGroup</code>( <var>U</var> )</td><td class="tdright">( attribute )</td></tr></table></div>
+<p><b>Returns: </b>the subgroup of the unit group, generated by bicyclic units</p>
+
+<p>Let <var>U</var> be the normalized unit group of a group ring in either natural (see <code class="func">NormalizedUnitGroup</code> (<a href="chap4.html#s4ss1"><b>4.4-1</b></a>)) or power-commutator (see <code class="func">PcNormalizedUnitGroup</code> (<a href="chap4.html#s4ss2"><b>4.4-2</b></a>)) presentation. The attribute stores the subgroup of <var>U</var>, generated by all bicyclic units u_g,h and v_g,h (see <code class="func">BicyclicUnitOfType1</code> (<a href="chap4.html#s2ss12"><b>4.2-12</b></a>) and <code class="func">BicyclicUnitOfType1</code> (<a href="chap4.html#s2ss12"><b>4.2-12</b></a>)), where g and h run over the elements of the underlying group, and h do not belongs to the normalizer of &lt; g &gt; in G.</p>
+
+
+<table class="example">
+<tr><td><pre>
+
+
+gap&gt; KG := GroupRing( GF( 2 ), DihedralGroup( 8 ) );
+&lt;algebra-with-one over GF(2), with 3 generators&gt;
+gap&gt; U := NormalizedUnitGroup( KG );
+&lt;group of size 128 with 7 generators&gt;
+gap&gt; BU := BicyclicUnitGroup( U );
+&lt;group with 2 generators&gt;
+gap&gt; IdGroup( BU );
+[ 4, 2 ]
+gap&gt; V := PcNormalizedUnitGroup( KG );
+&lt;pc group of size 128 with 7 generators&gt;
+gap&gt; BV := BicyclicUnitGroup( V );
+Group([ f5*f6, f6*f7 ])
+gap&gt; IdGroup( BV );
+[ 4, 2 ]
+gap&gt; Image( NaturalBijectionToPcNormalizedUnitGroup( KG ), BU ) = BV;
+true
+
+
+</pre></td></tr></table>
+
+<p><a id="s4ss14" name="s4ss14"></a></p>
+
+<h5>4.4-14 GroupBases</h5>
 
 <div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&gt; GroupBases</code>( <var>KG</var> )</td><td class="tdright">( attribute )</td></tr></table></div>
 <p><b>Returns: </b>a list of lists of group rings elements</p>
@@ -1408,6 +1620,30 @@ gap&gt; LieLowerNilpotencyIndex( KG );
 
 </pre></td></tr></table>
 
+<p><a id="s5ss21" name="s5ss21"></a></p>
+
+<h5>4.5-21 LieDerivedLength</h5>
+
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&gt; LieDerivedLength</code>( <var>L</var> )</td><td class="tdright">( attribute )</td></tr></table></div>
+<p>Let L be a Lie algebra. The <em>Lie derived series</em> of L is defined as follows: delta^[0](L) = L and delta^[n](L) = [delta^[n-1](L), delta^[n-1](L)]. L is called Lie solvable if there exists an integer m such that delta^[m](L) = 0. In this case the integer m is called the <em>Lie derived length</em> of L, and it is returned by this function.</p>
+
+
+<table class="example">
+<tr><td><pre>
+
+
+gap&gt; KG := GroupRing( GF ( 2 ), DihedralGroup( 16 ) );
+&lt;algebra-with-one over GF(2), with 4 generators&gt;
+gap&gt; L := LieAlgebra( KG );
+#I  LAGUNA package: Constructing Lie algebra ...
+&lt;Lie algebra over GF(2)&gt;
+gap&gt; LieDerivedLength( L );
+#I  LAGUNA package: Computing the Lie derived subalgebra ...
+3                                                            
+
+
+</pre></td></tr></table>
+
 <p><a id="s6ss0" name="s6ss0"></a></p>
 
 <h4>4.6 Other commands</h4>
@@ -1460,6 +1696,8 @@ gap&gt; DihedralDepth( UD8 );
 <h5>4.6-3 DimensionBasis</h5>
 
 <div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&gt; DimensionBasis</code>( <var>G</var> )</td><td class="tdright">( method )</td></tr></table></div>
+<p><b>Returns: </b>record with two components: `dimensionBasis' (list of group elements) and `weights' (list of weights)</p>
+
 <p>For a finite p-group <var>G</var>, returns its Jennings basis as it was described in Section <a href="chap3.html#s3ss0"><b>3.3</b></a>.</p>
 
 
@@ -1480,6 +1718,8 @@ rec( dimensionBasis := [ f1, f2, f3, f4 ], weights := [ 1, 1, 2, 4 ] )
 <h5>4.6-4 LieDimensionSubgroups</h5>
 
 <div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&gt; LieDimensionSubgroups</code>( <var>G</var> )</td><td class="tdright">( attribute )</td></tr></table></div>
+<p><b>Returns: </b>list of subgroups</p>
+
 <p>For a finite p-group <var>G</var>, returns the series of its Lie dimension subgroups. The m-th Lie dimension subgroup D_(m) is the intersection of the group G and 1+KG^(m), where KG^(m) is the m-th term of the upper Lie power series of KG; see <code class="func">LieUpperNilpotencyIndex</code> (<a href="chap4.html#s5ss19"><b>4.5-19</b></a>)</p>
 
 
@@ -1498,7 +1738,36 @@ gap&gt; LieDimensionSubgroups( G );
 
 <p><a id="s6ss5" name="s6ss5"></a></p>
 
-<h5>4.6-5 LAGInfo</h5>
+<h5>4.6-5 LieUpperCodimensionSeries</h5>
+
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&gt; LieUpperCodimensionSeries</code>( <var>KG</var> )</td><td class="tdright">( attribute )</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&gt; LieUpperCodimensionSeries</code>( <var>G</var> )</td><td class="tdright">( attribute )</td></tr></table></div>
+<p><b>Returns: </b>list of subgroups</p>
+
+<p>A notion of upper Lie codimension subgroups was introduced in <a href="chapBib.html#biBCS">[CS]</a>. For a finite p-group <var>G</var>, C_i is the set of all elements g in <var>G</var>, such that the Lie commutator [ g, g_1, ..., g_i ] of the length i+1 is equal to zero for all g_1, ..., g_i from <var>G</var>, and C_0 = 1. By Du's theorem (see <a href="chapBib.html#biBDu">[D92]</a>), C_i coincides with the intersection of G and the i-th term of the upper central series 1=Z_0 &lt; Z_1 &lt; Z_2 &lt; ... &lt; Z_n = V(KG) of the normalized unit group V(KG). This fact is used in <strong class="pkg">LAGUNA</strong> to speed up computation of this series. Since V(KG) is involved in computation, for the first time the argiment should be the group ring <var>KG</var>, but later you can also apply it to the group <var>G</var> itself.</p>
+
+
+<table class="example">
+<tr><td><pre>
+
+
+gap&gt; G := DihedralGroup(16);
+&lt;pc group of size 16 with 4 generators&gt;
+gap&gt; KG := GroupRing( GF(2), G );
+&lt;algebra-with-one over GF(2), with 4 generators&gt;
+gap&gt; LieUpperCodimensionSeries( KG );
+[ Group([ f1, f2, f3, f4 ]), Group([ f3, f4, f3*f4 ]), Group([ f4 ]), 
+  Group([ f4 ]), Group([  ]) ]
+gap&gt; LieUpperCodimensionSeries( G );
+[ Group([ f1, f2, f3, f4 ]), Group([ f3, f4, f3*f4 ]), Group([ f4 ]), 
+  Group([ f4 ]), Group([  ]) ]
+
+
+</pre></td></tr></table>
+
+<p><a id="s6ss6" name="s6ss6"></a></p>
+
+<h5>4.6-6 LAGInfo</h5>
 
 <div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&gt; LAGInfo</code></td><td class="tdright">( info class )</td></tr></table></div>
 <p><code class="code">LAGInfo</code> is a special Info class for LAGUNA algorithms. It has 5 levels: 0, 1 (default), 2, 3 and 4. To change info level to <code class="code">k</code>, use command <code class="code">SetInfoLevel(LAGInfo, k)</code>.</p>
@@ -1525,16 +1794,16 @@ gap&gt; UD8 := PcNormalizedUnitGroup( KD8 );
 
 </pre></td></tr></table>
 
-<p><a id="s6ss6" name="s6ss6"></a></p>
+<p><a id="s6ss7" name="s6ss7"></a></p>
 
-<h5>4.6-6 LAGUNABuildManual</h5>
+<h5>4.6-7 LAGUNABuildManual</h5>
 
 <div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&gt; LAGUNABuildManual</code>( <var></var> )</td><td class="tdright">( function )</td></tr></table></div>
 <p>This function is used to build the manual in the following formats: DVI, PDF, PS, HTML and text for online help. We recommend that the user should have a recent and fairly complete TeX distribution. Since <strong class="pkg">LAGUNA</strong> is distributed together with its manual, it is not necessary for the user to use this function. Normally it is intended to be used by the developers only. This is the only function of <strong class="pkg">LAGUNA</strong> which requires UNIX/Linux environment.</p>
 
-<p><a id="s6ss7" name="s6ss7"></a></p>
+<p><a id="s6ss8" name="s6ss8"></a></p>
 
-<h5>4.6-7 LAGUNABuildManualHTML</h5>
+<h5>4.6-8 LAGUNABuildManualHTML</h5>
 
 <div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&gt; LAGUNABuildManualHTML</code>( <var></var> )</td><td class="tdright">( function )</td></tr></table></div>
 <p>This fuction is used to build the manual only in HTML format. This does not depend on the availability of the TeX installation and works under Windows and MacOS as well. Since <strong class="pkg">LAGUNA</strong> is distributed together with its manual, it is not necessary for the user to use this function. Normally it is intended to be used by the developers only.</p>

@@ -153,12 +153,9 @@ Clearly, a standard product is an element of the augmentation ideal
 <Display>
 \sum_{i=1}^k i(\alpha_{i,1}+\cdots+\alpha_{i,l_i}).
 </Display>
-The total number of standard products is <M>|G|-1</M>.
-
+The total number of standard products is <M>|G|-1</M>.
 
 <P/>
-
-\bigskip
 
 <B>Lemma (</B><Cite Key="HB" Where="Theorem VIII.2.6"/><B>).</B> 
 For <M>i\leq c</M>, the set <M>S_i</M> 
@@ -167,8 +164,6 @@ of standard products of weight at least <M>i</M>  forms a basis for
 polycyclic generating set for <M>1+A^i</M>. In particular <M>1+S_1</M> is a
 polycyclic generating set for <M>V</M>.
 <P/>
-
-\bigskip
 
 A basis for <M>A</M> consisting of the standard products is referred to as a
 <E>weighted basis</E>. Note that a weighted basis is a basis for the
@@ -200,8 +195,6 @@ a normalised unit with respect to the polycyclic generating set
 <M>y_1,\ldots,y_{|G|-1}</M>. We use the following elementary lemma.
 <P/>
 
-\bigskip
-
 <B>Lemma.</B> Let <M>i\leq c</M> and suppose that
 <M>w \in A^i</M>. Assume that <M>x_{s_i},x_{s_i+1}\ldots,x_{r_i}</M> are the
 standard products with weight <M>i</M> and  for <M>s_i\leq j\leq r_i</M> set
@@ -216,11 +209,7 @@ if an only if
 \quad 1+A^{i+1}.
 </Display>
 
-\bigskip
-
 <P/>
-
-
 
 Suppose that <M>w</M> is an element of the augmentation ideal <M>A</M> and
 <M>1+w</M> is a normalised unit. Let <M>x_1,\ldots,x_{r_1}</M> be the standard

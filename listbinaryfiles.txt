@@ -1,4 +1,3 @@
-laguna/TODO.laguna
 laguna/ChangeLog
 laguna/doc/manual.ind
 laguna/doc/manual.pdf

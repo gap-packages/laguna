@@ -5,7 +5,7 @@
 #W                                                         Richard Rossmanith
 #W                                                            Csaba Schneider
 ##
-#H  $Id: PackageInfo.g,v 1.14 2003/07/27 12:57:50 alexk Exp $
+#H  $Id: PackageInfo.g,v 1.18 2005/04/07 10:47:52 alexk Exp $
 ##
 #############################################################################
 
@@ -13,49 +13,71 @@ SetPackageInfo( rec(
 
 PackageName := "LAGUNA",
 Subtitle := "Lie AlGebras and UNits of group Algebras",
-Version := "3.2.2",
-Date := "17/04/2004",
-ArchiveURL := "http://ukrgap.exponenta.ru/LAGUNA/laguna-3.2.2",
+Version := "3.3",
+Date := "07/04/2005",
+ArchiveURL := "http://ukrgap.exponenta.ru/LAGUNA/laguna-3.3",
 ArchiveFormats := ".zoo .tar.gz .tar.bz2 -win.zip",
 
 #TextFiles := ["init.g", ......],
 #BinaryFiles := ["doc/manual.dvi", ......],
 
-Persons := [
-     rec(
-     LastName := "Bovdi",
-     FirstNames := "Victor",
-     IsAuthor := true,
-     IsMaintainer := true,
-     Email := "vbovdi@math.klte.hu",
-     PostalAddress := "Institute of Mathematics and Informatics, University of Deberecen, P.O.Box 12, Debrecen, H-4010 Hungary",
+Persons := [
+  rec(
+    LastName      := "Bovdi",
+    FirstNames    := "Victor",
+    IsAuthor      := true,
+    IsMaintainer  := true,
+    Email         := "vbovdi@math.klte.hu",
+    PostalAddress := Concatenation( [ 
+                     "Institute of Mathematics and Informatics\n", 
+                     "University of Debrecen\n", 
+                     "P.O.Box 12, Debrecen\n", 
+                     "H-4010 Hungary" ] ),
+    Place         := "Debrecen",
+    Institution   := "University of Debrecen"
      ),
-     rec(
-     LastName := "Konovalov",
-     FirstNames := "Alexander",
-     IsAuthor := true,
-     IsMaintainer := true,
-     Email := "konovalov@member.ams.org",
-     WWWHome := "http://ukrgap.exponenta.ru/konoval.htm",
-     PostalAddress := "P.O.Box 1317, Central Post Office, Zaporozhye, 69000 Ukraine",
-     Institution := "Department of Mathematics, Zaporozhye State University"
+  rec(
+    LastName      := "Konovalov",
+    FirstNames    := "Alexander",
+    IsAuthor      := true,
+    IsMaintainer  := true,
+    Email         := "konovalov@member.ams.org",
+    WWWHome       := "http://ukrgap.exponenta.ru/konoval.htm",
+    PostalAddress := Concatenation( [
+                     "P.O.Box 1317\n",
+                     "Central Post Office\n", 
+                     "Zaporozhye, 69000 Ukraine" ] ),
+    Place         := "Zaporozhye",
+    Institution   := "Zaporozhye State University"
      ),
-     rec(
-     LastName := "Rossmanith",
-     FirstNames := "Richard",
-     IsAuthor := true,
-     IsMaintainer := false,
-     Email := "richard.rossmanith@d-fine.de",
-     PostalAddress := "d-fine GmbH, Mergenthalerallee 55, 65760 Eschborn/Frankfurt, Germany"
+  rec(
+    LastName := "Rossmanith",
+    FirstNames := "Richard",
+    IsAuthor := true,
+    IsMaintainer := false,
+    Email := "richard.rossmanith@d-fine.de",
+    PostalAddress := Concatenation( [
+                     "d-fine GmbH\n",
+                     "Mergenthalerallee 55\n",
+                     "65760 Eschborn/Frankfurt, Germany" ] ),
+    Place         := "Frankfurt",
+    Institution   := "d-fine GmbH"              
      ),
-     rec(
-     LastName := "Schneider",
-     FirstNames := "Csaba",
-     IsAuthor := true,
-     IsMaintainer := true,
-     Email := "csaba@maths.uwa.edu.au",
-     WWWHome := "http://www.maths.uwa.edu.au/~csaba/",
-     PostalAddress := "School of Mathematics and Statistics, The University of Western Australia, 35 Stirling Highway, 6009 Crawley Western Australia",
+  rec( 
+    LastName      := "Schneider",
+    FirstNames    := "Csaba",
+    IsAuthor      := true,
+    IsMaintainer  := true,
+    Email         := "csaba.schneider@sztaki.hu",
+    WWWHome       := "http://www.sztaki.hu/~schneider",
+    PostalAddress := Concatenation( [
+                     "Csaba Schneider\n",
+                     "Informatics Laboratory\n",
+                     "Computer and Automation Research Institute\n",
+                     "The Hungarian Academy of Sciences\n",
+	             "1111 Budapest, Lagymanyosi u. 11, Hungary" ]),
+    Place         := "Budapest",
+    Institution   := "Computer and Automation Research Institute"
      )
 ],
 
@@ -65,7 +87,7 @@ AcceptDate := "06/2003",
 
 README_URL := "http://ukrgap.exponenta.ru/laguna/README.laguna",
 PackageInfoURL := "http://ukrgap.exponenta.ru/laguna/PackageInfo.g",
-AbstractHTML := "The <span class=\"pkgname\">LAGUNA</span> package provides functionality for calculation of the normalized unit group of the modular group algebra of the finite p-group and for investigation of Lie algebra associated with group algebras and other associative algebras",
+AbstractHTML := "The <span class=\"pkgname\">LAGUNA</span> package replaces the <span class=\"pkgname\">LAG</span> package and provides functionality for calculation of the normalized unit group of the modular group algebra of the finite p-group and for investigation of Lie algebra associated with group algebras and other associative algebras.",
 PackageWWWHome := "http://ukrgap.exponenta.ru/laguna.htm",
                   
 PackageDoc := rec(
@@ -78,11 +100,10 @@ PackageDoc := rec(
   Autoload := true
 ),
 
-
 Dependencies := rec(
   GAP := ">=4.4",
-  NeededOtherPackages := [["GAPDoc", ">= 0.999"]],
-  SuggestedOtherPackages := [],
+  NeededOtherPackages := [ ["GAPDoc", ">= 0.999"] ],
+  SuggestedOtherPackages := [ ["Sophus", ">= 1.11"] ],
   ExternalConditions := []
 ),
 
