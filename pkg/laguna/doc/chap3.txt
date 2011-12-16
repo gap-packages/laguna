@@ -1,0 +1,242 @@
+  
+  [1m[4m[31m3. The basic theory behind [1mLAGUNA[1m[4m[31m[0m
+  
+  In this chapter we describe the theory that is behind the algorithms used by
+  [1mLAGUNA[0m.
+  
+  
+  [1m[4m[31m3.1 Notation and definitions[0m
+  
+  Let  G  be  a group and F a field. Then the [22m[36mgroup algebra[0m FG consists of the
+  set of formal linear combinations of the form
+  
+  \[
+       \sum_{g \in G}\alpha_g g,\qquad \alpha_g \in F
+  \]
+  
+  where all but finitely many of the alpha_g are zero. The group algebra FG is
+  an F-algebra with the obvious operations. Clearly, dim FG=|G|.
+  
+  The [22m[36maugmentation homomorphism[0m chi : FG -> F is defined by
+  
+  \[
+       \chi\left(\sum_{g \in G}\alpha_g g\right)=\sum_{g \in G}\alpha_g.
+  \]
+  
+  It  is  easy  to see that chi is indeed a homomorphism onto F. The kernel of
+  chi  is  called  the  [22m[36maugmentation  ideal[0m  of  FG. The augmentation ideal is
+  denoted  A(FG), or simply A when there is no danger of confusion. It follows
+  from  the isomorphism theorems that dim A(FG)=dim FG-1=|G|-1. Another way to
+  write the augmentation ideal is
+  
+  \[
+       A(FG)=\left\{\sum_{g \in G}\alpha_g g\ |\ \sum_{g \in
+       G}\alpha_g=0\right\}.
+  \]
+  
+  An  invertible element of FG is said to be a [22m[36munit[0m. Clearly the elements of G
+  and  the non-zero elements of F are units. The set of units in FG is a group
+  with  respect  to  the multiplication of FG. The [22m[36munit group[0m of FG is denoted
+  U(FG) or simply U when there is no risk of confusion. A unit u is said to be
+  [22m[36mnormalised[0m  if chi(u)=1. The set of normalised units forms a subgroup of the
+  unit  group, and is referred to as the [22m[36mnormalised unit group[0m. The normalised
+  unit  group  of  FG  is denoted V(FG), or simply V. It is easy to prove that
+  U(FG) = F^* times V(FG) where F^* denotes the multiplicative group of F.
+  
+  
+  [1m[4m[31m3.2 p-modular group algebras[0m
+  
+  A  group  algebra  FG  is  said  to  be  p-modular  if  F  is  the  field of
+  characteristic  p, and G is a finite p-group. A lot of information about the
+  structure  of p-modular group algebras can be found in [HB82, Chapter VIII].
+  In a p-modular group algebra we have that an element u is a unit if and only
+  if chi(u)<> 0. Hence the normalised unit group V consists of all elements of
+  FG  with  augmentation  1.  In  other words V is a coset of the augmentation
+  ideal, namely V=1+A. This also implies that |V|=|A|=|F|^|G|-1, and so V is a
+  finite p-group.
+  
+  One  of  the  aims  of  the  [1mLAGUNA[0m package is to compute a power-commutator
+  presentation  for  the  normalised unit group in the case when G is a finite
+  p-group  and  F  is  a  field of p elements. Such a presentation is given by
+  generators    y_1,    ...,    y_|G|-1    and   two   types   of   relations:
+  y_i^p=(y_i+1)^alpha_i,i+1}  cdots  (y_|G|-1)^alpha_i,|G|-1}  for  1  <= i <=
+  |G|-1, and [y_j,y_i]=(y_j+1)^alpha_j,i,j+1} cdots (y_|G|-1)^alpha_j,i,|G|-1}
+  for  1  <=  i<j  <= |G|-1, where the exponents alpha_i,k and alpha_i,j,k are
+  elements of the set 0,...,p-1. Having such a presentation, it is possible to
+  carry  out efficient computations in the finite p-group V; see [S94, Chapter
+  9].
+  
+  
+  [1m[4m[31m3.3 Polycyclic generating set for V[0m
+  
+  Let  G  be  a  finite  p-group  and F the field of p elements. Our aim is to
+  construct a power-commutator presentation for V=V(FG). We noted earlier that
+  V=1+A,  where  A is the augmentation ideal. We use this piece of information
+  and  construct  a polycyclic generating set for V using a suitable basis for
+  A.  Before  constructing  this generating set, we note that A is a nilpotent
+  ideal  in  FG. In other words there is some c such that A^c<> 0 but A^c+1=0.
+  Hence we can consider the following series of ideals in A:
+  
+  \[
+       A\rhd A^2\rhd\cdots\rhd A^{c}\rhd A^{c+1}=0.
+  \]
+  
+  It   is   clear   that   a  quotient  A^i/A^i+1of  this  chain  has  trivial
+  multiplication,  that is, such a quotient is a nil-ring. The chain A^i gives
+  rise to a series of normal subgroups in V:
+  
+  \[
+       V=1+A\rhd 1+A^2\rhd\cdots\rhd 1+A^c\rhd 1+A^{c+1}=1.
+  \]
+  
+  It   is   easy   to   see   that  the  chain  1+A^i  is  central,  that  is,
+  (1+A^i)/(1+A^i+1)<= Z((1+A)/(1+A^i+1)).
+  
+  Now  we  show  how  to  compute  a  basis  for  A^i  that gives a polycyclic
+  generating set for 1+A^i. Let
+  
+  \[
+       G=G_1 \rhd G_2\rhd\cdots\rhd G_{k}\rhd G_{k+1}=1
+  \]
+  
+  be  the  [22m[36mJennings  series[0m  of  G. That is, G_i+1=[G_i,G]G_j^p where j is the
+  smallest  non-negative  integer  such  that  j>=  i/p.  For all i<= k select
+  elements x_i,1,...,x_i,l_i of G_i such that x_i,1G_i+1,...,x_i,l_iG_i+1 is a
+  minimal  generating  set for the elementary abelian group G_i/G_i+1. For the
+  Jennings  series  it  may  happen that G_i=G_i+1 for some i. In this case we
+  choose  an  empty  generating set for the quotient G_i/G_i+1 and l_i=0. Then
+  the  set  x_1,1,...,x_1,l_1,...,x_k,1,...,x_k,l_k  is said to be a [22m[36mdimension
+  basis[0m for G. The [22m[36mweight[0m of a dimension basis element x_i,j is i.
+  
+  A non-empty product
+  
+  \[
+       u=(x_{1,1}-1)^{\alpha_{1,1}}\cdots(x_{1,l_1}-1)^{\alpha_{1,l_1}}\cdots
+       (x_{k,1}-1)^{\alpha_{k,1}}\cdots(x_{k,l_k}-1)^{\alpha_{k,l_k}}
+  \]
+  
+  where  0<=  alpha_i,j<=  p-1  is  said  to  be [22m[36mstandard[0m. Clearly, a standard
+  product  is  an  element  of  the  augmentation  ideal  A. The weight of the
+  standard product u is
+  
+  \[
+       \sum_{i=1}^k i(\alpha_{i,1}+\cdots+\alpha_{i,l_i}).
+  \]
+  
+  The total number of standard products is |G|-1 .
+  
+  \bigskip  [1m[46mLemma  ([0m[HB82,  Theorem  VIII.2.6][1m[46m).[0m  For  i<=  c,  the set S_i of
+  standard  products of weight at least i forms a basis for A^i. Moreover, the
+  set  1+S_i=1+s  |  s  in  S_i  is  a polycyclic generating set for 1+A^i. In
+  particular 1+S_1 is a polycyclic generating set for V.
+  
+  \bigskip A basis for A consisting of the standard products is referred to as
+  a [22m[36mweighted basis[0m. Note that a weighted basis is a basis for the augmentation
+  ideal, and not for the whole group algebra.
+  
+  Let  x_1,...,x_{|G|-1  denote  the  standard  products  where  we choose the
+  indices so that the weight of x_i is not larger than the weight of x_i+1 for
+  all  i, and set y_i=1+x_i. Then every element v of V can be uniquely written
+  in the form
+  
+  \[
+       v=y_1^{\alpha_1}\cdots (y_{|G|-1})^{\alpha_{|G|-1}}, \quad
+       \alpha_1,\ldots,\alpha_{|G|-1} \in \{0,\ldots,p-1\}.
+  \]
+  
+  This  expression is called the [22m[36mcanonical form[0m of v. We note that by adding a
+  generator  of  F^*  to  the  set y_1,...,y_|G|-1| we can obtain a polycyclic
+  generating set for the unit group U.
+  
+  
+  [1m[4m[31m3.4 Computing the canonical form[0m
+  
+  We  show how to compute the canonical form of a normalised unit with respect
+  to  the  polycyclic  generating  set  y_1,...,y_|G|-1.  We use the following
+  elementary lemma.
+  
+  \bigskip  [1m[46mLemma.[0m  Let  i<=  c  and  suppose  that  w  in  A^i.  Assume  that
+  x_s_i,x_s_i+1...,x_r_i are the standard products with weight i and for s_i<=
+  j<=  r_i  set  y_j=1+x_j. Then for all alpha_s_i,...,alpha_r_iin0,...,p-1 we
+  have that
+  
+  \[
+       w\equiv \alpha_{s_i}x_{s_i}+\cdots+\alpha_{r_i}x_{r_i}\quad \bmod
+       \quad A^{i+1}
+  \]
+  
+  if an only if
+  
+  \[
+       1+w\equiv (y_{s_i})^{\alpha_{s_i}}\cdots
+       (y_{r_i})^{\alpha_{r_i}}\quad \bmod \quad 1+A^{i+1}.
+  \]
+  
+  \bigskip
+  
+  Suppose  that  w  is  an  element  of  the augmentation ideal A and 1+w is a
+  normalised unit. Let x_1,...,x_r_1 be the standard products of weight 1, and
+  let y_1,...,y_r_1 be the corresponding elements in the polycyclic generating
+  set. Then using the previous lemma, we find alpha_1,...,alpha_r_1 such that
+  
+  \[
+       w\equiv \alpha_{1}x_{1}+\cdots+\alpha_{r_1}x_{r_1}\quad \bmod
+       \quad A^{2},
+  \]
+  
+  and so
+  
+  \[
+       1+w\equiv (y_{1})^{\alpha_{1}}\cdots (y_{r_1})^{\alpha_{r_1}}\quad
+       \bmod \quad 1+A^{2}.
+  \]
+  
+  Now  we have that 1+w=(y_1)^alpha_1}cdots (y_r_1)^alpha_r_1}(1+w_2) for some
+  w_2  in  A^2.  Then  suppose  that  x_s_2,x_s_2+1,...,x_r_2 are the standard
+  products of weight 2. We find alpha_s_2,...,alpha_r_2 such that
+  
+  \[
+       w_2\equiv \alpha_{s_2}x_{s_2}+\cdots+\alpha_{r_2}x_{r_2}\quad
+       \bmod \quad A^{3}.
+  \]
+  
+  Then the lemma above implies that
+  
+  \[
+       1+w_2\equiv (y_{s_2})^{\alpha_{s_2}}\cdots
+       (y_{r_2})^{\alpha_{r_2}}\quad \bmod \quad 1+A^{3}.
+  \]
+  
+  Thus 1+w_2=(y_s_2)^alpha_s_2}cdots (y_r_2)^alpha_r_2}(1+w_3) for some w_3 in
+  A^3,               and               so              1+w=(y_1)^alpha_1}cdots
+  (y_r_1)^alpha_r_1}(y_s_2)^alpha_s_2}cdots    (y_r_2)^alpha_r_2}(1+w_3).   We
+  repeat  this process, and after c steps we obtain the canonical form for the
+  element 1+w.
+  
+  
+  [1m[4m[31m3.5 Computing a power commutator presentation for V[0m
+  
+  Using  the  procedure in the previous section, it is easy to compute a power
+  commutator presentation for the normalized unit group V of a p-modular group
+  algebra  over  the  field  of  p  elements.  First we compute the polycyclic
+  generating sequence y_1,...,y_|G|-1 as in Section [1m3.3[0m. Then for each y_i and
+  for  each y_j, y_i such that i<j we compute the canonical form for y_i^p and
+  [y_j,y_i] as described in Section [1m3.4[0m.
+  
+  Once  a  power-commutator  presentation  for V is constructed, it is easy to
+  obtain  a  polycyclic  presentation  for the unit group U by adding an extra
+  central generator y corresponding to a generator of the cyclic group F^* and
+  enforcing that y^p-1=1.
+  
+  
+  [1m[4m[31m3.6 Verifying Lie properties of FG[0m
+  
+  If  FG  is  a  group algebra then one can consider the Lie bracket operation
+  defined  by  [a,b]=ab-ba.  Then it is well-known that FG with respect to the
+  scalar multiplication, the addition, and the bracket operation becomes a Lie
+  algebra  over F. This Lie algebra is also denoted FG. Some Lie properties of
+  such Lie algebras can be computed very efficiently. In particular, it can be
+  verified  whether  the  Lie  algebra  FG  is nilpotent, soluble, metabelian,
+  centre-by-metabelian. Fast algorithms that achieve these goals are described
+  in [LR86], [PPS73], and [R00].
+  

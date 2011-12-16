@@ -1,0 +1,330 @@
+  
+  [1m[4m[31m2. A sample calculation with [1mLAGUNA[1m[4m[31m[0m
+  
+  Before  explaining  the theory behind the [1mLAGUNA[0m package we present a sample
+  calculation to show the reader what [1mLAGUNA[0m is able to compute. We will carry
+  out some calculations in the group algebra of the dihedral group of order 16
+  over the field of two elements. First we create this modular group algebra.
+  
+  [22m[35m---------------------------  Example  ----------------------------[0m
+    [22m[35m[0m
+    [22m[35mgap> K := GF( 2 );[0m
+    [22m[35mGF(2)[0m
+    [22m[35mgap> G := DihedralGroup( 16 );[0m
+    [22m[35m<pc group of size 16 with 4 generators>[0m
+    [22m[35mgap> KG := GroupRing( K, G );[0m
+    [22m[35m<algebra-with-one over GF(2), with 4 generators>[0m
+    [22m[35m[0m
+  [22m[35m------------------------------------------------------------------[0m
+  
+  The  group  algebra  [22m[32mKG[0m  has  some properties and attributes that are direct
+  consequences of its definition. These can be checked very quickly.
+  
+  [22m[35m---------------------------  Example  ----------------------------[0m
+    [22m[35m[0m
+    [22m[35mgap> IsGroupAlgebra( KG ); [0m
+    [22m[35mtrue[0m
+    [22m[35mgap> IsPModularGroupAlgebra( KG );[0m
+    [22m[35mtrue[0m
+    [22m[35mgap> IsFModularGroupAlgebra( KG );[0m
+    [22m[35mtrue[0m
+    [22m[35mgap> UnderlyingGroup( KG );[0m
+    [22m[35m<pc group of size 16 with 4 generators>[0m
+    [22m[35mgap> LeftActingDomain( KG );[0m
+    [22m[35mGF(2)[0m
+    [22m[35m[0m
+  [22m[35m------------------------------------------------------------------[0m
+  
+  Since  [22m[32mKG[0m  is  naturally  a  group  algebra,  the  information  provided  by
+  [22m[32mLeftActingDomain[0m can also be obtained using two other functions as follows.
+  
+  [22m[35m---------------------------  Example  ----------------------------[0m
+    [22m[35mgap> UnderlyingRing( KG );[0m
+    [22m[35mGF(2)[0m
+    [22m[35mgap> UnderlyingField( KG );[0m
+    [22m[35mGF(2)[0m
+  [22m[35m------------------------------------------------------------------[0m
+  
+  Let  us  construct  a  certain element of the group algebra. For example, we
+  take  a  minimal generating system of the group [22m[32mG[0m and find the corresponding
+  elements in [22m[32mKG[0m.
+  
+  [22m[35m---------------------------  Example  ----------------------------[0m
+    [22m[35m[0m
+    [22m[35mgap> MinimalGeneratingSet( G );[0m
+    [22m[35m[ f1, f2 ][0m
+    [22m[35mgap> l := List( last, g -> g^Embedding( G, KG ) );[0m
+    [22m[35m[ (Z(2)^0)*f1, (Z(2)^0)*f2 ][0m
+    [22m[35m[0m
+  [22m[35m------------------------------------------------------------------[0m
+  
+  Now we construct an element [22m[32mx[0m as follows.
+  
+  [22m[35m---------------------------  Example  ----------------------------[0m
+    [22m[35m[0m
+    [22m[35mgap> a :=l[1]; b:=l[2]; # a and b are images of group generators in KG[0m
+    [22m[35m(Z(2)^0)*f1[0m
+    [22m[35m(Z(2)^0)*f2[0m
+    [22m[35mgap> e := One( KG );    # for convenience, we denote the identity by e[0m
+    [22m[35m(Z(2)^0)*<identity> of ...[0m
+    [22m[35mgap> x := ( e + a ) * ( e + b ); [0m
+    [22m[35m(Z(2)^0)*<identity> of ...+(Z(2)^0)*f1+(Z(2)^0)*f2+(Z(2)^0)*f1*f2  [0m
+    [22m[35m[0m
+  [22m[35m------------------------------------------------------------------[0m
+  
+  We may investigate some of the basic properties of our element.
+  
+  [22m[35m---------------------------  Example  ----------------------------[0m
+    [22m[35m[0m
+    [22m[35mgap> Support( x );[0m
+    [22m[35m[ <identity> of ..., f1, f2, f1*f2 ][0m
+    [22m[35mgap> CoefficientsBySupport( x );[0m
+    [22m[35m[ Z(2)^0, Z(2)^0, Z(2)^0, Z(2)^0 ][0m
+    [22m[35mgap> Length( x );[0m
+    [22m[35m4[0m
+    [22m[35mgap> TraceOfMagmaRingElement( x );[0m
+    [22m[35mZ(2)^0[0m
+    [22m[35m[0m
+  [22m[35m------------------------------------------------------------------[0m
+  
+  We  can also calculate the augmentation of [22m[32mx[0m, which is defined as the sum of
+  its coefficients.
+  
+  [22m[35m---------------------------  Example  ----------------------------[0m
+    [22m[35mgap> Augmentation( x );[0m
+    [22m[35m0*Z(2)[0m
+    [22m[35mgap> IsUnit( KG, x );[0m
+    [22m[35mfalse[0m
+  [22m[35m------------------------------------------------------------------[0m
+  
+  Since  the  augmentation of [22m[32mx[0m is zero, [22m[32mx[0m is not invertible, but [22m[32m1+x[0m is. This
+  is again very easy to check.
+  
+  [22m[35m---------------------------  Example  ----------------------------[0m
+    [22m[35m[0m
+    [22m[35mgap> y := e + x;[0m
+    [22m[35m(Z(2)^0)*f1+(Z(2)^0)*f2+(Z(2)^0)*f1*f2[0m
+    [22m[35mgap> IsUnit( KG, y );[0m
+    [22m[35mtrue  [0m
+    [22m[35m[0m
+  [22m[35m------------------------------------------------------------------[0m
+  
+  [1mLAGUNA[0m can calculate the inverse of [22m[32m1+x[0m very quickly.
+  
+  [22m[35m---------------------------  Example  ----------------------------[0m
+    [22m[35m[0m
+    [22m[35mgap> y^-1;[0m
+    [22m[35m(Z(2)^0)*f1+(Z(2)^0)*f2+(Z(2)^0)*f3+(Z(2)^0)*f4+(Z(2)^0)*f1*f2+(Z(2)^0)*f1*f3+([0m
+    [22m[35mZ(2)^0)*f1*f4+(Z(2)^0)*f2*f4+(Z(2)^0)*f1*f2*f4+(Z(2)^0)*f2*f3*f4+(Z(2)^[0m
+    [22m[35m0)*f1*f2*f3*f4[0m
+    [22m[35mgap> y * y^-1;[0m
+    [22m[35m(Z(2)^0)*<identity> of ... [0m
+    [22m[35m[0m
+  [22m[35m------------------------------------------------------------------[0m
+  
+  We  may  also  want  to check whether [22m[32my[0m is symmetric, that is, whether it is
+  invariant under the classical involution; or whether it is unitary, that is,
+  whether the classical involution inverts [22m[32my[0m. We find that [22m[32my[0m is neither.
+  
+  [22m[35m---------------------------  Example  ----------------------------[0m
+    [22m[35m[0m
+    [22m[35mgap> Involution( y );[0m
+    [22m[35m(Z(2)^0)*f1+(Z(2)^0)*f1*f2+(Z(2)^0)*f2*f3*f4[0m
+    [22m[35mgap> y = Involution( y );[0m
+    [22m[35mfalse[0m
+    [22m[35mgap> IsSymmetric( y );[0m
+    [22m[35mfalse[0m
+    [22m[35mgap> y * Involution( y );[0m
+    [22m[35m(Z(2)^0)*<identity> of ...+(Z(2)^0)*f2+(Z(2)^0)*f2*f3*f4  [0m
+    [22m[35mgap> IsUnitary( y );[0m
+    [22m[35mfalse[0m
+    [22m[35m[0m
+  [22m[35m------------------------------------------------------------------[0m
+  
+  Now  we  calculate  some  important  ideals  of  [22m[32mKG[0m.  First  we  obtain  the
+  augmentation  ideal  which is the set of elements with augmentation zero. In
+  our  case the augmentation ideal of [22m[32mKG[0m coincides with the radical of [22m[32mKG[0m, and
+  this is taken into account in [1mLAGUNA[0m.
+  
+  [22m[35m---------------------------  Example  ----------------------------[0m
+    [22m[35m[0m
+    [22m[35mgap> AugmentationIdeal( KG );[0m
+    [22m[35m<two-sided ideal in <algebra-with-one of dimension 16 over GF(2)>, [0m
+    [22m[35m  (dimension 15)>[0m
+    [22m[35mgap> RadicalOfAlgebra( KG ) = AugmentationIdeal( KG );[0m
+    [22m[35mtrue[0m
+    [22m[35m[0m
+  [22m[35m------------------------------------------------------------------[0m
+  
+  It  is  well-known  that  the augmentation ideal of [22m[32mKG[0m is a nilpotent ideal.
+  Using  Jennings' theory on dimension subgroups, we can obtain its nilpotency
+  index  without  immediate  calculation of its powers. This is implemented in
+  [1mLAGUNA[0m.
+  
+  [22m[35m---------------------------  Example  ----------------------------[0m
+    [22m[35mgap> AugmentationIdealNilpotencyIndex( KG );[0m
+    [22m[35m9[0m
+  [22m[35m------------------------------------------------------------------[0m
+  
+  On  the  other  hand,  we  can also calculate the powers of the augmentation
+  ideal.
+  
+  [22m[35m---------------------------  Example  ----------------------------[0m
+    [22m[35m[0m
+    [22m[35mgap> AugmentationIdealPowerSeries( KG );[0m
+    [22m[35m[ <algebra of dimension 15 over GF(2)>, <algebra of dimension 13 over GF(2)>, [0m
+    [22m[35m  <algebra of dimension 11 over GF(2)>, <algebra of dimension 9 over GF(2)>, [0m
+    [22m[35m  <algebra of dimension 7 over GF(2)>, <algebra of dimension 5 over GF(2)>, [0m
+    [22m[35m  <algebra of dimension 3 over GF(2)>, <algebra of dimension 1 over GF(2)>, [0m
+    [22m[35m  <algebra over GF(2)> ][0m
+    [22m[35m[0m
+  [22m[35m------------------------------------------------------------------[0m
+  
+  We  see  that the length of this list is exactly the nilpotency index of the
+  augmentation ideal of [22m[32mKG[0m.
+  
+  Now  let's work with the unit group of [22m[32mKG[0m. First we calculate the normalized
+  unit  group,  which  is  the  set  of  elements  with  augmentation one. The
+  generators  of  the unit group are obtained as explained in Chapter [1m3.[0m. This
+  can  be  computed  very  quickly, but further computation with this group is
+  very inefficient.
+  
+  [22m[35m---------------------------  Example  ----------------------------[0m
+    [22m[35m[0m
+    [22m[35mgap> V := NormalizedUnitGroup( KG );[0m
+    [22m[35m<group of size 32768 with 15 generators>   [0m
+    [22m[35m[0m
+  [22m[35m------------------------------------------------------------------[0m
+  
+  In  order to make our computation in the normalised unit group efficient, we
+  calculate a power-commutator presentation for this group.
+  
+  [22m[35m---------------------------  Example  ----------------------------[0m
+    [22m[35m[0m
+    [22m[35mgap> W := PcNormalizedUnitGroup( KG );[0m
+    [22m[35m<pc group of size 32768 with 15 generators>;[0m
+    [22m[35m[0m
+  [22m[35m------------------------------------------------------------------[0m
+  
+  [1mGAP[0m  has  many  efficient  and  practical  algorithms  for groups given by a
+  power-commutator presentation. In order to use these algorithms to carry out
+  computation  in  the  normalised  unit group, we need to set up isomorphisms
+  between the outputs of [22m[32mNormalizedUnitGroup[0m and [22m[32mPcNormalizedUnitGroup[0m.
+  
+  The  first  isomorphism maps [22m[32mNormalizedUnitGroup(KG)[0m onto the polycyclically
+  presented  [22m[32mPcNormalizedUnitGroup(PC)[0m.  Let's find the images of the elements
+  of the group [22m[32mG[0m in [22m[32mW[0m.
+  
+  [22m[35m---------------------------  Example  ----------------------------[0m
+    [22m[35m[0m
+    [22m[35mgap> t := NaturalBijectionToPcNormalizedUnitGroup( KG );[0m
+    [22m[35mMappingByFunction( <group of size 32768 with 15 generators>, <pc group of size[0m
+    [22m[35m32768 with 15 generators>, function( x ) ... end )[0m
+    [22m[35mgap> List( AsList( G ), x -> ( x^Embedding( G, KG ) )^t );[0m
+    [22m[35m[ <identity> of ..., f2, f1, f3, f7, f1*f2*f3, f2*f3, f2*f7, f1*f3, f1*f7, f3*f7,[0m
+    [22m[35m  f1*f2*f7, f1*f2*f3*f7, f2*f3*f7, f1*f3*f7, f1*f2 ]   [0m
+    [22m[35m[0m
+  [22m[35m------------------------------------------------------------------[0m
+  
+  The second isomorphism is the inverse of the first.
+  
+  [22m[35m---------------------------  Example  ----------------------------[0m
+    [22m[35mgap> f := NaturalBijectionToNormalizedUnitGroup( KG );[0m
+    [22m[35m[ f1, f2, f3, f4, f5, f6, f7, f8, f9, f10, f11, f12, f13, f14, f15 ] ->[0m
+    [22m[35m[ (Z(2)^0)*f2, (Z(2)^0)*f1, (Z(2)^0)*f3, (Z(2)^0)*f1+(Z(2)^0)*f2+(Z(2)^0)*f1*f2,[0m
+    [22m[35m  (Z(2)^0)*f2+(Z(2)^0)*f3+(Z(2)^0)*f2*f3, (Z(2)^0)*f1+(Z(2)^0)*f3+(Z(2)^0)*f1*f3,[0m
+    [22m[35m  (Z(2)^0)*f4, (Z(2)^0)*f1+(Z(2)^0)*f2+(Z(2)^0)*f3+(Z(2)^0)*f1*f2+(Z(2)^0)*f1*f3+([0m
+    [22m[35m    Z(2)^0)*f2*f3+(Z(2)^0)*f1*f2*f3, (Z(2)^0)*f2+(Z(2)^0)*f4+(Z(2)^0)*f2*f4,[0m
+    [22m[35m  (Z(2)^0)*f1+(Z(2)^0)*f4+(Z(2)^0)*f1*f4, (Z(2)^0)*f3+(Z(2)^0)*f4+(Z(2)^0)*f3*f4,[0m
+    [22m[35m  (Z(2)^0)*f1+(Z(2)^0)*f2+(Z(2)^0)*f4+(Z(2)^0)*f1*f2+(Z(2)^0)*f1*f4+(Z(2)^[0m
+    [22m[35m    0)*f2*f4+(Z(2)^0)*f1*f2*f4, (Z(2)^0)*f2+(Z(2)^0)*f3+(Z(2)^0)*f4+(Z(2)^[0m
+    [22m[35m    0)*f2*f3+(Z(2)^0)*f2*f4+(Z(2)^0)*f3*f4+(Z(2)^0)*f2*f3*f4,[0m
+    [22m[35m  (Z(2)^0)*f1+(Z(2)^0)*f3+(Z(2)^0)*f4+(Z(2)^0)*f1*f3+(Z(2)^0)*f1*f4+(Z(2)^[0m
+    [22m[35m    0)*f3*f4+(Z(2)^0)*f1*f3*f4, (Z(2)^0)*f1+(Z(2)^0)*f2+(Z(2)^0)*f3+(Z(2)^0)*f4+([0m
+    [22m[35m    Z(2)^0)*f1*f2+(Z(2)^0)*f1*f3+(Z(2)^0)*f1*f4+(Z(2)^0)*f2*f3+(Z(2)^0)*f2*f4+([0m
+    [22m[35m    Z(2)^0)*f3*f4+(Z(2)^0)*f1*f2*f3+(Z(2)^0)*f1*f2*f4+(Z(2)^0)*f1*f3*f4+(Z(2)^[0m
+    [22m[35m    0)*f2*f3*f4+(Z(2)^0)*f1*f2*f3*f4 ]  [0m
+  [22m[35m------------------------------------------------------------------[0m
+  
+  For example, we may calculate the conjugacy classes of the group [22m[32mW[0m, and then
+  map their representatives back into the group algebra.
+  
+  [22m[35m---------------------------  Example  ----------------------------[0m
+    [22m[35m[0m
+    [22m[35mgap> cc := ConjugacyClasses( W );;[0m
+    [22m[35mgap> Length( cc );[0m
+    [22m[35m848[0m
+    [22m[35mgap> Representative( cc[ Length( cc ) ] );[0m
+    [22m[35mf1*f2*f4*f6*f12*f15[0m
+    [22m[35mgap> last^f;[0m
+    [22m[35m(Z(2)^0)*<identity> of ...+(Z(2)^0)*f2+(Z(2)^0)*f4+(Z(2)^0)*f1*f2+(Z(2)^0)*f1*f3+([0m
+    [22m[35mZ(2)^0)*f1*f4+(Z(2)^0)*f2*f3+(Z(2)^0)*f2*f4+(Z(2)^0)*f3*f4+(Z(2)^0)*f1*f2*f3+(Z(2)^[0m
+    [22m[35m0)*f1*f3*f4   [0m
+    [22m[35m[0m
+  [22m[35m------------------------------------------------------------------[0m
+  
+  Having  a power-commutator presentation of the normalised unit group, we may
+  use  the  full  power of the [1mGAP[0m functionality for such groups. For example,
+  the lower central series can be calculated very quickly.
+  
+  [22m[35m---------------------------  Example  ----------------------------[0m
+    [22m[35m[0m
+    [22m[35mgap> LowerCentralSeries( W );[0m
+    [22m[35m[ <pc group of size 32768 with 15 generators>,[0m
+    [22m[35m  Group([ f3, f5*f8*f10*f12*f13*f14*f15, f6*f8*f12*f14*f15, f7, f9*f12, f10*f14,[0m
+    [22m[35m      f11*f13, f13*f14, f14*f15 ]),[0m
+    [22m[35m  Group([ f7, f9*f12, f10*f15, f11*f15, f13*f15, f14*f15 ]),[0m
+    [22m[35m  Group([ f11*f15, f13*f15, f14*f15 ]), Group([ <identity> of ... ]) ]  [0m
+    [22m[35m[0m
+  [22m[35m------------------------------------------------------------------[0m
+  
+  Let's  now  compute,  for  instance,  a  minimal system of generators of the
+  centre  of  the  normalised unit group. Fist we carry out the computation in
+  the  group which is determined by the power-commutator presentation, then we
+  map the result into our group algebra.
+  
+  [22m[35m---------------------------  Example  ----------------------------[0m
+    [22m[35m[0m
+    [22m[35mgap> C := Centre( W );[0m
+    [22m[35mGroup([ f3*f5*f13*f15, f7, f15, f13*f15, f14*f15, f11*f13*f14*f15 ])[0m
+    [22m[35mgap> m := MinimalGeneratingSet( C );[0m
+    [22m[35m[ f11, f13, f14, f15, f3*f5*f13*f15 ][0m
+    [22m[35mgap> List( m, g -> g^f );[0m
+    [22m[35m[ (Z(2)^0)*f3+(Z(2)^0)*f4+(Z(2)^0)*f3*f4, (Z(2)^0)*f2+(Z(2)^0)*f3+(Z(2)^0)*f4+([0m
+    [22m[35m    Z(2)^0)*f2*f3+(Z(2)^0)*f2*f4+(Z(2)^0)*f3*f4+(Z(2)^0)*f2*f3*f4,[0m
+    [22m[35m  (Z(2)^0)*f1+(Z(2)^0)*f3+(Z(2)^0)*f4+(Z(2)^0)*f1*f3+(Z(2)^0)*f1*f4+(Z(2)^[0m
+    [22m[35m    0)*f3*f4+(Z(2)^0)*f1*f3*f4, (Z(2)^0)*f1+(Z(2)^0)*f2+(Z(2)^0)*f3+(Z(2)^0)*f4+([0m
+    [22m[35m    Z(2)^0)*f1*f2+(Z(2)^0)*f1*f3+(Z(2)^0)*f1*f4+(Z(2)^0)*f2*f3+(Z(2)^0)*f2*f4+([0m
+    [22m[35m    Z(2)^0)*f3*f4+(Z(2)^0)*f1*f2*f3+(Z(2)^0)*f1*f2*f4+(Z(2)^0)*f1*f3*f4+(Z(2)^[0m
+    [22m[35m    0)*f2*f3*f4+(Z(2)^0)*f1*f2*f3*f4, (Z(2)^0)*f1+(Z(2)^0)*f4+(Z(2)^0)*f1*f2+(Z(2)^[0m
+    [22m[35m    0)*f1*f3+(Z(2)^0)*f1*f4+(Z(2)^0)*f2*f3+(Z(2)^0)*f2*f4+(Z(2)^0)*f1*f2*f3+(Z(2)^[0m
+    [22m[35m    0)*f1*f2*f4+(Z(2)^0)*f1*f3*f4+(Z(2)^0)*f1*f2*f3*f4 ]    [0m
+    [22m[35m[0m
+  [22m[35m------------------------------------------------------------------[0m
+  
+  We  finish  our  example  by  calculating some properties of the Lie algebra
+  associated with [22m[32mKG[0m. This example needs no further explanation.
+  
+  [22m[35m---------------------------  Example  ----------------------------[0m
+    [22m[35m[0m
+    [22m[35mgap> L := LieAlgebra( KG );[0m
+    [22m[35m<Lie algebra of dimension 16 over GF(2)>[0m
+    [22m[35mgap> D := LieDerivedSubalgebra( L );[0m
+    [22m[35m<Lie algebra of dimension 9 over GF(2)>[0m
+    [22m[35mgap> LC := LieCentre( L );[0m
+    [22m[35m<Lie algebra of dimension 7 over GF(2)>[0m
+    [22m[35mgap> LieLowerNilpotencyIndex( KG );[0m
+    [22m[35m5[0m
+    [22m[35mgap> LieUpperNilpotencyIndex( KG );[0m
+    [22m[35m5[0m
+    [22m[35mgap> IsLieAbelian( L );[0m
+    [22m[35mfalse[0m
+    [22m[35mgap> IsLieSolvable( L );[0m
+    [22m[35mtrue[0m
+    [22m[35mgap> IsLieMetabelian( L );[0m
+    [22m[35mfalse[0m
+    [22m[35mgap> IsLieCentreByMetabelian( L );[0m
+    [22m[35mtrue[0m
+    [22m[35m[0m
+  [22m[35m------------------------------------------------------------------[0m
+  

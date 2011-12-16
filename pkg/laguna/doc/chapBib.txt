@@ -1,0 +1,43 @@
+  
+  
+  [1m[4m[31mReferences[0m
+  
+  [33m[D92]  [0m[1m[31mDu,  X.  [0m,  [34mThe  centers  of radical ring[0m, Canad. Math. Bull., [34m35[0m
+  (1992), 174--179
+  
+  [33m[HB82]   [0m[1m[31mHuppert,   B.   and   Blackburn,   N.   [0m,  [34mFinite  groups.  II[0m,
+  Springer-Verlag,    Grundlehren    der   Mathematischen   Wissenschaften
+  [Fundamental  Principles  of Mathematical Sciences], [34m242[0m, Berlin (1982),
+  xiii+531, (AMD, 44)
+  
+  [33m[LR86]  [0m[1m[31mLevin,  F.  and Rosenberger, G. [0m, [34mLie metabelian group rings[0m, in
+  [34mGroup and semigroup rings (Johannesburg, 1985)[0m, North-Holland, Amsterdam
+  (1986), 153--161
+  
+  [33m[PPS73]  [0m[1m[31mPassi,  I.  B.  S.  and  Passman, D. S. and Sehgal, S. K. [0m, [34mLie
+  solvable group rings[0m, Canad. J. Math., [34m25[0m (1973), 748--757
+  
+  [33m[R97]    [0m[1m[31mRossmanith,   R.   [0m,   [34mCentre-by-metabelian   group   algebras[0m,
+  Friedrich-Schiller-Universit\accent127at Jena (1997)
+  
+  [33m[R00]  [0m[1m[31mRossmanith,  R. [0m, [34mLie centre-by-metabelian group algebras in even
+  characteristic. I, II[0m, Israel J. Math., [34m115[0m (2000), 51--75, 77--99
+  
+  [33m[R02]  [0m[1m[31mRossmanith,  R.  [0m,  [34mLie  centre-by-metabelian group algebras over
+  commutative rings[0m, J. Algebra, [34m251[0m (2) (2002), 503--508
+  
+  [33m[S91]  [0m[1m[31mShalev, A. [0m, [34mLie dimension subgroups, Lie nilpotency indices, and
+  the  exponent of the group of normalized units[0m, J. London Math. Soc., [34m43[0m
+  (1991), 23--36
+  
+  [33m[S94]  [0m[1m[31mSims,  C.  C.  [0m,  [34mComputation  with  finitely  presented  groups[0m,
+  Cambridge   University   Press,  Encyclopedia  of  Mathematics  and  its
+  Applications, [34m48[0m, Cambridge (1994), xiii+604
+  
+  [33m[W93]  [0m[1m[31mWursthorn,  M.  [0m,  [34mIsomorphism  of  modular  group  algebras:  an
+  algorithm  and  its  application  to  groups of order $2^6$[0m, J. Symbolic
+  Comp., [34m15[0m (1993), 211--227
+  
+  
+  
+  -------------------------------------------------------

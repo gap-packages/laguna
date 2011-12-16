@@ -1,0 +1,653 @@
+This is pdfTeX, Version 3.14159-13d (Web2C 7.3.1) (format=pdflatex 2001.11.7)  27 JUL 2003 14:08
+**manual
+(manual.tex[/usr/share/texmf/pdftex/config/pdftex.cfg]
+LaTeX2e <2000/06/01>
+Babel <v3.7h> and hyphenation patterns for american, french, german, ngerman, i
+talian, portuges, spanish, swedish, nohyphenation, loaded.
+(/usr/share/texmf/tex/latex/base/report.cls
+Document Class: report 2000/05/19 v1.4b Standard LaTeX document class
+(/usr/share/texmf/tex/latex/base/size11.clo
+File: size11.clo 2000/05/19 v1.4b Standard LaTeX file (size option)
+)
+\c@part=\count79
+\c@chapter=\count80
+\c@section=\count81
+\c@subsection=\count82
+\c@subsubsection=\count83
+\c@paragraph=\count84
+\c@subparagraph=\count85
+\c@figure=\count86
+\c@table=\count87
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\bibindent=\dimen102
+)
+(/usr/share/texmf/tex/latex/misc/a4wide.sty
+Package: a4wide 1994/08/30
+
+(/usr/share/texmf/tex/latex/ntgclass/a4.sty
+Package: a4 1999/03/03 v1.2f A4 based page layout
+))
+(/usr/share/texmf/tex/latex/amsfonts/amssymb.sty
+Package: amssymb 1996/11/03 v2.2b
+
+(/usr/share/texmf/tex/latex/amsfonts/amsfonts.sty
+Package: amsfonts 1997/09/17 v2.2e
+\@emptytoks=\toks14
+\symAMSa=\mathgroup4
+\symAMSb=\mathgroup5
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 133.
+))
+(/usr/share/texmf/tex/latex/base/inputenc.sty
+Package: inputenc 2000/07/01 v0.996 Input encoding file 
+
+(/usr/share/texmf/tex/latex/base/latin1.def
+File: latin1.def 2000/07/01 v0.996 Input encoding file 
+))
+(/usr/share/texmf/tex/latex/base/makeidx.sty
+Package: makeidx 2000/03/29 v1.0m Standard LaTeX package
+)
+\@indexfile=\write3
+\openout3 = `manual.idx'.
+
+
+Writing index file manual.idx
+(/usr/share/texmf/tex/latex/graphics/color.sty
+Package: color 1999/02/16 v1.0i Standard LaTeX Color (DPC)
+
+(/usr/share/texmf/tex/latex/config/color.cfg)
+Package color Info: Driver file: pdftex.def on input line 125.
+
+(/usr/share/texmf/tex/latex/graphics/pdftex.def
+File: pdftex.def 2000/06/16 v0.03a graphics/color for pdftex
+\Gread@gobject=\count88
+))
+(/usr/share/texmf/tex/latex/fancyvrb/fancyvrb.sty
+Package: fancyvrb 1998/07/17
+
+Style option: `fancyvrb' v2.6, with DG/SPQR fixes <1998/07/17> (tvz)
+(/usr/share/texmf/tex/latex/graphics/keyval.sty
+Package: keyval 1999/03/16 v1.13 key=value parser (DPC)
+\KV@toks@=\toks15
+)
+\FV@CodeLineNo=\count89
+\FV@InFile=\read1
+\FV@TabBox=\box26
+\c@FancyVerbLine=\count90
+\FV@StepNumber=\count91
+\FV@OutFile=\write4
+
+No file fancyvrb.cfg.
+) (/usr/share/texmf/tex/latex/misc/pslatex.sty
+Package: pslatex 1996/07/24 v1.2 pslatex emulation (DPC)
+LaTeX Font Info:    Redeclaring symbol font `operators' on input line 65.
+LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
+(Font)                  OT1/cmr/m/n --> OT1/ptmcm/m/n on input line 65.
+LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
+(Font)                  OT1/cmr/bx/n --> OT1/ptmcm/m/n on input line 65.
+LaTeX Font Info:    Redeclaring symbol font `letters' on input line 66.
+LaTeX Font Info:    Overwriting symbol font `letters' in version `normal'
+(Font)                  OML/cmm/m/it --> OML/ptmcm/m/it on input line 66.
+LaTeX Font Info:    Overwriting symbol font `letters' in version `bold'
+(Font)                  OML/cmm/b/it --> OML/ptmcm/m/it on input line 66.
+LaTeX Font Info:    Redeclaring symbol font `symbols' on input line 67.
+LaTeX Font Info:    Overwriting symbol font `symbols' in version `normal'
+(Font)                  OMS/cmsy/m/n --> OMS/pzccm/m/n on input line 67.
+LaTeX Font Info:    Overwriting symbol font `symbols' in version `bold'
+(Font)                  OMS/cmsy/b/n --> OMS/pzccm/m/n on input line 67.
+LaTeX Font Info:    Redeclaring symbol font `largesymbols' on input line 68.
+LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `normal'
+(Font)                  OMX/cmex/m/n --> OMX/psycm/m/n on input line 68.
+LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `bold'
+(Font)                  OMX/cmex/m/n --> OMX/psycm/m/n on input line 68.
+\symbold=\mathgroup6
+\symitalic=\mathgroup7
+LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 74.
+LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
+(Font)                  OT1/cmr/bx/n --> OT1/ptm/bx/n on input line 74.
+LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `bold'
+(Font)                  OT1/cmr/bx/n --> OT1/ptm/bx/n on input line 74.
+LaTeX Font Info:    Redeclaring math alphabet \mathit on input line 75.
+LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
+(Font)                  OT1/cmr/m/it --> OT1/ptm/m/it on input line 75.
+LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
+(Font)                  OT1/cmr/bx/it --> OT1/ptm/m/it on input line 75.
+)
+(/usr/share/texmf/tex/latex/hyperref/hyperref.sty
+Package: hyperref 2001/04/05 v6.71e Hypertext links for LaTeX
+\@linkdim=\dimen103
+\Hy@linkcounter=\count92
+\Hy@pagecounter=\count93
+
+(/usr/share/texmf/tex/latex/hyperref/pd1enc.def
+File: pd1enc.def 2001/04/05 v6.71e Hyperref: PDFDocEncoding definition (HO)
+)
+Package hyperref Info: Option `bookmarks' set `false' on input line 1603.
+Package hyperref Info: Option `colorlinks' set `true' on input line 1603.
+Package hyperref Info: Option `breaklinks' set `true' on input line 1603.
+Package hyperref Info: Bookmarks OFF on input line 1667.
+Package hyperref Info: Hyper figures OFF on input line 1680.
+Package hyperref Info: Link nesting OFF on input line 1685.
+Package hyperref Info: Hyper index ON on input line 1688.
+Package hyperref Info: Plain pages ON on input line 1693.
+Package hyperref Info: Backreferencing ON on input line 1698.
+
+Implicit mode ON; LaTeX internals redefined
+(/usr/share/texmf/tex/latex/hyperref/backref.sty
+Package: backref 2000/01/19 v1.19 Bibliographical back referencing
+)
+(/usr/share/texmf/tex/latex/html/url.sty
+Package: url 1999/03/02  ver 1.4  Verb mode for urls, email addresses, and file
+ names
+)
+LaTeX Info: Redefining \url on input line 1905.
+\Fld@menulength=\count94
+\Field@Width=\dimen104
+\Fld@charsize=\dimen105
+\Choice@toks=\toks16
+\Field@toks=\toks17
+Package hyperref Info: Hyper figures OFF on input line 2351.
+Package hyperref Info: Link nesting OFF on input line 2356.
+Package hyperref Info: Hyper index ON on input line 2359.
+Package hyperref Info: backreferencing ON on input line 2364.
+Package hyperref Info: Link coloring ON on input line 2369.
+\c@Item=\count95
+\c@Hfootnote=\count96
+)
+*hyperref using default driver hpdftex*
+(/usr/share/texmf/tex/latex/hyperref/hpdftex.def
+File: hpdftex.def 2001/04/05 v6.71e Hyperref driver for pdfTeX
+
+(/usr/share/texmf/tex/latex/psnfss/pifont.sty
+Package: pifont 2000/01/12 PSNFSS-v8.1 Pi font support (SPQR) 
+LaTeX Font Info:    Try loading font information for U+pzd on input line 62.
+
+(/usr/share/texmf/tex/latex/psnfss/upzd.fd
+File: upzd.fd 2000/01/12 PSNFSS-v8.1 font definitions for U/pzd.
+)
+LaTeX Font Info:    Try loading font information for U+psy on input line 63.
+
+(/usr/share/texmf/tex/latex/psnfss/upsy.fd
+File: upsy.fd 2000/01/12 PSNFSS-v8.1 font definitions for U/psy.
+))
+\Fld@listcount=\count97
+\@outlinefile=\write5
+)
+\pagenrlog=\write6
+\openout6 = `manual.pnr'.
+
+\backslashbox=\box27
+ (manual.aux
+
+LaTeX Warning: Label `Involution' multiply defined.
+
+
+LaTeX Warning: Label `IsUnit' multiply defined.
+
+)
+\openout1 = `manual.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 50.
+LaTeX Font Info:    ... okay on input line 50.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 50.
+LaTeX Font Info:    ... okay on input line 50.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 50.
+LaTeX Font Info:    ... okay on input line 50.
+LaTeX Font Info:    Checking defaults for OMS/pzccm/m/n on input line 50.
+LaTeX Font Info:    Try loading font information for OMS+pzccm on input line 50
+.
+ (/usr/share/texmf/tex/latex/psnfss/omspzccm.fd
+File: omspzccm.fd 2000/01/03 Fontinst v1.801 font definitions for OMS/pzccm.
+)
+LaTeX Font Info:    ... okay on input line 50.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 50.
+LaTeX Font Info:    ... okay on input line 50.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 50.
+LaTeX Font Info:    ... okay on input line 50.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 50.
+LaTeX Font Info:    ... okay on input line 50.
+
+(/usr/share/texmf/tex/context/base/supp-pdf.tex
+(/usr/share/texmf/tex/context/base/supp-mis.tex
+loading : Context Support Macros / Missing
+\protectiondepth=\count98
+\scratchcounter=\count99
+\scratchdimen=\dimen106
+\scratchskip=\skip43
+\scratchmuskip=\muskip10
+\scratchbox=\box28
+\scratchread=\read2
+\scratchwrite=\write7
+\nextbox=\box29
+\nextdepth=\dimen107
+\everyline=\toks18
+\!!counta=\count100
+\!!countb=\count101
+\recursecounter=\count102
+)
+loading : Context Support Macros / PDF
+\nofMPsegments=\count103
+\nofMParguments=\count104
+)
+Package hyperref Info: Link coloring ON on input line 50.
+ (/usr/share/texmf/tex/latex/hyperref/nameref.sty
+Package: nameref 2001/01/27 v2.19 Cross-referencing by name of section
+\c@section@level=\count105
+)
+LaTeX Info: Redefining \ref on input line 50.
+LaTeX Info: Redefining \pageref on input line 50.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <24.88> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 54.
+LaTeX Font Info:    Font shape `OT1/phv/bx/n' in size <24.88> not available
+(Font)              Font shape `OT1/phv/b/n' tried instead on input line 54.
+LaTeX Font Info:    Font shape `OT1/phv/b/n' will be
+(Font)              scaled to size 22.39185pt on input line 54.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <14.4> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 56.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <12> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 60.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 68.
+
+Underfull \hbox (badness 10000) in paragraph at lines 66--99
+
+ []
+
+[1
+
+[/usr/share/texmf/dvips/config/pdftex.map]]
+LaTeX Font Info:    Font shape `OT1/phv/m/n' will be
+(Font)              scaled to size 8.99994pt on input line 105.
+LaTeX Font Info:    Try loading font information for OT1+ptmcm on input line 11
+1.
+
+(/usr/share/texmf/tex/latex/psnfss/ot1ptmcm.fd
+File: ot1ptmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OT1/ptmcm.
+)
+LaTeX Font Info:    Try loading font information for OML+ptmcm on input line 11
+1.
+
+(/usr/share/texmf/tex/latex/psnfss/omlptmcm.fd
+File: omlptmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OML/ptmcm.
+)
+LaTeX Font Info:    Try loading font information for OMX+psycm on input line 11
+1.
+
+(/usr/share/texmf/tex/latex/psnfss/omxpsycm.fd
+File: omxpsycm.fd 2000/01/03 Fontinst v1.801 font definitions for OMX/psycm.
+)
+LaTeX Font Info:    Try loading font information for U+msa on input line 111.
+
+(/usr/share/texmf/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 1995/01/05 v2.2e AMS font definitions
+)
+LaTeX Font Info:    Try loading font information for U+msb on input line 111.
+
+(/usr/share/texmf/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 1995/01/05 v2.2e AMS font definitions
+)
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7.4> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 111.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <6> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 111.
+
+
+! LaTeX Error: There's no line here to end.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.113  }\\[1cm]
+               
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <10> not available
+(Font)              Font shape `OMS/pzccm/m/n' tried instead on input line 117.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 126--128
+
+ []
+
+
+! LaTeX Error: There's no line here to end.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.148  }\\[1cm]
+               
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+LaTeX Font Info:    Font shape `OT1/phv/m/sl' will be
+(Font)              scaled to size 7.19995pt on input line 149.
+[2] (manual.toc
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10.95> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <8> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 2.
+LaTeX Font Info:    Font shape `OT1/phv/bx/n' in size <10.95> not available
+(Font)              Font shape `OT1/phv/b/n' tried instead on input line 7.
+LaTeX Font Info:    Font shape `OT1/phv/b/n' will be
+(Font)              scaled to size 9.85492pt on input line 7.
+ [3
+
+] [4])
+\tf@toc=\write8
+\openout8 = `manual.toc'.
+
+ [5]
+Chapter 1.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <20.74> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 157.
+LaTeX Font Info:    Font shape `OT1/phv/m/n' will be
+(Font)              scaled to size 9.85492pt on input line 164.
+[6
+
+]
+Underfull \hbox (badness 2903) in paragraph at lines 216--217
+[]\OT1/ptm/m/n/10.95 To use the \OT1/phv/m/n/10.95 LA-GUNA \OT1/ptm/m/n/10.95 o
+n-line help it is nec-es-sary to in-stall the \OT1/phv/m/n/10.95 GAP\OT1/ptm/m/
+n/10.95 4 pack-age \OT1/phv/m/n/10.95 GAP-
+ []
+
+
+Underfull \hbox (badness 3861) in paragraph at lines 218--219
+[]\OT1/phv/m/n/10.95 LAGUNA \OT1/ptm/m/n/10.95 is dis-tributed in stan-dard for
+-mats (\OT1/pcr/m/n/10.95 zoo\OT1/ptm/m/n/10.95 , \OT1/pcr/m/n/10.95 tar.gz\OT1
+/ptm/m/n/10.95 , \OT1/pcr/m/n/10.95 tar.bz2\OT1/ptm/m/n/10.95 , \OT1/pcr/m/n/10
+.95 -win.zip\OT1/ptm/m/n/10.95 ) and
+ []
+
+
+Underfull \hbox (badness 1248) in paragraph at lines 218--219
+\OT1/ptm/m/n/10.95 can be ob-tained from [][]\OT1/pcr/m/n/10.95 http://ukrgap.e
+xponenta.ru/laguna.htm[][]\OT1/ptm/m/n/10.95 . To un-pack the archive
+ []
+
+[7]
+Chapter 2.
+[8
+
+] [9] [10] [11] [12] [13]
+Chapter 3.
+[14
+
+]
+
+LaTeX Warning: Command \textless invalid in math mode on input line 532.
+
+LaTeX Font Info:    Try loading font information for OML+ptm on input line 532.
+
+(/usr/share/texmf/tex/latex/psnfss/omlptm.fd
+File: omlptm.fd 
+)
+LaTeX Font Info:    Font shape `OML/ptm/m/n' in size <10.95> not available
+(Font)              Font shape `OML/cmm/m/it' tried instead on input line 532.
+
+
+LaTeX Warning: Command \textless invalid in math mode on input line 532.
+
+[15]
+Underfull \hbox (badness 10000) in paragraph at lines 594--598
+\OT1/ptm/m/n/10.95 Thus $\OT1/ptmcm/m/n/10.95 1 + \OML/ptmcm/m/it/10.95 w[] \OT
+1/ptmcm/m/n/10.95 = (\OML/ptmcm/m/it/10.95 y[]\OT1/ptmcm/m/n/10.95 )[] [] (\OML
+/ptmcm/m/it/10.95 y[]\OT1/ptmcm/m/n/10.95 )[](1 + \OML/ptmcm/m/it/10.95 w[]\OT1
+/ptmcm/m/n/10.95 )$ \OT1/ptm/m/n/10.95 for some $\OML/ptmcm/m/it/10.95 w[] \OMS
+/pzccm/m/n/10.95 2 \OML/ptmcm/m/it/10.95 A[]$\OT1/ptm/m/n/10.95 , and so $\OT1/
+ptmcm/m/n/10.95 1 + \OML/ptmcm/m/it/10.95 w \OT1/ptmcm/m/n/10.95 =
+ []
+
+[16]
+
+LaTeX Warning: Command \textless invalid in math mode on input line 604.
+
+
+LaTeX Warning: Command \textless invalid in math mode on input line 604.
+
+[17]
+Chapter 4.
+
+Underfull \hbox (badness 10000) in paragraph at lines 632--635
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 653--656
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 674--677
+
+ []
+
+[18
+
+] [19] [20]
+Underfull \hbox (badness 10000) in paragraph at lines 853--856
+
+ []
+
+[21]
+Underfull \hbox (badness 10000) in paragraph at lines 934--937
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 954--957
+
+ []
+
+[22]
+Underfull \hbox (badness 10000) in paragraph at lines 978--984
+
+ []
+
+[23]
+Underfull \hbox (badness 1033) in paragraph at lines 1054--1056
+[]\OT1/ptm/m/n/10.95 Please note that for cal-cu-la-tion of the aug-men-ta-tion
+ of an el-e-ment of a group ring the
+ []
+
+
+Underfull \hbox (badness 1286) in paragraph at lines 1054--1056
+\OT1/ptm/m/n/10.95 user is strongly rec-om-mended to use \OT1/pcr/m/n/10.95 Aug
+mentation \OT1/ptm/m/n/10.95 ([][]4.2.5[][][]) which works much faster than
+ []
+
+[24]
+LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <10.95> not available
+(Font)              Font shape `OMS/pzccm/m/n' tried instead on input line 1093
+.
+ [25]
+Underfull \hbox (badness 10000) in paragraph at lines 1200--1203
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1221--1224
+
+ []
+
+[26]
+Underfull \hbox (badness 10000) in paragraph at lines 1289--1291
+[]\OT1/ptm/m/n/10.95 The ar-gu-ment [] is a $\OML/ptmcm/m/it/10.95 p$\OT1/ptm/m
+/n/10.95 -modular group al-ge-bra over the field of $\OML/ptmcm/m/it/10.95 p$ \
+OT1/ptm/m/n/10.95 el-e-ments.
+ []
+
+[27] [28]
+Underfull \hbox (badness 10000) in paragraph at lines 1427--1430
+
+ []
+
+[29]
+Underfull \hbox (badness 10000) in paragraph at lines 1447--1450
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1467--1470
+
+ []
+
+
+Underfull \hbox (badness 2762) in paragraph at lines 1495--1496
+[]\OT1/ptm/m/n/10.95 If [] is the (nor-mal-ized) unit group of a $\OML/ptmcm/m/
+it/10.95 p$\OT1/ptm/m/n/10.95 -modular group al-ge-bra $\OML/ptmcm/m/it/10.95 K
+G$ \OT1/ptm/m/n/10.95 ob-tained us-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1495--1496
+\OT1/ptm/m/n/10.95 ing one of the func-tions \OT1/pcr/m/n/10.95 Units(KG)\OT1/p
+tm/m/n/10.95 , \OT1/pcr/m/n/10.95 PcUnits(KG)\OT1/ptm/m/n/10.95 , \OT1/pcr/m/n/
+10.95 NormalizedUnitGroup(KG) \OT1/ptm/m/n/10.95 or
+ []
+
+[30]
+Underfull \hbox (badness 10000) in paragraph at lines 1558--1561
+
+ []
+
+[31]
+Underfull \hbox (badness 10000) in paragraph at lines 1580--1583
+
+ []
+
+[32]
+Underfull \hbox (badness 10000) in paragraph at lines 1668--1671
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1695--1698
+
+ []
+
+[33] [34] [35]
+Underfull \hbox (badness 10000) in paragraph at lines 1856--1859
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1883--1886
+
+ []
+
+[36]
+Underfull \hbox (badness 10000) in paragraph at lines 1910--1913
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1937--1940
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1962--1965
+
+ []
+
+[37]
+Underfull \hbox (badness 10000) in paragraph at lines 2020--2023
+
+ []
+
+[38]
+Underfull \hbox (badness 10000) in paragraph at lines 2048--2051
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2075--2078
+
+ []
+
+[39]
+Underfull \hbox (badness 10000) in paragraph at lines 2095--2098
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2127--2130
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2149--2152
+
+ []
+
+[40]
+Underfull \hbox (badness 10000) in paragraph at lines 2218--2221
+
+ []
+
+[41]
+Underfull \hbox (badness 10000) in paragraph at lines 2248--2251
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2263--2266
+
+ []
+
+(manual.bbl (manual.brf)
+\tf@brf=\write9
+\openout9 = `manual.brf'.
+
+ [42]) (manual.ind [43
+
+]
+Overfull \hbox (72.54977pt too wide) in paragraph at lines 9--11
+[]\OT1/pcr/m/n/10.95 AugmentationIdealOfDerivedSubgroupNilpotencyIndex\OT1/ptm/
+m/n/10.95 ,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 80--81
+[]\OT1/pcr/m/n/10.95 NaturalBijectionToAssociativeAlgebra\OT1/ptm/m/n/10.95 ,
+ []
+
+
+Overfull \hbox (5.5361pt too wide) in paragraph at lines 82--84
+[]\OT1/pcr/m/n/10.95 NaturalBijectionToNormalizedUnitGroup\OT1/ptm/m/n/10.95 ,
+ []
+
+
+Overfull \hbox (16.70505pt too wide) in paragraph at lines 84--86
+[]\OT1/pcr/m/n/10.95 NaturalBijectionToPcNormalizedUnitGroup\OT1/ptm/m/n/10.95 
+,
+ []
+
+[44
+
+] [45
+
+]) (manual.aux)
+
+LaTeX Warning: There were multiply-defined labels.
+
+ ) 
+Here is how much of TeX's memory you used:
+ 3472 strings out of 50606
+ 45942 string characters out of 692235
+ 100007 words of memory out of 1500001
+ 6270 multiletter control sequences out of 10000+25000
+ 66369 words of font info for 129 fonts, out of 400000 for 1000
+ 16 hyphenation exceptions out of 1000
+ 27i,7n,30p,732b,494s stack positions out of 1500i,500n,1500p,50000b,5000s
+<msam10.pfb><cmex10.pfb><cmmi10.pfb><cmr10.pfb><cmsy10.pfb><8r.enc><ucrr8a.pf
+b>
+Output written on manual.pdf (45 pages, 222212 bytes).

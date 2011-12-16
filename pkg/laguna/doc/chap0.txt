@@ -1,0 +1,208 @@
+  
+  
+                                     [1m[4m[31m[1mLAGUNA[1m[4m[31m[0m
+  
+  
+                    [1m[4m[31mLie AlGebras and UNits of group Algebras[0m
+  
+  
+                                 Version 3.2.1
+  
+  
+                                   July 2003
+  
+  
+                                  Victor Bovdi
+  
+                              Alexander Konovalov
+  
+                               Richard Rossmanith
+  
+                                Csaba Schneider
+  
+  
+  
+  Victor Bovdi
+      Email:    [34mmailto:vbovdi@math.klte.hu[0m
+      Address:  Institute of Mathematics and Informatics
+                University of Debrecen
+                P.O.Box 12, Debrecen, H-4010 Hungary
+  
+  
+  Alexander Konovalov
+      Email:    [34mmailto:konovalov@member.ams.org[0m
+      Homepage: [34mhttp://ukrgap.exponenta.ru/konoval.htm[0m
+      Address:  Department of Mathematics
+                Zaporozhye State University
+                P.O.Box 1317, Central Post Office
+                Zaporozhye, 69000 Ukraine
+  
+  
+  Richard Rossmanith
+      Email:    [34mmailto:richard.rossmanith@d-fine.de[0m
+      Address:  d-fine GmbH
+                Mergenthalerallee 55 65760 Eschborn/Frankfurt
+                Germany
+  
+  
+  Csaba Schneider
+      Email:    [34mmailto:csaba@maths.uwa.edu.au[0m
+      Homepage: [34mhttp://www.maths.uwa.edu.au/~csaba/[0m
+      Address:  School of Mathematics and Statistics
+                The University of Western Australia
+                35 Stirling Highway
+                6009 Crawley Western Australia
+  
+  
+  
+  -------------------------------------------------------
+  [1m[4m[31mAbstract[0m
+  The   title  ``[1mLAGUNA[0m''  stands  for  ``[1m[46mL[0mie  [1m[46mA[0ml[1m[46mG[0mebras  and  [1m[46mUN[0mits  of  group
+  [1m[46mA[0mlgebras''.  This  is  the  new  name of the [1mGAP[0m4 package [1mLAG[0m, which is thus
+  replaced by [1mLAGUNA[0m.
+  
+  [1mLAGUNA[0m  extends  the  [1mGAP[0m  functionality  for  computations  in group rings.
+  Besides  computing some general properties and attributes of group rings and
+  their  elements,  [1mLAGUNA[0m  is able to perform two main kinds of computations.
+  Namely,  it  can  verify whether a group algebra of a finite group satisfies
+  certain Lie properties; and it can calculate the structure of the normalized
+  unit  group  of  a  group  algebra  of  a finite p-group over the field of p
+  elements.
+  
+  
+  -------------------------------------------------------
+  [1m[4m[31mCopyright[0m
+  (C) 2003 by Victor Bovdi, Alexander Konovalov, Richard Rossmanith, and Csaba
+  Schneider
+  
+  We  adopt  the copyright regulations of [1mGAP[0m from the copyright notice in the
+  [1mGAP[0m manual.
+  
+  If  you  obtained [1mLAGUNA[0m, we would be grateful for a short notification sent
+  to one of the authors.
+  
+  If  you  publish  a  result  which  was partially obtained with the usage of
+  [1mLAGUNA[0m, please cite it in the following form:
+  
+  V.  Bovdi,  A.  Konovalov,  R.  Rossmanith  and C. Schneider. [22m[36mLAGUNA --- Lie
+  AlGebras    and    UNits    of   group   Algebras,   Version   3.2.1;[0m   2003
+  ([34mhttp://ukrgap.exponenta.ru/laguna.htm[0m).
+  
+  
+  -------------------------------------------------------
+  [1m[4m[31mAcknowledgements[0m
+  Some of the features of [1mLAGUNA[0m were already included in the [1mGAP[0m4 package [1mLAG[0m
+  written  by  the  third  author, Richard Rossmanith. The three other authors
+  first  would like to thank Greg Gamble for maintaining [1mLAG[0m and for upgrading
+  it from version 2.0 to version 2.1, and Richard Rossmanith for allowing them
+  to  update  and  extend  the  [1mLAG[0m  package. We are also grateful to Wolfgang
+  Kimmerle  for  organizing  the workshop ``Computational Group and Group Ring
+  Theory''  (University of Stuttgart, 28--29 November, 2002), which allowed us
+  to  meet  and  have  fruitful  discussions that led towards the final [1mLAGUNA[0m
+  release.
+  
+  We  are  all  very  grateful  to the members of the [1mGAP[0m team: Thomas Breuer,
+  Willem  de Graaf, Alexander Hulpke, Stefan Kohl, Steve Linton, Frank Lübeck,
+  Max Neunhöffer and many other colleagues for helpful comments and advise. We
+  acknowledge very much Herbert Pahlings for communicating the package and the
+  referee for careful testing [1mLAGUNA[0m and useful suggestions.
+  
+  A  part  of  the  work  on  upgrading  [1mLAG[0m to [1mLAGUNA[0m was done in 2002 during
+  Alexander  Konovalov's  visits  to  Debrecen,  St.\  Andrews  and  Stuttgart
+  Universities.  He  would like to express his gratitude to Adalbert Bovdi and
+  Victor  Bovdi,  Colin  Campbell, Edmund Robertson and Steve Linton, Wolfgang
+  Kimmerle, Martin Hertweck and Stefan Kohl for their warm hospitality, and to
+  the  NATO Science Fellowship Program, to the London Mathematical Society and
+  to the DAAD for the support of these visits.
+  
+  
+  -------------------------------------------------------
+  
+  
+  [1m[4m[31mContent (LAGUNA)[0m
+  
+  1. Introduction
+    1.1 General aims
+    1.2 General computations in group rings
+    1.3 Computations in the normalized unit group
+    1.4 Computing Lie properties of the group algebra
+    1.5 Installation and system requirements
+  2. A sample calculation with [1mLAGUNA[0m
+  3. The basic theory behind [1mLAGUNA[0m
+    3.1 Notation and definitions
+    3.2 p-modular group algebras
+    3.3 Polycyclic generating set for V
+    3.4 Computing the canonical form
+    3.5 Computing a power commutator presentation for V
+    3.6 Verifying Lie properties of FG
+  4. [1mLAGUNA[0m functions
+    4.1 General functions for group algebras
+      4.1-1 IsGroupAlgebra
+      4.1-2 IsFModularGroupAlgebra
+      4.1-3 IsPModularGroupAlgebra
+      4.1-4 UnderlyingGroup
+      4.1-5 UnderlyingRing
+      4.1-6 UnderlyingField
+    4.2 Operations with group algebra elements
+      4.2-1 Support
+      4.2-2 CoefficientsBySupport
+      4.2-3 TraceOfMagmaRingElement
+      4.2-4 Length
+      4.2-5 Augmentation
+      4.2-6 Involution
+      4.2-7 IsSymmetric
+      4.2-8 IsUnitary
+      4.2-9 IsUnit
+      4.2-10 InverseOp
+    4.3 Important attributes of group algebras
+      4.3-1 AugmentationHomomorphism
+      4.3-2 AugmentationIdeal
+      4.3-3 RadicalOfAlgebra
+      4.3-4 WeightedBasis
+      4.3-5 AugmentationIdealPowerSeries
+      4.3-6 AugmentationIdealNilpotencyIndex
+      4.3-7 AugmentationIdealOfDerivedSubgroupNilpotencyIndex
+    4.4 Computations with the unit group
+      4.4-1 NormalizedUnitGroup
+      4.4-2 PcNormalizedUnitGroup
+      4.4-3 NaturalBijectionToPcNormalizedUnitGroup
+      4.4-4 NaturalBijectionToNormalizedUnitGroup
+      4.4-5 Units
+      4.4-6 PcUnits
+      4.4-7 IsGroupOfUnitsOfMagmaRing
+      4.4-8 IsUnitGroupOfGroupRing
+      4.4-9 IsNormalizedUnitGroupOfGroupRing
+      4.4-10 UnderlyingGroupRing
+      4.4-11 GroupBases
+    4.5 The Lie algebra of a group algebra
+      4.5-1 LieAlgebraByDomain
+      4.5-2 IsLieAlgebraByAssociativeAlgebra
+      4.5-3 UnderlyingAssociativeAlgebra
+      4.5-4 NaturalBijectionToLieAlgebra
+      4.5-5 NaturalBijectionToAssociativeAlgebra
+      4.5-6 IsLieAlgebraOfGroupRing
+      4.5-7 UnderlyingGroup
+      4.5-8 Embedding
+      4.5-9 LieCentre
+      4.5-10 LieDerivedSubalgebra
+      4.5-11 IsLieAbelian
+      4.5-12 IsLieSolvable
+      4.5-13 IsLieNilpotent
+      4.5-14 IsLieMetabelian
+      4.5-15 IsLieCentreByMetabelian
+      4.5-16 CanonicalBasis
+      4.5-17 IsBasisOfLieAlgebraOfGroupRing
+      4.5-18 StructureConstantsTable
+      4.5-19 LieUpperNilpotencyIndex
+      4.5-20 LieLowerNilpotencyIndex
+    4.6 Other commands
+      4.6-1 SubgroupsOfIndexTwo
+      4.6-2 DihedralDepth
+      4.6-3 DimensionBasis
+      4.6-4 LieDimensionSubgroups
+      4.6-5 LAGInfo
+      4.6-6 LAGUNABuildManual
+      4.6-7 LAGUNABuildManualHTML
+  
+  
+  -------------------------------------------------------

@@ -1,0 +1,1556 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+                      "DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>GAP (LAGUNA) - Chapter 4: LAGUNA functions</title>
+<meta http-equiv="content-type" content="text/html; charset=iso-8859-1" />
+<meta name="generator" content="GAPDoc2HTML" />
+<link rel="stylesheet" type="text/css" href="manual.css" />
+<link rel="stylesheet" type="text/css" href="mathml.css" />
+</head>
+<body>
+
+
+<div class="pcenter"><table class="chlink"><tr><td class="chlink1">Goto Chapter: </td><td><a href="chap0.html">Top</a></td><td><a href="chap1.html">1</a></td><td><a href="chap2.html">2</a></td><td><a href="chap3.html">3</a></td><td><a href="chap4.html">4</a></td><td><a href="chapBib.html">Bib</a></td><td><a href="chapInd.html">Ind</a></td></tr></table><br /></div>
+<p><a id="s0ss0" name="s0ss0"></a></p>
+
+<h3>4. <strong class="pkg">LAGUNA</strong> functions</h3>
+
+<p><a id="s1ss0" name="s1ss0"></a></p>
+
+<h4>4.1 General functions for group algebras</h4>
+
+<p><a id="s1ss1" name="s1ss1"></a></p>
+
+<h5>4.1-1 IsGroupAlgebra</h5>
+
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&gt; IsGroupAlgebra</code>( <var>KG</var> )</td><td class="tdright">( property )</td></tr></table></div>
+<p>A group ring over a field is called a group algebra. For a group ring <var>KG</var>, <code class="code">IsGroupAlgebra</code> returns <code class="keyw">true</code>, if the underlying ring of <var>KG</var> is a field; <code class="keyw">false</code> is returned otherwise. This property will be set automatically for every group ring created by the function <code class="code">GroupRing</code>.</p>
+
+
+<table class="example">
+<tr><td><pre>
+
+
+gap&gt; IsGroupAlgebra( GroupRing( GF( 2 ), DihedralGroup( 16 ) ) );
+true
+gap&gt; IsGroupAlgebra( GroupRing( Integers, DihedralGroup( 16 ) ) );
+false      
+
+
+</pre></td></tr></table>
+
+<p><a id="s1ss2" name="s1ss2"></a></p>
+
+<h5>4.1-2 IsFModularGroupAlgebra</h5>
+
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&gt; IsFModularGroupAlgebra</code>( <var>KG</var> )</td><td class="tdright">( property )</td></tr></table></div>
+<p>A group algebra KG over a field K is called <em>modular</em>, if the characteristic of the field K divides the order of some element in G. For a group algebra <var>KG</var> of a finite group G, <code class="code">IsModularGroupAlgebra</code> returns <code class="keyw">true</code>, if <var>KG</var> is modular according to this definition; <code class="keyw">false</code> is returned otherwise. This property will be set automatically for every group algebra, created by the function <code class="code">GroupRing</code>.</p>
+
+
+<table class="example">
+<tr><td><pre>
+
+
+gap&gt; IsFModularGroupAlgebra( GroupRing( GF( 2 ), SymmetricGroup( 6 ) ) );
+true
+gap&gt; IsFModularGroupAlgebra( GroupRing( GF( 2 ), CyclicGroup( 3 ) ) );
+false  
+
+
+</pre></td></tr></table>
+
+<p><a id="s1ss3" name="s1ss3"></a></p>
+
+<h5>4.1-3 IsPModularGroupAlgebra</h5>
+
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&gt; IsPModularGroupAlgebra</code>( <var>KG</var> )</td><td class="tdright">( property )</td></tr></table></div>
+<p>A group algebra KG is said to be p-modular, if K is a field of characteristic p and G is a finite p-group for the same prime p. For a group algebra <var>KG</var> of a finite group G, <code class="code">IsPModularGroupAlgebra</code> returns <code class="keyw">true</code>, if <var>KG</var> is p-modular according to this definition; <code class="keyw">false</code> is returned otherwise. This property will be set automatically for every group algebra, created by the function <code class="code">GroupRing</code>.</p>
+
+
+<table class="example">
+<tr><td><pre>
+
+
+gap&gt; IsPModularGroupAlgebra( GroupRing( GF( 2 ), DihedralGroup( 16 ) ) );
+true
+gap&gt; IsPModularGroupAlgebra( GroupRing( GF( 2 ), SymmetricGroup( 6 ) ) );
+false        
+
+
+</pre></td></tr></table>
+
+<p><a id="s1ss4" name="s1ss4"></a></p>
+
+<h5>4.1-4 UnderlyingGroup</h5>
+
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&gt; UnderlyingGroup</code>( <var>KG</var> )</td><td class="tdright">( attribute )</td></tr></table></div>
+<p><b>Returns: </b>the underlying group of a group ring</p>
+
+<p>This attribute stores the underlying group of a group ring <var>KG</var>. In fact, it refers to the attribute <code class="code">UnderlyingMagma</code> which returns the same result, and was introduced for group rings for convenience, and for teaching purposes.</p>
+
+
+<table class="example">
+<tr><td><pre>
+
+
+gap&gt; KG := GroupRing( GF ( 2 ), DihedralGroup( 16 ) );
+&lt;algebra-with-one over GF(2), with 4 generators&gt;
+gap&gt; G := UnderlyingGroup( KG );
+&lt;pc group of size 16 with 4 generators&gt;  
+
+
+</pre></td></tr></table>
+
+<p><a id="s1ss5" name="s1ss5"></a></p>
+
+<h5>4.1-5 UnderlyingRing</h5>
+
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&gt; UnderlyingRing</code>( <var>KG</var> )</td><td class="tdright">( attribute )</td></tr></table></div>
+<p><b>Returns: </b>the underlying ring of a group ring</p>
+
+<p>This attribute stores the underlying ring of a group ring <var>KG</var>. In fact, it refers to the attribute <code class="code">LeftActingDomain</code> which returns the same result, and was introduced for group rings for convenience, and for teaching purposes.</p>
+
+
+<table class="example">
+<tr><td><pre>
+
+
+gap&gt; KG := GroupRing( GF( 2 ), DihedralGroup( 16 ) );
+&lt;algebra-with-one over GF(2), with 4 generators&gt;
+gap&gt; UnderlyingRing( KG );
+GF(2)     
+
+
+</pre></td></tr></table>
+
+<p><a id="s1ss6" name="s1ss6"></a></p>
+
+<h5>4.1-6 UnderlyingField</h5>
+
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&gt; UnderlyingField</code>( <var>KG</var> )</td><td class="tdright">( attribute )</td></tr></table></div>
+<p><b>Returns: </b>the underlying field of a group algebra</p>
+
+<p>This attribute stores the underlying field of a group algebra <var>KG</var>. In fact, it refers to the attribute <code class="code">LeftActingDomain</code> which returns the same result, and was introduced for group algebras for convenience, and for teaching purposes.</p>
+
+
+<table class="example">
+<tr><td><pre>
+
+
+gap&gt; KG := GroupRing( GF( 2 ), DihedralGroup( 16 ) );
+&lt;algebra-with-one over GF(2), with 4 generators&gt;
+gap&gt; UnderlyingField( KG );
+GF(2)    
+
+
+</pre></td></tr></table>
+
+<p><a id="s2ss0" name="s2ss0"></a></p>
+
+<h4>4.2 Operations with group algebra elements</h4>
+
+<p><a id="s2ss1" name="s2ss1"></a></p>
+
+<h5>4.2-1 Support</h5>
+
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&gt; Support</code>( <var>x</var> )</td><td class="tdright">( attribute )</td></tr></table></div>
+<p><b>Returns: </b>support of x as a list of elements of the underlying group</p>
+
+<p>Returns the support of a group ring element <var>x</var>. The support of a non-zero element x = alpha_1 * g_1 + alpha_2 * g_2 + cdots + alpha_k * g_k of a group ring is the list of elements g_i in G for which the coefficient alpha_i is non-zero. The support of the zero element of a group ring is defined to be the empty list. This method is also applicable to elements of magma rings.</p>
+
+
+<table class="example">
+<tr><td><pre>
+
+
+# First we create an element x to use in in the series of examples.
+# We map the minimal generating system of the group G to its group algebra
+# and denote their images as a and b
+gap&gt; l := List( MinimalGeneratingSet( G ), g -&gt; g^Embedding( G, KG ) );
+[ (Z(2)^0)*f1, (Z(2)^0)*f2 ]
+gap&gt; a := l[1]; b := l[2]; e := One( KG ); # we denote the identity by e
+(Z(2)^0)*f1
+(Z(2)^0)*f2
+(Z(2)^0)*&lt;identity&gt; of ...
+gap&gt; x := ( e + a ) * ( e + b );
+(Z(2)^0)*&lt;identity&gt; of ...+(Z(2)^0)*f1+(Z(2)^0)*f2+(Z(2)^0)*f1*f2
+gap&gt; Support( x );
+[ &lt;identity&gt; of ..., f1, f2, f1*f2 ]     
+
+
+</pre></td></tr></table>
+
+<p><a id="s2ss2" name="s2ss2"></a></p>
+
+<h5>4.2-2 CoefficientsBySupport</h5>
+
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&gt; CoefficientsBySupport</code>( <var>x</var> )</td><td class="tdright">( attribute )</td></tr></table></div>
+<p><b>Returns: </b>coefficients of support elements as list of elements of the underlying ring</p>
+
+<p>Returns a list that contains the coefficients corresponding to the elements of <code class="code">Support( x )</code> in the same order as the elements appear in <code class="code">Support( x )</code>. This method is also applicable to elements of magma rings.</p>
+
+
+<table class="example">
+<tr><td><pre>
+
+
+gap&gt; x;
+(Z(2)^0)*&lt;identity&gt; of ...+(Z(2)^0)*f1+(Z(2)^0)*f2+(Z(2)^0)*f1*f2
+gap&gt; CoefficientsBySupport( x );
+[ Z(2)^0, Z(2)^0, Z(2)^0, Z(2)^0 ]   
+
+
+</pre></td></tr></table>
+
+<p><a id="s2ss3" name="s2ss3"></a></p>
+
+<h5>4.2-3 TraceOfMagmaRingElement</h5>
+
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&gt; TraceOfMagmaRingElement</code>( <var>x</var> )</td><td class="tdright">( attribute )</td></tr></table></div>
+<p><b>Returns: </b>an element of the underlying ring</p>
+
+<p>Returns the trace of a group ring element <var>x</var>. By definition, the trace of an element x = alpha_1 * 1 + alpha_2 * g_2 + cdots + alpha_k * g_k is equal to alpha_1, that is, the coefficient of the identity element in G. The trace of the zero element is zero. This method is also applicable to elements of magma rings.</p>
+
+
+<table class="example">
+<tr><td><pre>
+
+
+gap&gt; x;
+(Z(2)^0)*&lt;identity&gt; of ...+(Z(2)^0)*f1+(Z(2)^0)*f2+(Z(2)^0)*f1*f2
+gap&gt; TraceOfMagmaRingElement( x );
+Z(2)^0        
+
+
+</pre></td></tr></table>
+
+<p><a id="s2ss4" name="s2ss4"></a></p>
+
+<h5>4.2-4 Length</h5>
+
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&gt; Length</code>( <var>x</var> )</td><td class="tdright">( attribute )</td></tr></table></div>
+<p>The length of an element of a group ring <var>x</var> is defined as the number of elements in its support. This method is also applicable to elements of magma rings.</p>
+
+
+<table class="example">
+<tr><td><pre>
+
+
+gap&gt; x;
+(Z(2)^0)*&lt;identity&gt; of ...+(Z(2)^0)*f1+(Z(2)^0)*f2+(Z(2)^0)*f1*f2
+gap&gt; Length( x );
+4     
+
+
+</pre></td></tr></table>
+
+<p><a id="s2ss5" name="s2ss5"></a></p>
+
+<h5>4.2-5 Augmentation</h5>
+
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&gt; Augmentation</code>( <var>x</var> )</td><td class="tdright">( attribute )</td></tr></table></div>
+<p><b>Returns: </b>the sum of coefficients of a group ring element</p>
+
+<p>The augmentation of a group ring element x = alpha_1 * g_1 + alpha_2 * g_2 + cdots + alpha_k * g_k is the sum of its coefficients alpha_1 + alpha_2 + cdots + alpha_k. The method is also applicable to elements of magma rings.</p>
+
+
+<table class="example">
+<tr><td><pre>
+
+
+gap&gt; x;
+(Z(2)^0)*&lt;identity&gt; of ...+(Z(2)^0)*f1+(Z(2)^0)*f2+(Z(2)^0)*f1*f2
+gap&gt; Augmentation( x );
+0*Z(2)     
+
+
+</pre></td></tr></table>
+
+<p><a id="s2ss6" name="s2ss6"></a></p>
+
+<h5>4.2-6 Involution</h5>
+
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&gt; Involution</code>( <var>x, f</var> )</td><td class="tdright">( operation )</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&gt; Involution</code>( <var>x</var> )</td><td class="tdright">( operation )</td></tr></table></div>
+<p><b>Returns: </b>an element of a group ring</p>
+
+<p>Let KG be a group ring and let f be a mapping G -&gt; G, such that f^2 is the identity mapping on G. Then the involution of KG induced by f is defined by alpha_1 * g_1 + alpha_2 * g_2 + cdots + alpha_k * g_k -&gt; alpha_1 * f(g_1) + alpha_2 * f(g_2) + cdots + alpha_k * f(g_k). This method returns the image of <var>x</var> under the involution of KG with respect to <var>f</var>.</p>
+
+<p>In the second form the function returns the result of the so-called classical involution, which is the involution induced by the map x -&gt; x^-1.</p>
+
+
+<table class="example">
+<tr><td><pre>
+
+
+gap&gt; x;
+(Z(2)^0)*&lt;identity&gt; of ...+(Z(2)^0)*f1+(Z(2)^0)*f2+(Z(2)^0)*f1*f2
+gap&gt; Involution( x );
+(Z(2)^0)*&lt;identity&gt; of ...+(Z(2)^0)*f1+(Z(2)^0)*f1*f2+(Z(2)^0)*f2*f3*f4
+# let's check the action of involution on elements from the group G
+gap&gt; l := List( MinimalGeneratingSet( G ), g -&gt; g^Embedding( G, KG ) );
+[ (Z(2)^0)*f1, (Z(2)^0)*f2 ]
+gap&gt; List( l, Involution );
+[ (Z(2)^0)*f1, (Z(2)^0)*f2*f3*f4 ]
+gap&gt; List( l, g -&gt; g^-1 );
+[ (Z(2)^0)*f1, (Z(2)^0)*f2*f3*f4 ]     
+
+
+</pre></td></tr></table>
+
+<p><a id="s2ss7" name="s2ss7"></a></p>
+
+<h5>4.2-7 IsSymmetric</h5>
+
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&gt; IsSymmetric</code>( <var>x</var> )</td><td class="tdright">( attribute )</td></tr></table></div>
+<p>An element of a group ring is called <em>symmetric</em> if it is fixed under the classical involution. This property is checked here.</p>
+
+
+<table class="example">
+<tr><td><pre>
+
+
+gap&gt; IsSymmetric( x );
+false
+gap&gt; IsSymmetric( x * Involution( x ) );
+true     
+
+
+</pre></td></tr></table>
+
+<p><a id="s2ss8" name="s2ss8"></a></p>
+
+<h5>4.2-8 IsUnitary</h5>
+
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&gt; IsUnitary</code>( <var>x</var> )</td><td class="tdright">( attribute )</td></tr></table></div>
+<p>A unit of a group ring is called unitary if the classical involution inverts it. This property is checked here.</p>
+
+
+<table class="example">
+<tr><td><pre>
+
+
+gap&gt; IsUnitary(x);
+false
+# let's check that elements of the group G are unitary
+gap&gt; l:=List(MinimalGeneratingSet(G),g -&gt; g^Embedding(G,KG));
+[ (Z(2)^0)*f1, (Z(2)^0)*f2 ]
+gap&gt; List(l,IsUnitary);
+[ true, true ]   
+
+
+</pre></td></tr></table>
+
+<p><a id="s2ss9" name="s2ss9"></a></p>
+
+<h5>4.2-9 IsUnit</h5>
+
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&gt; IsUnit</code>( <var>KG, x</var> )</td><td class="tdright">( method )</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&gt; IsUnit</code>( <var>x</var> )</td><td class="tdright">( method )</td></tr></table></div>
+<p>This method improves a standard <strong class="pkg">GAP</strong> functionality for modular group algebras.</p>
+
+<p>In the first form the method returns <code class="keyw">true</code> if <var>x</var> is an invertible element of the modular group algebra <var>KG</var> and <code class="keyw">false</code> otherwise. This can be done very quickly by checking whether the augmentation of the element <var>x</var> is non-zero.</p>
+
+<p>In the second form <strong class="pkg">LAGUNA</strong> first constructs the group H generated by the support of <var>x</var>, and, if this group is a finite p-group, then checks whether the coefficients of <var>x</var> belong to a field F of characteristic p. If this is the case, then <code class="code">IsUnit( FH, x )</code> is called; otherwise, standard <strong class="pkg">GAP</strong> method is used.</p>
+
+
+<table class="example">
+<tr><td><pre>
+
+
+gap&gt; x;
+(Z(2)^0)*&lt;identity&gt; of ...+(Z(2)^0)*f1+(Z(2)^0)*f2+(Z(2)^0)*f1*f2
+gap&gt; IsUnit( KG, x ); # clearly, is not a unit due to augmentation zero
+false
+gap&gt; y := One( KG ) + x; # this should give a unit
+(Z(2)^0)*f1+(Z(2)^0)*f2+(Z(2)^0)*f1*f2
+gap&gt; IsUnit( KG, y );
+true       
+
+
+</pre></td></tr></table>
+
+<p><a id="s2ss10" name="s2ss10"></a></p>
+
+<h5>4.2-10 InverseOp</h5>
+
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&gt; InverseOp</code>( <var>x</var> )</td><td class="tdright">( method )</td></tr></table></div>
+<p><b>Returns: </b>the inverse element of an element of a group ring</p>
+
+<p>This method improves a standard <strong class="pkg">GAP</strong> functionality for modular group algebras. It calculates the inverse of a group algebra element. The user can also invoke this function by typing <code class="code"> x^-1 </code>.</p>
+
+
+<table class="example">
+<tr><td><pre>
+
+
+gap&gt; y;
+(Z(2)^0)*f1+(Z(2)^0)*f2+(Z(2)^0)*f1*f2
+gap&gt; y^-1;
+(Z(2)^0)*f1+(Z(2)^0)*f2+(Z(2)^0)*f3+(Z(2)^0)*f4+(Z(2)^0)*f1*f2+(Z(2)^0)*f1*f3+(
+Z(2)^0)*f1*f4+(Z(2)^0)*f2*f4+(Z(2)^0)*f1*f2*f4+(Z(2)^0)*f2*f3*f4+(Z(2)^
+0)*f1*f2*f3*f4
+gap&gt; y * y^-1;
+(Z(2)^0)*&lt;identity&gt; of ...    
+
+
+</pre></td></tr></table>
+
+<p><a id="s3ss0" name="s3ss0"></a></p>
+
+<h4>4.3 Important attributes of group algebras</h4>
+
+<p><a id="s3ss1" name="s3ss1"></a></p>
+
+<h5>4.3-1 AugmentationHomomorphism</h5>
+
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&gt; AugmentationHomomorphism</code>( <var>KG</var> )</td><td class="tdright">( attribute )</td></tr></table></div>
+<p><b>Returns: </b>a homomorphism from a group ring to the underlying ring</p>
+
+<p>The mapping which maps an element of a group ring KG to its augmentation is a homomorphism from KG onto the ring K; see <code class="func">Augmentation</code> (<a href="chap4.html#s2ss5"><b>4.2-5</b></a>). This attribute stores this homomorphism for the group ring <var>KG</var>.</p>
+
+<p>Please note that for calculation of the augmentation of an element of a group ring the user is strongly recommended to use <code class="func">Augmentation</code> (<a href="chap4.html#s2ss5"><b>4.2-5</b></a>) which works much faster than <code class="code">AugmentationHomomorphism</code>.</p>
+
+
+<table class="example">
+<tr><td><pre>
+
+
+gap&gt; F := GF( 2 ); G := SymmetricGroup( 3 ); FG := GroupRing( F, G );
+GF(2)
+Sym( [ 1 .. 3 ] )
+&lt;algebra-with-one over GF(2), with 2 generators&gt;
+gap&gt; e := Embedding( G,FG );
+&lt;mapping: SymmetricGroup( [ 1 .. 3 ] ) -&gt; AlgebraWithOne( GF(2), ... ) &gt;
+gap&gt; x := (1,2)^e; y := (1,3)^e;
+Z(2)^0*(1,2)
+Z(2)^0*(1,3)
+gap&gt; a := AugmentationHomomorphism( FG );
+[ Z(2)^0*(1,2,3), Z(2)^0*(1,2) ] -&gt; [ Z(2)^0, Z(2)^0 ]
+gap&gt; x^a; y^a; ( x + y )^a; # this is slower
+Z(2)^0
+Z(2)^0
+0*Z(2)   
+gap&gt; Augmentation(x); Augmentation(y); Augmentation( x + y ); # this is faster
+Z(2)^0
+Z(2)^0
+0*Z(2)   
+
+
+</pre></td></tr></table>
+
+<p><a id="s3ss2" name="s3ss2"></a></p>
+
+<h5>4.3-2 AugmentationIdeal</h5>
+
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&gt; AugmentationIdeal</code>( <var>KG</var> )</td><td class="tdright">( attribute )</td></tr></table></div>
+<p><b>Returns: </b>an ideal of a group ring</p>
+
+<p>If KG is a group ring, then its augmentation ideal A is generated by all elements of the form g-1, where g in G \ { 1 }. The augmentation ideal consists of all elements of FG with augmentation 0; see <code class="func">Augmentation</code> (<a href="chap4.html#s2ss5"><b>4.2-5</b></a>). This method changes a standard <strong class="pkg">GAP</strong> functionality for modular group algebras and returns the augmentation ideal of a modular group algebra <var>KG</var>.</p>
+
+
+<table class="example">
+<tr><td><pre>
+
+
+gap&gt; KG := GroupRing( GF( 2 ), DihedralGroup( 16 ) );
+&lt;algebra-with-one over GF(2), with 4 generators&gt;
+gap&gt; AugmentationIdeal( KG );
+&lt;two-sided ideal in &lt;algebra-with-one of dimension 16 over GF(2)&gt;, (dimension 15)&gt;    
+
+
+</pre></td></tr></table>
+
+<p><a id="s3ss3" name="s3ss3"></a></p>
+
+<h5>4.3-3 RadicalOfAlgebra</h5>
+
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&gt; RadicalOfAlgebra</code>( <var>KG</var> )</td><td class="tdright">( attribute )</td></tr></table></div>
+<p><b>Returns: </b>an ideal of a group algebra</p>
+
+<p>This method improves a standard <strong class="pkg">GAP</strong> functionality for modular group algebras of finite p-groups. Since in this case the radical of the group algebra coincides with its augmentation ideal, this method simply checks if the algebra <var>KG</var> is a p-modular group algebra, and, if yes, it returns the augmentation ideal; otherwise, the standard <strong class="pkg">GAP</strong> method will be used.</p>
+
+
+<table class="example">
+<tr><td><pre>
+
+
+gap&gt; KG := GroupRing( GF( 2 ), DihedralGroup( 16 ) );
+&lt;algebra-with-one over GF(2), with 4 generators&gt;
+gap&gt; RadicalOfAlgebra( KG );
+&lt;two-sided ideal in &lt;algebra-with-one of dimension 16 over GF(2)&gt;, (dimension 15)&gt;
+gap&gt; RadicalOfAlgebra( KG ) = AugmentationIdeal( KG );
+true     
+
+
+</pre></td></tr></table>
+
+<p><a id="s3ss4" name="s3ss4"></a></p>
+
+<h5>4.3-4 WeightedBasis</h5>
+
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&gt; WeightedBasis</code>( <var>KG</var> )</td><td class="tdright">( attribute )</td></tr></table></div>
+<p><b>Returns: </b>a record of two components: weighted basis elements and their weights</p>
+
+<p>The argument <var>KG</var> must be a p-modular group algebra.</p>
+
+<p>For a group algebra KG, let A denote the augmentation ideal, and assume that c is the smallest number such that A^c=0. Then a weighted basis of KG is some basis b_1, ..., b_n for the augmentation ideal A, for which there are indices i_1=1, ..., i_c-1 such that b_i_k, ..., b_n is a basis for A^k. The weight of an element b_i of a weighted basis is the unique integer w such that b_i belongs to w-th power of A but does not belong to its (w+1)-th power.</p>
+
+<p>Note that this function actually constructs a basis for the <em>augmentation ideal</em> of <var>KG</var> and not for <var>KG</var> itself. Since the augmentation ideal has co-dimension 1 in <code class="code">KG</code>, a basis for <code class="code">KG</code> can be easily obtained by adjoining the identity element of the group.</p>
+
+<p>The method returns a record whose basis entry is the basis and the weights entry is a list of the corresponding weights the of basis elements. See Section <a href="chap3.html#s3ss0"><b>3.3</b></a> for more details.</p>
+
+
+<table class="example">
+<tr><td><pre>
+
+
+gap&gt; KG := GroupRing( GF( 2 ), ElementaryAbelianGroup( 4 ) );
+&lt;algebra-with-one over GF(2), with 2 generators&gt;
+gap&gt; WeightedBasis( KG );
+rec(
+  weightedBasis := [ (Z(2)^0)*&lt;identity&gt; of ...+(Z(2)^0)*f2, (Z(2)^0)*&lt;identity&gt; of\
+ ...+(Z(2)^0)*f1, (Z(2)^0)*&lt;identity&gt; of ...+(Z(2)^0)*f1+(Z(2)^0)*f2+(Z(2)^
+        0)*f1*f2 ], weights := [ 1, 1, 2 ] )
+
+
+</pre></td></tr></table>
+
+<p><a id="s3ss5" name="s3ss5"></a></p>
+
+<h5>4.3-5 AugmentationIdealPowerSeries</h5>
+
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&gt; AugmentationIdealPowerSeries</code>( <var>KG</var> )</td><td class="tdright">( attribute )</td></tr></table></div>
+<p><b>Returns: </b>a list of ideals of a group algebra</p>
+
+<p>The argument <var>KG</var> is a p-modular group algebra. The method returns a list whose elements are the terms of the augmentation ideal filtration of <var>KG</var>, that is <code class="code">AugmentationIdealPowerSeries(A)[i]</code> is the i-th power of the augmentation ideal of <var>KG</var>.</p>
+
+
+<table class="example">
+<tr><td><pre>
+
+
+gap&gt; KG := GroupRing( GF( 2 ), DihedralGroup( 16 ) );
+&lt;algebra-with-one over GF(2), with 4 generators&gt;
+gap&gt; AugmentationIdealPowerSeries( KG );
+[ &lt;algebra of dimension 15 over GF(2)&gt;, &lt;algebra of dimension 13 over GF(2)&gt;,
+  &lt;algebra of dimension 11 over GF(2)&gt;, &lt;algebra of dimension 9 over GF(2)&gt;,
+  &lt;algebra of dimension 7 over GF(2)&gt;, &lt;algebra of dimension 5 over GF(2)&gt;,
+  &lt;algebra of dimension 3 over GF(2)&gt;, &lt;algebra of dimension 1 over GF(2)&gt;,
+  &lt;algebra over GF(2)&gt; ]
+gap&gt; Length(last);
+9      
+
+
+</pre></td></tr></table>
+
+<p><a id="s3ss6" name="s3ss6"></a></p>
+
+<h5>4.3-6 AugmentationIdealNilpotencyIndex</h5>
+
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&gt; AugmentationIdealNilpotencyIndex</code>( <var>KG</var> )</td><td class="tdright">( attribute )</td></tr></table></div>
+<p>For the p-modular group algebra <var>KG</var> the method returns the smallest number n such that A^n=0, where A is the augmentation ideal of <var>KG</var>. This can be done using Jenning's theory without the explicit calculations of the powers of the augmentation ideal.</p>
+
+
+<table class="example">
+<tr><td><pre>
+
+
+gap&gt; KG := GroupRing( GF( 2 ), DihedralGroup( 16 ) );
+&lt;algebra-with-one over GF(2), with 4 generators&gt;
+gap&gt; AugmentationIdealNilpotencyIndex( KG );
+9      
+
+
+</pre></td></tr></table>
+
+<p><a id="s3ss7" name="s3ss7"></a></p>
+
+<h5>4.3-7 AugmentationIdealOfDerivedSubgroupNilpotencyIndex</h5>
+
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&gt; AugmentationIdealOfDerivedSubgroupNilpotencyIndex</code>( <var>KG</var> )</td><td class="tdright">( attribute )</td></tr></table></div>
+<p>For the p-modular group algebra <var>KG</var> this attribute stores the nilpotency index of the augmentation ideal of KG' where G' denotes the derived subgroup of G.</p>
+
+
+<table class="example">
+<tr><td><pre>
+
+
+gap&gt; KG := GroupRing( GF( 2 ), DihedralGroup( 16 ) );
+&lt;algebra-with-one over GF(2), with 4 generators&gt;
+gap&gt; AugmentationIdealOfDerivedSubgroupNilpotencyIndex( KG );
+4
+gap&gt; D := DerivedSubgroup( G );
+Group([ f3, f4 ])
+gap&gt; KD := GroupRing( GF( 2 ), D );
+&lt;algebra-with-one over GF(2), with 2 generators&gt;
+gap&gt; AugmentationIdealNilpotencyIndex( KD );
+4       
+
+
+</pre></td></tr></table>
+
+<p><a id="s4ss0" name="s4ss0"></a></p>
+
+<h4>4.4 Computations with the unit group</h4>
+
+<p><a id="s4ss1" name="s4ss1"></a></p>
+
+<h5>4.4-1 NormalizedUnitGroup</h5>
+
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&gt; NormalizedUnitGroup</code>( <var>KG</var> )</td><td class="tdright">( attribute )</td></tr></table></div>
+<p><b>Returns: </b>a group generated by group algebra elements</p>
+
+<p>Determines the normalized unit group of a p-modular group algebra <var>KG</var> over the field of p elements. Returns the normalized unit group as the group generated by certain elements of <var>KG</var>; see Section <a href="chap3.html#s3ss0"><b>3.3</b></a> for more details.</p>
+
+<p>For efficient computations the user is recommended to use <code class="func">PcNormalizedUnitGroup</code> (<a href="chap4.html#s4ss2"><b>4.4-2</b></a>).</p>
+
+
+<table class="example">
+<tr><td><pre>
+
+
+gap&gt; KG := GroupRing( GF( 2 ), DihedralGroup( 16 ) );
+&lt;algebra-with-one over GF(2), with 4 generators&gt;
+gap&gt; V := NormalizedUnitGroup( KG );
+&lt;group of size 32768 with 15 generators&gt;
+gap&gt; u := GeneratorsOfGroup( V )[4];
+(Z(2)^0)*f1+(Z(2)^0)*f2+(Z(2)^0)*f1*f2  
+
+
+</pre></td></tr></table>
+
+<p><a id="s4ss2" name="s4ss2"></a></p>
+
+<h5>4.4-2 PcNormalizedUnitGroup</h5>
+
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&gt; PcNormalizedUnitGroup</code>( <var>KG</var> )</td><td class="tdright">( attribute )</td></tr></table></div>
+<p><b>Returns: </b>a group given by power-commutator presentation</p>
+
+<p>The argument <var>KG</var> is a p-modular group algebra over the field of p elements. <code class="code">PcNormalizedUnitGroup</code> returns the normalized unit group of <var>KG</var> given by a power-commutator presentation. The generators in this polycyclic presentation correspond to the weighted basis elements of <var>KG</var>. For more details, see Section <a href="chap3.html#s3ss0"><b>3.3</b></a>.</p>
+
+
+<table class="example">
+<tr><td><pre>
+
+
+gap&gt; W := PcNormalizedUnitGroup( KG );
+&lt;pc group of size 32768 with 15 generators&gt;
+gap&gt; w := GeneratorsOfGroup( W )[4];
+f4       
+
+
+</pre></td></tr></table>
+
+<p><a id="s4ss3" name="s4ss3"></a></p>
+
+<h5>4.4-3 NaturalBijectionToPcNormalizedUnitGroup</h5>
+
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&gt; NaturalBijectionToPcNormalizedUnitGroup</code>( <var>KG</var> )</td><td class="tdright">( attribute )</td></tr></table></div>
+<p><b>Returns: </b>a homomorphism of groups</p>
+
+<p>The normalised unit group of a p-modular group algebra KG over the field of p elements can be computed using two methods, namely <code class="func">NormalizedUnitGroup</code> (<a href="chap4.html#s4ss1"><b>4.4-1</b></a>) and <code class="func">PcNormalizedUnitGroup</code> (<a href="chap4.html#s4ss2"><b>4.4-2</b></a>). These two methods return two different objects, and they can be used for different types of computations. The elements of <code class="code">NormalizedUnitGroup(KG)</code> are represented in their natural group algebra representation, and hence they can easily be identified in the group algebra. However, the more quickly constructed <code class="code">NormalizedUnitGroup(KG)</code> is often not suitable for further fast calculations. Hence one will have to use <code class="code">PcNormalizedUnitGroup(KG)</code> if one wants to find some group theoretic properties of the normalized unit group. This method returns the bijection from <code class="code">NormalizedUnitGroup(<var>KG</var>)</code> onto <code class="code">PcNormalizedUnitGroup(<var>KG</var>)</code>. This bijection can be used to map the result of a computation in <code class="code">PcNormalizedUnitGroup(<var>KG</var>)</code> into <code class="code">NormalizedUnitGroup(<var>KG</var>)</code>.</p>
+
+
+<table class="example">
+<tr><td><pre>
+
+
+gap&gt; f := NaturalBijectionToPcNormalizedUnitGroup( KG );
+MappingByFunction( &lt;group of size 32768 with 15 generators&gt;, &lt;pc group of size
+32768 with 15 generators&gt;, function( x ) ... end )
+gap&gt; u := GeneratorsOfGroup( V )[4];;
+gap&gt; u^f;
+f4   
+gap&gt; GeneratorsOfGroup( V )[4]^f = GeneratorsOfGroup( W )[4];
+true      
+
+
+</pre></td></tr></table>
+
+<p><a id="s4ss4" name="s4ss4"></a></p>
+
+<h5>4.4-4 NaturalBijectionToNormalizedUnitGroup</h5>
+
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&gt; NaturalBijectionToNormalizedUnitGroup</code>( <var>KG</var> )</td><td class="tdright">( attribute )</td></tr></table></div>
+<p><b>Returns: </b>a homomorphism of groups</p>
+
+<p>For a p-modular group algebra <var>KG</var> over the field of p elements this function returns the inverse of the mapping <code class="func">NaturalBijectionToPcNormalizedUnitGroup</code> (<a href="chap4.html#s4ss3"><b>4.4-3</b></a>)</p>
+
+
+<table class="example">
+<tr><td><pre>
+
+
+gap&gt; t := NaturalBijectionToNormalizedUnitGroup(KG);;
+gap&gt; w := GeneratorsOfGroup(W)[4];;
+gap&gt; w^t;
+(Z(2)^0)*f1+(Z(2)^0)*f2+(Z(2)^0)*f1*f2    
+gap&gt; GeneratorsOfGroup( W )[4]^t = GeneratorsOfGroup( V )[4];
+true     
+
+
+</pre></td></tr></table>
+
+<p><a id="s4ss5" name="s4ss5"></a></p>
+
+<h5>4.4-5 Units</h5>
+
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&gt; Units</code>( <var>KG</var> )</td><td class="tdright">( attribute )</td></tr></table></div>
+<p><b>Returns: </b>the unit group of a group ring</p>
+
+<p>This improves a standard <strong class="pkg">GAP</strong> functionality for modular group algebras of finite p-groups over the field of p elements. It returns the unit group of <var>KG</var> as a direct product of <code class="code">Units(K)</code> and <code class="code">NormalizedUnitGroup(KG)</code>, where the latter is generated by certain elements of <var>KG</var>; see Chapter <a href="chap3.html#s0ss0"><b>3.</b></a> for more details.</p>
+
+
+<table class="example">
+<tr><td><pre>
+
+
+gap&gt; U := Units( KG );
+&lt;group of size 32768 with 15 generators&gt;
+# now elements of U are already in KG
+gap&gt; GeneratorsOfGroup( U )[5];
+(Z(2)^0)*f2+(Z(2)^0)*f3+(Z(2)^0)*f2*f3 
+# in the next example the direct product structure is more clear 
+gap&gt; FH := GroupRing( GF(3), SmallGroup(27,3) );
+&lt;algebra-with-one over GF(3), with 3 generators&gt;
+gap&gt; T := Units( FH );
+&lt;group of size 5083731656658 with 27 generators&gt;
+gap&gt; x := GeneratorsOfGroup( T )[1];
+Tuple( [ Z(3), (Z(3)^0)*&lt;identity&gt; of ... ] ) 
+gap&gt; x in FH;
+false
+gap&gt; x[1] * x[2] in FH; 
+true # this is the way to get the corresponding element of FH
+
+
+</pre></td></tr></table>
+
+<p><a id="s4ss6" name="s4ss6"></a></p>
+
+<h5>4.4-6 PcUnits</h5>
+
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&gt; PcUnits</code>( <var>KG</var> )</td><td class="tdright">( attribute )</td></tr></table></div>
+<p><b>Returns: </b>a group given by power-commutator presentation</p>
+
+<p>Returns the unit group of <var>KG</var> as a direct product of <code class="code">Units(K)</code> and <code class="code">PcNormalizedUnitGroup(KG)</code>, where the latter is a group given by a polycyclic presentation. See Section <a href="chap3.html#s4ss0"><b>3.4</b></a> for more details.</p>
+
+
+<table class="example">
+<tr><td><pre>
+
+
+gap&gt; W := PcUnits( KG );
+&lt;pc group of size 32768 with 15 generators&gt;
+gap&gt; GeneratorsOfGroup( W )[5];
+f5   
+# in the next example the direct product structure is more clear 
+gap&gt; FH := GroupRing( GF(3), SmallGroup(27,3) );
+&lt;algebra-with-one over GF(3), with 3 generators&gt;
+gap&gt; T := PcUnits(FH);
+&lt;group of size 5083731656658 with 27 generators&gt;
+gap&gt; x := GeneratorsOfGroup( T )[2];
+Tuple( [ Z(3)^0, f1 ] )                       
+
+
+</pre></td></tr></table>
+
+<p><a id="s4ss7" name="s4ss7"></a></p>
+
+<h5>4.4-7 IsGroupOfUnitsOfMagmaRing</h5>
+
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&gt; IsGroupOfUnitsOfMagmaRing</code>( <var>U</var> )</td><td class="tdright">( property )</td></tr></table></div>
+<p>This property will be automatically set <code class="keyw">true</code>, if <var>U</var> is a group generated by some units of a magma ring, including <code class="code">Units(KG)</code> and <code class="code">NormalizedUnitgroup(KG)</code>. Otherwise this property will not be bound.</p>
+
+
+<table class="example">
+<tr><td><pre>
+
+
+gap&gt; IsGroupOfUnitsOfMagmaRing( NormalizedUnitGroup( KG ) );
+true
+gap&gt; IsGroupOfUnitsOfMagmaRing( Units( KG ) );
+true     
+
+
+</pre></td></tr></table>
+
+<p><a id="s4ss8" name="s4ss8"></a></p>
+
+<h5>4.4-8 IsUnitGroupOfGroupRing</h5>
+
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&gt; IsUnitGroupOfGroupRing</code>( <var>U</var> )</td><td class="tdright">( property )</td></tr></table></div>
+<p>This property will be automatically set <code class="keyw">true</code>, if <var>U</var> is the unit group of a p-modular group algebra, obtained either by <code class="code">Units(KG)</code> or by <code class="code">PcUnits(KG)</code>. Otherwise this property will not be bound.</p>
+
+
+<table class="example">
+<tr><td><pre>
+
+
+gap&gt; IsUnitGroupOfGroupRing( Units( KG ) );
+true
+gap&gt; IsUnitGroupOfGroupRing( PcUnits( KG ) );
+true     
+
+
+</pre></td></tr></table>
+
+<p><a id="s4ss9" name="s4ss9"></a></p>
+
+<h5>4.4-9 IsNormalizedUnitGroupOfGroupRing</h5>
+
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&gt; IsNormalizedUnitGroupOfGroupRing</code>( <var>U</var> )</td><td class="tdright">( property )</td></tr></table></div>
+<p>This property will be automatically set <code class="keyw">true</code>, if <var>U</var> is the normalized unit group of a p-modular group algebra, obtained either by <code class="code">NormalizedUnitGroup(KG)</code> or by <code class="code">PcNormalizedUnitGroup(KG)</code>. Otherwise this property will not be bound.</p>
+
+
+<table class="example">
+<tr><td><pre>
+
+
+gap&gt; IsNormalizedUnitGroupOfGroupRing( NormalizedUnitGroup( KG ) );
+true
+gap&gt; IsNormalizedUnitGroupOfGroupRing( PcNormalizedUnitGroup( KG ) );
+true     
+
+
+</pre></td></tr></table>
+
+<p><a id="s4ss10" name="s4ss10"></a></p>
+
+<h5>4.4-10 UnderlyingGroupRing</h5>
+
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&gt; UnderlyingGroupRing</code>( <var>U</var> )</td><td class="tdright">( attribute )</td></tr></table></div>
+<p><b>Returns: </b>a group ring</p>
+
+<p>If <var>U</var> is the (normalized) unit group of a p-modular group algebra KG obtained using one of the functions <code class="code">Units(KG)</code>, <code class="code">PcUnits(KG)</code>, <code class="code">NormalizedUnitGroup(KG)</code> or <code class="code">PcNormalizedUnitGroup(KG)</code>, then the attribute <code class="code">UnderlyingGroupRing</code> stores KG.</p>
+
+
+<table class="example">
+<tr><td><pre>
+
+
+gap&gt; UnderlyingGroupRing( Units( KG ) );
+&lt;algebra-with-one of dimension 16 over GF(2)&gt;
+gap&gt; UnderlyingGroupRing( PcUnits( KG ) );
+&lt;algebra-with-one of dimension 16 over GF(2)&gt;
+gap&gt; UnderlyingGroupRing( NormalizedUnitGroup( KG ) );
+&lt;algebra-with-one of dimension 16 over GF(2)&gt;
+gap&gt; UnderlyingGroupRing( PcNormalizedUnitGroup( KG ) );
+&lt;algebra-with-one of dimension 16 over GF(2)&gt;     
+
+
+</pre></td></tr></table>
+
+<p><a id="s4ss11" name="s4ss11"></a></p>
+
+<h5>4.4-11 GroupBases</h5>
+
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&gt; GroupBases</code>( <var>KG</var> )</td><td class="tdright">( attribute )</td></tr></table></div>
+<p><b>Returns: </b>a list of lists of group rings elements</p>
+
+<p>The subgroup B of the normalized unit group of the group algebra KG is called a <em>group basis</em>, if the elements of B are linearly independent over the field K and KB=KG. If <var>KG</var> is a p-modular group algebra, then <code class="code">GroupBases</code> returns a list of representatives of the conjugacy classes of the group bases of the group algebra <var>KG</var> in its normalised unit group.</p>
+
+
+<table class="example">
+<tr><td><pre>
+
+
+gap&gt; D8 := DihedralGroup( 8 );
+&lt;pc group of size 8 with 3 generators&gt;
+gap&gt; K := GF(2);
+GF(2)
+gap&gt; KD8 := GroupRing( GF( 2 ), D8 );
+&lt;algebra-with-one over GF(2), with 3 generators&gt;
+gap&gt; gb := GroupBases( KD8 );;
+gap&gt; Length( gb );
+32
+gap&gt; gb[1];
+[ (Z(2)^0)*&lt;identity&gt; of ..., (Z(2)^0)*f3, (Z(2)^0)*f1*f2+(Z(2)^0)*f2*f3+(Z(2)^
+    0)*f1*f2*f3, (Z(2)^0)*f2+(Z(2)^0)*f1*f2+(Z(2)^0)*f1*f2*f3,
+  (Z(2)^0)*&lt;identity&gt; of ...+(Z(2)^0)*f2+(Z(2)^0)*f3+(Z(2)^0)*f2*f3+(Z(2)^
+    0)*f1*f2*f3, (Z(2)^0)*f2+(Z(2)^0)*f1*f3+(Z(2)^0)*f2*f3,
+  (Z(2)^0)*&lt;identity&gt; of ...+(Z(2)^0)*f2+(Z(2)^0)*f3+(Z(2)^0)*f1*f2+(Z(2)^0)*f2*f3,
+  (Z(2)^0)*f1+(Z(2)^0)*f2+(Z(2)^0)*f2*f3 ]
+gap&gt; Length( last );
+8    
+
+
+</pre></td></tr></table>
+
+<p><a id="s5ss0" name="s5ss0"></a></p>
+
+<h4>4.5 The Lie algebra of a group algebra</h4>
+
+<p><a id="s5ss1" name="s5ss1"></a></p>
+
+<h5>4.5-1 LieAlgebraByDomain</h5>
+
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&gt; LieAlgebraByDomain</code>( <var>A</var> )</td><td class="tdright">( method )</td></tr></table></div>
+<p>This method takes an associative algebra as its argument, and constructs its associated Lie algebra in which the product is the bracket operation: [a,b]=ab-ba. It is recommended that the user never calls this method. The Lie algebra for an associative algebra should normally be created using <code class="code">LieAlgebra( A )</code>. When <code class="code">LieAlgebra</code> is first invoked, it constructs the Lie algebra for <var>A</var> using <code class="code">LieAlgebraByDomain</code>. After that it stores this Lie algebra and simply returns it if <code class="code">LieAlgebra</code> is called again.</p>
+
+
+<table class="example">
+<tr><td><pre>
+
+
+gap&gt; M := MatrixAlgebra( GF( 3 ), 3 );
+( GF(3)^[ 3, 3 ] )
+gap&gt; L := LieAlgebra( M );
+&lt;Lie algebra over GF(3)&gt;
+
+
+</pre></td></tr></table>
+
+<p><a id="s5ss2" name="s5ss2"></a></p>
+
+<h5>4.5-2 IsLieAlgebraByAssociativeAlgebra</h5>
+
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&gt; IsLieAlgebraByAssociativeAlgebra</code>( <var>L</var> )</td><td class="tdright">( Category )</td></tr></table></div>
+<p>This category signifies that the Lie algebra <var>L</var> was constructed as the Lie algebra associated with an associative algebra (this piece of information cannot be obtained later).</p>
+
+
+<table class="example">
+<tr><td><pre>
+
+
+gap&gt; M := MatrixAlgebra( GF( 3 ), 3 );
+( GF(3)^[ 3, 3 ] )
+gap&gt; L := LieAlgebra( M );
+&lt;Lie algebra over GF(3)&gt;
+gap&gt; IsLieAlgebraByAssociativeAlgebra( L );
+true   
+
+
+</pre></td></tr></table>
+
+<p><a id="s5ss3" name="s5ss3"></a></p>
+
+<h5>4.5-3 UnderlyingAssociativeAlgebra</h5>
+
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&gt; UnderlyingAssociativeAlgebra</code>( <var>L</var> )</td><td class="tdright">( attribute )</td></tr></table></div>
+<p><b>Returns: </b>the underlying associative algebra of a Lie algebra</p>
+
+<p>If a Lie algebra <var>L</var> is constructed from an associative algebra, then it remembers this underlying associative algebra as one of its attributes.</p>
+
+
+<table class="example">
+<tr><td><pre>
+
+
+gap&gt; M := MatrixAlgebra( GF( 3 ), 3 );
+&lt;algebra-with-one over GF(3), with 2 generators&gt;
+gap&gt; L := LieAlgebra( M );
+&lt;Lie algebra over GF(3)&gt;
+gap&gt; UnderlyingAssociativeAlgebra( L );
+( GF(3)^[ 3, 3 ] )
+gap&gt; last = M;
+true  
+
+
+</pre></td></tr></table>
+
+<p><a id="s5ss4" name="s5ss4"></a></p>
+
+<h5>4.5-4 NaturalBijectionToLieAlgebra</h5>
+
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&gt; NaturalBijectionToLieAlgebra</code>( <var>A</var> )</td><td class="tdright">( attribute )</td></tr></table></div>
+<p><b>Returns: </b>a mapping</p>
+
+<p>The natural linear bijection between the (isomorphic, but not equal) underlying vector spaces of an associative algebra <var>A</var> and its associated Lie algebra is stored as an attribute of <var>A</var>. Note that this is a vector space isomorphism between two algebras, but not an algebra isomorphism.</p>
+
+
+<table class="example">
+<tr><td><pre>
+
+
+gap&gt; F := GF( 2 ); G := SymmetricGroup( 3 ); FG := GroupRing( F, G );
+GF(2)
+Sym( [ 1 .. 3 ] )
+&lt;algebra-with-one over GF(2), with 2 generators&gt;
+gap&gt; t := NaturalBijectionToLieAlgebra( FG ); 
+MappingByFunction( &lt;algebra-with-one over GF(2), with 
+2 generators&gt;, &lt;Lie algebra over GF(
+2)&gt;, &lt;Operation "LieObject"&gt;, function( y ) ... end )
+gap&gt; a := Random( FG );
+(Z(2)^0)*(1,2,3)+(Z(2)^0)*(1,3,2)+(Z(2)^0)*(1,3)
+gap&gt; a * a;                     # product in the associative algebra
+(Z(2)^0)*()+(Z(2)^0)*(1,2,3)+(Z(2)^0)*(1,3,2)
+gap&gt; b := a^t;
+LieObject( (Z(2)^0)*(1,2,3)+(Z(2)^0)*(1,3,2)+(Z(2)^0)*(1,3) )
+gap&gt; b * b;                     # product in the Lie algebra (commutator) ...
+LieObject( &lt;zero&gt; of ... )      # ... must be zero!   
+
+
+</pre></td></tr></table>
+
+<p><a id="s5ss5" name="s5ss5"></a></p>
+
+<h5>4.5-5 NaturalBijectionToAssociativeAlgebra</h5>
+
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&gt; NaturalBijectionToAssociativeAlgebra</code>( <var>L</var> )</td><td class="tdright">( attribute )</td></tr></table></div>
+<p>This is the inverse of the previous linear bijection, stored as an attribute of the Lie algebra <var>L</var>.</p>
+
+
+<table class="example">
+<tr><td><pre>
+
+
+gap&gt; G := SymmetricGroup(3); FG := GroupRing( GF( 2 ), G );
+Sym( [ 1 .. 3 ] )
+&lt;algebra-with-one over GF(2), with 2 generators&gt;
+gap&gt; L := LieAlgebra( FG );
+&lt;Lie algebra over GF(2)&gt;
+gap&gt; s := NaturalBijectionToAssociativeAlgebra( L );
+MappingByFunction( &lt;Lie algebra over GF(2)&gt;, &lt;algebra-with-one over GF(
+2), with 2 generators&gt;, function( y ) ... end, &lt;Operation "LieObject"&gt; )
+gap&gt; InverseGeneralMapping( s ) = NaturalBijectionToLieAlgebra( FG );
+true   
+
+
+</pre></td></tr></table>
+
+<p><a id="s5ss6" name="s5ss6"></a></p>
+
+<h5>4.5-6 IsLieAlgebraOfGroupRing</h5>
+
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&gt; IsLieAlgebraOfGroupRing</code>( <var>L</var> )</td><td class="tdright">( property )</td></tr></table></div>
+<p>If a Lie algebra <var>L</var> is constructed from an associative algebra which happens to be in fact a group ring, it has many nice properties that can be used for fast algorithms, so this information is stored as a property.</p>
+
+
+<table class="example">
+<tr><td><pre>
+
+
+gap&gt; F := GF( 2 ); G := SymmetricGroup( 3 ); FG := GroupRing( F, G );
+GF(2)
+Sym( [ 1 .. 3 ] )
+&lt;algebra-with-one over GF(2), with 2 generators&gt;
+gap&gt; L := LieAlgebra( FG );
+&lt;Lie algebra over GF(2)&gt;
+gap&gt; IsLieAlgebraOfGroupRing( L );
+true   
+
+
+</pre></td></tr></table>
+
+<p><a id="s5ss7" name="s5ss7"></a></p>
+
+<h5>4.5-7 UnderlyingGroup</h5>
+
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&gt; UnderlyingGroup</code>( <var>L</var> )</td><td class="tdright">( attribute )</td></tr></table></div>
+<p><b>Returns: </b>the underlying group</p>
+
+<p>The underlying group of a Lie algebra <var>L</var> that is constructed from a group ring is defined as the underlying group of this group ring; see <code class="func">UnderlyingGroup</code> (<a href="chap4.html#s1ss4"><b>4.1-4</b></a>).</p>
+
+
+<table class="example">
+<tr><td><pre>
+
+
+gap&gt; F := GF( 2 ); G := SymmetricGroup( 3 ); FG := GroupRing( F, G );
+GF(2)
+Sym( [ 1 .. 3 ] )
+&lt;algebra-with-one over GF(2), with 2 generators&gt;
+gap&gt; L := LieAlgebra( FG );
+&lt;Lie algebra over GF(2)&gt;
+gap&gt; UnderlyingGroup( L );
+Sym( [ 1 .. 3 ] )
+gap&gt; LeftActingDomain( L );
+GF(2)   
+
+
+</pre></td></tr></table>
+
+<p><a id="s5ss8" name="s5ss8"></a></p>
+
+<h5>4.5-8 Embedding</h5>
+
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&gt; Embedding</code>( <var>U, L</var> )</td><td class="tdright">( operation )</td></tr></table></div>
+<p><b>Returns: </b>a mapping, which is a composition of two mappings</p>
+
+<p>Let FG be a group ring, let <var>U</var> be a submagma of G, and let <var>L</var> be the Lie algebra associated with FG. Then <code class="code">Embedding(<var>U</var>, <var>L</var> )</code> returns the obvious mapping from <var>U</var> to <var>L</var> (as the composition of the mappings <code class="code">Embedding( <var>U</var>, FG )</code> and <code class="code">NaturalBijectionToLieAlgebra( FG )</code>).</p>
+
+
+<table class="example">
+<tr><td><pre>
+
+
+gap&gt; F := GF( 2 ); G := SymmetricGroup( 3 ); FG := GroupRing( F, G );
+GF(2)
+Sym( [ 1 .. 3 ] )
+&lt;algebra-with-one over GF(2), with 2 generators&gt;
+gap&gt; L := LieAlgebra( FG );
+&lt;Lie algebra over GF(2)&gt;
+gap&gt; f := Embedding( G, L );
+CompositionMapping( MappingByFunction( &lt;algebra-with-one over GF(2), with 
+2 generators&gt;, &lt;Lie algebra over GF(
+2)&gt;, &lt;Operation "LieObject"&gt;, function( y ) ... end ), &lt;mapping: SymmetricGrou\
+p( [ 1 .. 3 ] ) -&gt; AlgebraWithOne( GF(2), ... ) &gt; )
+gap&gt; (1,2)^f + (1,3)^f;
+LieObject( (Z(2)^0)*(1,2)+(Z(2)^0)*(1,3) )   
+
+
+</pre></td></tr></table>
+
+<p><a id="s5ss9" name="s5ss9"></a></p>
+
+<h5>4.5-9 LieCentre</h5>
+
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&gt; LieCentre</code>( <var>L</var> )</td><td class="tdright">( method )</td></tr></table></div>
+<p><b>Returns: </b>a Lie algebra</p>
+
+<p>The centre of the Lie algebra associated with a group ring corresponds to the centre of the underlying group ring, and it can be calculated very fast by considering the conjugacy classes of the group. This method returns the centre of <var>L</var> using this idea.</p>
+
+
+<table class="example">
+<tr><td><pre>
+
+
+gap&gt; G := SmallGroup( 256, 400 ); FG := GroupRing( GF( 2 ), G ); 
+&lt;pc group of size 256 with 8 generators&gt;
+&lt;algebra-with-one over GF(2), with 8 generators&gt;
+gap&gt; L := LieAlgebra( FG );
+&lt;Lie algebra over GF(2)&gt;
+gap&gt; C := LieCentre( L );
+&lt;Lie algebra of dimension 28 over GF(2)&gt;
+gap&gt; D := LieDerivedSubalgebra( L );
+&lt;Lie algebra of dimension 228 over GF(2)&gt;
+gap&gt; c := Dimension( C ); d := Dimension( D ); l := Dimension( L );
+28
+228
+256
+gap&gt; c + d = l;
+true  # This is always the case for Lie algebras of group algebras!   
+
+
+</pre></td></tr></table>
+
+<p><a id="s5ss10" name="s5ss10"></a></p>
+
+<h5>4.5-10 LieDerivedSubalgebra</h5>
+
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&gt; LieDerivedSubalgebra</code>( <var>L</var> )</td><td class="tdright">( method )</td></tr></table></div>
+<p><b>Returns: </b>a Lie algebra</p>
+
+<p>If <var>L</var> is the Lie algebra associated with a group ring, then this method returns the Lie derived subalgebra of <var>L</var>. This can be done very fast using the conjugacy classes of the underlying group.</p>
+
+
+<table class="example">
+<tr><td><pre>
+
+
+gap&gt; G := SmallGroup( 256, 400 ); FG := GroupRing( GF( 2 ), G ); 
+&lt;pc group of size 256 with 8 generators&gt;
+&lt;algebra-with-one over GF(2), with 8 generators&gt;
+gap&gt; L := LieAlgebra( FG );
+&lt;Lie algebra over GF(2)&gt;
+gap&gt; C := LieCentre( L );
+&lt;Lie algebra of dimension 28 over GF(2)&gt;
+gap&gt; D := LieDerivedSubalgebra( L );    
+&lt;Lie algebra of dimension 228 over GF(2)&gt;
+gap&gt; l := Dimension( L ); c := Dimension( C ); d := Dimension( D );
+256
+28
+228
+gap&gt; c + d = l;
+true  # This is always the case for Lie algebras of group algebras!   
+
+
+</pre></td></tr></table>
+
+<p><a id="s5ss11" name="s5ss11"></a></p>
+
+<h5>4.5-11 IsLieAbelian</h5>
+
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&gt; IsLieAbelian</code>( <var>L</var> )</td><td class="tdright">( method )</td></tr></table></div>
+<p>The Lie algebra <var>L</var> of an associative algebra A is Lie abelian, if and only if A is abelian, so this method refers to <code class="code">IsAbelian( A )</code>.</p>
+
+
+<table class="example">
+<tr><td><pre>
+
+
+gap&gt; G := SymmetricGroup( 3 ); FG := GroupRing( GF( 2 ), G); 
+Sym( [ 1 .. 3 ] )
+&lt;algebra-with-one over GF(2), with 2 generators&gt;
+gap&gt; L := LieAlgebra( FG );          
+&lt;Lie algebra over GF(2)&gt;
+gap&gt; IsAbelian( G );
+false
+gap&gt; IsAbelian( L );    # This command should never be used for Lie algebras!
+true                    # It gives a result, but (probably) not the desired one.
+gap&gt; IsLieAbelian( L ); # Instead, IsLieAbelian is the correct command.
+false   
+
+
+</pre></td></tr></table>
+
+<p><a id="s5ss12" name="s5ss12"></a></p>
+
+<h5>4.5-12 IsLieSolvable</h5>
+
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&gt; IsLieSolvable</code>( <var>L</var> )</td><td class="tdright">( method )</td></tr></table></div>
+<p>In <a href="chapBib.html#biBPPS73">[PPS73]</a> Passi, Passman, and Sehgal have classified all groups G such that the Lie algebra associated with the group ring is solvable. This method uses their classification, making it considerably faster than the more elementary method which just calculates Lie commutators.</p>
+
+
+<table class="example">
+<tr><td><pre>
+
+
+gap&gt; G := SmallGroup( 256, 400 ); FG := GroupRing( GF( 2 ), G ); 
+&lt;pc group of size 256 with 8 generators&gt;
+&lt;algebra-with-one over GF(2), with 8 generators&gt;
+gap&gt; L := LieAlgebra( FG );
+&lt;Lie algebra over GF(2)&gt;
+gap&gt; IsLieSolvable( L );                       # This is very fast.
+true
+gap&gt; List( LieDerivedSeries( L ), Dimension ); # This is very slow.
+[ 256, 228, 189, 71, 0 ]   
+
+
+</pre></td></tr></table>
+
+<p><a id="s5ss13" name="s5ss13"></a></p>
+
+<h5>4.5-13 IsLieNilpotent</h5>
+
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&gt; IsLieNilpotent</code>( <var>L</var> )</td><td class="tdright">( method )</td></tr></table></div>
+<p>In <a href="chapBib.html#biBPPS73">[PPS73]</a> Passi, Passman, and Sehgal have classified all groups G such that the Lie algebra associated with the group ring is Lie nilpotent. This method uses their classification, making it considerably faster than the more elementary method which just calculates Lie commutators.</p>
+
+
+<table class="example">
+<tr><td><pre>
+
+
+gap&gt; G := SmallGroup( 256, 400 ); FG := GroupRing( GF( 2 ), G ); 
+&lt;pc group of size 256 with 8 generators&gt;
+&lt;algebra-with-one over GF(2), with 8 generators&gt;
+gap&gt; L := LieAlgebra( FG );
+&lt;Lie algebra over GF(2)&gt;
+gap&gt; IsLieNilpotent( L );                           # This is very fast.
+true
+gap&gt; List( LieLowerCentralSeries( L ), Dimension ); # This is very slow.
+[ 256, 228, 222, 210, 191, 167, 138, 107, 76, 54, 29, 15, 6, 0 ]   
+
+
+</pre></td></tr></table>
+
+<p><a id="s5ss14" name="s5ss14"></a></p>
+
+<h5>4.5-14 IsLieMetabelian</h5>
+
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&gt; IsLieMetabelian</code>( <var>L</var> )</td><td class="tdright">( property )</td></tr></table></div>
+<p>In <a href="chapBib.html#biBLR86">[LR86]</a> Levin and Rosenberger have classified all groups G such that the Lie algebra associated with the group ring is Lie metabelian. This method uses their classification, making it considerably faster than the more elementary method which just calculates Lie commutators.</p>
+
+
+<table class="example">
+<tr><td><pre>
+
+
+gap&gt; G := SmallGroup( 256, 400 ); FG := GroupRing( GF( 2 ), G ); 
+&lt;pc group of size 256 with 8 generators&gt;
+&lt;algebra-with-one over GF(2), with 8 generators&gt;
+gap&gt; L := LieAlgebra( FG );
+&lt;Lie algebra over GF(2)&gt;
+gap&gt; IsLieMetabelian( L );
+false   
+
+
+</pre></td></tr></table>
+
+<p><a id="s5ss15" name="s5ss15"></a></p>
+
+<h5>4.5-15 IsLieCentreByMetabelian</h5>
+
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&gt; IsLieCentreByMetabelian</code>( <var>L</var> )</td><td class="tdright">( property )</td></tr></table></div>
+<p>In <a href="chapBib.html#biBRoss">[R02]</a> the third author of this package classified all groups G such that the Lie algebra associated with the group ring is Lie centre-by-metabelian. This method uses the classification, making it considerably faster than the more elementary method which just calculates Lie commutators.</p>
+
+
+<table class="example">
+<tr><td><pre>
+
+
+gap&gt; G := SymmetricGroup( 3 ); FG := GroupRing( GF( 2 ), G ); 
+Sym( [ 1 .. 3 ] )
+&lt;algebra-with-one over GF(2), with 2 generators&gt;
+gap&gt; L := LieAlgebra( FG );       
+&lt;Lie algebra over GF(2)&gt;
+gap&gt; IsLieMetabelian( L );                                             
+false
+gap&gt; IsLieCentreByMetabelian( L );
+true   
+
+
+</pre></td></tr></table>
+
+<p><a id="s5ss16" name="s5ss16"></a></p>
+
+<h5>4.5-16 CanonicalBasis</h5>
+
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&gt; CanonicalBasis</code>( <var>L</var> )</td><td class="tdright">( method )</td></tr></table></div>
+<p><b>Returns: </b>basis of a Lie algebra</p>
+
+<p>The canonical basis of a group algebra FG is formed by the elements of G. In this method <var>L</var> is the Lie algebra associated with a group algebra FG, and the method returns the images of the elements of G in <var>L</var>.</p>
+
+
+<table class="example">
+<tr><td><pre>
+
+
+gap&gt; G := SymmetricGroup( 3 ); FG := GroupRing( GF( 2 ), G ); 
+Sym( [ 1 .. 3 ] )
+&lt;algebra-with-one over GF(2), with 2 generators&gt;
+gap&gt; L := LieAlgebra( FG );       
+&lt;Lie algebra over GF(2)&gt;
+gap&gt; B := CanonicalBasis( L );
+CanonicalBasis( &lt;Lie algebra of dimension 6 over GF(2)&gt; )
+gap&gt; Elements( B );
+[ LieObject( Z(2)^0*() ), LieObject( Z(2)^0*(2,3) ), 
+  LieObject( Z(2)^0*(1,2) ), LieObject( Z(2)^0*(1,2,3) ), 
+    LieObject( Z(2)^0*(1,3,2) ), LieObject( Z(2)^0*(1,3) ) ]   
+
+
+</pre></td></tr></table>
+
+<p><a id="s5ss17" name="s5ss17"></a></p>
+
+<h5>4.5-17 IsBasisOfLieAlgebraOfGroupRing</h5>
+
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&gt; IsBasisOfLieAlgebraOfGroupRing</code>( <var>B</var> )</td><td class="tdright">( property )</td></tr></table></div>
+<p>A basis <var>B</var> has this property if the preimages of the basis vectors in the group algebra form a group. It can be verified if a basis has this property. This is important for the speed of the calculation of the structure constants table; see <code class="func">StructureConstantsTable</code> (<a href="chap4.html#s5ss18"><b>4.5-18</b></a>).</p>
+
+
+<table class="example">
+<tr><td><pre>
+
+
+gap&gt; G := SymmetricGroup( 3 ); FG := GroupRing( GF( 2 ), G ); 
+Sym( [ 1 .. 3 ] )
+&lt;algebra-with-one over GF(2), with 2 generators&gt;
+gap&gt; L := LieAlgebra( FG );    
+&lt;Lie algebra over GF(2)&gt;
+gap&gt; B := CanonicalBasis( L );
+CanonicalBasis( &lt;Lie algebra of dimension 6 over GF(2)&gt; )
+gap&gt; IsBasisOfLieAlgebraOfGroupRing( B );
+true   
+
+
+</pre></td></tr></table>
+
+<p><a id="s5ss18" name="s5ss18"></a></p>
+
+<h5>4.5-18 StructureConstantsTable</h5>
+
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&gt; StructureConstantsTable</code>( <var>B</var> )</td><td class="tdright">( method )</td></tr></table></div>
+<p>A very fast implementation for calculating the structure constants table for the Lie algebra <code class="code">L</code> associated with a group ring with respect to its canonical basis <var>B</var> using its special structure; see <code class="func">CanonicalBasis</code> (<a href="chap4.html#s5ss16"><b>4.5-16</b></a>).</p>
+
+
+<table class="example">
+<tr><td><pre>
+
+
+gap&gt; G := CyclicGroup( 2 ); FG := GroupRing( GF( 2 ), G ); 
+&lt;pc group of size 2 with 1 generators&gt;
+&lt;algebra-with-one over GF(2), with 1 generators&gt;
+gap&gt; L := LieAlgebra( FG );
+&lt;Lie algebra over GF(2)&gt;
+gap&gt; B := CanonicalBasis( L );
+CanonicalBasis( &lt;Lie algebra of dimension 2 over GF(2)&gt; )
+gap&gt; StructureConstantsTable( B );       
+[ [ [ [  ], [  ] ], [ [  ], [  ] ] ], [ [ [  ], [  ] ], [ [  ], [  ] ] ], -1, 
+  0*Z(2) ]  
+
+
+</pre></td></tr></table>
+
+<p><a id="s5ss19" name="s5ss19"></a></p>
+
+<h5>4.5-19 LieUpperNilpotencyIndex</h5>
+
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&gt; LieUpperNilpotencyIndex</code>( <var>KG</var> )</td><td class="tdright">( attribute )</td></tr></table></div>
+<p>In a modular group algebra KG the <em>upper Lie power series</em> is defined as follows: KG^(1)=KG, KG^(n+1) is the associative ideal, generated by [KG^(n),KG]. The upper Lie nilpotency index t^L(G) of the group algebra KG is defined to be the smallest number n such that KG^(n)=0. It can be calculated very fast using Lie dimension subgroups <a href="chapBib.html#biBShalev91">[S91]</a>, that is, using only information about the underlying group; see <code class="func">LieDimensionSubgroups</code> (<a href="chap4.html#s6ss4"><b>4.6-4</b></a>). This is why it is stored as an attribute of the group algebra <var>KG</var> rather than that of its associated Lie algebra.</p>
+
+
+<table class="example">
+<tr><td><pre>
+
+
+gap&gt; KG := GroupRing( GF( 2 ), DihedralGroup( 16 ) );
+&lt;algebra-with-one over GF(2), with 4 generators&gt;
+gap&gt; LieUpperNilpotencyIndex( KG );
+5      
+
+
+</pre></td></tr></table>
+
+<p><a id="s5ss20" name="s5ss20"></a></p>
+
+<h5>4.5-20 LieLowerNilpotencyIndex</h5>
+
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&gt; LieLowerNilpotencyIndex</code>( <var>KG</var> )</td><td class="tdright">( attribute )</td></tr></table></div>
+<p>In a modular group algebra KG the <em>lower Lie power series</em> is defined as follows: KG^[n] is the associative ideal, generated by all (left-normed) Lie-products [x_1, x_2, dots, x_n], x_i in KG. The lower Lie nilpotency index t_L(G) of the group algebra KG is defined to be the minimal smallest n such that KG^[n]=0. In <a href="chapBib.html#biBDu">[D92]</a> the Jennings' conjecture was proved, which means that the nilpotency class of the normalized unit group of the modular group algebra KG is equal to t_L(G)-1.</p>
+
+<p>This allows to express lower Lie nilpotency index via the nilpotency class of the normalized unit group, and with its polycyclic presentation, provided by <strong class="pkg">LAGUNA</strong>, this will be faster than elementary calculations with Lie commutators. As the previous attribute, this index is also stored as an attribute of the group algebra <var>KG</var>.</p>
+
+
+<table class="example">
+<tr><td><pre>
+
+
+gap&gt; KG := GroupRing( GF( 2 ), DihedralGroup( 16 ) );
+&lt;algebra-with-one over GF(2), with 4 generators&gt;
+gap&gt; LieLowerNilpotencyIndex( KG );
+5     
+
+
+</pre></td></tr></table>
+
+<p><a id="s6ss0" name="s6ss0"></a></p>
+
+<h4>4.6 Other commands</h4>
+
+<p><a id="s6ss1" name="s6ss1"></a></p>
+
+<h5>4.6-1 SubgroupsOfIndexTwo</h5>
+
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&gt; SubgroupsOfIndexTwo</code>( <var>G</var> )</td><td class="tdright">( attribute )</td></tr></table></div>
+<p>Returns a list of subgroups of G with index two. Such subgroups are important for the investigation of the Lie structure of the group algebra KG in the case when the underlying field K has characteristic 2.</p>
+
+
+<table class="example">
+<tr><td><pre>
+
+
+gap&gt; G := DihedralGroup( 16 );
+&lt;pc group of size 16 with 4 generators&gt;  
+gap&gt; SubgroupsOfIndexTwo( G );
+[ Group([ f1, f1*f3, f1*f4, f1*f3*f4 ]), Group([ f2, f2*f3, f2*f4, f2*f3*f4 ]),
+  Group([ f1*f2, f1*f2*f3, f1*f2*f4, f1*f2*f3*f4 ]) ]     
+
+
+</pre></td></tr></table>
+
+<p><a id="s6ss2" name="s6ss2"></a></p>
+
+<h5>4.6-2 DihedralDepth</h5>
+
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&gt; DihedralDepth</code>( <var>U</var> )</td><td class="tdright">( method )</td></tr></table></div>
+<p>For a finite 2-group <var>U</var>, the function returns its <em>dihedral depth</em>, which is defined to be the maximal number d such that <var>U</var> contains a subgroup isomorphic to the dihedral group of order 2^d+1.</p>
+
+
+<table class="example">
+<tr><td><pre>
+
+
+gap&gt; KD8 := GroupRing( GF(2), DihedralGroup( 8 ) );
+&lt;algebra-with-one over GF(2), with 3 generators&gt;
+gap&gt; UD8 := PcNormalizedUnitGroup( KD8 );
+&lt;pc group of size 128 with 7 generators&gt;
+gap&gt; DihedralDepth( UD8 );
+2      
+
+
+</pre></td></tr></table>
+
+<p><a id="s6ss3" name="s6ss3"></a></p>
+
+<h5>4.6-3 DimensionBasis</h5>
+
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&gt; DimensionBasis</code>( <var>G</var> )</td><td class="tdright">( method )</td></tr></table></div>
+<p>For a finite p-group <var>G</var>, returns its Jennings basis as it was described in Section <a href="chap3.html#s3ss0"><b>3.3</b></a>.</p>
+
+
+<table class="example">
+<tr><td><pre>
+
+
+gap&gt; G := DihedralGroup( 16 );
+&lt;pc group of size 16 with 4 generators&gt;  
+gap&gt; DimensionBasis( G );
+rec( dimensionBasis := [ f1, f2, f3, f4 ], weights := [ 1, 1, 2, 4 ] )    
+
+
+</pre></td></tr></table>
+
+<p><a id="s6ss4" name="s6ss4"></a></p>
+
+<h5>4.6-4 LieDimensionSubgroups</h5>
+
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&gt; LieDimensionSubgroups</code>( <var>G</var> )</td><td class="tdright">( attribute )</td></tr></table></div>
+<p>For a finite p-group <var>G</var>, returns the series of its Lie dimension subgroups. The m-th Lie dimension subgroup D_(m) is the intersection of the group G and 1+KG^(m), where KG^(m) is the m-th term of the upper Lie power series of KG; see <code class="func">LieUpperNilpotencyIndex</code> (<a href="chap4.html#s5ss19"><b>4.5-19</b></a>)</p>
+
+
+<table class="example">
+<tr><td><pre>
+
+
+gap&gt; G := DihedralGroup( 16 );
+&lt;pc group of size 16 with 4 generators&gt;  
+gap&gt; LieDimensionSubgroups( G );
+[ &lt;pc group of size 16 with 4 generators&gt;, Group([ f3, f4 ]), Group([ f4 ]),
+  Group([ &lt;identity&gt; of ... ]) ]     
+
+
+</pre></td></tr></table>
+
+<p><a id="s6ss5" name="s6ss5"></a></p>
+
+<h5>4.6-5 LAGInfo</h5>
+
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&gt; LAGInfo</code></td><td class="tdright">( info class )</td></tr></table></div>
+<p><code class="code">LAGInfo</code> is a special Info class for LAGUNA algorithms. It has 5 levels: 0, 1 (default), 2, 3 and 4. To change info level to <code class="code">k</code>, use command <code class="code">SetInfoLevel(LAGInfo, k)</code>.</p>
+
+
+<table class="example">
+<tr><td><pre>
+
+
+gap&gt; SetInfoLevel( LAGInfo, 2 );
+gap&gt; KD8 := GroupRing( GF( 2 ), DihedralGroup( 8 ) );
+&lt;algebra-with-one over GF(2), with 3 generators&gt;
+gap&gt; UD8 := PcNormalizedUnitGroup( KD8 );
+#I  LAGInfo: Computing the pc normalized unit group ...
+#I  LAGInfo: Calculating weighted basis ...
+#I  LAGInfo: Calculating dimension basis ...
+#I  LAGInfo: dimension basis finished !
+#I  LAGInfo: Weighted basis finished !
+#I  LAGInfo: Computing the augmentation ideal filtration...
+#I  LAGInfo: Filtration finished !
+#I  LAGInfo: finished, converting to PcGroup
+&lt;pc group of size 128 with 7 generators&gt;     
+
+
+</pre></td></tr></table>
+
+<p><a id="s6ss6" name="s6ss6"></a></p>
+
+<h5>4.6-6 LAGUNABuildManual</h5>
+
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&gt; LAGUNABuildManual</code>( <var></var> )</td><td class="tdright">( function )</td></tr></table></div>
+<p>This function is used to build the manual in the following formats: DVI, PDF, PS, HTML and text for online help. We recommend that the user should have a recent and fairly complete TeX distribution. Since <strong class="pkg">LAGUNA</strong> is distributed together with its manual, it is not necessary for the user to use this function. Normally it is intended to be used by the developers only. This is the only function of <strong class="pkg">LAGUNA</strong> which requires UNIX/Linux environment.</p>
+
+<p><a id="s6ss7" name="s6ss7"></a></p>
+
+<h5>4.6-7 LAGUNABuildManualHTML</h5>
+
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&gt; LAGUNABuildManualHTML</code>( <var></var> )</td><td class="tdright">( function )</td></tr></table></div>
+<p>This fuction is used to build the manual only in HTML format. This does not depend on the availability of the TeX installation and works under Windows and MacOS as well. Since <strong class="pkg">LAGUNA</strong> is distributed together with its manual, it is not necessary for the user to use this function. Normally it is intended to be used by the developers only.</p>
+
+
+<div class="pcenter">
+<table class="chlink"><tr><td><a href="chap0.html">Top of Book</a></td><td><a href="chap3.html">Previous Chapter</a></td><td><a href="chapBib.html">Next Chapter</a></td></tr></table>
+<br />
+
+
+<div class="pcenter"><table class="chlink"><tr><td class="chlink1">Goto Chapter: </td><td><a href="chap0.html">Top</a></td><td><a href="chap1.html">1</a></td><td><a href="chap2.html">2</a></td><td><a href="chap3.html">3</a></td><td><a href="chap4.html">4</a></td><td><a href="chapBib.html">Bib</a></td><td><a href="chapInd.html">Ind</a></td></tr></table><br /></div>
+
+</div>
+
+<hr />
+<p class="foot">generated by <a href="http://www.math.rwth-aachen.de/~Frank.Luebeck/GAPDoc">GAPDoc2HTML</a></p>
+</body>
+</html>
