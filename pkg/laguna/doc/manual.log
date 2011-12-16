@@ -1,4 +1,4 @@
-This is pdfeTeX, Version 3.141592-1.30.4-2.2 (Web2C 7.5.5) (format=pdflatex 2005.11.9)  28 FEB 2006 17:49
+This is pdfeTeX, Version 3.141592-1.30.4-2.2 (Web2C 7.5.5) (format=pdflatex 2005.11.9)  29 MAR 2006 14:04
 entering extended mode
 **manual
 (./manual.tex
@@ -203,25 +203,25 @@ LaTeX Warning: Label `LieUpperCodimensionSeries' multiply defined.
 )
 \openout1 = `manual.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 50.
-LaTeX Font Info:    ... okay on input line 50.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 50.
-LaTeX Font Info:    ... okay on input line 50.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 50.
-LaTeX Font Info:    ... okay on input line 50.
-LaTeX Font Info:    Checking defaults for OMS/pzccm/m/n on input line 50.
-LaTeX Font Info:    Try loading font information for OMS+pzccm on input line 50
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 51.
+LaTeX Font Info:    ... okay on input line 51.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 51.
+LaTeX Font Info:    ... okay on input line 51.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 51.
+LaTeX Font Info:    ... okay on input line 51.
+LaTeX Font Info:    Checking defaults for OMS/pzccm/m/n on input line 51.
+LaTeX Font Info:    Try loading font information for OMS+pzccm on input line 51
 .
  (/usr/local/teTeX/share/texmf.tetex/tex/latex/psnfss/omspzccm.fd
 File: omspzccm.fd 2000/01/03 Fontinst v1.801 font definitions for OMS/pzccm.
 )
-LaTeX Font Info:    ... okay on input line 50.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 50.
-LaTeX Font Info:    ... okay on input line 50.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 50.
-LaTeX Font Info:    ... okay on input line 50.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 50.
-LaTeX Font Info:    ... okay on input line 50.
+LaTeX Font Info:    ... okay on input line 51.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 51.
+LaTeX Font Info:    ... okay on input line 51.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 51.
+LaTeX Font Info:    ... okay on input line 51.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 51.
+LaTeX Font Info:    ... okay on input line 51.
 
 (/usr/local/teTeX/share/texmf.local/tex/context/base/supp-pdf.tex
 (/usr/local/teTeX/share/texmf.local/tex/context/base/supp-mis.tex
@@ -257,27 +257,27 @@ loading : Context Support Macros / PDF (2004.03.26)
 \MPnumerator=\count107
 \everyMPtoPDFconversion=\toks21
 )
-Package hyperref Info: Link coloring ON on input line 50.
+Package hyperref Info: Link coloring ON on input line 51.
  (/usr/local/teTeX/share/texmf.tetex/tex/latex/hyperref/nameref.sty
 Package: nameref 2003/12/03 v2.21 Cross-referencing by name of section
 \c@section@level=\count108
 )
-LaTeX Info: Redefining \ref on input line 50.
-LaTeX Info: Redefining \pageref on input line 50.
+LaTeX Info: Redefining \ref on input line 51.
+LaTeX Info: Redefining \pageref on input line 51.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <24.88> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 54.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 55.
 LaTeX Font Info:    Font shape `OT1/phv/bx/n' in size <24.88> not available
-(Font)              Font shape `OT1/phv/b/n' tried instead on input line 54.
+(Font)              Font shape `OT1/phv/b/n' tried instead on input line 55.
 LaTeX Font Info:    Font shape `OT1/phv/b/n' will be
-(Font)              scaled to size 22.39185pt on input line 54.
+(Font)              scaled to size 22.39185pt on input line 55.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <14.4> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 56.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 58.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <12> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 60.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 62.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 68.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 71.
 
-Underfull \hbox (badness 10000) in paragraph at lines 66--99
+Underfull \hbox (badness 10000) in paragraph at lines 69--102
 
  []
 
@@ -285,39 +285,39 @@ Underfull \hbox (badness 10000) in paragraph at lines 66--99
 
 {/usr/local/teTeX/share/texmf.local/fonts/map/pdftex/updmap/pdftex.map}]
 LaTeX Font Info:    Font shape `OT1/phv/m/n' will be
-(Font)              scaled to size 8.99994pt on input line 105.
+(Font)              scaled to size 8.99994pt on input line 108.
 LaTeX Font Info:    Try loading font information for OT1+ptmcm on input line 11
-1.
+4.
 
 (/usr/local/teTeX/share/texmf.tetex/tex/latex/psnfss/ot1ptmcm.fd
 File: ot1ptmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OT1/ptmcm.
 )
 LaTeX Font Info:    Try loading font information for OML+ptmcm on input line 11
-1.
+4.
 
 (/usr/local/teTeX/share/texmf.tetex/tex/latex/psnfss/omlptmcm.fd
 File: omlptmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OML/ptmcm.
 )
 LaTeX Font Info:    Try loading font information for OMX+psycm on input line 11
-1.
+4.
 
 (/usr/local/teTeX/share/texmf.tetex/tex/latex/psnfss/omxpsycm.fd
 File: omxpsycm.fd 2000/01/03 Fontinst v1.801 font definitions for OMX/psycm.
 )
-LaTeX Font Info:    Try loading font information for U+msa on input line 111.
+LaTeX Font Info:    Try loading font information for U+msa on input line 114.
 
 (/usr/local/teTeX/share/texmf.tetex/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2002/01/19 v2.2g AMS font definitions
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 111.
+LaTeX Font Info:    Try loading font information for U+msb on input line 114.
 
 (/usr/local/teTeX/share/texmf.tetex/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2002/01/19 v2.2g AMS font definitions
 )
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7.4> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 111.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 114.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <6> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 111.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 114.
 
 
 ! LaTeX Error: There's no line here to end.
@@ -326,17 +326,17 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.113  }\\[1cm]
+l.116  }\\[1cm]
                
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
 LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <10> not available
-(Font)              Font shape `OMS/pzccm/m/n' tried instead on input line 117.
+(Font)              Font shape `OMS/pzccm/m/n' tried instead on input line 120.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 126--128
+Underfull \hbox (badness 10000) in paragraph at lines 132--134
 
  []
 
@@ -347,14 +347,14 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.148  }\\[1cm]
+l.154  }\\[1cm]
                
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
 LaTeX Font Info:    Font shape `OT1/phv/m/sl' will be
-(Font)              scaled to size 7.19995pt on input line 149.
+(Font)              scaled to size 7.19995pt on input line 155.
 [2] (./manual.toc
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10.95> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1.
@@ -373,20 +373,20 @@ LaTeX Font Info:    Font shape `OT1/phv/b/n' will be
  [5]
 Chapter 1.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <20.74> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 157.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 163.
 LaTeX Font Info:    Font shape `OT1/phv/m/n' will be
-(Font)              scaled to size 9.85492pt on input line 164.
+(Font)              scaled to size 9.85492pt on input line 170.
 [6
 
 ]
-Underfull \hbox (badness 2903) in paragraph at lines 216--217
+Underfull \hbox (badness 2903) in paragraph at lines 222--223
 []\OT1/ptm/m/n/10.95 To use the \OT1/phv/m/n/10.95 LA-GUNA \OT1/ptm/m/n/10.95 o
 n-line help it is nec-es-sary to in-stall the \OT1/phv/m/n/10.95 GAP\OT1/ptm/m/
 n/10.95 4 pack-age \OT1/phv/m/n/10.95 GAP-
  []
 
 
-Underfull \hbox (badness 3861) in paragraph at lines 218--219
+Underfull \hbox (badness 3861) in paragraph at lines 224--225
 []\OT1/phv/m/n/10.95 LAGUNA \OT1/ptm/m/n/10.95 is dis-tributed in stan-dard for
 -mats (\OT1/pcr/m/n/10.95 zoo\OT1/ptm/m/n/10.95 , \OT1/pcr/m/n/10.95 tar.gz\OT1
 /ptm/m/n/10.95 , \OT1/pcr/m/n/10.95 tar.bz2\OT1/ptm/m/n/10.95 , \OT1/pcr/m/n/10
@@ -394,7 +394,7 @@ Underfull \hbox (badness 3861) in paragraph at lines 218--219
  []
 
 
-Underfull \hbox (badness 1248) in paragraph at lines 218--219
+Underfull \hbox (badness 1248) in paragraph at lines 224--225
 \OT1/ptm/m/n/10.95 can be ob-tained from [][]\OT1/pcr/m/n/10.95 http://ukrgap.e
 xponenta.ru/laguna.htm[][]\OT1/ptm/m/n/10.95 . To un-pack the archive
  []
@@ -409,21 +409,21 @@ Chapter 3.
 
 ]
 
-LaTeX Warning: Command \textless invalid in math mode on input line 532.
+LaTeX Warning: Command \textless invalid in math mode on input line 538.
 
-LaTeX Font Info:    Try loading font information for OML+ptm on input line 532.
+LaTeX Font Info:    Try loading font information for OML+ptm on input line 538.
 
 (/usr/local/teTeX/share/texmf.tetex/tex/latex/psnfss/omlptm.fd
 File: omlptm.fd 
 )
 LaTeX Font Info:    Font shape `OML/ptm/m/n' in size <10.95> not available
-(Font)              Font shape `OML/cmm/m/it' tried instead on input line 532.
+(Font)              Font shape `OML/cmm/m/it' tried instead on input line 538.
 
 
-LaTeX Warning: Command \textless invalid in math mode on input line 532.
+LaTeX Warning: Command \textless invalid in math mode on input line 538.
 
 [15]
-Underfull \hbox (badness 10000) in paragraph at lines 594--598
+Underfull \hbox (badness 10000) in paragraph at lines 600--604
 \OT1/ptm/m/n/10.95 Thus $\OT1/ptmcm/m/n/10.95 1 + \OML/ptmcm/m/it/10.95 w[] \OT
 1/ptmcm/m/n/10.95 = (\OML/ptmcm/m/it/10.95 y[]\OT1/ptmcm/m/n/10.95 )[] [] (\OML
 /ptmcm/m/it/10.95 y[]\OT1/ptmcm/m/n/10.95 )[](1 + \OML/ptmcm/m/it/10.95 w[]\OT1
@@ -433,203 +433,203 @@ ptmcm/m/n/10.95 1 + \OML/ptmcm/m/it/10.95 w \OT1/ptmcm/m/n/10.95 =
  []
 
 
-LaTeX Warning: Command \textless invalid in math mode on input line 604.
+LaTeX Warning: Command \textless invalid in math mode on input line 610.
 
 
-LaTeX Warning: Command \textless invalid in math mode on input line 604.
+LaTeX Warning: Command \textless invalid in math mode on input line 610.
 
 [16] [17]
 Chapter 4.
 
-Underfull \hbox (badness 10000) in paragraph at lines 632--635
+Underfull \hbox (badness 10000) in paragraph at lines 638--641
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 653--656
+Underfull \hbox (badness 10000) in paragraph at lines 659--662
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 674--677
+Underfull \hbox (badness 10000) in paragraph at lines 680--683
 
  []
 
 [18
 
 ] [19] [20]
-Underfull \hbox (badness 10000) in paragraph at lines 853--856
+Underfull \hbox (badness 10000) in paragraph at lines 859--862
 
  []
 
 [21]
-Underfull \hbox (badness 10000) in paragraph at lines 961--964
+Underfull \hbox (badness 10000) in paragraph at lines 967--970
 
  []
 
 [22]
-Underfull \hbox (badness 10000) in paragraph at lines 981--984
+Underfull \hbox (badness 10000) in paragraph at lines 987--990
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1005--1011
+Underfull \hbox (badness 10000) in paragraph at lines 1011--1017
 
  []
 
 [23] [24]
-Underfull \hbox (badness 1033) in paragraph at lines 1118--1120
+Underfull \hbox (badness 1033) in paragraph at lines 1124--1126
 []\OT1/ptm/m/n/10.95 Please note that for cal-cu-la-tion of the aug-men-ta-tion
  of an el-e-ment of a group ring the
  []
 
 
-Underfull \hbox (badness 1286) in paragraph at lines 1118--1120
+Underfull \hbox (badness 1286) in paragraph at lines 1124--1126
 \OT1/ptm/m/n/10.95 user is strongly rec-om-mended to use \OT1/pcr/m/n/10.95 Aug
 mentation \OT1/ptm/m/n/10.95 ([][]4.2.5[][]) which works much faster than
  []
 
 LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <10.95> not available
-(Font)              Font shape `OMS/pzccm/m/n' tried instead on input line 1157
+(Font)              Font shape `OMS/pzccm/m/n' tried instead on input line 1163
 .
 [25] [26]
-Underfull \hbox (badness 10000) in paragraph at lines 1265--1268
+Underfull \hbox (badness 10000) in paragraph at lines 1271--1274
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1286--1289
+Underfull \hbox (badness 10000) in paragraph at lines 1292--1295
 
  []
 
 [27] [28]
-Underfull \hbox (badness 10000) in paragraph at lines 1403--1405
+Underfull \hbox (badness 10000) in paragraph at lines 1409--1411
 []\OT1/ptm/m/n/10.95 The ar-gu-ment [] is a $\OML/ptmcm/m/it/10.95 p$\OT1/ptm/m
 /n/10.95 -modular group al-ge-bra over the field of $\OML/ptmcm/m/it/10.95 p$ \
 OT1/ptm/m/n/10.95 el-e-ments.
  []
 
 [29] [30] [31]
-Underfull \hbox (badness 10000) in paragraph at lines 1585--1588
+Underfull \hbox (badness 10000) in paragraph at lines 1591--1594
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1605--1608
+Underfull \hbox (badness 10000) in paragraph at lines 1611--1614
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1625--1628
+Underfull \hbox (badness 10000) in paragraph at lines 1631--1634
 
  []
 
 [32]
-Underfull \hbox (badness 2762) in paragraph at lines 1653--1654
+Underfull \hbox (badness 2762) in paragraph at lines 1659--1660
 []\OT1/ptm/m/n/10.95 If [] is the (nor-mal-ized) unit group of a $\OML/ptmcm/m/
 it/10.95 p$\OT1/ptm/m/n/10.95 -modular group al-ge-bra $\OML/ptmcm/m/it/10.95 K
 G$ \OT1/ptm/m/n/10.95 ob-tained us-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1653--1654
+Underfull \hbox (badness 10000) in paragraph at lines 1659--1660
 \OT1/ptm/m/n/10.95 ing one of the func-tions \OT1/pcr/m/n/10.95 Units(KG)\OT1/p
 tm/m/n/10.95 , \OT1/pcr/m/n/10.95 PcUnits(KG)\OT1/ptm/m/n/10.95 , \OT1/pcr/m/n/
 10.95 NormalizedUnitGroup(KG) \OT1/ptm/m/n/10.95 or
  []
 
 [33] [34]
-Underfull \hbox (badness 10000) in paragraph at lines 1787--1790
+Underfull \hbox (badness 10000) in paragraph at lines 1793--1796
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1809--1812
+Underfull \hbox (badness 10000) in paragraph at lines 1815--1818
 
  []
 
 [35]
-Underfull \hbox (badness 10000) in paragraph at lines 1897--1900
+Underfull \hbox (badness 10000) in paragraph at lines 1903--1906
 
  []
 
 [36]
-Underfull \hbox (badness 10000) in paragraph at lines 1924--1927
+Underfull \hbox (badness 10000) in paragraph at lines 1930--1933
 
  []
 
 [37] [38]
-Underfull \hbox (badness 10000) in paragraph at lines 2085--2088
+Underfull \hbox (badness 10000) in paragraph at lines 2091--2094
 
  []
 
 [39]
-Underfull \hbox (badness 10000) in paragraph at lines 2112--2115
+Underfull \hbox (badness 10000) in paragraph at lines 2118--2121
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2139--2142
+Underfull \hbox (badness 10000) in paragraph at lines 2145--2148
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2166--2169
+Underfull \hbox (badness 10000) in paragraph at lines 2172--2175
 
  []
 
 [40]
-Underfull \hbox (badness 10000) in paragraph at lines 2191--2194
+Underfull \hbox (badness 10000) in paragraph at lines 2197--2200
 
  []
 
 [41]
-Underfull \hbox (badness 10000) in paragraph at lines 2249--2252
+Underfull \hbox (badness 10000) in paragraph at lines 2255--2258
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2277--2280
+Underfull \hbox (badness 10000) in paragraph at lines 2283--2286
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2304--2307
+Underfull \hbox (badness 10000) in paragraph at lines 2310--2313
 
  []
 
 [42]
-Underfull \hbox (badness 10000) in paragraph at lines 2324--2327
+Underfull \hbox (badness 10000) in paragraph at lines 2330--2333
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2350--2353
+Underfull \hbox (badness 10000) in paragraph at lines 2356--2359
 
  []
 
 [43]
-Underfull \hbox (badness 10000) in paragraph at lines 2380--2383
+Underfull \hbox (badness 10000) in paragraph at lines 2386--2389
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2402--2405
+Underfull \hbox (badness 10000) in paragraph at lines 2408--2411
 
  []
 
 [44] [45]
-Underfull \hbox (badness 10000) in paragraph at lines 2505--2508
+Underfull \hbox (badness 10000) in paragraph at lines 2511--2514
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2535--2538
+Underfull \hbox (badness 10000) in paragraph at lines 2541--2544
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2550--2553
+Underfull \hbox (badness 10000) in paragraph at lines 2556--2559
 
  []
 
@@ -673,13 +673,13 @@ LaTeX Warning: There were multiply-defined labels.
 Here is how much of TeX's memory you used:
  3921 strings out of 95137
  54222 string characters out of 1183013
- 2098950 words of memory out of 4553785
+ 2099009 words of memory out of 4553844
  6813 multiletter control sequences out of 10000+50000
  66369 words of font info for 129 fonts, out of 2000000 for 2000
  58 hyphenation exceptions out of 5000
  27i,7n,30p,732b,452s stack positions out of 5000i,500n,6000p,200000b,40000s
 PDF statistics:
- 626 PDF objects out of 300000
+ 627 PDF objects out of 300000
  156 named destinations out of 131072
  17 words of extra memory for PDF output out of 10000
 </usr/local/teTeX/share/texmf.tetex/fonts/type1/bluesky/symbols/msam10.pfb></
@@ -695,4 +695,4 @@ local/teTeX/share/texmf.tetex/fonts/type1/urw/courier/ucrr8a.pfb></usr/local/te
 TeX/share/texmf.tetex/fonts/type1/urw/times/utmr8a.pfb></usr/local/teTeX/share/
 texmf.tetex/fonts/type1/urw/times/utmb8a.pfb></usr/local/teTeX/share/texmf.tete
 x/fonts/type1/urw/helvetic/uhvb8a.pfb>
-Output written on manual.pdf (49 pages, 315213 bytes).
+Output written on manual.pdf (49 pages, 315600 bytes).

@@ -139,3 +139,7 @@ $Id: ChangeLog,v 1.20 2005/04/07 10:47:52 alexk Exp $
 3.3.2 (March 2006)
     * Another improvement of 'LieAlgebraByDomain' method
     * Performance improvement in PcNormalizedUnitGroup in abelian case
+
+3.3.3 (April 2006)
+    * Fixed a no-method-found error in InverseOp
+    * Added more implicit copyright notice about GPL
