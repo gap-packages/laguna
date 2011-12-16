@@ -6,10 +6,10 @@
                     [1m[4m[31mLie AlGebras and UNits of group Algebras[0m
   
   
-                                  Version 3.3
+                                 Version 3.3.1
   
   
-                                   April 2005
+                                    May 2005
   
   
                                   Victor Bovdi
@@ -85,7 +85,7 @@
   [1mLAGUNA[0m, please cite it in the following form:
   
   V.  Bovdi,  A.  Konovalov,  R.  Rossmanith  and C. Schneider. [22m[36mLAGUNA --- Lie
-  AlGebras    and    UNits    of    group    Algebras,   Version   3.3;[0m   2005
+  AlGebras    and    UNits    of   group   Algebras,   Version   3.3.1;[0m   2005
   ([34mhttp://ukrgap.exponenta.ru/laguna.htm[0m).
   
   

@@ -115,6 +115,8 @@ $Id: ChangeLog,v 1.20 2005/04/07 10:47:52 alexk Exp $
     * Computation of bicyclic units and of the bicyclic unit group.
     * Computation of the unitary subgroup of the normalized unit group 
       (immediate method for small groups).
+    * Computation of the Lie upper codimension series of a finite 
+      p-group  
     * Fixed some bugs:  
       - Replaced 'GeneratorsOfGroup' --> 'MinimalGeneratingSet' in
         DimensionBasis to fix a bug with SmallGroup(512,2).
@@ -129,3 +131,7 @@ $Id: ChangeLog,v 1.20 2005/04/07 10:47:52 alexk Exp $
         modular group algebras of finite p-groups for correct
         method selection (for example, for the computation of
         their automorphism groups).
+
+3.3.1 (May 2005)
+    * The method for 'LieAlgebraByDomain' was restricted to group
+      algebras for better compatibility with the GAP system.

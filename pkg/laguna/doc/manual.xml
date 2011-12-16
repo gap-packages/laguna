@@ -13,7 +13,7 @@
 <TitlePage>
   <Title>&LAGUNA;</Title>
   <Subtitle>Lie AlGebras and UNits of group Algebras</Subtitle>
-  <Version>Version 3.3</Version>
+  <Version>Version 3.3.1</Version>
 
   <Author>Victor Bovdi 
           <Email>vbovdi@math.klte.hu</Email>
@@ -57,7 +57,7 @@
   </Author>
 
 
-  <Date>April 2005</Date>
+  <Date>May 2005</Date>
 
 <Abstract>
 
@@ -92,7 +92,7 @@ the field of <M>p</M> elements.
 
   V. Bovdi, A. Konovalov, R. Rossmanith and C. Schneider. 
   <E>LAGUNA --- Lie AlGebras and UNits of group Algebras, 
-  Version 3.3;</E> 2005 (<URL>http://ukrgap.exponenta.ru/laguna.htm</URL>).
+  Version 3.3.1;</E> 2005 (<URL>http://ukrgap.exponenta.ru/laguna.htm</URL>).
 </Copyright>
   
 <Acknowledgements>
