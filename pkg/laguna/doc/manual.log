@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159-13d (Web2C 7.3.1) (format=pdflatex 2001.11.7)  27 JUL 2003 14:08
+This is pdfTeX, Version 3.14159-13d (Web2C 7.3.1) (format=pdflatex 2001.11.7)  17 APR 2004 13:49
 **manual
 (manual.tex[/usr/share/texmf/pdftex/config/pdftex.cfg]
 LaTeX2e <2000/06/01>
@@ -643,11 +643,11 @@ LaTeX Warning: There were multiply-defined labels.
 Here is how much of TeX's memory you used:
  3472 strings out of 50606
  45942 string characters out of 692235
- 100007 words of memory out of 1500001
+ 100043 words of memory out of 1500001
  6270 multiletter control sequences out of 10000+25000
  66369 words of font info for 129 fonts, out of 400000 for 1000
  16 hyphenation exceptions out of 1000
  27i,7n,30p,732b,494s stack positions out of 1500i,500n,1500p,50000b,5000s
 <msam10.pfb><cmex10.pfb><cmmi10.pfb><cmr10.pfb><cmsy10.pfb><8r.enc><ucrr8a.pf
 b>
-Output written on manual.pdf (45 pages, 222212 bytes).
+Output written on manual.pdf (45 pages, 222235 bytes).

@@ -94,4 +94,8 @@ $Id: ChangeLog,v 1.7 2003/07/27 12:57:50 alexk Exp $
 
 3.2.1 * Interface improvements (July 2003):
         - Added InfoLevel 4 and made InfoLevel 1 the default one
-	- Mentioned LAGUNA in method's descriptions for better tracing
+        - Mentioned LAGUNA in method's descriptions for better tracing
+
+3.2.2 * Minor updates for coming GAP 4.4 release (April 2004):
+        - making sure that Augmentation(x) is in the underlying ring
+        - checking whether x=0 in IsUnit(x)

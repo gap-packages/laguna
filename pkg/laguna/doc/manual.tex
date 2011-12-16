@@ -54,8 +54,8 @@
 \begin{center}{\Huge \textbf{\textsf{LAGUNA}}}\\[1cm]
 \markright{\scriptsize \mbox{}\hfill \textsf{LAGUNA} \hfill\mbox{}}
 {\Large \textbf{Lie AlGebras and UNits of group Algebras}}\\[1cm]
-{Version 3.2.1}\\[1cm]
-{July 2003}\\[1cm]
+{Version 3.2.2}\\[1cm]
+{April 2004}\\[1cm]
 \mbox{}\\[2cm]
 {\large \textbf{Victor Bovdi   }}\\
 {\large \textbf{Alexander Konovalov    }}\\
@@ -123,7 +123,7 @@ Schneider
 
  If you publish a result which was partially obtained with the usage of \textsf{LAGUNA}, please cite it in the following form:
 
- V. Bovdi, A. Konovalov, R. Rossmanith and C. Schneider. \emph{LAGUNA --- Lie AlGebras and UNits of group Algebras, Version 3.2.1;} 2003 (\href{http://ukrgap.exponenta.ru/laguna.htm}{\texttt{http://ukrgap.exponenta.ru/laguna.htm}}). }\\[1cm]
+ V. Bovdi, A. Konovalov, R. Rossmanith and C. Schneider. \emph{LAGUNA --- Lie AlGebras and UNits of group Algebras, Version 3.2.2;} 2003 (\href{http://ukrgap.exponenta.ru/laguna.htm}{\texttt{http://ukrgap.exponenta.ru/laguna.htm}}). }\\[1cm]
 {\small 
 \section*{Acknowledgements}
 \logpage{[ 0, 0, 3 ]}
@@ -215,9 +215,9 @@ the type of the operation system. It is designed for \textsf{GAP}4.4 and no comp
 
  To use the \textsf{LAGUNA} online help it is necessary to install the \textsf{GAP}4 package \textsf{GAPDoc} by Frank L\"ubeck and Max Neunh\"offer, which is available from the \textsf{GAP} site or from \href{http://www.math.rwth-aachen.de/~Frank.Luebeck/GAPDoc/}{\texttt{http://www.math.rwth-aachen.de/\~{}Frank.Luebeck/GAPDoc/}}. 
 
- \textsf{LAGUNA} is distributed in standard formats (\texttt{zoo}, \texttt{tar.gz}, \texttt{tar.bz2}, \texttt{-win.zip}) and can be obtained from \href{http://ukrgap.exponenta.ru/laguna.htm}{\texttt{http://ukrgap.exponenta.ru/laguna.htm}}. To unpack the archive \texttt{laguna-3.2.1.zoo} you need the program \texttt{unzoo}, which can be obtained from the \textsf{GAP} homepage \href{http://www.gap-system.org/}{\texttt{http://www.gap-system.org/}} (see section `Distribution'). To install \textsf{LAGUNA}, copy this archive into the \texttt{pkg} subdirectory of your \textsf{GAP}4.4 installation. The subdirectory \texttt{laguna} will be created in the \texttt{pkg} directory after the following command: 
+ \textsf{LAGUNA} is distributed in standard formats (\texttt{zoo}, \texttt{tar.gz}, \texttt{tar.bz2}, \texttt{-win.zip}) and can be obtained from \href{http://ukrgap.exponenta.ru/laguna.htm}{\texttt{http://ukrgap.exponenta.ru/laguna.htm}}. To unpack the archive \texttt{laguna-3.2.2.zoo} you need the program \texttt{unzoo}, which can be obtained from the \textsf{GAP} homepage \href{http://www.gap-system.org/}{\texttt{http://www.gap-system.org/}} (see section `Distribution'). To install \textsf{LAGUNA}, copy this archive into the \texttt{pkg} subdirectory of your \textsf{GAP}4.4 installation. The subdirectory \texttt{laguna} will be created in the \texttt{pkg} directory after the following command: 
 
- \texttt{unzoo -x laguna-3.2.1.zoo} 
+ \texttt{unzoo -x laguna-3.2.2.zoo} 
 
  }
 
@@ -2275,7 +2275,7 @@ use this function. Normally it is intended to be used by the developers only. }
 
  \def\bibname{References\logpage{[ "Bib", 0, 0 ]}}
 
-\bibliographystyle{plain}
+\bibliographystyle{alpha}
 \bibliography{manual}
 
 \def\indexname{Index\logpage{[ "Ind", 0, 0 ]}}
@@ -2283,6 +2283,7 @@ use this function. Normally it is intended to be used by the developers only. }
 
 \printindex
 
+\newpage
 \immediate\write\pagenrlog{["End"], \arabic{page}];}
 \immediate\closeout\pagenrlog
 \end{document}

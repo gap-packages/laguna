@@ -1,11 +1,11 @@
-\begin{thebibliography}{10}
+\begin{thebibliography}{Wur93}
 
-\bibitem{Du}
+\bibitem[Du92]{Du}
 X.~Du.
 \newblock The centers of radical ring.
 \newblock {\em Canad. Math. Bull.}, 35:174--179, 1992.
 
-\bibitem{HB}
+\bibitem[HB82]{HB}
 Bertram Huppert and Norman Blackburn.
 \newblock {\em Finite groups. {II}}, volume 242 of {\em Grundlehren der
   Mathematischen Wissenschaften [Fundamental Principles of Mathematical
@@ -13,46 +13,46 @@ Bertram Huppert and Norman Blackburn.
 \newblock Springer-Verlag, Berlin, 1982.
 \newblock AMD, 44.
 
-\bibitem{LR86}
+\bibitem[LR86]{LR86}
 F.~Levin and G.~Rosenberger.
 \newblock Lie metabelian group rings.
 \newblock In {\em Group and semigroup rings (Johannesburg, 1985)}, pages
   153--161. North-Holland, Amsterdam, 1986.
 
-\bibitem{PPS73}
+\bibitem[PPS73]{PPS73}
 I.~B.~S. Passi, D.~S. Passman, and S.~K. Sehgal.
 \newblock Lie solvable group rings.
 \newblock {\em Canad. J. Math.}, 25:748--757, 1973.
 
-\bibitem{Ros97}
+\bibitem[Ros97]{Ros97}
 Richard Rossmanith.
 \newblock {\em Centre-by-metabelian group algebras}.
 \newblock PhD thesis, Friedrich-Schiller-Universit{\accent127a}t Jena, 1997.
 
-\bibitem{Ros00}
+\bibitem[Ros00]{Ros00}
 Richard Rossmanith.
 \newblock Lie centre-by-metabelian group algebras in even characteristic. {I},
   {I}{I}.
 \newblock {\em Israel J. Math.}, 115:51--75, 77--99, 2000.
 
-\bibitem{Ross}
+\bibitem[Ros02]{Ross}
 Richard Rossmanith.
 \newblock Lie centre-by-metabelian group algebras over commutative rings.
 \newblock {\em J. Algebra}, 251(2):503--508, 2002.
 
-\bibitem{Shalev91}
+\bibitem[Sha91]{Shalev91}
 A.~Shalev.
 \newblock Lie dimension subgroups, lie nilpotency indices, and the exponent of
   the group of normalized units.
 \newblock {\em J. London Math. Soc.}, 43:23--36, 1991.
 
-\bibitem{Sims}
+\bibitem[Sim94]{Sims}
 Charles~C. Sims.
 \newblock {\em Computation with finitely presented groups}, volume~48 of {\em
   Encyclopedia of Mathematics and its Applications}.
 \newblock Cambridge University Press, Cambridge, 1994.
 
-\bibitem{Wursthorn}
+\bibitem[Wur93]{Wursthorn}
 M.~Wursthorn.
 \newblock Isomorphism of modular group algebras: an algorithm and its
   application to groups of order $2^6$.

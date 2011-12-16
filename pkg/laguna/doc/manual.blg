@@ -1,45 +1,45 @@
 This is BibTeX, Version 0.99c (Web2C 7.3.1)
 The top-level auxiliary file: manual.aux
-The style file: plain.bst
+The style file: alpha.bst
 Database file #1: manual.bib
 You've used 10 entries,
-            2118 wiz_defined-function locations,
-            577 strings with 5313 characters,
-and the built_in function-call counts, 3074 in all, are:
-= -- 325
-> -- 93
-< -- 3
-+ -- 39
-- -- 28
-* -- 203
-:= -- 515
+            2543 wiz_defined-function locations,
+            638 strings with 5759 characters,
+and the built_in function-call counts, 3731 in all, are:
+= -- 391
+> -- 119
+< -- 10
++ -- 36
+- -- 35
+* -- 260
+:= -- 606
 add.period$ -- 32
 call.type$ -- 10
-change.case$ -- 41
-chr.to.int$ -- 0
+change.case$ -- 51
+chr.to.int$ -- 10
 cite$ -- 10
-duplicate$ -- 125
-empty$ -- 262
-format.name$ -- 28
-if$ -- 641
-int.to.chr$ -- 0
-int.to.str$ -- 10
+duplicate$ -- 162
+empty$ -- 292
+format.name$ -- 52
+if$ -- 761
+int.to.chr$ -- 1
+int.to.str$ -- 0
 missing$ -- 11
 newline$ -- 54
-num.names$ -- 20
-pop$ -- 36
+num.names$ -- 30
+pop$ -- 43
 preamble$ -- 1
-purify$ -- 34
+purify$ -- 64
 quote$ -- 0
-skip$ -- 79
+skip$ -- 124
 stack$ -- 0
-substring$ -- 246
+substring$ -- 266
 swap$ -- 23
-text.length$ -- 3
-text.prefix$ -- 0
+text.length$ -- 10
+text.prefix$ -- 7
 top$ -- 0
-type$ -- 36
+type$ -- 72
 warning$ -- 0
-while$ -- 36
-width$ -- 12
-write$ -- 118
+while$ -- 39
+width$ -- 11
+write$ -- 138

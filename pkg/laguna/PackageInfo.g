@@ -13,9 +13,9 @@ SetPackageInfo( rec(
 
 PackageName := "LAGUNA",
 Subtitle := "Lie AlGebras and UNits of group Algebras",
-Version := "3.2.1",
-Date := "27/07/2003",
-ArchiveURL := "http://ukrgap.exponenta.ru/LAGUNA/laguna-3.2.1",
+Version := "3.2.2",
+Date := "17/04/2004",
+ArchiveURL := "http://ukrgap.exponenta.ru/LAGUNA/laguna-3.2.2",
 ArchiveFormats := ".zoo .tar.gz .tar.bz2 -win.zip",
 
 #TextFiles := ["init.g", ......],

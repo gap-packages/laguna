@@ -92,11 +92,11 @@
   
   [1mLAGUNA[0m  is  distributed in standard formats ([1mzoo[0m, [1mtar.gz[0m, [1mtar.bz2[0m, [1m-win.zip[0m)
   and  can  be  obtained from [34mhttp://ukrgap.exponenta.ru/laguna.htm[0m. To unpack
-  the  archive  [1mlaguna-3.2.1.zoo[0m  you  need  the  program  [1munzoo[0m, which can be
+  the  archive  [1mlaguna-3.2.2.zoo[0m  you  need  the  program  [1munzoo[0m, which can be
   obtained  from  the  [1mGAP[0m  homepage  [34mhttp://www.gap-system.org/[0m  (see section
   `Distribution').   To  install  [1mLAGUNA[0m,  copy  this  archive  into  the  [1mpkg[0m
   subdirectory  of  your  [1mGAP[0m4.4 installation. The subdirectory [1mlaguna[0m will be
   created in the [1mpkg[0m directory after the following command:
   
-  [22m[32munzoo -x laguna-3.2.1.zoo[0m
+  [22m[32munzoo -x laguna-3.2.2.zoo[0m
   
