@@ -1,4 +1,4 @@
-<!-- $Id: intro.xml,v 1.15 2003/07/27 12:57:52 alexk Exp $ -->
+<!-- $Id: intro.xml,v 1.16 2004/02/15 15:09:23 alexk Exp $ -->
 <Chapter Label="Intro">
 <Heading>Introduction</Heading>    
 
@@ -11,7 +11,7 @@
 <!--[Richard Rossmanith, Centre-by-metabelian group algebras,
 Friedrich-Schiller-Universitaet Jena, 1997]--> <Cite Key="Ros97"/>. 
 Its first version was ported to &GAP;4 and was brought into the standard
-&GAP;4 package format during his visit to St.\ Andrews in September 1998. 
+&GAP;4 package format during his visit to St Andrews in September 1998. 
 <P/>
 
 The main objective of &LAG; is to deal with Lie algebras associated
@@ -121,7 +121,7 @@ restrictions on the type of the operation system. It is designed for &GAP;4.4
 and no compatibility with previous releases of &GAP;4 is guaranteed. 
 <P/>
 
-To use the &LAGUNA; online help it is necessary to install the &GAP;4 package 
+To use the &LAGUNA; online help it is necessary to install the &GAP;4 package 
 &GAPDoc; by Frank L\"ubeck and Max Neunh\"offer, which is available from the 
 &GAP; site or from 
 <URL>http://www.math.rwth-aachen.de/~Frank.Luebeck/GAPDoc/</URL>.
@@ -131,14 +131,14 @@ To use the &LAGUNA; online help it is necessary to install the &GAP;4 package
 (<File>zoo</File>, <File>tar.gz</File>, <File>tar.bz2</File>, 
 <File>-win.zip</File>) and can be obtained from 
 <URL>http://ukrgap.exponenta.ru/laguna.htm</URL>.
-To unpack the archive <File>laguna-3.2.2.zoo</File> you need the program 
+To unpack the archive <File>laguna-3.3.zoo</File> you need the program 
 <File>unzoo</File>, which can be obtained from the &GAP; homepage 
 <URL>http://www.gap-system.org/</URL> (see section `Distribution').
 To install &LAGUNA;, copy this archive into the <File>pkg</File> subdirectory of your 
 &GAP;4.4 installation. The subdirectory <File>laguna</File> will be created in 
 the <File>pkg</File> directory after the following command:
 <P/>
-  <C>unzoo -x laguna-3.2.2.zoo</C>
+  <C>unzoo -x laguna-3.3.zoo</C>
 <P/>
 
 </Section>

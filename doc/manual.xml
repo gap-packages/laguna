@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
 
-<!-- $Id: manual.xml,v 1.20 2003/07/27 12:57:52 alexk Exp $ -->
+<!-- $Id: manual.xml,v 1.24 2005/04/07 10:46:58 alexk Exp $ -->
 
 <!DOCTYPE Book SYSTEM "gapdoc.dtd"
 [<!ENTITY Clanguage "<Package>C</Package>">] 
@@ -13,7 +13,7 @@
 <TitlePage>
   <Title>&LAGUNA;</Title>
   <Subtitle>Lie AlGebras and UNits of group Algebras</Subtitle>
-  <Version>Version 3.2.2</Version>
+  <Version>Version 3.3</Version>
 
   <Author>Victor Bovdi 
           <Email>vbovdi@math.klte.hu</Email>
@@ -46,17 +46,18 @@
 
   <Author>
   Csaba Schneider
-  <Email>csaba@maths.uwa.edu.au</Email>
-  <Homepage>http://www.maths.uwa.edu.au/~csaba/</Homepage>
+  <Email>csaba.schneider@sztaki.hu</Email>
+  <Homepage>http://www.sztaki.hu/~schneider</Homepage>
           <Address>
-    	    School of Mathematics and Statistics<Br/>
-    	    The University of Western Australia<Br/>
-    	    35 Stirling Highway <Br/>
-    	    6009 Crawley Western Australia
+            Informatics Laboratory<Br/>
+            Computer and Automation Research Institute<Br/>
+            The Hungarian Academy of Sciences<Br/>
+	    1111 Budapest, Lagymanyosi u. 11, Hungary
        </Address> 
   </Author>
 
-  <Date>April 2004</Date>
+
+  <Date>April 2005</Date>
 
 <Abstract>
 
@@ -91,7 +92,7 @@ the field of <M>p</M> elements.
 
   V. Bovdi, A. Konovalov, R. Rossmanith and C. Schneider. 
   <E>LAGUNA --- Lie AlGebras and UNits of group Algebras, 
-  Version 3.2.2;</E> 2003 (<URL>http://ukrgap.exponenta.ru/laguna.htm</URL>).
+  Version 3.3;</E> 2005 (<URL>http://ukrgap.exponenta.ru/laguna.htm</URL>).
 </Copyright>
   
 <Acknowledgements>
@@ -99,7 +100,7 @@ the field of <M>p</M> elements.
 Some of the features of &LAGUNA; were already included in the &GAP;4 package
 &LAG; written by the third author, Richard Rossmanith. 
 <!--which was ported to &GAP;4 during his visit to
-St.Andrews in September 1998. Since in the new version the functionality
+St Andrews in September 1998. Since in the new version the functionality
 of the package is no longer restricted to Lie algebras, the package
 changed its name to &LAGUNA; which means "Lie AlGebras and UNits of group
 Algebras".-->
@@ -119,7 +120,7 @@ We acknowledge very much Herbert Pahlings for communicating the package
 and the referee for careful testing &LAGUNA; and useful suggestions.       
 <P/> 
 A part of the work on upgrading &LAG; to &LAGUNA; was done in 2002 during
-Alexander Konovalov's visits to Debrecen, St.\ Andrews and Stuttgart 
+Alexander Konovalov's visits to Debrecen, St Andrews and Stuttgart 
 Universities.
 He would like to express his gratitude to Adalbert Bovdi and
 Victor Bovdi, Colin Campbell, Edmund Robertson and Steve Linton,

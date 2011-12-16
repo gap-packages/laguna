@@ -5,7 +5,7 @@
 #W                                                         Richard Rossmanith
 #W                                                            Csaba Schneider
 ##
-#H  @(#)$Id: laguna.gd,v 1.3 2003/06/18 18:40:10 alexk Exp $
+#H  @(#)$Id: laguna.gd,v 1.15 2005/04/07 10:45:24 alexk Exp $
 ##
 #############################################################################
 
@@ -16,7 +16,7 @@
 ##  LAGInfo
 ##  
 ##  We declare new Info class for LAG algorithms. 
-##  It has 4 levels - 0 (default), 1, 2 and 3
+##  It has 4 levels - 0, 1 (default), 2 and 3
 ##  To change Info level to k, use command SetInfoLevel(LAGInfo, k)
 DeclareInfoClass("LAGInfo");
 
@@ -24,7 +24,7 @@ DeclareInfoClass("LAGInfo");
 
 #############################################################################
 ##
-## SOME CLASSES OF GROUP RINGS AND THEIR GENERAL ATTRIBUTES
+##  SOME CLASSES OF GROUP RINGS AND THEIR GENERAL ATTRIBUTES
 ##
 #############################################################################
 
@@ -90,7 +90,7 @@ DeclareAttribute("UnderlyingField", IsGroupAlgebra);
 
 #############################################################################
 ##
-## GENERAL PROPERTIES AND ATTRIBUTES OF GROUP RING ELEMENTS
+##  GENERAL PROPERTIES AND ATTRIBUTES OF GROUP RING ELEMENTS
 ##
 #############################################################################
 
@@ -145,10 +145,22 @@ DeclareAttribute("Length",
 #A  Augmentation( <x> )
 ##  
 ##  Augmentation of a group ring element $ x = \sum \alpha_g g $ is the sum 
-## of coefficients $ \sum \alpha_g $
+##  of coefficients $ \sum \alpha_g $
 DeclareAttribute("Augmentation", 
                   IsElementOfMagmaRingModuloRelations and 
                   IsMagmaRingObjDefaultRep );
+
+
+#############################################################################
+##
+#O  PartialAugmentations( <KG>, <x> )
+##  
+##  Returns a list of two lists, the first being partial augmentations of x
+##  and the second - representatives of corresponding conjugacy classes
+DeclareOperation("PartialAugmentations", 
+                 [IsGroupRing, 
+                  IsElementOfMagmaRingModuloRelations and 
+                  IsMagmaRingObjDefaultRep ]);
 
 
 #############################################################################
@@ -175,31 +187,46 @@ DeclareAttribute("IsSymmetric",
 ##
 #A  IsUnitary( <x> )
 ##  
-##  An unit of a group ring is called unitary if the classical involution
-##  inverts it
+##  An unit of a group ring is called unitary if x^-1 = Involution(x) * eps,
+##  where eps is an invertible element from an underlying ring
 DeclareAttribute("IsUnitary", 
                   IsElementOfMagmaRingModuloRelations and
 		  IsMagmaRingObjDefaultRep );
 
+
+
 #############################################################################
 ##
-## AUGMENTATION IDEAL AND GROUPS OF UNITS OF GROUP RINGS
+##  AUGMENTATION IDEAL AND GROUPS OF UNITS OF GROUP RINGS
 ##
 #############################################################################
+
+
+#############################################################################
+##
+#O  LeftIdealBySubgroup(     <KG>, <H> )
+#O  RightIdealBySubgroup(    <KG>, <H> )
+#O  TwoSidedIdealBySubgroup( <KG>, <H> )
+#O  IdealBySubgroup(         <KG>, <H> )
+##  
+DeclareOperation( "LeftIdealBySubgroup" ,    [ IsGroupRing, IsGroup ] );
+DeclareOperation( "RightIdealBySubgroup",    [ IsGroupRing, IsGroup ] );
+DeclareOperation( "TwoSidedIdealBySubgroup", [ IsGroupRing, IsGroup ] );
+DeclareSynonym(   "IdealBySubgroup",         TwoSidedIdealBySubgroup  );
 
 
 #############################################################################
 ##
 #A  WeightedBasis( <KG> )
 ##  
-## KG must be a modular group algebra. The weighted basis is a basis of the 
-## fundamental ideal such that each power of the fundamental ideal is 
-## spanned by a subset of the basis. Note that this function actually 
-## constructs a basis for the *fundamental ideal* and not for KG.
-## Returns a record whose basis entry is the basis and the weights entry
-## is a list of corresponding weights of basis elements with respect to     
-## the fundamental ideal filtration.
-## This function uses the Jennings basis of the underlying group.    
+##  KG must be a modular group algebra. The weighted basis is a basis of the 
+##  fundamental ideal such that each power of the fundamental ideal is 
+##  spanned by a subset of the basis. Note that this function actually 
+##  constructs a basis for the *fundamental ideal* and not for KG.
+##  Returns a record whose basis entry is the basis and the weights entry
+##  is a list of corresponding weights of basis elements with respect to     
+##  the fundamental ideal filtration.
+##  This function uses the Jennings basis of the underlying group.    
 DeclareAttribute("WeightedBasis", IsPModularGroupAlgebra);
 
 
@@ -207,10 +234,10 @@ DeclareAttribute("WeightedBasis", IsPModularGroupAlgebra);
 ##
 #A  AugmentationIdealPowerSeries( <KG> )
 ##  
-## KG is a modular group algebra.    
-## Returns a list whose elements are the terms of the augmentation ideal    
-## filtration of I. That is AugmentationIdealPowerSeries(KG)[k] = I^k,
-## where I is the augmentation ideal of KG.
+##  KG is a modular group algebra.    
+##  Returns a list whose elements are the terms of the augmentation ideal    
+##  filtration of I. That is AugmentationIdealPowerSeries(KG)[k] = I^k,
+##  where I is the augmentation ideal of KG.
 DeclareAttribute("AugmentationIdealPowerSeries", IsPModularGroupAlgebra);
 
 
@@ -228,11 +255,13 @@ DeclareAttribute("AugmentationIdealNilpotencyIndex", IsPModularGroupAlgebra);
 DeclareAttribute("AugmentationIdealOfDerivedSubgroupNilpotencyIndex", 
                   IsPModularGroupAlgebra);
 
+
 #############################################################################
 ##
 #P  IsGroupOfUnitsOfMagmaRing( <U> )
 ##  
 DeclareProperty("IsGroupOfUnitsOfMagmaRing", IsGroup);
+
 
 #############################################################################
 ##
@@ -240,11 +269,13 @@ DeclareProperty("IsGroupOfUnitsOfMagmaRing", IsGroup);
 ##  
 DeclareProperty("IsUnitGroupOfGroupRing", IsGroupOfUnitsOfMagmaRing);
 
+
 #############################################################################
 ##
 #P  IsNormalizedUnitGroupOfGroupRing( <U> )
 ##  
 DeclareProperty("IsNormalizedUnitGroupOfGroupRing", IsGroupOfUnitsOfMagmaRing);
+
 
 #############################################################################
 ##
@@ -252,14 +283,16 @@ DeclareProperty("IsNormalizedUnitGroupOfGroupRing", IsGroupOfUnitsOfMagmaRing);
 ##  
 DeclareAttribute("UnderlyingGroupRing", IsGroupOfUnitsOfMagmaRing);
 
+
 #############################################################################
 ##
-#O  NormalizedUnitCF( <U> )
+#O  NormalizedUnitCF( <KG>, <u> )
 ##  
 DeclareOperation( "NormalizedUnitCF", 
                   [ IsPModularGroupAlgebra, 
                     IsElementOfMagmaRingModuloRelations and 
                     IsMagmaRingObjDefaultRep] );
+
 
 #############################################################################
 ##
@@ -267,11 +300,13 @@ DeclareOperation( "NormalizedUnitCF",
 ##  
 DeclareAttribute("NormalizedUnitGroup", IsPModularGroupAlgebra);
 
+
 #############################################################################
 ##
 #A  PcNormalizedUnitGroup( <KG> )
 ##  
 DeclareAttribute("PcNormalizedUnitGroup", IsPModularGroupAlgebra);
+
 
 #############################################################################
 ##
@@ -279,12 +314,14 @@ DeclareAttribute("PcNormalizedUnitGroup", IsPModularGroupAlgebra);
 ##  
 DeclareAttribute("PcUnits", IsPModularGroupAlgebra);
 
+
 #############################################################################
 ##
 #A  NaturalBijectionToPcNormalizedUnitGroup( <KG> )
 ##  
 DeclareAttribute("NaturalBijectionToPcNormalizedUnitGroup", 
                   IsPModularGroupAlgebra);
+
 
 #############################################################################
 ##
@@ -301,10 +338,56 @@ DeclareAttribute("NaturalBijectionToNormalizedUnitGroup",
 DeclareAttribute("GroupBases", IsPModularGroupAlgebra);
 
 
+#############################################################################
+##
+#O  BicyclicUnitOfType1( <a>, <g> )
+#O  BicyclicUnitOfType2( <a>, <g> )
+##  
+## a and g are elements of underlying group, emebedded to its group ring.
+## Returns the bicyclic units u_(a,g) corresponding to a and g. Note that
+## u_(a,g) is normally defined if a and g are elements of the underlying
+## group G, but this function does not check whether this condition holds.
+## If ord a = n, then the bicycle unit of the 1st type is defined as
+##
+##       u_{a,g} = 1 + (a-1) * g * ( 1 + a + a^2 + ... +a^{n-1} )
+##
+## and the bicycle unit of the 2nd type is defined as
+##
+##       v_{a,g} = 1 + ( 1 + a + a^2 + ... +a^{n-1} ) * g * a 
+## 
+## u_{a,g} and v_{a,g} may coincide for some a and g, but in general
+## this does not hold.
+##
+DeclareOperation("BicyclicUnitOfType1",
+       [IsElementOfMagmaRingModuloRelations and IsMagmaRingObjDefaultRep,
+        IsElementOfMagmaRingModuloRelations and IsMagmaRingObjDefaultRep]);
+
+DeclareOperation("BicyclicUnitOfType2",
+       [IsElementOfMagmaRingModuloRelations and IsMagmaRingObjDefaultRep,
+        IsElementOfMagmaRingModuloRelations and IsMagmaRingObjDefaultRep]);
+
 
 #############################################################################
 ##
-## LIE PROPERTIES OF GROUP ALGEBRAS
+#A  BicyclicUnitGroup( <V(KG)> )
+##  
+##  KG is a modular group algebra and V(KG) is its normalized unit group.
+##  Returns the subgroup of V(KG) generated by all bicyclic units u_{g,h}
+##  and v_{g,h}, where g and h run over the elements of the underlying
+##  p-group, and h do not belongs to the normalizer of <g> in G.
+DeclareAttribute("BicyclicUnitGroup", IsNormalizedUnitGroupOfGroupRing);
+
+
+#############################################################################
+##
+#A  UnitarySubgroup( <V(KG)> )
+##  
+DeclareAttribute("UnitarySubgroup", IsNormalizedUnitGroupOfGroupRing);
+
+
+#############################################################################
+##
+##  LIE PROPERTIES OF GROUP ALGEBRAS
 ##
 #############################################################################
 
@@ -446,12 +529,19 @@ DeclareProperty( "IsLieCentreByMetabelian",
 ##  
 DeclareAttribute("LieUpperNilpotencyIndex", IsPModularGroupAlgebra);
 
+
 #############################################################################
 ##
 #A  LieLowerNilpotencyIndex( <KG> )
 ##  
 DeclareAttribute("LieLowerNilpotencyIndex", IsPModularGroupAlgebra);
 
+
+#############################################################################
+##
+#A  LieDerivedLength( <KG> )
+##  
+DeclareAttribute("LieDerivedLength", IsLieAlgebra);
 
 
 #############################################################################
@@ -470,6 +560,7 @@ DeclareAttribute("LieLowerNilpotencyIndex", IsPModularGroupAlgebra);
 ##  that the underlying field $F$ has characteristic 2.)
 DeclareAttribute( "SubgroupsOfIndexTwo", IsGroup);
 
+
 #############################################################################
 ##
 #A  DihedralDepth( <G> )
@@ -478,11 +569,13 @@ DeclareAttribute( "SubgroupsOfIndexTwo", IsGroup);
 ##  size of the dihedral subgroup contained in a group $G$ is $2^(d+1)$
 DeclareAttribute( "DihedralDepth", IsGroup);
 
+
 #############################################################################
 ##
 #A  DimensionBasis( <G> )
 ##  
 DeclareAttribute("DimensionBasis", IsGroup);
+
 
 #############################################################################
 ##
@@ -491,13 +584,16 @@ DeclareAttribute("DimensionBasis", IsGroup);
 DeclareAttribute("LieDimensionSubgroups", IsGroup);
 
 
+#############################################################################
+##
+#A  LieUpperCodimensionSeries( <KG> )
+#A  LieUpperCodimensionSeries( <G> )
+##  
+DeclareAttribute( "LieUpperCodimensionSeries", IsGroupRing);
+DeclareAttribute( "LieUpperCodimensionSeries", IsGroup);
+
 
 #############################################################################
 ##
 #E
 ##
-
-
-
-
-

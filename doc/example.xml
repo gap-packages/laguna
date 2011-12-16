@@ -240,6 +240,8 @@ gap> List( AsList( G ), x -> ( x^Embedding( G, KG ) )^t );
 ]]>
 </Example>
 
+<Alt Only="LaTeX">\newpage</Alt>
+
 The second isomorphism is the inverse of the first.
 
 <Example>
@@ -292,8 +294,10 @@ gap> LowerCentralSeries( W );
 ]]>
 </Example>
 
+<Alt Only="LaTeX">\newpage</Alt>
+
 Let's now compute, for instance, a minimal system of generators of the centre of
-the normalised unit group. Fist we carry out the computation in the group 
+the normalised unit group. First we carry out the computation in the group 
 which is determined by the power-commutator presentation, then we map the 
 result into our group algebra.
 
