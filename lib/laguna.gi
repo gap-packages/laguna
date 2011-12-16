@@ -1319,6 +1319,10 @@ InstallMethod( LieAlgebraByDomain,
     function( A )
 
        local fam,L;
+       
+       if not IsGroupAlgebra( A ) then
+         TryNextMethod();
+       fi;
 
        Info(LAGInfo, 1, "LAGUNA package: Constructing Lie algebra ..." );
 
