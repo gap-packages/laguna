@@ -352,7 +352,7 @@ InstallOtherMethod (IsUnit,
             
           S:=Group(Support(elt)); 
           if IsPGroup(S) then
-            if PrimePGroup(S) mod Characteristic(ZeroCoefficient(elt)^0)=0 then
+            if PrimePGroup(S) mod Characteristic( elt ) = 0 then
               return not Augmentation( elt ) = ZeroCoefficient( elt ) ;
             else  
               TryNextMethod(); # since our case is not modular               
@@ -378,9 +378,12 @@ InstallOtherMethod( InverseOp,
   local inv, pow, x, u, S, a;
         
   # if we have element of the form coefficient*group element
+  # or if we work in characteristic zero,
   # we switch to use standart method for magma rings
         
   if Length(CoefficientsAndMagmaElements(elt)) = 2 then
+    TryNextMethod();
+  elif Characteristic( elt ) = 0 then
     TryNextMethod();
   else
         
@@ -389,7 +392,7 @@ InstallOtherMethod( InverseOp,
             
   S:=Group(Support(elt)); 
     if IsPGroup(S) then
-      if PrimePGroup(S) mod Characteristic(ZeroCoefficient(elt)^0) = 0 then
+      if PrimePGroup(S) mod Characteristic( elt ) = 0 then
         a:=Augmentation( elt );
         if a = ZeroCoefficient( elt ) then
           return fail; # augmentation zero element is not a unit

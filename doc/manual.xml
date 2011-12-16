@@ -13,7 +13,7 @@
 <TitlePage>
   <Title>&LAGUNA;</Title>
   <Subtitle>Lie AlGebras and UNits of group Algebras</Subtitle>
-  <Version>Version 3.3.2</Version>
+  <Version>Version 3.3.3</Version>
 
   <Author>Victor Bovdi 
           <Email>vbovdi@math.klte.hu</Email>
@@ -57,7 +57,7 @@
   </Author>
 
 
-  <Date>March 2006</Date>
+  <Date>April 2006</Date>
 
 <Abstract>
 
@@ -81,8 +81,11 @@ the field of <M>p</M> elements.
   &copyright; 2003-2006 by Victor Bovdi, Alexander Konovalov, 
   Richard Rossmanith, and Csaba Schneider<P/>
 
-  We adopt the copyright regulations of &GAP; from the
-  copyright notice in the &GAP; manual.<P/>
+  &LAGUNA; is free software; you can redistribute it and/or modify it 
+  under the terms of the GNU General Public License as published by 
+  the Free Software Foundation; either version 2 of the License, or 
+  (at your option) any later version. For details, see the FSF's own site
+  <URL>http://www.gnu.org/licenses/gpl.html</URL>.<P/>
 
   If you obtained &LAGUNA;, we would be grateful for a short notification
   sent to one of the authors.<P/>
@@ -92,7 +95,7 @@ the field of <M>p</M> elements.
 
   V. Bovdi, A. Konovalov, R. Rossmanith and C. Schneider. 
   <E>LAGUNA --- Lie AlGebras and UNits of group Algebras, 
-  Version 3.3.2;</E> 2006 (<URL>http://ukrgap.exponenta.ru/laguna.htm</URL>).
+  Version 3.3.3;</E> 2006 (<URL>http://ukrgap.exponenta.ru/laguna.htm</URL>).
 </Copyright>
   
 <Acknowledgements>

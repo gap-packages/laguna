@@ -131,14 +131,14 @@ To use the &LAGUNA; online help it is necessary to install the &GAP;4 package
 (<File>zoo</File>, <File>tar.gz</File>, <File>tar.bz2</File>, 
 <File>-win.zip</File>) and can be obtained from 
 <URL>http://ukrgap.exponenta.ru/laguna.htm</URL>.
-To unpack the archive <File>laguna-3.3.2.zoo</File> you need the program 
+To unpack the archive <File>laguna-3.3.3.zoo</File> you need the program 
 <File>unzoo</File>, which can be obtained from the &GAP; homepage 
 <URL>http://www.gap-system.org/</URL> (see section `Distribution').
 To install &LAGUNA;, copy this archive into the <File>pkg</File> subdirectory of your 
 &GAP;4.4 installation. The subdirectory <File>laguna</File> will be created in 
 the <File>pkg</File> directory after the following command:
 <P/>
-  <C>unzoo -x laguna-3.3.2.zoo</C>
+  <C>unzoo -x laguna-3.3.3.zoo</C>
 <P/>
 
 </Section>
