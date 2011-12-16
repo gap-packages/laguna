@@ -136,6 +136,7 @@
     [22m[35m# First we create an element x to use in in the series of examples.[0m
     [22m[35m# We map the minimal generating system of the group G to its group algebra[0m
     [22m[35m# and denote their images as a and b[0m
+    [22m[35mgap> G:=DihedralGroup(16);; KG:=GroupRing(GF(2),G);;[0m
     [22m[35mgap> l := List( MinimalGeneratingSet( G ), g -> g^Embedding( G, KG ) );[0m
     [22m[35m[ (Z(2)^0)*f1, (Z(2)^0)*f2 ][0m
     [22m[35mgap> a := l[1]; b := l[2]; e := One( KG ); # we denote the identity by e[0m
@@ -243,8 +244,7 @@
     [22m[35m(Z(2)^0)*<identity> of ...+(Z(2)^0)*f1+(Z(2)^0)*f2+(Z(2)^0)*f1*f2+(Z(2)^[0m
     [22m[35m0)*f1*f3[0m
     [22m[35mgap> PartialAugmentations( KG, y );[0m
-    [22m[35m[ [ Z(2)^0, 0*Z(2), Z(2)^0, Z(2)^0 ], [ <identity> of ..., f1, f2, f1*f2 ][0m
-    [22m[35m ]    [0m
+    [22m[35m[ [ Z(2)^0, 0*Z(2), Z(2)^0, Z(2)^0 ], [ <identity> of ..., f1, f2, f1*f2 ] ]    [0m
     [22m[35m[0m
   [22m[35m------------------------------------------------------------------[0m
   
@@ -359,9 +359,9 @@
     [22m[35mgap> y;[0m
     [22m[35m(Z(2)^0)*f1+(Z(2)^0)*f2+(Z(2)^0)*f1*f2[0m
     [22m[35mgap> y^-1;[0m
-    [22m[35m(Z(2)^0)*f1+(Z(2)^0)*f2+(Z(2)^0)*f3+(Z(2)^0)*f4+(Z(2)^0)*f1*f2+(Z(2)^0)*f1*f3+([0m
-    [22m[35mZ(2)^0)*f1*f4+(Z(2)^0)*f2*f4+(Z(2)^0)*f1*f2*f4+(Z(2)^0)*f2*f3*f4+(Z(2)^[0m
-    [22m[35m0)*f1*f2*f3*f4[0m
+    [22m[35m(Z(2)^0)*f1+(Z(2)^0)*f2+(Z(2)^0)*f3+(Z(2)^0)*f4+(Z(2)^0)*f1*f2+(Z(2)^[0m
+    [22m[35m0)*f1*f3+(Z(2)^0)*f1*f4+(Z(2)^0)*f2*f4+(Z(2)^0)*f1*f2*f4+(Z(2)^0)*f2*f3*f4+([0m
+    [22m[35mZ(2)^0)*f1*f2*f3*f4[0m
     [22m[35mgap> y * y^-1;[0m
     [22m[35m(Z(2)^0)*<identity> of ...    [0m
     [22m[35m[0m
@@ -369,7 +369,9 @@
   
   [1m[4m[31m4.2-12 BicyclicUnitOfType1[0m
   
+  [1m[34m> BicyclicUnitOfType1( [0m[22m[34mKG, a, g[0m[1m[34m ) _________________________________[0moperation
   [1m[34m> BicyclicUnitOfType1( [0m[22m[34ma, g[0m[1m[34m ) _____________________________________[0moperation
+  [1m[34m> BicyclicUnitOfType2( [0m[22m[34mKG, a, g[0m[1m[34m ) _________________________________[0moperation
   [1m[34m> BicyclicUnitOfType2( [0m[22m[34ma, g[0m[1m[34m ) _____________________________________[0moperation
   [1mReturns:[0m  an element of a group ring
   
@@ -378,12 +380,13 @@
   for  any  element  g of the group G not containing in the normalizer N_G(< a
   >),  and the units u_a,g = 1 + (a-1) * g * alpha and v_a,g = 1 + alpha * g *
   (a-1)  are called bicyclic units. Note that u_a,g and v_a,g may coincide for
-  some  a  and  g,  but in general this does not hold. These methods construct
-  bicyclic  units  of  both  types when [22m[34ma[0m and [22m[34mg[0m are elements of the underlying
-  group  G of a group ring KG, already embedded to the group ring KG using the
-  mapping  [22m[32mEmbedding(  G, KG )[0m. Note that it is not actually checked that g is
-  not  contained  in N_G(< a >), because this is verified in [1m[34mBicyclicUnitGroup[0m
-  ([1m4.4-13[0m).
+  some  a  and  g,  but  in  general this does not hold. In the three-argument
+  version  these  methods  construct bicyclic units of both types when [22m[34ma[0m and [22m[34mg[0m
+  are  elements of the underlying group G of a group ring [22m[34mKG[0m. The two-argument
+  version  accepts images of elements [22m[34ma[0m and [22m[34mg[0m from the underlying group in the
+  group ring KG obtained using the mapping [22m[32mEmbedding( G, KG )[0m. Note that it is
+  not  actually checked that g is not contained in N_G(< a >), because this is
+  verified in [1m[34mBicyclicUnitGroup[0m ([1m4.4-13[0m).
   
   [22m[35m---------------------------  Example  ----------------------------[0m
     [22m[35m[0m
@@ -429,10 +432,10 @@
     [22m[35mgap> e := Embedding( G,FG );[0m
     [22m[35m<mapping: SymmetricGroup( [ 1 .. 3 ] ) -> AlgebraWithOne( GF(2), ... ) >[0m
     [22m[35mgap> x := (1,2)^e; y := (1,3)^e;[0m
-    [22m[35mZ(2)^0*(1,2)[0m
-    [22m[35mZ(2)^0*(1,3)[0m
+    [22m[35m(Z(2)^0)*(1,2)[0m
+    [22m[35m(Z(2)^0)*(1,3)[0m
     [22m[35mgap> a := AugmentationHomomorphism( FG );[0m
-    [22m[35m[ Z(2)^0*(1,2,3), Z(2)^0*(1,2) ] -> [ Z(2)^0, Z(2)^0 ][0m
+    [22m[35m[ (Z(2)^0)*(1,2,3), (Z(2)^0)*(1,2) ] -> [ Z(2)^0, Z(2)^0 ][0m
     [22m[35mgap> x^a; y^a; ( x + y )^a; # this is slower[0m
     [22m[35mZ(2)^0[0m
     [22m[35mZ(2)^0[0m
@@ -460,7 +463,8 @@
     [22m[35mgap> KG := GroupRing( GF( 2 ), DihedralGroup( 16 ) );[0m
     [22m[35m<algebra-with-one over GF(2), with 4 generators>[0m
     [22m[35mgap> AugmentationIdeal( KG );[0m
-    [22m[35m<two-sided ideal in <algebra-with-one of dimension 16 over GF(2)>, (dimension 15)>    [0m
+    [22m[35m<two-sided ideal in <algebra-with-one over GF(2), with 4 generators>,[0m
+    [22m[35m  (dimension 15)>[0m
     [22m[35m[0m
   [22m[35m------------------------------------------------------------------[0m
   
@@ -480,7 +484,8 @@
     [22m[35mgap> KG := GroupRing( GF( 2 ), DihedralGroup( 16 ) );[0m
     [22m[35m<algebra-with-one over GF(2), with 4 generators>[0m
     [22m[35mgap> RadicalOfAlgebra( KG );[0m
-    [22m[35m<two-sided ideal in <algebra-with-one of dimension 16 over GF(2)>, (dimension 15)>[0m
+    [22m[35m<two-sided ideal in <algebra-with-one over GF(2), with 4 generators>,[0m
+    [22m[35m  (dimension 15)>[0m
     [22m[35mgap> RadicalOfAlgebra( KG ) = AugmentationIdeal( KG );[0m
     [22m[35mtrue     [0m
     [22m[35m[0m
@@ -508,9 +513,8 @@
   identity element of the group.
   
   The  method  returns a record whose basis entry is the basis and the weights
-  entry is a list of the corresponding weights the of basis elements.
-  
-  For more details, see Section [1m3.3[0m.
+  entry  is  a  list  of  the corresponding weights the of basis elements. See
+  Section [1m3.3[0m for more details.
   
   [22m[35m---------------------------  Example  ----------------------------[0m
     [22m[35m[0m
@@ -518,9 +522,9 @@
     [22m[35m<algebra-with-one over GF(2), with 2 generators>[0m
     [22m[35mgap> WeightedBasis( KG );[0m
     [22m[35mrec([0m
-    [22m[35m  weightedBasis := [ (Z(2)^0)*<identity> of ...+(Z(2)^0)*f2, (Z(2)^0)*<identity> of\[0m
-    [22m[35m ...+(Z(2)^0)*f1, (Z(2)^0)*<identity> of ...+(Z(2)^0)*f1+(Z(2)^0)*f2+(Z(2)^[0m
-    [22m[35m        0)*f1*f2 ], weights := [ 1, 1, 2 ] )[0m
+    [22m[35m  weightedBasis := [ (Z(2)^0)*<identity> of ...+(Z(2)^0)*f2, (Z(2)^0)*<identity>[0m
+    [22m[35m        of ...+(Z(2)^0)*f1, (Z(2)^0)*<identity> of ...+(Z(2)^0)*f1+(Z(2)^0)*f2+([0m
+    [22m[35m        Z(2)^0)*f1*f2 ], weights := [ 1, 1, 2 ] )[0m
     [22m[35m[0m
   [22m[35m------------------------------------------------------------------[0m
   
@@ -581,7 +585,7 @@
     [22m[35m<algebra-with-one over GF(2), with 4 generators>[0m
     [22m[35mgap> AugmentationIdealOfDerivedSubgroupNilpotencyIndex( KG );[0m
     [22m[35m4[0m
-    [22m[35mgap> D := DerivedSubgroup( G );[0m
+    [22m[35mgap> D := DerivedSubgroup( UnderlyingGroup( KG ) );[0m
     [22m[35mGroup([ f3, f4 ])[0m
     [22m[35mgap> KD := GroupRing( GF( 2 ), D );[0m
     [22m[35m<algebra-with-one over GF(2), with 2 generators>[0m
@@ -623,14 +627,14 @@
     [22m[35mGroup([ f3, f4 ])[0m
     [22m[35mgap> LeftIdealBySubgroup( KG, D );[0m
     [22m[35m<two-sided ideal in <algebra-with-one over GF(2), with 4 generators>,[0m
-    [22m[35m  (dimension 3)>                              [0m
+    [22m[35m  (dimension 12)>                              [0m
     [22m[35mgap> H := Subgroup( G, [ GeneratorsOfGroup(G)[1] ]);[0m
     [22m[35mGroup([ f1 ])[0m
     [22m[35mgap> IsNormal( G, H );[0m
     [22m[35mfalse[0m
     [22m[35mgap> LeftIdealBySubgroup( KG, H );[0m
     [22m[35m<left ideal in <algebra-with-one over GF(2), with 4 generators>,[0m
-    [22m[35m  (dimension 1)>[0m
+    [22m[35m  (dimension 8)>[0m
     [22m[35m[0m
   [22m[35m------------------------------------------------------------------[0m
   
@@ -702,8 +706,9 @@
   [22m[35m---------------------------  Example  ----------------------------[0m
     [22m[35m[0m
     [22m[35mgap> f := NaturalBijectionToPcNormalizedUnitGroup( KG );[0m
-    [22m[35mMappingByFunction( <group of size 32768 with 15 generators>, <pc group of size[0m
-    [22m[35m32768 with 15 generators>, function( x ) ... end )[0m
+    [22m[35mMappingByFunction( <group of size 32768 with[0m
+    [22m[35m15 generators>, <pc group of size 32768 with[0m
+    [22m[35m15 generators>, function( x ) ... end )[0m
     [22m[35mgap> u := GeneratorsOfGroup( V )[4];;[0m
     [22m[35mgap> u^f;[0m
     [22m[35mf4   [0m
@@ -755,7 +760,8 @@
     [22m[35mgap> ucs := UpperCentralSeries( V );[0m
     [22m[35m[ <pc group of size 32768 with 15 generators>,[0m
     [22m[35m  <pc group of size 4096 with 12 generators>,[0m
-    [22m[35m  Group([ f3*f5*f13*f15, f7, f11, f13, f14, f15, f12, f9*f12, f10 ]),[0m
+    [22m[35m  Group([ f3*f5*f13*f15, f7, f15, f13*f15, f14*f15, f11*f13*f14*f15, f12,[0m
+    [22m[35m      f9*f12, f10 ]),[0m
     [22m[35m  Group([ f3*f5*f13*f15, f7, f15, f13*f15, f14*f15, f11*f13*f14*f15 ]),[0m
     [22m[35m  Group([  ]) ][0m
     [22m[35mgap> f := Embedding( G, V );[0m
@@ -787,6 +793,7 @@
   [22m[35m---------------------------  Example  ----------------------------[0m
     [22m[35m[0m
     [22m[35mgap> U := Units( KG );[0m
+    [22m[35m#I  LAGUNA package: Computing the unit group ...[0m
     [22m[35m<group of size 32768 with 15 generators>[0m
     [22m[35m# now elements of U are already in KG[0m
     [22m[35mgap> GeneratorsOfGroup( U )[5];[0m
@@ -795,6 +802,7 @@
     [22m[35mgap> FH := GroupRing( GF(3), SmallGroup(27,3) );[0m
     [22m[35m<algebra-with-one over GF(3), with 3 generators>[0m
     [22m[35mgap> T := Units( FH );[0m
+    [22m[35m#I  LAGUNA package: Computing the unit group ...[0m
     [22m[35m<group of size 5083731656658 with 27 generators>[0m
     [22m[35mgap> x := GeneratorsOfGroup( T )[1];[0m
     [22m[35mTuple( [ Z(3), (Z(3)^0)*<identity> of ... ] ) [0m
@@ -895,13 +903,13 @@
   [22m[35m---------------------------  Example  ----------------------------[0m
     [22m[35m[0m
     [22m[35mgap> UnderlyingGroupRing( Units( KG ) );[0m
-    [22m[35m<algebra-with-one of dimension 16 over GF(2)>[0m
+    [22m[35m<algebra-with-one over GF(2), with 4 generators>[0m
     [22m[35mgap> UnderlyingGroupRing( PcUnits( KG ) );[0m
-    [22m[35m<algebra-with-one of dimension 16 over GF(2)>[0m
+    [22m[35m<algebra-with-one over GF(2), with 4 generators>[0m
     [22m[35mgap> UnderlyingGroupRing( NormalizedUnitGroup( KG ) );[0m
-    [22m[35m<algebra-with-one of dimension 16 over GF(2)>[0m
+    [22m[35m<algebra-with-one over GF(2), with 4 generators>[0m
     [22m[35mgap> UnderlyingGroupRing( PcNormalizedUnitGroup( KG ) );[0m
-    [22m[35m<algebra-with-one of dimension 16 over GF(2)>     [0m
+    [22m[35m<algebra-with-one over GF(2), with 4 generators>[0m
     [22m[35m[0m
   [22m[35m------------------------------------------------------------------[0m
   
@@ -970,7 +978,19 @@
     [22m[35m[0m
   [22m[35m------------------------------------------------------------------[0m
   
-  [1m[4m[31m4.4-14 GroupBases[0m
+  [1m[4m[31m4.4-14 AugmentationIdealPowerFactorGroup[0m
+  
+  [1m[34m> AugmentationIdealPowerFactorGroup( [0m[22m[34mKG, n[0m[1m[34m ) ______________________[0moperation
+  [1mReturns:[0m  PcGroup
+  
+  ????????????????????????????????????????
+  
+  [22m[35m---------------------------  Example  ----------------------------[0m
+    [22m[35m[0m
+    [22m[35m[0m
+  [22m[35m------------------------------------------------------------------[0m
+  
+  [1m[4m[31m4.4-15 GroupBases[0m
   
   [1m[34m> GroupBases( [0m[22m[34mKG[0m[1m[34m ) ________________________________________________[0mattribute
   [1mReturns:[0m  a list of lists of group rings elements
@@ -993,12 +1013,13 @@
     [22m[35mgap> Length( gb );[0m
     [22m[35m32[0m
     [22m[35mgap> gb[1];[0m
-    [22m[35m[ (Z(2)^0)*<identity> of ..., (Z(2)^0)*f3, (Z(2)^0)*f1*f2+(Z(2)^0)*f2*f3+(Z(2)^[0m
-    [22m[35m    0)*f1*f2*f3, (Z(2)^0)*f2+(Z(2)^0)*f1*f2+(Z(2)^0)*f1*f2*f3,[0m
+    [22m[35m[ (Z(2)^0)*<identity> of ..., (Z(2)^0)*f3,[0m
+    [22m[35m  (Z(2)^0)*f1*f2+(Z(2)^0)*f2*f3+(Z(2)^0)*f1*f2*f3,[0m
+    [22m[35m  (Z(2)^0)*f2+(Z(2)^0)*f1*f2+(Z(2)^0)*f1*f2*f3,[0m
     [22m[35m  (Z(2)^0)*<identity> of ...+(Z(2)^0)*f2+(Z(2)^0)*f3+(Z(2)^0)*f2*f3+(Z(2)^[0m
     [22m[35m    0)*f1*f2*f3, (Z(2)^0)*f2+(Z(2)^0)*f1*f3+(Z(2)^0)*f2*f3,[0m
-    [22m[35m  (Z(2)^0)*<identity> of ...+(Z(2)^0)*f2+(Z(2)^0)*f3+(Z(2)^0)*f1*f2+(Z(2)^0)*f2*f3,[0m
-    [22m[35m  (Z(2)^0)*f1+(Z(2)^0)*f2+(Z(2)^0)*f2*f3 ][0m
+    [22m[35m  (Z(2)^0)*<identity> of ...+(Z(2)^0)*f2+(Z(2)^0)*f3+(Z(2)^0)*f1*f2+(Z(2)^[0m
+    [22m[35m    0)*f2*f3, (Z(2)^0)*f1+(Z(2)^0)*f2+(Z(2)^0)*f2*f3 ][0m
     [22m[35mgap> Length( last );[0m
     [22m[35m8    [0m
     [22m[35m[0m
@@ -1024,6 +1045,7 @@
     [22m[35mgap> G := SymmetricGroup(3);; FG := GroupRing( GF( 2 ), G );[0m
     [22m[35m<algebra-with-one over GF(2), with 2 generators>[0m
     [22m[35mgap> L := LieAlgebra( FG );[0m
+    [22m[35m#I  LAGUNA package: Constructing Lie algebra ...[0m
     [22m[35m<Lie algebra over GF(2)>[0m
     [22m[35m[0m
   [22m[35m------------------------------------------------------------------[0m
@@ -1041,6 +1063,7 @@
     [22m[35mgap> KG := GroupRing( GF(3), DihedralGroup(16) );[0m
     [22m[35m<algebra-with-one over GF(3), with 4 generators>[0m
     [22m[35mgap> L := LieAlgebra ( KG );[0m
+    [22m[35m#I  LAGUNA package: Constructing Lie algebra ...[0m
     [22m[35m<Lie algebra over GF(3)>[0m
     [22m[35mgap> IsLieAlgebraByAssociativeAlgebra( L );[0m
     [22m[35mtrue[0m
@@ -1060,10 +1083,11 @@
     [22m[35mgap> KG := GroupRing( GF(2), DihedralGroup(16) ); [0m
     [22m[35m<algebra-with-one over GF(2), with 4 generators>[0m
     [22m[35mgap> L := LieAlgebra ( KG );[0m
+    [22m[35m#I  LAGUNA package: Constructing Lie algebra ...[0m
     [22m[35m<Lie algebra over GF(2)>[0m
     [22m[35mgap> UnderlyingAssociativeAlgebra( L );[0m
     [22m[35m<algebra-with-one over GF(2), with 4 generators>[0m
-    [22m[35mgap> last = M;[0m
+    [22m[35mgap> last = KG;[0m
     [22m[35mtrue  [0m
     [22m[35m[0m
   [22m[35m------------------------------------------------------------------[0m
@@ -1112,6 +1136,7 @@
     [22m[35mSym( [ 1 .. 3 ] )[0m
     [22m[35m<algebra-with-one over GF(2), with 2 generators>[0m
     [22m[35mgap> L := LieAlgebra( FG );[0m
+    [22m[35m#I  LAGUNA package: Constructing Lie algebra ...[0m
     [22m[35m<Lie algebra over GF(2)>[0m
     [22m[35mgap> s := NaturalBijectionToAssociativeAlgebra( L );[0m
     [22m[35mMappingByFunction( <Lie algebra over GF(2)>, <algebra-with-one over GF([0m
@@ -1136,6 +1161,7 @@
     [22m[35mSym( [ 1 .. 3 ] )[0m
     [22m[35m<algebra-with-one over GF(2), with 2 generators>[0m
     [22m[35mgap> L := LieAlgebra( FG );[0m
+    [22m[35m#I  LAGUNA package: Constructing Lie algebra ...[0m
     [22m[35m<Lie algebra over GF(2)>[0m
     [22m[35mgap> IsLieAlgebraOfGroupRing( L );[0m
     [22m[35mtrue   [0m
@@ -1158,6 +1184,7 @@
     [22m[35mSym( [ 1 .. 3 ] )[0m
     [22m[35m<algebra-with-one over GF(2), with 2 generators>[0m
     [22m[35mgap> L := LieAlgebra( FG );[0m
+    [22m[35m#I  LAGUNA package: Constructing Lie algebra ...[0m
     [22m[35m<Lie algebra over GF(2)>[0m
     [22m[35mgap> UnderlyingGroup( L );[0m
     [22m[35mSym( [ 1 .. 3 ] )[0m
@@ -1183,6 +1210,7 @@
     [22m[35mSym( [ 1 .. 3 ] )[0m
     [22m[35m<algebra-with-one over GF(2), with 2 generators>[0m
     [22m[35mgap> L := LieAlgebra( FG );[0m
+    [22m[35m#I  LAGUNA package: Constructing Lie algebra ...[0m
     [22m[35m<Lie algebra over GF(2)>[0m
     [22m[35mgap> f := Embedding( G, L );[0m
     [22m[35mCompositionMapping( MappingByFunction( <algebra-with-one over GF(2), with [0m
@@ -1210,10 +1238,12 @@
     [22m[35m<pc group of size 256 with 8 generators>[0m
     [22m[35m<algebra-with-one over GF(2), with 8 generators>[0m
     [22m[35mgap> L := LieAlgebra( FG );[0m
+    [22m[35m#I  LAGUNA package: Constructing Lie algebra ...[0m
     [22m[35m<Lie algebra over GF(2)>[0m
     [22m[35mgap> C := LieCentre( L );[0m
     [22m[35m<Lie algebra of dimension 28 over GF(2)>[0m
     [22m[35mgap> D := LieDerivedSubalgebra( L );[0m
+    [22m[35m#I  LAGUNA package: Computing the Lie derived subalgebra ...[0m
     [22m[35m<Lie algebra of dimension 228 over GF(2)>[0m
     [22m[35mgap> c := Dimension( C ); d := Dimension( D ); l := Dimension( L );[0m
     [22m[35m28[0m
@@ -1239,10 +1269,12 @@
     [22m[35m<pc group of size 256 with 8 generators>[0m
     [22m[35m<algebra-with-one over GF(2), with 8 generators>[0m
     [22m[35mgap> L := LieAlgebra( FG );[0m
+    [22m[35m#I  LAGUNA package: Constructing Lie algebra ...[0m
     [22m[35m<Lie algebra over GF(2)>[0m
     [22m[35mgap> C := LieCentre( L );[0m
     [22m[35m<Lie algebra of dimension 28 over GF(2)>[0m
-    [22m[35mgap> D := LieDerivedSubalgebra( L );    [0m
+    [22m[35mgap> D := LieDerivedSubalgebra( L );[0m
+    [22m[35m#I  LAGUNA package: Computing the Lie derived subalgebra ...    [0m
     [22m[35m<Lie algebra of dimension 228 over GF(2)>[0m
     [22m[35mgap> l := Dimension( L ); c := Dimension( C ); d := Dimension( D );[0m
     [22m[35m256[0m
@@ -1266,6 +1298,7 @@
     [22m[35mSym( [ 1 .. 3 ] )[0m
     [22m[35m<algebra-with-one over GF(2), with 2 generators>[0m
     [22m[35mgap> L := LieAlgebra( FG );          [0m
+    [22m[35m#I  LAGUNA package: Constructing Lie algebra ...[0m
     [22m[35m<Lie algebra over GF(2)>[0m
     [22m[35mgap> IsAbelian( G );[0m
     [22m[35mfalse[0m
@@ -1291,6 +1324,7 @@
     [22m[35m<pc group of size 256 with 8 generators>[0m
     [22m[35m<algebra-with-one over GF(2), with 8 generators>[0m
     [22m[35mgap> L := LieAlgebra( FG );[0m
+    [22m[35m#I  LAGUNA package: Constructing Lie algebra ...[0m
     [22m[35m<Lie algebra over GF(2)>[0m
     [22m[35mgap> IsLieSolvable( L );                       # This is very fast.[0m
     [22m[35mtrue[0m
@@ -1314,6 +1348,7 @@
     [22m[35m<pc group of size 256 with 8 generators>[0m
     [22m[35m<algebra-with-one over GF(2), with 8 generators>[0m
     [22m[35mgap> L := LieAlgebra( FG );[0m
+    [22m[35m#I  LAGUNA package: Constructing Lie algebra ...[0m
     [22m[35m<Lie algebra over GF(2)>[0m
     [22m[35mgap> IsLieNilpotent( L );                           # This is very fast.[0m
     [22m[35mtrue[0m
@@ -1337,6 +1372,7 @@
     [22m[35m<pc group of size 256 with 8 generators>[0m
     [22m[35m<algebra-with-one over GF(2), with 8 generators>[0m
     [22m[35mgap> L := LieAlgebra( FG );[0m
+    [22m[35m#I  LAGUNA package: Constructing Lie algebra ...[0m
     [22m[35m<Lie algebra over GF(2)>[0m
     [22m[35mgap> IsLieMetabelian( L );[0m
     [22m[35mfalse   [0m
@@ -1358,6 +1394,7 @@
     [22m[35mSym( [ 1 .. 3 ] )[0m
     [22m[35m<algebra-with-one over GF(2), with 2 generators>[0m
     [22m[35mgap> L := LieAlgebra( FG );       [0m
+    [22m[35m#I  LAGUNA package: Constructing Lie algebra ...[0m
     [22m[35m<Lie algebra over GF(2)>[0m
     [22m[35mgap> IsLieMetabelian( L );                                             [0m
     [22m[35mfalse[0m
@@ -1371,9 +1408,9 @@
   [1m[34m> CanonicalBasis( [0m[22m[34mL[0m[1m[34m ) ________________________________________________[0mmethod
   [1mReturns:[0m  basis of a Lie algebra
   
-  The canonical basis of a group algebra FG is formed by the elements of G. In
-  this method [22m[34mL[0m is the Lie algebra associated with a group algebra FG, and the
-  method returns the images of the elements of G in [22m[34mL[0m.
+  The  canonical  basis  of a group algebra FG is formed by the elements of G.
+  Here  [22m[34mL[0m  is  the  Lie algebra associated with FG, and the method returns the
+  images of the elements of G in [22m[34mL[0m.
   
   [22m[35m---------------------------  Example  ----------------------------[0m
     [22m[35m[0m
@@ -1381,13 +1418,14 @@
     [22m[35mSym( [ 1 .. 3 ] )[0m
     [22m[35m<algebra-with-one over GF(2), with 2 generators>[0m
     [22m[35mgap> L := LieAlgebra( FG );       [0m
+    [22m[35m#I  LAGUNA package: Constructing Lie algebra ...[0m
     [22m[35m<Lie algebra over GF(2)>[0m
     [22m[35mgap> B := CanonicalBasis( L );[0m
     [22m[35mCanonicalBasis( <Lie algebra of dimension 6 over GF(2)> )[0m
     [22m[35mgap> Elements( B );[0m
-    [22m[35m[ LieObject( Z(2)^0*() ), LieObject( Z(2)^0*(2,3) ), [0m
-    [22m[35m  LieObject( Z(2)^0*(1,2) ), LieObject( Z(2)^0*(1,2,3) ), [0m
-    [22m[35m    LieObject( Z(2)^0*(1,3,2) ), LieObject( Z(2)^0*(1,3) ) ]   [0m
+    [22m[35m[ LieObject( (Z(2)^0)*() ), LieObject( (Z(2)^0)*(2,3) ),[0m
+    [22m[35m  LieObject( (Z(2)^0)*(1,2) ), LieObject( (Z(2)^0)*(1,2,3) ),[0m
+    [22m[35m  LieObject( (Z(2)^0)*(1,3,2) ), LieObject( (Z(2)^0)*(1,3) ) ][0m
     [22m[35m[0m
   [22m[35m------------------------------------------------------------------[0m
   
@@ -1406,6 +1444,7 @@
     [22m[35mSym( [ 1 .. 3 ] )[0m
     [22m[35m<algebra-with-one over GF(2), with 2 generators>[0m
     [22m[35mgap> L := LieAlgebra( FG );    [0m
+    [22m[35m#I  LAGUNA package: Constructing Lie algebra ...[0m
     [22m[35m<Lie algebra over GF(2)>[0m
     [22m[35mgap> B := CanonicalBasis( L );[0m
     [22m[35mCanonicalBasis( <Lie algebra of dimension 6 over GF(2)> )[0m
@@ -1428,6 +1467,7 @@
     [22m[35m<pc group of size 2 with 1 generators>[0m
     [22m[35m<algebra-with-one over GF(2), with 1 generators>[0m
     [22m[35mgap> L := LieAlgebra( FG );[0m
+    [22m[35m#I  LAGUNA package: Constructing Lie algebra ...[0m
     [22m[35m<Lie algebra over GF(2)>[0m
     [22m[35mgap> B := CanonicalBasis( L );[0m
     [22m[35mCanonicalBasis( <Lie algebra of dimension 2 over GF(2)> )[0m
@@ -1498,8 +1538,7 @@
   
   [22m[35m---------------------------  Example  ----------------------------[0m
     [22m[35m[0m
-    [22m[35mgap> KG := GroupRing( GF ( 2 ), DihedralGroup( 16 ) );[0m
-    [22m[35m<algebra-with-one over GF(2), with 4 generators>[0m
+    [22m[35mgap> KG := GroupRing( GF ( 2 ), DihedralGroup( 16 ) );;[0m
     [22m[35mgap> L := LieAlgebra( KG );[0m
     [22m[35m#I  LAGUNA package: Constructing Lie algebra ...[0m
     [22m[35m<Lie algebra over GF(2)>[0m
@@ -1518,13 +1557,11 @@
   
   Returns  a  list  of  subgroups  of  G  with  index  two. Such subgroups are
   important for the investigation of the Lie structure of the group algebra KG
-  in the case when the underlying field K has characteristic 2.
+  in the case of characteristic 2.
   
   [22m[35m---------------------------  Example  ----------------------------[0m
     [22m[35m[0m
-    [22m[35mgap> G := DihedralGroup( 16 );[0m
-    [22m[35m<pc group of size 16 with 4 generators>  [0m
-    [22m[35mgap> SubgroupsOfIndexTwo( G );[0m
+    [22m[35mgap> SubgroupsOfIndexTwo( DihedralGroup( 16) );[0m
     [22m[35m[ Group([ f1, f1*f3, f1*f4, f1*f3*f4 ]), Group([ f2, f2*f3, f2*f4, f2*f3*f4 ]),[0m
     [22m[35m  Group([ f1*f2, f1*f2*f3, f1*f2*f4, f1*f2*f3*f4 ]) ]     [0m
     [22m[35m[0m
@@ -1593,7 +1630,7 @@
   [1m[34m> LieUpperCodimensionSeries( [0m[22m[34mG[0m[1m[34m ) __________________________________[0mattribute
   [1mReturns:[0m  list of subgroups
   
-  A  notion  of  upper Lie codimension subgroups was introduced in [CS]. For a
+  A  notion of upper Lie codimension subgroups was introduced in [CS06]. For a
   finite  p-group  [22m[34mG[0m, C_i is the set of all elements g in [22m[34mG[0m, such that the Lie
   commutator  [  g, g_1, ..., g_i ] of the length i+1 is equal to zero for all
   g_1,  ...,  g_i  from  [22m[34mG[0m,  and  C_0  =  1.  By Du's theorem (see [D92]), C_i
@@ -1623,7 +1660,7 @@
   
   [1m[34m> LAGInfo_________________________________________________________[0minfo class
   
-  [22m[32mLAGInfo[0m is a special Info class for LAGUNA algorithms. It has 5 levels: 0, 1
+  [22m[32mLAGInfo[0m is a special Info class for [1mLAGUNA[0m algorithms. It has 5 levels: 0, 1
   (default),   2,   3   and  4.  To  change  info  level  to  [22m[32mk[0m,  use  command
   [22m[32mSetInfoLevel(LAGInfo, k)[0m.
   

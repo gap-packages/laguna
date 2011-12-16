@@ -72,7 +72,7 @@
   The  functions  that  are  used to compute Lie properties of p-modular group
   algebras  were already included in the previous versions of [1mLAG[0m. The bracket
   operation  [*,*]  on a p-modular group algebra FG is defined by [a,b]=ab-ba.
-  It  is  well-known  and  very  easy  to  check that ( FG, +, [*,*]) is a Lie
+  It  is  well-known  and  very  easy  to  check  that (FG, +, [*,*]) is a Lie
   algebra.  Then  we may ask what kind of Lie algebra properties are satisfied
   by  FG.  The  results  in  [LR86],  [PPS73],  and [R00] give fast, practical
   algorithms  to  check  whether  the  Lie  algebra  FG is abelian, nilpotent,
@@ -83,7 +83,7 @@
   [1m[4m[31m1.5 Installation and system requirements[0m
   
   [1mLAGUNA[0m  does  not  use  external  binaries  and,  therefore,  works  without
-  restrictions  on the type of the operation system. It is designed for [1mGAP[0m4.4
+  restrictions  on the type of the operating system. It is designed for [1mGAP[0m4.4
   and no compatibility with previous releases of [1mGAP[0m4 is guaranteed.
   
   To  use  the  [1mLAGUNA[0m online help it is necessary to install the [1mGAP[0m4 package
@@ -91,12 +91,12 @@
   [1mGAP[0m site or from [34mhttp://www.math.rwth-aachen.de/~Frank.Luebeck/GAPDoc/[0m.
   
   [1mLAGUNA[0m  is  distributed in standard formats ([1mzoo[0m, [1mtar.gz[0m, [1mtar.bz2[0m, [1m-win.zip[0m)
-  and  can  be  obtained from [34mhttp://ukrgap.exponenta.ru/laguna.htm[0m. To unpack
-  the  archive  [1mlaguna-3.3.3.zoo[0m  you  need  the  program  [1munzoo[0m, which can be
-  obtained  from  the  [1mGAP[0m  homepage  [34mhttp://www.gap-system.org/[0m  (see section
+  and  can  be obtained from [34mhttp://www.cs.st-andrews.ac.uk/~alexk/laguna.htm[0m.
+  To  unpack  the archive [1mlaguna-3.4.zoo[0m you need the program [1munzoo[0m, which can
+  be  obtained  from  the [1mGAP[0m homepage [34mhttp://www.gap-system.org/[0m (see section
   `Distribution').   To  install  [1mLAGUNA[0m,  copy  this  archive  into  the  [1mpkg[0m
   subdirectory  of  your  [1mGAP[0m4.4 installation. The subdirectory [1mlaguna[0m will be
   created in the [1mpkg[0m directory after the following command:
   
-  [22m[32munzoo -x laguna-3.3.3.zoo[0m
+  [22m[32munzoo -x laguna-3.4.zoo[0m
   

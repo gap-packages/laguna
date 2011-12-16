@@ -1,4 +1,4 @@
-<!-- $Id: example.xml,v 1.13 2003/06/22 17:11:17 alexk Exp $ -->
+<!-- $Id: example.xml,v 1.16 2006/07/11 10:35:48 alexk Exp $ -->
 <Chapter Label="Example">
 <Heading>A sample calculation with &LAGUNA;</Heading>
 
@@ -92,8 +92,8 @@ Z(2)^0
 ]]>
 </Example>
 
-We can also calculate the augmentation of <Code>x</Code>, which is defined as
-the sum of its coefficients.
+We can also calculate the augmentation of <Code>x</Code>, 
+which is defined as the sum of its coefficients.
 
 <Example>
 gap> Augmentation( x );
@@ -120,9 +120,9 @@ true
 <Example>
 <![CDATA[
 gap> y^-1;
-(Z(2)^0)*f1+(Z(2)^0)*f2+(Z(2)^0)*f3+(Z(2)^0)*f4+(Z(2)^0)*f1*f2+(Z(2)^0)*f1*f3+(
-Z(2)^0)*f1*f4+(Z(2)^0)*f2*f4+(Z(2)^0)*f1*f2*f4+(Z(2)^0)*f2*f3*f4+(Z(2)^
-0)*f1*f2*f3*f4
+(Z(2)^0)*f1+(Z(2)^0)*f2+(Z(2)^0)*f3+(Z(2)^0)*f4+(Z(2)^0)*f1*f2+(Z(2)^
+0)*f1*f3+(Z(2)^0)*f1*f4+(Z(2)^0)*f2*f4+(Z(2)^0)*f1*f2*f4+(Z(2)^0)*f2*f3*f4+(
+Z(2)^0)*f1*f2*f3*f4
 gap> y * y^-1;
 (Z(2)^0)*<identity> of ... 
 ]]>
@@ -157,7 +157,7 @@ augmentation ideal of <Code>KG</Code> coincides with the radical of
 <Example>
 <![CDATA[
 gap> AugmentationIdeal( KG );
-<two-sided ideal in <algebra-with-one of dimension 16 over GF(2)>, 
+<two-sided ideal in <algebra-with-one over GF(2), with 4 generators>,
   (dimension 15)>
 gap> RadicalOfAlgebra( KG ) = AugmentationIdeal( KG );
 true
@@ -213,7 +213,7 @@ we calculate a power-commutator presentation for this group.
 <Example>
 <![CDATA[
 gap> W := PcNormalizedUnitGroup( KG );
-<pc group of size 32768 with 15 generators>;
+<pc group of size 32768 with 15 generators>
 ]]>
 </Example>
 
@@ -232,34 +232,38 @@ in <Code>W</Code>.
 <Example>
 <![CDATA[
 gap> t := NaturalBijectionToPcNormalizedUnitGroup( KG );
-MappingByFunction( <group of size 32768 with 15 generators>, <pc group of size
-32768 with 15 generators>, function( x ) ... end )
+MappingByFunction( <group of size 32768 with
+15 generators>, <pc group of size 32768 with
+15 generators>, function( x ) ... end )
 gap> List( AsList( G ), x -> ( x^Embedding( G, KG ) )^t );
-[ <identity> of ..., f2, f1, f3, f7, f1*f2*f3, f2*f3, f2*f7, f1*f3, f1*f7, f3*f7,
-  f1*f2*f7, f1*f2*f3*f7, f2*f3*f7, f1*f3*f7, f1*f2 ]   
+[ <identity> of ..., f2, f1, f3, f7, f1*f2*f3, f2*f3, f2*f7, f1*f3, f1*f7,
+  f3*f7, f1*f2*f7, f1*f2*f3*f7, f2*f3*f7, f1*f3*f7, f1*f2 ]
 ]]>
 </Example>
 
-<Alt Only="LaTeX">\newpage</Alt>
+<Alt Only="LaTeX">\newpage</Alt>  
 
 The second isomorphism is the inverse of the first.
 
 <Example>
 gap> f := NaturalBijectionToNormalizedUnitGroup( KG );
 [ f1, f2, f3, f4, f5, f6, f7, f8, f9, f10, f11, f12, f13, f14, f15 ] ->
-[ (Z(2)^0)*f2, (Z(2)^0)*f1, (Z(2)^0)*f3, (Z(2)^0)*f1+(Z(2)^0)*f2+(Z(2)^0)*f1*f2,
-  (Z(2)^0)*f2+(Z(2)^0)*f3+(Z(2)^0)*f2*f3, (Z(2)^0)*f1+(Z(2)^0)*f3+(Z(2)^0)*f1*f3,
-  (Z(2)^0)*f4, (Z(2)^0)*f1+(Z(2)^0)*f2+(Z(2)^0)*f3+(Z(2)^0)*f1*f2+(Z(2)^0)*f1*f3+(
-    Z(2)^0)*f2*f3+(Z(2)^0)*f1*f2*f3, (Z(2)^0)*f2+(Z(2)^0)*f4+(Z(2)^0)*f2*f4,
-  (Z(2)^0)*f1+(Z(2)^0)*f4+(Z(2)^0)*f1*f4, (Z(2)^0)*f3+(Z(2)^0)*f4+(Z(2)^0)*f3*f4,
+[ (Z(2)^0)*f2, (Z(2)^0)*f1, (Z(2)^0)*f3,
+  (Z(2)^0)*f1+(Z(2)^0)*f2+(Z(2)^0)*f1*f2,
+  (Z(2)^0)*f2+(Z(2)^0)*f3+(Z(2)^0)*f2*f3,
+  (Z(2)^0)*f1+(Z(2)^0)*f3+(Z(2)^0)*f1*f3, (Z(2)^0)*f4,
+  (Z(2)^0)*f1+(Z(2)^0)*f2+(Z(2)^0)*f3+(Z(2)^0)*f1*f2+(Z(2)^0)*f1*f3+(Z(2)^
+    0)*f2*f3+(Z(2)^0)*f1*f2*f3, (Z(2)^0)*f2+(Z(2)^0)*f4+(Z(2)^0)*f2*f4,
+  (Z(2)^0)*f1+(Z(2)^0)*f4+(Z(2)^0)*f1*f4,
+  (Z(2)^0)*f3+(Z(2)^0)*f4+(Z(2)^0)*f3*f4,
   (Z(2)^0)*f1+(Z(2)^0)*f2+(Z(2)^0)*f4+(Z(2)^0)*f1*f2+(Z(2)^0)*f1*f4+(Z(2)^
     0)*f2*f4+(Z(2)^0)*f1*f2*f4, (Z(2)^0)*f2+(Z(2)^0)*f3+(Z(2)^0)*f4+(Z(2)^
     0)*f2*f3+(Z(2)^0)*f2*f4+(Z(2)^0)*f3*f4+(Z(2)^0)*f2*f3*f4,
   (Z(2)^0)*f1+(Z(2)^0)*f3+(Z(2)^0)*f4+(Z(2)^0)*f1*f3+(Z(2)^0)*f1*f4+(Z(2)^
-    0)*f3*f4+(Z(2)^0)*f1*f3*f4, (Z(2)^0)*f1+(Z(2)^0)*f2+(Z(2)^0)*f3+(Z(2)^0)*f4+(
-    Z(2)^0)*f1*f2+(Z(2)^0)*f1*f3+(Z(2)^0)*f1*f4+(Z(2)^0)*f2*f3+(Z(2)^0)*f2*f4+(
-    Z(2)^0)*f3*f4+(Z(2)^0)*f1*f2*f3+(Z(2)^0)*f1*f2*f4+(Z(2)^0)*f1*f3*f4+(Z(2)^
-    0)*f2*f3*f4+(Z(2)^0)*f1*f2*f3*f4 ]  
+    0)*f3*f4+(Z(2)^0)*f1*f3*f4, (Z(2)^0)*f1+(Z(2)^0)*f2+(Z(2)^0)*f3+(Z(2)^
+    0)*f4+(Z(2)^0)*f1*f2+(Z(2)^0)*f1*f3+(Z(2)^0)*f1*f4+(Z(2)^0)*f2*f3+(Z(2)^
+    0)*f2*f4+(Z(2)^0)*f3*f4+(Z(2)^0)*f1*f2*f3+(Z(2)^0)*f1*f2*f4+(Z(2)^
+    0)*f1*f3*f4+(Z(2)^0)*f2*f3*f4+(Z(2)^0)*f1*f2*f3*f4 ]
 </Example>
 
 For example, we may calculate the conjugacy classes of the group <Code>W</Code>, 
@@ -273,28 +277,28 @@ gap> Length( cc );
 gap> Representative( cc[ Length( cc ) ] );
 f1*f2*f4*f6*f12*f15
 gap> last^f;
-(Z(2)^0)*<identity> of ...+(Z(2)^0)*f2+(Z(2)^0)*f4+(Z(2)^0)*f1*f2+(Z(2)^0)*f1*f3+(
-Z(2)^0)*f1*f4+(Z(2)^0)*f2*f3+(Z(2)^0)*f2*f4+(Z(2)^0)*f3*f4+(Z(2)^0)*f1*f2*f3+(Z(2)^
-0)*f1*f3*f4   
+(Z(2)^0)*<identity> of ...+(Z(2)^0)*f2+(Z(2)^0)*f4+(Z(2)^0)*f1*f2+(Z(2)^
+0)*f1*f3+(Z(2)^0)*f1*f4+(Z(2)^0)*f2*f3+(Z(2)^0)*f2*f4+(Z(2)^0)*f3*f4+(Z(2)^
+0)*f1*f2*f3+(Z(2)^0)*f1*f3*f4
 ]]>
 </Example>
 
 Having a power-commutator presentation of the normalised unit group, we may 
-use the full power of the &GAP; functionality for such groups. For example, the
-lower central series can be calculated very quickly.
+use the full power of the &GAP; functionality for such groups. 
+For example, the lower central series can be calculated very quickly.
 
 <Example>
 <![CDATA[
 gap> LowerCentralSeries( W );
 [ <pc group of size 32768 with 15 generators>,
-  Group([ f3, f5*f8*f10*f12*f13*f14*f15, f6*f8*f12*f14*f15, f7, f9*f12, f10*f14,
-      f11*f13, f13*f14, f14*f15 ]),
+  Group([ f3, f5*f8*f10*f12*f13*f14*f15, f6*f8*f12*f14*f15, f7, f9*f12,
+      f10*f14, f11*f13, f13*f14, f14*f15 ]),
   Group([ f7, f9*f12, f10*f15, f11*f15, f13*f15, f14*f15 ]),
-  Group([ f11*f15, f13*f15, f14*f15 ]), Group([ <identity> of ... ]) ]  
+  Group([ f11*f15, f13*f15, f14*f15 ]), Group([ <identity> of ... ]) ]
 ]]>
 </Example>
 
-<Alt Only="LaTeX">\newpage</Alt>
+<Alt Only="LaTeX">\newpage</Alt>  
 
 Let's now compute, for instance, a minimal system of generators of the centre of
 the normalised unit group. First we carry out the computation in the group 
@@ -306,17 +310,20 @@ result into our group algebra.
 gap> C := Centre( W );
 Group([ f3*f5*f13*f15, f7, f15, f13*f15, f14*f15, f11*f13*f14*f15 ])
 gap> m := MinimalGeneratingSet( C );
-[ f11, f13, f14, f15, f3*f5*f13*f15 ]
+[ f7*f13*f14*f15, f13*f14*f15, f7*f11*f14*f15, f15, f3*f5*f14 ]
 gap> List( m, g -> g^f );
-[ (Z(2)^0)*f3+(Z(2)^0)*f4+(Z(2)^0)*f3*f4, (Z(2)^0)*f2+(Z(2)^0)*f3+(Z(2)^0)*f4+(
-    Z(2)^0)*f2*f3+(Z(2)^0)*f2*f4+(Z(2)^0)*f3*f4+(Z(2)^0)*f2*f3*f4,
-  (Z(2)^0)*f1+(Z(2)^0)*f3+(Z(2)^0)*f4+(Z(2)^0)*f1*f3+(Z(2)^0)*f1*f4+(Z(2)^
-    0)*f3*f4+(Z(2)^0)*f1*f3*f4, (Z(2)^0)*f1+(Z(2)^0)*f2+(Z(2)^0)*f3+(Z(2)^0)*f4+(
-    Z(2)^0)*f1*f2+(Z(2)^0)*f1*f3+(Z(2)^0)*f1*f4+(Z(2)^0)*f2*f3+(Z(2)^0)*f2*f4+(
+[ (Z(2)^0)*<identity> of ...+(Z(2)^0)*f3+(Z(2)^0)*f1*f2+(Z(2)^0)*f3*f4+(Z(2)^
+    0)*f1*f2*f3+(Z(2)^0)*f1*f2*f4+(Z(2)^0)*f1*f2*f3*f4,
+  (Z(2)^0)*f3+(Z(2)^0)*f4+(Z(2)^0)*f1*f2+(Z(2)^0)*f3*f4+(Z(2)^0)*f1*f2*f3+(
+    Z(2)^0)*f1*f2*f4+(Z(2)^0)*f1*f2*f3*f4, (Z(2)^0)*<identity> of ...+(Z(2)^
+    0)*f2+(Z(2)^0)*f3+(Z(2)^0)*f1*f2+(Z(2)^0)*f2*f3+(Z(2)^0)*f2*f4+(Z(2)^
+    0)*f3*f4+(Z(2)^0)*f1*f2*f3+(Z(2)^0)*f1*f2*f4+(Z(2)^0)*f2*f3*f4+(Z(2)^
+    0)*f1*f2*f3*f4, (Z(2)^0)*f1+(Z(2)^0)*f2+(Z(2)^0)*f3+(Z(2)^0)*f4+(Z(2)^
+    0)*f1*f2+(Z(2)^0)*f1*f3+(Z(2)^0)*f1*f4+(Z(2)^0)*f2*f3+(Z(2)^0)*f2*f4+(
     Z(2)^0)*f3*f4+(Z(2)^0)*f1*f2*f3+(Z(2)^0)*f1*f2*f4+(Z(2)^0)*f1*f3*f4+(Z(2)^
-    0)*f2*f3*f4+(Z(2)^0)*f1*f2*f3*f4, (Z(2)^0)*f1+(Z(2)^0)*f4+(Z(2)^0)*f1*f2+(Z(2)^
-    0)*f1*f3+(Z(2)^0)*f1*f4+(Z(2)^0)*f2*f3+(Z(2)^0)*f2*f4+(Z(2)^0)*f1*f2*f3+(Z(2)^
-    0)*f1*f2*f4+(Z(2)^0)*f1*f3*f4+(Z(2)^0)*f1*f2*f3*f4 ]    
+    0)*f2*f3*f4+(Z(2)^0)*f1*f2*f3*f4, (Z(2)^0)*<identity> of ...+(Z(2)^0)*f1+(
+    Z(2)^0)*f3+(Z(2)^0)*f1*f3+(Z(2)^0)*f1*f4+(Z(2)^0)*f2*f3+(Z(2)^0)*f2*f4+(
+    Z(2)^0)*f3*f4+(Z(2)^0)*f1*f3*f4 ]
 ]]>
 </Example>
 
@@ -327,8 +334,10 @@ This example needs no further explanation.
 <Example>
 <![CDATA[
 gap> L := LieAlgebra( KG );
-<Lie algebra of dimension 16 over GF(2)>
+#I  LAGUNA package: Constructing Lie algebra ...
+<Lie algebra over GF(2)>
 gap> D := LieDerivedSubalgebra( L );
+#I  LAGUNA package: Computing the Lie derived subalgebra ...
 <Lie algebra of dimension 9 over GF(2)>
 gap> LC := LieCentre( L );
 <Lie algebra of dimension 7 over GF(2)>
@@ -339,6 +348,7 @@ gap> LieUpperNilpotencyIndex( KG );
 gap> IsLieAbelian( L );
 false
 gap> IsLieSolvable( L );
+#I  LAGUNA package: Checking Lie solvability ...
 true
 gap> IsLieMetabelian( L );
 false

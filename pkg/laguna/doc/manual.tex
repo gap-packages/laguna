@@ -56,8 +56,8 @@
 \hypersetup{pdftitle=\textsf{LAGUNA}}
 \markright{\scriptsize \mbox{}\hfill \textsf{LAGUNA} \hfill\mbox{}}
 {\Large \textbf{Lie AlGebras and UNits of group Algebras}}\\[1cm]
-{Version 3.3.3}\\[1cm]
-{April 2006}\\[1cm]
+{Version 3.4}\\[1cm]
+{February 2007}\\[1cm]
 \mbox{}\\[2cm]
 {\large \textbf{Victor Bovdi   }}\\
 {\large \textbf{Alexander Konovalov    }}\\
@@ -76,12 +76,12 @@
 }\\
 {\mbox{}\\
 \small \noindent \textbf{Alexander Konovalov    } --- Email: \href{mailto://konovalov@member.ams.org}{\texttt{konovalov@member.ams.org}}\\
- --- Homepage: \href{http://ukrgap.exponenta.ru/konoval.htm}{\texttt{http://ukrgap.exponenta.ru/konoval.htm}}\\
+ --- Homepage: \href{http://www.cs.st-andrews.ac.uk/~alexk/}{\texttt{http://www.cs.st-andrews.ac.uk/\~{}alexk/}}\\
  --- Address: \begin{minipage}[t]{8cm}\noindent
- Department of Mathematics\\
- Zaporozhye State University\\
- P.O.Box 1317, Central Post Office\\
- Zaporozhye, 69000 Ukraine \end{minipage}
+ School of Computer Science\\
+ University of St Andrews\\
+ Jack Cole Building, North Haugh,\\
+ St Andrews, Fife, KY16 9SX, Scotland \end{minipage}
 }\\
 {\mbox{}\\
 \small \noindent \textbf{Richard Rossmanith   } --- Email: \href{mailto://richard.rossmanith@d-fine.de}{\texttt{richard.rossmanith@d-fine.de}}\\
@@ -117,7 +117,7 @@ algebra of a finite $p$-group over the field of $p$ elements.
 {\small 
 \section*{Copyright}
 \logpage{[ 0, 0, 2 ]}
- {\copyright} 2003-2006 by Victor Bovdi, Alexander Konovalov, Richard Rossmanith, and Csaba
+ {\copyright} 2003-2007 by Victor Bovdi, Alexander Konovalov, Richard Rossmanith, and Csaba
 Schneider
 
  \textsf{LAGUNA} is free software; you can redistribute it and/or modify it under the terms of
@@ -129,7 +129,7 @@ details, see the FSF's own site \href{http://www.gnu.org/licenses/gpl.html}{\tex
 
  If you publish a result which was partially obtained with the usage of \textsf{LAGUNA}, please cite it in the following form:
 
- V. Bovdi, A. Konovalov, R. Rossmanith and C. Schneider. \emph{LAGUNA --- Lie AlGebras and UNits of group Algebras, Version 3.3.3;} 2006 (\href{http://ukrgap.exponenta.ru/laguna.htm}{\texttt{http://ukrgap.exponenta.ru/laguna.htm}}). }\\[1cm]
+ V. Bovdi, A. Konovalov, R. Rossmanith and C. Schneider. \emph{LAGUNA --- Lie AlGebras and UNits of group Algebras, Version 3.4;} 2007 (\href{http://www.cs.st-andrews.ac.uk/~alexk/laguna.htm}{\texttt{http://www.cs.st-andrews.ac.uk/\~{}alexk/laguna.htm}}). }\\[1cm]
 {\small 
 \section*{Acknowledgements}
 \logpage{[ 0, 0, 3 ]}
@@ -208,7 +208,7 @@ described in Section \ref{UnitGroup}. }
 \section{\textcolor{Chapter }{Computing Lie properties of the group algebra }}\label{IntroThird}
 \logpage{[ 1, 4, 0 ]}
 {
-  The functions that are used to compute Lie properties of $p$-modular group algebras were already included in the previous versions of \textsf{LAG}. The bracket operation $[\cdot,\cdot]$ on a $p$-modular group algebra $FG$ is defined by $[a,b]=ab-ba$. It is well-known and very easy to check that $( FG, +, [\cdot,\cdot])$ is a Lie algebra. Then we may ask what kind of Lie algebra properties are
+  The functions that are used to compute Lie properties of $p$-modular group algebras were already included in the previous versions of \textsf{LAG}. The bracket operation $[\cdot,\cdot]$ on a $p$-modular group algebra $FG$ is defined by $[a,b]=ab-ba$. It is well-known and very easy to check that $(FG, +, [\cdot,\cdot])$ is a Lie algebra. Then we may ask what kind of Lie algebra properties are
 satisfied by $FG$. The results in \cite{LR86}, \cite{PPS73}, and \cite{Ros00} give fast, practical algorithms to check whether the Lie algebra $FG$ is abelian, nilpotent, soluble, centre-by-metabelian, etc. The functions that
 implement these algorithms are described in Section \ref{LieAlgebra}. }
 
@@ -217,13 +217,13 @@ implement these algorithms are described in Section \ref{LieAlgebra}. }
 \logpage{[ 1, 5, 0 ]}
 {
   \textsf{LAGUNA} does not use external binaries and, therefore, works without restrictions on
-the type of the operation system. It is designed for \textsf{GAP}4.4 and no compatibility with previous releases of \textsf{GAP}4 is guaranteed. 
+the type of the operating system. It is designed for \textsf{GAP}4.4 and no compatibility with previous releases of \textsf{GAP}4 is guaranteed. 
 
  To use the \textsf{LAGUNA} online help it is necessary to install the \textsf{GAP}4 package \textsf{GAPDoc} by Frank L\"ubeck and Max Neunh\"offer, which is available from the \textsf{GAP} site or from \href{http://www.math.rwth-aachen.de/~Frank.Luebeck/GAPDoc/}{\texttt{http://www.math.rwth-aachen.de/\~{}Frank.Luebeck/GAPDoc/}}. 
 
- \textsf{LAGUNA} is distributed in standard formats (\texttt{zoo}, \texttt{tar.gz}, \texttt{tar.bz2}, \texttt{-win.zip}) and can be obtained from \href{http://ukrgap.exponenta.ru/laguna.htm}{\texttt{http://ukrgap.exponenta.ru/laguna.htm}}. To unpack the archive \texttt{laguna-3.3.3.zoo} you need the program \texttt{unzoo}, which can be obtained from the \textsf{GAP} homepage \href{http://www.gap-system.org/}{\texttt{http://www.gap-system.org/}} (see section `Distribution'). To install \textsf{LAGUNA}, copy this archive into the \texttt{pkg} subdirectory of your \textsf{GAP}4.4 installation. The subdirectory \texttt{laguna} will be created in the \texttt{pkg} directory after the following command: 
+ \textsf{LAGUNA} is distributed in standard formats (\texttt{zoo}, \texttt{tar.gz}, \texttt{tar.bz2}, \texttt{-win.zip}) and can be obtained from \href{http://www.cs.st-andrews.ac.uk/~alexk/laguna.htm}{\texttt{http://www.cs.st-andrews.ac.uk/\~{}alexk/laguna.htm}}. To unpack the archive \texttt{laguna-3.4.zoo} you need the program \texttt{unzoo}, which can be obtained from the \textsf{GAP} homepage \href{http://www.gap-system.org/}{\texttt{http://www.gap-system.org/}} (see section `Distribution'). To install \textsf{LAGUNA}, copy this archive into the \texttt{pkg} subdirectory of your \textsf{GAP}4.4 installation. The subdirectory \texttt{laguna} will be created in the \texttt{pkg} directory after the following command: 
 
- \texttt{unzoo -x laguna-3.3.3.zoo} 
+ \texttt{unzoo -x laguna-3.4.zoo} 
 
  }
 
@@ -324,9 +324,9 @@ a minimal generating system of the group \texttt{G} and find the corresponding e
 \begin{Verbatim}[fontsize=\small,frame=single,label=Example]
   
   gap> y^-1;
-  (Z(2)^0)*f1+(Z(2)^0)*f2+(Z(2)^0)*f3+(Z(2)^0)*f4+(Z(2)^0)*f1*f2+(Z(2)^0)*f1*f3+(
-  Z(2)^0)*f1*f4+(Z(2)^0)*f2*f4+(Z(2)^0)*f1*f2*f4+(Z(2)^0)*f2*f3*f4+(Z(2)^
-  0)*f1*f2*f3*f4
+  (Z(2)^0)*f1+(Z(2)^0)*f2+(Z(2)^0)*f3+(Z(2)^0)*f4+(Z(2)^0)*f1*f2+(Z(2)^
+  0)*f1*f3+(Z(2)^0)*f1*f4+(Z(2)^0)*f2*f4+(Z(2)^0)*f1*f2*f4+(Z(2)^0)*f2*f3*f4+(
+  Z(2)^0)*f1*f2*f3*f4
   gap> y * y^-1;
   (Z(2)^0)*<identity> of ... 
   
@@ -352,7 +352,7 @@ augmentation zero. In our case the augmentation ideal of \texttt{KG} coincides w
 \begin{Verbatim}[fontsize=\small,frame=single,label=Example]
   
   gap> AugmentationIdeal( KG );
-  <two-sided ideal in <algebra-with-one of dimension 16 over GF(2)>, 
+  <two-sided ideal in <algebra-with-one over GF(2), with 4 generators>,
     (dimension 15)>
   gap> RadicalOfAlgebra( KG ) = AugmentationIdeal( KG );
   true
@@ -394,7 +394,7 @@ calculate a power-commutator presentation for this group.
 \begin{Verbatim}[fontsize=\small,frame=single,label=Example]
   
   gap> W := PcNormalizedUnitGroup( KG );
-  <pc group of size 32768 with 15 generators>;
+  <pc group of size 32768 with 15 generators>
   
 \end{Verbatim}
  \textsf{GAP} has many efficient and practical algorithms for groups given by a
@@ -406,30 +406,34 @@ between the outputs of \texttt{NormalizedUnitGroup} and \texttt{PcNormalizedUnit
 \begin{Verbatim}[fontsize=\small,frame=single,label=Example]
   
   gap> t := NaturalBijectionToPcNormalizedUnitGroup( KG );
-  MappingByFunction( <group of size 32768 with 15 generators>, <pc group of size
-  32768 with 15 generators>, function( x ) ... end )
+  MappingByFunction( <group of size 32768 with
+  15 generators>, <pc group of size 32768 with
+  15 generators>, function( x ) ... end )
   gap> List( AsList( G ), x -> ( x^Embedding( G, KG ) )^t );
-  [ <identity> of ..., f2, f1, f3, f7, f1*f2*f3, f2*f3, f2*f7, f1*f3, f1*f7, f3*f7,
-    f1*f2*f7, f1*f2*f3*f7, f2*f3*f7, f1*f3*f7, f1*f2 ]   
+  [ <identity> of ..., f2, f1, f3, f7, f1*f2*f3, f2*f3, f2*f7, f1*f3, f1*f7,
+    f3*f7, f1*f2*f7, f1*f2*f3*f7, f2*f3*f7, f1*f3*f7, f1*f2 ]
   
 \end{Verbatim}
  \newpage The second isomorphism is the inverse of the first. 
 \begin{Verbatim}[fontsize=\small,frame=single,label=Example]
   gap> f := NaturalBijectionToNormalizedUnitGroup( KG );
   [ f1, f2, f3, f4, f5, f6, f7, f8, f9, f10, f11, f12, f13, f14, f15 ] ->
-  [ (Z(2)^0)*f2, (Z(2)^0)*f1, (Z(2)^0)*f3, (Z(2)^0)*f1+(Z(2)^0)*f2+(Z(2)^0)*f1*f2,
-    (Z(2)^0)*f2+(Z(2)^0)*f3+(Z(2)^0)*f2*f3, (Z(2)^0)*f1+(Z(2)^0)*f3+(Z(2)^0)*f1*f3,
-    (Z(2)^0)*f4, (Z(2)^0)*f1+(Z(2)^0)*f2+(Z(2)^0)*f3+(Z(2)^0)*f1*f2+(Z(2)^0)*f1*f3+(
-      Z(2)^0)*f2*f3+(Z(2)^0)*f1*f2*f3, (Z(2)^0)*f2+(Z(2)^0)*f4+(Z(2)^0)*f2*f4,
-    (Z(2)^0)*f1+(Z(2)^0)*f4+(Z(2)^0)*f1*f4, (Z(2)^0)*f3+(Z(2)^0)*f4+(Z(2)^0)*f3*f4,
+  [ (Z(2)^0)*f2, (Z(2)^0)*f1, (Z(2)^0)*f3,
+    (Z(2)^0)*f1+(Z(2)^0)*f2+(Z(2)^0)*f1*f2,
+    (Z(2)^0)*f2+(Z(2)^0)*f3+(Z(2)^0)*f2*f3,
+    (Z(2)^0)*f1+(Z(2)^0)*f3+(Z(2)^0)*f1*f3, (Z(2)^0)*f4,
+    (Z(2)^0)*f1+(Z(2)^0)*f2+(Z(2)^0)*f3+(Z(2)^0)*f1*f2+(Z(2)^0)*f1*f3+(Z(2)^
+      0)*f2*f3+(Z(2)^0)*f1*f2*f3, (Z(2)^0)*f2+(Z(2)^0)*f4+(Z(2)^0)*f2*f4,
+    (Z(2)^0)*f1+(Z(2)^0)*f4+(Z(2)^0)*f1*f4,
+    (Z(2)^0)*f3+(Z(2)^0)*f4+(Z(2)^0)*f3*f4,
     (Z(2)^0)*f1+(Z(2)^0)*f2+(Z(2)^0)*f4+(Z(2)^0)*f1*f2+(Z(2)^0)*f1*f4+(Z(2)^
       0)*f2*f4+(Z(2)^0)*f1*f2*f4, (Z(2)^0)*f2+(Z(2)^0)*f3+(Z(2)^0)*f4+(Z(2)^
       0)*f2*f3+(Z(2)^0)*f2*f4+(Z(2)^0)*f3*f4+(Z(2)^0)*f2*f3*f4,
     (Z(2)^0)*f1+(Z(2)^0)*f3+(Z(2)^0)*f4+(Z(2)^0)*f1*f3+(Z(2)^0)*f1*f4+(Z(2)^
-      0)*f3*f4+(Z(2)^0)*f1*f3*f4, (Z(2)^0)*f1+(Z(2)^0)*f2+(Z(2)^0)*f3+(Z(2)^0)*f4+(
-      Z(2)^0)*f1*f2+(Z(2)^0)*f1*f3+(Z(2)^0)*f1*f4+(Z(2)^0)*f2*f3+(Z(2)^0)*f2*f4+(
-      Z(2)^0)*f3*f4+(Z(2)^0)*f1*f2*f3+(Z(2)^0)*f1*f2*f4+(Z(2)^0)*f1*f3*f4+(Z(2)^
-      0)*f2*f3*f4+(Z(2)^0)*f1*f2*f3*f4 ]  
+      0)*f3*f4+(Z(2)^0)*f1*f3*f4, (Z(2)^0)*f1+(Z(2)^0)*f2+(Z(2)^0)*f3+(Z(2)^
+      0)*f4+(Z(2)^0)*f1*f2+(Z(2)^0)*f1*f3+(Z(2)^0)*f1*f4+(Z(2)^0)*f2*f3+(Z(2)^
+      0)*f2*f4+(Z(2)^0)*f3*f4+(Z(2)^0)*f1*f2*f3+(Z(2)^0)*f1*f2*f4+(Z(2)^
+      0)*f1*f3*f4+(Z(2)^0)*f2*f3*f4+(Z(2)^0)*f1*f2*f3*f4 ]
 \end{Verbatim}
  For example, we may calculate the conjugacy classes of the group \texttt{W}, and then map their representatives back into the group algebra. 
 \begin{Verbatim}[fontsize=\small,frame=single,label=Example]
@@ -440,9 +444,9 @@ between the outputs of \texttt{NormalizedUnitGroup} and \texttt{PcNormalizedUnit
   gap> Representative( cc[ Length( cc ) ] );
   f1*f2*f4*f6*f12*f15
   gap> last^f;
-  (Z(2)^0)*<identity> of ...+(Z(2)^0)*f2+(Z(2)^0)*f4+(Z(2)^0)*f1*f2+(Z(2)^0)*f1*f3+(
-  Z(2)^0)*f1*f4+(Z(2)^0)*f2*f3+(Z(2)^0)*f2*f4+(Z(2)^0)*f3*f4+(Z(2)^0)*f1*f2*f3+(Z(2)^
-  0)*f1*f3*f4   
+  (Z(2)^0)*<identity> of ...+(Z(2)^0)*f2+(Z(2)^0)*f4+(Z(2)^0)*f1*f2+(Z(2)^
+  0)*f1*f3+(Z(2)^0)*f1*f4+(Z(2)^0)*f2*f3+(Z(2)^0)*f2*f4+(Z(2)^0)*f3*f4+(Z(2)^
+  0)*f1*f2*f3+(Z(2)^0)*f1*f3*f4
   
 \end{Verbatim}
  Having a power-commutator presentation of the normalised unit group, we may
@@ -452,10 +456,10 @@ calculated very quickly.
   
   gap> LowerCentralSeries( W );
   [ <pc group of size 32768 with 15 generators>,
-    Group([ f3, f5*f8*f10*f12*f13*f14*f15, f6*f8*f12*f14*f15, f7, f9*f12, f10*f14,
-        f11*f13, f13*f14, f14*f15 ]),
+    Group([ f3, f5*f8*f10*f12*f13*f14*f15, f6*f8*f12*f14*f15, f7, f9*f12,
+        f10*f14, f11*f13, f13*f14, f14*f15 ]),
     Group([ f7, f9*f12, f10*f15, f11*f15, f13*f15, f14*f15 ]),
-    Group([ f11*f15, f13*f15, f14*f15 ]), Group([ <identity> of ... ]) ]  
+    Group([ f11*f15, f13*f15, f14*f15 ]), Group([ <identity> of ... ]) ]
   
 \end{Verbatim}
  \newpage Let's now compute, for instance, a minimal system of generators of the centre
@@ -467,17 +471,20 @@ result into our group algebra.
   gap> C := Centre( W );
   Group([ f3*f5*f13*f15, f7, f15, f13*f15, f14*f15, f11*f13*f14*f15 ])
   gap> m := MinimalGeneratingSet( C );
-  [ f11, f13, f14, f15, f3*f5*f13*f15 ]
+  [ f7*f13*f14*f15, f13*f14*f15, f7*f11*f14*f15, f15, f3*f5*f14 ]
   gap> List( m, g -> g^f );
-  [ (Z(2)^0)*f3+(Z(2)^0)*f4+(Z(2)^0)*f3*f4, (Z(2)^0)*f2+(Z(2)^0)*f3+(Z(2)^0)*f4+(
-      Z(2)^0)*f2*f3+(Z(2)^0)*f2*f4+(Z(2)^0)*f3*f4+(Z(2)^0)*f2*f3*f4,
-    (Z(2)^0)*f1+(Z(2)^0)*f3+(Z(2)^0)*f4+(Z(2)^0)*f1*f3+(Z(2)^0)*f1*f4+(Z(2)^
-      0)*f3*f4+(Z(2)^0)*f1*f3*f4, (Z(2)^0)*f1+(Z(2)^0)*f2+(Z(2)^0)*f3+(Z(2)^0)*f4+(
-      Z(2)^0)*f1*f2+(Z(2)^0)*f1*f3+(Z(2)^0)*f1*f4+(Z(2)^0)*f2*f3+(Z(2)^0)*f2*f4+(
+  [ (Z(2)^0)*<identity> of ...+(Z(2)^0)*f3+(Z(2)^0)*f1*f2+(Z(2)^0)*f3*f4+(Z(2)^
+      0)*f1*f2*f3+(Z(2)^0)*f1*f2*f4+(Z(2)^0)*f1*f2*f3*f4,
+    (Z(2)^0)*f3+(Z(2)^0)*f4+(Z(2)^0)*f1*f2+(Z(2)^0)*f3*f4+(Z(2)^0)*f1*f2*f3+(
+      Z(2)^0)*f1*f2*f4+(Z(2)^0)*f1*f2*f3*f4, (Z(2)^0)*<identity> of ...+(Z(2)^
+      0)*f2+(Z(2)^0)*f3+(Z(2)^0)*f1*f2+(Z(2)^0)*f2*f3+(Z(2)^0)*f2*f4+(Z(2)^
+      0)*f3*f4+(Z(2)^0)*f1*f2*f3+(Z(2)^0)*f1*f2*f4+(Z(2)^0)*f2*f3*f4+(Z(2)^
+      0)*f1*f2*f3*f4, (Z(2)^0)*f1+(Z(2)^0)*f2+(Z(2)^0)*f3+(Z(2)^0)*f4+(Z(2)^
+      0)*f1*f2+(Z(2)^0)*f1*f3+(Z(2)^0)*f1*f4+(Z(2)^0)*f2*f3+(Z(2)^0)*f2*f4+(
       Z(2)^0)*f3*f4+(Z(2)^0)*f1*f2*f3+(Z(2)^0)*f1*f2*f4+(Z(2)^0)*f1*f3*f4+(Z(2)^
-      0)*f2*f3*f4+(Z(2)^0)*f1*f2*f3*f4, (Z(2)^0)*f1+(Z(2)^0)*f4+(Z(2)^0)*f1*f2+(Z(2)^
-      0)*f1*f3+(Z(2)^0)*f1*f4+(Z(2)^0)*f2*f3+(Z(2)^0)*f2*f4+(Z(2)^0)*f1*f2*f3+(Z(2)^
-      0)*f1*f2*f4+(Z(2)^0)*f1*f3*f4+(Z(2)^0)*f1*f2*f3*f4 ]    
+      0)*f2*f3*f4+(Z(2)^0)*f1*f2*f3*f4, (Z(2)^0)*<identity> of ...+(Z(2)^0)*f1+(
+      Z(2)^0)*f3+(Z(2)^0)*f1*f3+(Z(2)^0)*f1*f4+(Z(2)^0)*f2*f3+(Z(2)^0)*f2*f4+(
+      Z(2)^0)*f3*f4+(Z(2)^0)*f1*f3*f4 ]
   
 \end{Verbatim}
  We finish our example by calculating some properties of the Lie algebra
@@ -485,8 +492,10 @@ associated with \texttt{KG}. This example needs no further explanation.
 \begin{Verbatim}[fontsize=\small,frame=single,label=Example]
   
   gap> L := LieAlgebra( KG );
-  <Lie algebra of dimension 16 over GF(2)>
+  #I  LAGUNA package: Constructing Lie algebra ...
+  <Lie algebra over GF(2)>
   gap> D := LieDerivedSubalgebra( L );
+  #I  LAGUNA package: Computing the Lie derived subalgebra ...
   <Lie algebra of dimension 9 over GF(2)>
   gap> LC := LieCentre( L );
   <Lie algebra of dimension 7 over GF(2)>
@@ -497,6 +506,7 @@ associated with \texttt{KG}. This example needs no further explanation.
   gap> IsLieAbelian( L );
   false
   gap> IsLieSolvable( L );
+  #I  LAGUNA package: Checking Lie solvability ...
   true
   gap> IsLieMetabelian( L );
   false
@@ -559,7 +569,7 @@ nil-ring. The chain $A^i$ gives rise to a series of normal subgroups in $V$:
 (x_{k,1}-1)^{\alpha_{k,1}}\cdots(x_{k,l_k}-1)^{\alpha_{k,l_k}} \]
  where $0\leq \alpha_{i,j}\leq p-1$ is said to be \emph{standard}. Clearly, a standard product is an element of the augmentation ideal $A$. The weight of the standard product $u$ is 
 \[ \sum_{i=1}^k i(\alpha_{i,1}+\cdots+\alpha_{i,l_i}). \]
- The total number of standard products is $|G|-1$. 
+ The total number of standard products is $|G|-1$ . 
 
  \textsc{Lemma (}\cite[Theorem VIII.2.6]{HB}\textsc{).} For $i\leq c$, the set $S_i$ of standard products of weight at least $i$ forms a basis for $A^i$. Moreover, the set $1+S_i=\{1+s\ |\ s \in S_i\}$ is a polycyclic generating set for $1+A^i$. In particular $1+S_1$ is a polycyclic generating set for $V$. 
 
@@ -793,6 +803,7 @@ the empty list. This method is also applicable to elements of magma rings. }
   # First we create an element x to use in in the series of examples.
   # We map the minimal generating system of the group G to its group algebra
   # and denote their images as a and b
+  gap> G:=DihedralGroup(16);; KG:=GroupRing(GF(2),G);;
   gap> l := List( MinimalGeneratingSet( G ), g -> g^Embedding( G, KG ) );
   [ (Z(2)^0)*f1, (Z(2)^0)*f2 ]
   gap> a := l[1]; b := l[2]; e := One( KG ); # we denote the identity by e
@@ -919,8 +930,7 @@ conjugacy classes of elements of the group $G$. }
   (Z(2)^0)*<identity> of ...+(Z(2)^0)*f1+(Z(2)^0)*f2+(Z(2)^0)*f1*f2+(Z(2)^
   0)*f1*f3
   gap> PartialAugmentations( KG, y );
-  [ [ Z(2)^0, 0*Z(2), Z(2)^0, Z(2)^0 ], [ <identity> of ..., f1, f2, f1*f2 ]
-   ]    
+  [ [ Z(2)^0, 0*Z(2), Z(2)^0, Z(2)^0 ], [ <identity> of ..., f1, f2, f1*f2 ] ]    
   
 \end{Verbatim}
  
@@ -1057,9 +1067,9 @@ algebra element. The user can also invoke this function by typing \texttt{ x{\te
   gap> y;
   (Z(2)^0)*f1+(Z(2)^0)*f2+(Z(2)^0)*f1*f2
   gap> y^-1;
-  (Z(2)^0)*f1+(Z(2)^0)*f2+(Z(2)^0)*f3+(Z(2)^0)*f4+(Z(2)^0)*f1*f2+(Z(2)^0)*f1*f3+(
-  Z(2)^0)*f1*f4+(Z(2)^0)*f2*f4+(Z(2)^0)*f1*f2*f4+(Z(2)^0)*f2*f3*f4+(Z(2)^
-  0)*f1*f2*f3*f4
+  (Z(2)^0)*f1+(Z(2)^0)*f2+(Z(2)^0)*f3+(Z(2)^0)*f4+(Z(2)^0)*f1*f2+(Z(2)^
+  0)*f1*f3+(Z(2)^0)*f1*f4+(Z(2)^0)*f2*f4+(Z(2)^0)*f1*f2*f4+(Z(2)^0)*f2*f3*f4+(
+  Z(2)^0)*f1*f2*f3*f4
   gap> y * y^-1;
   (Z(2)^0)*<identity> of ...    
   
@@ -1068,8 +1078,14 @@ algebra element. The user can also invoke this function by typing \texttt{ x{\te
 
 \subsection{\textcolor{Chapter }{BicyclicUnitOfType1}}
 \logpage{[ 4, 2, 12 ]}\nobreak
-{\noindent\textcolor{FuncColor}{$\Diamond$\ \texttt{BicyclicUnitOfType1( a, g )\index{BicyclicUnitOfType1@\texttt{BicyclicUnitOfType1}}
+{\noindent\textcolor{FuncColor}{$\Diamond$\ \texttt{BicyclicUnitOfType1( KG, a, g )\index{BicyclicUnitOfType1@\texttt{BicyclicUnitOfType1}}
 \label{BicyclicUnitOfType1}
+}\hfill{\scriptsize (operation)}}\\
+\noindent\textcolor{FuncColor}{$\Diamond$\ \texttt{BicyclicUnitOfType1( a, g )\index{BicyclicUnitOfType1@\texttt{BicyclicUnitOfType1}}
+\label{BicyclicUnitOfType1}
+}\hfill{\scriptsize (operation)}}\\
+\noindent\textcolor{FuncColor}{$\Diamond$\ \texttt{BicyclicUnitOfType2( KG, a, g )\index{BicyclicUnitOfType2@\texttt{BicyclicUnitOfType2}}
+\label{BicyclicUnitOfType2}
 }\hfill{\scriptsize (operation)}}\\
 \noindent\textcolor{FuncColor}{$\Diamond$\ \texttt{BicyclicUnitOfType2( a, g )\index{BicyclicUnitOfType2@\texttt{BicyclicUnitOfType2}}
 \label{BicyclicUnitOfType2}
@@ -1079,8 +1095,8 @@ algebra element. The user can also invoke this function by typing \texttt{ x{\te
 
 
 
- \index{bicyclic unit} let $a$ be an element of order $n$ of a group $G$. We put $\alpha = 1 + a + a^2 + ... +a^{n-1} $. Then $(a-1)*g*\alpha$ and $\alpha*g*(a-1)$ are nilpotent of index two for any element $g$ of the group $G$ not containing in the normalizer $N_G(\langle a \rangle)$, and the units $u_{a,g} = 1 + (a-1) * g * \alpha $ and $v_{a,g} = 1 + \alpha * g * (a-1) $ are called bicyclic units. Note that $u_{a,g}$ and $v_{a,g}$ may coincide for some $a$ and $g$, but in general this does not hold. These methods construct bicyclic units of
-both types when \mbox{\texttt{a}} and \mbox{\texttt{g}} are elements of the underlying group $G$ of a group ring $KG$, already embedded to the group ring $KG$ using the mapping \texttt{Embedding( G, KG )}. Note that it is not actually checked that $g$ is not contained in $N_G(\langle a \rangle)$, because this is verified in \texttt{BicyclicUnitGroup} (\ref{BicyclicUnitGroup}). }
+ \index{bicyclic unit} let $a$ be an element of order $n$ of a group $G$. We put $\alpha = 1 + a + a^2 + ... +a^{n-1} $. Then $(a-1)*g*\alpha$ and $\alpha*g*(a-1)$ are nilpotent of index two for any element $g$ of the group $G$ not containing in the normalizer $N_G(\langle a \rangle)$, and the units $u_{a,g} = 1 + (a-1) * g * \alpha $ and $v_{a,g} = 1 + \alpha * g * (a-1) $ are called bicyclic units. Note that $u_{a,g}$ and $v_{a,g}$ may coincide for some $a$ and $g$, but in general this does not hold. In the three-argument version these
+methods construct bicyclic units of both types when \mbox{\texttt{a}} and \mbox{\texttt{g}} are elements of the underlying group $G$ of a group ring \mbox{\texttt{KG}}. The two-argument version accepts images of elements \mbox{\texttt{a}} and \mbox{\texttt{g}} from the underlying group in the group ring $KG$ obtained using the mapping \texttt{Embedding( G, KG )}. Note that it is not actually checked that $g$ is not contained in $N_G(\langle a \rangle)$, because this is verified in \texttt{BicyclicUnitGroup} (\ref{BicyclicUnitGroup}). }
 
  
 \begin{Verbatim}[fontsize=\small,frame=single,label=Example]
@@ -1134,10 +1150,10 @@ ring the user is strongly recommended to use \texttt{Augmentation} (\ref{Augment
   gap> e := Embedding( G,FG );
   <mapping: SymmetricGroup( [ 1 .. 3 ] ) -> AlgebraWithOne( GF(2), ... ) >
   gap> x := (1,2)^e; y := (1,3)^e;
-  Z(2)^0*(1,2)
-  Z(2)^0*(1,3)
+  (Z(2)^0)*(1,2)
+  (Z(2)^0)*(1,3)
   gap> a := AugmentationHomomorphism( FG );
-  [ Z(2)^0*(1,2,3), Z(2)^0*(1,2) ] -> [ Z(2)^0, Z(2)^0 ]
+  [ (Z(2)^0)*(1,2,3), (Z(2)^0)*(1,2) ] -> [ Z(2)^0, Z(2)^0 ]
   gap> x^a; y^a; ( x + y )^a; # this is slower
   Z(2)^0
   Z(2)^0
@@ -1169,7 +1185,8 @@ a modular group algebra \mbox{\texttt{KG}}. }
   gap> KG := GroupRing( GF( 2 ), DihedralGroup( 16 ) );
   <algebra-with-one over GF(2), with 4 generators>
   gap> AugmentationIdeal( KG );
-  <two-sided ideal in <algebra-with-one of dimension 16 over GF(2)>, (dimension 15)>    
+  <two-sided ideal in <algebra-with-one over GF(2), with 4 generators>,
+    (dimension 15)>
   
 \end{Verbatim}
  
@@ -1194,7 +1211,8 @@ otherwise, the standard \textsf{GAP} method will be used. }
   gap> KG := GroupRing( GF( 2 ), DihedralGroup( 16 ) );
   <algebra-with-one over GF(2), with 4 generators>
   gap> RadicalOfAlgebra( KG );
-  <two-sided ideal in <algebra-with-one of dimension 16 over GF(2)>, (dimension 15)>
+  <two-sided ideal in <algebra-with-one over GF(2), with 4 generators>,
+    (dimension 15)>
   gap> RadicalOfAlgebra( KG ) = AugmentationIdeal( KG );
   true     
   
@@ -1211,16 +1229,15 @@ otherwise, the standard \textsf{GAP} method will be used. }
 
 
 
- The argument \mbox{\texttt{KG}} must be a $p$-modular group algebra.
+ The argument \mbox{\texttt{KG}} must be a $p$-modular group algebra. 
 
  For a group algebra $KG$, let $A$ denote the augmentation ideal, and assume that $c$ is the smallest number such that $A^c=0$. Then a weighted basis of $KG$ is some basis $ b_1, \ldots, b_n $ for the augmentation ideal $A$, for which there are indices $ i_1=1, \ldots, i_{c-1} $ such that $ b_{i_k}, \ldots, b_n $ is a basis for $A^k$. The weight of an element $b_i$ of a weighted basis is the unique integer $w$ such that $b_i$ belongs to $w$-th power of $A$ but does not belong to its $(w+1)$-th power. 
 
- Note that this function actually constructs a basis for the \emph{augmentation ideal} of \mbox{\texttt{KG}} and not for \mbox{\texttt{KG}} itself. Since the augmentation ideal has co-dimension 1 in \texttt{KG}, a basis for \texttt{KG} can be easily obtained by adjoining the identity element of the group.
+ Note that this function actually constructs a basis for the \emph{augmentation ideal} of \mbox{\texttt{KG}} and not for \mbox{\texttt{KG}} itself. Since the augmentation ideal has co-dimension 1 in \texttt{KG}, a basis for \texttt{KG} can be easily obtained by adjoining the identity element of the group. 
 
  The method returns a record whose basis entry is the basis and the weights
-entry is a list of the corresponding weights the of basis elements.
-
- For more details, see Section \ref{TheoryThird}. }
+entry is a list of the corresponding weights the of basis elements. See
+Section \ref{TheoryThird} for more details. }
 
  
 \begin{Verbatim}[fontsize=\small,frame=single,label=Example]
@@ -1229,9 +1246,9 @@ entry is a list of the corresponding weights the of basis elements.
   <algebra-with-one over GF(2), with 2 generators>
   gap> WeightedBasis( KG );
   rec(
-    weightedBasis := [ (Z(2)^0)*<identity> of ...+(Z(2)^0)*f2, (Z(2)^0)*<identity> of\
-   ...+(Z(2)^0)*f1, (Z(2)^0)*<identity> of ...+(Z(2)^0)*f1+(Z(2)^0)*f2+(Z(2)^
-          0)*f1*f2 ], weights := [ 1, 1, 2 ] )
+    weightedBasis := [ (Z(2)^0)*<identity> of ...+(Z(2)^0)*f2, (Z(2)^0)*<identity>
+          of ...+(Z(2)^0)*f1, (Z(2)^0)*<identity> of ...+(Z(2)^0)*f1+(Z(2)^0)*f2+(
+          Z(2)^0)*f1*f2 ], weights := [ 1, 1, 2 ] )
   
 \end{Verbatim}
  
@@ -1303,7 +1320,7 @@ the powers of the augmentation ideal. }
   <algebra-with-one over GF(2), with 4 generators>
   gap> AugmentationIdealOfDerivedSubgroupNilpotencyIndex( KG );
   4
-  gap> D := DerivedSubgroup( G );
+  gap> D := DerivedSubgroup( UnderlyingGroup( KG ) );
   Group([ f3, f4 ])
   gap> KD := GroupRing( GF( 2 ), D );
   <algebra-with-one over GF(2), with 2 generators>
@@ -1350,14 +1367,14 @@ taking into account the fact, that the ideal $J_l(H)$ is two-sided if and only i
   Group([ f3, f4 ])
   gap> LeftIdealBySubgroup( KG, D );
   <two-sided ideal in <algebra-with-one over GF(2), with 4 generators>,
-    (dimension 3)>                              
+    (dimension 12)>                              
   gap> H := Subgroup( G, [ GeneratorsOfGroup(G)[1] ]);
   Group([ f1 ])
   gap> IsNormal( G, H );
   false
   gap> LeftIdealBySubgroup( KG, H );
   <left ideal in <algebra-with-one over GF(2), with 4 generators>,
-    (dimension 1)>
+    (dimension 8)>
   
 \end{Verbatim}
  }
@@ -1441,8 +1458,9 @@ group. This method returns the bijection from \texttt{NormalizedUnitGroup(\mbox{
 \begin{Verbatim}[fontsize=\small,frame=single,label=Example]
   
   gap> f := NaturalBijectionToPcNormalizedUnitGroup( KG );
-  MappingByFunction( <group of size 32768 with 15 generators>, <pc group of size
-  32768 with 15 generators>, function( x ) ... end )
+  MappingByFunction( <group of size 32768 with
+  15 generators>, <pc group of size 32768 with
+  15 generators>, function( x ) ... end )
   gap> u := GeneratorsOfGroup( V )[4];;
   gap> u^f;
   f4   
@@ -1502,7 +1520,8 @@ pc-presentation
   gap> ucs := UpperCentralSeries( V );
   [ <pc group of size 32768 with 15 generators>,
     <pc group of size 4096 with 12 generators>,
-    Group([ f3*f5*f13*f15, f7, f11, f13, f14, f15, f12, f9*f12, f10 ]),
+    Group([ f3*f5*f13*f15, f7, f15, f13*f15, f14*f15, f11*f13*f14*f15, f12,
+        f9*f12, f10 ]),
     Group([ f3*f5*f13*f15, f7, f15, f13*f15, f14*f15, f11*f13*f14*f15 ]),
     Group([  ]) ]
   gap> f := Embedding( G, V );
@@ -1537,6 +1556,7 @@ pc-presentation
 \begin{Verbatim}[fontsize=\small,frame=single,label=Example]
   
   gap> U := Units( KG );
+  #I  LAGUNA package: Computing the unit group ...
   <group of size 32768 with 15 generators>
   # now elements of U are already in KG
   gap> GeneratorsOfGroup( U )[5];
@@ -1545,6 +1565,7 @@ pc-presentation
   gap> FH := GroupRing( GF(3), SmallGroup(27,3) );
   <algebra-with-one over GF(3), with 3 generators>
   gap> T := Units( FH );
+  #I  LAGUNA package: Computing the unit group ...
   <group of size 5083731656658 with 27 generators>
   gap> x := GeneratorsOfGroup( T )[1];
   Tuple( [ Z(3), (Z(3)^0)*<identity> of ... ] ) 
@@ -1662,13 +1683,13 @@ pc-presentation
 \begin{Verbatim}[fontsize=\small,frame=single,label=Example]
   
   gap> UnderlyingGroupRing( Units( KG ) );
-  <algebra-with-one of dimension 16 over GF(2)>
+  <algebra-with-one over GF(2), with 4 generators>
   gap> UnderlyingGroupRing( PcUnits( KG ) );
-  <algebra-with-one of dimension 16 over GF(2)>
+  <algebra-with-one over GF(2), with 4 generators>
   gap> UnderlyingGroupRing( NormalizedUnitGroup( KG ) );
-  <algebra-with-one of dimension 16 over GF(2)>
+  <algebra-with-one over GF(2), with 4 generators>
   gap> UnderlyingGroupRing( PcNormalizedUnitGroup( KG ) );
-  <algebra-with-one of dimension 16 over GF(2)>     
+  <algebra-with-one over GF(2), with 4 generators>
   
 \end{Verbatim}
  
@@ -1744,8 +1765,27 @@ groups. }
 \end{Verbatim}
  
 
-\subsection{\textcolor{Chapter }{GroupBases}}
+\subsection{\textcolor{Chapter }{AugmentationIdealPowerFactorGroup}}
 \logpage{[ 4, 4, 14 ]}\nobreak
+{\noindent\textcolor{FuncColor}{$\Diamond$\ \texttt{AugmentationIdealPowerFactorGroup( KG, n )\index{AugmentationIdealPowerFactorGroup@\texttt{AugmentationIdealPowerFactorGroup}}
+\label{AugmentationIdealPowerFactorGroup}
+}\hfill{\scriptsize (operation)}}\\
+\textbf{\indent Returns:\ }
+ PcGroup 
+
+
+
+ ???????????????????????????????????????? }
+
+ 
+\begin{Verbatim}[fontsize=\small,frame=single,label=Example]
+  
+  
+\end{Verbatim}
+ 
+
+\subsection{\textcolor{Chapter }{GroupBases}}
+\logpage{[ 4, 4, 15 ]}\nobreak
 {\noindent\textcolor{FuncColor}{$\Diamond$\ \texttt{GroupBases( KG )\index{GroupBases@\texttt{GroupBases}}
 \label{GroupBases}
 }\hfill{\scriptsize (attribute)}}\\
@@ -1770,12 +1810,13 @@ of the group algebra \mbox{\texttt{KG}} in its normalised unit group. }
   gap> Length( gb );
   32
   gap> gb[1];
-  [ (Z(2)^0)*<identity> of ..., (Z(2)^0)*f3, (Z(2)^0)*f1*f2+(Z(2)^0)*f2*f3+(Z(2)^
-      0)*f1*f2*f3, (Z(2)^0)*f2+(Z(2)^0)*f1*f2+(Z(2)^0)*f1*f2*f3,
+  [ (Z(2)^0)*<identity> of ..., (Z(2)^0)*f3,
+    (Z(2)^0)*f1*f2+(Z(2)^0)*f2*f3+(Z(2)^0)*f1*f2*f3,
+    (Z(2)^0)*f2+(Z(2)^0)*f1*f2+(Z(2)^0)*f1*f2*f3,
     (Z(2)^0)*<identity> of ...+(Z(2)^0)*f2+(Z(2)^0)*f3+(Z(2)^0)*f2*f3+(Z(2)^
       0)*f1*f2*f3, (Z(2)^0)*f2+(Z(2)^0)*f1*f3+(Z(2)^0)*f2*f3,
-    (Z(2)^0)*<identity> of ...+(Z(2)^0)*f2+(Z(2)^0)*f3+(Z(2)^0)*f1*f2+(Z(2)^0)*f2*f3,
-    (Z(2)^0)*f1+(Z(2)^0)*f2+(Z(2)^0)*f2*f3 ]
+    (Z(2)^0)*<identity> of ...+(Z(2)^0)*f2+(Z(2)^0)*f3+(Z(2)^0)*f1*f2+(Z(2)^
+      0)*f2*f3, (Z(2)^0)*f1+(Z(2)^0)*f2+(Z(2)^0)*f2*f3 ]
   gap> Length( last );
   8    
   
@@ -1805,6 +1846,7 @@ an associative algebra should normally be created using \texttt{LieAlgebra( A )}
   gap> G := SymmetricGroup(3);; FG := GroupRing( GF( 2 ), G );
   <algebra-with-one over GF(2), with 2 generators>
   gap> L := LieAlgebra( FG );
+  #I  LAGUNA package: Constructing Lie algebra ...
   <Lie algebra over GF(2)>
   
 \end{Verbatim}
@@ -1826,6 +1868,7 @@ an associative algebra should normally be created using \texttt{LieAlgebra( A )}
   gap> KG := GroupRing( GF(3), DihedralGroup(16) );
   <algebra-with-one over GF(3), with 4 generators>
   gap> L := LieAlgebra ( KG );
+  #I  LAGUNA package: Constructing Lie algebra ...
   <Lie algebra over GF(3)>
   gap> IsLieAlgebraByAssociativeAlgebra( L );
   true
@@ -1852,10 +1895,11 @@ associative algebra as one of its attributes. }
   gap> KG := GroupRing( GF(2), DihedralGroup(16) ); 
   <algebra-with-one over GF(2), with 4 generators>
   gap> L := LieAlgebra ( KG );
+  #I  LAGUNA package: Constructing Lie algebra ...
   <Lie algebra over GF(2)>
   gap> UnderlyingAssociativeAlgebra( L );
   <algebra-with-one over GF(2), with 4 generators>
-  gap> last = M;
+  gap> last = KG;
   true  
   
 \end{Verbatim}
@@ -1915,6 +1959,7 @@ of the Lie algebra \mbox{\texttt{L}}. }
   Sym( [ 1 .. 3 ] )
   <algebra-with-one over GF(2), with 2 generators>
   gap> L := LieAlgebra( FG );
+  #I  LAGUNA package: Constructing Lie algebra ...
   <Lie algebra over GF(2)>
   gap> s := NaturalBijectionToAssociativeAlgebra( L );
   MappingByFunction( <Lie algebra over GF(2)>, <algebra-with-one over GF(
@@ -1944,6 +1989,7 @@ this information is stored as a property. }
   Sym( [ 1 .. 3 ] )
   <algebra-with-one over GF(2), with 2 generators>
   gap> L := LieAlgebra( FG );
+  #I  LAGUNA package: Constructing Lie algebra ...
   <Lie algebra over GF(2)>
   gap> IsLieAlgebraOfGroupRing( L );
   true   
@@ -1972,6 +2018,7 @@ this group ring; see \texttt{UnderlyingGroup} (\ref{UnderlyingGroup:of a group r
   Sym( [ 1 .. 3 ] )
   <algebra-with-one over GF(2), with 2 generators>
   gap> L := LieAlgebra( FG );
+  #I  LAGUNA package: Constructing Lie algebra ...
   <Lie algebra over GF(2)>
   gap> UnderlyingGroup( L );
   Sym( [ 1 .. 3 ] )
@@ -2001,6 +2048,7 @@ this group ring; see \texttt{UnderlyingGroup} (\ref{UnderlyingGroup:of a group r
   Sym( [ 1 .. 3 ] )
   <algebra-with-one over GF(2), with 2 generators>
   gap> L := LieAlgebra( FG );
+  #I  LAGUNA package: Constructing Lie algebra ...
   <Lie algebra over GF(2)>
   gap> f := Embedding( G, L );
   CompositionMapping( MappingByFunction( <algebra-with-one over GF(2), with 
@@ -2035,10 +2083,12 @@ of \mbox{\texttt{L}} using this idea. }
   <pc group of size 256 with 8 generators>
   <algebra-with-one over GF(2), with 8 generators>
   gap> L := LieAlgebra( FG );
+  #I  LAGUNA package: Constructing Lie algebra ...
   <Lie algebra over GF(2)>
   gap> C := LieCentre( L );
   <Lie algebra of dimension 28 over GF(2)>
   gap> D := LieDerivedSubalgebra( L );
+  #I  LAGUNA package: Computing the Lie derived subalgebra ...
   <Lie algebra of dimension 228 over GF(2)>
   gap> c := Dimension( C ); d := Dimension( D ); l := Dimension( L );
   28
@@ -2071,10 +2121,12 @@ group. }
   <pc group of size 256 with 8 generators>
   <algebra-with-one over GF(2), with 8 generators>
   gap> L := LieAlgebra( FG );
+  #I  LAGUNA package: Constructing Lie algebra ...
   <Lie algebra over GF(2)>
   gap> C := LieCentre( L );
   <Lie algebra of dimension 28 over GF(2)>
-  gap> D := LieDerivedSubalgebra( L );    
+  gap> D := LieDerivedSubalgebra( L );
+  #I  LAGUNA package: Computing the Lie derived subalgebra ...    
   <Lie algebra of dimension 228 over GF(2)>
   gap> l := Dimension( L ); c := Dimension( C ); d := Dimension( D );
   256
@@ -2102,6 +2154,7 @@ group. }
   Sym( [ 1 .. 3 ] )
   <algebra-with-one over GF(2), with 2 generators>
   gap> L := LieAlgebra( FG );          
+  #I  LAGUNA package: Constructing Lie algebra ...
   <Lie algebra over GF(2)>
   gap> IsAbelian( G );
   false
@@ -2131,6 +2184,7 @@ elementary method which just calculates Lie commutators. }
   <pc group of size 256 with 8 generators>
   <algebra-with-one over GF(2), with 8 generators>
   gap> L := LieAlgebra( FG );
+  #I  LAGUNA package: Constructing Lie algebra ...
   <Lie algebra over GF(2)>
   gap> IsLieSolvable( L );                       # This is very fast.
   true
@@ -2158,6 +2212,7 @@ more elementary method which just calculates Lie commutators. }
   <pc group of size 256 with 8 generators>
   <algebra-with-one over GF(2), with 8 generators>
   gap> L := LieAlgebra( FG );
+  #I  LAGUNA package: Constructing Lie algebra ...
   <Lie algebra over GF(2)>
   gap> IsLieNilpotent( L );                           # This is very fast.
   true
@@ -2185,6 +2240,7 @@ more elementary method which just calculates Lie commutators. }
   <pc group of size 256 with 8 generators>
   <algebra-with-one over GF(2), with 8 generators>
   gap> L := LieAlgebra( FG );
+  #I  LAGUNA package: Constructing Lie algebra ...
   <Lie algebra over GF(2)>
   gap> IsLieMetabelian( L );
   false   
@@ -2211,6 +2267,7 @@ commutators. }
   Sym( [ 1 .. 3 ] )
   <algebra-with-one over GF(2), with 2 generators>
   gap> L := LieAlgebra( FG );       
+  #I  LAGUNA package: Constructing Lie algebra ...
   <Lie algebra over GF(2)>
   gap> IsLieMetabelian( L );                                             
   false
@@ -2230,7 +2287,7 @@ commutators. }
 
 
 
- The canonical basis of a group algebra $FG$ is formed by the elements of $G$. In this method \mbox{\texttt{L}} is the Lie algebra associated with a group algebra $FG$, and the method returns the images of the elements of $G$ in \mbox{\texttt{L}}. }
+ The canonical basis of a group algebra $FG$ is formed by the elements of $G$. Here \mbox{\texttt{L}} is the Lie algebra associated with $FG$, and the method returns the images of the elements of $G$ in \mbox{\texttt{L}}. }
 
  
 \begin{Verbatim}[fontsize=\small,frame=single,label=Example]
@@ -2239,13 +2296,14 @@ commutators. }
   Sym( [ 1 .. 3 ] )
   <algebra-with-one over GF(2), with 2 generators>
   gap> L := LieAlgebra( FG );       
+  #I  LAGUNA package: Constructing Lie algebra ...
   <Lie algebra over GF(2)>
   gap> B := CanonicalBasis( L );
   CanonicalBasis( <Lie algebra of dimension 6 over GF(2)> )
   gap> Elements( B );
-  [ LieObject( Z(2)^0*() ), LieObject( Z(2)^0*(2,3) ), 
-    LieObject( Z(2)^0*(1,2) ), LieObject( Z(2)^0*(1,2,3) ), 
-      LieObject( Z(2)^0*(1,3,2) ), LieObject( Z(2)^0*(1,3) ) ]   
+  [ LieObject( (Z(2)^0)*() ), LieObject( (Z(2)^0)*(2,3) ),
+    LieObject( (Z(2)^0)*(1,2) ), LieObject( (Z(2)^0)*(1,2,3) ),
+    LieObject( (Z(2)^0)*(1,3,2) ), LieObject( (Z(2)^0)*(1,3) ) ]
   
 \end{Verbatim}
  
@@ -2269,6 +2327,7 @@ see \texttt{StructureConstantsTable} (\ref{StructureConstantsTable}). }
   Sym( [ 1 .. 3 ] )
   <algebra-with-one over GF(2), with 2 generators>
   gap> L := LieAlgebra( FG );    
+  #I  LAGUNA package: Constructing Lie algebra ...
   <Lie algebra over GF(2)>
   gap> B := CanonicalBasis( L );
   CanonicalBasis( <Lie algebra of dimension 6 over GF(2)> )
@@ -2295,6 +2354,7 @@ the Lie algebra \texttt{L} associated with a group ring with respect to its cano
   <pc group of size 2 with 1 generators>
   <algebra-with-one over GF(2), with 1 generators>
   gap> L := LieAlgebra( FG );
+  #I  LAGUNA package: Constructing Lie algebra ...
   <Lie algebra over GF(2)>
   gap> B := CanonicalBasis( L );
   CanonicalBasis( <Lie algebra of dimension 2 over GF(2)> )
@@ -2360,11 +2420,10 @@ algebra \mbox{\texttt{KG}}. }
 
  \index{Lie derived series} \index{Lie derived length} Let $L$ be a Lie algebra. The \emph{Lie derived series} of $L$ is defined as follows: $\delta^{[0]}(L) = L$ and $\delta^{[n]}(L) = [\delta^{[n-1]}(L), \delta^{[n-1]}(L)]$. $L$ is called Lie solvable if there exists an integer $m$ such that $ \delta^{[m]}(L) = 0 $. In this case the integer $m$ is called the \emph{Lie derived length} of $L$, and it is returned by this function. }
 
- \newpage 
+ 
 \begin{Verbatim}[fontsize=\small,frame=single,label=Example]
   
-  gap> KG := GroupRing( GF ( 2 ), DihedralGroup( 16 ) );
-  <algebra-with-one over GF(2), with 4 generators>
+  gap> KG := GroupRing( GF ( 2 ), DihedralGroup( 16 ) );;
   gap> L := LieAlgebra( KG );
   #I  LAGUNA package: Constructing Lie algebra ...
   <Lie algebra over GF(2)>
@@ -2389,14 +2448,12 @@ algebra \mbox{\texttt{KG}}. }
 
 
  Returns a list of subgroups of $G$ with index two. Such subgroups are important for the investigation of the Lie
-structure of the group algebra $KG$ in the case when the underlying field $K$ has characteristic 2. }
+structure of the group algebra $KG$ in the case of characteristic 2. }
 
  
 \begin{Verbatim}[fontsize=\small,frame=single,label=Example]
   
-  gap> G := DihedralGroup( 16 );
-  <pc group of size 16 with 4 generators>  
-  gap> SubgroupsOfIndexTwo( G );
+  gap> SubgroupsOfIndexTwo( DihedralGroup( 16) );
   [ Group([ f1, f1*f3, f1*f4, f1*f3*f4 ]), Group([ f2, f2*f3, f2*f4, f2*f3*f4 ]),
     Group([ f1*f2, f1*f2*f3, f1*f2*f4, f1*f2*f3*f4 ]) ]     
   
@@ -2513,8 +2570,8 @@ group ring \mbox{\texttt{KG}}, but later you can also apply it to the group \mbo
 }\hfill{\scriptsize (info class)}}\\
 
 
- \texttt{LAGInfo} is a special Info class for LAGUNA algorithms. It has 5 levels: 0, 1
-(default), 2, 3 and 4. To change info level to \texttt{k}, use command \texttt{SetInfoLevel(LAGInfo, k)}. }
+ \texttt{LAGInfo} is a special Info class for \textsf{LAGUNA} algorithms. It has 5 levels: 0, 1 (default), 2, 3 and 4. To change info level
+to \texttt{k}, use command \texttt{SetInfoLevel(LAGInfo, k)}. }
 
  
 \begin{Verbatim}[fontsize=\small,frame=single,label=Example]

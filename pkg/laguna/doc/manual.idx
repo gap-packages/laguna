@@ -37,6 +37,8 @@
 \indexentry{IsUnit@\texttt  {IsUnit}|hyperpage}{23}
 \indexentry{InverseOp@\texttt  {InverseOp}|hyperpage}{24}
 \indexentry{BicyclicUnitOfType1@\texttt  {BicyclicUnitOfType1}|hyperpage}{24}
+\indexentry{BicyclicUnitOfType1@\texttt  {BicyclicUnitOfType1}|hyperpage}{24}
+\indexentry{BicyclicUnitOfType2@\texttt  {BicyclicUnitOfType2}|hyperpage}{24}
 \indexentry{BicyclicUnitOfType2@\texttt  {BicyclicUnitOfType2}|hyperpage}{24}
 \indexentry{bicyclic unit|hyperpage}{24}
 \indexentry{AugmentationHomomorphism@\texttt  {AugmentationHomomorphism}|hyperpage}{25}
@@ -56,45 +58,46 @@
 \indexentry{NaturalBijectionToNormalizedUnitGroup@\texttt  {NaturalBijectionToNormalizedUnitGroup}|hyperpage}{30}
 \indexentry{Embedding@\texttt  {Embedding}|hyperpage}{30}
 \indexentry{Units@\texttt  {Units}|hyperpage}{31}
-\indexentry{PcUnits@\texttt  {PcUnits}|hyperpage}{31}
+\indexentry{PcUnits@\texttt  {PcUnits}|hyperpage}{32}
 \indexentry{IsGroupOfUnitsOfMagmaRing@\texttt  {IsGroupOfUnitsOfMagmaRing}|hyperpage}{32}
 \indexentry{IsUnitGroupOfGroupRing@\texttt  {IsUnitGroupOfGroupRing}|hyperpage}{32}
-\indexentry{IsNormalizedUnitGroupOfGroupRing@\texttt  {IsNormalizedUnitGroupOfGroupRing}|hyperpage}{32}
+\indexentry{IsNormalizedUnitGroupOfGroupRing@\texttt  {IsNormalizedUnitGroupOfGroupRing}|hyperpage}{33}
 \indexentry{UnderlyingGroupRing@\texttt  {UnderlyingGroupRing}|hyperpage}{33}
 \indexentry{UnitarySubgroup@\texttt  {UnitarySubgroup}|hyperpage}{33}
 \indexentry{BicyclicUnitGroup@\texttt  {BicyclicUnitGroup}|hyperpage}{34}
-\indexentry{GroupBases@\texttt  {GroupBases}|hyperpage}{34}
+\indexentry{AugmentationIdealPowerFactorGroup@\texttt  {AugmentationIdealPowerFactorGroup}|hyperpage}{34}
+\indexentry{GroupBases@\texttt  {GroupBases}|hyperpage}{35}
 \indexentry{LieAlgebraByDomain@\texttt  {LieAlgebraByDomain}|hyperpage}{35}
-\indexentry{IsLieAlgebraByAssociativeAlgebra@\texttt  {IsLieAlgebraByAssociativeAlgebra}|hyperpage}{35}
+\indexentry{IsLieAlgebraByAssociativeAlgebra@\texttt  {IsLieAlgebraByAssociativeAlgebra}|hyperpage}{36}
 \indexentry{UnderlyingAssociativeAlgebra@\texttt  {UnderlyingAssociativeAlgebra}|hyperpage}{36}
 \indexentry{NaturalBijectionToLieAlgebra@\texttt  {NaturalBijectionToLieAlgebra}|hyperpage}{36}
 \indexentry{NaturalBijectionToAssociativeAlgebra@\texttt  {NaturalBijectionToAssociativeAlgebra}|hyperpage}{37}
 \indexentry{IsLieAlgebraOfGroupRing@\texttt  {IsLieAlgebraOfGroupRing}|hyperpage}{37}
-\indexentry{UnderlyingGroup@\texttt  {UnderlyingGroup}!of Lie algebra of a group ring|hyperpage}{37}
+\indexentry{UnderlyingGroup@\texttt  {UnderlyingGroup}!of Lie algebra of a group ring|hyperpage}{38}
 \indexentry{Embedding@\texttt  {Embedding}|hyperpage}{38}
-\indexentry{LieCentre@\texttt  {LieCentre}|hyperpage}{38}
+\indexentry{LieCentre@\texttt  {LieCentre}|hyperpage}{39}
 \indexentry{LieDerivedSubalgebra@\texttt  {LieDerivedSubalgebra}|hyperpage}{39}
-\indexentry{IsLieAbelian@\texttt  {IsLieAbelian}|hyperpage}{39}
+\indexentry{IsLieAbelian@\texttt  {IsLieAbelian}|hyperpage}{40}
 \indexentry{IsLieSolvable@\texttt  {IsLieSolvable}|hyperpage}{40}
-\indexentry{IsLieNilpotent@\texttt  {IsLieNilpotent}|hyperpage}{40}
-\indexentry{IsLieMetabelian@\texttt  {IsLieMetabelian}|hyperpage}{40}
+\indexentry{IsLieNilpotent@\texttt  {IsLieNilpotent}|hyperpage}{41}
+\indexentry{IsLieMetabelian@\texttt  {IsLieMetabelian}|hyperpage}{41}
 \indexentry{IsLieCentreByMetabelian@\texttt  {IsLieCentreByMetabelian}|hyperpage}{41}
-\indexentry{CanonicalBasis@\texttt  {CanonicalBasis}|hyperpage}{41}
+\indexentry{CanonicalBasis@\texttt  {CanonicalBasis}|hyperpage}{42}
 \indexentry{IsBasisOfLieAlgebraOfGroupRing@\texttt  {IsBasisOfLieAlgebraOfGroupRing}|hyperpage}{42}
-\indexentry{StructureConstantsTable@\texttt  {StructureConstantsTable}|hyperpage}{42}
+\indexentry{StructureConstantsTable@\texttt  {StructureConstantsTable}|hyperpage}{43}
 \indexentry{LieUpperNilpotencyIndex@\texttt  {LieUpperNilpotencyIndex}|hyperpage}{43}
 \indexentry{upper Lie power series|hyperpage}{43}
 \indexentry{LieLowerNilpotencyIndex@\texttt  {LieLowerNilpotencyIndex}|hyperpage}{43}
 \indexentry{lower Lie power series|hyperpage}{43}
-\indexentry{LieDerivedLength@\texttt  {LieDerivedLength}|hyperpage}{43}
-\indexentry{Lie derived series|hyperpage}{43}
-\indexentry{Lie derived length|hyperpage}{43}
+\indexentry{LieDerivedLength@\texttt  {LieDerivedLength}|hyperpage}{44}
+\indexentry{Lie derived series|hyperpage}{44}
+\indexentry{Lie derived length|hyperpage}{44}
 \indexentry{SubgroupsOfIndexTwo@\texttt  {SubgroupsOfIndexTwo}|hyperpage}{44}
-\indexentry{DihedralDepth@\texttt  {DihedralDepth}|hyperpage}{44}
+\indexentry{DihedralDepth@\texttt  {DihedralDepth}|hyperpage}{45}
 \indexentry{DimensionBasis@\texttt  {DimensionBasis}|hyperpage}{45}
 \indexentry{LieDimensionSubgroups@\texttt  {LieDimensionSubgroups}|hyperpage}{45}
-\indexentry{LieUpperCodimensionSeries@\texttt  {LieUpperCodimensionSeries}|hyperpage}{45}
-\indexentry{LieUpperCodimensionSeries@\texttt  {LieUpperCodimensionSeries}|hyperpage}{45}
+\indexentry{LieUpperCodimensionSeries@\texttt  {LieUpperCodimensionSeries}|hyperpage}{46}
+\indexentry{LieUpperCodimensionSeries@\texttt  {LieUpperCodimensionSeries}|hyperpage}{46}
 \indexentry{LAGInfo@\texttt  {LAGInfo}|hyperpage}{46}
-\indexentry{LAGUNABuildManual@\texttt  {LAGUNABuildManual}|hyperpage}{46}
-\indexentry{LAGUNABuildManualHTML@\texttt  {LAGUNABuildManualHTML}|hyperpage}{46}
+\indexentry{LAGUNABuildManual@\texttt  {LAGUNABuildManual}|hyperpage}{47}
+\indexentry{LAGUNABuildManualHTML@\texttt  {LAGUNABuildManualHTML}|hyperpage}{47}

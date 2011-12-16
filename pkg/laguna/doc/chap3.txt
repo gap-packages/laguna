@@ -123,7 +123,7 @@
        \sum_{i=1}^k i(\alpha_{i,1}+\cdots+\alpha_{i,l_i}).
   \]
   
-  The total number of standard products is |G|-1.
+  The total number of standard products is |G|-1 .
   
   [1m[46mLemma  ([0m[HB82,  Theorem  VIII.2.6][1m[46m).[0m  For  i<=  c,  the  set S_i of standard
   products  of  weight  at  least  i  forms a basis for A^i. Moreover, the set

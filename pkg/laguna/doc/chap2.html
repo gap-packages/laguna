@@ -157,9 +157,9 @@ true
 
 
 gap&gt; y^-1;
-(Z(2)^0)*f1+(Z(2)^0)*f2+(Z(2)^0)*f3+(Z(2)^0)*f4+(Z(2)^0)*f1*f2+(Z(2)^0)*f1*f3+(
-Z(2)^0)*f1*f4+(Z(2)^0)*f2*f4+(Z(2)^0)*f1*f2*f4+(Z(2)^0)*f2*f3*f4+(Z(2)^
-0)*f1*f2*f3*f4
+(Z(2)^0)*f1+(Z(2)^0)*f2+(Z(2)^0)*f3+(Z(2)^0)*f4+(Z(2)^0)*f1*f2+(Z(2)^
+0)*f1*f3+(Z(2)^0)*f1*f4+(Z(2)^0)*f2*f4+(Z(2)^0)*f1*f2*f4+(Z(2)^0)*f2*f3*f4+(
+Z(2)^0)*f1*f2*f3*f4
 gap&gt; y * y^-1;
 (Z(2)^0)*&lt;identity&gt; of ... 
 
@@ -195,7 +195,7 @@ false
 
 
 gap&gt; AugmentationIdeal( KG );
-&lt;two-sided ideal in &lt;algebra-with-one of dimension 16 over GF(2)&gt;, 
+&lt;two-sided ideal in &lt;algebra-with-one over GF(2), with 4 generators&gt;,
   (dimension 15)&gt;
 gap&gt; RadicalOfAlgebra( KG ) = AugmentationIdeal( KG );
 true
@@ -254,7 +254,7 @@ gap&gt; V := NormalizedUnitGroup( KG );
 
 
 gap&gt; W := PcNormalizedUnitGroup( KG );
-&lt;pc group of size 32768 with 15 generators&gt;;
+&lt;pc group of size 32768 with 15 generators&gt;
 
 
 </pre></td></tr></table>
@@ -269,11 +269,12 @@ gap&gt; W := PcNormalizedUnitGroup( KG );
 
 
 gap&gt; t := NaturalBijectionToPcNormalizedUnitGroup( KG );
-MappingByFunction( &lt;group of size 32768 with 15 generators&gt;, &lt;pc group of size
-32768 with 15 generators&gt;, function( x ) ... end )
+MappingByFunction( &lt;group of size 32768 with
+15 generators&gt;, &lt;pc group of size 32768 with
+15 generators&gt;, function( x ) ... end )
 gap&gt; List( AsList( G ), x -&gt; ( x^Embedding( G, KG ) )^t );
-[ &lt;identity&gt; of ..., f2, f1, f3, f7, f1*f2*f3, f2*f3, f2*f7, f1*f3, f1*f7, f3*f7,
-  f1*f2*f7, f1*f2*f3*f7, f2*f3*f7, f1*f3*f7, f1*f2 ]   
+[ &lt;identity&gt; of ..., f2, f1, f3, f7, f1*f2*f3, f2*f3, f2*f7, f1*f3, f1*f7,
+  f3*f7, f1*f2*f7, f1*f2*f3*f7, f2*f3*f7, f1*f3*f7, f1*f2 ]
 
 
 </pre></td></tr></table>
@@ -286,19 +287,22 @@ gap&gt; List( AsList( G ), x -&gt; ( x^Embedding( G, KG ) )^t );
 
 gap&gt; f := NaturalBijectionToNormalizedUnitGroup( KG );
 [ f1, f2, f3, f4, f5, f6, f7, f8, f9, f10, f11, f12, f13, f14, f15 ] -&gt;
-[ (Z(2)^0)*f2, (Z(2)^0)*f1, (Z(2)^0)*f3, (Z(2)^0)*f1+(Z(2)^0)*f2+(Z(2)^0)*f1*f2,
-  (Z(2)^0)*f2+(Z(2)^0)*f3+(Z(2)^0)*f2*f3, (Z(2)^0)*f1+(Z(2)^0)*f3+(Z(2)^0)*f1*f3,
-  (Z(2)^0)*f4, (Z(2)^0)*f1+(Z(2)^0)*f2+(Z(2)^0)*f3+(Z(2)^0)*f1*f2+(Z(2)^0)*f1*f3+(
-    Z(2)^0)*f2*f3+(Z(2)^0)*f1*f2*f3, (Z(2)^0)*f2+(Z(2)^0)*f4+(Z(2)^0)*f2*f4,
-  (Z(2)^0)*f1+(Z(2)^0)*f4+(Z(2)^0)*f1*f4, (Z(2)^0)*f3+(Z(2)^0)*f4+(Z(2)^0)*f3*f4,
+[ (Z(2)^0)*f2, (Z(2)^0)*f1, (Z(2)^0)*f3,
+  (Z(2)^0)*f1+(Z(2)^0)*f2+(Z(2)^0)*f1*f2,
+  (Z(2)^0)*f2+(Z(2)^0)*f3+(Z(2)^0)*f2*f3,
+  (Z(2)^0)*f1+(Z(2)^0)*f3+(Z(2)^0)*f1*f3, (Z(2)^0)*f4,
+  (Z(2)^0)*f1+(Z(2)^0)*f2+(Z(2)^0)*f3+(Z(2)^0)*f1*f2+(Z(2)^0)*f1*f3+(Z(2)^
+    0)*f2*f3+(Z(2)^0)*f1*f2*f3, (Z(2)^0)*f2+(Z(2)^0)*f4+(Z(2)^0)*f2*f4,
+  (Z(2)^0)*f1+(Z(2)^0)*f4+(Z(2)^0)*f1*f4,
+  (Z(2)^0)*f3+(Z(2)^0)*f4+(Z(2)^0)*f3*f4,
   (Z(2)^0)*f1+(Z(2)^0)*f2+(Z(2)^0)*f4+(Z(2)^0)*f1*f2+(Z(2)^0)*f1*f4+(Z(2)^
     0)*f2*f4+(Z(2)^0)*f1*f2*f4, (Z(2)^0)*f2+(Z(2)^0)*f3+(Z(2)^0)*f4+(Z(2)^
     0)*f2*f3+(Z(2)^0)*f2*f4+(Z(2)^0)*f3*f4+(Z(2)^0)*f2*f3*f4,
   (Z(2)^0)*f1+(Z(2)^0)*f3+(Z(2)^0)*f4+(Z(2)^0)*f1*f3+(Z(2)^0)*f1*f4+(Z(2)^
-    0)*f3*f4+(Z(2)^0)*f1*f3*f4, (Z(2)^0)*f1+(Z(2)^0)*f2+(Z(2)^0)*f3+(Z(2)^0)*f4+(
-    Z(2)^0)*f1*f2+(Z(2)^0)*f1*f3+(Z(2)^0)*f1*f4+(Z(2)^0)*f2*f3+(Z(2)^0)*f2*f4+(
-    Z(2)^0)*f3*f4+(Z(2)^0)*f1*f2*f3+(Z(2)^0)*f1*f2*f4+(Z(2)^0)*f1*f3*f4+(Z(2)^
-    0)*f2*f3*f4+(Z(2)^0)*f1*f2*f3*f4 ]  
+    0)*f3*f4+(Z(2)^0)*f1*f3*f4, (Z(2)^0)*f1+(Z(2)^0)*f2+(Z(2)^0)*f3+(Z(2)^
+    0)*f4+(Z(2)^0)*f1*f2+(Z(2)^0)*f1*f3+(Z(2)^0)*f1*f4+(Z(2)^0)*f2*f3+(Z(2)^
+    0)*f2*f4+(Z(2)^0)*f3*f4+(Z(2)^0)*f1*f2*f3+(Z(2)^0)*f1*f2*f4+(Z(2)^
+    0)*f1*f3*f4+(Z(2)^0)*f2*f3*f4+(Z(2)^0)*f1*f2*f3*f4 ]
 
 </pre></td></tr></table>
 
@@ -315,9 +319,9 @@ gap&gt; Length( cc );
 gap&gt; Representative( cc[ Length( cc ) ] );
 f1*f2*f4*f6*f12*f15
 gap&gt; last^f;
-(Z(2)^0)*&lt;identity&gt; of ...+(Z(2)^0)*f2+(Z(2)^0)*f4+(Z(2)^0)*f1*f2+(Z(2)^0)*f1*f3+(
-Z(2)^0)*f1*f4+(Z(2)^0)*f2*f3+(Z(2)^0)*f2*f4+(Z(2)^0)*f3*f4+(Z(2)^0)*f1*f2*f3+(Z(2)^
-0)*f1*f3*f4   
+(Z(2)^0)*&lt;identity&gt; of ...+(Z(2)^0)*f2+(Z(2)^0)*f4+(Z(2)^0)*f1*f2+(Z(2)^
+0)*f1*f3+(Z(2)^0)*f1*f4+(Z(2)^0)*f2*f3+(Z(2)^0)*f2*f4+(Z(2)^0)*f3*f4+(Z(2)^
+0)*f1*f2*f3+(Z(2)^0)*f1*f3*f4
 
 
 </pre></td></tr></table>
@@ -331,10 +335,10 @@ Z(2)^0)*f1*f4+(Z(2)^0)*f2*f3+(Z(2)^0)*f2*f4+(Z(2)^0)*f3*f4+(Z(2)^0)*f1*f2*f3+(Z(
 
 gap&gt; LowerCentralSeries( W );
 [ &lt;pc group of size 32768 with 15 generators&gt;,
-  Group([ f3, f5*f8*f10*f12*f13*f14*f15, f6*f8*f12*f14*f15, f7, f9*f12, f10*f14,
-      f11*f13, f13*f14, f14*f15 ]),
+  Group([ f3, f5*f8*f10*f12*f13*f14*f15, f6*f8*f12*f14*f15, f7, f9*f12,
+      f10*f14, f11*f13, f13*f14, f14*f15 ]),
   Group([ f7, f9*f12, f10*f15, f11*f15, f13*f15, f14*f15 ]),
-  Group([ f11*f15, f13*f15, f14*f15 ]), Group([ &lt;identity&gt; of ... ]) ]  
+  Group([ f11*f15, f13*f15, f14*f15 ]), Group([ &lt;identity&gt; of ... ]) ]
 
 
 </pre></td></tr></table>
@@ -349,17 +353,20 @@ gap&gt; LowerCentralSeries( W );
 gap&gt; C := Centre( W );
 Group([ f3*f5*f13*f15, f7, f15, f13*f15, f14*f15, f11*f13*f14*f15 ])
 gap&gt; m := MinimalGeneratingSet( C );
-[ f11, f13, f14, f15, f3*f5*f13*f15 ]
+[ f7*f13*f14*f15, f13*f14*f15, f7*f11*f14*f15, f15, f3*f5*f14 ]
 gap&gt; List( m, g -&gt; g^f );
-[ (Z(2)^0)*f3+(Z(2)^0)*f4+(Z(2)^0)*f3*f4, (Z(2)^0)*f2+(Z(2)^0)*f3+(Z(2)^0)*f4+(
-    Z(2)^0)*f2*f3+(Z(2)^0)*f2*f4+(Z(2)^0)*f3*f4+(Z(2)^0)*f2*f3*f4,
-  (Z(2)^0)*f1+(Z(2)^0)*f3+(Z(2)^0)*f4+(Z(2)^0)*f1*f3+(Z(2)^0)*f1*f4+(Z(2)^
-    0)*f3*f4+(Z(2)^0)*f1*f3*f4, (Z(2)^0)*f1+(Z(2)^0)*f2+(Z(2)^0)*f3+(Z(2)^0)*f4+(
-    Z(2)^0)*f1*f2+(Z(2)^0)*f1*f3+(Z(2)^0)*f1*f4+(Z(2)^0)*f2*f3+(Z(2)^0)*f2*f4+(
+[ (Z(2)^0)*&lt;identity&gt; of ...+(Z(2)^0)*f3+(Z(2)^0)*f1*f2+(Z(2)^0)*f3*f4+(Z(2)^
+    0)*f1*f2*f3+(Z(2)^0)*f1*f2*f4+(Z(2)^0)*f1*f2*f3*f4,
+  (Z(2)^0)*f3+(Z(2)^0)*f4+(Z(2)^0)*f1*f2+(Z(2)^0)*f3*f4+(Z(2)^0)*f1*f2*f3+(
+    Z(2)^0)*f1*f2*f4+(Z(2)^0)*f1*f2*f3*f4, (Z(2)^0)*&lt;identity&gt; of ...+(Z(2)^
+    0)*f2+(Z(2)^0)*f3+(Z(2)^0)*f1*f2+(Z(2)^0)*f2*f3+(Z(2)^0)*f2*f4+(Z(2)^
+    0)*f3*f4+(Z(2)^0)*f1*f2*f3+(Z(2)^0)*f1*f2*f4+(Z(2)^0)*f2*f3*f4+(Z(2)^
+    0)*f1*f2*f3*f4, (Z(2)^0)*f1+(Z(2)^0)*f2+(Z(2)^0)*f3+(Z(2)^0)*f4+(Z(2)^
+    0)*f1*f2+(Z(2)^0)*f1*f3+(Z(2)^0)*f1*f4+(Z(2)^0)*f2*f3+(Z(2)^0)*f2*f4+(
     Z(2)^0)*f3*f4+(Z(2)^0)*f1*f2*f3+(Z(2)^0)*f1*f2*f4+(Z(2)^0)*f1*f3*f4+(Z(2)^
-    0)*f2*f3*f4+(Z(2)^0)*f1*f2*f3*f4, (Z(2)^0)*f1+(Z(2)^0)*f4+(Z(2)^0)*f1*f2+(Z(2)^
-    0)*f1*f3+(Z(2)^0)*f1*f4+(Z(2)^0)*f2*f3+(Z(2)^0)*f2*f4+(Z(2)^0)*f1*f2*f3+(Z(2)^
-    0)*f1*f2*f4+(Z(2)^0)*f1*f3*f4+(Z(2)^0)*f1*f2*f3*f4 ]    
+    0)*f2*f3*f4+(Z(2)^0)*f1*f2*f3*f4, (Z(2)^0)*&lt;identity&gt; of ...+(Z(2)^0)*f1+(
+    Z(2)^0)*f3+(Z(2)^0)*f1*f3+(Z(2)^0)*f1*f4+(Z(2)^0)*f2*f3+(Z(2)^0)*f2*f4+(
+    Z(2)^0)*f3*f4+(Z(2)^0)*f1*f3*f4 ]
 
 
 </pre></td></tr></table>
@@ -372,8 +379,10 @@ gap&gt; List( m, g -&gt; g^f );
 
 
 gap&gt; L := LieAlgebra( KG );
-&lt;Lie algebra of dimension 16 over GF(2)&gt;
+#I  LAGUNA package: Constructing Lie algebra ...
+&lt;Lie algebra over GF(2)&gt;
 gap&gt; D := LieDerivedSubalgebra( L );
+#I  LAGUNA package: Computing the Lie derived subalgebra ...
 &lt;Lie algebra of dimension 9 over GF(2)&gt;
 gap&gt; LC := LieCentre( L );
 &lt;Lie algebra of dimension 7 over GF(2)&gt;
@@ -384,6 +393,7 @@ gap&gt; LieUpperNilpotencyIndex( KG );
 gap&gt; IsLieAbelian( L );
 false
 gap&gt; IsLieSolvable( L );
+#I  LAGUNA package: Checking Lie solvability ...
 true
 gap&gt; IsLieMetabelian( L );
 false

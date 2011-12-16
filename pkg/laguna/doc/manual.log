@@ -1,14 +1,19 @@
-This is pdfeTeX, Version 3.141592-1.30.4-2.2 (Web2C 7.5.5) (format=pdflatex 2005.11.9)  29 MAR 2006 14:04
+This is pdfTeX, Version 3.141592-1.40.0-rc4 (Web2C 7.5.5) (format=pdflatex 2007.1.7)  7 FEB 2007 17:39
 entering extended mode
 **manual
 (./manual.tex
-LaTeX2e <2003/12/01>
-Babel <v3.8d> and hyphenation patterns for american, french, german, ngerman, d
-utch, italian, norsk, portuges, spanish, swedish, nohyphenation, loaded.
-(/usr/local/teTeX/share/texmf.tetex/tex/latex/base/report.cls
-Document Class: report 2004/02/16 v1.4f Standard LaTeX document class
-(/usr/local/teTeX/share/texmf.tetex/tex/latex/base/size11.clo
-File: size11.clo 2004/02/16 v1.4f Standard LaTeX file (size option)
+LaTeX2e <2005/12/01>
+Babel <v3.8h> and hyphenation patterns for english, usenglishmax, dumylang, noh
+yphenation, basque, bulgarian, coptic, welsh, czech, slovak, german, ngerman, d
+anish, spanish, catalan, galician, esperanto, estonian, finnish, french, greek,
+ monogreek, ancientgreek, croatian, hungarian, interlingua, ibycus, indonesian,
+ icelandic, italian, latin, mongolian, dutch, norsk, polish, portuguese, pinyin
+, romanian, russian, slovene, uppersorbian, serbian, swedish, turkish, ukenglis
+h, ukrainian, loaded.
+(/usr/local/gwTeX/texmf.texlive/tex/latex/base/report.cls
+Document Class: report 2005/09/16 v1.4f Standard LaTeX document class
+(/usr/local/gwTeX/texmf.texlive/tex/latex/base/size11.clo
+File: size11.clo 2005/09/16 v1.4f Standard LaTeX file (size option)
 )
 \c@part=\count79
 \c@chapter=\count80
@@ -23,16 +28,16 @@ File: size11.clo 2004/02/16 v1.4f Standard LaTeX file (size option)
 \belowcaptionskip=\skip42
 \bibindent=\dimen102
 )
-(/usr/local/teTeX/share/texmf.tetex/tex/latex/a4wide/a4wide.sty
+(/usr/local/gwTeX/texmf.texlive/tex/latex/ltxmisc/a4wide.sty
 Package: a4wide 1994/08/30
 
-(/usr/local/teTeX/share/texmf.tetex/tex/latex/ntgclass/a4.sty
+(/usr/local/gwTeX/texmf.texlive/tex/latex/ntgclass/a4.sty
 Package: a4 2004/04/15 v1.2g A4 based page layout
 ))
-(/usr/local/teTeX/share/texmf.tetex/tex/latex/amsfonts/amssymb.sty
+(/usr/local/gwTeX/texmf.texlive/tex/latex/amsfonts/amssymb.sty
 Package: amssymb 2002/01/22 v2.2d
 
-(/usr/local/teTeX/share/texmf.tetex/tex/latex/amsfonts/amsfonts.sty
+(/usr/local/gwTeX/texmf.texlive/tex/latex/amsfonts/amsfonts.sty
 Package: amsfonts 2001/10/25 v2.2f
 \@emptytoks=\toks14
 \symAMSa=\mathgroup4
@@ -40,13 +45,15 @@ Package: amsfonts 2001/10/25 v2.2f
 LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
 (Font)                  U/euf/m/n --> U/euf/b/n on input line 132.
 ))
-(/usr/local/teTeX/share/texmf.tetex/tex/latex/base/inputenc.sty
-Package: inputenc 2004/02/05 v1.0d Input encoding file
+(/usr/local/gwTeX/texmf.texlive/tex/latex/base/inputenc.sty
+Package: inputenc 2006/05/05 v1.1b Input encoding file
+\inpenc@prehook=\toks15
+\inpenc@posthook=\toks16
 
-(/usr/local/teTeX/share/texmf.tetex/tex/latex/base/latin1.def
-File: latin1.def 2004/02/05 v1.0d Input encoding file
+(/usr/local/gwTeX/texmf.texlive/tex/latex/base/latin1.def
+File: latin1.def 2006/05/05 v1.1b Input encoding file
 ))
-(/usr/local/teTeX/share/texmf.tetex/tex/latex/base/makeidx.sty
+(/usr/local/gwTeX/texmf.texlive/tex/latex/base/makeidx.sty
 Package: makeidx 2000/03/29 v1.0m Standard LaTeX package
 )
 \@indexfile=\write3
@@ -54,25 +61,25 @@ Package: makeidx 2000/03/29 v1.0m Standard LaTeX package
 
 
 Writing index file manual.idx
-(/usr/local/teTeX/share/texmf.tetex/tex/latex/graphics/color.sty
-Package: color 1999/02/16 v1.0i Standard LaTeX Color (DPC)
+(/usr/local/gwTeX/texmf.texlive/tex/latex/graphics/color.sty
+Package: color 2005/11/14 v1.0j Standard LaTeX Color (DPC)
 
-(/usr/local/teTeX/share/texmf.tetex/tex/latex/graphics/color.cfg
-File: color.cfg 2005/02/03 v1.3 color configuration of teTeX/TeXLive
+(/usr/local/gwTeX/texmf.texlive/tex/latex/config/color.cfg
+File: color.cfg 2001/08/31 v1.1 color configuration of teTeX/TeXLive
 )
-Package color Info: Driver file: pdftex.def on input line 125.
+Package color Info: Driver file: pdftex.def on input line 130.
 
-(/usr/local/teTeX/share/texmf.tetex/tex/latex/graphics/pdftex.def
-File: pdftex.def 2002/06/19 v0.03k graphics/color for pdftex
+(/usr/local/gwTeX/texmf.texlive/tex/latex/pdftex-def/pdftex.def
+File: pdftex.def 2006/08/14 v0.03t Graphics/color for pdfTeX
 \Gread@gobject=\count88
 ))
-(/usr/local/teTeX/share/texmf.tetex/tex/latex/fancyvrb/fancyvrb.sty
+(/usr/local/gwTeX/texmf.texlive/tex/latex/fancyvrb/fancyvrb.sty
 Package: fancyvrb 1998/07/17
 
 Style option: `fancyvrb' v2.6, with DG/SPQR fixes <1998/07/17> (tvz)
-(/usr/local/teTeX/share/texmf.tetex/tex/latex/graphics/keyval.sty
+(/usr/local/gwTeX/texmf.texlive/tex/latex/graphics/keyval.sty
 Package: keyval 1999/03/16 v1.13 key=value parser (DPC)
-\KV@toks@=\toks15
+\KV@toks@=\toks17
 )
 \FV@CodeLineNo=\count89
 \FV@InFile=\read1
@@ -82,7 +89,7 @@ Package: keyval 1999/03/16 v1.13 key=value parser (DPC)
 \FV@OutFile=\write4
 
 No file fancyvrb.cfg.
-) (/usr/local/teTeX/share/texmf.tetex/tex/latex/pslatex/pslatex.sty
+) (/usr/local/gwTeX/texmf.texlive/tex/latex/pslatex/pslatex.sty
 Package: pslatex 1996/07/24 v1.2 pslatex emulation (DPC)
 LaTeX Font Info:    Redeclaring symbol font `operators' on input line 65.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
@@ -117,71 +124,62 @@ LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
 (Font)                  OT1/cmr/bx/it --> OT1/ptm/m/it on input line 75.
 )
-(/usr/local/teTeX/share/texmf.tetex/tex/latex/hyperref/hyperref.sty
-Package: hyperref 2003/11/30 v6.74m Hypertext links for LaTeX
+(/usr/local/gwTeX/texmf.texlive/tex/latex/hyperref/hyperref.sty
+Package: hyperref 2006/12/21 v6.75j Hypertext links for LaTeX
 \@linkdim=\dimen103
 \Hy@linkcounter=\count92
 \Hy@pagecounter=\count93
 
-(/usr/local/teTeX/share/texmf.tetex/tex/latex/hyperref/pd1enc.def
-File: pd1enc.def 2003/11/30 v6.74m Hyperref: PDFDocEncoding definition (HO)
+(/usr/local/gwTeX/texmf.texlive/tex/latex/hyperref/pd1enc.def
+File: pd1enc.def 2006/12/21 v6.75j Hyperref: PDFDocEncoding definition (HO)
 )
-(/usr/local/teTeX/share/texmf.tetex/tex/latex/hyperref/hyperref.cfg
-File: hyperref.cfg 2002/06/06 v1.2 hyperref configuration of TeXLive and teTeX
+(/usr/local/gwTeX/texmf.texlive/tex/latex/config/hyperref.cfg
+File: hyperref.cfg 2002/06/06 v1.2 hyperref configuration of TeXLive
 )
-Package hyperref Info: Option `bookmarks' set `false' on input line 1830.
-Package hyperref Info: Option `colorlinks' set `true' on input line 1830.
-Package hyperref Info: Option `breaklinks' set `true' on input line 1830.
-Package hyperref Info: Hyper figures OFF on input line 1880.
-Package hyperref Info: Link nesting OFF on input line 1885.
-Package hyperref Info: Hyper index ON on input line 1888.
-Package hyperref Info: Plain pages ON on input line 1893.
-Package hyperref Info: Backreferencing ON on input line 1898.
+(/usr/local/gwTeX/texmf.texlive/tex/latex/oberdiek/kvoptions.sty
+Package: kvoptions 2006/08/22 v2.4 Connects package keyval with LaTeX options (
+HO)
+)
+Package hyperref Info: Option `bookmarks' set `false' on input line 2212.
+Package hyperref Info: Option `colorlinks' set `true' on input line 2212.
+Package hyperref Info: Option `breaklinks' set `true' on input line 2212.
+Package hyperref Info: Hyper figures OFF on input line 2262.
+Package hyperref Info: Link nesting OFF on input line 2267.
+Package hyperref Info: Hyper index ON on input line 2270.
+Package hyperref Info: Plain pages OFF on input line 2277.
+Package hyperref Info: Backreferencing ON on input line 2280.
 
 Implicit mode ON; LaTeX internals redefined
-Package hyperref Info: Bookmarks OFF on input line 2010.
-(/usr/local/teTeX/share/texmf.tetex/tex/latex/hyperref/backref.sty
-Package: backref 2003/03/20 v1.23 Bibliographical back referencing
+Package hyperref Info: Bookmarks OFF on input line 2418.
+(/usr/local/gwTeX/texmf.texlive/tex/latex/hyperref/backref.sty
+Package: backref 2006/10/06 v1.27 Bibliographical back referencing
 )
-(/usr/local/teTeX/share/texmf.tetex/tex/latex/url/url.sty
+(/usr/local/gwTeX/texmf.texlive/tex/latex/ltxmisc/url.sty
 \Urlmuskip=\muskip10
-Package: url 2004/03/15  ver 3.1  Verb mode for urls, etc.
+Package: url 2005/06/27  ver 3.2  Verb mode for urls, etc.
 )
-LaTeX Info: Redefining \url on input line 2143.
+LaTeX Info: Redefining \url on input line 2567.
 \Fld@menulength=\count94
 \Field@Width=\dimen104
 \Fld@charsize=\dimen105
-\Choice@toks=\toks16
-\Field@toks=\toks17
-Package hyperref Info: Hyper figures OFF on input line 2618.
-Package hyperref Info: Link nesting OFF on input line 2623.
-Package hyperref Info: Hyper index ON on input line 2626.
-Package hyperref Info: backreferencing ON on input line 2631.
-Package hyperref Info: Link coloring ON on input line 2636.
-\c@Item=\count95
-\c@Hfootnote=\count96
+\Choice@toks=\toks18
+\Field@toks=\toks19
+Package hyperref Info: Hyper figures OFF on input line 3045.
+Package hyperref Info: Link nesting OFF on input line 3050.
+Package hyperref Info: Hyper index ON on input line 3053.
+Package hyperref Info: backreferencing ON on input line 3058.
+Package hyperref Info: Link coloring ON on input line 3063.
+\Hy@abspage=\count95
+\c@Item=\count96
+\c@Hfootnote=\count97
 )
 *hyperref using default driver hpdftex*
-(/usr/local/teTeX/share/texmf.tetex/tex/latex/hyperref/hpdftex.def
-File: hpdftex.def 2003/11/30 v6.74m Hyperref driver for pdfTeX
-
-(/usr/local/teTeX/share/texmf.tetex/tex/latex/psnfss/pifont.sty
-Package: pifont 2004/09/15 PSNFSS-v9.2 Pi font support (SPQR) 
-LaTeX Font Info:    Try loading font information for U+pzd on input line 63.
-
-(/usr/local/teTeX/share/texmf.tetex/tex/latex/psnfss/upzd.fd
-File: upzd.fd 2001/06/04 font definitions for U/pzd.
+(/usr/local/gwTeX/texmf.texlive/tex/latex/hyperref/hpdftex.def
+File: hpdftex.def 2006/12/21 v6.75j Hyperref driver for pdfTeX
+\Fld@listcount=\count98
 )
-LaTeX Font Info:    Try loading font information for U+psy on input line 64.
-
-(/usr/local/teTeX/share/texmf.tetex/tex/latex/psnfss/upsy.fd
-File: upsy.fd 2001/06/04 font definitions for U/psy.
-))
-\Fld@listcount=\count97
-\@outlinefile=\write5
-)
-\pagenrlog=\write6
-\openout6 = `manual.pnr'.
+\pagenrlog=\write5
+\openout5 = `manual.pnr'.
 
 \backslashbox=\box27
  (./manual.aux
@@ -190,6 +188,12 @@ LaTeX Warning: Label `Involution' multiply defined.
 
 
 LaTeX Warning: Label `IsUnit' multiply defined.
+
+
+LaTeX Warning: Label `BicyclicUnitOfType1' multiply defined.
+
+
+LaTeX Warning: Label `BicyclicUnitOfType2' multiply defined.
 
 
 LaTeX Warning: Label `LeftIdealBySubgroup' multiply defined.
@@ -212,7 +216,7 @@ LaTeX Font Info:    ... okay on input line 51.
 LaTeX Font Info:    Checking defaults for OMS/pzccm/m/n on input line 51.
 LaTeX Font Info:    Try loading font information for OMS+pzccm on input line 51
 .
- (/usr/local/teTeX/share/texmf.tetex/tex/latex/psnfss/omspzccm.fd
+ (/usr/local/gwTeX/texmf.texlive/tex/latex/psnfss/omspzccm.fd
 File: omspzccm.fd 2000/01/03 Fontinst v1.801 font definitions for OMS/pzccm.
 )
 LaTeX Font Info:    ... okay on input line 51.
@@ -223,44 +227,26 @@ LaTeX Font Info:    ... okay on input line 51.
 LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 51.
 LaTeX Font Info:    ... okay on input line 51.
 
-(/usr/local/teTeX/share/texmf.local/tex/context/base/supp-pdf.tex
-(/usr/local/teTeX/share/texmf.local/tex/context/base/supp-mis.tex
-loading : Context Support Macros / Miscellaneous (2004.10.26)
-\protectiondepth=\count98
+(/usr/local/gwTeX/texmf.texlive/tex/context/base/supp-pdf.tex
+[Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count99
-\scratchtoks=\toks18
 \scratchdimen=\dimen106
-\scratchskip=\skip43
-\scratchmuskip=\muskip11
 \scratchbox=\box28
-\scratchread=\read2
-\scratchwrite=\write7
-\zeropoint=\dimen107
-\onepoint=\dimen108
-\onebasepoint=\dimen109
-\minusone=\count100
-\thousandpoint=\dimen110
-\onerealpoint=\dimen111
-\emptytoks=\toks19
-\nextbox=\box29
-\nextdepth=\dimen112
-\everyline=\toks20
-\!!counta=\count101
-\!!countb=\count102
-\recursecounter=\count103
-)
-loading : Context Support Macros / PDF (2004.03.26)
-\nofMPsegments=\count104
-\nofMParguments=\count105
-\MPscratchCnt=\count106
-\MPscratchDim=\dimen113
-\MPnumerator=\count107
-\everyMPtoPDFconversion=\toks21
+\nofMPsegments=\count100
+\nofMParguments=\count101
+\MPscratchCnt=\count102
+\MPscratchDim=\dimen107
+\MPnumerator=\count103
+\everyMPtoPDFconversion=\toks20
 )
 Package hyperref Info: Link coloring ON on input line 51.
- (/usr/local/teTeX/share/texmf.tetex/tex/latex/hyperref/nameref.sty
-Package: nameref 2003/12/03 v2.21 Cross-referencing by name of section
-\c@section@level=\count108
+ (/usr/local/gwTeX/texmf.texlive/tex/latex/hyperref/nameref.sty
+Package: nameref 2006/12/21 v2.27 Cross-referencing by name of section
+
+(/usr/local/gwTeX/texmf.texlive/tex/latex/oberdiek/refcount.sty
+Package: refcount 2006/02/20 v3.0 Data extraction from references (HO)
+)
+\c@section@level=\count104
 )
 LaTeX Info: Redefining \ref on input line 51.
 LaTeX Info: Redefining \pageref on input line 51.
@@ -283,35 +269,35 @@ Underfull \hbox (badness 10000) in paragraph at lines 69--102
 
 [1
 
-{/usr/local/teTeX/share/texmf.local/fonts/map/pdftex/updmap/pdftex.map}]
+{/usr/local/gwTeX/texmf.local/fonts/map/pdftex/updmap/pdftex.map}]
 LaTeX Font Info:    Font shape `OT1/phv/m/n' will be
 (Font)              scaled to size 8.99994pt on input line 108.
 LaTeX Font Info:    Try loading font information for OT1+ptmcm on input line 11
 4.
 
-(/usr/local/teTeX/share/texmf.tetex/tex/latex/psnfss/ot1ptmcm.fd
+(/usr/local/gwTeX/texmf.texlive/tex/latex/psnfss/ot1ptmcm.fd
 File: ot1ptmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OT1/ptmcm.
 )
 LaTeX Font Info:    Try loading font information for OML+ptmcm on input line 11
 4.
 
-(/usr/local/teTeX/share/texmf.tetex/tex/latex/psnfss/omlptmcm.fd
+(/usr/local/gwTeX/texmf.texlive/tex/latex/psnfss/omlptmcm.fd
 File: omlptmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OML/ptmcm.
 )
 LaTeX Font Info:    Try loading font information for OMX+psycm on input line 11
 4.
 
-(/usr/local/teTeX/share/texmf.tetex/tex/latex/psnfss/omxpsycm.fd
+(/usr/local/gwTeX/texmf.texlive/tex/latex/psnfss/omxpsycm.fd
 File: omxpsycm.fd 2000/01/03 Fontinst v1.801 font definitions for OMX/psycm.
 )
 LaTeX Font Info:    Try loading font information for U+msa on input line 114.
 
-(/usr/local/teTeX/share/texmf.tetex/tex/latex/amsfonts/umsa.fd
+(/usr/local/gwTeX/texmf.texlive/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2002/01/19 v2.2g AMS font definitions
 )
 LaTeX Font Info:    Try loading font information for U+msb on input line 114.
 
-(/usr/local/teTeX/share/texmf.tetex/tex/latex/amsfonts/umsb.fd
+(/usr/local/gwTeX/texmf.texlive/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2002/01/19 v2.2g AMS font definitions
 )
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7.4> not available
@@ -367,8 +353,8 @@ LaTeX Font Info:    Font shape `OT1/phv/b/n' will be
  [3
 
 ] [4])
-\tf@toc=\write8
-\openout8 = `manual.toc'.
+\tf@toc=\write6
+\openout6 = `manual.toc'.
 
  [5]
 Chapter 1.
@@ -385,20 +371,6 @@ n-line help it is nec-es-sary to in-stall the \OT1/phv/m/n/10.95 GAP\OT1/ptm/m/
 n/10.95 4 pack-age \OT1/phv/m/n/10.95 GAP-
  []
 
-
-Underfull \hbox (badness 3861) in paragraph at lines 224--225
-[]\OT1/phv/m/n/10.95 LAGUNA \OT1/ptm/m/n/10.95 is dis-tributed in stan-dard for
--mats (\OT1/pcr/m/n/10.95 zoo\OT1/ptm/m/n/10.95 , \OT1/pcr/m/n/10.95 tar.gz\OT1
-/ptm/m/n/10.95 , \OT1/pcr/m/n/10.95 tar.bz2\OT1/ptm/m/n/10.95 , \OT1/pcr/m/n/10
-.95 -win.zip\OT1/ptm/m/n/10.95 ) and
- []
-
-
-Underfull \hbox (badness 1248) in paragraph at lines 224--225
-\OT1/ptm/m/n/10.95 can be ob-tained from [][]\OT1/pcr/m/n/10.95 http://ukrgap.e
-xponenta.ru/laguna.htm[][]\OT1/ptm/m/n/10.95 . To un-pack the archive
- []
-
 [7]
 Chapter 2.
 [8
@@ -409,21 +381,21 @@ Chapter 3.
 
 ]
 
-LaTeX Warning: Command \textless invalid in math mode on input line 538.
+LaTeX Warning: Command \textless invalid in math mode on input line 548.
 
-LaTeX Font Info:    Try loading font information for OML+ptm on input line 538.
+LaTeX Font Info:    Try loading font information for OML+ptm on input line 548.
 
-(/usr/local/teTeX/share/texmf.tetex/tex/latex/psnfss/omlptm.fd
+(/usr/local/gwTeX/texmf.texlive/tex/latex/psnfss/omlptm.fd
 File: omlptm.fd 
 )
 LaTeX Font Info:    Font shape `OML/ptm/m/n' in size <10.95> not available
-(Font)              Font shape `OML/cmm/m/it' tried instead on input line 538.
+(Font)              Font shape `OML/cmm/m/it' tried instead on input line 548.
 
 
-LaTeX Warning: Command \textless invalid in math mode on input line 538.
+LaTeX Warning: Command \textless invalid in math mode on input line 548.
 
 [15]
-Underfull \hbox (badness 10000) in paragraph at lines 600--604
+Underfull \hbox (badness 10000) in paragraph at lines 610--614
 \OT1/ptm/m/n/10.95 Thus $\OT1/ptmcm/m/n/10.95 1 + \OML/ptmcm/m/it/10.95 w[] \OT
 1/ptmcm/m/n/10.95 = (\OML/ptmcm/m/it/10.95 y[]\OT1/ptmcm/m/n/10.95 )[] [] (\OML
 /ptmcm/m/it/10.95 y[]\OT1/ptmcm/m/n/10.95 )[](1 + \OML/ptmcm/m/it/10.95 w[]\OT1
@@ -433,211 +405,211 @@ ptmcm/m/n/10.95 1 + \OML/ptmcm/m/it/10.95 w \OT1/ptmcm/m/n/10.95 =
  []
 
 
-LaTeX Warning: Command \textless invalid in math mode on input line 610.
+LaTeX Warning: Command \textless invalid in math mode on input line 620.
 
 
-LaTeX Warning: Command \textless invalid in math mode on input line 610.
+LaTeX Warning: Command \textless invalid in math mode on input line 620.
 
 [16] [17]
 Chapter 4.
 
-Underfull \hbox (badness 10000) in paragraph at lines 638--641
+Underfull \hbox (badness 10000) in paragraph at lines 648--651
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 659--662
+Underfull \hbox (badness 10000) in paragraph at lines 669--672
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 680--683
+Underfull \hbox (badness 10000) in paragraph at lines 690--693
 
  []
 
 [18
 
 ] [19] [20]
-Underfull \hbox (badness 10000) in paragraph at lines 859--862
+Underfull \hbox (badness 10000) in paragraph at lines 870--873
 
  []
 
 [21]
-Underfull \hbox (badness 10000) in paragraph at lines 967--970
+Underfull \hbox (badness 10000) in paragraph at lines 977--980
 
  []
 
 [22]
-Underfull \hbox (badness 10000) in paragraph at lines 987--990
+Underfull \hbox (badness 10000) in paragraph at lines 997--1000
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1011--1017
+Underfull \hbox (badness 10000) in paragraph at lines 1021--1027
 
  []
 
 [23] [24]
-Underfull \hbox (badness 1033) in paragraph at lines 1124--1126
+Underfull \hbox (badness 1033) in paragraph at lines 1140--1142
 []\OT1/ptm/m/n/10.95 Please note that for cal-cu-la-tion of the aug-men-ta-tion
  of an el-e-ment of a group ring the
  []
 
 
-Underfull \hbox (badness 1286) in paragraph at lines 1124--1126
+Underfull \hbox (badness 1286) in paragraph at lines 1140--1142
 \OT1/ptm/m/n/10.95 user is strongly rec-om-mended to use \OT1/pcr/m/n/10.95 Aug
 mentation \OT1/ptm/m/n/10.95 ([][]4.2.5[][]) which works much faster than
  []
 
 LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <10.95> not available
-(Font)              Font shape `OMS/pzccm/m/n' tried instead on input line 1163
+(Font)              Font shape `OMS/pzccm/m/n' tried instead on input line 1179
 .
 [25] [26]
-Underfull \hbox (badness 10000) in paragraph at lines 1271--1274
+Underfull \hbox (badness 10000) in paragraph at lines 1288--1291
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1292--1295
+Underfull \hbox (badness 10000) in paragraph at lines 1309--1312
 
  []
 
 [27] [28]
-Underfull \hbox (badness 10000) in paragraph at lines 1409--1411
+Underfull \hbox (badness 10000) in paragraph at lines 1426--1428
 []\OT1/ptm/m/n/10.95 The ar-gu-ment [] is a $\OML/ptmcm/m/it/10.95 p$\OT1/ptm/m
 /n/10.95 -modular group al-ge-bra over the field of $\OML/ptmcm/m/it/10.95 p$ \
 OT1/ptm/m/n/10.95 el-e-ments.
  []
 
 [29] [30] [31]
-Underfull \hbox (badness 10000) in paragraph at lines 1591--1594
+Underfull \hbox (badness 10000) in paragraph at lines 1612--1615
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1611--1614
+Underfull \hbox (badness 10000) in paragraph at lines 1632--1635
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1631--1634
+Underfull \hbox (badness 10000) in paragraph at lines 1652--1655
 
  []
 
 [32]
-Underfull \hbox (badness 2762) in paragraph at lines 1659--1660
+Underfull \hbox (badness 2762) in paragraph at lines 1680--1681
 []\OT1/ptm/m/n/10.95 If [] is the (nor-mal-ized) unit group of a $\OML/ptmcm/m/
 it/10.95 p$\OT1/ptm/m/n/10.95 -modular group al-ge-bra $\OML/ptmcm/m/it/10.95 K
 G$ \OT1/ptm/m/n/10.95 ob-tained us-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1659--1660
+Underfull \hbox (badness 10000) in paragraph at lines 1680--1681
 \OT1/ptm/m/n/10.95 ing one of the func-tions \OT1/pcr/m/n/10.95 Units(KG)\OT1/p
 tm/m/n/10.95 , \OT1/pcr/m/n/10.95 PcUnits(KG)\OT1/ptm/m/n/10.95 , \OT1/pcr/m/n/
 10.95 NormalizedUnitGroup(KG) \OT1/ptm/m/n/10.95 or
  []
 
 [33] [34]
-Underfull \hbox (badness 10000) in paragraph at lines 1793--1796
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1815--1818
+Underfull \hbox (badness 10000) in paragraph at lines 1834--1837
 
  []
 
 [35]
-Underfull \hbox (badness 10000) in paragraph at lines 1903--1906
+Underfull \hbox (badness 10000) in paragraph at lines 1857--1860
 
  []
 
 [36]
-Underfull \hbox (badness 10000) in paragraph at lines 1930--1933
-
- []
-
-[37] [38]
-Underfull \hbox (badness 10000) in paragraph at lines 2091--2094
-
- []
-
-[39]
-Underfull \hbox (badness 10000) in paragraph at lines 2118--2121
+Underfull \hbox (badness 10000) in paragraph at lines 1947--1950
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2145--2148
+Underfull \hbox (badness 10000) in paragraph at lines 1975--1978
+
+ []
+
+[37] [38] [39]
+Underfull \hbox (badness 10000) in paragraph at lines 2143--2146
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2172--2175
+Underfull \hbox (badness 10000) in paragraph at lines 2171--2174
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2199--2202
 
  []
 
 [40]
-Underfull \hbox (badness 10000) in paragraph at lines 2197--2200
+Underfull \hbox (badness 10000) in paragraph at lines 2227--2230
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2253--2256
 
  []
 
 [41]
-Underfull \hbox (badness 10000) in paragraph at lines 2255--2258
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 2283--2286
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 2310--2313
+Underfull \hbox (badness 10000) in paragraph at lines 2313--2316
 
  []
 
 [42]
-Underfull \hbox (badness 10000) in paragraph at lines 2330--2333
+Underfull \hbox (badness 10000) in paragraph at lines 2342--2345
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2356--2359
+Underfull \hbox (badness 10000) in paragraph at lines 2370--2373
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2390--2393
 
  []
 
 [43]
-Underfull \hbox (badness 10000) in paragraph at lines 2386--2389
+Underfull \hbox (badness 10000) in paragraph at lines 2416--2419
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2408--2411
+Underfull \hbox (badness 10000) in paragraph at lines 2445--2448
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2465--2468
 
  []
 
 [44] [45]
-Underfull \hbox (badness 10000) in paragraph at lines 2511--2514
+Underfull \hbox (badness 10000) in paragraph at lines 2568--2571
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2541--2544
+Underfull \hbox (badness 10000) in paragraph at lines 2598--2601
 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 2556--2559
+[46]
+Underfull \hbox (badness 10000) in paragraph at lines 2613--2616
 
  []
 
 (./manual.bbl (./manual.brf)
-\tf@brf=\write9
-\openout9 = `manual.brf'.
+\tf@brf=\write7
+\openout7 = `manual.brf'.
 
- [46]) (./manual.ind [47
+ [47]) (./manual.ind [48
 
 ]
 Overfull \hbox (60.04977pt too wide) in paragraph at lines 9--11
@@ -646,24 +618,24 @@ m/n/10.95 ,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 92--93
+Underfull \hbox (badness 10000) in paragraph at lines 93--94
 []\OT1/pcr/m/n/10.95 NaturalBijectionToAssociativeAlgebra\OT1/ptm/m/n/10.95 ,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 94--96
+Underfull \hbox (badness 10000) in paragraph at lines 95--97
 []\OT1/pcr/m/n/10.95 NaturalBijectionToNormalizedUnitGroup\OT1/ptm/m/n/10.95 ,
  []
 
 
-Overfull \hbox (4.20505pt too wide) in paragraph at lines 96--98
+Overfull \hbox (4.20505pt too wide) in paragraph at lines 97--99
 []\OT1/pcr/m/n/10.95 NaturalBijectionToPcNormalizedUnitGroup\OT1/ptm/m/n/10.95 
 ,
  []
 
-[48
+[49
 
-] [49
+] [50
 
 ]) (./manual.aux)
 
@@ -671,28 +643,28 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 3921 strings out of 95137
- 54222 string characters out of 1183013
- 2099009 words of memory out of 4553844
- 6813 multiletter control sequences out of 10000+50000
- 66369 words of font info for 129 fonts, out of 2000000 for 2000
- 58 hyphenation exceptions out of 5000
- 27i,7n,30p,732b,452s stack positions out of 5000i,500n,6000p,200000b,40000s
+ 4105 strings out of 94087
+ 57455 string characters out of 1163859
+ 2107293 words of memory out of 4558506
+ 7128 multiletter control sequences out of 10000+50000
+ 66009 words of font info for 128 fonts, out of 2000000 for 2000
+ 645 hyphenation exceptions out of 5000
+ 27i,7n,30p,755b,589s stack positions out of 5000i,500n,6000p,200000b,50000s
+{/usr/local/gwTeX/texmf.texlive/fonts/enc/dvips/base/8r.enc}</usr/local/gwTeX
+/texmf.texlive/fonts/type1/bluesky/cm/cmex10.pfb></usr/local/gwTeX/texmf.texliv
+e/fonts/type1/bluesky/cm/cmmi10.pfb></usr/local/gwTeX/texmf.texlive/fonts/type1
+/bluesky/cm/cmr10.pfb></usr/local/gwTeX/texmf.texlive/fonts/type1/bluesky/cm/cm
+sy10.pfb></usr/local/gwTeX/texmf.texlive/fonts/type1/bluesky/ams/msam10.pfb></u
+sr/local/gwTeX/texmf.texlive/fonts/type1/urw/courier/ucrr8a.pfb></usr/local/gwT
+eX/texmf.texlive/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/local/gwTeX/texmf.te
+xlive/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/local/gwTeX/texmf.texlive/fonts
+/type1/urw/helvetic/uhvro8a.pfb></usr/local/gwTeX/texmf.texlive/fonts/type1/urw
+/symbol/usyr.pfb></usr/local/gwTeX/texmf.texlive/fonts/type1/urw/times/utmb8a.p
+fb></usr/local/gwTeX/texmf.texlive/fonts/type1/urw/times/utmr8a.pfb></usr/local
+/gwTeX/texmf.texlive/fonts/type1/urw/times/utmri8a.pfb>
+Output written on manual.pdf (50 pages, 321450 bytes).
 PDF statistics:
- 627 PDF objects out of 300000
- 156 named destinations out of 131072
- 17 words of extra memory for PDF output out of 10000
-</usr/local/teTeX/share/texmf.tetex/fonts/type1/bluesky/symbols/msam10.pfb></
-usr/local/teTeX/share/texmf.tetex/fonts/type1/bluesky/cm/cmex10.pfb></usr/local
-/teTeX/share/texmf.tetex/fonts/type1/bluesky/cm/cmmi10.pfb></usr/local/teTeX/sh
-are/texmf.tetex/fonts/type1/urw/symbol/usyr.pfb></usr/local/teTeX/share/texmf.t
-etex/fonts/type1/bluesky/cm/cmr10.pfb></usr/local/teTeX/share/texmf.tetex/fonts
-/type1/bluesky/cm/cmsy10.pfb>{/usr/local/teTeX/share/texmf.tetex/fonts/enc/dvip
-s/psnfss/8r.enc}</usr/local/teTeX/share/texmf.tetex/fonts/type1/urw/times/utmri
-8a.pfb></usr/local/teTeX/share/texmf.tetex/fonts/type1/urw/helvetic/uhvr8a.pfb>
-</usr/local/teTeX/share/texmf.tetex/fonts/type1/urw/helvetic/uhvro8a.pfb></usr/
-local/teTeX/share/texmf.tetex/fonts/type1/urw/courier/ucrr8a.pfb></usr/local/te
-TeX/share/texmf.tetex/fonts/type1/urw/times/utmr8a.pfb></usr/local/teTeX/share/
-texmf.tetex/fonts/type1/urw/times/utmb8a.pfb></usr/local/teTeX/share/texmf.tete
-x/fonts/type1/urw/helvetic/uhvb8a.pfb>
-Output written on manual.pdf (49 pages, 315600 bytes).
+ 688 PDF objects out of 1000 (max. 8388607)
+ 158 named destinations out of 1000 (max. 131072)
+ 17 words of extra memory for PDF output out of 10000 (max. 10000000)
+

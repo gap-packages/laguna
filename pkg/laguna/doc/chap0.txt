@@ -6,10 +6,10 @@
                     [1m[4m[31mLie AlGebras and UNits of group Algebras[0m
   
   
-                                 Version 3.3.3
+                                  Version 3.4
   
   
-                                   April 2006
+                                 February 2007
   
   
                                   Victor Bovdi
@@ -31,11 +31,11 @@
   
   Alexander Konovalov
       Email:    [34mmailto:konovalov@member.ams.org[0m
-      Homepage: [34mhttp://ukrgap.exponenta.ru/konoval.htm[0m
-      Address:  Department of Mathematics
-                Zaporozhye State University
-                P.O.Box 1317, Central Post Office
-                Zaporozhye, 69000 Ukraine
+      Homepage: [34mhttp://www.cs.st-andrews.ac.uk/~alexk/[0m
+      Address:  School of Computer Science
+                University of St Andrews
+                Jack Cole Building, North Haugh,
+                St Andrews, Fife, KY16 9SX, Scotland
   
   
   Richard Rossmanith
@@ -72,7 +72,7 @@
   
   -------------------------------------------------------
   [1m[4m[31mCopyright[0m
-  (C)  2003-2006 by Victor Bovdi, Alexander Konovalov, Richard Rossmanith, and
+  (C)  2003-2007 by Victor Bovdi, Alexander Konovalov, Richard Rossmanith, and
   Csaba Schneider
   
   [1mLAGUNA[0m  is free software; you can redistribute it and/or modify it under the
@@ -88,8 +88,8 @@
   [1mLAGUNA[0m, please cite it in the following form:
   
   V.  Bovdi,  A.  Konovalov,  R.  Rossmanith  and C. Schneider. [22m[36mLAGUNA --- Lie
-  AlGebras    and    UNits    of   group   Algebras,   Version   3.3.3;[0m   2006
-  ([34mhttp://ukrgap.exponenta.ru/laguna.htm[0m).
+  AlGebras    and    UNits    of    group    Algebras,   Version   3.4;[0m   2007
+  ([34mhttp://www.cs.st-andrews.ac.uk/~alexk/laguna.htm[0m).
   
   
   -------------------------------------------------------
@@ -182,7 +182,8 @@
       4.4-11 UnderlyingGroupRing
       4.4-12 UnitarySubgroup
       4.4-13 BicyclicUnitGroup
-      4.4-14 GroupBases
+      4.4-14 AugmentationIdealPowerFactorGroup
+      4.4-15 GroupBases
     4.5 The Lie algebra of a group algebra
       4.5-1 LieAlgebraByDomain
       4.5-2 IsLieAlgebraByAssociativeAlgebra

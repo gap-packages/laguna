@@ -2,46 +2,44 @@ This is BibTeX, Version 0.99c (Web2C 7.5.5)
 The top-level auxiliary file: manual.aux
 The style file: alpha.bst
 Database file #1: manual.bib
-Warning--empty year in CS
 You've used 11 entries,
             2543 wiz_defined-function locations,
-            643 strings with 5842 characters,
-and the built_in function-call counts, 4053 in all, are:
-= -- 422
+            649 strings with 5914 characters,
+and the built_in function-call counts, 4186 in all, are:
+= -- 435
 > -- 138
-< -- 10
+< -- 11
 + -- 42
 - -- 41
-* -- 281
-:= -- 663
+* -- 310
+:= -- 676
 add.period$ -- 35
 call.type$ -- 11
 change.case$ -- 57
 chr.to.int$ -- 11
-cite$ -- 12
-duplicate$ -- 175
-empty$ -- 312
+cite$ -- 11
+duplicate$ -- 177
+empty$ -- 328
 format.name$ -- 59
-if$ -- 823
+if$ -- 854
 int.to.chr$ -- 1
 int.to.str$ -- 0
 missing$ -- 12
 newline$ -- 59
 num.names$ -- 33
-pop$ -- 52
+pop$ -- 45
 preamble$ -- 1
 purify$ -- 71
 quote$ -- 0
-skip$ -- 134
+skip$ -- 137
 stack$ -- 0
-substring$ -- 273
-swap$ -- 24
-text.length$ -- 10
+substring$ -- 300
+swap$ -- 26
+text.length$ -- 11
 text.prefix$ -- 7
 top$ -- 0
 type$ -- 80
-warning$ -- 1
-while$ -- 42
+warning$ -- 0
+while$ -- 43
 width$ -- 12
-write$ -- 149
-(There was 1 warning)
+write$ -- 152

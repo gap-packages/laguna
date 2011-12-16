@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
 
-<!-- $Id: manual.xml,v 1.24 2005/04/07 10:46:58 alexk Exp $ -->
+<!-- $Id: manual.xml,v 1.30 2007/02/07 17:35:46 alexk Exp $ -->
 
 <!DOCTYPE Book SYSTEM "gapdoc.dtd"
 [<!ENTITY Clanguage "<Package>C</Package>">] 
@@ -13,7 +13,7 @@
 <TitlePage>
   <Title>&LAGUNA;</Title>
   <Subtitle>Lie AlGebras and UNits of group Algebras</Subtitle>
-  <Version>Version 3.3.3</Version>
+  <Version>Version 3.4</Version>
 
   <Author>Victor Bovdi 
           <Email>vbovdi@math.klte.hu</Email>
@@ -25,12 +25,12 @@
 
   <Author>Alexander Konovalov
           <Email>konovalov@member.ams.org</Email>
-	  <Homepage>http://ukrgap.exponenta.ru/konoval.htm</Homepage>
+	  <Homepage>http://www.cs.st-andrews.ac.uk/&tilde;alexk/</Homepage>
           <Address>
-            Department of Mathematics<Br/>
-    	    Zaporozhye State University<Br/>
-            P.O.Box 1317, Central Post Office<Br/>
-            Zaporozhye, 69000 Ukraine
+            School of Computer Science<Br/>
+            University of St Andrews<Br/>
+            Jack Cole Building, North Haugh,<Br/>
+            St Andrews, Fife, KY16 9SX, Scotland
           </Address> 
   </Author>
 
@@ -47,7 +47,7 @@
   <Author>
   Csaba Schneider
   <Email>csaba.schneider@sztaki.hu</Email>
-  <Homepage>http://www.sztaki.hu/~schneider</Homepage>
+  <Homepage>http://www.sztaki.hu/&tilde;schneider</Homepage>
           <Address>
             Informatics Laboratory<Br/>
             Computer and Automation Research Institute<Br/>
@@ -57,7 +57,7 @@
   </Author>
 
 
-  <Date>April 2006</Date>
+  <Date>February 2007</Date>
 
 <Abstract>
 
@@ -78,7 +78,7 @@ the field of <M>p</M> elements.
 </Abstract>
 
 <Copyright>
-  &copyright; 2003-2006 by Victor Bovdi, Alexander Konovalov, 
+  &copyright; 2003-2007 by Victor Bovdi, Alexander Konovalov, 
   Richard Rossmanith, and Csaba Schneider<P/>
 
   &LAGUNA; is free software; you can redistribute it and/or modify it 
@@ -95,7 +95,8 @@ the field of <M>p</M> elements.
 
   V. Bovdi, A. Konovalov, R. Rossmanith and C. Schneider. 
   <E>LAGUNA --- Lie AlGebras and UNits of group Algebras, 
-  Version 3.3.3;</E> 2006 (<URL>http://ukrgap.exponenta.ru/laguna.htm</URL>).
+  Version 3.4;</E> 2007 
+  (<URL>http://www.cs.st-andrews.ac.uk/&tilde;alexk/laguna.htm</URL>).
 </Copyright>
   
 <Acknowledgements>

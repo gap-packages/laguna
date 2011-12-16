@@ -5,7 +5,7 @@
 #W                                                         Richard Rossmanith
 #W                                                            Csaba Schneider
 ##
-#H  $Id: PackageInfo.g,v 1.18 2005/04/07 10:47:52 alexk Exp $
+#H  $Id: PackageInfo.g,v 1.23 2007/02/12 09:19:58 alexk Exp $
 ##
 #############################################################################
 
@@ -13,10 +13,10 @@ SetPackageInfo( rec(
 
 PackageName := "LAGUNA",
 Subtitle := "Lie AlGebras and UNits of group Algebras",
-Version := "3.3.3",
-Date := "03/04/2006",
-ArchiveURL := "http://ukrgap.exponenta.ru/LAGUNA/laguna-3.3.3",
-ArchiveFormats := ".zoo .tar.gz .tar.bz2 -win.zip",
+Version := "3.4",
+Date := "07/02/2007",
+ArchiveURL := "http://www.cs.st-andrews.ac.uk/~alexk/laguna/laguna-3.4",
+ArchiveFormats := ".tar.gz .tar.bz2 -win.zip",
 
 #TextFiles := ["init.g", ......],
 #BinaryFiles := ["doc/manual.dvi", ......],
@@ -42,13 +42,14 @@ Persons := [
     IsAuthor      := true,
     IsMaintainer  := true,
     Email         := "konovalov@member.ams.org",
-    WWWHome       := "http://ukrgap.exponenta.ru/konoval.htm",
+    WWWHome       := "http://www.cs.st-andrews.ac.uk/~alexk/",
     PostalAddress := Concatenation( [
-                     "P.O.Box 1317\n",
-                     "Central Post Office\n", 
-                     "Zaporozhye, 69000 Ukraine" ] ),
-    Place         := "Zaporozhye",
-    Institution   := "Zaporozhye State University"
+                     "School of Computer Science\n",
+                     "University of St Andrews\n",
+                     "Jack Cole Building, North Haugh,\n",
+                     "St Andrews, Fife, KY16 9SX, Scotland" ] ),
+    Place         := "St Andrews",
+    Institution   := "University of St Andrews"
      ),
   rec(
     LastName := "Rossmanith",
@@ -75,7 +76,7 @@ Persons := [
                      "Informatics Laboratory\n",
                      "Computer and Automation Research Institute\n",
                      "The Hungarian Academy of Sciences\n",
-	             "1111 Budapest, Lagymanyosi u. 11, Hungary" ]),
+	                 "1111 Budapest, Lagymanyosi u. 11, Hungary" ]),
     Place         := "Budapest",
     Institution   := "Computer and Automation Research Institute"
      )
@@ -85,10 +86,10 @@ Status := "accepted",
 CommunicatedBy := "Herbert Pahlings (Aachen)",
 AcceptDate := "06/2003",
 
-README_URL := "http://ukrgap.exponenta.ru/laguna/README.laguna",
-PackageInfoURL := "http://ukrgap.exponenta.ru/laguna/PackageInfo.g",
+README_URL := "http://www.cs.st-andrews.ac.uk/~alexk/laguna/README.laguna",
+PackageInfoURL := "http://www.cs.st-andrews.ac.uk/~alexk/laguna/PackageInfo.g",
 AbstractHTML := "The <span class=\"pkgname\">LAGUNA</span> package replaces the <span class=\"pkgname\">LAG</span> package and provides functionality for calculation of the normalized unit group of the modular group algebra of the finite p-group and for investigation of Lie algebra associated with group algebras and other associative algebras.",
-PackageWWWHome := "http://ukrgap.exponenta.ru/laguna.htm",
+PackageWWWHome := "http://www.cs.st-andrews.ac.uk/~alexk/laguna.htm",
                   
 PackageDoc := rec(
   BookName := "LAGUNA",
@@ -102,8 +103,8 @@ PackageDoc := rec(
 
 Dependencies := rec(
   GAP := ">=4.4",
-  NeededOtherPackages := [ ["GAPDoc", ">= 0.999"] ],
-  SuggestedOtherPackages := [ ["Sophus", ">= 1.11"] ],
+  NeededOtherPackages := [ ["GAPDoc", ">= 0.99999"] ],
+  SuggestedOtherPackages := [ ["Sophus", ">= 1.2"] ],
   ExternalConditions := []
 ),
 

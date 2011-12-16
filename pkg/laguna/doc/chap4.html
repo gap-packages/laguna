@@ -169,6 +169,7 @@ GF(2)
 # First we create an element x to use in in the series of examples.
 # We map the minimal generating system of the group G to its group algebra
 # and denote their images as a and b
+gap&gt; G:=DihedralGroup(16);; KG:=GroupRing(GF(2),G);;
 gap&gt; l := List( MinimalGeneratingSet( G ), g -&gt; g^Embedding( G, KG ) );
 [ (Z(2)^0)*f1, (Z(2)^0)*f2 ]
 gap&gt; a := l[1]; b := l[2]; e := One( KG ); # we denote the identity by e
@@ -287,8 +288,7 @@ gap&gt; y := x + a*b^2;
 (Z(2)^0)*&lt;identity&gt; of ...+(Z(2)^0)*f1+(Z(2)^0)*f2+(Z(2)^0)*f1*f2+(Z(2)^
 0)*f1*f3
 gap&gt; PartialAugmentations( KG, y );
-[ [ Z(2)^0, 0*Z(2), Z(2)^0, Z(2)^0 ], [ &lt;identity&gt; of ..., f1, f2, f1*f2 ]
- ]    
+[ [ Z(2)^0, 0*Z(2), Z(2)^0, Z(2)^0 ], [ &lt;identity&gt; of ..., f1, f2, f1*f2 ] ]    
 
 
 </pre></td></tr></table>
@@ -414,9 +414,9 @@ true
 gap&gt; y;
 (Z(2)^0)*f1+(Z(2)^0)*f2+(Z(2)^0)*f1*f2
 gap&gt; y^-1;
-(Z(2)^0)*f1+(Z(2)^0)*f2+(Z(2)^0)*f3+(Z(2)^0)*f4+(Z(2)^0)*f1*f2+(Z(2)^0)*f1*f3+(
-Z(2)^0)*f1*f4+(Z(2)^0)*f2*f4+(Z(2)^0)*f1*f2*f4+(Z(2)^0)*f2*f3*f4+(Z(2)^
-0)*f1*f2*f3*f4
+(Z(2)^0)*f1+(Z(2)^0)*f2+(Z(2)^0)*f3+(Z(2)^0)*f4+(Z(2)^0)*f1*f2+(Z(2)^
+0)*f1*f3+(Z(2)^0)*f1*f4+(Z(2)^0)*f2*f4+(Z(2)^0)*f1*f2*f4+(Z(2)^0)*f2*f3*f4+(
+Z(2)^0)*f1*f2*f3*f4
 gap&gt; y * y^-1;
 (Z(2)^0)*&lt;identity&gt; of ...    
 
@@ -427,11 +427,13 @@ gap&gt; y * y^-1;
 
 <h5>4.2-12 BicyclicUnitOfType1</h5>
 
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&gt; BicyclicUnitOfType1</code>( <var>KG, a, g</var> )</td><td class="tdright">( operation )</td></tr></table></div>
 <div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&gt; BicyclicUnitOfType1</code>( <var>a, g</var> )</td><td class="tdright">( operation )</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&gt; BicyclicUnitOfType2</code>( <var>KG, a, g</var> )</td><td class="tdright">( operation )</td></tr></table></div>
 <div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&gt; BicyclicUnitOfType2</code>( <var>a, g</var> )</td><td class="tdright">( operation )</td></tr></table></div>
 <p><b>Returns: </b>an element of a group ring</p>
 
-<p>let a be an element of order n of a group G. We put alpha = 1 + a + a^2 + ... +a^n-1. Then (a-1)*g*alpha and alpha*g*(a-1) are nilpotent of index two for any element g of the group G not containing in the normalizer N_G(&lt; a &gt;), and the units u_a,g = 1 + (a-1) * g * alpha and v_a,g = 1 + alpha * g * (a-1) are called bicyclic units. Note that u_a,g and v_a,g may coincide for some a and g, but in general this does not hold. These methods construct bicyclic units of both types when <var>a</var> and <var>g</var> are elements of the underlying group G of a group ring KG, already embedded to the group ring KG using the mapping <code class="code">Embedding( G, KG )</code>. Note that it is not actually checked that g is not contained in N_G(&lt; a &gt;), because this is verified in <code class="func">BicyclicUnitGroup</code> (<a href="chap4.html#s4ss13"><b>4.4-13</b></a>).</p>
+<p>let a be an element of order n of a group G. We put alpha = 1 + a + a^2 + ... +a^n-1. Then (a-1)*g*alpha and alpha*g*(a-1) are nilpotent of index two for any element g of the group G not containing in the normalizer N_G(&lt; a &gt;), and the units u_a,g = 1 + (a-1) * g * alpha and v_a,g = 1 + alpha * g * (a-1) are called bicyclic units. Note that u_a,g and v_a,g may coincide for some a and g, but in general this does not hold. In the three-argument version these methods construct bicyclic units of both types when <var>a</var> and <var>g</var> are elements of the underlying group G of a group ring <var>KG</var>. The two-argument version accepts images of elements <var>a</var> and <var>g</var> from the underlying group in the group ring KG obtained using the mapping <code class="code">Embedding( G, KG )</code>. Note that it is not actually checked that g is not contained in N_G(&lt; a &gt;), because this is verified in <code class="func">BicyclicUnitGroup</code> (<a href="chap4.html#s4ss13"><b>4.4-13</b></a>).</p>
 
 
 <table class="example">
@@ -483,10 +485,10 @@ Sym( [ 1 .. 3 ] )
 gap&gt; e := Embedding( G,FG );
 &lt;mapping: SymmetricGroup( [ 1 .. 3 ] ) -&gt; AlgebraWithOne( GF(2), ... ) &gt;
 gap&gt; x := (1,2)^e; y := (1,3)^e;
-Z(2)^0*(1,2)
-Z(2)^0*(1,3)
+(Z(2)^0)*(1,2)
+(Z(2)^0)*(1,3)
 gap&gt; a := AugmentationHomomorphism( FG );
-[ Z(2)^0*(1,2,3), Z(2)^0*(1,2) ] -&gt; [ Z(2)^0, Z(2)^0 ]
+[ (Z(2)^0)*(1,2,3), (Z(2)^0)*(1,2) ] -&gt; [ Z(2)^0, Z(2)^0 ]
 gap&gt; x^a; y^a; ( x + y )^a; # this is slower
 Z(2)^0
 Z(2)^0
@@ -516,7 +518,8 @@ Z(2)^0
 gap&gt; KG := GroupRing( GF( 2 ), DihedralGroup( 16 ) );
 &lt;algebra-with-one over GF(2), with 4 generators&gt;
 gap&gt; AugmentationIdeal( KG );
-&lt;two-sided ideal in &lt;algebra-with-one of dimension 16 over GF(2)&gt;, (dimension 15)&gt;    
+&lt;two-sided ideal in &lt;algebra-with-one over GF(2), with 4 generators&gt;,
+  (dimension 15)&gt;
 
 
 </pre></td></tr></table>
@@ -538,7 +541,8 @@ gap&gt; AugmentationIdeal( KG );
 gap&gt; KG := GroupRing( GF( 2 ), DihedralGroup( 16 ) );
 &lt;algebra-with-one over GF(2), with 4 generators&gt;
 gap&gt; RadicalOfAlgebra( KG );
-&lt;two-sided ideal in &lt;algebra-with-one of dimension 16 over GF(2)&gt;, (dimension 15)&gt;
+&lt;two-sided ideal in &lt;algebra-with-one over GF(2), with 4 generators&gt;,
+  (dimension 15)&gt;
 gap&gt; RadicalOfAlgebra( KG ) = AugmentationIdeal( KG );
 true     
 
@@ -558,9 +562,7 @@ true
 
 <p>Note that this function actually constructs a basis for the <em>augmentation ideal</em> of <var>KG</var> and not for <var>KG</var> itself. Since the augmentation ideal has co-dimension 1 in <code class="code">KG</code>, a basis for <code class="code">KG</code> can be easily obtained by adjoining the identity element of the group.</p>
 
-<p>The method returns a record whose basis entry is the basis and the weights entry is a list of the corresponding weights the of basis elements.</p>
-
-<p>For more details, see Section <a href="chap3.html#s3ss0"><b>3.3</b></a>.</p>
+<p>The method returns a record whose basis entry is the basis and the weights entry is a list of the corresponding weights the of basis elements. See Section <a href="chap3.html#s3ss0"><b>3.3</b></a> for more details.</p>
 
 
 <table class="example">
@@ -571,9 +573,9 @@ gap&gt; KG := GroupRing( GF( 2 ), ElementaryAbelianGroup( 4 ) );
 &lt;algebra-with-one over GF(2), with 2 generators&gt;
 gap&gt; WeightedBasis( KG );
 rec(
-  weightedBasis := [ (Z(2)^0)*&lt;identity&gt; of ...+(Z(2)^0)*f2, (Z(2)^0)*&lt;identity&gt; of\
- ...+(Z(2)^0)*f1, (Z(2)^0)*&lt;identity&gt; of ...+(Z(2)^0)*f1+(Z(2)^0)*f2+(Z(2)^
-        0)*f1*f2 ], weights := [ 1, 1, 2 ] )
+  weightedBasis := [ (Z(2)^0)*&lt;identity&gt; of ...+(Z(2)^0)*f2, (Z(2)^0)*&lt;identity&gt;
+        of ...+(Z(2)^0)*f1, (Z(2)^0)*&lt;identity&gt; of ...+(Z(2)^0)*f1+(Z(2)^0)*f2+(
+        Z(2)^0)*f1*f2 ], weights := [ 1, 1, 2 ] )
 
 
 </pre></td></tr></table>
@@ -642,7 +644,7 @@ gap&gt; KG := GroupRing( GF( 2 ), DihedralGroup( 16 ) );
 &lt;algebra-with-one over GF(2), with 4 generators&gt;
 gap&gt; AugmentationIdealOfDerivedSubgroupNilpotencyIndex( KG );
 4
-gap&gt; D := DerivedSubgroup( G );
+gap&gt; D := DerivedSubgroup( UnderlyingGroup( KG ) );
 Group([ f3, f4 ])
 gap&gt; KD := GroupRing( GF( 2 ), D );
 &lt;algebra-with-one over GF(2), with 2 generators&gt;
@@ -685,14 +687,14 @@ gap&gt; D := DerivedSubgroup( G );
 Group([ f3, f4 ])
 gap&gt; LeftIdealBySubgroup( KG, D );
 &lt;two-sided ideal in &lt;algebra-with-one over GF(2), with 4 generators&gt;,
-  (dimension 3)&gt;                              
+  (dimension 12)&gt;                              
 gap&gt; H := Subgroup( G, [ GeneratorsOfGroup(G)[1] ]);
 Group([ f1 ])
 gap&gt; IsNormal( G, H );
 false
 gap&gt; LeftIdealBySubgroup( KG, H );
 &lt;left ideal in &lt;algebra-with-one over GF(2), with 4 generators&gt;,
-  (dimension 1)&gt;
+  (dimension 8)&gt;
 
 
 </pre></td></tr></table>
@@ -764,8 +766,9 @@ f4
 
 
 gap&gt; f := NaturalBijectionToPcNormalizedUnitGroup( KG );
-MappingByFunction( &lt;group of size 32768 with 15 generators&gt;, &lt;pc group of size
-32768 with 15 generators&gt;, function( x ) ... end )
+MappingByFunction( &lt;group of size 32768 with
+15 generators&gt;, &lt;pc group of size 32768 with
+15 generators&gt;, function( x ) ... end )
 gap&gt; u := GeneratorsOfGroup( V )[4];;
 gap&gt; u^f;
 f4   
@@ -822,7 +825,8 @@ gap&gt; V:=PcNormalizedUnitGroup( KG );
 gap&gt; ucs := UpperCentralSeries( V );
 [ &lt;pc group of size 32768 with 15 generators&gt;,
   &lt;pc group of size 4096 with 12 generators&gt;,
-  Group([ f3*f5*f13*f15, f7, f11, f13, f14, f15, f12, f9*f12, f10 ]),
+  Group([ f3*f5*f13*f15, f7, f15, f13*f15, f14*f15, f11*f13*f14*f15, f12,
+      f9*f12, f10 ]),
   Group([ f3*f5*f13*f15, f7, f15, f13*f15, f14*f15, f11*f13*f14*f15 ]),
   Group([  ]) ]
 gap&gt; f := Embedding( G, V );
@@ -856,6 +860,7 @@ gap&gt; IdGroup( T );
 
 
 gap&gt; U := Units( KG );
+#I  LAGUNA package: Computing the unit group ...
 &lt;group of size 32768 with 15 generators&gt;
 # now elements of U are already in KG
 gap&gt; GeneratorsOfGroup( U )[5];
@@ -864,6 +869,7 @@ gap&gt; GeneratorsOfGroup( U )[5];
 gap&gt; FH := GroupRing( GF(3), SmallGroup(27,3) );
 &lt;algebra-with-one over GF(3), with 3 generators&gt;
 gap&gt; T := Units( FH );
+#I  LAGUNA package: Computing the unit group ...
 &lt;group of size 5083731656658 with 27 generators&gt;
 gap&gt; x := GeneratorsOfGroup( T )[1];
 Tuple( [ Z(3), (Z(3)^0)*&lt;identity&gt; of ... ] ) 
@@ -979,13 +985,13 @@ true
 
 
 gap&gt; UnderlyingGroupRing( Units( KG ) );
-&lt;algebra-with-one of dimension 16 over GF(2)&gt;
+&lt;algebra-with-one over GF(2), with 4 generators&gt;
 gap&gt; UnderlyingGroupRing( PcUnits( KG ) );
-&lt;algebra-with-one of dimension 16 over GF(2)&gt;
+&lt;algebra-with-one over GF(2), with 4 generators&gt;
 gap&gt; UnderlyingGroupRing( NormalizedUnitGroup( KG ) );
-&lt;algebra-with-one of dimension 16 over GF(2)&gt;
+&lt;algebra-with-one over GF(2), with 4 generators&gt;
 gap&gt; UnderlyingGroupRing( PcNormalizedUnitGroup( KG ) );
-&lt;algebra-with-one of dimension 16 over GF(2)&gt;     
+&lt;algebra-with-one over GF(2), with 4 generators&gt;
 
 
 </pre></td></tr></table>
@@ -1060,7 +1066,25 @@ true
 
 <p><a id="s4ss14" name="s4ss14"></a></p>
 
-<h5>4.4-14 GroupBases</h5>
+<h5>4.4-14 AugmentationIdealPowerFactorGroup</h5>
+
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&gt; AugmentationIdealPowerFactorGroup</code>( <var>KG, n</var> )</td><td class="tdright">( operation )</td></tr></table></div>
+<p><b>Returns: </b>PcGroup</p>
+
+<p>????????????????????????????????????????</p>
+
+
+<table class="example">
+<tr><td><pre>
+
+
+
+
+</pre></td></tr></table>
+
+<p><a id="s4ss15" name="s4ss15"></a></p>
+
+<h5>4.4-15 GroupBases</h5>
 
 <div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&gt; GroupBases</code>( <var>KG</var> )</td><td class="tdright">( attribute )</td></tr></table></div>
 <p><b>Returns: </b>a list of lists of group rings elements</p>
@@ -1082,12 +1106,13 @@ gap&gt; gb := GroupBases( KD8 );;
 gap&gt; Length( gb );
 32
 gap&gt; gb[1];
-[ (Z(2)^0)*&lt;identity&gt; of ..., (Z(2)^0)*f3, (Z(2)^0)*f1*f2+(Z(2)^0)*f2*f3+(Z(2)^
-    0)*f1*f2*f3, (Z(2)^0)*f2+(Z(2)^0)*f1*f2+(Z(2)^0)*f1*f2*f3,
+[ (Z(2)^0)*&lt;identity&gt; of ..., (Z(2)^0)*f3,
+  (Z(2)^0)*f1*f2+(Z(2)^0)*f2*f3+(Z(2)^0)*f1*f2*f3,
+  (Z(2)^0)*f2+(Z(2)^0)*f1*f2+(Z(2)^0)*f1*f2*f3,
   (Z(2)^0)*&lt;identity&gt; of ...+(Z(2)^0)*f2+(Z(2)^0)*f3+(Z(2)^0)*f2*f3+(Z(2)^
     0)*f1*f2*f3, (Z(2)^0)*f2+(Z(2)^0)*f1*f3+(Z(2)^0)*f2*f3,
-  (Z(2)^0)*&lt;identity&gt; of ...+(Z(2)^0)*f2+(Z(2)^0)*f3+(Z(2)^0)*f1*f2+(Z(2)^0)*f2*f3,
-  (Z(2)^0)*f1+(Z(2)^0)*f2+(Z(2)^0)*f2*f3 ]
+  (Z(2)^0)*&lt;identity&gt; of ...+(Z(2)^0)*f2+(Z(2)^0)*f3+(Z(2)^0)*f1*f2+(Z(2)^
+    0)*f2*f3, (Z(2)^0)*f1+(Z(2)^0)*f2+(Z(2)^0)*f2*f3 ]
 gap&gt; Length( last );
 8    
 
@@ -1113,6 +1138,7 @@ gap&gt; Length( last );
 gap&gt; G := SymmetricGroup(3);; FG := GroupRing( GF( 2 ), G );
 &lt;algebra-with-one over GF(2), with 2 generators&gt;
 gap&gt; L := LieAlgebra( FG );
+#I  LAGUNA package: Constructing Lie algebra ...
 &lt;Lie algebra over GF(2)&gt;
 
 
@@ -1133,6 +1159,7 @@ gap&gt; L := LieAlgebra( FG );
 gap&gt; KG := GroupRing( GF(3), DihedralGroup(16) );
 &lt;algebra-with-one over GF(3), with 4 generators&gt;
 gap&gt; L := LieAlgebra ( KG );
+#I  LAGUNA package: Constructing Lie algebra ...
 &lt;Lie algebra over GF(3)&gt;
 gap&gt; IsLieAlgebraByAssociativeAlgebra( L );
 true
@@ -1157,10 +1184,11 @@ true
 gap&gt; KG := GroupRing( GF(2), DihedralGroup(16) ); 
 &lt;algebra-with-one over GF(2), with 4 generators&gt;
 gap&gt; L := LieAlgebra ( KG );
+#I  LAGUNA package: Constructing Lie algebra ...
 &lt;Lie algebra over GF(2)&gt;
 gap&gt; UnderlyingAssociativeAlgebra( L );
 &lt;algebra-with-one over GF(2), with 4 generators&gt;
-gap&gt; last = M;
+gap&gt; last = KG;
 true  
 
 
@@ -1216,6 +1244,7 @@ gap&gt; G := SymmetricGroup(3); FG := GroupRing( GF( 2 ), G );
 Sym( [ 1 .. 3 ] )
 &lt;algebra-with-one over GF(2), with 2 generators&gt;
 gap&gt; L := LieAlgebra( FG );
+#I  LAGUNA package: Constructing Lie algebra ...
 &lt;Lie algebra over GF(2)&gt;
 gap&gt; s := NaturalBijectionToAssociativeAlgebra( L );
 MappingByFunction( &lt;Lie algebra over GF(2)&gt;, &lt;algebra-with-one over GF(
@@ -1243,6 +1272,7 @@ GF(2)
 Sym( [ 1 .. 3 ] )
 &lt;algebra-with-one over GF(2), with 2 generators&gt;
 gap&gt; L := LieAlgebra( FG );
+#I  LAGUNA package: Constructing Lie algebra ...
 &lt;Lie algebra over GF(2)&gt;
 gap&gt; IsLieAlgebraOfGroupRing( L );
 true   
@@ -1269,6 +1299,7 @@ GF(2)
 Sym( [ 1 .. 3 ] )
 &lt;algebra-with-one over GF(2), with 2 generators&gt;
 gap&gt; L := LieAlgebra( FG );
+#I  LAGUNA package: Constructing Lie algebra ...
 &lt;Lie algebra over GF(2)&gt;
 gap&gt; UnderlyingGroup( L );
 Sym( [ 1 .. 3 ] )
@@ -1297,6 +1328,7 @@ GF(2)
 Sym( [ 1 .. 3 ] )
 &lt;algebra-with-one over GF(2), with 2 generators&gt;
 gap&gt; L := LieAlgebra( FG );
+#I  LAGUNA package: Constructing Lie algebra ...
 &lt;Lie algebra over GF(2)&gt;
 gap&gt; f := Embedding( G, L );
 CompositionMapping( MappingByFunction( &lt;algebra-with-one over GF(2), with 
@@ -1327,10 +1359,12 @@ gap&gt; G := SmallGroup( 256, 400 ); FG := GroupRing( GF( 2 ), G );
 &lt;pc group of size 256 with 8 generators&gt;
 &lt;algebra-with-one over GF(2), with 8 generators&gt;
 gap&gt; L := LieAlgebra( FG );
+#I  LAGUNA package: Constructing Lie algebra ...
 &lt;Lie algebra over GF(2)&gt;
 gap&gt; C := LieCentre( L );
 &lt;Lie algebra of dimension 28 over GF(2)&gt;
 gap&gt; D := LieDerivedSubalgebra( L );
+#I  LAGUNA package: Computing the Lie derived subalgebra ...
 &lt;Lie algebra of dimension 228 over GF(2)&gt;
 gap&gt; c := Dimension( C ); d := Dimension( D ); l := Dimension( L );
 28
@@ -1360,10 +1394,12 @@ gap&gt; G := SmallGroup( 256, 400 ); FG := GroupRing( GF( 2 ), G );
 &lt;pc group of size 256 with 8 generators&gt;
 &lt;algebra-with-one over GF(2), with 8 generators&gt;
 gap&gt; L := LieAlgebra( FG );
+#I  LAGUNA package: Constructing Lie algebra ...
 &lt;Lie algebra over GF(2)&gt;
 gap&gt; C := LieCentre( L );
 &lt;Lie algebra of dimension 28 over GF(2)&gt;
-gap&gt; D := LieDerivedSubalgebra( L );    
+gap&gt; D := LieDerivedSubalgebra( L );
+#I  LAGUNA package: Computing the Lie derived subalgebra ...    
 &lt;Lie algebra of dimension 228 over GF(2)&gt;
 gap&gt; l := Dimension( L ); c := Dimension( C ); d := Dimension( D );
 256
@@ -1391,6 +1427,7 @@ gap&gt; G := SymmetricGroup( 3 ); FG := GroupRing( GF( 2 ), G);
 Sym( [ 1 .. 3 ] )
 &lt;algebra-with-one over GF(2), with 2 generators&gt;
 gap&gt; L := LieAlgebra( FG );          
+#I  LAGUNA package: Constructing Lie algebra ...
 &lt;Lie algebra over GF(2)&gt;
 gap&gt; IsAbelian( G );
 false
@@ -1418,6 +1455,7 @@ gap&gt; G := SmallGroup( 256, 400 ); FG := GroupRing( GF( 2 ), G );
 &lt;pc group of size 256 with 8 generators&gt;
 &lt;algebra-with-one over GF(2), with 8 generators&gt;
 gap&gt; L := LieAlgebra( FG );
+#I  LAGUNA package: Constructing Lie algebra ...
 &lt;Lie algebra over GF(2)&gt;
 gap&gt; IsLieSolvable( L );                       # This is very fast.
 true
@@ -1443,6 +1481,7 @@ gap&gt; G := SmallGroup( 256, 400 ); FG := GroupRing( GF( 2 ), G );
 &lt;pc group of size 256 with 8 generators&gt;
 &lt;algebra-with-one over GF(2), with 8 generators&gt;
 gap&gt; L := LieAlgebra( FG );
+#I  LAGUNA package: Constructing Lie algebra ...
 &lt;Lie algebra over GF(2)&gt;
 gap&gt; IsLieNilpotent( L );                           # This is very fast.
 true
@@ -1468,6 +1507,7 @@ gap&gt; G := SmallGroup( 256, 400 ); FG := GroupRing( GF( 2 ), G );
 &lt;pc group of size 256 with 8 generators&gt;
 &lt;algebra-with-one over GF(2), with 8 generators&gt;
 gap&gt; L := LieAlgebra( FG );
+#I  LAGUNA package: Constructing Lie algebra ...
 &lt;Lie algebra over GF(2)&gt;
 gap&gt; IsLieMetabelian( L );
 false   
@@ -1491,6 +1531,7 @@ gap&gt; G := SymmetricGroup( 3 ); FG := GroupRing( GF( 2 ), G );
 Sym( [ 1 .. 3 ] )
 &lt;algebra-with-one over GF(2), with 2 generators&gt;
 gap&gt; L := LieAlgebra( FG );       
+#I  LAGUNA package: Constructing Lie algebra ...
 &lt;Lie algebra over GF(2)&gt;
 gap&gt; IsLieMetabelian( L );                                             
 false
@@ -1507,7 +1548,7 @@ true
 <div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&gt; CanonicalBasis</code>( <var>L</var> )</td><td class="tdright">( method )</td></tr></table></div>
 <p><b>Returns: </b>basis of a Lie algebra</p>
 
-<p>The canonical basis of a group algebra FG is formed by the elements of G. In this method <var>L</var> is the Lie algebra associated with a group algebra FG, and the method returns the images of the elements of G in <var>L</var>.</p>
+<p>The canonical basis of a group algebra FG is formed by the elements of G. Here <var>L</var> is the Lie algebra associated with FG, and the method returns the images of the elements of G in <var>L</var>.</p>
 
 
 <table class="example">
@@ -1518,13 +1559,14 @@ gap&gt; G := SymmetricGroup( 3 ); FG := GroupRing( GF( 2 ), G );
 Sym( [ 1 .. 3 ] )
 &lt;algebra-with-one over GF(2), with 2 generators&gt;
 gap&gt; L := LieAlgebra( FG );       
+#I  LAGUNA package: Constructing Lie algebra ...
 &lt;Lie algebra over GF(2)&gt;
 gap&gt; B := CanonicalBasis( L );
 CanonicalBasis( &lt;Lie algebra of dimension 6 over GF(2)&gt; )
 gap&gt; Elements( B );
-[ LieObject( Z(2)^0*() ), LieObject( Z(2)^0*(2,3) ), 
-  LieObject( Z(2)^0*(1,2) ), LieObject( Z(2)^0*(1,2,3) ), 
-    LieObject( Z(2)^0*(1,3,2) ), LieObject( Z(2)^0*(1,3) ) ]   
+[ LieObject( (Z(2)^0)*() ), LieObject( (Z(2)^0)*(2,3) ),
+  LieObject( (Z(2)^0)*(1,2) ), LieObject( (Z(2)^0)*(1,2,3) ),
+  LieObject( (Z(2)^0)*(1,3,2) ), LieObject( (Z(2)^0)*(1,3) ) ]
 
 
 </pre></td></tr></table>
@@ -1545,6 +1587,7 @@ gap&gt; G := SymmetricGroup( 3 ); FG := GroupRing( GF( 2 ), G );
 Sym( [ 1 .. 3 ] )
 &lt;algebra-with-one over GF(2), with 2 generators&gt;
 gap&gt; L := LieAlgebra( FG );    
+#I  LAGUNA package: Constructing Lie algebra ...
 &lt;Lie algebra over GF(2)&gt;
 gap&gt; B := CanonicalBasis( L );
 CanonicalBasis( &lt;Lie algebra of dimension 6 over GF(2)&gt; )
@@ -1570,6 +1613,7 @@ gap&gt; G := CyclicGroup( 2 ); FG := GroupRing( GF( 2 ), G );
 &lt;pc group of size 2 with 1 generators&gt;
 &lt;algebra-with-one over GF(2), with 1 generators&gt;
 gap&gt; L := LieAlgebra( FG );
+#I  LAGUNA package: Constructing Lie algebra ...
 &lt;Lie algebra over GF(2)&gt;
 gap&gt; B := CanonicalBasis( L );
 CanonicalBasis( &lt;Lie algebra of dimension 2 over GF(2)&gt; )
@@ -1634,8 +1678,7 @@ gap&gt; LieLowerNilpotencyIndex( KG );
 <tr><td><pre>
 
 
-gap&gt; KG := GroupRing( GF ( 2 ), DihedralGroup( 16 ) );
-&lt;algebra-with-one over GF(2), with 4 generators&gt;
+gap&gt; KG := GroupRing( GF ( 2 ), DihedralGroup( 16 ) );;
 gap&gt; L := LieAlgebra( KG );
 #I  LAGUNA package: Constructing Lie algebra ...
 &lt;Lie algebra over GF(2)&gt;
@@ -1655,16 +1698,14 @@ gap&gt; LieDerivedLength( L );
 <h5>4.6-1 SubgroupsOfIndexTwo</h5>
 
 <div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&gt; SubgroupsOfIndexTwo</code>( <var>G</var> )</td><td class="tdright">( attribute )</td></tr></table></div>
-<p>Returns a list of subgroups of G with index two. Such subgroups are important for the investigation of the Lie structure of the group algebra KG in the case when the underlying field K has characteristic 2.</p>
+<p>Returns a list of subgroups of G with index two. Such subgroups are important for the investigation of the Lie structure of the group algebra KG in the case of characteristic 2.</p>
 
 
 <table class="example">
 <tr><td><pre>
 
 
-gap&gt; G := DihedralGroup( 16 );
-&lt;pc group of size 16 with 4 generators&gt;  
-gap&gt; SubgroupsOfIndexTwo( G );
+gap&gt; SubgroupsOfIndexTwo( DihedralGroup( 16) );
 [ Group([ f1, f1*f3, f1*f4, f1*f3*f4 ]), Group([ f2, f2*f3, f2*f4, f2*f3*f4 ]),
   Group([ f1*f2, f1*f2*f3, f1*f2*f4, f1*f2*f3*f4 ]) ]     
 
@@ -1746,7 +1787,7 @@ gap&gt; LieDimensionSubgroups( G );
 <div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&gt; LieUpperCodimensionSeries</code>( <var>G</var> )</td><td class="tdright">( attribute )</td></tr></table></div>
 <p><b>Returns: </b>list of subgroups</p>
 
-<p>A notion of upper Lie codimension subgroups was introduced in <a href="chapBib.html#biBCS">[CS]</a>. For a finite p-group <var>G</var>, C_i is the set of all elements g in <var>G</var>, such that the Lie commutator [ g, g_1, ..., g_i ] of the length i+1 is equal to zero for all g_1, ..., g_i from <var>G</var>, and C_0 = 1. By Du's theorem (see <a href="chapBib.html#biBDu">[D92]</a>), C_i coincides with the intersection of G and the i-th term of the upper central series 1=Z_0 &lt; Z_1 &lt; Z_2 &lt; ... &lt; Z_n = V(KG) of the normalized unit group V(KG). This fact is used in <strong class="pkg">LAGUNA</strong> to speed up computation of this series. Since V(KG) is involved in computation, for the first time the argiment should be the group ring <var>KG</var>, but later you can also apply it to the group <var>G</var> itself.</p>
+<p>A notion of upper Lie codimension subgroups was introduced in <a href="chapBib.html#biBCS">[CS06]</a>. For a finite p-group <var>G</var>, C_i is the set of all elements g in <var>G</var>, such that the Lie commutator [ g, g_1, ..., g_i ] of the length i+1 is equal to zero for all g_1, ..., g_i from <var>G</var>, and C_0 = 1. By Du's theorem (see <a href="chapBib.html#biBDu">[D92]</a>), C_i coincides with the intersection of G and the i-th term of the upper central series 1=Z_0 &lt; Z_1 &lt; Z_2 &lt; ... &lt; Z_n = V(KG) of the normalized unit group V(KG). This fact is used in <strong class="pkg">LAGUNA</strong> to speed up computation of this series. Since V(KG) is involved in computation, for the first time the argiment should be the group ring <var>KG</var>, but later you can also apply it to the group <var>G</var> itself.</p>
 
 
 <table class="example">
@@ -1772,7 +1813,7 @@ gap&gt; LieUpperCodimensionSeries( G );
 <h5>4.6-6 LAGInfo</h5>
 
 <div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&gt; LAGInfo</code></td><td class="tdright">( info class )</td></tr></table></div>
-<p><code class="code">LAGInfo</code> is a special Info class for LAGUNA algorithms. It has 5 levels: 0, 1 (default), 2, 3 and 4. To change info level to <code class="code">k</code>, use command <code class="code">SetInfoLevel(LAGInfo, k)</code>.</p>
+<p><code class="code">LAGInfo</code> is a special Info class for <strong class="pkg">LAGUNA</strong> algorithms. It has 5 levels: 0, 1 (default), 2, 3 and 4. To change info level to <code class="code">k</code>, use command <code class="code">SetInfoLevel(LAGInfo, k)</code>.</p>
 
 
 <table class="example">

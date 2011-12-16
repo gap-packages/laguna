@@ -1,28 +1,29 @@
 \begin{thebibliography}{Wur93}
 
-\bibitem[CS]{CS}
-Francesco Catino and Ernesto Spinelli.
-\newblock Upper lie codimension subgroups.
-\newblock {\em To appear}.
+\bibitem[CS06]{CS}
+F.~Catino and E.~Spinelli.
+\newblock Lie nilpotent group algebras and upper {L}ie codimension subgroups.
+\newblock {\em Comm. Algebra}, 34(10):3859--3873, 2006.
 
 \bibitem[Du92]{Du}
-X.~Du.
-\newblock The centers of radical ring.
-\newblock {\em Canad. Math. Bull.}, 35:174--179, 1992.
+X.~K. Du.
+\newblock The centers of a radical ring.
+\newblock {\em Canad. Math. Bull.}, 35(2):174--179, 1992.
 
 \bibitem[HB82]{HB}
-Bertram Huppert and Norman Blackburn.
+B.~Huppert and N.~Blackburn.
 \newblock {\em Finite groups. {II}}, volume 242 of {\em Grundlehren der
   Mathematischen Wissenschaften [Fundamental Principles of Mathematical
   Sciences]}.
 \newblock Springer-Verlag, Berlin, 1982.
-\newblock AMD, 44.
+\newblock , AMD, 44.
 
 \bibitem[LR86]{LR86}
 F.~Levin and G.~Rosenberger.
 \newblock Lie metabelian group rings.
-\newblock In {\em Group and semigroup rings (Johannesburg, 1985)}, pages
-  153--161. North-Holland, Amsterdam, 1986.
+\newblock In {\em Group and semigroup rings (Johannesburg, 1985)}, volume 126
+  of {\em North-Holland Math. Stud.}, pages 153--161. North-Holland, Amsterdam,
+  1986.
 
 \bibitem[PPS73]{PPS73}
 I.~B.~S. Passi, D.~S. Passman, and S.~K. Sehgal.
@@ -30,37 +31,37 @@ I.~B.~S. Passi, D.~S. Passman, and S.~K. Sehgal.
 \newblock {\em Canad. J. Math.}, 25:748--757, 1973.
 
 \bibitem[Ros97]{Ros97}
-Richard Rossmanith.
+R.~Rossmanith.
 \newblock {\em Centre-by-metabelian group algebras}.
 \newblock PhD thesis, Friedrich-Schiller-Universit{\accent127a}t Jena, 1997.
 
 \bibitem[Ros00]{Ros00}
-Richard Rossmanith.
+R.~Rossmanith.
 \newblock Lie centre-by-metabelian group algebras in even characteristic. {I},
-  {I}{I}.
+  {II}.
 \newblock {\em Israel J. Math.}, 115:51--75, 77--99, 2000.
 
 \bibitem[Ros02]{Ross}
-Richard Rossmanith.
+R.~Rossmanith.
 \newblock Lie centre-by-metabelian group algebras over commutative rings.
 \newblock {\em J. Algebra}, 251(2):503--508, 2002.
 
 \bibitem[Sha91]{Shalev91}
 A.~Shalev.
-\newblock Lie dimension subgroups, lie nilpotency indices, and the exponent of
-  the group of normalized units.
-\newblock {\em J. London Math. Soc.}, 43:23--36, 1991.
+\newblock Lie dimension subgroups, {L}ie nilpotency indices, and the exponent
+  of the group of normalized units.
+\newblock {\em J. London Math. Soc. (2)}, 43(1):23--36, 1991.
 
 \bibitem[Sim94]{Sims}
-Charles~C. Sims.
+C.~C. Sims.
 \newblock {\em Computation with finitely presented groups}, volume~48 of {\em
   Encyclopedia of Mathematics and its Applications}.
 \newblock Cambridge University Press, Cambridge, 1994.
 
 \bibitem[Wur93]{Wursthorn}
 M.~Wursthorn.
-\newblock Isomorphism of modular group algebras: an algorithm and its
-  application to groups of order $2^6$.
-\newblock {\em J. Symbolic Comp.}, 15:211--227, 1993.
+\newblock Isomorphisms of modular group algebras: an algorithm and its
+  application to groups of order {$2\sp 6$}.
+\newblock {\em J. Symbolic Comput.}, 15(2):211--227, 1993.
 
 \end{thebibliography}
