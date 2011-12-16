@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
-         "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+                      "DTD/xhtml1-strict.dtd">
 
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <title>GAP (LAGUNA) - Chapter 4: LAGUNA functions</title>
 <meta http-equiv="content-type" content="text/html; charset=iso-8859-1" />
@@ -558,7 +558,9 @@ true
 
 <p>Note that this function actually constructs a basis for the <em>augmentation ideal</em> of <var>KG</var> and not for <var>KG</var> itself. Since the augmentation ideal has co-dimension 1 in <code class="code">KG</code>, a basis for <code class="code">KG</code> can be easily obtained by adjoining the identity element of the group.</p>
 
-<p>The method returns a record whose basis entry is the basis and the weights entry is a list of the corresponding weights the of basis elements. See Section <a href="chap3.html#s3ss0"><b>3.3</b></a> for more details.</p>
+<p>The method returns a record whose basis entry is the basis and the weights entry is a list of the corresponding weights the of basis elements.</p>
+
+<p>For more details, see Section <a href="chap3.html#s3ss0"><b>3.3</b></a>.</p>
 
 
 <table class="example">
@@ -1101,17 +1103,17 @@ gap&gt; Length( last );
 <h5>4.5-1 LieAlgebraByDomain</h5>
 
 <div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&gt; LieAlgebraByDomain</code>( <var>A</var> )</td><td class="tdright">( method )</td></tr></table></div>
-<p>This method takes an associative algebra as its argument, and constructs its associated Lie algebra in which the product is the bracket operation: [a,b]=ab-ba. It is recommended that the user never calls this method. The Lie algebra for an associative algebra should normally be created using <code class="code">LieAlgebra( A )</code>. When <code class="code">LieAlgebra</code> is first invoked, it constructs the Lie algebra for <var>A</var> using <code class="code">LieAlgebraByDomain</code>. After that it stores this Lie algebra and simply returns it if <code class="code">LieAlgebra</code> is called again.</p>
+<p>This method takes a group algebra as its argument, and constructs its associated Lie algebra in which the product is the bracket operation: [a,b]=ab-ba. It is recommended that the user never calls this method. The Lie algebra for an associative algebra should normally be created using <code class="code">LieAlgebra( A )</code>. When <code class="code">LieAlgebra</code> is first invoked, it constructs the Lie algebra for <var>A</var> using <code class="code">LieAlgebraByDomain</code>. After that it stores this Lie algebra and simply returns it if <code class="code">LieAlgebra</code> is called again.</p>
 
 
 <table class="example">
 <tr><td><pre>
 
 
-gap&gt; M := MatrixAlgebra( GF( 3 ), 3 );
-( GF(3)^[ 3, 3 ] )
-gap&gt; L := LieAlgebra( M );
-&lt;Lie algebra over GF(3)&gt;
+gap&gt; G := SymmetricGroup(3);; FG := GroupRing( GF( 2 ), G );
+&lt;algebra-with-one over GF(2), with 2 generators&gt;
+gap&gt; L := LieAlgebra( FG );
+&lt;Lie algebra over GF(2)&gt;
 
 
 </pre></td></tr></table>
@@ -1128,12 +1130,12 @@ gap&gt; L := LieAlgebra( M );
 <tr><td><pre>
 
 
-gap&gt; M := MatrixAlgebra( GF( 3 ), 3 );
-( GF(3)^[ 3, 3 ] )
-gap&gt; L := LieAlgebra( M );
+gap&gt; KG := GroupRing( GF(3), DihedralGroup(16) );
+&lt;algebra-with-one over GF(3), with 4 generators&gt;
+gap&gt; L := LieAlgebra ( KG );
 &lt;Lie algebra over GF(3)&gt;
 gap&gt; IsLieAlgebraByAssociativeAlgebra( L );
-true   
+true
 
 
 </pre></td></tr></table>
@@ -1152,12 +1154,12 @@ true
 <tr><td><pre>
 
 
-gap&gt; M := MatrixAlgebra( GF( 3 ), 3 );
-&lt;algebra-with-one over GF(3), with 2 generators&gt;
-gap&gt; L := LieAlgebra( M );
-&lt;Lie algebra over GF(3)&gt;
+gap&gt; KG := GroupRing( GF(2), DihedralGroup(16) ); 
+&lt;algebra-with-one over GF(2), with 4 generators&gt;
+gap&gt; L := LieAlgebra ( KG );
+&lt;Lie algebra over GF(2)&gt;
 gap&gt; UnderlyingAssociativeAlgebra( L );
-( GF(3)^[ 3, 3 ] )
+&lt;algebra-with-one over GF(2), with 4 generators&gt;
 gap&gt; last = M;
 true  
 

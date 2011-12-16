@@ -135,3 +135,7 @@ $Id: ChangeLog,v 1.20 2005/04/07 10:47:52 alexk Exp $
 3.3.1 (May 2005)
     * The method for 'LieAlgebraByDomain' was restricted to group
       algebras for better compatibility with the GAP system.
+      
+3.3.2 (March 2006)
+    * Another improvement of 'LieAlgebraByDomain' method
+    * Performance improvement in PcNormalizedUnitGroup in abelian case

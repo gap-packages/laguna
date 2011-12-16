@@ -6,10 +6,10 @@
                     [1m[4m[31mLie AlGebras and UNits of group Algebras[0m
   
   
-                                 Version 3.3.1
+                                 Version 3.3.2
   
   
-                                    May 2005
+                                   March 2006
   
   
                                   Victor Bovdi
@@ -72,8 +72,8 @@
   
   -------------------------------------------------------
   [1m[4m[31mCopyright[0m
-  (C) 2003 by Victor Bovdi, Alexander Konovalov, Richard Rossmanith, and Csaba
-  Schneider
+  (C)  2003-2006 by Victor Bovdi, Alexander Konovalov, Richard Rossmanith, and
+  Csaba Schneider
   
   We  adopt  the copyright regulations of [1mGAP[0m from the copyright notice in the
   [1mGAP[0m manual.
@@ -85,7 +85,7 @@
   [1mLAGUNA[0m, please cite it in the following form:
   
   V.  Bovdi,  A.  Konovalov,  R.  Rossmanith  and C. Schneider. [22m[36mLAGUNA --- Lie
-  AlGebras    and    UNits    of   group   Algebras,   Version   3.3.1;[0m   2005
+  AlGebras    and    UNits    of   group   Algebras,   Version   3.3.2;[0m   2006
   ([34mhttp://ukrgap.exponenta.ru/laguna.htm[0m).
   
   

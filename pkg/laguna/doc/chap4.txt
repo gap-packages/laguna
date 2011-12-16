@@ -508,8 +508,9 @@
   identity element of the group.
   
   The  method  returns a record whose basis entry is the basis and the weights
-  entry  is  a  list  of  the corresponding weights the of basis elements. See
-  Section [1m3.3[0m for more details.
+  entry is a list of the corresponding weights the of basis elements.
+  
+  For more details, see Section [1m3.3[0m.
   
   [22m[35m---------------------------  Example  ----------------------------[0m
     [22m[35m[0m
@@ -1010,7 +1011,7 @@
   
   [1m[34m> LieAlgebraByDomain( [0m[22m[34mA[0m[1m[34m ) ____________________________________________[0mmethod
   
-  This method takes an associative algebra as its argument, and constructs its
+  This  method  takes  a  group  algebra  as  its argument, and constructs its
   associated  Lie  algebra  in  which  the  product  is the bracket operation:
   [a,b]=ab-ba.  It  is  recommended that the user never calls this method. The
   Lie  algebra  for  an  associative  algebra should normally be created using
@@ -1020,10 +1021,10 @@
   
   [22m[35m---------------------------  Example  ----------------------------[0m
     [22m[35m[0m
-    [22m[35mgap> M := MatrixAlgebra( GF( 3 ), 3 );[0m
-    [22m[35m( GF(3)^[ 3, 3 ] )[0m
-    [22m[35mgap> L := LieAlgebra( M );[0m
-    [22m[35m<Lie algebra over GF(3)>[0m
+    [22m[35mgap> G := SymmetricGroup(3);; FG := GroupRing( GF( 2 ), G );[0m
+    [22m[35m<algebra-with-one over GF(2), with 2 generators>[0m
+    [22m[35mgap> L := LieAlgebra( FG );[0m
+    [22m[35m<Lie algebra over GF(2)>[0m
     [22m[35m[0m
   [22m[35m------------------------------------------------------------------[0m
   
@@ -1037,12 +1038,12 @@
   
   [22m[35m---------------------------  Example  ----------------------------[0m
     [22m[35m[0m
-    [22m[35mgap> M := MatrixAlgebra( GF( 3 ), 3 );[0m
-    [22m[35m( GF(3)^[ 3, 3 ] )[0m
-    [22m[35mgap> L := LieAlgebra( M );[0m
+    [22m[35mgap> KG := GroupRing( GF(3), DihedralGroup(16) );[0m
+    [22m[35m<algebra-with-one over GF(3), with 4 generators>[0m
+    [22m[35mgap> L := LieAlgebra ( KG );[0m
     [22m[35m<Lie algebra over GF(3)>[0m
     [22m[35mgap> IsLieAlgebraByAssociativeAlgebra( L );[0m
-    [22m[35mtrue   [0m
+    [22m[35mtrue[0m
     [22m[35m[0m
   [22m[35m------------------------------------------------------------------[0m
   
@@ -1056,12 +1057,12 @@
   
   [22m[35m---------------------------  Example  ----------------------------[0m
     [22m[35m[0m
-    [22m[35mgap> M := MatrixAlgebra( GF( 3 ), 3 );[0m
-    [22m[35m<algebra-with-one over GF(3), with 2 generators>[0m
-    [22m[35mgap> L := LieAlgebra( M );[0m
-    [22m[35m<Lie algebra over GF(3)>[0m
+    [22m[35mgap> KG := GroupRing( GF(2), DihedralGroup(16) ); [0m
+    [22m[35m<algebra-with-one over GF(2), with 4 generators>[0m
+    [22m[35mgap> L := LieAlgebra ( KG );[0m
+    [22m[35m<Lie algebra over GF(2)>[0m
     [22m[35mgap> UnderlyingAssociativeAlgebra( L );[0m
-    [22m[35m( GF(3)^[ 3, 3 ] )[0m
+    [22m[35m<algebra-with-one over GF(2), with 4 generators>[0m
     [22m[35mgap> last = M;[0m
     [22m[35mtrue  [0m
     [22m[35m[0m

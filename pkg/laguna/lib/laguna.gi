@@ -887,24 +887,36 @@ InstallMethod( PcNormalizedUnitGroup,
     
       Info(LAGInfo, 3, "LAGInfo: commutators for ", Length(wb.weightedBasis), 
                        " elements of weighted basis");     
-         
-      for i in [1..Length( wb.weightedBasis )] do
+
+      if IsCommutative(KG) then
+
+        for i in [1..Length( wb.weightedBasis )] do
           for j in [i+1..Length( wb.weightedBasis )] do
-                  coef := NormalizedUnitCF( KG,  
+            Add( rels, Comm( fgens[i],fgens[j] ) );
+          od;
+        od;
+      
+      else   
+     
+        for i in [1..Length( wb.weightedBasis )] do
+          for j in [i+1..Length( wb.weightedBasis )] do
+            coef := NormalizedUnitCF( KG,  
                       Comm( wb.weightedBasis[i]+e, wb.weightedBasis[j]+e ));
-              w := One( f );
-                  for k in [1..Length( coef )] do
+            w := One( f );
+            for k in [1..Length( coef )] do
               if not coef[k]=z then
                   w := w*fgens[k]^IntFFE( coef[k] );
               fi;
-              od;
-              Add( rels, Comm( fgens[i],fgens[j] )/w );
-              Info(LAGInfo, 4, "[ ", i, " , ", j, " ]");
-                  od;
+            od;
+            Add( rels, Comm( fgens[i],fgens[j] )/w );
+            Info(LAGInfo, 4, "[ ", i, " , ", j, " ]");
           od;
+        od;
+
+      fi;
            
       Info(LAGInfo, 2, "LAGInfo: finished, converting to PcGroup" );
-    
+
       U:=PcGroupFpGroup( f/rels );
       SetIsGroupOfUnitsOfMagmaRing(U,false);
       SetIsNormalizedUnitGroupOfGroupRing(U,true);
@@ -1299,17 +1311,17 @@ end);
 ##
 #############################################################################
 
- 
+
 #############################################################################
 ##
 #M  LieAlgebraByDomain( <A> )
 ##  
 
 InstallMethod( LieAlgebraByDomain,
-##  This method takes an associative algebra as argument, and constructs
-##  its associated Lie algebra.
-##  The user, however, will {\bf never use} this command, but will rather use
-##  LieAlgebra( <A> ), which either returns the Lie algebra in case
+##  This method takes a group algebra, and constructs its associated Lie 
+##  algebra, in which the product is the bracket operation: [a,b]=ab-ba.
+##  The user, however, will {\bf never use} this command, but will rather 
+##  use LieAlgebra( <A> ), which either returns the Lie algebra in case
 ##  it is already constructed, or refers to LieAlgebraByDomain in case 
 ##  it is not.
         
@@ -1319,50 +1331,55 @@ InstallMethod( LieAlgebraByDomain,
     function( A )
 
        local fam,L;
+
+       if HasIsGroupAlgebra( A ) then
+         if IsGroupAlgebra( A ) then
+
+           Info(LAGInfo, 1, "LAGUNA package: Constructing Lie algebra ..." );
+
+           fam:= LieFamily( ElementsFamily( FamilyObj( A ) ) );
+
+           L:= Objectify( NewType( CollectionsFamily( fam ) ,
+                            IsLieAlgebraByAssociativeAlgebra and 
+                            IsLieObjectsModule and
+                            IsAttributeStoringRep ),
+                          rec() );
+
+           # Set the necessary attributes.
+           SetLeftActingDomain( L, LeftActingDomain( A ) );
+           SetUnderlyingAssociativeAlgebra( L, A );
        
-       if not IsGroupAlgebra( A ) then
+           # Test for inherited properties from A and set them where appropriate:
+         
+           if HasIsGroupRing(A) then
+             SetIsLieAlgebraOfGroupRing(L, IsGroupRing(A));
+           fi;
+
+           if HasIsFiniteDimensional(A) then 
+             SetIsFiniteDimensional(L, IsFiniteDimensional(A));
+           fi;
+
+           if HasDimension(A) then 
+             SetDimension(L, Dimension(A));
+           fi;
+
+           if HasIsFinite(A) then 
+             SetDimension(L, IsFinite(A));
+           fi;
+
+           if HasSize(A) then 
+             SetDimension(L, Size(A));
+           fi;
+     
+           return L;
+	 else # if not IsGroupAlgebra(A)
+	   TryNextMethod();  
+         fi;
+       else # if not HasIsGroupAlgebra(A) 
          TryNextMethod();
        fi;
-
-       Info(LAGInfo, 1, "LAGUNA package: Constructing Lie algebra ..." );
-
-       fam:= LieFamily( ElementsFamily( FamilyObj( A ) ) );
-
-       L:= Objectify( NewType( CollectionsFamily( fam ) ,
-                        IsLieAlgebraByAssociativeAlgebra and 
-                        IsLieObjectsModule and
-                        IsAttributeStoringRep ),
-                   rec() );
-
-       # Set the necessary attributes.
-       SetLeftActingDomain( L, LeftActingDomain( A ) );
-       SetUnderlyingAssociativeAlgebra( L, A );
-       
-       # Test for inherited properties from A and set them where appropriate:
-       
-       if HasIsGroupRing(A) then
-         SetIsLieAlgebraOfGroupRing(L, IsGroupRing(A));
-       fi;
-
-       if HasIsFiniteDimensional(A) then 
-         SetIsFiniteDimensional(L, IsFiniteDimensional(A));
-       fi;
-
-       if HasDimension(A) then 
-         SetDimension(L, Dimension(A));
-       fi;
-
-       if HasIsFinite(A) then 
-         SetDimension(L, IsFinite(A));
-       fi;
-
-       if HasSize(A) then 
-         SetDimension(L, Size(A));
-       fi;
-     
-       return L;
   end );
-
+ 
 
 InstallMethod( \in,
   "LAGUNA: for a Lie algebra that comes from an associative algebra and a Lie object",
