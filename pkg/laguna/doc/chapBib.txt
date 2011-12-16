@@ -1,46 +1,50 @@
   
   
-  [1m[4m[31mReferences[0m
+  [1XReferences[0X
   
-  [33m[CS06]  [0m[1m[31mCatino,  F.  and Spinelli, E. [0m, [34mLie nilpotent group algebras and
-  upper   Lie  codimension  subgroups[0m,  Comm.  Algebra,  [34m34[0m  (10)  (2006),
-  3859--3873
+  [[20XCS06[15X]  [16XCatino,  F.  and  Spinelli, E.[15X, [17XLie nilpotent group algebras and
+  upper   Lie   codimension  subgroups[15X,  [18XComm.  Algebra[15X,  [19X34[15X,  10  (2006),
+  3859--3873.
   
-  [33m[D92]  [0m[1m[31mDu, X. K. [0m, [34mThe centers of a radical ring[0m, Canad. Math. Bull., [34m35[0m
-  (2) (1992), 174-179
+  [[20XDu92[15X] [16XDu, X. K.[15X, [17XThe centers of a radical ring[15X, [18XCanad. Math. Bull.[15X, [19X35[15X,
+  2 (1992), 174-179.
   
-  [33m[HB82]   [0m[1m[31mHuppert,   B.   and   Blackburn,   N.   [0m,  [34mFinite  groups.  II[0m,
+  [[20XHB82[15X]   [16XHuppert,   B.   and   Blackburn,   N.[15X,   [17XFinite   groups.   II[15X,
   Springer-Verlag,    Grundlehren    der   Mathematischen   Wissenschaften
-  [Fundamental  Principles  of Mathematical Sciences], [34m242[0m, Berlin (1982),
-  xiii+531, (, AMD, 44)
+  [Fundamental  Principles  of Mathematical Sciences], [19X242[15X, Berlin (1982),
+  xiii+531 pages, ((, AMD, 44)).
   
-  [33m[LR86]  [0m[1m[31mLevin,  F.  and Rosenberger, G. [0m, [34mLie metabelian group rings[0m, in
-  [34mGroup   and   semigroup   rings   (Johannesburg,  1985)[0m,  North-Holland,
-  North-Holland Math. Stud., [34m126[0m, Amsterdam (1986), 153--161
+  [[20XJPS96[15X]  [16XJespers,  E., Parmenter, M. M. and Sehgal, S. K.[15X, [17XCentral units
+  of  integral  group  rings  of nilpotent groups[15X, [18XProc. Amer. Math. Soc.[15X,
+  [19X124[15X, 4 (1996), 1007--1012.
   
-  [33m[PPS73]  [0m[1m[31mPassi,  I.  B.  S.  and  Passman, D. S. and Sehgal, S. K. [0m, [34mLie
-  solvable group rings[0m, Canad. J. Math., [34m25[0m (1973), 748--757
+  [[20XLR86[15X]  [16XLevin,  F.  and  Rosenberger, G.[15X, [17XLie metabelian group rings[15X, in
+  Group   and   semigroup   rings   (Johannesburg,  1985),  North-Holland,
+  North-Holland Math. Stud., [19X126[15X, Amsterdam (1986), 153--161.
   
-  [33m[R97]    [0m[1m[31mRossmanith,   R.   [0m,   [34mCentre-by-metabelian   group   algebras[0m,
-  Friedrich-Schiller-Universit\accent127at Jena (1997)
+  [[20XPPS73[15X]  [16XPassi, I. B. S., Passman, D. S. and Sehgal, S. K.[15X, [17XLie solvable
+  group rings[15X, [18XCanad. J. Math.[15X, [19X25[15X (1973), 748--757.
   
-  [33m[R00]  [0m[1m[31mRossmanith,  R. [0m, [34mLie centre-by-metabelian group algebras in even
-  characteristic. I, II[0m, Israel J. Math., [34m115[0m (2000), 51--75, 77--99
+  [[20XRos97[15X]  [16XRossmanith,  R.[15X,  [17XCentre-by-metabelian  group  algebras[15X,  Ph.D.
+  thesis, Friedrich-Schiller-Universit{\accent127a}t Jena (1997).
   
-  [33m[R02]  [0m[1m[31mRossmanith,  R.  [0m,  [34mLie  centre-by-metabelian group algebras over
-  commutative rings[0m, J. Algebra, [34m251[0m (2) (2002), 503--508
+  [[20XRos00[15X]  [16XRossmanith, R.[15X, [17XLie centre-by-metabelian group algebras in even
+  characteristic. I, II[15X, [18XIsrael J. Math.[15X, [19X115[15X (2000), 51--75, 77--99.
   
-  [33m[S91]  [0m[1m[31mShalev, A. [0m, [34mLie dimension subgroups, Lie nilpotency indices, and
-  the exponent of the group of normalized units[0m, J. London Math. Soc. (2),
-  [34m43[0m (1) (1991), 23--36
+  [[20XRos02[15X]  [16XRossmanith,  R.[15X,  [17XLie  centre-by-metabelian group algebras over
+  commutative rings[15X, [18XJ. Algebra[15X, [19X251[15X, 2 (2002), 503--508.
   
-  [33m[S94]  [0m[1m[31mSims,  C.  C.  [0m,  [34mComputation  with  finitely  presented  groups[0m,
+  [[20XSha91[15X] [16XShalev, A.[15X, [17XLie dimension subgroups, Lie nilpotency indices, and
+  the exponent of the group of normalized units[15X, [18XJ. London Math. Soc. (2)[15X,
+  [19X43[15X, 1 (1991), 23--36.
+  
+  [[20XSim94[15X]  [16XSims,  C.  C.[15X,  [17XComputation  with  finitely  presented  groups[15X,
   Cambridge   University   Press,  Encyclopedia  of  Mathematics  and  its
-  Applications, [34m48[0m, Cambridge (1994), xiii+604
+  Applications, [19X48[15X, Cambridge (1994), xiii+604 pages.
   
-  [33m[W93]  [0m[1m[31mWursthorn,  M.  [0m,  [34mIsomorphisms  of  modular  group  algebras: an
-  algorithm  and  its application to groups of order $2\sp 6$[0m, J. Symbolic
-  Comput., [34m15[0m (2) (1993), 211--227
+  [[20XWur93[15X]  [16XWursthorn,  M.[15X,  [17XIsomorphisms  of  modular  group  algebras: an
+  algorithm  and  its  application  to  groups of order 2sp 6[15X, [18XJ. Symbolic
+  Comput.[15X, [19X15[15X, 2 (1993), 211--227.
   
   
   

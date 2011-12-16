@@ -5,9 +5,7 @@ laguna/doc/manual.log
 laguna/doc/manual.ilg
 laguna/doc/manual.toc
 laguna/doc/manual.bbl
-laguna/doc/manual.ps
 laguna/doc/manual.brf
-laguna/doc/manual.dvi
 laguna/doc/manual.pnr
 laguna/doc/manual.blg
 laguna/doc/manual.aux

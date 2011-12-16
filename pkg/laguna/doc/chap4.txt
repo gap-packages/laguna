@@ -1,233 +1,233 @@
   
-  [1m[4m[31m4. [1mLAGUNA[1m[4m[31m functions[0m
+  [1X4 [5XLAGUNA[1X functions[0X
   
   
-  [1m[4m[31m4.1 General functions for group algebras[0m
+  [1X4.1 General functions for group algebras[0X
   
-  [1m[4m[31m4.1-1 IsGroupAlgebra[0m
+  [1X4.1-1 IsGroupAlgebra[0m
   
-  [1m[34m> IsGroupAlgebra( [0m[22m[34mKG[0m[1m[34m ) _____________________________________________[0mproperty
+  [2X> IsGroupAlgebra( [0X[3XKG[0X[2X ) _____________________________________________[0Xproperty
   
-  A  group  ring  over a field is called a group algebra. For a group ring [22m[34mKG[0m,
-  [22m[32mIsGroupAlgebra[0m  returns [22m[32mtrue[0m, if the underlying ring of [22m[34mKG[0m is a field; [22m[32mfalse[0m
+  A  group  ring  over a field is called a group algebra. For a group ring [3XKG[0m,
+  [10XIsGroupAlgebra[0m  returns [9Xtrue[0m, if the underlying ring of [3XKG[0m is a field; [9Xfalse[0m
   is  returned  otherwise.  This  property will be set automatically for every
-  group ring created by the function [22m[32mGroupRing[0m.
+  group ring created by the function [10XGroupRing[0m.
   
-  [22m[35m---------------------------  Example  ----------------------------[0m
-    [22m[35m[0m
-    [22m[35mgap> IsGroupAlgebra( GroupRing( GF( 2 ), DihedralGroup( 16 ) ) );[0m
-    [22m[35mtrue[0m
-    [22m[35mgap> IsGroupAlgebra( GroupRing( Integers, DihedralGroup( 16 ) ) );[0m
-    [22m[35mfalse      [0m
-    [22m[35m[0m
-  [22m[35m------------------------------------------------------------------[0m
+  [4X---------------------------  Example  ----------------------------[0X
+    [4X[0X
+    [4Xgap> IsGroupAlgebra( GroupRing( GF( 2 ), DihedralGroup( 16 ) ) );[0X
+    [4Xtrue[0X
+    [4Xgap> IsGroupAlgebra( GroupRing( Integers, DihedralGroup( 16 ) ) );[0X
+    [4Xfalse      [0X
+    [4X[0X
+  [4X------------------------------------------------------------------[0X
   
-  [1m[4m[31m4.1-2 IsFModularGroupAlgebra[0m
+  [1X4.1-2 IsFModularGroupAlgebra[0m
   
-  [1m[34m> IsFModularGroupAlgebra( [0m[22m[34mKG[0m[1m[34m ) _____________________________________[0mproperty
+  [2X> IsFModularGroupAlgebra( [0X[3XKG[0X[2X ) _____________________________________[0Xproperty
   
-  A  group  algebra KG over a field K is called [22m[36mmodular[0m, if the characteristic
+  A  group  algebra KG over a field K is called [13Xmodular[0m, if the characteristic
   of  the  field K divides the order of some element in G. For a group algebra
-  [22m[34mKG[0m of a finite group G, [22m[32mIsModularGroupAlgebra[0m returns [22m[32mtrue[0m, if [22m[34mKG[0m is modular
-  according  to  this  definition;  [22m[32mfalse[0m is returned otherwise. This property
+  [3XKG[0m of a finite group G, [10XIsModularGroupAlgebra[0m returns [9Xtrue[0m, if [3XKG[0m is modular
+  according  to  this  definition;  [9Xfalse[0m is returned otherwise. This property
   will  be  set automatically for every group algebra, created by the function
-  [22m[32mGroupRing[0m.
+  [10XGroupRing[0m.
   
-  [22m[35m---------------------------  Example  ----------------------------[0m
-    [22m[35m[0m
-    [22m[35mgap> IsFModularGroupAlgebra( GroupRing( GF( 2 ), SymmetricGroup( 6 ) ) );[0m
-    [22m[35mtrue[0m
-    [22m[35mgap> IsFModularGroupAlgebra( GroupRing( GF( 2 ), CyclicGroup( 3 ) ) );[0m
-    [22m[35mfalse  [0m
-    [22m[35m[0m
-  [22m[35m------------------------------------------------------------------[0m
+  [4X---------------------------  Example  ----------------------------[0X
+    [4X[0X
+    [4Xgap> IsFModularGroupAlgebra( GroupRing( GF( 2 ), SymmetricGroup( 6 ) ) );[0X
+    [4Xtrue[0X
+    [4Xgap> IsFModularGroupAlgebra( GroupRing( GF( 2 ), CyclicGroup( 3 ) ) );[0X
+    [4Xfalse  [0X
+    [4X[0X
+  [4X------------------------------------------------------------------[0X
   
-  [1m[4m[31m4.1-3 IsPModularGroupAlgebra[0m
+  [1X4.1-3 IsPModularGroupAlgebra[0m
   
-  [1m[34m> IsPModularGroupAlgebra( [0m[22m[34mKG[0m[1m[34m ) _____________________________________[0mproperty
+  [2X> IsPModularGroupAlgebra( [0X[3XKG[0X[2X ) _____________________________________[0Xproperty
   
   A  group  algebra  KG  is  said  to  be  p-modular,  if  K  is  a  field  of
   characteristic p and G is a finite p-group for the same prime p. For a group
-  algebra  [22m[34mKG[0m  of a finite group G, [22m[32mIsPModularGroupAlgebra[0m returns [22m[32mtrue[0m, if [22m[34mKG[0m
-  is p-modular according to this definition; [22m[32mfalse[0m is returned otherwise. This
+  algebra  [3XKG[0m  of a finite group G, [10XIsPModularGroupAlgebra[0m returns [9Xtrue[0m, if [3XKG[0m
+  is p-modular according to this definition; [9Xfalse[0m is returned otherwise. This
   property  will  be set automatically for every group algebra, created by the
-  function [22m[32mGroupRing[0m.
+  function [10XGroupRing[0m.
   
-  [22m[35m---------------------------  Example  ----------------------------[0m
-    [22m[35m[0m
-    [22m[35mgap> IsPModularGroupAlgebra( GroupRing( GF( 2 ), DihedralGroup( 16 ) ) );[0m
-    [22m[35mtrue[0m
-    [22m[35mgap> IsPModularGroupAlgebra( GroupRing( GF( 2 ), SymmetricGroup( 6 ) ) );[0m
-    [22m[35mfalse        [0m
-    [22m[35m[0m
-  [22m[35m------------------------------------------------------------------[0m
+  [4X---------------------------  Example  ----------------------------[0X
+    [4X[0X
+    [4Xgap> IsPModularGroupAlgebra( GroupRing( GF( 2 ), DihedralGroup( 16 ) ) );[0X
+    [4Xtrue[0X
+    [4Xgap> IsPModularGroupAlgebra( GroupRing( GF( 2 ), SymmetricGroup( 6 ) ) );[0X
+    [4Xfalse        [0X
+    [4X[0X
+  [4X------------------------------------------------------------------[0X
   
-  [1m[4m[31m4.1-4 UnderlyingGroup[0m
+  [1X4.1-4 UnderlyingGroup[0m
   
-  [1m[34m> UnderlyingGroup( [0m[22m[34mKG[0m[1m[34m ) ___________________________________________[0mattribute
-  [1mReturns:[0m  the underlying group of a group ring
+  [2X> UnderlyingGroup( [0X[3XKG[0X[2X ) ___________________________________________[0Xattribute
+  [6XReturns:[0X  the underlying group of a group ring
   
-  This  attribute  stores the underlying group of a group ring [22m[34mKG[0m. In fact, it
-  refers  to  the attribute [22m[32mUnderlyingMagma[0m which returns the same result, and
+  This  attribute  stores the underlying group of a group ring [3XKG[0m. In fact, it
+  refers  to  the attribute [10XUnderlyingMagma[0m which returns the same result, and
   was introduced for group rings for convenience, and for teaching purposes.
   
-  [22m[35m---------------------------  Example  ----------------------------[0m
-    [22m[35m[0m
-    [22m[35mgap> KG := GroupRing( GF ( 2 ), DihedralGroup( 16 ) );[0m
-    [22m[35m<algebra-with-one over GF(2), with 4 generators>[0m
-    [22m[35mgap> G := UnderlyingGroup( KG );[0m
-    [22m[35m<pc group of size 16 with 4 generators>  [0m
-    [22m[35m[0m
-  [22m[35m------------------------------------------------------------------[0m
+  [4X---------------------------  Example  ----------------------------[0X
+    [4X[0X
+    [4Xgap> KG := GroupRing( GF ( 2 ), DihedralGroup( 16 ) );[0X
+    [4X<algebra-with-one over GF(2), with 4 generators>[0X
+    [4Xgap> G := UnderlyingGroup( KG );[0X
+    [4X<pc group of size 16 with 4 generators>  [0X
+    [4X[0X
+  [4X------------------------------------------------------------------[0X
   
-  [1m[4m[31m4.1-5 UnderlyingRing[0m
+  [1X4.1-5 UnderlyingRing[0m
   
-  [1m[34m> UnderlyingRing( [0m[22m[34mKG[0m[1m[34m ) ____________________________________________[0mattribute
-  [1mReturns:[0m  the underlying ring of a group ring
+  [2X> UnderlyingRing( [0X[3XKG[0X[2X ) ____________________________________________[0Xattribute
+  [6XReturns:[0X  the underlying ring of a group ring
   
-  This  attribute  stores  the underlying ring of a group ring [22m[34mKG[0m. In fact, it
-  refers  to the attribute [22m[32mLeftActingDomain[0m which returns the same result, and
+  This  attribute  stores  the underlying ring of a group ring [3XKG[0m. In fact, it
+  refers  to the attribute [10XLeftActingDomain[0m which returns the same result, and
   was introduced for group rings for convenience, and for teaching purposes.
   
-  [22m[35m---------------------------  Example  ----------------------------[0m
-    [22m[35m[0m
-    [22m[35mgap> KG := GroupRing( GF( 2 ), DihedralGroup( 16 ) );[0m
-    [22m[35m<algebra-with-one over GF(2), with 4 generators>[0m
-    [22m[35mgap> UnderlyingRing( KG );[0m
-    [22m[35mGF(2)     [0m
-    [22m[35m[0m
-  [22m[35m------------------------------------------------------------------[0m
+  [4X---------------------------  Example  ----------------------------[0X
+    [4X[0X
+    [4Xgap> KG := GroupRing( GF( 2 ), DihedralGroup( 16 ) );[0X
+    [4X<algebra-with-one over GF(2), with 4 generators>[0X
+    [4Xgap> UnderlyingRing( KG );[0X
+    [4XGF(2)     [0X
+    [4X[0X
+  [4X------------------------------------------------------------------[0X
   
-  [1m[4m[31m4.1-6 UnderlyingField[0m
+  [1X4.1-6 UnderlyingField[0m
   
-  [1m[34m> UnderlyingField( [0m[22m[34mKG[0m[1m[34m ) ___________________________________________[0mattribute
-  [1mReturns:[0m  the underlying field of a group algebra
+  [2X> UnderlyingField( [0X[3XKG[0X[2X ) ___________________________________________[0Xattribute
+  [6XReturns:[0X  the underlying field of a group algebra
   
-  This  attribute  stores the underlying field of a group algebra [22m[34mKG[0m. In fact,
-  it  refers  to the attribute [22m[32mLeftActingDomain[0m which returns the same result,
+  This  attribute  stores the underlying field of a group algebra [3XKG[0m. In fact,
+  it  refers  to the attribute [10XLeftActingDomain[0m which returns the same result,
   and  was  introduced  for  group  algebras for convenience, and for teaching
   purposes.
   
-  [22m[35m---------------------------  Example  ----------------------------[0m
-    [22m[35m[0m
-    [22m[35mgap> KG := GroupRing( GF( 2 ), DihedralGroup( 16 ) );[0m
-    [22m[35m<algebra-with-one over GF(2), with 4 generators>[0m
-    [22m[35mgap> UnderlyingField( KG );[0m
-    [22m[35mGF(2)    [0m
-    [22m[35m[0m
-  [22m[35m------------------------------------------------------------------[0m
+  [4X---------------------------  Example  ----------------------------[0X
+    [4X[0X
+    [4Xgap> KG := GroupRing( GF( 2 ), DihedralGroup( 16 ) );[0X
+    [4X<algebra-with-one over GF(2), with 4 generators>[0X
+    [4Xgap> UnderlyingField( KG );[0X
+    [4XGF(2)    [0X
+    [4X[0X
+  [4X------------------------------------------------------------------[0X
   
   
-  [1m[4m[31m4.2 Operations with group algebra elements[0m
+  [1X4.2 Operations with group algebra elements[0X
   
-  [1m[4m[31m4.2-1 Support[0m
+  [1X4.2-1 Support[0m
   
-  [1m[34m> Support( [0m[22m[34mx[0m[1m[34m ) ____________________________________________________[0mattribute
-  [1mReturns:[0m  support of x as a list of elements of the underlying group
+  [2X> Support( [0X[3Xx[0X[2X ) ____________________________________________________[0Xattribute
+  [6XReturns:[0X  support of x as a list of elements of the underlying group
   
-  Returns  the  support  of  a group ring element [22m[34mx[0m. The support of a non-zero
+  Returns  the  support  of  a group ring element [3Xx[0m. The support of a non-zero
   element x = alpha_1 * g_1 + alpha_2 * g_2 + cdots + alpha_k * g_k of a group
   ring  is  the list of elements g_i in G for which the coefficient alpha_i is
   non-zero.  The  support of the zero element of a group ring is defined to be
   the empty list. This method is also applicable to elements of magma rings.
   
-  [22m[35m---------------------------  Example  ----------------------------[0m
-    [22m[35m[0m
-    [22m[35m# First we create an element x to use in in the series of examples.[0m
-    [22m[35m# We map the minimal generating system of the group G to its group algebra[0m
-    [22m[35m# and denote their images as a and b[0m
-    [22m[35mgap> G:=DihedralGroup(16);; KG:=GroupRing(GF(2),G);;[0m
-    [22m[35mgap> l := List( MinimalGeneratingSet( G ), g -> g^Embedding( G, KG ) );[0m
-    [22m[35m[ (Z(2)^0)*f1, (Z(2)^0)*f2 ][0m
-    [22m[35mgap> a := l[1]; b := l[2]; e := One( KG ); # we denote the identity by e[0m
-    [22m[35m(Z(2)^0)*f1[0m
-    [22m[35m(Z(2)^0)*f2[0m
-    [22m[35m(Z(2)^0)*<identity> of ...[0m
-    [22m[35mgap> x := ( e + a ) * ( e + b );[0m
-    [22m[35m(Z(2)^0)*<identity> of ...+(Z(2)^0)*f1+(Z(2)^0)*f2+(Z(2)^0)*f1*f2[0m
-    [22m[35mgap> Support( x );[0m
-    [22m[35m[ <identity> of ..., f1, f2, f1*f2 ]     [0m
-    [22m[35m[0m
-  [22m[35m------------------------------------------------------------------[0m
+  [4X---------------------------  Example  ----------------------------[0X
+    [4X[0X
+    [4X# First we create an element x to use in in the series of examples.[0X
+    [4X# We map the minimal generating system of the group G to its group algebra[0X
+    [4X# and denote their images as a and b[0X
+    [4Xgap> G:=DihedralGroup(16);; KG:=GroupRing(GF(2),G);;[0X
+    [4Xgap> l := List( MinimalGeneratingSet( G ), g -> g^Embedding( G, KG ) );[0X
+    [4X[ (Z(2)^0)*f1, (Z(2)^0)*f2 ][0X
+    [4Xgap> a := l[1]; b := l[2]; e := One( KG ); # we denote the identity by e[0X
+    [4X(Z(2)^0)*f1[0X
+    [4X(Z(2)^0)*f2[0X
+    [4X(Z(2)^0)*<identity> of ...[0X
+    [4Xgap> x := ( e + a ) * ( e + b );[0X
+    [4X(Z(2)^0)*<identity> of ...+(Z(2)^0)*f1+(Z(2)^0)*f2+(Z(2)^0)*f1*f2[0X
+    [4Xgap> Support( x );[0X
+    [4X[ <identity> of ..., f1, f2, f1*f2 ]     [0X
+    [4X[0X
+  [4X------------------------------------------------------------------[0X
   
-  [1m[4m[31m4.2-2 CoefficientsBySupport[0m
+  [1X4.2-2 CoefficientsBySupport[0m
   
-  [1m[34m> CoefficientsBySupport( [0m[22m[34mx[0m[1m[34m ) ______________________________________[0mattribute
-  [1mReturns:[0m  coefficients  of  support  elements  as  list  of  elements of the
+  [2X> CoefficientsBySupport( [0X[3Xx[0X[2X ) ______________________________________[0Xattribute
+  [6XReturns:[0X  coefficients  of  support  elements  as  list  of  elements of the
             underlying ring
   
   Returns  a list that contains the coefficients corresponding to the elements
-  of  [22m[32mSupport(  x  )[0m in the same order as the elements appear in [22m[32mSupport( x )[0m.
+  of  [10XSupport(  x  )[0m in the same order as the elements appear in [10XSupport( x )[0m.
   This method is also applicable to elements of magma rings.
   
-  [22m[35m---------------------------  Example  ----------------------------[0m
-    [22m[35m[0m
-    [22m[35mgap> x;[0m
-    [22m[35m(Z(2)^0)*<identity> of ...+(Z(2)^0)*f1+(Z(2)^0)*f2+(Z(2)^0)*f1*f2[0m
-    [22m[35mgap> CoefficientsBySupport( x );[0m
-    [22m[35m[ Z(2)^0, Z(2)^0, Z(2)^0, Z(2)^0 ]   [0m
-    [22m[35m[0m
-  [22m[35m------------------------------------------------------------------[0m
+  [4X---------------------------  Example  ----------------------------[0X
+    [4X[0X
+    [4Xgap> x;[0X
+    [4X(Z(2)^0)*<identity> of ...+(Z(2)^0)*f1+(Z(2)^0)*f2+(Z(2)^0)*f1*f2[0X
+    [4Xgap> CoefficientsBySupport( x );[0X
+    [4X[ Z(2)^0, Z(2)^0, Z(2)^0, Z(2)^0 ]   [0X
+    [4X[0X
+  [4X------------------------------------------------------------------[0X
   
-  [1m[4m[31m4.2-3 TraceOfMagmaRingElement[0m
+  [1X4.2-3 TraceOfMagmaRingElement[0m
   
-  [1m[34m> TraceOfMagmaRingElement( [0m[22m[34mx[0m[1m[34m ) ____________________________________[0mattribute
-  [1mReturns:[0m  an element of the underlying ring
+  [2X> TraceOfMagmaRingElement( [0X[3Xx[0X[2X ) ____________________________________[0Xattribute
+  [6XReturns:[0X  an element of the underlying ring
   
-  Returns  the trace of a group ring element [22m[34mx[0m. By definition, the trace of an
+  Returns  the trace of a group ring element [3Xx[0m. By definition, the trace of an
   element  x = alpha_1 * 1 + alpha_2 * g_2 + cdots + alpha_k * g_k is equal to
   alpha_1, that is, the coefficient of the identity element in G. The trace of
   the  zero  element  is  zero.  This method is also applicable to elements of
   magma rings.
   
-  [22m[35m---------------------------  Example  ----------------------------[0m
-    [22m[35m[0m
-    [22m[35mgap> x;[0m
-    [22m[35m(Z(2)^0)*<identity> of ...+(Z(2)^0)*f1+(Z(2)^0)*f2+(Z(2)^0)*f1*f2[0m
-    [22m[35mgap> TraceOfMagmaRingElement( x );[0m
-    [22m[35mZ(2)^0        [0m
-    [22m[35m[0m
-  [22m[35m------------------------------------------------------------------[0m
+  [4X---------------------------  Example  ----------------------------[0X
+    [4X[0X
+    [4Xgap> x;[0X
+    [4X(Z(2)^0)*<identity> of ...+(Z(2)^0)*f1+(Z(2)^0)*f2+(Z(2)^0)*f1*f2[0X
+    [4Xgap> TraceOfMagmaRingElement( x );[0X
+    [4XZ(2)^0        [0X
+    [4X[0X
+  [4X------------------------------------------------------------------[0X
   
-  [1m[4m[31m4.2-4 Length[0m
+  [1X4.2-4 Length[0m
   
-  [1m[34m> Length( [0m[22m[34mx[0m[1m[34m ) _____________________________________________________[0mattribute
+  [2X> Length( [0X[3Xx[0X[2X ) _____________________________________________________[0Xattribute
   
-  The  length  of  an  element  of  a group ring [22m[34mx[0m is defined as the number of
+  The  length  of  an  element  of  a group ring [3Xx[0m is defined as the number of
   elements in its support. This method is also applicable to elements of magma
   rings.
   
-  [22m[35m---------------------------  Example  ----------------------------[0m
-    [22m[35m[0m
-    [22m[35mgap> x;[0m
-    [22m[35m(Z(2)^0)*<identity> of ...+(Z(2)^0)*f1+(Z(2)^0)*f2+(Z(2)^0)*f1*f2[0m
-    [22m[35mgap> Length( x );[0m
-    [22m[35m4     [0m
-    [22m[35m[0m
-  [22m[35m------------------------------------------------------------------[0m
+  [4X---------------------------  Example  ----------------------------[0X
+    [4X[0X
+    [4Xgap> x;[0X
+    [4X(Z(2)^0)*<identity> of ...+(Z(2)^0)*f1+(Z(2)^0)*f2+(Z(2)^0)*f1*f2[0X
+    [4Xgap> Length( x );[0X
+    [4X4     [0X
+    [4X[0X
+  [4X------------------------------------------------------------------[0X
   
-  [1m[4m[31m4.2-5 Augmentation[0m
+  [1X4.2-5 Augmentation[0m
   
-  [1m[34m> Augmentation( [0m[22m[34mx[0m[1m[34m ) _______________________________________________[0mattribute
-  [1mReturns:[0m  the sum of coefficients of a group ring element
+  [2X> Augmentation( [0X[3Xx[0X[2X ) _______________________________________________[0Xattribute
+  [6XReturns:[0X  the sum of coefficients of a group ring element
   
   The augmentation of a group ring element x = alpha_1 * g_1 + alpha_2 * g_2 +
   cdots  +  alpha_k  *  g_k is the sum of its coefficients alpha_1 + alpha_2 +
   cdots + alpha_k. The method is also applicable to elements of magma rings.
   
-  [22m[35m---------------------------  Example  ----------------------------[0m
-    [22m[35m[0m
-    [22m[35mgap> x;[0m
-    [22m[35m(Z(2)^0)*<identity> of ...+(Z(2)^0)*f1+(Z(2)^0)*f2+(Z(2)^0)*f1*f2[0m
-    [22m[35mgap> Augmentation( x );[0m
-    [22m[35m0*Z(2)     [0m
-    [22m[35m[0m
-  [22m[35m------------------------------------------------------------------[0m
+  [4X---------------------------  Example  ----------------------------[0X
+    [4X[0X
+    [4Xgap> x;[0X
+    [4X(Z(2)^0)*<identity> of ...+(Z(2)^0)*f1+(Z(2)^0)*f2+(Z(2)^0)*f1*f2[0X
+    [4Xgap> Augmentation( x );[0X
+    [4X0*Z(2)     [0X
+    [4X[0X
+  [4X------------------------------------------------------------------[0X
   
-  [1m[4m[31m4.2-6 PartialAugmentations[0m
+  [1X4.2-6 PartialAugmentations[0m
   
-  [1m[34m> PartialAugmentations( [0m[22m[34mKG, x[0m[1m[34m ) ___________________________________[0moperation
-  [1mReturns:[0m  a  list  of  partial  augmentations  and a list of conjugacy class
+  [2X> PartialAugmentations( [0X[3XKG, x[0X[2X ) ___________________________________[0Xoperation
+  [6XReturns:[0X  a  list  of  partial  augmentations  and a list of conjugacy class
             representatives
   
   The  partial  augmentation of an element x = alpha_1 * g_1 + alpha_2 * g_2 +
@@ -238,266 +238,297 @@
   augmentations,  and  the  second is a list of representatives of appropriate
   conjugacy classes of elements of the group G.
   
-  [22m[35m---------------------------  Example  ----------------------------[0m
-    [22m[35m[0m
-    [22m[35mgap> y := x + a*b^2;[0m
-    [22m[35m(Z(2)^0)*<identity> of ...+(Z(2)^0)*f1+(Z(2)^0)*f2+(Z(2)^0)*f1*f2+(Z(2)^[0m
-    [22m[35m0)*f1*f3[0m
-    [22m[35mgap> PartialAugmentations( KG, y );[0m
-    [22m[35m[ [ Z(2)^0, 0*Z(2), Z(2)^0, Z(2)^0 ], [ <identity> of ..., f1, f2, f1*f2 ] ]    [0m
-    [22m[35m[0m
-  [22m[35m------------------------------------------------------------------[0m
+  [4X---------------------------  Example  ----------------------------[0X
+    [4X[0X
+    [4Xgap> y := x + a*b^2;[0X
+    [4X(Z(2)^0)*<identity> of ...+(Z(2)^0)*f1+(Z(2)^0)*f2+(Z(2)^0)*f1*f2+(Z(2)^[0X
+    [4X0)*f1*f3[0X
+    [4Xgap> PartialAugmentations( KG, y );[0X
+    [4X[ [ Z(2)^0, 0*Z(2), Z(2)^0, Z(2)^0 ], [ <identity> of ..., f1, f2, f1*f2 ] ]    [0X
+    [4X[0X
+  [4X------------------------------------------------------------------[0X
   
-  [1m[4m[31m4.2-7 Involution[0m
+  [1X4.2-7 Involution[0m
   
-  [1m[34m> Involution( [0m[22m[34mx, f[0m[1m[34m ) ______________________________________________[0moperation
-  [1m[34m> Involution( [0m[22m[34mx[0m[1m[34m ) _________________________________________________[0moperation
-  [1mReturns:[0m  an element of a group ring
+  [2X> Involution( [0X[3Xx[, f][0X[2X ) ____________________________________________[0Xoperation
+  [6XReturns:[0X  an element of a group ring
   
   Let  KG  be a group ring and let f be a mapping G -> G, such that f^2 is the
   identity  mapping on G. Then the involution of KG induced by f is defined by
   alpha_1  * g_1 + alpha_2 * g_2 + cdots + alpha_k * g_k -> alpha_1 * f(g_1) +
   alpha_2  *  f(g_2) + cdots + alpha_k * f(g_k). This method returns the image
-  of [22m[34mx[0m under the involution of KG with respect to [22m[34mf[0m.
+  of [3Xx[0m under the involution of KG with respect to [3Xf[0m.
   
-  In  the  second  form  the  function  returns  the  result  of the so-called
-  classical involution, which is the involution induced by the map x -> x^-1.
+  If  the  second  argument is omitted, the function returns the result of the
+  so-called classical involution, which is the involution induced by the map x
+  -> x^-1.
   
-  [22m[35m---------------------------  Example  ----------------------------[0m
-    [22m[35m[0m
-    [22m[35mgap> x;[0m
-    [22m[35m(Z(2)^0)*<identity> of ...+(Z(2)^0)*f1+(Z(2)^0)*f2+(Z(2)^0)*f1*f2[0m
-    [22m[35mgap> Involution( x );[0m
-    [22m[35m(Z(2)^0)*<identity> of ...+(Z(2)^0)*f1+(Z(2)^0)*f1*f2+(Z(2)^0)*f2*f3*f4[0m
-    [22m[35m# let's check the action of involution on elements from the group G[0m
-    [22m[35mgap> l := List( MinimalGeneratingSet( G ), g -> g^Embedding( G, KG ) );[0m
-    [22m[35m[ (Z(2)^0)*f1, (Z(2)^0)*f2 ][0m
-    [22m[35mgap> List( l, Involution );[0m
-    [22m[35m[ (Z(2)^0)*f1, (Z(2)^0)*f2*f3*f4 ][0m
-    [22m[35mgap> List( l, g -> g^-1 );[0m
-    [22m[35m[ (Z(2)^0)*f1, (Z(2)^0)*f2*f3*f4 ]     [0m
-    [22m[35m[0m
-  [22m[35m------------------------------------------------------------------[0m
+  [4X---------------------------  Example  ----------------------------[0X
+    [4X[0X
+    [4Xgap> x;[0X
+    [4X(Z(2)^0)*<identity> of ...+(Z(2)^0)*f1+(Z(2)^0)*f2+(Z(2)^0)*f1*f2[0X
+    [4Xgap> Involution( x );[0X
+    [4X(Z(2)^0)*<identity> of ...+(Z(2)^0)*f1+(Z(2)^0)*f1*f2+(Z(2)^0)*f2*f3*f4[0X
+    [4X# let's check the action of involution on elements from the group G[0X
+    [4Xgap> l := List( MinimalGeneratingSet( G ), g -> g^Embedding( G, KG ) );[0X
+    [4X[ (Z(2)^0)*f1, (Z(2)^0)*f2 ][0X
+    [4Xgap> List( l, Involution );[0X
+    [4X[ (Z(2)^0)*f1, (Z(2)^0)*f2*f3*f4 ][0X
+    [4Xgap> List( l, g -> g^-1 );[0X
+    [4X[ (Z(2)^0)*f1, (Z(2)^0)*f2*f3*f4 ]     [0X
+    [4X[0X
+  [4X------------------------------------------------------------------[0X
   
-  [1m[4m[31m4.2-8 IsSymmetric[0m
+  [1X4.2-8 IsSymmetric[0m
   
-  [1m[34m> IsSymmetric( [0m[22m[34mx[0m[1m[34m ) ________________________________________________[0mattribute
+  [2X> IsSymmetric( [0X[3Xx[0X[2X ) ________________________________________________[0Xattribute
   
-  An  element  of  a  group  ring is called [22m[36msymmetric[0m if it is fixed under the
+  An  element  of  a  group  ring is called [13Xsymmetric[0m if it is fixed under the
   classical involution. This property is checked here.
   
-  [22m[35m---------------------------  Example  ----------------------------[0m
-    [22m[35m[0m
-    [22m[35mgap> IsSymmetric( x );[0m
-    [22m[35mfalse[0m
-    [22m[35mgap> IsSymmetric( x * Involution( x ) );[0m
-    [22m[35mtrue     [0m
-    [22m[35m[0m
-  [22m[35m------------------------------------------------------------------[0m
+  [4X---------------------------  Example  ----------------------------[0X
+    [4X[0X
+    [4Xgap> IsSymmetric( x );[0X
+    [4Xfalse[0X
+    [4Xgap> IsSymmetric( x * Involution( x ) );[0X
+    [4Xtrue     [0X
+    [4X[0X
+  [4X------------------------------------------------------------------[0X
   
-  [1m[4m[31m4.2-9 IsUnitary[0m
+  [1X4.2-9 IsUnitary[0m
   
-  [1m[34m> IsUnitary( [0m[22m[34mx[0m[1m[34m ) __________________________________________________[0mattribute
+  [2X> IsUnitary( [0X[3Xx[0X[2X ) __________________________________________________[0Xattribute
   
   A unit of a group ring is called unitary if the classical involution inverts
   it. This property is checked here.
   
-  [22m[35m---------------------------  Example  ----------------------------[0m
-    [22m[35m[0m
-    [22m[35mgap> IsUnitary(x);[0m
-    [22m[35mfalse[0m
-    [22m[35m# let's check that elements of the group G are unitary[0m
-    [22m[35mgap> l:=List(MinimalGeneratingSet(G),g -> g^Embedding(G,KG));[0m
-    [22m[35m[ (Z(2)^0)*f1, (Z(2)^0)*f2 ][0m
-    [22m[35mgap> List(l,IsUnitary);[0m
-    [22m[35m[ true, true ]   [0m
-    [22m[35m[0m
-  [22m[35m------------------------------------------------------------------[0m
+  [4X---------------------------  Example  ----------------------------[0X
+    [4X[0X
+    [4Xgap> IsUnitary(x);[0X
+    [4Xfalse[0X
+    [4X# let's check that elements of the group G are unitary[0X
+    [4Xgap> l:=List(MinimalGeneratingSet(G),g -> g^Embedding(G,KG));[0X
+    [4X[ (Z(2)^0)*f1, (Z(2)^0)*f2 ][0X
+    [4Xgap> List(l,IsUnitary);[0X
+    [4X[ true, true ]   [0X
+    [4X[0X
+  [4X------------------------------------------------------------------[0X
   
-  [1m[4m[31m4.2-10 IsUnit[0m
+  [1X4.2-10 IsUnit[0m
   
-  [1m[34m> IsUnit( [0m[22m[34mKG, x[0m[1m[34m ) ____________________________________________________[0mmethod
-  [1m[34m> IsUnit( [0m[22m[34mx[0m[1m[34m ) ________________________________________________________[0mmethod
+  [2X> IsUnit( [0X[3X[KG, ]x[0X[2X ) __________________________________________________[0Xmethod
   
-  This  method  improves  a  standard  [1mGAP[0m  functionality  for  modular  group
+  This  method  improves  a  standard  [5XGAP[0m  functionality  for  modular  group
   algebras.
   
-  In  the  first form the method returns [22m[32mtrue[0m if [22m[34mx[0m is an invertible element of
-  the  modular  group  algebra  [22m[34mKG[0m  and [22m[32mfalse[0m otherwise. This can be done very
-  quickly by checking whether the augmentation of the element [22m[34mx[0m is non-zero.
+  In  the  two-argument  version the method returns [9Xtrue[0m if [3Xx[0m is an invertible
+  element  of  the  modular  group algebra [3XKG[0m and [9Xfalse[0m otherwise. This can be
+  done  very  quickly by checking whether the augmentation of the element [3Xx[0m is
+  non-zero.
   
-  In  the  second  form  [1mLAGUNA[0m  first constructs the group H generated by the
-  support  of  [22m[34mx[0m,  and, if this group is a finite p-group, then checks whether
-  the  coefficients  of  [22m[34mx[0m belong to a field F of characteristic p. If this is
-  the  case, then [22m[32mIsUnit( FH, x )[0m is called; otherwise, standard [1mGAP[0m method is
-  used.
+  If  the  first  argument  is  omitted,  then  [5XLAGUNA[0m  constructs the group H
+  generated  by the support of [3Xx[0m, and, if this group is a finite p-group, then
+  checks  whether  the coefficients of [3Xx[0m belong to a field F of characteristic
+  p.  If this is the case, then [10XIsUnit( FH, x )[0m is called; otherwise, standard
+  [5XGAP[0m method is used.
   
-  [22m[35m---------------------------  Example  ----------------------------[0m
-    [22m[35m[0m
-    [22m[35mgap> x;[0m
-    [22m[35m(Z(2)^0)*<identity> of ...+(Z(2)^0)*f1+(Z(2)^0)*f2+(Z(2)^0)*f1*f2[0m
-    [22m[35mgap> IsUnit( KG, x ); # clearly, is not a unit due to augmentation zero[0m
-    [22m[35mfalse[0m
-    [22m[35mgap> y := One( KG ) + x; # this should give a unit[0m
-    [22m[35m(Z(2)^0)*f1+(Z(2)^0)*f2+(Z(2)^0)*f1*f2[0m
-    [22m[35mgap> IsUnit( KG, y );[0m
-    [22m[35mtrue       [0m
-    [22m[35m[0m
-  [22m[35m------------------------------------------------------------------[0m
+  [4X---------------------------  Example  ----------------------------[0X
+    [4X[0X
+    [4Xgap> x;[0X
+    [4X(Z(2)^0)*<identity> of ...+(Z(2)^0)*f1+(Z(2)^0)*f2+(Z(2)^0)*f1*f2[0X
+    [4Xgap> IsUnit( KG, x ); # clearly, is not a unit due to augmentation zero[0X
+    [4Xfalse[0X
+    [4Xgap> y := One( KG ) + x; # this should give a unit[0X
+    [4X(Z(2)^0)*f1+(Z(2)^0)*f2+(Z(2)^0)*f1*f2[0X
+    [4Xgap> IsUnit( KG, y );[0X
+    [4Xtrue       [0X
+    [4X[0X
+  [4X------------------------------------------------------------------[0X
   
-  [1m[4m[31m4.2-11 InverseOp[0m
+  [1X4.2-11 InverseOp[0m
   
-  [1m[34m> InverseOp( [0m[22m[34mx[0m[1m[34m ) _____________________________________________________[0mmethod
-  [1mReturns:[0m  the inverse element of an element of a group ring
+  [2X> InverseOp( [0X[3Xx[0X[2X ) _____________________________________________________[0Xmethod
+  [6XReturns:[0X  the inverse element of an element of a group ring
   
-  This  method  improves  a  standard  [1mGAP[0m  functionality  for  modular  group
+  This  method  improves  a  standard  [5XGAP[0m  functionality  for  modular  group
   algebras. It calculates the inverse of a group algebra element. The user can
-  also invoke this function by typing [22m[32m x^-1 [0m.
+  also invoke this function by typing [10X x^-1 [0m.
   
-  [22m[35m---------------------------  Example  ----------------------------[0m
-    [22m[35m[0m
-    [22m[35mgap> y;[0m
-    [22m[35m(Z(2)^0)*f1+(Z(2)^0)*f2+(Z(2)^0)*f1*f2[0m
-    [22m[35mgap> y^-1;[0m
-    [22m[35m(Z(2)^0)*f1+(Z(2)^0)*f2+(Z(2)^0)*f3+(Z(2)^0)*f4+(Z(2)^0)*f1*f2+(Z(2)^[0m
-    [22m[35m0)*f1*f3+(Z(2)^0)*f1*f4+(Z(2)^0)*f2*f4+(Z(2)^0)*f1*f2*f4+(Z(2)^0)*f2*f3*f4+([0m
-    [22m[35mZ(2)^0)*f1*f2*f3*f4[0m
-    [22m[35mgap> y * y^-1;[0m
-    [22m[35m(Z(2)^0)*<identity> of ...    [0m
-    [22m[35m[0m
-  [22m[35m------------------------------------------------------------------[0m
+  [4X---------------------------  Example  ----------------------------[0X
+    [4X[0X
+    [4Xgap> y;[0X
+    [4X(Z(2)^0)*f1+(Z(2)^0)*f2+(Z(2)^0)*f1*f2[0X
+    [4Xgap> y^-1;[0X
+    [4X(Z(2)^0)*f1+(Z(2)^0)*f2+(Z(2)^0)*f3+(Z(2)^0)*f4+(Z(2)^0)*f1*f2+(Z(2)^[0X
+    [4X0)*f1*f3+(Z(2)^0)*f1*f4+(Z(2)^0)*f2*f4+(Z(2)^0)*f1*f2*f4+(Z(2)^0)*f2*f3*f4+([0X
+    [4XZ(2)^0)*f1*f2*f3*f4[0X
+    [4Xgap> y * y^-1;[0X
+    [4X(Z(2)^0)*<identity> of ...    [0X
+    [4X[0X
+  [4X------------------------------------------------------------------[0X
   
-  [1m[4m[31m4.2-12 BicyclicUnitOfType1[0m
+  [1X4.2-12 BicyclicUnitOfType1[0m
   
-  [1m[34m> BicyclicUnitOfType1( [0m[22m[34mKG, a, g[0m[1m[34m ) _________________________________[0moperation
-  [1m[34m> BicyclicUnitOfType1( [0m[22m[34ma, g[0m[1m[34m ) _____________________________________[0moperation
-  [1m[34m> BicyclicUnitOfType2( [0m[22m[34mKG, a, g[0m[1m[34m ) _________________________________[0moperation
-  [1m[34m> BicyclicUnitOfType2( [0m[22m[34ma, g[0m[1m[34m ) _____________________________________[0moperation
-  [1mReturns:[0m  an element of a group ring
+  [2X> BicyclicUnitOfType1( [0X[3X[KG, ]a, g[0X[2X ) _______________________________[0Xoperation
+  [2X> BicyclicUnitOfType2( [0X[3X[KG, ]a, g[0X[2X ) _______________________________[0Xoperation
+  [6XReturns:[0X  an element of a group ring
   
   let  a  be  an element of order n of a group G. We put alpha = 1 + a + a^2 +
   ...  +a^n-1. Then (a-1)*g*alpha and alpha*g*(a-1) are nilpotent of index two
   for  any  element  g of the group G not containing in the normalizer N_G(< a
   >),  and the units u_a,g = 1 + (a-1) * g * alpha and v_a,g = 1 + alpha * g *
-  (a-1)  are called bicyclic units. Note that u_a,g and v_a,g may coincide for
-  some  a  and  g,  but  in  general this does not hold. In the three-argument
-  version  these  methods  construct bicyclic units of both types when [22m[34ma[0m and [22m[34mg[0m
-  are  elements of the underlying group G of a group ring [22m[34mKG[0m. The two-argument
-  version  accepts images of elements [22m[34ma[0m and [22m[34mg[0m from the underlying group in the
-  group ring KG obtained using the mapping [22m[32mEmbedding( G, KG )[0m. Note that it is
-  not  actually checked that g is not contained in N_G(< a >), because this is
-  verified in [1m[34mBicyclicUnitGroup[0m ([1m4.4-13[0m).
+  (a-1)  are  called [13Xbicyclic units[0m of the 1st and 2nd type respectively. Note
+  that u_a,g and v_a,g may coincide for some a and g, but in general this does
+  not  hold.  In  the  three-argument version these methods construct bicyclic
+  units of both types when [3Xa[0m and [3Xg[0m are elements of the underlying group G of a
+  group  ring  [3XKG[0m. The two-argument version accepts images of elements [3Xa[0m and [3Xg[0m
+  from  the  underlying  group in the group ring KG obtained using the mapping
+  [10XEmbedding(  G,  KG  )[0m.  Note  that  it is not actually checked that g is not
+  contained  in  N_G(<  a  >),  because  this is verified in [2XBicyclicUnitGroup[0m
+  ([14X4.4-13[0m).
   
-  [22m[35m---------------------------  Example  ----------------------------[0m
-    [22m[35m[0m
-    [22m[35mgap> G := SmallGroup(32,6);[0m
-    [22m[35m<pc group of size 32 with 5 generators>[0m
-    [22m[35mgap> KG := GroupRing( GF(2), G );[0m
-    [22m[35m<algebra-with-one over GF(2), with 5 generators>[0m
-    [22m[35mgap> g := MinimalGeneratingSet( G );[0m
-    [22m[35m[ f1, f2 ][0m
-    [22m[35mgap> g[1] in Normalizer( G, Subgroup( G, [g[2]] ) );[0m
-    [22m[35mfalse[0m
-    [22m[35mgap> g[2] in Normalizer( G, Subgroup( G, [g[1]] ) );[0m
-    [22m[35mfalse[0m
-    [22m[35mgap> g := List( g, x -> x^Embedding( G, KG ) );[0m
-    [22m[35m[ (Z(2)^0)*f1, (Z(2)^0)*f2 ][0m
-    [22m[35mgap> BicyclicUnitOfType1(g[1],g[2]) = BicyclicUnitOfType2(g[1],g[2]);[0m
-    [22m[35mfalse                                                                       [0m
-    [22m[35m[0m
-  [22m[35m------------------------------------------------------------------[0m
+  [4X---------------------------  Example  ----------------------------[0X
+    [4X[0X
+    [4Xgap> G := SmallGroup(32,6);[0X
+    [4X<pc group of size 32 with 5 generators>[0X
+    [4Xgap> KG := GroupRing( GF(2), G );[0X
+    [4X<algebra-with-one over GF(2), with 5 generators>[0X
+    [4Xgap> g := MinimalGeneratingSet( G );[0X
+    [4X[ f1, f2 ][0X
+    [4Xgap> g[1] in Normalizer( G, Subgroup( G, [g[2]] ) );[0X
+    [4Xfalse[0X
+    [4Xgap> g[2] in Normalizer( G, Subgroup( G, [g[1]] ) );[0X
+    [4Xfalse[0X
+    [4Xgap> g := List( g, x -> x^Embedding( G, KG ) );[0X
+    [4X[ (Z(2)^0)*f1, (Z(2)^0)*f2 ][0X
+    [4Xgap> BicyclicUnitOfType1(g[1],g[2]) = BicyclicUnitOfType2(g[1],g[2]);[0X
+    [4Xfalse                                                                       [0X
+    [4X[0X
+  [4X------------------------------------------------------------------[0X
+  
+  [1X4.2-13 BassCyclicUnit[0m
+  
+  [2X> BassCyclicUnit( [0X[3X[ZG, ]g, k[0X[2X ) ____________________________________[0Xoperation
+  [6XReturns:[0X  an element of a group ring
+  
+  Let  [3Xg[0m be an element of order n of the group G, and 1 < [3Xk[0m < n be such that [3Xk[0m
+  and  n  are  coprime,  then  [3Xk[0m^Phi(n)  is  congruent to 1 modulo n. The unit
+  b(g,k)= ( \sum_{j=0}^{k-1} g^j )^Phi(n) + ( (1-k^Phi(n))/n ) * Hat(g), where
+  Hat(g)  =  g + g^2 + ... + g^n, is called a [13XBass cyclic unit[0m of the integral
+  group ring [3XZG[0m.
+  
+  The  three-argument  version  constructs the Bass cyclic unit b(g,k) for the
+  element [3Xg[0m from the underlying group G of the group ring [3XZG[0m. The two-argument
+  version  accepts  the  image  of  [3Xg[0m  in the group ring ZG obtained using the
+  mapping [10XEmbedding( G, KG )[0m.
+  
+  Remark  that  when G is a finite nilpotent group, the group generated by the
+  Bass  cyclic  units  contain a subgroup of finite index in the centre of the
+  unit group of [3XZG[0m [JPS96].
+  
+  [4X---------------------------  Example  ----------------------------[0X
+    [4X[0X
+    [4Xgap> S := SymmetricGroup( 5 );;[0X
+    [4Xgap> ZS := GroupRing( Integers, S );;[0X
+    [4Xgap> f := Embedding( S, ZS );;[0X
+    [4Xgap> BassCyclicUnit( ZS, (1,3,2,5,4) , 3 );[0X
+    [4X(1)*()+(-2)*(1,2,4,3,5)+(-2)*(1,3,2,5,4)+(3)*(1,4,5,2,3)+(1)*(1,5,3,4,2)[0X
+    [4Xgap> BassCyclicUnit( (1,3,2,5,4)^f, 3 ); [0X
+    [4X(1)*()+(-2)*(1,2,4,3,5)+(-2)*(1,3,2,5,4)+(3)*(1,4,5,2,3)+(1)*(1,5,3,4,2)[0X
+    [4X[0X
+  [4X------------------------------------------------------------------[0X
   
   
-  [1m[4m[31m4.3 Important attributes of group algebras[0m
+  [1X4.3 Important attributes of group algebras[0X
   
-  [1m[4m[31m4.3-1 AugmentationHomomorphism[0m
+  [1X4.3-1 AugmentationHomomorphism[0m
   
-  [1m[34m> AugmentationHomomorphism( [0m[22m[34mKG[0m[1m[34m ) __________________________________[0mattribute
-  [1mReturns:[0m  a homomorphism from a group ring to the underlying ring
+  [2X> AugmentationHomomorphism( [0X[3XKG[0X[2X ) __________________________________[0Xattribute
+  [6XReturns:[0X  a homomorphism from a group ring to the underlying ring
   
   The  mapping which maps an element of a group ring KG to its augmentation is
-  a  homomorphism  from  KG  onto  the  ring K; see [1m[34mAugmentation[0m ([1m4.2-5[0m). This
-  attribute stores this homomorphism for the group ring [22m[34mKG[0m.
+  a  homomorphism  from  KG  onto  the  ring K; see [2XAugmentation[0m ([14X4.2-5[0m). This
+  attribute stores this homomorphism for the group ring [3XKG[0m.
   
   Please  note  that  for  calculation  of the augmentation of an element of a
-  group  ring  the  user  is  strongly recommended to use [1m[34mAugmentation[0m ([1m4.2-5[0m)
-  which works much faster than [22m[32mAugmentationHomomorphism[0m.
+  group  ring  the  user  is  strongly recommended to use [2XAugmentation[0m ([14X4.2-5[0m)
+  which works much faster than [10XAugmentationHomomorphism[0m.
   
-  [22m[35m---------------------------  Example  ----------------------------[0m
-    [22m[35m[0m
-    [22m[35mgap> F := GF( 2 ); G := SymmetricGroup( 3 ); FG := GroupRing( F, G );[0m
-    [22m[35mGF(2)[0m
-    [22m[35mSym( [ 1 .. 3 ] )[0m
-    [22m[35m<algebra-with-one over GF(2), with 2 generators>[0m
-    [22m[35mgap> e := Embedding( G,FG );[0m
-    [22m[35m<mapping: SymmetricGroup( [ 1 .. 3 ] ) -> AlgebraWithOne( GF(2), ... ) >[0m
-    [22m[35mgap> x := (1,2)^e; y := (1,3)^e;[0m
-    [22m[35m(Z(2)^0)*(1,2)[0m
-    [22m[35m(Z(2)^0)*(1,3)[0m
-    [22m[35mgap> a := AugmentationHomomorphism( FG );[0m
-    [22m[35m[ (Z(2)^0)*(1,2,3), (Z(2)^0)*(1,2) ] -> [ Z(2)^0, Z(2)^0 ][0m
-    [22m[35mgap> x^a; y^a; ( x + y )^a; # this is slower[0m
-    [22m[35mZ(2)^0[0m
-    [22m[35mZ(2)^0[0m
-    [22m[35m0*Z(2)   [0m
-    [22m[35mgap> Augmentation(x); Augmentation(y); Augmentation( x + y ); # this is faster[0m
-    [22m[35mZ(2)^0[0m
-    [22m[35mZ(2)^0[0m
-    [22m[35m0*Z(2)   [0m
-    [22m[35m[0m
-  [22m[35m------------------------------------------------------------------[0m
+  [4X---------------------------  Example  ----------------------------[0X
+    [4X[0X
+    [4Xgap> F := GF( 2 ); G := SymmetricGroup( 3 ); FG := GroupRing( F, G );[0X
+    [4XGF(2)[0X
+    [4XSym( [ 1 .. 3 ] )[0X
+    [4X<algebra-with-one over GF(2), with 2 generators>[0X
+    [4Xgap> e := Embedding( G,FG );[0X
+    [4X<mapping: SymmetricGroup( [ 1 .. 3 ] ) -> AlgebraWithOne( GF(2), ... ) >[0X
+    [4Xgap> x := (1,2)^e; y := (1,3)^e;[0X
+    [4X(Z(2)^0)*(1,2)[0X
+    [4X(Z(2)^0)*(1,3)[0X
+    [4Xgap> a := AugmentationHomomorphism( FG );[0X
+    [4X[ (Z(2)^0)*(1,2,3), (Z(2)^0)*(1,2) ] -> [ Z(2)^0, Z(2)^0 ][0X
+    [4Xgap> x^a; y^a; ( x + y )^a; # this is slower[0X
+    [4XZ(2)^0[0X
+    [4XZ(2)^0[0X
+    [4X0*Z(2)   [0X
+    [4Xgap> Augmentation(x); Augmentation(y); Augmentation( x + y ); # this is faster[0X
+    [4XZ(2)^0[0X
+    [4XZ(2)^0[0X
+    [4X0*Z(2)   [0X
+    [4X[0X
+  [4X------------------------------------------------------------------[0X
   
-  [1m[4m[31m4.3-2 AugmentationIdeal[0m
+  [1X4.3-2 AugmentationIdeal[0m
   
-  [1m[34m> AugmentationIdeal( [0m[22m[34mKG[0m[1m[34m ) _________________________________________[0mattribute
-  [1mReturns:[0m  an ideal of a group ring
+  [2X> AugmentationIdeal( [0X[3XKG[0X[2X ) _________________________________________[0Xattribute
+  [6XReturns:[0X  an ideal of a group ring
   
   If  KG  is  a  group ring, then its augmentation ideal A is generated by all
   elements  of  the  form  g-1,  where  g in G \ { 1 }. The augmentation ideal
-  consists  of  all  elements  of  FG  with  augmentation  0; see [1m[34mAugmentation[0m
-  ([1m4.2-5[0m).  This method changes a standard [1mGAP[0m functionality for modular group
-  algebras and returns the augmentation ideal of a modular group algebra [22m[34mKG[0m.
+  consists  of  all  elements  of  FG  with  augmentation  0; see [2XAugmentation[0m
+  ([14X4.2-5[0m).  This method changes a standard [5XGAP[0m functionality for modular group
+  algebras and returns the augmentation ideal of a modular group algebra [3XKG[0m.
   
-  [22m[35m---------------------------  Example  ----------------------------[0m
-    [22m[35m[0m
-    [22m[35mgap> KG := GroupRing( GF( 2 ), DihedralGroup( 16 ) );[0m
-    [22m[35m<algebra-with-one over GF(2), with 4 generators>[0m
-    [22m[35mgap> AugmentationIdeal( KG );[0m
-    [22m[35m<two-sided ideal in <algebra-with-one over GF(2), with 4 generators>,[0m
-    [22m[35m  (dimension 15)>[0m
-    [22m[35m[0m
-  [22m[35m------------------------------------------------------------------[0m
+  [4X---------------------------  Example  ----------------------------[0X
+    [4X[0X
+    [4Xgap> KG := GroupRing( GF( 2 ), DihedralGroup( 16 ) );[0X
+    [4X<algebra-with-one over GF(2), with 4 generators>[0X
+    [4Xgap> AugmentationIdeal( KG );[0X
+    [4X<two-sided ideal in <algebra-with-one over GF(2), with 4 generators>,[0X
+    [4X  (dimension 15)>[0X
+    [4X[0X
+  [4X------------------------------------------------------------------[0X
   
-  [1m[4m[31m4.3-3 RadicalOfAlgebra[0m
+  [1X4.3-3 RadicalOfAlgebra[0m
   
-  [1m[34m> RadicalOfAlgebra( [0m[22m[34mKG[0m[1m[34m ) __________________________________________[0mattribute
-  [1mReturns:[0m  an ideal of a group algebra
+  [2X> RadicalOfAlgebra( [0X[3XKG[0X[2X ) __________________________________________[0Xattribute
+  [6XReturns:[0X  an ideal of a group algebra
   
-  This method improves a standard [1mGAP[0m functionality for modular group algebras
+  This method improves a standard [5XGAP[0m functionality for modular group algebras
   of  finite  p-groups.  Since  in  this case the radical of the group algebra
   coincides  with  its  augmentation  ideal,  this method simply checks if the
-  algebra  [22m[34mKG[0m  is  a  p-modular  group  algebra,  and,  if yes, it returns the
-  augmentation ideal; otherwise, the standard [1mGAP[0m method will be used.
+  algebra  [3XKG[0m  is  a  p-modular  group  algebra,  and,  if yes, it returns the
+  augmentation ideal; otherwise, the standard [5XGAP[0m method will be used.
   
-  [22m[35m---------------------------  Example  ----------------------------[0m
-    [22m[35m[0m
-    [22m[35mgap> KG := GroupRing( GF( 2 ), DihedralGroup( 16 ) );[0m
-    [22m[35m<algebra-with-one over GF(2), with 4 generators>[0m
-    [22m[35mgap> RadicalOfAlgebra( KG );[0m
-    [22m[35m<two-sided ideal in <algebra-with-one over GF(2), with 4 generators>,[0m
-    [22m[35m  (dimension 15)>[0m
-    [22m[35mgap> RadicalOfAlgebra( KG ) = AugmentationIdeal( KG );[0m
-    [22m[35mtrue     [0m
-    [22m[35m[0m
-  [22m[35m------------------------------------------------------------------[0m
+  [4X---------------------------  Example  ----------------------------[0X
+    [4X[0X
+    [4Xgap> KG := GroupRing( GF( 2 ), DihedralGroup( 16 ) );[0X
+    [4X<algebra-with-one over GF(2), with 4 generators>[0X
+    [4Xgap> RadicalOfAlgebra( KG );[0X
+    [4X<two-sided ideal in <algebra-with-one over GF(2), with 4 generators>,[0X
+    [4X  (dimension 15)>[0X
+    [4Xgap> RadicalOfAlgebra( KG ) = AugmentationIdeal( KG );[0X
+    [4Xtrue     [0X
+    [4X[0X
+  [4X------------------------------------------------------------------[0X
   
-  [1m[4m[31m4.3-4 WeightedBasis[0m
+  [1X4.3-4 WeightedBasis[0m
   
-  [1m[34m> WeightedBasis( [0m[22m[34mKG[0m[1m[34m ) _____________________________________________[0mattribute
-  [1mReturns:[0m  a  record  of  two  components:  weighted basis elements and their
+  [2X> WeightedBasis( [0X[3XKG[0X[2X ) _____________________________________________[0Xattribute
+  [6XReturns:[0X  a  record  of  two  components:  weighted basis elements and their
             weights
   
-  The argument [22m[34mKG[0m must be a p-modular group algebra.
+  The argument [3XKG[0m must be a p-modular group algebra.
   
   For a group algebra KG, let A denote the augmentation ideal, and assume that
   c  is  the  smallest  number such that A^c=0. Then a weighted basis of KG is
@@ -507,1200 +538,1188 @@
   that  b_i  belongs  to  w-th  power of A but does not belong to its (w+1)-th
   power.
   
-  Note  that  this  function  actually constructs a basis for the [22m[36maugmentation
-  ideal[0m  of  [22m[34mKG[0m  and  not  for  [22m[34mKG[0m  itself.  Since  the augmentation ideal has
-  co-dimension 1 in [22m[32mKG[0m, a basis for [22m[32mKG[0m can be easily obtained by adjoining the
+  Note  that  this  function  actually constructs a basis for the [13Xaugmentation
+  ideal[0m  of  [3XKG[0m  and  not  for  [3XKG[0m  itself.  Since  the augmentation ideal has
+  co-dimension 1 in [10XKG[0m, a basis for [10XKG[0m can be easily obtained by adjoining the
   identity element of the group.
   
   The  method  returns a record whose basis entry is the basis and the weights
   entry  is  a  list  of  the corresponding weights the of basis elements. See
-  Section [1m3.3[0m for more details.
+  Section [14X3.3[0m for more details.
   
-  [22m[35m---------------------------  Example  ----------------------------[0m
-    [22m[35m[0m
-    [22m[35mgap> KG := GroupRing( GF( 2 ), ElementaryAbelianGroup( 4 ) );[0m
-    [22m[35m<algebra-with-one over GF(2), with 2 generators>[0m
-    [22m[35mgap> WeightedBasis( KG );[0m
-    [22m[35mrec([0m
-    [22m[35m  weightedBasis := [ (Z(2)^0)*<identity> of ...+(Z(2)^0)*f2, (Z(2)^0)*<identity>[0m
-    [22m[35m        of ...+(Z(2)^0)*f1, (Z(2)^0)*<identity> of ...+(Z(2)^0)*f1+(Z(2)^0)*f2+([0m
-    [22m[35m        Z(2)^0)*f1*f2 ], weights := [ 1, 1, 2 ] )[0m
-    [22m[35m[0m
-  [22m[35m------------------------------------------------------------------[0m
+  [4X---------------------------  Example  ----------------------------[0X
+    [4X[0X
+    [4Xgap> KG := GroupRing( GF( 2 ), ElementaryAbelianGroup( 4 ) );[0X
+    [4X<algebra-with-one over GF(2), with 2 generators>[0X
+    [4Xgap> WeightedBasis( KG );[0X
+    [4Xrec([0X
+    [4X  weightedBasis := [ (Z(2)^0)*<identity> of ...+(Z(2)^0)*f2, (Z(2)^0)*<identity>[0X
+    [4X        of ...+(Z(2)^0)*f1, (Z(2)^0)*<identity> of ...+(Z(2)^0)*f1+(Z(2)^0)*f2+([0X
+    [4X        Z(2)^0)*f1*f2 ], weights := [ 1, 1, 2 ] )[0X
+    [4X[0X
+  [4X------------------------------------------------------------------[0X
   
-  [1m[4m[31m4.3-5 AugmentationIdealPowerSeries[0m
+  [1X4.3-5 AugmentationIdealPowerSeries[0m
   
-  [1m[34m> AugmentationIdealPowerSeries( [0m[22m[34mKG[0m[1m[34m ) ______________________________[0mattribute
-  [1mReturns:[0m  a list of ideals of a group algebra
+  [2X> AugmentationIdealPowerSeries( [0X[3XKG[0X[2X ) ______________________________[0Xattribute
+  [6XReturns:[0X  a list of ideals of a group algebra
   
-  The  argument  [22m[34mKG[0m  is  a  p-modular group algebra. The method returns a list
-  whose  elements  are  the  terms of the augmentation ideal filtration of [22m[34mKG[0m,
-  that   is  [22m[32mAugmentationIdealPowerSeries(A)[i][0m  is  the  i-th  power  of  the
-  augmentation ideal of [22m[34mKG[0m.
+  The  argument  [3XKG[0m  is  a  p-modular group algebra. The method returns a list
+  whose  elements  are  the  terms of the augmentation ideal filtration of [3XKG[0m,
+  that   is  [10XAugmentationIdealPowerSeries(A)[i][0m  is  the  i-th  power  of  the
+  augmentation ideal of [3XKG[0m.
   
-  [22m[35m---------------------------  Example  ----------------------------[0m
-    [22m[35m[0m
-    [22m[35mgap> KG := GroupRing( GF( 2 ), DihedralGroup( 16 ) );[0m
-    [22m[35m<algebra-with-one over GF(2), with 4 generators>[0m
-    [22m[35mgap> AugmentationIdealPowerSeries( KG );[0m
-    [22m[35m[ <algebra of dimension 15 over GF(2)>, <algebra of dimension 13 over GF(2)>,[0m
-    [22m[35m  <algebra of dimension 11 over GF(2)>, <algebra of dimension 9 over GF(2)>,[0m
-    [22m[35m  <algebra of dimension 7 over GF(2)>, <algebra of dimension 5 over GF(2)>,[0m
-    [22m[35m  <algebra of dimension 3 over GF(2)>, <algebra of dimension 1 over GF(2)>,[0m
-    [22m[35m  <algebra over GF(2)> ][0m
-    [22m[35mgap> Length(last);[0m
-    [22m[35m9      [0m
-    [22m[35m[0m
-  [22m[35m------------------------------------------------------------------[0m
+  [4X---------------------------  Example  ----------------------------[0X
+    [4X[0X
+    [4Xgap> KG := GroupRing( GF( 2 ), DihedralGroup( 16 ) );[0X
+    [4X<algebra-with-one over GF(2), with 4 generators>[0X
+    [4Xgap> AugmentationIdealPowerSeries( KG );[0X
+    [4X[ <algebra of dimension 15 over GF(2)>, <algebra of dimension 13 over GF(2)>,[0X
+    [4X  <algebra of dimension 11 over GF(2)>, <algebra of dimension 9 over GF(2)>,[0X
+    [4X  <algebra of dimension 7 over GF(2)>, <algebra of dimension 5 over GF(2)>,[0X
+    [4X  <algebra of dimension 3 over GF(2)>, <algebra of dimension 1 over GF(2)>,[0X
+    [4X  <algebra over GF(2)> ][0X
+    [4Xgap> Length(last);[0X
+    [4X9      [0X
+    [4X[0X
+  [4X------------------------------------------------------------------[0X
   
-  [1m[4m[31m4.3-6 AugmentationIdealNilpotencyIndex[0m
+  [1X4.3-6 AugmentationIdealNilpotencyIndex[0m
   
-  [1m[34m> AugmentationIdealNilpotencyIndex( [0m[22m[34mKG[0m[1m[34m ) __________________________[0mattribute
+  [2X> AugmentationIdealNilpotencyIndex( [0X[3XKG[0X[2X ) __________________________[0Xattribute
   
-  For  the p-modular group algebra [22m[34mKG[0m the method returns the smallest number n
-  such  that  A^n=0, where A is the augmentation ideal of [22m[34mKG[0m. This can be done
+  For  the p-modular group algebra [3XKG[0m the method returns the smallest number n
+  such  that  A^n=0, where A is the augmentation ideal of [3XKG[0m. This can be done
   using  Jenning's  theory  without the explicit calculations of the powers of
   the augmentation ideal.
   
-  [22m[35m---------------------------  Example  ----------------------------[0m
-    [22m[35m[0m
-    [22m[35mgap> KG := GroupRing( GF( 2 ), DihedralGroup( 16 ) );[0m
-    [22m[35m<algebra-with-one over GF(2), with 4 generators>[0m
-    [22m[35mgap> AugmentationIdealNilpotencyIndex( KG );[0m
-    [22m[35m9      [0m
-    [22m[35m[0m
-  [22m[35m------------------------------------------------------------------[0m
+  [4X---------------------------  Example  ----------------------------[0X
+    [4X[0X
+    [4Xgap> KG := GroupRing( GF( 2 ), DihedralGroup( 16 ) );[0X
+    [4X<algebra-with-one over GF(2), with 4 generators>[0X
+    [4Xgap> AugmentationIdealNilpotencyIndex( KG );[0X
+    [4X9      [0X
+    [4X[0X
+  [4X------------------------------------------------------------------[0X
   
-  [1m[4m[31m4.3-7 AugmentationIdealOfDerivedSubgroupNilpotencyIndex[0m
+  [1X4.3-7 AugmentationIdealOfDerivedSubgroupNilpotencyIndex[0m
   
-  [1m[34m> AugmentationIdealOfDerivedSubgroupNilpotencyIndex( [0m[22m[34mKG[0m[1m[34m ) _________[0mattribute
+  [2X> AugmentationIdealOfDerivedSubgroupNilpotencyIndex( [0X[3XKG[0X[2X ) _________[0Xattribute
   
-  For  the  p-modular  group  algebra  [22m[34mKG[0m this attribute stores the nilpotency
+  For  the  p-modular  group  algebra  [3XKG[0m this attribute stores the nilpotency
   index of the augmentation ideal of KG' where G' denotes the derived subgroup
   of G.
   
-  [22m[35m---------------------------  Example  ----------------------------[0m
-    [22m[35m[0m
-    [22m[35mgap> KG := GroupRing( GF( 2 ), DihedralGroup( 16 ) );[0m
-    [22m[35m<algebra-with-one over GF(2), with 4 generators>[0m
-    [22m[35mgap> AugmentationIdealOfDerivedSubgroupNilpotencyIndex( KG );[0m
-    [22m[35m4[0m
-    [22m[35mgap> D := DerivedSubgroup( UnderlyingGroup( KG ) );[0m
-    [22m[35mGroup([ f3, f4 ])[0m
-    [22m[35mgap> KD := GroupRing( GF( 2 ), D );[0m
-    [22m[35m<algebra-with-one over GF(2), with 2 generators>[0m
-    [22m[35mgap> AugmentationIdealNilpotencyIndex( KD );[0m
-    [22m[35m4       [0m
-    [22m[35m[0m
-  [22m[35m------------------------------------------------------------------[0m
+  [4X---------------------------  Example  ----------------------------[0X
+    [4X[0X
+    [4Xgap> KG := GroupRing( GF( 2 ), DihedralGroup( 16 ) );[0X
+    [4X<algebra-with-one over GF(2), with 4 generators>[0X
+    [4Xgap> AugmentationIdealOfDerivedSubgroupNilpotencyIndex( KG );[0X
+    [4X4[0X
+    [4Xgap> D := DerivedSubgroup( UnderlyingGroup( KG ) );[0X
+    [4XGroup([ f3, f4 ])[0X
+    [4Xgap> KD := GroupRing( GF( 2 ), D );[0X
+    [4X<algebra-with-one over GF(2), with 2 generators>[0X
+    [4Xgap> AugmentationIdealNilpotencyIndex( KD );[0X
+    [4X4       [0X
+    [4X[0X
+  [4X------------------------------------------------------------------[0X
   
-  [1m[4m[31m4.3-8 LeftIdealBySubgroup[0m
+  [1X4.3-8 LeftIdealBySubgroup[0m
   
-  [1m[34m> LeftIdealBySubgroup( [0m[22m[34mKG, H[0m[1m[34m ) ____________________________________[0moperation
-  [1m[34m> RightIdealBySubgroup( [0m[22m[34mKG, H[0m[1m[34m ) ___________________________________[0moperation
-  [1m[34m> TwoSidedIdalBySubgroup( [0m[22m[34mKG, H[0m[1m[34m ) _________________________________[0moperation
-  [1m[34m> LeftIdealBySubgroup( [0m[22m[34mKG, H[0m[1m[34m ) ____________________________________[0moperation
-  [1mReturns:[0m  an ideal of a group ring
+  [2X> LeftIdealBySubgroup( [0X[3XKG, H[0X[2X ) ____________________________________[0Xoperation
+  [2X> RightIdealBySubgroup( [0X[3XKG, H[0X[2X ) ___________________________________[0Xoperation
+  [2X> TwoSidedIdalBySubgroup( [0X[3XKG, H[0X[2X ) _________________________________[0Xoperation
+  [6XReturns:[0X  an ideal of a group ring
   
-  Let  [22m[34mKG[0m be a group ring of a group G over the ring K, and [22m[34mH[0m be a subgroup of
-  G. Then the set J_l(H) of all elements of [22m[34mKG[0m of the form
+  Let  [3XKG[0m be a group ring of a group G over the ring K, and [3XH[0m be a subgroup of
+  G. Then the set J_l(H) of all elements of [3XKG[0m of the form
   
-  \[
+  
        \sum_{h \in H} x_h(h-1)
-  \]
   
-  is the left ideal in [22m[34mKG[0m generated by all elements h-1 with h in H. The right
+  
+  is the left ideal in [3XKG[0m generated by all elements h-1 with h in H. The right
   ideal  J_r(H) is defined analogously. These operations are used to consrtuct
   such  ideals,  taking  into  account  the  fact,  that  the  ideal J_l(H) is
-  two-sided  if  and  only  if  [22m[34mH[0m  is  normal in G. An attempt of constructing
-  two-sided ideal for a non-normal subgroup [22m[34mH[0m will lead to an error message.
+  two-sided  if  and  only  if  [3XH[0m  is  normal in G. An attempt of constructing
+  two-sided ideal for a non-normal subgroup [3XH[0m will lead to an error message.
   
-  [22m[35m---------------------------  Example  ----------------------------[0m
-    [22m[35m[0m
-    [22m[35mgap> KG := GroupRing( GF(2), DihedralGroup(16) );[0m
-    [22m[35m<algebra-with-one over GF(2), with 4 generators>[0m
-    [22m[35mgap> G := DihedralGroup(16);[0m
-    [22m[35m<pc group of size 16 with 4 generators>[0m
-    [22m[35mgap> KG := GroupRing( GF(2), G );[0m
-    [22m[35m<algebra-with-one over GF(2), with 4 generators>[0m
-    [22m[35mgap> D := DerivedSubgroup( G );[0m
-    [22m[35mGroup([ f3, f4 ])[0m
-    [22m[35mgap> LeftIdealBySubgroup( KG, D );[0m
-    [22m[35m<two-sided ideal in <algebra-with-one over GF(2), with 4 generators>,[0m
-    [22m[35m  (dimension 12)>                              [0m
-    [22m[35mgap> H := Subgroup( G, [ GeneratorsOfGroup(G)[1] ]);[0m
-    [22m[35mGroup([ f1 ])[0m
-    [22m[35mgap> IsNormal( G, H );[0m
-    [22m[35mfalse[0m
-    [22m[35mgap> LeftIdealBySubgroup( KG, H );[0m
-    [22m[35m<left ideal in <algebra-with-one over GF(2), with 4 generators>,[0m
-    [22m[35m  (dimension 8)>[0m
-    [22m[35m[0m
-  [22m[35m------------------------------------------------------------------[0m
+  [4X---------------------------  Example  ----------------------------[0X
+    [4X[0X
+    [4Xgap> KG := GroupRing( GF(2), DihedralGroup(16) );[0X
+    [4X<algebra-with-one over GF(2), with 4 generators>[0X
+    [4Xgap> G := DihedralGroup(16);[0X
+    [4X<pc group of size 16 with 4 generators>[0X
+    [4Xgap> KG := GroupRing( GF(2), G );[0X
+    [4X<algebra-with-one over GF(2), with 4 generators>[0X
+    [4Xgap> D := DerivedSubgroup( G );[0X
+    [4XGroup([ f3, f4 ])[0X
+    [4Xgap> LeftIdealBySubgroup( KG, D );[0X
+    [4X<two-sided ideal in <algebra-with-one over GF(2), with 4 generators>,[0X
+    [4X  (dimension 12)>                              [0X
+    [4Xgap> H := Subgroup( G, [ GeneratorsOfGroup(G)[1] ]);[0X
+    [4XGroup([ f1 ])[0X
+    [4Xgap> IsNormal( G, H );[0X
+    [4Xfalse[0X
+    [4Xgap> LeftIdealBySubgroup( KG, H );[0X
+    [4X<left ideal in <algebra-with-one over GF(2), with 4 generators>,[0X
+    [4X  (dimension 8)>[0X
+    [4X[0X
+  [4X------------------------------------------------------------------[0X
   
   
-  [1m[4m[31m4.4 Computations with the unit group[0m
+  [1X4.4 Computations with the unit group[0X
   
-  [1m[4m[31m4.4-1 NormalizedUnitGroup[0m
+  [1X4.4-1 NormalizedUnitGroup[0m
   
-  [1m[34m> NormalizedUnitGroup( [0m[22m[34mKG[0m[1m[34m ) _______________________________________[0mattribute
-  [1mReturns:[0m  a group generated by group algebra elements
+  [2X> NormalizedUnitGroup( [0X[3XKG[0X[2X ) _______________________________________[0Xattribute
+  [6XReturns:[0X  a group generated by group algebra elements
   
-  Determines  the  normalized  unit group of a p-modular group algebra [22m[34mKG[0m over
+  Determines  the  normalized  unit group of a p-modular group algebra [3XKG[0m over
   the  field  of  p  elements.  Returns the normalized unit group as the group
-  generated by certain elements of [22m[34mKG[0m; see Section [1m3.3[0m for more details.
+  generated by certain elements of [3XKG[0m; see Section [14X3.3[0m for more details.
   
   For    efficient    computations    the   user   is   recommended   to   use
-  [1m[34mPcNormalizedUnitGroup[0m ([1m4.4-2[0m).
+  [2XPcNormalizedUnitGroup[0m ([14X4.4-2[0m).
   
-  [22m[35m---------------------------  Example  ----------------------------[0m
-    [22m[35m[0m
-    [22m[35mgap> KG := GroupRing( GF( 2 ), DihedralGroup( 16 ) );[0m
-    [22m[35m<algebra-with-one over GF(2), with 4 generators>[0m
-    [22m[35mgap> V := NormalizedUnitGroup( KG );[0m
-    [22m[35m<group of size 32768 with 15 generators>[0m
-    [22m[35mgap> u := GeneratorsOfGroup( V )[4];[0m
-    [22m[35m(Z(2)^0)*f1+(Z(2)^0)*f2+(Z(2)^0)*f1*f2  [0m
-    [22m[35m[0m
-  [22m[35m------------------------------------------------------------------[0m
+  [4X---------------------------  Example  ----------------------------[0X
+    [4X[0X
+    [4Xgap> KG := GroupRing( GF( 2 ), DihedralGroup( 16 ) );[0X
+    [4X<algebra-with-one over GF(2), with 4 generators>[0X
+    [4Xgap> V := NormalizedUnitGroup( KG );[0X
+    [4X<group of size 32768 with 15 generators>[0X
+    [4Xgap> u := GeneratorsOfGroup( V )[4];[0X
+    [4X(Z(2)^0)*f1+(Z(2)^0)*f2+(Z(2)^0)*f1*f2  [0X
+    [4X[0X
+  [4X------------------------------------------------------------------[0X
   
-  [1m[4m[31m4.4-2 PcNormalizedUnitGroup[0m
+  [1X4.4-2 PcNormalizedUnitGroup[0m
   
-  [1m[34m> PcNormalizedUnitGroup( [0m[22m[34mKG[0m[1m[34m ) _____________________________________[0mattribute
-  [1mReturns:[0m  a group given by power-commutator presentation
+  [2X> PcNormalizedUnitGroup( [0X[3XKG[0X[2X ) _____________________________________[0Xattribute
+  [6XReturns:[0X  a group given by power-commutator presentation
   
-  The  argument  [22m[34mKG[0m is a p-modular group algebra over the field of p elements.
-  [22m[32mPcNormalizedUnitGroup[0m  returns  the  normalized  unit group of [22m[34mKG[0m given by a
+  The  argument  [3XKG[0m is a p-modular group algebra over the field of p elements.
+  [10XPcNormalizedUnitGroup[0m  returns  the  normalized  unit group of [3XKG[0m given by a
   power-commutator   presentation.   The   generators   in   this   polycyclic
-  presentation  correspond  to  the  weighted  basis  elements of [22m[34mKG[0m. For more
-  details, see Section [1m3.3[0m.
+  presentation  correspond  to  the  weighted  basis  elements of [3XKG[0m. For more
+  details, see Section [14X3.3[0m.
   
-  [22m[35m---------------------------  Example  ----------------------------[0m
-    [22m[35m[0m
-    [22m[35mgap> W := PcNormalizedUnitGroup( KG );[0m
-    [22m[35m<pc group of size 32768 with 15 generators>[0m
-    [22m[35mgap> w := GeneratorsOfGroup( W )[4];[0m
-    [22m[35mf4       [0m
-    [22m[35m[0m
-  [22m[35m------------------------------------------------------------------[0m
+  [4X---------------------------  Example  ----------------------------[0X
+    [4X[0X
+    [4Xgap> W := PcNormalizedUnitGroup( KG );[0X
+    [4X<pc group of size 32768 with 15 generators>[0X
+    [4Xgap> w := GeneratorsOfGroup( W )[4];[0X
+    [4Xf4       [0X
+    [4X[0X
+  [4X------------------------------------------------------------------[0X
   
-  [1m[4m[31m4.4-3 NaturalBijectionToPcNormalizedUnitGroup[0m
+  [1X4.4-3 NaturalBijectionToPcNormalizedUnitGroup[0m
   
-  [1m[34m> NaturalBijectionToPcNormalizedUnitGroup( [0m[22m[34mKG[0m[1m[34m ) ___________________[0mattribute
-  [1mReturns:[0m  a homomorphism of groups
+  [2X> NaturalBijectionToPcNormalizedUnitGroup( [0X[3XKG[0X[2X ) ___________________[0Xattribute
+  [6XReturns:[0X  a homomorphism of groups
   
   The  normalised unit group of a p-modular group algebra KG over the field of
-  p  elements  can  be  computed using two methods, namely [1m[34mNormalizedUnitGroup[0m
-  ([1m4.4-1[0m)  and  [1m[34mPcNormalizedUnitGroup[0m  ([1m4.4-2[0m).  These  two methods return two
+  p  elements  can  be  computed using two methods, namely [2XNormalizedUnitGroup[0m
+  ([14X4.4-1[0m)  and  [2XPcNormalizedUnitGroup[0m  ([14X4.4-2[0m).  These  two methods return two
   different objects, and they can be used for different types of computations.
-  The  elements  of  [22m[32mNormalizedUnitGroup(KG)[0m  are represented in their natural
+  The  elements  of  [10XNormalizedUnitGroup(KG)[0m  are represented in their natural
   group algebra representation, and hence they can easily be identified in the
-  group algebra. However, the more quickly constructed [22m[32mNormalizedUnitGroup(KG)[0m
+  group algebra. However, the more quickly constructed [10XNormalizedUnitGroup(KG)[0m
   is  often not suitable for further fast calculations. Hence one will have to
-  use  [22m[32mPcNormalizedUnitGroup(KG)[0m  if  one  wants  to find some group theoretic
+  use  [10XPcNormalizedUnitGroup(KG)[0m  if  one  wants  to find some group theoretic
   properties  of  the normalized unit group. This method returns the bijection
-  from  [22m[32mNormalizedUnitGroup([22m[34mKG[0m)[0m onto [22m[32mPcNormalizedUnitGroup([22m[34mKG[0m)[0m. This bijection
-  can  be used to map the result of a computation in [22m[32mPcNormalizedUnitGroup([22m[34mKG[0m)[0m
-  into [22m[32mNormalizedUnitGroup([22m[34mKG[0m)[0m.
+  from  [10XNormalizedUnitGroup([3XKG[0m[10X)[0m onto [10XPcNormalizedUnitGroup([3XKG[0m[10X)[0m. This bijection
+  can  be used to map the result of a computation in [10XPcNormalizedUnitGroup([3XKG[0m[10X)[0m
+  into [10XNormalizedUnitGroup([3XKG[0m[10X)[0m.
   
-  [22m[35m---------------------------  Example  ----------------------------[0m
-    [22m[35m[0m
-    [22m[35mgap> f := NaturalBijectionToPcNormalizedUnitGroup( KG );[0m
-    [22m[35mMappingByFunction( <group of size 32768 with[0m
-    [22m[35m15 generators>, <pc group of size 32768 with[0m
-    [22m[35m15 generators>, function( x ) ... end )[0m
-    [22m[35mgap> u := GeneratorsOfGroup( V )[4];;[0m
-    [22m[35mgap> u^f;[0m
-    [22m[35mf4   [0m
-    [22m[35mgap> GeneratorsOfGroup( V )[4]^f = GeneratorsOfGroup( W )[4];[0m
-    [22m[35mtrue      [0m
-    [22m[35m[0m
-  [22m[35m------------------------------------------------------------------[0m
+  [4X---------------------------  Example  ----------------------------[0X
+    [4X[0X
+    [4Xgap> f := NaturalBijectionToPcNormalizedUnitGroup( KG );[0X
+    [4XMappingByFunction( <group of size 32768 with[0X
+    [4X15 generators>, <pc group of size 32768 with[0X
+    [4X15 generators>, function( x ) ... end )[0X
+    [4Xgap> u := GeneratorsOfGroup( V )[4];;[0X
+    [4Xgap> u^f;[0X
+    [4Xf4   [0X
+    [4Xgap> GeneratorsOfGroup( V )[4]^f = GeneratorsOfGroup( W )[4];[0X
+    [4Xtrue      [0X
+    [4X[0X
+  [4X------------------------------------------------------------------[0X
   
-  [1m[4m[31m4.4-4 NaturalBijectionToNormalizedUnitGroup[0m
+  [1X4.4-4 NaturalBijectionToNormalizedUnitGroup[0m
   
-  [1m[34m> NaturalBijectionToNormalizedUnitGroup( [0m[22m[34mKG[0m[1m[34m ) _____________________[0mattribute
-  [1mReturns:[0m  a homomorphism of groups
+  [2X> NaturalBijectionToNormalizedUnitGroup( [0X[3XKG[0X[2X ) _____________________[0Xattribute
+  [6XReturns:[0X  a homomorphism of groups
   
-  For  a p-modular group algebra [22m[34mKG[0m over the field of p elements this function
-  returns  the  inverse of the mapping [1m[34mNaturalBijectionToPcNormalizedUnitGroup[0m
-  ([1m4.4-3[0m)
+  For  a p-modular group algebra [3XKG[0m over the field of p elements this function
+  returns  the  inverse of the mapping [2XNaturalBijectionToPcNormalizedUnitGroup[0m
+  ([14X4.4-3[0m)
   
-  [22m[35m---------------------------  Example  ----------------------------[0m
-    [22m[35m[0m
-    [22m[35mgap> t := NaturalBijectionToNormalizedUnitGroup(KG);;[0m
-    [22m[35mgap> w := GeneratorsOfGroup(W)[4];;[0m
-    [22m[35mgap> w^t;[0m
-    [22m[35m(Z(2)^0)*f1+(Z(2)^0)*f2+(Z(2)^0)*f1*f2    [0m
-    [22m[35mgap> GeneratorsOfGroup( W )[4]^t = GeneratorsOfGroup( V )[4];[0m
-    [22m[35mtrue     [0m
-    [22m[35m[0m
-  [22m[35m------------------------------------------------------------------[0m
+  [4X---------------------------  Example  ----------------------------[0X
+    [4X[0X
+    [4Xgap> t := NaturalBijectionToNormalizedUnitGroup(KG);;[0X
+    [4Xgap> w := GeneratorsOfGroup(W)[4];;[0X
+    [4Xgap> w^t;[0X
+    [4X(Z(2)^0)*f1+(Z(2)^0)*f2+(Z(2)^0)*f1*f2    [0X
+    [4Xgap> GeneratorsOfGroup( W )[4]^t = GeneratorsOfGroup( V )[4];[0X
+    [4Xtrue     [0X
+    [4X[0X
+  [4X------------------------------------------------------------------[0X
   
-  [1m[4m[31m4.4-5 Embedding[0m
+  [1X4.4-5 Embedding[0m
   
-  [1m[34m> Embedding( [0m[22m[34mH, V[0m[1m[34m ) _______________________________________________[0moperation
-  [1mReturns:[0m  a homomorphism from an underlying group to a normalized unit group
+  [2X> Embedding( [0X[3XH, V[0X[2X ) _______________________________________________[0Xoperation
+  [6XReturns:[0X  a homomorphism from an underlying group to a normalized unit group
             in pc-presentation
   
-  Let  [22m[34mH[0m  be a subgroup of a group G and [22m[34mV[0m be the normalized unit group of the
+  Let  [3XH[0m  be a subgroup of a group G and [3XV[0m be the normalized unit group of the
   group   algebra   KG   given   by  the  power-commutator  presentation  (see
-  [1m[34mPcNormalizedUnitGroup[0m   ([1m4.4-2[0m).   Then   [22m[32mEmbedding(  H,  V  )[0m  returns  the
-  homomorphism from [22m[34mH[0m to [22m[34mV[0m, which is the composition of [22m[32mEmbedding( H, KG )[0m and
-  [22m[32mNaturalBijectionToPcNormalizedUnitGroup( KG )[0m.
+  [2XPcNormalizedUnitGroup[0m   ([14X4.4-2[0m).   Then   [10XEmbedding(  H,  V  )[0m  returns  the
+  homomorphism from [3XH[0m to [3XV[0m, which is the composition of [10XEmbedding( H, KG )[0m and
+  [10XNaturalBijectionToPcNormalizedUnitGroup( KG )[0m.
   
-  [22m[35m---------------------------  Example  ----------------------------[0m
-    [22m[35m[0m
-    [22m[35mgap> G := DihedralGroup( 16 );[0m
-    [22m[35m<pc group of size 16 with 4 generators>[0m
-    [22m[35mgap> KG := GroupRing( GF( 2 ), G );[0m
-    [22m[35m<algebra-with-one over GF(2), with 4 generators>[0m
-    [22m[35mgap> V:=PcNormalizedUnitGroup( KG );[0m
-    [22m[35m<pc group of size 32768 with 15 generators>[0m
-    [22m[35mgap> ucs := UpperCentralSeries( V );[0m
-    [22m[35m[ <pc group of size 32768 with 15 generators>,[0m
-    [22m[35m  <pc group of size 4096 with 12 generators>,[0m
-    [22m[35m  Group([ f3*f5*f13*f15, f7, f15, f13*f15, f14*f15, f11*f13*f14*f15, f12,[0m
-    [22m[35m      f9*f12, f10 ]),[0m
-    [22m[35m  Group([ f3*f5*f13*f15, f7, f15, f13*f15, f14*f15, f11*f13*f14*f15 ]),[0m
-    [22m[35m  Group([  ]) ][0m
-    [22m[35mgap> f := Embedding( G, V );[0m
-    [22m[35m[ f1, f2, f3, f4 ] -> [ f2, f1, f3, f7 ][0m
-    [22m[35mgap> G1 := Image( f, G ); [0m
-    [22m[35mGroup([ f2, f1, f3, f7 ])[0m
-    [22m[35mgap> H := Intersection( ucs[2], G1 ); [0m
-    [22m[35mGroup([ f3, f7, f3*f7 ])[0m
-    [22m[35m# H is the intersection of G and the 3rd centre of V(KG)[0m
-    [22m[35mgap> T:=PreImage( f, H );[0m
-    [22m[35mGroup([ f3, f4, f3*f4 ])[0m
-    [22m[35m# and T is its preimage in G[0m
-    [22m[35mgap> IdGroup( T ); [0m
-    [22m[35m[ 4, 1 ][0m
-    [22m[35m[0m
-  [22m[35m------------------------------------------------------------------[0m
+  [4X---------------------------  Example  ----------------------------[0X
+    [4X[0X
+    [4Xgap> G := DihedralGroup( 16 );[0X
+    [4X<pc group of size 16 with 4 generators>[0X
+    [4Xgap> KG := GroupRing( GF( 2 ), G );[0X
+    [4X<algebra-with-one over GF(2), with 4 generators>[0X
+    [4Xgap> V:=PcNormalizedUnitGroup( KG );[0X
+    [4X<pc group of size 32768 with 15 generators>[0X
+    [4Xgap> ucs := UpperCentralSeries( V );[0X
+    [4X[ <pc group of size 32768 with 15 generators>,[0X
+    [4X  <pc group of size 4096 with 12 generators>,[0X
+    [4X  Group([ f3*f5*f13*f15, f7, f15, f13*f15, f14*f15, f11*f13*f14*f15, f12,[0X
+    [4X      f9*f12, f10 ]),[0X
+    [4X  Group([ f3*f5*f13*f15, f7, f15, f13*f15, f14*f15, f11*f13*f14*f15 ]),[0X
+    [4X  Group([  ]) ][0X
+    [4Xgap> f := Embedding( G, V );[0X
+    [4X[ f1, f2, f3, f4 ] -> [ f2, f1, f3, f7 ][0X
+    [4Xgap> G1 := Image( f, G ); [0X
+    [4XGroup([ f2, f1, f3, f7 ])[0X
+    [4Xgap> H := Intersection( ucs[2], G1 ); [0X
+    [4XGroup([ f3, f7, f3*f7 ])[0X
+    [4X# H is the intersection of G and the 3rd centre of V(KG)[0X
+    [4Xgap> T:=PreImage( f, H );[0X
+    [4XGroup([ f3, f4, f3*f4 ])[0X
+    [4X# and T is its preimage in G[0X
+    [4Xgap> IdGroup( T ); [0X
+    [4X[ 4, 1 ][0X
+    [4X[0X
+  [4X------------------------------------------------------------------[0X
   
-  [1m[4m[31m4.4-6 Units[0m
+  [1X4.4-6 Units[0m
   
-  [1m[34m> Units( [0m[22m[34mKG[0m[1m[34m ) _____________________________________________________[0mattribute
-  [1mReturns:[0m  the unit group of a group ring
+  [2X> Units( [0X[3XKG[0X[2X ) _____________________________________________________[0Xattribute
+  [6XReturns:[0X  the unit group of a group ring
   
-  This  improves  a  standard  [1mGAP[0m functionality for modular group algebras of
+  This  improves  a  standard  [5XGAP[0m functionality for modular group algebras of
   finite  p-groups  over the field of p elements. It returns the unit group of
-  [22m[34mKG[0m  as  a  direct product of [22m[32mUnits(K)[0m and [22m[32mNormalizedUnitGroup(KG)[0m, where the
-  latter  is  generated  by  certain  elements  of [22m[34mKG[0m; see Chapter [1m3.[0m for more
+  [3XKG[0m  as  a  direct product of [10XUnits(K)[0m and [10XNormalizedUnitGroup(KG)[0m, where the
+  latter  is  generated  by  certain  elements  of  [3XKG[0m; see Chapter [14X3[0m for more
   details.
   
-  [22m[35m---------------------------  Example  ----------------------------[0m
-    [22m[35m[0m
-    [22m[35mgap> U := Units( KG );[0m
-    [22m[35m#I  LAGUNA package: Computing the unit group ...[0m
-    [22m[35m<group of size 32768 with 15 generators>[0m
-    [22m[35m# now elements of U are already in KG[0m
-    [22m[35mgap> GeneratorsOfGroup( U )[5];[0m
-    [22m[35m(Z(2)^0)*f2+(Z(2)^0)*f3+(Z(2)^0)*f2*f3 [0m
-    [22m[35m# in the next example the direct product structure is more clear [0m
-    [22m[35mgap> FH := GroupRing( GF(3), SmallGroup(27,3) );[0m
-    [22m[35m<algebra-with-one over GF(3), with 3 generators>[0m
-    [22m[35mgap> T := Units( FH );[0m
-    [22m[35m#I  LAGUNA package: Computing the unit group ...[0m
-    [22m[35m<group of size 5083731656658 with 27 generators>[0m
-    [22m[35mgap> x := GeneratorsOfGroup( T )[1];[0m
-    [22m[35mTuple( [ Z(3), (Z(3)^0)*<identity> of ... ] ) [0m
-    [22m[35mgap> x in FH;[0m
-    [22m[35mfalse[0m
-    [22m[35mgap> x[1] * x[2] in FH; [0m
-    [22m[35mtrue # this is the way to get the corresponding element of FH[0m
-    [22m[35m[0m
-  [22m[35m------------------------------------------------------------------[0m
+  [4X---------------------------  Example  ----------------------------[0X
+    [4X[0X
+    [4Xgap> U := Units( KG );[0X
+    [4X#I  LAGUNA package: Computing the unit group ...[0X
+    [4X<group of size 32768 with 15 generators>[0X
+    [4X# now elements of U are already in KG[0X
+    [4Xgap> GeneratorsOfGroup( U )[5];[0X
+    [4X(Z(2)^0)*f2+(Z(2)^0)*f3+(Z(2)^0)*f2*f3 [0X
+    [4X# in the next example the direct product structure is more clear [0X
+    [4Xgap> FH := GroupRing( GF(3), SmallGroup(27,3) );[0X
+    [4X<algebra-with-one over GF(3), with 3 generators>[0X
+    [4Xgap> T := Units( FH );[0X
+    [4X#I  LAGUNA package: Computing the unit group ...[0X
+    [4X<group of size 5083731656658 with 27 generators>[0X
+    [4Xgap> x := GeneratorsOfGroup( T )[1];[0X
+    [4XTuple( [ Z(3), (Z(3)^0)*<identity> of ... ] ) [0X
+    [4Xgap> x in FH;[0X
+    [4Xfalse[0X
+    [4Xgap> x[1] * x[2] in FH; [0X
+    [4Xtrue # this is the way to get the corresponding element of FH[0X
+    [4X[0X
+  [4X------------------------------------------------------------------[0X
   
-  [1m[4m[31m4.4-7 PcUnits[0m
+  [1X4.4-7 PcUnits[0m
   
-  [1m[34m> PcUnits( [0m[22m[34mKG[0m[1m[34m ) ___________________________________________________[0mattribute
-  [1mReturns:[0m  a group given by power-commutator presentation
+  [2X> PcUnits( [0X[3XKG[0X[2X ) ___________________________________________________[0Xattribute
+  [6XReturns:[0X  a group given by power-commutator presentation
   
-  Returns  the  unit  group  of  [22m[34mKG[0m  as  a  direct  product  of  [22m[32mUnits(K)[0m  and
-  [22m[32mPcNormalizedUnitGroup(KG)[0m, where the latter is a group given by a polycyclic
-  presentation. See Section [1m3.4[0m for more details.
+  Returns  the  unit  group  of  [3XKG[0m  as  a  direct  product  of  [10XUnits(K)[0m  and
+  [10XPcNormalizedUnitGroup(KG)[0m, where the latter is a group given by a polycyclic
+  presentation. See Section [14X3.4[0m for more details.
   
-  [22m[35m---------------------------  Example  ----------------------------[0m
-    [22m[35m[0m
-    [22m[35mgap> W := PcUnits( KG );[0m
-    [22m[35m<pc group of size 32768 with 15 generators>[0m
-    [22m[35mgap> GeneratorsOfGroup( W )[5];[0m
-    [22m[35mf5   [0m
-    [22m[35m# in the next example the direct product structure is more clear [0m
-    [22m[35mgap> FH := GroupRing( GF(3), SmallGroup(27,3) );[0m
-    [22m[35m<algebra-with-one over GF(3), with 3 generators>[0m
-    [22m[35mgap> T := PcUnits(FH);[0m
-    [22m[35m<group of size 5083731656658 with 27 generators>[0m
-    [22m[35mgap> x := GeneratorsOfGroup( T )[2];[0m
-    [22m[35mTuple( [ Z(3)^0, f1 ] )                       [0m
-    [22m[35m[0m
-  [22m[35m------------------------------------------------------------------[0m
+  [4X---------------------------  Example  ----------------------------[0X
+    [4X[0X
+    [4Xgap> W := PcUnits( KG );[0X
+    [4X<pc group of size 32768 with 15 generators>[0X
+    [4Xgap> GeneratorsOfGroup( W )[5];[0X
+    [4Xf5   [0X
+    [4X# in the next example the direct product structure is more clear [0X
+    [4Xgap> FH := GroupRing( GF(3), SmallGroup(27,3) );[0X
+    [4X<algebra-with-one over GF(3), with 3 generators>[0X
+    [4Xgap> T := PcUnits(FH);[0X
+    [4X<group of size 5083731656658 with 27 generators>[0X
+    [4Xgap> x := GeneratorsOfGroup( T )[2];[0X
+    [4XTuple( [ Z(3)^0, f1 ] )                       [0X
+    [4X[0X
+  [4X------------------------------------------------------------------[0X
   
-  [1m[4m[31m4.4-8 IsGroupOfUnitsOfMagmaRing[0m
+  [1X4.4-8 IsGroupOfUnitsOfMagmaRing[0m
   
-  [1m[34m> IsGroupOfUnitsOfMagmaRing( [0m[22m[34mU[0m[1m[34m ) ___________________________________[0mproperty
+  [2X> IsGroupOfUnitsOfMagmaRing( [0X[3XU[0X[2X ) ___________________________________[0Xproperty
   
-  This  property  will be automatically set [22m[32mtrue[0m, if [22m[34mU[0m is a group generated by
-  some units of a magma ring, including [22m[32mUnits(KG)[0m and [22m[32mNormalizedUnitgroup(KG)[0m.
+  This  property  will be automatically set [9Xtrue[0m, if [3XU[0m is a group generated by
+  some units of a magma ring, including [10XUnits(KG)[0m and [10XNormalizedUnitgroup(KG)[0m.
   Otherwise this property will not be bound.
   
-  [22m[35m---------------------------  Example  ----------------------------[0m
-    [22m[35m[0m
-    [22m[35mgap> IsGroupOfUnitsOfMagmaRing( NormalizedUnitGroup( KG ) );[0m
-    [22m[35mtrue[0m
-    [22m[35mgap> IsGroupOfUnitsOfMagmaRing( Units( KG ) );[0m
-    [22m[35mtrue     [0m
-    [22m[35m[0m
-  [22m[35m------------------------------------------------------------------[0m
+  [4X---------------------------  Example  ----------------------------[0X
+    [4X[0X
+    [4Xgap> IsGroupOfUnitsOfMagmaRing( NormalizedUnitGroup( KG ) );[0X
+    [4Xtrue[0X
+    [4Xgap> IsGroupOfUnitsOfMagmaRing( Units( KG ) );[0X
+    [4Xtrue     [0X
+    [4X[0X
+  [4X------------------------------------------------------------------[0X
   
-  [1m[4m[31m4.4-9 IsUnitGroupOfGroupRing[0m
+  [1X4.4-9 IsUnitGroupOfGroupRing[0m
   
-  [1m[34m> IsUnitGroupOfGroupRing( [0m[22m[34mU[0m[1m[34m ) ______________________________________[0mproperty
+  [2X> IsUnitGroupOfGroupRing( [0X[3XU[0X[2X ) ______________________________________[0Xproperty
   
-  This  property  will  be automatically set [22m[32mtrue[0m, if [22m[34mU[0m is the unit group of a
-  p-modular  group  algebra,  obtained  either by [22m[32mUnits(KG)[0m or by [22m[32mPcUnits(KG)[0m.
+  This  property  will  be automatically set [9Xtrue[0m, if [3XU[0m is the unit group of a
+  p-modular  group  algebra,  obtained  either by [10XUnits(KG)[0m or by [10XPcUnits(KG)[0m.
   Otherwise this property will not be bound.
   
-  [22m[35m---------------------------  Example  ----------------------------[0m
-    [22m[35m[0m
-    [22m[35mgap> IsUnitGroupOfGroupRing( Units( KG ) );[0m
-    [22m[35mtrue[0m
-    [22m[35mgap> IsUnitGroupOfGroupRing( PcUnits( KG ) );[0m
-    [22m[35mtrue     [0m
-    [22m[35m[0m
-  [22m[35m------------------------------------------------------------------[0m
+  [4X---------------------------  Example  ----------------------------[0X
+    [4X[0X
+    [4Xgap> IsUnitGroupOfGroupRing( Units( KG ) );[0X
+    [4Xtrue[0X
+    [4Xgap> IsUnitGroupOfGroupRing( PcUnits( KG ) );[0X
+    [4Xtrue     [0X
+    [4X[0X
+  [4X------------------------------------------------------------------[0X
   
-  [1m[4m[31m4.4-10 IsNormalizedUnitGroupOfGroupRing[0m
+  [1X4.4-10 IsNormalizedUnitGroupOfGroupRing[0m
   
-  [1m[34m> IsNormalizedUnitGroupOfGroupRing( [0m[22m[34mU[0m[1m[34m ) ____________________________[0mproperty
+  [2X> IsNormalizedUnitGroupOfGroupRing( [0X[3XU[0X[2X ) ____________________________[0Xproperty
   
-  This  property  will  be automatically set [22m[32mtrue[0m, if [22m[34mU[0m is the normalized unit
+  This  property  will  be automatically set [9Xtrue[0m, if [3XU[0m is the normalized unit
   group    of    a    p-modular    group    algebra,    obtained   either   by
-  [22m[32mNormalizedUnitGroup(KG)[0m  or  by  [22m[32mPcNormalizedUnitGroup(KG)[0m.  Otherwise  this
+  [10XNormalizedUnitGroup(KG)[0m  or  by  [10XPcNormalizedUnitGroup(KG)[0m.  Otherwise  this
   property will not be bound.
   
-  [22m[35m---------------------------  Example  ----------------------------[0m
-    [22m[35m[0m
-    [22m[35mgap> IsNormalizedUnitGroupOfGroupRing( NormalizedUnitGroup( KG ) );[0m
-    [22m[35mtrue[0m
-    [22m[35mgap> IsNormalizedUnitGroupOfGroupRing( PcNormalizedUnitGroup( KG ) );[0m
-    [22m[35mtrue     [0m
-    [22m[35m[0m
-  [22m[35m------------------------------------------------------------------[0m
+  [4X---------------------------  Example  ----------------------------[0X
+    [4X[0X
+    [4Xgap> IsNormalizedUnitGroupOfGroupRing( NormalizedUnitGroup( KG ) );[0X
+    [4Xtrue[0X
+    [4Xgap> IsNormalizedUnitGroupOfGroupRing( PcNormalizedUnitGroup( KG ) );[0X
+    [4Xtrue     [0X
+    [4X[0X
+  [4X------------------------------------------------------------------[0X
   
-  [1m[4m[31m4.4-11 UnderlyingGroupRing[0m
+  [1X4.4-11 UnderlyingGroupRing[0m
   
-  [1m[34m> UnderlyingGroupRing( [0m[22m[34mU[0m[1m[34m ) ________________________________________[0mattribute
-  [1mReturns:[0m  a group ring
+  [2X> UnderlyingGroupRing( [0X[3XU[0X[2X ) ________________________________________[0Xattribute
+  [6XReturns:[0X  a group ring
   
-  If [22m[34mU[0m is the (normalized) unit group of a p-modular group algebra KG obtained
-  using  one  of the functions [22m[32mUnits(KG)[0m, [22m[32mPcUnits(KG)[0m, [22m[32mNormalizedUnitGroup(KG)[0m
-  or  [22m[32mPcNormalizedUnitGroup(KG)[0m, then the attribute [22m[32mUnderlyingGroupRing[0m stores
+  If [3XU[0m is the (normalized) unit group of a p-modular group algebra KG obtained
+  using  one  of the functions [10XUnits(KG)[0m, [10XPcUnits(KG)[0m, [10XNormalizedUnitGroup(KG)[0m
+  or  [10XPcNormalizedUnitGroup(KG)[0m, then the attribute [10XUnderlyingGroupRing[0m stores
   KG.
   
-  [22m[35m---------------------------  Example  ----------------------------[0m
-    [22m[35m[0m
-    [22m[35mgap> UnderlyingGroupRing( Units( KG ) );[0m
-    [22m[35m<algebra-with-one over GF(2), with 4 generators>[0m
-    [22m[35mgap> UnderlyingGroupRing( PcUnits( KG ) );[0m
-    [22m[35m<algebra-with-one over GF(2), with 4 generators>[0m
-    [22m[35mgap> UnderlyingGroupRing( NormalizedUnitGroup( KG ) );[0m
-    [22m[35m<algebra-with-one over GF(2), with 4 generators>[0m
-    [22m[35mgap> UnderlyingGroupRing( PcNormalizedUnitGroup( KG ) );[0m
-    [22m[35m<algebra-with-one over GF(2), with 4 generators>[0m
-    [22m[35m[0m
-  [22m[35m------------------------------------------------------------------[0m
+  [4X---------------------------  Example  ----------------------------[0X
+    [4X[0X
+    [4Xgap> UnderlyingGroupRing( Units( KG ) );[0X
+    [4X<algebra-with-one over GF(2), with 4 generators>[0X
+    [4Xgap> UnderlyingGroupRing( PcUnits( KG ) );[0X
+    [4X<algebra-with-one over GF(2), with 4 generators>[0X
+    [4Xgap> UnderlyingGroupRing( NormalizedUnitGroup( KG ) );[0X
+    [4X<algebra-with-one over GF(2), with 4 generators>[0X
+    [4Xgap> UnderlyingGroupRing( PcNormalizedUnitGroup( KG ) );[0X
+    [4X<algebra-with-one over GF(2), with 4 generators>[0X
+    [4X[0X
+  [4X------------------------------------------------------------------[0X
   
-  [1m[4m[31m4.4-12 UnitarySubgroup[0m
+  [1X4.4-12 UnitarySubgroup[0m
   
-  [1m[34m> UnitarySubgroup( [0m[22m[34mU[0m[1m[34m ) ____________________________________________[0mattribute
-  [1mReturns:[0m  the subgroup of the unit group
+  [2X> UnitarySubgroup( [0X[3XU[0X[2X ) ____________________________________________[0Xattribute
+  [6XReturns:[0X  the subgroup of the unit group
   
-  Let  [22m[34mU[0m  be  the normalized unit group of a group ring in either natural (see
-  [1m[34mNormalizedUnitGroup[0m  ([1m4.4-1[0m)) or power-commutator (see [1m[34mPcNormalizedUnitGroup[0m
-  ([1m4.4-2[0m))  presentation.  The  attribute  stores  the  unitary subgroup of [22m[34mU[0m,
-  generated  by  all unitary units of [22m[34mU[0m (see [1m[34mIsUnitary[0m ([1m4.2-9[0m)). The method is
+  Let  [3XU[0m  be  the normalized unit group of a group ring in either natural (see
+  [2XNormalizedUnitGroup[0m  ([14X4.4-1[0m)) or power-commutator (see [2XPcNormalizedUnitGroup[0m
+  ([14X4.4-2[0m))  presentation.  The  attribute  stores  the  unitary subgroup of [3XU[0m,
+  generated  by  all unitary units of [3XU[0m (see [2XIsUnitary[0m ([14X4.2-9[0m)). The method is
   straightforward, so it is not recommended to run it for large groups.
   
-  [22m[35m---------------------------  Example  ----------------------------[0m
-    [22m[35m[0m
-    [22m[35mgap> KG := GroupRing( GF( 2 ), DihedralGroup( 8 ) );[0m
-    [22m[35m<algebra-with-one over GF(2), with 3 generators>[0m
-    [22m[35mgap> U := NormalizedUnitGroup( KG );[0m
-    [22m[35m<group of size 128 with 7 generators>[0m
-    [22m[35mgap> HU := UnitarySubgroup( U );[0m
-    [22m[35m<group with 5 generators>[0m
-    [22m[35mgap> IdGroup( HU );[0m
-    [22m[35m[ 64, 261 ][0m
-    [22m[35mgap> V := PcNormalizedUnitGroup( KG );[0m
-    [22m[35m<pc group of size 128 with 7 generators>[0m
-    [22m[35mgap> HV := UnitarySubgroup( V );[0m
-    [22m[35mGroup([ f1, f2, f5, f6, f7 ])[0m
-    [22m[35mgap> IdGroup( HV );[0m
-    [22m[35m[ 64, 261 ][0m
-    [22m[35mgap> Image(NaturalBijectionToPcNormalizedUnitGroup( KG ), HU ) = HV;[0m
-    [22m[35mtrue[0m
-    [22m[35m[0m
-  [22m[35m------------------------------------------------------------------[0m
+  [4X---------------------------  Example  ----------------------------[0X
+    [4X[0X
+    [4Xgap> KG := GroupRing( GF( 2 ), DihedralGroup( 8 ) );[0X
+    [4X<algebra-with-one over GF(2), with 3 generators>[0X
+    [4Xgap> U := NormalizedUnitGroup( KG );[0X
+    [4X<group of size 128 with 7 generators>[0X
+    [4Xgap> HU := UnitarySubgroup( U );[0X
+    [4X<group with 5 generators>[0X
+    [4Xgap> IdGroup( HU );[0X
+    [4X[ 64, 261 ][0X
+    [4Xgap> V := PcNormalizedUnitGroup( KG );[0X
+    [4X<pc group of size 128 with 7 generators>[0X
+    [4Xgap> HV := UnitarySubgroup( V );[0X
+    [4XGroup([ f1, f2, f5, f6, f7 ])[0X
+    [4Xgap> IdGroup( HV );[0X
+    [4X[ 64, 261 ][0X
+    [4Xgap> Image(NaturalBijectionToPcNormalizedUnitGroup( KG ), HU ) = HV;[0X
+    [4Xtrue[0X
+    [4X[0X
+  [4X------------------------------------------------------------------[0X
   
-  [1m[4m[31m4.4-13 BicyclicUnitGroup[0m
+  [1X4.4-13 BicyclicUnitGroup[0m
   
-  [1m[34m> BicyclicUnitGroup( [0m[22m[34mU[0m[1m[34m ) __________________________________________[0mattribute
-  [1mReturns:[0m  the subgroup of the unit group, generated by bicyclic units
+  [2X> BicyclicUnitGroup( [0X[3XU[0X[2X ) __________________________________________[0Xattribute
+  [6XReturns:[0X  the subgroup of the unit group, generated by bicyclic units
   
-  Let  [22m[34mU[0m  be  the normalized unit group of a group ring in either natural (see
-  [1m[34mNormalizedUnitGroup[0m  ([1m4.4-1[0m)) or power-commutator (see [1m[34mPcNormalizedUnitGroup[0m
-  ([1m4.4-2[0m))  presentation. The attribute stores the subgroup of [22m[34mU[0m, generated by
-  all  bicyclic  units  u_g,h  and v_g,h (see [1m[34mBicyclicUnitOfType1[0m ([1m4.2-12[0m) and
-  [1m[34mBicyclicUnitOfType1[0m  ([1m4.2-12[0m)),  where  g and h run over the elements of the
+  Let  [3XU[0m  be  the normalized unit group of a group ring in either natural (see
+  [2XNormalizedUnitGroup[0m  ([14X4.4-1[0m)) or power-commutator (see [2XPcNormalizedUnitGroup[0m
+  ([14X4.4-2[0m))  presentation. The attribute stores the subgroup of [3XU[0m, generated by
+  all  bicyclic  units  u_g,h  and v_g,h (see [2XBicyclicUnitOfType1[0m ([14X4.2-12[0m) and
+  [2XBicyclicUnitOfType1[0m  ([14X4.2-12[0m)),  where  g and h run over the elements of the
   underlying group, and h do not belongs to the normalizer of < g > in G.
   
-  [22m[35m---------------------------  Example  ----------------------------[0m
-    [22m[35m[0m
-    [22m[35mgap> KG := GroupRing( GF( 2 ), DihedralGroup( 8 ) );[0m
-    [22m[35m<algebra-with-one over GF(2), with 3 generators>[0m
-    [22m[35mgap> U := NormalizedUnitGroup( KG );[0m
-    [22m[35m<group of size 128 with 7 generators>[0m
-    [22m[35mgap> BU := BicyclicUnitGroup( U );[0m
-    [22m[35m<group with 2 generators>[0m
-    [22m[35mgap> IdGroup( BU );[0m
-    [22m[35m[ 4, 2 ][0m
-    [22m[35mgap> V := PcNormalizedUnitGroup( KG );[0m
-    [22m[35m<pc group of size 128 with 7 generators>[0m
-    [22m[35mgap> BV := BicyclicUnitGroup( V );[0m
-    [22m[35mGroup([ f5*f6, f6*f7 ])[0m
-    [22m[35mgap> IdGroup( BV );[0m
-    [22m[35m[ 4, 2 ][0m
-    [22m[35mgap> Image( NaturalBijectionToPcNormalizedUnitGroup( KG ), BU ) = BV;[0m
-    [22m[35mtrue[0m
-    [22m[35m[0m
-  [22m[35m------------------------------------------------------------------[0m
+  [4X---------------------------  Example  ----------------------------[0X
+    [4X[0X
+    [4Xgap> KG := GroupRing( GF( 2 ), DihedralGroup( 8 ) );[0X
+    [4X<algebra-with-one over GF(2), with 3 generators>[0X
+    [4Xgap> U := NormalizedUnitGroup( KG );[0X
+    [4X<group of size 128 with 7 generators>[0X
+    [4Xgap> BU := BicyclicUnitGroup( U );[0X
+    [4X<group with 2 generators>[0X
+    [4Xgap> IdGroup( BU );[0X
+    [4X[ 4, 2 ][0X
+    [4Xgap> V := PcNormalizedUnitGroup( KG );[0X
+    [4X<pc group of size 128 with 7 generators>[0X
+    [4Xgap> BV := BicyclicUnitGroup( V );[0X
+    [4XGroup([ f5*f6, f6*f7 ])[0X
+    [4Xgap> IdGroup( BV );[0X
+    [4X[ 4, 2 ][0X
+    [4Xgap> Image( NaturalBijectionToPcNormalizedUnitGroup( KG ), BU ) = BV;[0X
+    [4Xtrue[0X
+    [4X[0X
+  [4X------------------------------------------------------------------[0X
   
-  [1m[4m[31m4.4-14 AugmentationIdealPowerFactorGroup[0m
+  [1X4.4-14 GroupBases[0m
   
-  [1m[34m> AugmentationIdealPowerFactorGroup( [0m[22m[34mKG, n[0m[1m[34m ) ______________________[0moperation
-  [1mReturns:[0m  PcGroup
-  
-  ????????????????????????????????????????
-  
-  [22m[35m---------------------------  Example  ----------------------------[0m
-    [22m[35m[0m
-    [22m[35m[0m
-  [22m[35m------------------------------------------------------------------[0m
-  
-  [1m[4m[31m4.4-15 GroupBases[0m
-  
-  [1m[34m> GroupBases( [0m[22m[34mKG[0m[1m[34m ) ________________________________________________[0mattribute
-  [1mReturns:[0m  a list of lists of group rings elements
+  [2X> GroupBases( [0X[3XKG[0X[2X ) ________________________________________________[0Xattribute
+  [6XReturns:[0X  a list of lists of group rings elements
   
   The  subgroup  B  of  the  normalized  unit group of the group algebra KG is
-  called a [22m[36mgroup basis[0m, if the elements of B are linearly independent over the
-  field  K  and  KB=KG.  If  [22m[34mKG[0m  is a p-modular group algebra, then [22m[32mGroupBases[0m
+  called a [13Xgroup basis[0m, if the elements of B are linearly independent over the
+  field  K  and  KB=KG.  If  [3XKG[0m  is a p-modular group algebra, then [10XGroupBases[0m
   returns  a  list  of  representatives  of the conjugacy classes of the group
-  bases of the group algebra [22m[34mKG[0m in its normalised unit group.
+  bases of the group algebra [3XKG[0m in its normalised unit group.
   
-  [22m[35m---------------------------  Example  ----------------------------[0m
-    [22m[35m[0m
-    [22m[35mgap> D8 := DihedralGroup( 8 );[0m
-    [22m[35m<pc group of size 8 with 3 generators>[0m
-    [22m[35mgap> K := GF(2);[0m
-    [22m[35mGF(2)[0m
-    [22m[35mgap> KD8 := GroupRing( GF( 2 ), D8 );[0m
-    [22m[35m<algebra-with-one over GF(2), with 3 generators>[0m
-    [22m[35mgap> gb := GroupBases( KD8 );;[0m
-    [22m[35mgap> Length( gb );[0m
-    [22m[35m32[0m
-    [22m[35mgap> gb[1];[0m
-    [22m[35m[ (Z(2)^0)*<identity> of ..., (Z(2)^0)*f3,[0m
-    [22m[35m  (Z(2)^0)*f1*f2+(Z(2)^0)*f2*f3+(Z(2)^0)*f1*f2*f3,[0m
-    [22m[35m  (Z(2)^0)*f2+(Z(2)^0)*f1*f2+(Z(2)^0)*f1*f2*f3,[0m
-    [22m[35m  (Z(2)^0)*<identity> of ...+(Z(2)^0)*f2+(Z(2)^0)*f3+(Z(2)^0)*f2*f3+(Z(2)^[0m
-    [22m[35m    0)*f1*f2*f3, (Z(2)^0)*f2+(Z(2)^0)*f1*f3+(Z(2)^0)*f2*f3,[0m
-    [22m[35m  (Z(2)^0)*<identity> of ...+(Z(2)^0)*f2+(Z(2)^0)*f3+(Z(2)^0)*f1*f2+(Z(2)^[0m
-    [22m[35m    0)*f2*f3, (Z(2)^0)*f1+(Z(2)^0)*f2+(Z(2)^0)*f2*f3 ][0m
-    [22m[35mgap> Length( last );[0m
-    [22m[35m8    [0m
-    [22m[35m[0m
-  [22m[35m------------------------------------------------------------------[0m
+  [4X---------------------------  Example  ----------------------------[0X
+    [4X[0X
+    [4Xgap> D8 := DihedralGroup( 8 );[0X
+    [4X<pc group of size 8 with 3 generators>[0X
+    [4Xgap> K := GF(2);[0X
+    [4XGF(2)[0X
+    [4Xgap> KD8 := GroupRing( GF( 2 ), D8 );[0X
+    [4X<algebra-with-one over GF(2), with 3 generators>[0X
+    [4Xgap> gb := GroupBases( KD8 );;[0X
+    [4Xgap> Length( gb );[0X
+    [4X32[0X
+    [4Xgap> gb[1];[0X
+    [4X[ (Z(2)^0)*<identity> of ..., (Z(2)^0)*f3,[0X
+    [4X  (Z(2)^0)*f1*f2+(Z(2)^0)*f2*f3+(Z(2)^0)*f1*f2*f3,[0X
+    [4X  (Z(2)^0)*f2+(Z(2)^0)*f1*f2+(Z(2)^0)*f1*f2*f3,[0X
+    [4X  (Z(2)^0)*<identity> of ...+(Z(2)^0)*f2+(Z(2)^0)*f3+(Z(2)^0)*f2*f3+(Z(2)^[0X
+    [4X    0)*f1*f2*f3, (Z(2)^0)*f2+(Z(2)^0)*f1*f3+(Z(2)^0)*f2*f3,[0X
+    [4X  (Z(2)^0)*<identity> of ...+(Z(2)^0)*f2+(Z(2)^0)*f3+(Z(2)^0)*f1*f2+(Z(2)^[0X
+    [4X    0)*f2*f3, (Z(2)^0)*f1+(Z(2)^0)*f2+(Z(2)^0)*f2*f3 ][0X
+    [4Xgap> Length( last );[0X
+    [4X8    [0X
+    [4X[0X
+  [4X------------------------------------------------------------------[0X
   
   
-  [1m[4m[31m4.5 The Lie algebra of a group algebra[0m
+  [1X4.5 The Lie algebra of a group algebra[0X
   
-  [1m[4m[31m4.5-1 LieAlgebraByDomain[0m
+  [1X4.5-1 LieAlgebraByDomain[0m
   
-  [1m[34m> LieAlgebraByDomain( [0m[22m[34mA[0m[1m[34m ) ____________________________________________[0mmethod
+  [2X> LieAlgebraByDomain( [0X[3XA[0X[2X ) ____________________________________________[0Xmethod
   
   This  method  takes  a  group  algebra  as  its argument, and constructs its
   associated  Lie  algebra  in  which  the  product  is the bracket operation:
   [a,b]=ab-ba.  It  is  recommended that the user never calls this method. The
   Lie  algebra  for  an  associative  algebra should normally be created using
-  [22m[32mLieAlgebra(  A  )[0m.  When  [22m[32mLieAlgebra[0m is first invoked, it constructs the Lie
-  algebra  for  [22m[34mA[0m  using  [22m[32mLieAlgebraByDomain[0m.  After  that  it stores this Lie
-  algebra and simply returns it if [22m[32mLieAlgebra[0m is called again.
+  [10XLieAlgebra(  A  )[0m.  When  [10XLieAlgebra[0m is first invoked, it constructs the Lie
+  algebra  for  [3XA[0m  using  [10XLieAlgebraByDomain[0m.  After  that  it stores this Lie
+  algebra and simply returns it if [10XLieAlgebra[0m is called again.
   
-  [22m[35m---------------------------  Example  ----------------------------[0m
-    [22m[35m[0m
-    [22m[35mgap> G := SymmetricGroup(3);; FG := GroupRing( GF( 2 ), G );[0m
-    [22m[35m<algebra-with-one over GF(2), with 2 generators>[0m
-    [22m[35mgap> L := LieAlgebra( FG );[0m
-    [22m[35m#I  LAGUNA package: Constructing Lie algebra ...[0m
-    [22m[35m<Lie algebra over GF(2)>[0m
-    [22m[35m[0m
-  [22m[35m------------------------------------------------------------------[0m
+  [4X---------------------------  Example  ----------------------------[0X
+    [4X[0X
+    [4Xgap> G := SymmetricGroup(3);; FG := GroupRing( GF( 2 ), G );[0X
+    [4X<algebra-with-one over GF(2), with 2 generators>[0X
+    [4Xgap> L := LieAlgebra( FG );[0X
+    [4X#I  LAGUNA package: Constructing Lie algebra ...[0X
+    [4X<Lie algebra over GF(2)>[0X
+    [4X[0X
+  [4X------------------------------------------------------------------[0X
   
-  [1m[4m[31m4.5-2 IsLieAlgebraByAssociativeAlgebra[0m
+  [1X4.5-2 IsLieAlgebraByAssociativeAlgebra[0m
   
-  [1m[34m> IsLieAlgebraByAssociativeAlgebra( [0m[22m[34mL[0m[1m[34m ) ____________________________[0mCategory
+  [2X> IsLieAlgebraByAssociativeAlgebra( [0X[3XL[0X[2X ) ____________________________[0XCategory
   
-  This  category  signifies  that the Lie algebra [22m[34mL[0m was constructed as the Lie
+  This  category  signifies  that the Lie algebra [3XL[0m was constructed as the Lie
   algebra  associated  with  an associative algebra (this piece of information
   cannot be obtained later).
   
-  [22m[35m---------------------------  Example  ----------------------------[0m
-    [22m[35m[0m
-    [22m[35mgap> KG := GroupRing( GF(3), DihedralGroup(16) );[0m
-    [22m[35m<algebra-with-one over GF(3), with 4 generators>[0m
-    [22m[35mgap> L := LieAlgebra ( KG );[0m
-    [22m[35m#I  LAGUNA package: Constructing Lie algebra ...[0m
-    [22m[35m<Lie algebra over GF(3)>[0m
-    [22m[35mgap> IsLieAlgebraByAssociativeAlgebra( L );[0m
-    [22m[35mtrue[0m
-    [22m[35m[0m
-  [22m[35m------------------------------------------------------------------[0m
+  [4X---------------------------  Example  ----------------------------[0X
+    [4X[0X
+    [4Xgap> KG := GroupRing( GF(3), DihedralGroup(16) );[0X
+    [4X<algebra-with-one over GF(3), with 4 generators>[0X
+    [4Xgap> L := LieAlgebra ( KG );[0X
+    [4X#I  LAGUNA package: Constructing Lie algebra ...[0X
+    [4X<Lie algebra over GF(3)>[0X
+    [4Xgap> IsLieAlgebraByAssociativeAlgebra( L );[0X
+    [4Xtrue[0X
+    [4X[0X
+  [4X------------------------------------------------------------------[0X
   
-  [1m[4m[31m4.5-3 UnderlyingAssociativeAlgebra[0m
+  [1X4.5-3 UnderlyingAssociativeAlgebra[0m
   
-  [1m[34m> UnderlyingAssociativeAlgebra( [0m[22m[34mL[0m[1m[34m ) _______________________________[0mattribute
-  [1mReturns:[0m  the underlying associative algebra of a Lie algebra
+  [2X> UnderlyingAssociativeAlgebra( [0X[3XL[0X[2X ) _______________________________[0Xattribute
+  [6XReturns:[0X  the underlying associative algebra of a Lie algebra
   
-  If  a  Lie  algebra  [22m[34mL[0m  is  constructed from an associative algebra, then it
+  If  a  Lie  algebra  [3XL[0m  is  constructed from an associative algebra, then it
   remembers this underlying associative algebra as one of its attributes.
   
-  [22m[35m---------------------------  Example  ----------------------------[0m
-    [22m[35m[0m
-    [22m[35mgap> KG := GroupRing( GF(2), DihedralGroup(16) ); [0m
-    [22m[35m<algebra-with-one over GF(2), with 4 generators>[0m
-    [22m[35mgap> L := LieAlgebra ( KG );[0m
-    [22m[35m#I  LAGUNA package: Constructing Lie algebra ...[0m
-    [22m[35m<Lie algebra over GF(2)>[0m
-    [22m[35mgap> UnderlyingAssociativeAlgebra( L );[0m
-    [22m[35m<algebra-with-one over GF(2), with 4 generators>[0m
-    [22m[35mgap> last = KG;[0m
-    [22m[35mtrue  [0m
-    [22m[35m[0m
-  [22m[35m------------------------------------------------------------------[0m
+  [4X---------------------------  Example  ----------------------------[0X
+    [4X[0X
+    [4Xgap> KG := GroupRing( GF(2), DihedralGroup(16) ); [0X
+    [4X<algebra-with-one over GF(2), with 4 generators>[0X
+    [4Xgap> L := LieAlgebra ( KG );[0X
+    [4X#I  LAGUNA package: Constructing Lie algebra ...[0X
+    [4X<Lie algebra over GF(2)>[0X
+    [4Xgap> UnderlyingAssociativeAlgebra( L );[0X
+    [4X<algebra-with-one over GF(2), with 4 generators>[0X
+    [4Xgap> last = KG;[0X
+    [4Xtrue  [0X
+    [4X[0X
+  [4X------------------------------------------------------------------[0X
   
-  [1m[4m[31m4.5-4 NaturalBijectionToLieAlgebra[0m
+  [1X4.5-4 NaturalBijectionToLieAlgebra[0m
   
-  [1m[34m> NaturalBijectionToLieAlgebra( [0m[22m[34mA[0m[1m[34m ) _______________________________[0mattribute
-  [1mReturns:[0m  a mapping
+  [2X> NaturalBijectionToLieAlgebra( [0X[3XA[0X[2X ) _______________________________[0Xattribute
+  [6XReturns:[0X  a mapping
   
   The  natural  linear  bijection  between  the  (isomorphic,  but  not equal)
-  underlying  vector spaces of an associative algebra [22m[34mA[0m and its associated Lie
-  algebra  is  stored  as  an attribute of [22m[34mA[0m. Note that this is a vector space
+  underlying  vector spaces of an associative algebra [3XA[0m and its associated Lie
+  algebra  is  stored  as  an attribute of [3XA[0m. Note that this is a vector space
   isomorphism between two algebras, but not an algebra isomorphism.
   
-  [22m[35m---------------------------  Example  ----------------------------[0m
-    [22m[35m[0m
-    [22m[35mgap> F := GF( 2 ); G := SymmetricGroup( 3 ); FG := GroupRing( F, G );[0m
-    [22m[35mGF(2)[0m
-    [22m[35mSym( [ 1 .. 3 ] )[0m
-    [22m[35m<algebra-with-one over GF(2), with 2 generators>[0m
-    [22m[35mgap> t := NaturalBijectionToLieAlgebra( FG ); [0m
-    [22m[35mMappingByFunction( <algebra-with-one over GF(2), with [0m
-    [22m[35m2 generators>, <Lie algebra over GF([0m
-    [22m[35m2)>, <Operation "LieObject">, function( y ) ... end )[0m
-    [22m[35mgap> a := Random( FG );[0m
-    [22m[35m(Z(2)^0)*(1,2,3)+(Z(2)^0)*(1,3,2)+(Z(2)^0)*(1,3)[0m
-    [22m[35mgap> a * a;                     # product in the associative algebra[0m
-    [22m[35m(Z(2)^0)*()+(Z(2)^0)*(1,2,3)+(Z(2)^0)*(1,3,2)[0m
-    [22m[35mgap> b := a^t;[0m
-    [22m[35mLieObject( (Z(2)^0)*(1,2,3)+(Z(2)^0)*(1,3,2)+(Z(2)^0)*(1,3) )[0m
-    [22m[35mgap> b * b;                     # product in the Lie algebra (commutator) ...[0m
-    [22m[35mLieObject( <zero> of ... )      # ... must be zero!   [0m
-    [22m[35m[0m
-  [22m[35m------------------------------------------------------------------[0m
+  [4X---------------------------  Example  ----------------------------[0X
+    [4X[0X
+    [4Xgap> F := GF( 2 ); G := SymmetricGroup( 3 ); FG := GroupRing( F, G );[0X
+    [4XGF(2)[0X
+    [4XSym( [ 1 .. 3 ] )[0X
+    [4X<algebra-with-one over GF(2), with 2 generators>[0X
+    [4Xgap> t := NaturalBijectionToLieAlgebra( FG ); [0X
+    [4XMappingByFunction( <algebra-with-one over GF(2), with [0X
+    [4X2 generators>, <Lie algebra over GF([0X
+    [4X2)>, <Operation "LieObject">, function( y ) ... end )[0X
+    [4Xgap> a := Random( FG );[0X
+    [4X(Z(2)^0)*(1,2,3)+(Z(2)^0)*(1,3,2)+(Z(2)^0)*(1,3)[0X
+    [4Xgap> a * a;                     # product in the associative algebra[0X
+    [4X(Z(2)^0)*()+(Z(2)^0)*(1,2,3)+(Z(2)^0)*(1,3,2)[0X
+    [4Xgap> b := a^t;[0X
+    [4XLieObject( (Z(2)^0)*(1,2,3)+(Z(2)^0)*(1,3,2)+(Z(2)^0)*(1,3) )[0X
+    [4Xgap> b * b;                     # product in the Lie algebra (commutator) ...[0X
+    [4XLieObject( <zero> of ... )      # ... must be zero!   [0X
+    [4X[0X
+  [4X------------------------------------------------------------------[0X
   
-  [1m[4m[31m4.5-5 NaturalBijectionToAssociativeAlgebra[0m
+  [1X4.5-5 NaturalBijectionToAssociativeAlgebra[0m
   
-  [1m[34m> NaturalBijectionToAssociativeAlgebra( [0m[22m[34mL[0m[1m[34m ) _______________________[0mattribute
+  [2X> NaturalBijectionToAssociativeAlgebra( [0X[3XL[0X[2X ) _______________________[0Xattribute
   
   This is the inverse of the previous linear bijection, stored as an attribute
-  of the Lie algebra [22m[34mL[0m.
+  of the Lie algebra [3XL[0m.
   
-  [22m[35m---------------------------  Example  ----------------------------[0m
-    [22m[35m[0m
-    [22m[35mgap> G := SymmetricGroup(3); FG := GroupRing( GF( 2 ), G );[0m
-    [22m[35mSym( [ 1 .. 3 ] )[0m
-    [22m[35m<algebra-with-one over GF(2), with 2 generators>[0m
-    [22m[35mgap> L := LieAlgebra( FG );[0m
-    [22m[35m#I  LAGUNA package: Constructing Lie algebra ...[0m
-    [22m[35m<Lie algebra over GF(2)>[0m
-    [22m[35mgap> s := NaturalBijectionToAssociativeAlgebra( L );[0m
-    [22m[35mMappingByFunction( <Lie algebra over GF(2)>, <algebra-with-one over GF([0m
-    [22m[35m2), with 2 generators>, function( y ) ... end, <Operation "LieObject"> )[0m
-    [22m[35mgap> InverseGeneralMapping( s ) = NaturalBijectionToLieAlgebra( FG );[0m
-    [22m[35mtrue   [0m
-    [22m[35m[0m
-  [22m[35m------------------------------------------------------------------[0m
+  [4X---------------------------  Example  ----------------------------[0X
+    [4X[0X
+    [4Xgap> G := SymmetricGroup(3); FG := GroupRing( GF( 2 ), G );[0X
+    [4XSym( [ 1 .. 3 ] )[0X
+    [4X<algebra-with-one over GF(2), with 2 generators>[0X
+    [4Xgap> L := LieAlgebra( FG );[0X
+    [4X#I  LAGUNA package: Constructing Lie algebra ...[0X
+    [4X<Lie algebra over GF(2)>[0X
+    [4Xgap> s := NaturalBijectionToAssociativeAlgebra( L );[0X
+    [4XMappingByFunction( <Lie algebra over GF(2)>, <algebra-with-one over GF([0X
+    [4X2), with 2 generators>, function( y ) ... end, <Operation "LieObject"> )[0X
+    [4Xgap> InverseGeneralMapping( s ) = NaturalBijectionToLieAlgebra( FG );[0X
+    [4Xtrue   [0X
+    [4X[0X
+  [4X------------------------------------------------------------------[0X
   
-  [1m[4m[31m4.5-6 IsLieAlgebraOfGroupRing[0m
+  [1X4.5-6 IsLieAlgebraOfGroupRing[0m
   
-  [1m[34m> IsLieAlgebraOfGroupRing( [0m[22m[34mL[0m[1m[34m ) _____________________________________[0mproperty
+  [2X> IsLieAlgebraOfGroupRing( [0X[3XL[0X[2X ) _____________________________________[0Xproperty
   
-  If  a Lie algebra [22m[34mL[0m is constructed from an associative algebra which happens
+  If  a Lie algebra [3XL[0m is constructed from an associative algebra which happens
   to be in fact a group ring, it has many nice properties that can be used for
   fast algorithms, so this information is stored as a property.
   
-  [22m[35m---------------------------  Example  ----------------------------[0m
-    [22m[35m[0m
-    [22m[35mgap> F := GF( 2 ); G := SymmetricGroup( 3 ); FG := GroupRing( F, G );[0m
-    [22m[35mGF(2)[0m
-    [22m[35mSym( [ 1 .. 3 ] )[0m
-    [22m[35m<algebra-with-one over GF(2), with 2 generators>[0m
-    [22m[35mgap> L := LieAlgebra( FG );[0m
-    [22m[35m#I  LAGUNA package: Constructing Lie algebra ...[0m
-    [22m[35m<Lie algebra over GF(2)>[0m
-    [22m[35mgap> IsLieAlgebraOfGroupRing( L );[0m
-    [22m[35mtrue   [0m
-    [22m[35m[0m
-  [22m[35m------------------------------------------------------------------[0m
+  [4X---------------------------  Example  ----------------------------[0X
+    [4X[0X
+    [4Xgap> F := GF( 2 ); G := SymmetricGroup( 3 ); FG := GroupRing( F, G );[0X
+    [4XGF(2)[0X
+    [4XSym( [ 1 .. 3 ] )[0X
+    [4X<algebra-with-one over GF(2), with 2 generators>[0X
+    [4Xgap> L := LieAlgebra( FG );[0X
+    [4X#I  LAGUNA package: Constructing Lie algebra ...[0X
+    [4X<Lie algebra over GF(2)>[0X
+    [4Xgap> IsLieAlgebraOfGroupRing( L );[0X
+    [4Xtrue   [0X
+    [4X[0X
+  [4X------------------------------------------------------------------[0X
   
-  [1m[4m[31m4.5-7 UnderlyingGroup[0m
+  [1X4.5-7 UnderlyingGroup[0m
   
-  [1m[34m> UnderlyingGroup( [0m[22m[34mL[0m[1m[34m ) ____________________________________________[0mattribute
-  [1mReturns:[0m  the underlying group
+  [2X> UnderlyingGroup( [0X[3XL[0X[2X ) ____________________________________________[0Xattribute
+  [6XReturns:[0X  the underlying group
   
-  The  underlying  group  of  a Lie algebra [22m[34mL[0m that is constructed from a group
+  The  underlying  group  of  a Lie algebra [3XL[0m that is constructed from a group
   ring   is   defined  as  the  underlying  group  of  this  group  ring;  see
-  [1m[34mUnderlyingGroup[0m ([1m4.1-4[0m).
+  [2XUnderlyingGroup[0m ([14X4.1-4[0m).
   
-  [22m[35m---------------------------  Example  ----------------------------[0m
-    [22m[35m[0m
-    [22m[35mgap> F := GF( 2 ); G := SymmetricGroup( 3 ); FG := GroupRing( F, G );[0m
-    [22m[35mGF(2)[0m
-    [22m[35mSym( [ 1 .. 3 ] )[0m
-    [22m[35m<algebra-with-one over GF(2), with 2 generators>[0m
-    [22m[35mgap> L := LieAlgebra( FG );[0m
-    [22m[35m#I  LAGUNA package: Constructing Lie algebra ...[0m
-    [22m[35m<Lie algebra over GF(2)>[0m
-    [22m[35mgap> UnderlyingGroup( L );[0m
-    [22m[35mSym( [ 1 .. 3 ] )[0m
-    [22m[35mgap> LeftActingDomain( L );[0m
-    [22m[35mGF(2)   [0m
-    [22m[35m[0m
-  [22m[35m------------------------------------------------------------------[0m
+  [4X---------------------------  Example  ----------------------------[0X
+    [4X[0X
+    [4Xgap> F := GF( 2 ); G := SymmetricGroup( 3 ); FG := GroupRing( F, G );[0X
+    [4XGF(2)[0X
+    [4XSym( [ 1 .. 3 ] )[0X
+    [4X<algebra-with-one over GF(2), with 2 generators>[0X
+    [4Xgap> L := LieAlgebra( FG );[0X
+    [4X#I  LAGUNA package: Constructing Lie algebra ...[0X
+    [4X<Lie algebra over GF(2)>[0X
+    [4Xgap> UnderlyingGroup( L );[0X
+    [4XSym( [ 1 .. 3 ] )[0X
+    [4Xgap> LeftActingDomain( L );[0X
+    [4XGF(2)   [0X
+    [4X[0X
+  [4X------------------------------------------------------------------[0X
   
-  [1m[4m[31m4.5-8 Embedding[0m
+  [1X4.5-8 Embedding[0m
   
-  [1m[34m> Embedding( [0m[22m[34mU, L[0m[1m[34m ) _______________________________________________[0moperation
-  [1mReturns:[0m  a mapping, which is a composition of two mappings
+  [2X> Embedding( [0X[3XU, L[0X[2X ) _______________________________________________[0Xoperation
+  [6XReturns:[0X  a mapping, which is a composition of two mappings
   
-  Let  FG  be  a  group  ring,  let [22m[34mU[0m be a submagma of G, and let [22m[34mL[0m be the Lie
-  algebra  associated  with  FG.  Then  [22m[32mEmbedding([22m[34mU[0m,  [22m[34mL[0m  )[0m returns the obvious
-  mapping  from  [22m[34mU[0m to [22m[34mL[0m (as the composition of the mappings [22m[32mEmbedding( [22m[34mU[0m, FG )[0m
-  and [22m[32mNaturalBijectionToLieAlgebra( FG )[0m).
+  Let  FG  be  a  group  ring,  let [3XU[0m be a submagma of G, and let [3XL[0m be the Lie
+  algebra  associated  with  FG.  Then  [10XEmbedding([3XU[0m[10X,  [3XL[0m[10X  )[0m returns the obvious
+  mapping  from  [3XU[0m to [3XL[0m (as the composition of the mappings [10XEmbedding( [3XU[0m[10X, FG )[0m
+  and [10XNaturalBijectionToLieAlgebra( FG )[0m).
   
-  [22m[35m---------------------------  Example  ----------------------------[0m
-    [22m[35m[0m
-    [22m[35mgap> F := GF( 2 ); G := SymmetricGroup( 3 ); FG := GroupRing( F, G );[0m
-    [22m[35mGF(2)[0m
-    [22m[35mSym( [ 1 .. 3 ] )[0m
-    [22m[35m<algebra-with-one over GF(2), with 2 generators>[0m
-    [22m[35mgap> L := LieAlgebra( FG );[0m
-    [22m[35m#I  LAGUNA package: Constructing Lie algebra ...[0m
-    [22m[35m<Lie algebra over GF(2)>[0m
-    [22m[35mgap> f := Embedding( G, L );[0m
-    [22m[35mCompositionMapping( MappingByFunction( <algebra-with-one over GF(2), with [0m
-    [22m[35m2 generators>, <Lie algebra over GF([0m
-    [22m[35m2)>, <Operation "LieObject">, function( y ) ... end ), <mapping: SymmetricGrou\[0m
-    [22m[35mp( [ 1 .. 3 ] ) -> AlgebraWithOne( GF(2), ... ) > )[0m
-    [22m[35mgap> (1,2)^f + (1,3)^f;[0m
-    [22m[35mLieObject( (Z(2)^0)*(1,2)+(Z(2)^0)*(1,3) )   [0m
-    [22m[35m[0m
-  [22m[35m------------------------------------------------------------------[0m
+  [4X---------------------------  Example  ----------------------------[0X
+    [4X[0X
+    [4Xgap> F := GF( 2 ); G := SymmetricGroup( 3 ); FG := GroupRing( F, G );[0X
+    [4XGF(2)[0X
+    [4XSym( [ 1 .. 3 ] )[0X
+    [4X<algebra-with-one over GF(2), with 2 generators>[0X
+    [4Xgap> L := LieAlgebra( FG );[0X
+    [4X#I  LAGUNA package: Constructing Lie algebra ...[0X
+    [4X<Lie algebra over GF(2)>[0X
+    [4Xgap> f := Embedding( G, L );[0X
+    [4XCompositionMapping( MappingByFunction( <algebra-with-one over GF(2), with [0X
+    [4X2 generators>, <Lie algebra over GF([0X
+    [4X2)>, <Operation "LieObject">, function( y ) ... end ), <mapping: SymmetricGrou\[0X
+    [4Xp( [ 1 .. 3 ] ) -> AlgebraWithOne( GF(2), ... ) > )[0X
+    [4Xgap> (1,2)^f + (1,3)^f;[0X
+    [4XLieObject( (Z(2)^0)*(1,2)+(Z(2)^0)*(1,3) )   [0X
+    [4X[0X
+  [4X------------------------------------------------------------------[0X
   
-  [1m[4m[31m4.5-9 LieCentre[0m
+  [1X4.5-9 LieCentre[0m
   
-  [1m[34m> LieCentre( [0m[22m[34mL[0m[1m[34m ) _____________________________________________________[0mmethod
-  [1mReturns:[0m  a Lie algebra
+  [2X> LieCentre( [0X[3XL[0X[2X ) _____________________________________________________[0Xmethod
+  [6XReturns:[0X  a Lie algebra
   
   The  centre  of  the Lie algebra associated with a group ring corresponds to
   the  centre of the underlying group ring, and it can be calculated very fast
   by  considering  the conjugacy classes of the group. This method returns the
-  centre of [22m[34mL[0m using this idea.
+  centre of [3XL[0m using this idea.
   
-  [22m[35m---------------------------  Example  ----------------------------[0m
-    [22m[35m[0m
-    [22m[35mgap> G := SmallGroup( 256, 400 ); FG := GroupRing( GF( 2 ), G ); [0m
-    [22m[35m<pc group of size 256 with 8 generators>[0m
-    [22m[35m<algebra-with-one over GF(2), with 8 generators>[0m
-    [22m[35mgap> L := LieAlgebra( FG );[0m
-    [22m[35m#I  LAGUNA package: Constructing Lie algebra ...[0m
-    [22m[35m<Lie algebra over GF(2)>[0m
-    [22m[35mgap> C := LieCentre( L );[0m
-    [22m[35m<Lie algebra of dimension 28 over GF(2)>[0m
-    [22m[35mgap> D := LieDerivedSubalgebra( L );[0m
-    [22m[35m#I  LAGUNA package: Computing the Lie derived subalgebra ...[0m
-    [22m[35m<Lie algebra of dimension 228 over GF(2)>[0m
-    [22m[35mgap> c := Dimension( C ); d := Dimension( D ); l := Dimension( L );[0m
-    [22m[35m28[0m
-    [22m[35m228[0m
-    [22m[35m256[0m
-    [22m[35mgap> c + d = l;[0m
-    [22m[35mtrue  # This is always the case for Lie algebras of group algebras!   [0m
-    [22m[35m[0m
-  [22m[35m------------------------------------------------------------------[0m
+  [4X---------------------------  Example  ----------------------------[0X
+    [4X[0X
+    [4Xgap> G := SmallGroup( 256, 400 ); FG := GroupRing( GF( 2 ), G ); [0X
+    [4X<pc group of size 256 with 8 generators>[0X
+    [4X<algebra-with-one over GF(2), with 8 generators>[0X
+    [4Xgap> L := LieAlgebra( FG );[0X
+    [4X#I  LAGUNA package: Constructing Lie algebra ...[0X
+    [4X<Lie algebra over GF(2)>[0X
+    [4Xgap> C := LieCentre( L );[0X
+    [4X<Lie algebra of dimension 28 over GF(2)>[0X
+    [4Xgap> D := LieDerivedSubalgebra( L );[0X
+    [4X#I  LAGUNA package: Computing the Lie derived subalgebra ...[0X
+    [4X<Lie algebra of dimension 228 over GF(2)>[0X
+    [4Xgap> c := Dimension( C ); d := Dimension( D ); l := Dimension( L );[0X
+    [4X28[0X
+    [4X228[0X
+    [4X256[0X
+    [4Xgap> c + d = l;[0X
+    [4Xtrue  # This is always the case for Lie algebras of group algebras!   [0X
+    [4X[0X
+  [4X------------------------------------------------------------------[0X
   
-  [1m[4m[31m4.5-10 LieDerivedSubalgebra[0m
+  [1X4.5-10 LieDerivedSubalgebra[0m
   
-  [1m[34m> LieDerivedSubalgebra( [0m[22m[34mL[0m[1m[34m ) __________________________________________[0mmethod
-  [1mReturns:[0m  a Lie algebra
+  [2X> LieDerivedSubalgebra( [0X[3XL[0X[2X ) __________________________________________[0Xmethod
+  [6XReturns:[0X  a Lie algebra
   
-  If  [22m[34mL[0m  is  the  Lie  algebra  associated with a group ring, then this method
-  returns  the  Lie  derived subalgebra of [22m[34mL[0m. This can be done very fast using
+  If  [3XL[0m  is  the  Lie  algebra  associated with a group ring, then this method
+  returns  the  Lie  derived subalgebra of [3XL[0m. This can be done very fast using
   the conjugacy classes of the underlying group.
   
-  [22m[35m---------------------------  Example  ----------------------------[0m
-    [22m[35m[0m
-    [22m[35mgap> G := SmallGroup( 256, 400 ); FG := GroupRing( GF( 2 ), G ); [0m
-    [22m[35m<pc group of size 256 with 8 generators>[0m
-    [22m[35m<algebra-with-one over GF(2), with 8 generators>[0m
-    [22m[35mgap> L := LieAlgebra( FG );[0m
-    [22m[35m#I  LAGUNA package: Constructing Lie algebra ...[0m
-    [22m[35m<Lie algebra over GF(2)>[0m
-    [22m[35mgap> C := LieCentre( L );[0m
-    [22m[35m<Lie algebra of dimension 28 over GF(2)>[0m
-    [22m[35mgap> D := LieDerivedSubalgebra( L );[0m
-    [22m[35m#I  LAGUNA package: Computing the Lie derived subalgebra ...    [0m
-    [22m[35m<Lie algebra of dimension 228 over GF(2)>[0m
-    [22m[35mgap> l := Dimension( L ); c := Dimension( C ); d := Dimension( D );[0m
-    [22m[35m256[0m
-    [22m[35m28[0m
-    [22m[35m228[0m
-    [22m[35mgap> c + d = l;[0m
-    [22m[35mtrue  # This is always the case for Lie algebras of group algebras!   [0m
-    [22m[35m[0m
-  [22m[35m------------------------------------------------------------------[0m
+  [4X---------------------------  Example  ----------------------------[0X
+    [4X[0X
+    [4Xgap> G := SmallGroup( 256, 400 ); FG := GroupRing( GF( 2 ), G ); [0X
+    [4X<pc group of size 256 with 8 generators>[0X
+    [4X<algebra-with-one over GF(2), with 8 generators>[0X
+    [4Xgap> L := LieAlgebra( FG );[0X
+    [4X#I  LAGUNA package: Constructing Lie algebra ...[0X
+    [4X<Lie algebra over GF(2)>[0X
+    [4Xgap> C := LieCentre( L );[0X
+    [4X<Lie algebra of dimension 28 over GF(2)>[0X
+    [4Xgap> D := LieDerivedSubalgebra( L );[0X
+    [4X#I  LAGUNA package: Computing the Lie derived subalgebra ...    [0X
+    [4X<Lie algebra of dimension 228 over GF(2)>[0X
+    [4Xgap> l := Dimension( L ); c := Dimension( C ); d := Dimension( D );[0X
+    [4X256[0X
+    [4X28[0X
+    [4X228[0X
+    [4Xgap> c + d = l;[0X
+    [4Xtrue  # This is always the case for Lie algebras of group algebras!   [0X
+    [4X[0X
+  [4X------------------------------------------------------------------[0X
   
-  [1m[4m[31m4.5-11 IsLieAbelian[0m
+  [1X4.5-11 IsLieAbelian[0m
   
-  [1m[34m> IsLieAbelian( [0m[22m[34mL[0m[1m[34m ) __________________________________________________[0mmethod
+  [2X> IsLieAbelian( [0X[3XL[0X[2X ) __________________________________________________[0Xmethod
   
-  The Lie algebra [22m[34mL[0m of an associative algebra A is Lie abelian, if and only if
-  A is abelian, so this method refers to [22m[32mIsAbelian( A )[0m.
+  The Lie algebra [3XL[0m of an associative algebra A is Lie abelian, if and only if
+  A is abelian, so this method refers to [10XIsAbelian( A )[0m.
   
-  [22m[35m---------------------------  Example  ----------------------------[0m
-    [22m[35m[0m
-    [22m[35mgap> G := SymmetricGroup( 3 ); FG := GroupRing( GF( 2 ), G); [0m
-    [22m[35mSym( [ 1 .. 3 ] )[0m
-    [22m[35m<algebra-with-one over GF(2), with 2 generators>[0m
-    [22m[35mgap> L := LieAlgebra( FG );          [0m
-    [22m[35m#I  LAGUNA package: Constructing Lie algebra ...[0m
-    [22m[35m<Lie algebra over GF(2)>[0m
-    [22m[35mgap> IsAbelian( G );[0m
-    [22m[35mfalse[0m
-    [22m[35mgap> IsAbelian( L );    # This command should never be used for Lie algebras![0m
-    [22m[35mtrue                    # It gives a result, but (probably) not the desired one.[0m
-    [22m[35mgap> IsLieAbelian( L ); # Instead, IsLieAbelian is the correct command.[0m
-    [22m[35mfalse   [0m
-    [22m[35m[0m
-  [22m[35m------------------------------------------------------------------[0m
+  [4X---------------------------  Example  ----------------------------[0X
+    [4X[0X
+    [4Xgap> G := SymmetricGroup( 3 ); FG := GroupRing( GF( 2 ), G); [0X
+    [4XSym( [ 1 .. 3 ] )[0X
+    [4X<algebra-with-one over GF(2), with 2 generators>[0X
+    [4Xgap> L := LieAlgebra( FG );          [0X
+    [4X#I  LAGUNA package: Constructing Lie algebra ...[0X
+    [4X<Lie algebra over GF(2)>[0X
+    [4Xgap> IsAbelian( G );[0X
+    [4Xfalse[0X
+    [4Xgap> IsAbelian( L );    # This command should never be used for Lie algebras![0X
+    [4Xtrue                    # It gives a result, but (probably) not the desired one.[0X
+    [4Xgap> IsLieAbelian( L ); # Instead, IsLieAbelian is the correct command.[0X
+    [4Xfalse   [0X
+    [4X[0X
+  [4X------------------------------------------------------------------[0X
   
-  [1m[4m[31m4.5-12 IsLieSolvable[0m
+  [1X4.5-12 IsLieSolvable[0m
   
-  [1m[34m> IsLieSolvable( [0m[22m[34mL[0m[1m[34m ) _________________________________________________[0mmethod
+  [2X> IsLieSolvable( [0X[3XL[0X[2X ) _________________________________________________[0Xmethod
   
   In [PPS73] Passi, Passman, and Sehgal have classified all groups G such that
   the Lie algebra associated with the group ring is solvable. This method uses
   their classification, making it considerably faster than the more elementary
   method which just calculates Lie commutators.
   
-  [22m[35m---------------------------  Example  ----------------------------[0m
-    [22m[35m[0m
-    [22m[35mgap> G := SmallGroup( 256, 400 ); FG := GroupRing( GF( 2 ), G ); [0m
-    [22m[35m<pc group of size 256 with 8 generators>[0m
-    [22m[35m<algebra-with-one over GF(2), with 8 generators>[0m
-    [22m[35mgap> L := LieAlgebra( FG );[0m
-    [22m[35m#I  LAGUNA package: Constructing Lie algebra ...[0m
-    [22m[35m<Lie algebra over GF(2)>[0m
-    [22m[35mgap> IsLieSolvable( L );                       # This is very fast.[0m
-    [22m[35mtrue[0m
-    [22m[35mgap> List( LieDerivedSeries( L ), Dimension ); # This is very slow.[0m
-    [22m[35m[ 256, 228, 189, 71, 0 ]   [0m
-    [22m[35m[0m
-  [22m[35m------------------------------------------------------------------[0m
+  [4X---------------------------  Example  ----------------------------[0X
+    [4X[0X
+    [4Xgap> G := SmallGroup( 256, 400 ); FG := GroupRing( GF( 2 ), G ); [0X
+    [4X<pc group of size 256 with 8 generators>[0X
+    [4X<algebra-with-one over GF(2), with 8 generators>[0X
+    [4Xgap> L := LieAlgebra( FG );[0X
+    [4X#I  LAGUNA package: Constructing Lie algebra ...[0X
+    [4X<Lie algebra over GF(2)>[0X
+    [4Xgap> IsLieSolvable( L );                       # This is very fast.[0X
+    [4Xtrue[0X
+    [4Xgap> List( LieDerivedSeries( L ), Dimension ); # This is very slow.[0X
+    [4X[ 256, 228, 189, 71, 0 ]   [0X
+    [4X[0X
+  [4X------------------------------------------------------------------[0X
   
-  [1m[4m[31m4.5-13 IsLieNilpotent[0m
+  [1X4.5-13 IsLieNilpotent[0m
   
-  [1m[34m> IsLieNilpotent( [0m[22m[34mL[0m[1m[34m ) ________________________________________________[0mmethod
+  [2X> IsLieNilpotent( [0X[3XL[0X[2X ) ________________________________________________[0Xmethod
   
   In [PPS73] Passi, Passman, and Sehgal have classified all groups G such that
   the Lie algebra associated with the group ring is Lie nilpotent. This method
   uses  their  classification,  making  it  considerably  faster than the more
   elementary method which just calculates Lie commutators.
   
-  [22m[35m---------------------------  Example  ----------------------------[0m
-    [22m[35m[0m
-    [22m[35mgap> G := SmallGroup( 256, 400 ); FG := GroupRing( GF( 2 ), G ); [0m
-    [22m[35m<pc group of size 256 with 8 generators>[0m
-    [22m[35m<algebra-with-one over GF(2), with 8 generators>[0m
-    [22m[35mgap> L := LieAlgebra( FG );[0m
-    [22m[35m#I  LAGUNA package: Constructing Lie algebra ...[0m
-    [22m[35m<Lie algebra over GF(2)>[0m
-    [22m[35mgap> IsLieNilpotent( L );                           # This is very fast.[0m
-    [22m[35mtrue[0m
-    [22m[35mgap> List( LieLowerCentralSeries( L ), Dimension ); # This is very slow.[0m
-    [22m[35m[ 256, 228, 222, 210, 191, 167, 138, 107, 76, 54, 29, 15, 6, 0 ]   [0m
-    [22m[35m[0m
-  [22m[35m------------------------------------------------------------------[0m
+  [4X---------------------------  Example  ----------------------------[0X
+    [4X[0X
+    [4Xgap> G := SmallGroup( 256, 400 ); FG := GroupRing( GF( 2 ), G ); [0X
+    [4X<pc group of size 256 with 8 generators>[0X
+    [4X<algebra-with-one over GF(2), with 8 generators>[0X
+    [4Xgap> L := LieAlgebra( FG );[0X
+    [4X#I  LAGUNA package: Constructing Lie algebra ...[0X
+    [4X<Lie algebra over GF(2)>[0X
+    [4Xgap> IsLieNilpotent( L );                           # This is very fast.[0X
+    [4Xtrue[0X
+    [4Xgap> List( LieLowerCentralSeries( L ), Dimension ); # This is very slow.[0X
+    [4X[ 256, 228, 222, 210, 191, 167, 138, 107, 76, 54, 29, 15, 6, 0 ]   [0X
+    [4X[0X
+  [4X------------------------------------------------------------------[0X
   
-  [1m[4m[31m4.5-14 IsLieMetabelian[0m
+  [1X4.5-14 IsLieMetabelian[0m
   
-  [1m[34m> IsLieMetabelian( [0m[22m[34mL[0m[1m[34m ) _____________________________________________[0mproperty
+  [2X> IsLieMetabelian( [0X[3XL[0X[2X ) _____________________________________________[0Xproperty
   
   In  [LR86]  Levin and Rosenberger have classified all groups G such that the
   Lie  algebra  associated  with the group ring is Lie metabelian. This method
   uses  their  classification,  making  it  considerably  faster than the more
   elementary method which just calculates Lie commutators.
   
-  [22m[35m---------------------------  Example  ----------------------------[0m
-    [22m[35m[0m
-    [22m[35mgap> G := SmallGroup( 256, 400 ); FG := GroupRing( GF( 2 ), G ); [0m
-    [22m[35m<pc group of size 256 with 8 generators>[0m
-    [22m[35m<algebra-with-one over GF(2), with 8 generators>[0m
-    [22m[35mgap> L := LieAlgebra( FG );[0m
-    [22m[35m#I  LAGUNA package: Constructing Lie algebra ...[0m
-    [22m[35m<Lie algebra over GF(2)>[0m
-    [22m[35mgap> IsLieMetabelian( L );[0m
-    [22m[35mfalse   [0m
-    [22m[35m[0m
-  [22m[35m------------------------------------------------------------------[0m
+  [4X---------------------------  Example  ----------------------------[0X
+    [4X[0X
+    [4Xgap> G := SmallGroup( 256, 400 ); FG := GroupRing( GF( 2 ), G ); [0X
+    [4X<pc group of size 256 with 8 generators>[0X
+    [4X<algebra-with-one over GF(2), with 8 generators>[0X
+    [4Xgap> L := LieAlgebra( FG );[0X
+    [4X#I  LAGUNA package: Constructing Lie algebra ...[0X
+    [4X<Lie algebra over GF(2)>[0X
+    [4Xgap> IsLieMetabelian( L );[0X
+    [4Xfalse   [0X
+    [4X[0X
+  [4X------------------------------------------------------------------[0X
   
-  [1m[4m[31m4.5-15 IsLieCentreByMetabelian[0m
+  [1X4.5-15 IsLieCentreByMetabelian[0m
   
-  [1m[34m> IsLieCentreByMetabelian( [0m[22m[34mL[0m[1m[34m ) _____________________________________[0mproperty
+  [2X> IsLieCentreByMetabelian( [0X[3XL[0X[2X ) _____________________________________[0Xproperty
   
-  In  [R02] the third author of this package classified all groups G such that
-  the  Lie algebra associated with the group ring is Lie centre-by-metabelian.
-  This  method uses the classification, making it considerably faster than the
-  more elementary method which just calculates Lie commutators.
+  In  [Ros02]  the  third  author of this package classified all groups G such
+  that   the   Lie   algebra   associated   with   the   group   ring  is  Lie
+  centre-by-metabelian.   This  method  uses  the  classification,  making  it
+  considerably  faster  than  the more elementary method which just calculates
+  Lie commutators.
   
-  [22m[35m---------------------------  Example  ----------------------------[0m
-    [22m[35m[0m
-    [22m[35mgap> G := SymmetricGroup( 3 ); FG := GroupRing( GF( 2 ), G ); [0m
-    [22m[35mSym( [ 1 .. 3 ] )[0m
-    [22m[35m<algebra-with-one over GF(2), with 2 generators>[0m
-    [22m[35mgap> L := LieAlgebra( FG );       [0m
-    [22m[35m#I  LAGUNA package: Constructing Lie algebra ...[0m
-    [22m[35m<Lie algebra over GF(2)>[0m
-    [22m[35mgap> IsLieMetabelian( L );                                             [0m
-    [22m[35mfalse[0m
-    [22m[35mgap> IsLieCentreByMetabelian( L );[0m
-    [22m[35mtrue   [0m
-    [22m[35m[0m
-  [22m[35m------------------------------------------------------------------[0m
+  [4X---------------------------  Example  ----------------------------[0X
+    [4X[0X
+    [4Xgap> G := SymmetricGroup( 3 ); FG := GroupRing( GF( 2 ), G ); [0X
+    [4XSym( [ 1 .. 3 ] )[0X
+    [4X<algebra-with-one over GF(2), with 2 generators>[0X
+    [4Xgap> L := LieAlgebra( FG );       [0X
+    [4X#I  LAGUNA package: Constructing Lie algebra ...[0X
+    [4X<Lie algebra over GF(2)>[0X
+    [4Xgap> IsLieMetabelian( L );                                             [0X
+    [4Xfalse[0X
+    [4Xgap> IsLieCentreByMetabelian( L );[0X
+    [4Xtrue   [0X
+    [4X[0X
+  [4X------------------------------------------------------------------[0X
   
-  [1m[4m[31m4.5-16 CanonicalBasis[0m
+  [1X4.5-16 CanonicalBasis[0m
   
-  [1m[34m> CanonicalBasis( [0m[22m[34mL[0m[1m[34m ) ________________________________________________[0mmethod
-  [1mReturns:[0m  basis of a Lie algebra
+  [2X> CanonicalBasis( [0X[3XL[0X[2X ) ________________________________________________[0Xmethod
+  [6XReturns:[0X  basis of a Lie algebra
   
   The  canonical  basis  of a group algebra FG is formed by the elements of G.
-  Here  [22m[34mL[0m  is  the  Lie algebra associated with FG, and the method returns the
-  images of the elements of G in [22m[34mL[0m.
+  Here  [3XL[0m  is  the  Lie algebra associated with FG, and the method returns the
+  images of the elements of G in [3XL[0m.
   
-  [22m[35m---------------------------  Example  ----------------------------[0m
-    [22m[35m[0m
-    [22m[35mgap> G := SymmetricGroup( 3 ); FG := GroupRing( GF( 2 ), G ); [0m
-    [22m[35mSym( [ 1 .. 3 ] )[0m
-    [22m[35m<algebra-with-one over GF(2), with 2 generators>[0m
-    [22m[35mgap> L := LieAlgebra( FG );       [0m
-    [22m[35m#I  LAGUNA package: Constructing Lie algebra ...[0m
-    [22m[35m<Lie algebra over GF(2)>[0m
-    [22m[35mgap> B := CanonicalBasis( L );[0m
-    [22m[35mCanonicalBasis( <Lie algebra of dimension 6 over GF(2)> )[0m
-    [22m[35mgap> Elements( B );[0m
-    [22m[35m[ LieObject( (Z(2)^0)*() ), LieObject( (Z(2)^0)*(2,3) ),[0m
-    [22m[35m  LieObject( (Z(2)^0)*(1,2) ), LieObject( (Z(2)^0)*(1,2,3) ),[0m
-    [22m[35m  LieObject( (Z(2)^0)*(1,3,2) ), LieObject( (Z(2)^0)*(1,3) ) ][0m
-    [22m[35m[0m
-  [22m[35m------------------------------------------------------------------[0m
+  [4X---------------------------  Example  ----------------------------[0X
+    [4X[0X
+    [4Xgap> G := SymmetricGroup( 3 ); FG := GroupRing( GF( 2 ), G ); [0X
+    [4XSym( [ 1 .. 3 ] )[0X
+    [4X<algebra-with-one over GF(2), with 2 generators>[0X
+    [4Xgap> L := LieAlgebra( FG );       [0X
+    [4X#I  LAGUNA package: Constructing Lie algebra ...[0X
+    [4X<Lie algebra over GF(2)>[0X
+    [4Xgap> B := CanonicalBasis( L );[0X
+    [4XCanonicalBasis( <Lie algebra of dimension 6 over GF(2)> )[0X
+    [4Xgap> Elements( B );[0X
+    [4X[ LieObject( (Z(2)^0)*() ), LieObject( (Z(2)^0)*(2,3) ),[0X
+    [4X  LieObject( (Z(2)^0)*(1,2) ), LieObject( (Z(2)^0)*(1,2,3) ),[0X
+    [4X  LieObject( (Z(2)^0)*(1,3,2) ), LieObject( (Z(2)^0)*(1,3) ) ][0X
+    [4X[0X
+  [4X------------------------------------------------------------------[0X
   
-  [1m[4m[31m4.5-17 IsBasisOfLieAlgebraOfGroupRing[0m
+  [1X4.5-17 IsBasisOfLieAlgebraOfGroupRing[0m
   
-  [1m[34m> IsBasisOfLieAlgebraOfGroupRing( [0m[22m[34mB[0m[1m[34m ) ______________________________[0mproperty
+  [2X> IsBasisOfLieAlgebraOfGroupRing( [0X[3XB[0X[2X ) ______________________________[0Xproperty
   
-  A  basis  [22m[34mB[0m  has  this property if the preimages of the basis vectors in the
+  A  basis  [3XB[0m  has  this property if the preimages of the basis vectors in the
   group algebra form a group. It can be verified if a basis has this property.
   This  is  important  for  the  speed  of  the  calculation  of the structure
-  constants table; see [1m[34mStructureConstantsTable[0m ([1m4.5-18[0m).
+  constants table; see [2XStructureConstantsTable[0m ([14X4.5-18[0m).
   
-  [22m[35m---------------------------  Example  ----------------------------[0m
-    [22m[35m[0m
-    [22m[35mgap> G := SymmetricGroup( 3 ); FG := GroupRing( GF( 2 ), G ); [0m
-    [22m[35mSym( [ 1 .. 3 ] )[0m
-    [22m[35m<algebra-with-one over GF(2), with 2 generators>[0m
-    [22m[35mgap> L := LieAlgebra( FG );    [0m
-    [22m[35m#I  LAGUNA package: Constructing Lie algebra ...[0m
-    [22m[35m<Lie algebra over GF(2)>[0m
-    [22m[35mgap> B := CanonicalBasis( L );[0m
-    [22m[35mCanonicalBasis( <Lie algebra of dimension 6 over GF(2)> )[0m
-    [22m[35mgap> IsBasisOfLieAlgebraOfGroupRing( B );[0m
-    [22m[35mtrue   [0m
-    [22m[35m[0m
-  [22m[35m------------------------------------------------------------------[0m
+  [4X---------------------------  Example  ----------------------------[0X
+    [4X[0X
+    [4Xgap> G := SymmetricGroup( 3 ); FG := GroupRing( GF( 2 ), G ); [0X
+    [4XSym( [ 1 .. 3 ] )[0X
+    [4X<algebra-with-one over GF(2), with 2 generators>[0X
+    [4Xgap> L := LieAlgebra( FG );    [0X
+    [4X#I  LAGUNA package: Constructing Lie algebra ...[0X
+    [4X<Lie algebra over GF(2)>[0X
+    [4Xgap> B := CanonicalBasis( L );[0X
+    [4XCanonicalBasis( <Lie algebra of dimension 6 over GF(2)> )[0X
+    [4Xgap> IsBasisOfLieAlgebraOfGroupRing( B );[0X
+    [4Xtrue   [0X
+    [4X[0X
+  [4X------------------------------------------------------------------[0X
   
-  [1m[4m[31m4.5-18 StructureConstantsTable[0m
+  [1X4.5-18 StructureConstantsTable[0m
   
-  [1m[34m> StructureConstantsTable( [0m[22m[34mB[0m[1m[34m ) _______________________________________[0mmethod
+  [2X> StructureConstantsTable( [0X[3XB[0X[2X ) _______________________________________[0Xmethod
   
   A very fast implementation for calculating the structure constants table for
-  the Lie algebra [22m[32mL[0m associated with a group ring with respect to its canonical
-  basis [22m[34mB[0m using its special structure; see [1m[34mCanonicalBasis[0m ([1m4.5-16[0m).
+  the Lie algebra [10XL[0m associated with a group ring with respect to its canonical
+  basis [3XB[0m using its special structure; see [2XCanonicalBasis[0m ([14X4.5-16[0m).
   
-  [22m[35m---------------------------  Example  ----------------------------[0m
-    [22m[35m[0m
-    [22m[35mgap> G := CyclicGroup( 2 ); FG := GroupRing( GF( 2 ), G ); [0m
-    [22m[35m<pc group of size 2 with 1 generators>[0m
-    [22m[35m<algebra-with-one over GF(2), with 1 generators>[0m
-    [22m[35mgap> L := LieAlgebra( FG );[0m
-    [22m[35m#I  LAGUNA package: Constructing Lie algebra ...[0m
-    [22m[35m<Lie algebra over GF(2)>[0m
-    [22m[35mgap> B := CanonicalBasis( L );[0m
-    [22m[35mCanonicalBasis( <Lie algebra of dimension 2 over GF(2)> )[0m
-    [22m[35mgap> StructureConstantsTable( B );       [0m
-    [22m[35m[ [ [ [  ], [  ] ], [ [  ], [  ] ] ], [ [ [  ], [  ] ], [ [  ], [  ] ] ], -1, [0m
-    [22m[35m  0*Z(2) ]  [0m
-    [22m[35m[0m
-  [22m[35m------------------------------------------------------------------[0m
+  [4X---------------------------  Example  ----------------------------[0X
+    [4X[0X
+    [4Xgap> G := CyclicGroup( 2 ); FG := GroupRing( GF( 2 ), G ); [0X
+    [4X<pc group of size 2 with 1 generators>[0X
+    [4X<algebra-with-one over GF(2), with 1 generators>[0X
+    [4Xgap> L := LieAlgebra( FG );[0X
+    [4X#I  LAGUNA package: Constructing Lie algebra ...[0X
+    [4X<Lie algebra over GF(2)>[0X
+    [4Xgap> B := CanonicalBasis( L );[0X
+    [4XCanonicalBasis( <Lie algebra of dimension 2 over GF(2)> )[0X
+    [4Xgap> StructureConstantsTable( B );       [0X
+    [4X[ [ [ [  ], [  ] ], [ [  ], [  ] ] ], [ [ [  ], [  ] ], [ [  ], [  ] ] ], -1, [0X
+    [4X  0*Z(2) ]  [0X
+    [4X[0X
+  [4X------------------------------------------------------------------[0X
   
-  [1m[4m[31m4.5-19 LieUpperNilpotencyIndex[0m
+  [1X4.5-19 LieUpperNilpotencyIndex[0m
   
-  [1m[34m> LieUpperNilpotencyIndex( [0m[22m[34mKG[0m[1m[34m ) ___________________________________[0mattribute
+  [2X> LieUpperNilpotencyIndex( [0X[3XKG[0X[2X ) ___________________________________[0Xattribute
   
-  In  a  modular  group  algebra  KG  the [22m[36mupper Lie power series[0m is defined as
+  In  a  modular  group  algebra  KG  the [13Xupper Lie power series[0m is defined as
   follows:   KG^(1)=KG,  KG^(n+1)  is  the  associative  ideal,  generated  by
   [KG^(n),KG].  The  upper Lie nilpotency index t^L(G) of the group algebra KG
   is  defined  to  be  the  smallest  number  n  such that KG^(n)=0. It can be
-  calculated  very  fast  using  Lie dimension subgroups [S91], that is, using
-  only  information  about  the  underlying  group;  see [1m[34mLieDimensionSubgroups[0m
-  ([1m4.6-4[0m).  This  is  why it is stored as an attribute of the group algebra [22m[34mKG[0m
+  calculated  very  fast using Lie dimension subgroups [Sha91], that is, using
+  only  information  about  the  underlying  group;  see [2XLieDimensionSubgroups[0m
+  ([14X4.6-4[0m).  This  is  why it is stored as an attribute of the group algebra [3XKG[0m
   rather than that of its associated Lie algebra.
   
-  [22m[35m---------------------------  Example  ----------------------------[0m
-    [22m[35m[0m
-    [22m[35mgap> KG := GroupRing( GF( 2 ), DihedralGroup( 16 ) );[0m
-    [22m[35m<algebra-with-one over GF(2), with 4 generators>[0m
-    [22m[35mgap> LieUpperNilpotencyIndex( KG );[0m
-    [22m[35m5      [0m
-    [22m[35m[0m
-  [22m[35m------------------------------------------------------------------[0m
+  [4X---------------------------  Example  ----------------------------[0X
+    [4X[0X
+    [4Xgap> KG := GroupRing( GF( 2 ), DihedralGroup( 16 ) );[0X
+    [4X<algebra-with-one over GF(2), with 4 generators>[0X
+    [4Xgap> LieUpperNilpotencyIndex( KG );[0X
+    [4X5      [0X
+    [4X[0X
+  [4X------------------------------------------------------------------[0X
   
-  [1m[4m[31m4.5-20 LieLowerNilpotencyIndex[0m
+  [1X4.5-20 LieLowerNilpotencyIndex[0m
   
-  [1m[34m> LieLowerNilpotencyIndex( [0m[22m[34mKG[0m[1m[34m ) ___________________________________[0mattribute
+  [2X> LieLowerNilpotencyIndex( [0X[3XKG[0X[2X ) ___________________________________[0Xattribute
   
-  In  a  modular  group  algebra  KG  the [22m[36mlower Lie power series[0m is defined as
+  In  a  modular  group  algebra  KG  the [13Xlower Lie power series[0m is defined as
   follows:  KG^[n]  is  the  associative ideal, generated by all (left-normed)
   Lie-products  [x_1,  x_2,  dots,  x_n],  x_i in KG. The lower Lie nilpotency
   index t_L(G) of the group algebra KG is defined to be the minimal smallest n
-  such  that  KG^[n]=0.  In  [D92]  the Jennings' conjecture was proved, which
+  such  that  KG^[n]=0.  In  [Du92] the Jennings' conjecture was proved, which
   means  that the nilpotency class of the normalized unit group of the modular
   group algebra KG is equal to t_L(G)-1.
   
   This  allows  to express lower Lie nilpotency index via the nilpotency class
   of the normalized unit group, and with its polycyclic presentation, provided
-  by  [1mLAGUNA[0m,  this  will  be  faster  than  elementary  calculations with Lie
+  by  [5XLAGUNA[0m,  this  will  be  faster  than  elementary  calculations with Lie
   commutators.  As  the  previous  attribute,  this index is also stored as an
-  attribute of the group algebra [22m[34mKG[0m.
+  attribute of the group algebra [3XKG[0m.
   
-  [22m[35m---------------------------  Example  ----------------------------[0m
-    [22m[35m[0m
-    [22m[35mgap> KG := GroupRing( GF( 2 ), DihedralGroup( 16 ) );[0m
-    [22m[35m<algebra-with-one over GF(2), with 4 generators>[0m
-    [22m[35mgap> LieLowerNilpotencyIndex( KG );[0m
-    [22m[35m5     [0m
-    [22m[35m[0m
-  [22m[35m------------------------------------------------------------------[0m
+  [4X---------------------------  Example  ----------------------------[0X
+    [4X[0X
+    [4Xgap> KG := GroupRing( GF( 2 ), DihedralGroup( 16 ) );[0X
+    [4X<algebra-with-one over GF(2), with 4 generators>[0X
+    [4Xgap> LieLowerNilpotencyIndex( KG );[0X
+    [4X5     [0X
+    [4X[0X
+  [4X------------------------------------------------------------------[0X
   
-  [1m[4m[31m4.5-21 LieDerivedLength[0m
+  [1X4.5-21 LieDerivedLength[0m
   
-  [1m[34m> LieDerivedLength( [0m[22m[34mL[0m[1m[34m ) ___________________________________________[0mattribute
+  [2X> LieDerivedLength( [0X[3XL[0X[2X ) ___________________________________________[0Xattribute
   
-  Let  L  be a Lie algebra. The [22m[36mLie derived series[0m of L is defined as follows:
+  Let  L  be a Lie algebra. The [13XLie derived series[0m of L is defined as follows:
   delta^[0](L)  =  L and delta^[n](L) = [delta^[n-1](L), delta^[n-1](L)]. L is
   called Lie solvable if there exists an integer m such that delta^[m](L) = 0.
-  In  this case the integer m is called the [22m[36mLie derived length[0m of L, and it is
+  In  this case the integer m is called the [13XLie derived length[0m of L, and it is
   returned by this function.
   
-  [22m[35m---------------------------  Example  ----------------------------[0m
-    [22m[35m[0m
-    [22m[35mgap> KG := GroupRing( GF ( 2 ), DihedralGroup( 16 ) );;[0m
-    [22m[35mgap> L := LieAlgebra( KG );[0m
-    [22m[35m#I  LAGUNA package: Constructing Lie algebra ...[0m
-    [22m[35m<Lie algebra over GF(2)>[0m
-    [22m[35mgap> LieDerivedLength( L );[0m
-    [22m[35m#I  LAGUNA package: Computing the Lie derived subalgebra ...[0m
-    [22m[35m3                                                            [0m
-    [22m[35m[0m
-  [22m[35m------------------------------------------------------------------[0m
+  [4X---------------------------  Example  ----------------------------[0X
+    [4X[0X
+    [4Xgap> KG := GroupRing( GF ( 2 ), DihedralGroup( 16 ) );;[0X
+    [4Xgap> L := LieAlgebra( KG );[0X
+    [4X#I  LAGUNA package: Constructing Lie algebra ...[0X
+    [4X<Lie algebra over GF(2)>[0X
+    [4Xgap> LieDerivedLength( L );[0X
+    [4X#I  LAGUNA package: Computing the Lie derived subalgebra ...[0X
+    [4X3                                                            [0X
+    [4X[0X
+  [4X------------------------------------------------------------------[0X
   
   
-  [1m[4m[31m4.6 Other commands[0m
+  [1X4.6 Other commands[0X
   
-  [1m[4m[31m4.6-1 SubgroupsOfIndexTwo[0m
+  [1X4.6-1 SubgroupsOfIndexTwo[0m
   
-  [1m[34m> SubgroupsOfIndexTwo( [0m[22m[34mG[0m[1m[34m ) ________________________________________[0mattribute
+  [2X> SubgroupsOfIndexTwo( [0X[3XG[0X[2X ) ________________________________________[0Xattribute
   
   Returns  a  list  of  subgroups  of  G  with  index  two. Such subgroups are
   important for the investigation of the Lie structure of the group algebra KG
   in the case of characteristic 2.
   
-  [22m[35m---------------------------  Example  ----------------------------[0m
-    [22m[35m[0m
-    [22m[35mgap> SubgroupsOfIndexTwo( DihedralGroup( 16) );[0m
-    [22m[35m[ Group([ f1, f1*f3, f1*f4, f1*f3*f4 ]), Group([ f2, f2*f3, f2*f4, f2*f3*f4 ]),[0m
-    [22m[35m  Group([ f1*f2, f1*f2*f3, f1*f2*f4, f1*f2*f3*f4 ]) ]     [0m
-    [22m[35m[0m
-  [22m[35m------------------------------------------------------------------[0m
+  [4X---------------------------  Example  ----------------------------[0X
+    [4X[0X
+    [4Xgap> SubgroupsOfIndexTwo( DihedralGroup( 16) );[0X
+    [4X[ Group([ f1, f1*f3, f1*f4, f1*f3*f4 ]), Group([ f2, f2*f3, f2*f4, f2*f3*f4 ]),[0X
+    [4X  Group([ f1*f2, f1*f2*f3, f1*f2*f4, f1*f2*f3*f4 ]) ]     [0X
+    [4X[0X
+  [4X------------------------------------------------------------------[0X
   
-  [1m[4m[31m4.6-2 DihedralDepth[0m
+  [1X4.6-2 DihedralDepth[0m
   
-  [1m[34m> DihedralDepth( [0m[22m[34mU[0m[1m[34m ) _________________________________________________[0mmethod
+  [2X> DihedralDepth( [0X[3XU[0X[2X ) _________________________________________________[0Xmethod
   
-  For  a  finite  2-group [22m[34mU[0m, the function returns its [22m[36mdihedral depth[0m, which is
-  defined  to  be  the  maximal  number  d  such  that  [22m[34mU[0m  contains a subgroup
+  For  a  finite  2-group [3XU[0m, the function returns its [13Xdihedral depth[0m, which is
+  defined  to  be  the  maximal  number  d  such  that  [3XU[0m  contains a subgroup
   isomorphic to the dihedral group of order 2^d+1.
   
-  [22m[35m---------------------------  Example  ----------------------------[0m
-    [22m[35m[0m
-    [22m[35mgap> KD8 := GroupRing( GF(2), DihedralGroup( 8 ) );[0m
-    [22m[35m<algebra-with-one over GF(2), with 3 generators>[0m
-    [22m[35mgap> UD8 := PcNormalizedUnitGroup( KD8 );[0m
-    [22m[35m<pc group of size 128 with 7 generators>[0m
-    [22m[35mgap> DihedralDepth( UD8 );[0m
-    [22m[35m2      [0m
-    [22m[35m[0m
-  [22m[35m------------------------------------------------------------------[0m
+  [4X---------------------------  Example  ----------------------------[0X
+    [4X[0X
+    [4Xgap> KD8 := GroupRing( GF(2), DihedralGroup( 8 ) );[0X
+    [4X<algebra-with-one over GF(2), with 3 generators>[0X
+    [4Xgap> UD8 := PcNormalizedUnitGroup( KD8 );[0X
+    [4X<pc group of size 128 with 7 generators>[0X
+    [4Xgap> DihedralDepth( UD8 );[0X
+    [4X2      [0X
+    [4X[0X
+  [4X------------------------------------------------------------------[0X
   
-  [1m[4m[31m4.6-3 DimensionBasis[0m
+  [1X4.6-3 DimensionBasis[0m
   
-  [1m[34m> DimensionBasis( [0m[22m[34mG[0m[1m[34m ) ________________________________________________[0mmethod
-  [1mReturns:[0m  record  with  two  components:  `dimensionBasis'  (list  of  group
+  [2X> DimensionBasis( [0X[3XG[0X[2X ) ________________________________________________[0Xmethod
+  [6XReturns:[0X  record  with  two  components:  `dimensionBasis'  (list  of  group
             elements) and `weights' (list of weights)
   
-  For  a  finite  p-group [22m[34mG[0m, returns its Jennings basis as it was described in
-  Section [1m3.3[0m.
+  For  a  finite  p-group [3XG[0m, returns its Jennings basis as it was described in
+  Section [14X3.3[0m.
   
-  [22m[35m---------------------------  Example  ----------------------------[0m
-    [22m[35m[0m
-    [22m[35mgap> G := DihedralGroup( 16 );[0m
-    [22m[35m<pc group of size 16 with 4 generators>  [0m
-    [22m[35mgap> DimensionBasis( G );[0m
-    [22m[35mrec( dimensionBasis := [ f1, f2, f3, f4 ], weights := [ 1, 1, 2, 4 ] )    [0m
-    [22m[35m[0m
-  [22m[35m------------------------------------------------------------------[0m
+  [4X---------------------------  Example  ----------------------------[0X
+    [4X[0X
+    [4Xgap> G := DihedralGroup( 16 );[0X
+    [4X<pc group of size 16 with 4 generators>  [0X
+    [4Xgap> DimensionBasis( G );[0X
+    [4Xrec( dimensionBasis := [ f1, f2, f3, f4 ], weights := [ 1, 1, 2, 4 ] )    [0X
+    [4X[0X
+  [4X------------------------------------------------------------------[0X
   
-  [1m[4m[31m4.6-4 LieDimensionSubgroups[0m
+  [1X4.6-4 LieDimensionSubgroups[0m
   
-  [1m[34m> LieDimensionSubgroups( [0m[22m[34mG[0m[1m[34m ) ______________________________________[0mattribute
-  [1mReturns:[0m  list of subgroups
+  [2X> LieDimensionSubgroups( [0X[3XG[0X[2X ) ______________________________________[0Xattribute
+  [6XReturns:[0X  list of subgroups
   
-  For  a  finite p-group [22m[34mG[0m, returns the series of its Lie dimension subgroups.
+  For  a  finite p-group [3XG[0m, returns the series of its Lie dimension subgroups.
   The m-th Lie dimension subgroup D_(m) is the intersection of the group G and
   1+KG^(m), where KG^(m) is the m-th term of the upper Lie power series of KG;
-  see [1m[34mLieUpperNilpotencyIndex[0m ([1m4.5-19[0m)
+  see [2XLieUpperNilpotencyIndex[0m ([14X4.5-19[0m)
   
-  [22m[35m---------------------------  Example  ----------------------------[0m
-    [22m[35m[0m
-    [22m[35mgap> G := DihedralGroup( 16 );[0m
-    [22m[35m<pc group of size 16 with 4 generators>  [0m
-    [22m[35mgap> LieDimensionSubgroups( G );[0m
-    [22m[35m[ <pc group of size 16 with 4 generators>, Group([ f3, f4 ]), Group([ f4 ]),[0m
-    [22m[35m  Group([ <identity> of ... ]) ]     [0m
-    [22m[35m[0m
-  [22m[35m------------------------------------------------------------------[0m
+  [4X---------------------------  Example  ----------------------------[0X
+    [4X[0X
+    [4Xgap> G := DihedralGroup( 16 );[0X
+    [4X<pc group of size 16 with 4 generators>  [0X
+    [4Xgap> LieDimensionSubgroups( G );[0X
+    [4X[ <pc group of size 16 with 4 generators>, Group([ f3, f4 ]), Group([ f4 ]),[0X
+    [4X  Group([ <identity> of ... ]) ]     [0X
+    [4X[0X
+  [4X------------------------------------------------------------------[0X
   
-  [1m[4m[31m4.6-5 LieUpperCodimensionSeries[0m
+  [1X4.6-5 LieUpperCodimensionSeries[0m
   
-  [1m[34m> LieUpperCodimensionSeries( [0m[22m[34mKG[0m[1m[34m ) _________________________________[0mattribute
-  [1m[34m> LieUpperCodimensionSeries( [0m[22m[34mG[0m[1m[34m ) __________________________________[0mattribute
-  [1mReturns:[0m  list of subgroups
+  [2X> LieUpperCodimensionSeries( [0X[3XKG[0X[2X ) _________________________________[0Xattribute
+  [2X> LieUpperCodimensionSeries( [0X[3XG[0X[2X ) __________________________________[0Xattribute
+  [6XReturns:[0X  list of subgroups
   
   A  notion of upper Lie codimension subgroups was introduced in [CS06]. For a
-  finite  p-group  [22m[34mG[0m, C_i is the set of all elements g in [22m[34mG[0m, such that the Lie
+  finite  p-group  [3XG[0m, C_i is the set of all elements g in [3XG[0m, such that the Lie
   commutator  [  g, g_1, ..., g_i ] of the length i+1 is equal to zero for all
-  g_1,  ...,  g_i  from  [22m[34mG[0m,  and  C_0  =  1.  By Du's theorem (see [D92]), C_i
+  g_1,  ...,  g_i  from  [3XG[0m,  and  C_0  =  1. By Du's theorem (see [Du92]), C_i
   coincides  with the intersection of G and the i-th term of the upper central
   series  1=Z_0  <  Z_1 < Z_2 < ... < Z_n = V(KG) of the normalized unit group
-  V(KG).  This  fact is used in [1mLAGUNA[0m to speed up computation of this series.
+  V(KG).  This  fact is used in [5XLAGUNA[0m to speed up computation of this series.
   Since  V(KG)  is  involved  in  computation, for the first time the argiment
-  should  be the group ring [22m[34mKG[0m, but later you can also apply it to the group [22m[34mG[0m
+  should  be the group ring [3XKG[0m, but later you can also apply it to the group [3XG[0m
   itself.
   
-  [22m[35m---------------------------  Example  ----------------------------[0m
-    [22m[35m[0m
-    [22m[35mgap> G := DihedralGroup(16);[0m
-    [22m[35m<pc group of size 16 with 4 generators>[0m
-    [22m[35mgap> KG := GroupRing( GF(2), G );[0m
-    [22m[35m<algebra-with-one over GF(2), with 4 generators>[0m
-    [22m[35mgap> LieUpperCodimensionSeries( KG );[0m
-    [22m[35m[ Group([ f1, f2, f3, f4 ]), Group([ f3, f4, f3*f4 ]), Group([ f4 ]), [0m
-    [22m[35m  Group([ f4 ]), Group([  ]) ][0m
-    [22m[35mgap> LieUpperCodimensionSeries( G );[0m
-    [22m[35m[ Group([ f1, f2, f3, f4 ]), Group([ f3, f4, f3*f4 ]), Group([ f4 ]), [0m
-    [22m[35m  Group([ f4 ]), Group([  ]) ][0m
-    [22m[35m[0m
-  [22m[35m------------------------------------------------------------------[0m
+  [4X---------------------------  Example  ----------------------------[0X
+    [4X[0X
+    [4Xgap> G := DihedralGroup(16);[0X
+    [4X<pc group of size 16 with 4 generators>[0X
+    [4Xgap> KG := GroupRing( GF(2), G );[0X
+    [4X<algebra-with-one over GF(2), with 4 generators>[0X
+    [4Xgap> LieUpperCodimensionSeries( KG );[0X
+    [4X[ Group([ f1, f2, f3, f4 ]), Group([ f3, f4, f3*f4 ]), Group([ f4 ]), [0X
+    [4X  Group([ f4 ]), Group([  ]) ][0X
+    [4Xgap> LieUpperCodimensionSeries( G );[0X
+    [4X[ Group([ f1, f2, f3, f4 ]), Group([ f3, f4, f3*f4 ]), Group([ f4 ]), [0X
+    [4X  Group([ f4 ]), Group([  ]) ][0X
+    [4X[0X
+  [4X------------------------------------------------------------------[0X
   
-  [1m[4m[31m4.6-6 LAGInfo[0m
+  [1X4.6-6 LAGInfo[0m
   
-  [1m[34m> LAGInfo_________________________________________________________[0minfo class
+  [2X> LAGInfo_________________________________________________________[0Xinfo class
   
-  [22m[32mLAGInfo[0m is a special Info class for [1mLAGUNA[0m algorithms. It has 5 levels: 0, 1
-  (default),   2,   3   and  4.  To  change  info  level  to  [22m[32mk[0m,  use  command
-  [22m[32mSetInfoLevel(LAGInfo, k)[0m.
+  [10XLAGInfo[0m is a special Info class for [5XLAGUNA[0m algorithms. It has 5 levels: 0, 1
+  (default),   2,   3   and  4.  To  change  info  level  to  [10Xk[0m,  use  command
+  [10XSetInfoLevel(LAGInfo, k)[0m.
   
-  [22m[35m---------------------------  Example  ----------------------------[0m
-    [22m[35m[0m
-    [22m[35mgap> SetInfoLevel( LAGInfo, 2 );[0m
-    [22m[35mgap> KD8 := GroupRing( GF( 2 ), DihedralGroup( 8 ) );[0m
-    [22m[35m<algebra-with-one over GF(2), with 3 generators>[0m
-    [22m[35mgap> UD8 := PcNormalizedUnitGroup( KD8 );[0m
-    [22m[35m#I  LAGInfo: Computing the pc normalized unit group ...[0m
-    [22m[35m#I  LAGInfo: Calculating weighted basis ...[0m
-    [22m[35m#I  LAGInfo: Calculating dimension basis ...[0m
-    [22m[35m#I  LAGInfo: dimension basis finished ![0m
-    [22m[35m#I  LAGInfo: Weighted basis finished ![0m
-    [22m[35m#I  LAGInfo: Computing the augmentation ideal filtration...[0m
-    [22m[35m#I  LAGInfo: Filtration finished ![0m
-    [22m[35m#I  LAGInfo: finished, converting to PcGroup[0m
-    [22m[35m<pc group of size 128 with 7 generators>     [0m
-    [22m[35m[0m
-  [22m[35m------------------------------------------------------------------[0m
+  [4X---------------------------  Example  ----------------------------[0X
+    [4X[0X
+    [4Xgap> SetInfoLevel( LAGInfo, 2 );[0X
+    [4Xgap> KD8 := GroupRing( GF( 2 ), DihedralGroup( 8 ) );[0X
+    [4X<algebra-with-one over GF(2), with 3 generators>[0X
+    [4Xgap> UD8 := PcNormalizedUnitGroup( KD8 );[0X
+    [4X#I  LAGInfo: Computing the pc normalized unit group ...[0X
+    [4X#I  LAGInfo: Calculating weighted basis ...[0X
+    [4X#I  LAGInfo: Calculating dimension basis ...[0X
+    [4X#I  LAGInfo: dimension basis finished ![0X
+    [4X#I  LAGInfo: Weighted basis finished ![0X
+    [4X#I  LAGInfo: Computing the augmentation ideal filtration...[0X
+    [4X#I  LAGInfo: Filtration finished ![0X
+    [4X#I  LAGInfo: finished, converting to PcGroup[0X
+    [4X<pc group of size 128 with 7 generators>     [0X
+    [4X[0X
+  [4X------------------------------------------------------------------[0X
   
-  [1m[4m[31m4.6-7 LAGUNABuildManual[0m
+  [1X4.6-7 LAGUNABuildManual[0m
   
-  [1m[34m> LAGUNABuildManual( [0m[22m[34m[0m[1m[34m ) ____________________________________________[0mfunction
+  [2X> LAGUNABuildManual( [0X[3X[0X[2X ) ____________________________________________[0Xfunction
   
   This  function  is  used  to build the manual in the following formats: DVI,
   PDF,  PS,  HTML  and text for online help. We recommend that the user should
-  have  a  recent  and  fairly  complete  TeX  distribution.  Since  [1mLAGUNA[0m is
+  have  a  recent  and  fairly  complete  TeX  distribution.  Since  [5XLAGUNA[0m is
   distributed  together  with  its manual, it is not necessary for the user to
   use  this  function.  Normally  it  is intended to be used by the developers
-  only.  This  is  the  only  function  of  [1mLAGUNA[0m  which  requires UNIX/Linux
+  only.  This  is  the  only  function  of  [5XLAGUNA[0m  which  requires UNIX/Linux
   environment.
   
-  [1m[4m[31m4.6-8 LAGUNABuildManualHTML[0m
+  [1X4.6-8 LAGUNABuildManualHTML[0m
   
-  [1m[34m> LAGUNABuildManualHTML( [0m[22m[34m[0m[1m[34m ) ________________________________________[0mfunction
+  [2X> LAGUNABuildManualHTML( [0X[3X[0X[2X ) ________________________________________[0Xfunction
   
   This  fuction is used to build the manual only in HTML format. This does not
   depend  on  the availability of the TeX installation and works under Windows
-  and  MacOS as well. Since [1mLAGUNA[0m is distributed together with its manual, it
+  and  MacOS as well. Since [5XLAGUNA[0m is distributed together with its manual, it
   is  not necessary for the user to use this function. Normally it is intended
   to be used by the developers only.
   

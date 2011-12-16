@@ -1,15 +1,15 @@
   
   
-                                     [1m[4m[31m[1mLAGUNA[1m[4m[31m[0m
+                                     [1X[5XLAGUNA[0m[1X[0m
   
   
-                    [1m[4m[31mLie AlGebras and UNits of group Algebras[0m
+                    [1XLie AlGebras and UNits of group Algebras[0m
   
   
-                                  Version 3.4
+                                 Version 3.5.0
   
   
-                                 February 2007
+                                  30 May 2009
   
   
                                   Victor Bovdi
@@ -23,15 +23,15 @@
   
   
   Victor Bovdi
-      Email:    [34mmailto:vbovdi@math.klte.hu[0m
+      Email:    [7Xmailto:vbovdi@math.klte.hu[0m
       Address:  Institute of Mathematics and Informatics
                 University of Debrecen
                 P.O.Box 12, Debrecen, H-4010 Hungary
   
   
   Alexander Konovalov
-      Email:    [34mmailto:konovalov@member.ams.org[0m
-      Homepage: [34mhttp://www.cs.st-andrews.ac.uk/~alexk/[0m
+      Email:    [7Xmailto:konovalov@member.ams.org[0m
+      Homepage: [7Xhttp://www.cs.st-andrews.ac.uk/~alexk/[0m
       Address:  School of Computer Science
                 University of St Andrews
                 Jack Cole Building, North Haugh,
@@ -39,15 +39,15 @@
   
   
   Richard Rossmanith
-      Email:    [34mmailto:richard.rossmanith@d-fine.de[0m
+      Email:    [7Xmailto:richard.rossmanith@d-fine.de[0m
       Address:  d-fine GmbH
                 Mergenthalerallee 55 65760 Eschborn/Frankfurt
                 Germany
   
   
   Csaba Schneider
-      Email:    [34mmailto:csaba.schneider@sztaki.hu[0m
-      Homepage: [34mhttp://www.sztaki.hu/~schneider[0m
+      Email:    [7Xmailto:csaba.schneider@sztaki.hu[0m
+      Homepage: [7Xhttp://www.sztaki.hu/~schneider[0m
       Address:  Informatics Laboratory
                 Computer and Automation Research Institute
                 The Hungarian Academy of Sciences
@@ -56,14 +56,14 @@
   
   
   -------------------------------------------------------
-  [1m[4m[31mAbstract[0m
-  The   title  ``[1mLAGUNA[0m''  stands  for  ``[1m[46mL[0mie  [1m[46mA[0ml[1m[46mG[0mebras  and  [1m[46mUN[0mits  of  group
-  [1m[46mA[0mlgebras''.  This  is  the  new  name of the [1mGAP[0m4 package [1mLAG[0m, which is thus
-  replaced by [1mLAGUNA[0m.
+  [1XAbstract[0m
+  The   title  ``[5XLAGUNA[0m''  stands  for  ``[12XL[0mie  [12XA[0ml[12XG[0mebras  and  [12XUN[0mits  of  group
+  [12XA[0mlgebras''.  This  is  the  new  name of the [5XGAP[0m4 package [5XLAG[0m, which is thus
+  replaced by [5XLAGUNA[0m.
   
-  [1mLAGUNA[0m  extends  the  [1mGAP[0m  functionality  for  computations  in group rings.
+  [5XLAGUNA[0m  extends  the  [5XGAP[0m  functionality  for  computations  in group rings.
   Besides  computing some general properties and attributes of group rings and
-  their  elements,  [1mLAGUNA[0m  is able to perform two main kinds of computations.
+  their  elements,  [5XLAGUNA[0m  is able to perform two main kinds of computations.
   Namely,  it  can  verify whether a group algebra of a finite group satisfies
   certain Lie properties; and it can calculate the structure of the normalized
   unit  group  of  a  group  algebra  of  a finite p-group over the field of p
@@ -71,46 +71,46 @@
   
   
   -------------------------------------------------------
-  [1m[4m[31mCopyright[0m
-  (C)  2003-2007 by Victor Bovdi, Alexander Konovalov, Richard Rossmanith, and
+  [1XCopyright[0m
+  Â©  2003-2009  by  Victor Bovdi, Alexander Konovalov, Richard Rossmanith, and
   Csaba Schneider
   
-  [1mLAGUNA[0m  is free software; you can redistribute it and/or modify it under the
+  [5XLAGUNA[0m  is free software; you can redistribute it and/or modify it under the
   terms  of  the  GNU General Public License as published by the Free Software
   Foundation;  either  version 2 of the License, or (at your option) any later
   version.      For      details,      see      the     FSF's     own     site
-  [34mhttp://www.gnu.org/licenses/gpl.html[0m.
+  [7Xhttp://www.gnu.org/licenses/gpl.html[0m.
   
-  If  you  obtained [1mLAGUNA[0m, we would be grateful for a short notification sent
+  If  you  obtained [5XLAGUNA[0m, we would be grateful for a short notification sent
   to one of the authors.
   
   If  you  publish  a  result  which  was partially obtained with the usage of
-  [1mLAGUNA[0m, please cite it in the following form:
+  [5XLAGUNA[0m, please cite it in the following form:
   
-  V.  Bovdi,  A.  Konovalov,  R.  Rossmanith  and C. Schneider. [22m[36mLAGUNA --- Lie
-  AlGebras    and    UNits    of    group    Algebras,   Version   3.4;[0m   2007
-  ([34mhttp://www.cs.st-andrews.ac.uk/~alexk/laguna.htm[0m).
+  V.  Bovdi,  A.  Konovalov,  R.  Rossmanith  and C. Schneider. [13XLAGUNA --- Lie
+  AlGebras    and    UNits    of   group   Algebras,   Version   3.5.0;[0m   2009
+  ([7Xhttp://www.cs.st-andrews.ac.uk/~alexk/laguna.htm[0m).
   
   
   -------------------------------------------------------
-  [1m[4m[31mAcknowledgements[0m
-  Some of the features of [1mLAGUNA[0m were already included in the [1mGAP[0m4 package [1mLAG[0m
+  [1XAcknowledgements[0m
+  Some of the features of [5XLAGUNA[0m were already included in the [5XGAP[0m4 package [5XLAG[0m
   written  by  the  third  author, Richard Rossmanith. The three other authors
-  first  would like to thank Greg Gamble for maintaining [1mLAG[0m and for upgrading
+  first  would like to thank Greg Gamble for maintaining [5XLAG[0m and for upgrading
   it from version 2.0 to version 2.1, and Richard Rossmanith for allowing them
-  to  update  and  extend  the  [1mLAG[0m  package. We are also grateful to Wolfgang
+  to  update  and  extend  the  [5XLAG[0m  package. We are also grateful to Wolfgang
   Kimmerle  for  organizing  the workshop ``Computational Group and Group Ring
   Theory''  (University of Stuttgart, 28--29 November, 2002), which allowed us
-  to  meet  and  have  fruitful  discussions that led towards the final [1mLAGUNA[0m
+  to  meet  and  have  fruitful  discussions that led towards the final [5XLAGUNA[0m
   release.
   
-  We  are  all  very  grateful  to the members of the [1mGAP[0m team: Thomas Breuer,
-  Willem  de Graaf, Alexander Hulpke, Stefan Kohl, Steve Linton, Frank Lübeck,
-  Max Neunhöffer and many other colleagues for helpful comments and advise. We
+  We  are  all  very  grateful  to the members of the [5XGAP[0m team: Thomas Breuer,
+  Willem  de Graaf, Alexander Hulpke, Stefan Kohl, Steve Linton, Frank LÃ¼beck,
+  Max NeunhÃ¶ffer and many other colleagues for helpful comments and advise. We
   acknowledge very much Herbert Pahlings for communicating the package and the
-  referee for careful testing [1mLAGUNA[0m and useful suggestions.
+  referee for careful testing [5XLAGUNA[0m and useful suggestions.
   
-  A  part  of  the  work  on  upgrading  [1mLAG[0m to [1mLAGUNA[0m was done in 2002 during
+  A  part  of  the  work  on  upgrading  [5XLAG[0m to [5XLAGUNA[0m was done in 2002 during
   Alexander   Konovalov's   visits  to  Debrecen,  St  Andrews  and  Stuttgart
   Universities.  He  would like to express his gratitude to Adalbert Bovdi and
   Victor  Bovdi,  Colin  Campbell, Edmund Robertson and Steve Linton, Wolfgang
@@ -122,23 +122,23 @@
   -------------------------------------------------------
   
   
-  [1m[4m[31mContent (LAGUNA)[0m
+  [1XContents (LAGUNA)[0X
   
-  1. Introduction
+  1 Introduction
     1.1 General aims
     1.2 General computations in group rings
     1.3 Computations in the normalized unit group
     1.4 Computing Lie properties of the group algebra
     1.5 Installation and system requirements
-  2. A sample calculation with [1mLAGUNA[0m
-  3. The basic theory behind [1mLAGUNA[0m
+  2 A sample calculation with [5XLAGUNA[0m
+  3 The basic theory behind [5XLAGUNA[0m
     3.1 Notation and definitions
     3.2 p-modular group algebras
     3.3 Polycyclic generating set for V
     3.4 Computing the canonical form
     3.5 Computing a power commutator presentation for V
     3.6 Verifying Lie properties of FG
-  4. [1mLAGUNA[0m functions
+  4 [5XLAGUNA[0m functions
     4.1 General functions for group algebras
       4.1-1 IsGroupAlgebra
       4.1-2 IsFModularGroupAlgebra
@@ -159,6 +159,7 @@
       4.2-10 IsUnit
       4.2-11 InverseOp
       4.2-12 BicyclicUnitOfType1
+      4.2-13 BassCyclicUnit
     4.3 Important attributes of group algebras
       4.3-1 AugmentationHomomorphism
       4.3-2 AugmentationIdeal
@@ -182,8 +183,7 @@
       4.4-11 UnderlyingGroupRing
       4.4-12 UnitarySubgroup
       4.4-13 BicyclicUnitGroup
-      4.4-14 AugmentationIdealPowerFactorGroup
-      4.4-15 GroupBases
+      4.4-14 GroupBases
     4.5 The Lie algebra of a group algebra
       4.5-1 LieAlgebraByDomain
       4.5-2 IsLieAlgebraByAssociativeAlgebra

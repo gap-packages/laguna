@@ -5,7 +5,7 @@
 #W                                                         Richard Rossmanith
 #W                                                            Csaba Schneider
 ##
-#H  $Id: PackageInfo.g,v 1.23 2007/02/12 09:19:58 alexk Exp $
+#H  $Id: PackageInfo.g,v 1.24 2009/05/30 21:13:40 alexk Exp $
 ##
 #############################################################################
 
@@ -13,9 +13,9 @@ SetPackageInfo( rec(
 
 PackageName := "LAGUNA",
 Subtitle := "Lie AlGebras and UNits of group Algebras",
-Version := "3.4",
-Date := "07/02/2007",
-ArchiveURL := "http://www.cs.st-andrews.ac.uk/~alexk/laguna/laguna-3.4",
+Version := "3.5.0",
+Date := "30/05/2009",
+ArchiveURL := "http://www.cs.st-andrews.ac.uk/~alexk/laguna/laguna-3.5.0",
 ArchiveFormats := ".tar.gz .tar.bz2 -win.zip",
 
 #TextFiles := ["init.g", ......],

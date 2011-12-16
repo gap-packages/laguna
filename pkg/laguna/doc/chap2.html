@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="ISO-8859-1"?>
+<?xml version="1.0" encoding="UTF-8"?>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
          "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
@@ -6,24 +6,28 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
 <head>
 <title>GAP (LAGUNA) - Chapter 2: A sample calculation with LAGUNA</title>
-<meta http-equiv="content-type" content="text/html; charset=iso-8859-1" />
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
 <meta name="generator" content="GAPDoc2HTML" />
 <link rel="stylesheet" type="text/css" href="manual.css" />
 </head>
 <body>
 
 
-<div class="pcenter"><table class="chlink"><tr><td class="chlink1">Goto Chapter: </td><td><a href="chap0.html">Top</a></td><td><a href="chap1.html">1</a></td><td><a href="chap2.html">2</a></td><td><a href="chap3.html">3</a></td><td><a href="chap4.html">4</a></td><td><a href="chapBib.html">Bib</a></td><td><a href="chapInd.html">Ind</a></td></tr></table><br /></div>
-<p><a id="s0ss0" name="s0ss0"></a></p>
+<div class="chlinktop"><span class="chlink1">Goto Chapter: </span><a href="chap0.html">Top</a>  <a href="chap1.html">1</a>  <a href="chap2.html">2</a>  <a href="chap3.html">3</a>  <a href="chap4.html">4</a>  <a href="chapBib.html">Bib</a>  <a href="chapInd.html">Ind</a>  </div>
 
-<h3>2. A sample calculation with <strong class="pkg">LAGUNA</strong></h3>
+<div class="chlinkprevnexttop">&nbsp;<a href="chap0.html">Top of Book</a>&nbsp;  &nbsp;<a href="chap1.html">Previous Chapter</a>&nbsp;  &nbsp;<a href="chap3.html">Next Chapter</a>&nbsp;  </div>
+
+<p><a id="X7AAB1F18838B1DAB" name="X7AAB1F18838B1DAB"></a></p>
+<div class="ChapSects"><a href="chap2.html#X7AAB1F18838B1DAB">2 <span class="Heading">A sample calculation with <strong class="pkg">LAGUNA</strong></span></a>
+</div>
+
+<h3>2 <span class="Heading">A sample calculation with <strong class="pkg">LAGUNA</strong></span></h3>
 
 <p>Before explaining the theory behind the <strong class="pkg">LAGUNA</strong> package we present a sample calculation to show the reader what <strong class="pkg">LAGUNA</strong> is able to compute. We will carry out some calculations in the group algebra of the dihedral group of order 16 over the field of two elements. First we create this modular group algebra.</p>
 
 
 <table class="example">
 <tr><td><pre>
-
 
 gap&gt; K := GF( 2 );
 GF(2)
@@ -32,7 +36,6 @@ gap&gt; G := DihedralGroup( 16 );
 gap&gt; KG := GroupRing( K, G );
 &lt;algebra-with-one over GF(2), with 4 generators&gt;
 
-
 </pre></td></tr></table>
 
 <p>The group algebra <code class="code">KG</code> has some properties and attributes that are direct consequences of its definition. These can be checked very quickly.</p>
@@ -40,7 +43,6 @@ gap&gt; KG := GroupRing( K, G );
 
 <table class="example">
 <tr><td><pre>
-
 
 gap&gt; IsGroupAlgebra( KG ); 
 true
@@ -53,7 +55,6 @@ gap&gt; UnderlyingGroup( KG );
 gap&gt; LeftActingDomain( KG );
 GF(2)
 
-
 </pre></td></tr></table>
 
 <p>Since <code class="code">KG</code> is naturally a group algebra, the information provided by <code class="code">LeftActingDomain</code> can also be obtained using two other functions as follows.</p>
@@ -61,12 +62,10 @@ GF(2)
 
 <table class="example">
 <tr><td><pre>
-
 gap&gt; UnderlyingRing( KG );
 GF(2)
 gap&gt; UnderlyingField( KG );
 GF(2)
-
 </pre></td></tr></table>
 
 <p>Let us construct a certain element of the group algebra. For example, we take a minimal generating system of the group <code class="code">G</code> and find the corresponding elements in <code class="code">KG</code>.</p>
@@ -75,12 +74,10 @@ GF(2)
 <table class="example">
 <tr><td><pre>
 
-
 gap&gt; MinimalGeneratingSet( G );
 [ f1, f2 ]
 gap&gt; l := List( last, g -&gt; g^Embedding( G, KG ) );
 [ (Z(2)^0)*f1, (Z(2)^0)*f2 ]
-
 
 </pre></td></tr></table>
 
@@ -90,7 +87,6 @@ gap&gt; l := List( last, g -&gt; g^Embedding( G, KG ) );
 <table class="example">
 <tr><td><pre>
 
-
 gap&gt; a :=l[1]; b:=l[2]; # a and b are images of group generators in KG
 (Z(2)^0)*f1
 (Z(2)^0)*f2
@@ -99,7 +95,6 @@ gap&gt; e := One( KG );    # for convenience, we denote the identity by e
 gap&gt; x := ( e + a ) * ( e + b ); 
 (Z(2)^0)*&lt;identity&gt; of ...+(Z(2)^0)*f1+(Z(2)^0)*f2+(Z(2)^0)*f1*f2  
 
-
 </pre></td></tr></table>
 
 <p>We may investigate some of the basic properties of our element.</p>
@@ -107,7 +102,6 @@ gap&gt; x := ( e + a ) * ( e + b );
 
 <table class="example">
 <tr><td><pre>
-
 
 gap&gt; Support( x );
 [ &lt;identity&gt; of ..., f1, f2, f1*f2 ]
@@ -118,7 +112,6 @@ gap&gt; Length( x );
 gap&gt; TraceOfMagmaRingElement( x );
 Z(2)^0
 
-
 </pre></td></tr></table>
 
 <p>We can also calculate the augmentation of <code class="code">x</code>, which is defined as the sum of its coefficients.</p>
@@ -126,12 +119,10 @@ Z(2)^0
 
 <table class="example">
 <tr><td><pre>
-
 gap&gt; Augmentation( x );
 0*Z(2)
 gap&gt; IsUnit( KG, x );
 false
-
 </pre></td></tr></table>
 
 <p>Since the augmentation of <code class="code">x</code> is zero, <code class="code">x</code> is not invertible, but <code class="code">1+x</code> is. This is again very easy to check.</p>
@@ -140,12 +131,10 @@ false
 <table class="example">
 <tr><td><pre>
 
-
 gap&gt; y := e + x;
 (Z(2)^0)*f1+(Z(2)^0)*f2+(Z(2)^0)*f1*f2
 gap&gt; IsUnit( KG, y );
 true  
-
 
 </pre></td></tr></table>
 
@@ -155,14 +144,12 @@ true
 <table class="example">
 <tr><td><pre>
 
-
 gap&gt; y^-1;
 (Z(2)^0)*f1+(Z(2)^0)*f2+(Z(2)^0)*f3+(Z(2)^0)*f4+(Z(2)^0)*f1*f2+(Z(2)^
 0)*f1*f3+(Z(2)^0)*f1*f4+(Z(2)^0)*f2*f4+(Z(2)^0)*f1*f2*f4+(Z(2)^0)*f2*f3*f4+(
 Z(2)^0)*f1*f2*f3*f4
 gap&gt; y * y^-1;
 (Z(2)^0)*&lt;identity&gt; of ... 
-
 
 </pre></td></tr></table>
 
@@ -171,7 +158,6 @@ gap&gt; y * y^-1;
 
 <table class="example">
 <tr><td><pre>
-
 
 gap&gt; Involution( y );
 (Z(2)^0)*f1+(Z(2)^0)*f1*f2+(Z(2)^0)*f2*f3*f4
@@ -184,7 +170,6 @@ gap&gt; y * Involution( y );
 gap&gt; IsUnitary( y );
 false
 
-
 </pre></td></tr></table>
 
 <p>Now we calculate some important ideals of <code class="code">KG</code>. First we obtain the augmentation ideal which is the set of elements with augmentation zero. In our case the augmentation ideal of <code class="code">KG</code> coincides with the radical of <code class="code">KG</code>, and this is taken into account in <strong class="pkg">LAGUNA</strong>.</p>
@@ -193,13 +178,11 @@ false
 <table class="example">
 <tr><td><pre>
 
-
 gap&gt; AugmentationIdeal( KG );
 &lt;two-sided ideal in &lt;algebra-with-one over GF(2), with 4 generators&gt;,
   (dimension 15)&gt;
 gap&gt; RadicalOfAlgebra( KG ) = AugmentationIdeal( KG );
 true
-
 
 </pre></td></tr></table>
 
@@ -208,10 +191,8 @@ true
 
 <table class="example">
 <tr><td><pre>
-
 gap&gt; AugmentationIdealNilpotencyIndex( KG );
 9
-
 </pre></td></tr></table>
 
 <p>On the other hand, we can also calculate the powers of the augmentation ideal.</p>
@@ -220,7 +201,6 @@ gap&gt; AugmentationIdealNilpotencyIndex( KG );
 <table class="example">
 <tr><td><pre>
 
-
 gap&gt; AugmentationIdealPowerSeries( KG );
 [ &lt;algebra of dimension 15 over GF(2)&gt;, &lt;algebra of dimension 13 over GF(2)&gt;, 
   &lt;algebra of dimension 11 over GF(2)&gt;, &lt;algebra of dimension 9 over GF(2)&gt;, 
@@ -228,21 +208,18 @@ gap&gt; AugmentationIdealPowerSeries( KG );
   &lt;algebra of dimension 3 over GF(2)&gt;, &lt;algebra of dimension 1 over GF(2)&gt;, 
   &lt;algebra over GF(2)&gt; ]
 
-
 </pre></td></tr></table>
 
 <p>We see that the length of this list is exactly the nilpotency index of the augmentation ideal of <code class="code">KG</code>.</p>
 
-<p>Now let's work with the unit group of <code class="code">KG</code>. First we calculate the normalized unit group, which is the set of elements with augmentation one. The generators of the unit group are obtained as explained in Chapter <a href="chap3.html#s0ss0"><b>3.</b></a>. This can be computed very quickly, but further computation with this group is very inefficient.</p>
+<p>Now let's work with the unit group of <code class="code">KG</code>. First we calculate the normalized unit group, which is the set of elements with augmentation one. The generators of the unit group are obtained as explained in Chapter <a href="chap3.html#X7D9FCE3A8526ACBE"><b>3</b></a>. This can be computed very quickly, but further computation with this group is very inefficient.</p>
 
 
 <table class="example">
 <tr><td><pre>
 
-
 gap&gt; V := NormalizedUnitGroup( KG );
 &lt;group of size 32768 with 15 generators&gt;   
-
 
 </pre></td></tr></table>
 
@@ -252,10 +229,8 @@ gap&gt; V := NormalizedUnitGroup( KG );
 <table class="example">
 <tr><td><pre>
 
-
 gap&gt; W := PcNormalizedUnitGroup( KG );
 &lt;pc group of size 32768 with 15 generators&gt;
-
 
 </pre></td></tr></table>
 
@@ -267,7 +242,6 @@ gap&gt; W := PcNormalizedUnitGroup( KG );
 <table class="example">
 <tr><td><pre>
 
-
 gap&gt; t := NaturalBijectionToPcNormalizedUnitGroup( KG );
 MappingByFunction( &lt;group of size 32768 with
 15 generators&gt;, &lt;pc group of size 32768 with
@@ -276,7 +250,6 @@ gap&gt; List( AsList( G ), x -&gt; ( x^Embedding( G, KG ) )^t );
 [ &lt;identity&gt; of ..., f2, f1, f3, f7, f1*f2*f3, f2*f3, f2*f7, f1*f3, f1*f7,
   f3*f7, f1*f2*f7, f1*f2*f3*f7, f2*f3*f7, f1*f3*f7, f1*f2 ]
 
-
 </pre></td></tr></table>
 
 <p>The second isomorphism is the inverse of the first.</p>
@@ -284,7 +257,6 @@ gap&gt; List( AsList( G ), x -&gt; ( x^Embedding( G, KG ) )^t );
 
 <table class="example">
 <tr><td><pre>
-
 gap&gt; f := NaturalBijectionToNormalizedUnitGroup( KG );
 [ f1, f2, f3, f4, f5, f6, f7, f8, f9, f10, f11, f12, f13, f14, f15 ] -&gt;
 [ (Z(2)^0)*f2, (Z(2)^0)*f1, (Z(2)^0)*f3,
@@ -303,7 +275,6 @@ gap&gt; f := NaturalBijectionToNormalizedUnitGroup( KG );
     0)*f4+(Z(2)^0)*f1*f2+(Z(2)^0)*f1*f3+(Z(2)^0)*f1*f4+(Z(2)^0)*f2*f3+(Z(2)^
     0)*f2*f4+(Z(2)^0)*f3*f4+(Z(2)^0)*f1*f2*f3+(Z(2)^0)*f1*f2*f4+(Z(2)^
     0)*f1*f3*f4+(Z(2)^0)*f2*f3*f4+(Z(2)^0)*f1*f2*f3*f4 ]
-
 </pre></td></tr></table>
 
 <p>For example, we may calculate the conjugacy classes of the group <code class="code">W</code>, and then map their representatives back into the group algebra.</p>
@@ -311,7 +282,6 @@ gap&gt; f := NaturalBijectionToNormalizedUnitGroup( KG );
 
 <table class="example">
 <tr><td><pre>
-
 
 gap&gt; cc := ConjugacyClasses( W );;
 gap&gt; Length( cc );
@@ -323,7 +293,6 @@ gap&gt; last^f;
 0)*f1*f3+(Z(2)^0)*f1*f4+(Z(2)^0)*f2*f3+(Z(2)^0)*f2*f4+(Z(2)^0)*f3*f4+(Z(2)^
 0)*f1*f2*f3+(Z(2)^0)*f1*f3*f4
 
-
 </pre></td></tr></table>
 
 <p>Having a power-commutator presentation of the normalised unit group, we may use the full power of the <strong class="pkg">GAP</strong> functionality for such groups. For example, the lower central series can be calculated very quickly.</p>
@@ -332,14 +301,12 @@ gap&gt; last^f;
 <table class="example">
 <tr><td><pre>
 
-
 gap&gt; LowerCentralSeries( W );
 [ &lt;pc group of size 32768 with 15 generators&gt;,
   Group([ f3, f5*f8*f10*f12*f13*f14*f15, f6*f8*f12*f14*f15, f7, f9*f12,
       f10*f14, f11*f13, f13*f14, f14*f15 ]),
   Group([ f7, f9*f12, f10*f15, f11*f15, f13*f15, f14*f15 ]),
   Group([ f11*f15, f13*f15, f14*f15 ]), Group([ &lt;identity&gt; of ... ]) ]
-
 
 </pre></td></tr></table>
 
@@ -348,7 +315,6 @@ gap&gt; LowerCentralSeries( W );
 
 <table class="example">
 <tr><td><pre>
-
 
 gap&gt; C := Centre( W );
 Group([ f3*f5*f13*f15, f7, f15, f13*f15, f14*f15, f11*f13*f14*f15 ])
@@ -368,7 +334,6 @@ gap&gt; List( m, g -&gt; g^f );
     Z(2)^0)*f3+(Z(2)^0)*f1*f3+(Z(2)^0)*f1*f4+(Z(2)^0)*f2*f3+(Z(2)^0)*f2*f4+(
     Z(2)^0)*f3*f4+(Z(2)^0)*f1*f3*f4 ]
 
-
 </pre></td></tr></table>
 
 <p>We finish our example by calculating some properties of the Lie algebra associated with <code class="code">KG</code>. This example needs no further explanation.</p>
@@ -376,7 +341,6 @@ gap&gt; List( m, g -&gt; g^f );
 
 <table class="example">
 <tr><td><pre>
-
 
 gap&gt; L := LieAlgebra( KG );
 #I  LAGUNA package: Constructing Lie algebra ...
@@ -400,18 +364,13 @@ false
 gap&gt; IsLieCentreByMetabelian( L );
 true
 
-
 </pre></td></tr></table>
 
 
-<div class="pcenter">
-<table class="chlink"><tr><td><a href="chap0.html">Top of Book</a></td><td><a href="chap1.html">Previous Chapter</a></td><td><a href="chap3.html">Next Chapter</a></td></tr></table>
-<br />
+<div class="chlinkprevnextbot">&nbsp;<a href="chap0.html">Top of Book</a>&nbsp;  &nbsp;<a href="chap1.html">Previous Chapter</a>&nbsp;  &nbsp;<a href="chap3.html">Next Chapter</a>&nbsp;  </div>
 
 
-<div class="pcenter"><table class="chlink"><tr><td class="chlink1">Goto Chapter: </td><td><a href="chap0.html">Top</a></td><td><a href="chap1.html">1</a></td><td><a href="chap2.html">2</a></td><td><a href="chap3.html">3</a></td><td><a href="chap4.html">4</a></td><td><a href="chapBib.html">Bib</a></td><td><a href="chapInd.html">Ind</a></td></tr></table><br /></div>
-
-</div>
+<div class="chlinkbot"><span class="chlink1">Goto Chapter: </span><a href="chap0.html">Top</a>  <a href="chap1.html">1</a>  <a href="chap2.html">2</a>  <a href="chap3.html">3</a>  <a href="chap4.html">4</a>  <a href="chapBib.html">Bib</a>  <a href="chapInd.html">Ind</a>  </div>
 
 <hr />
 <p class="foot">generated by <a href="http://www.math.rwth-aachen.de/~Frank.Luebeck/GAPDoc">GAPDoc2HTML</a></p>

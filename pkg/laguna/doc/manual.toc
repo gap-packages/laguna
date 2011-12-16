@@ -33,59 +33,59 @@
 \contentsline {subsection}{\numberline {4.2.10}\leavevmode {\color {Chapter }IsUnit}}{23}{subsection.4.2.10}
 \contentsline {subsection}{\numberline {4.2.11}\leavevmode {\color {Chapter }InverseOp}}{24}{subsection.4.2.11}
 \contentsline {subsection}{\numberline {4.2.12}\leavevmode {\color {Chapter }BicyclicUnitOfType1}}{24}{subsection.4.2.12}
+\contentsline {subsection}{\numberline {4.2.13}\leavevmode {\color {Chapter }BassCyclicUnit}}{25}{subsection.4.2.13}
 \contentsline {section}{\numberline {4.3}\leavevmode {\color {Chapter }Important attributes of group algebras}}{25}{section.4.3}
 \contentsline {subsection}{\numberline {4.3.1}\leavevmode {\color {Chapter }AugmentationHomomorphism}}{25}{subsection.4.3.1}
-\contentsline {subsection}{\numberline {4.3.2}\leavevmode {\color {Chapter }AugmentationIdeal}}{25}{subsection.4.3.2}
+\contentsline {subsection}{\numberline {4.3.2}\leavevmode {\color {Chapter }AugmentationIdeal}}{26}{subsection.4.3.2}
 \contentsline {subsection}{\numberline {4.3.3}\leavevmode {\color {Chapter }RadicalOfAlgebra}}{26}{subsection.4.3.3}
-\contentsline {subsection}{\numberline {4.3.4}\leavevmode {\color {Chapter }WeightedBasis}}{26}{subsection.4.3.4}
+\contentsline {subsection}{\numberline {4.3.4}\leavevmode {\color {Chapter }WeightedBasis}}{27}{subsection.4.3.4}
 \contentsline {subsection}{\numberline {4.3.5}\leavevmode {\color {Chapter }AugmentationIdealPowerSeries}}{27}{subsection.4.3.5}
-\contentsline {subsection}{\numberline {4.3.6}\leavevmode {\color {Chapter }AugmentationIdealNilpotencyIndex}}{27}{subsection.4.3.6}
-\contentsline {subsection}{\numberline {4.3.7}\leavevmode {\color {Chapter }AugmentationIdealOfDerivedSubgroupNilpotencyIndex}}{27}{subsection.4.3.7}
+\contentsline {subsection}{\numberline {4.3.6}\leavevmode {\color {Chapter }AugmentationIdealNilpotencyIndex}}{28}{subsection.4.3.6}
+\contentsline {subsection}{\numberline {4.3.7}\leavevmode {\color {Chapter }AugmentationIdealOfDerivedSubgroupNilpotencyIndex}}{28}{subsection.4.3.7}
 \contentsline {subsection}{\numberline {4.3.8}\leavevmode {\color {Chapter }LeftIdealBySubgroup}}{28}{subsection.4.3.8}
 \contentsline {section}{\numberline {4.4}\leavevmode {\color {Chapter }Computations with the unit group}}{29}{section.4.4}
 \contentsline {subsection}{\numberline {4.4.1}\leavevmode {\color {Chapter }NormalizedUnitGroup}}{29}{subsection.4.4.1}
-\contentsline {subsection}{\numberline {4.4.2}\leavevmode {\color {Chapter }PcNormalizedUnitGroup}}{29}{subsection.4.4.2}
-\contentsline {subsection}{\numberline {4.4.3}\leavevmode {\color {Chapter }NaturalBijectionToPcNormalizedUnitGroup}}{29}{subsection.4.4.3}
-\contentsline {subsection}{\numberline {4.4.4}\leavevmode {\color {Chapter }NaturalBijectionToNormalizedUnitGroup}}{30}{subsection.4.4.4}
-\contentsline {subsection}{\numberline {4.4.5}\leavevmode {\color {Chapter }Embedding}}{30}{subsection.4.4.5}
-\contentsline {subsection}{\numberline {4.4.6}\leavevmode {\color {Chapter }Units}}{31}{subsection.4.4.6}
+\contentsline {subsection}{\numberline {4.4.2}\leavevmode {\color {Chapter }PcNormalizedUnitGroup}}{30}{subsection.4.4.2}
+\contentsline {subsection}{\numberline {4.4.3}\leavevmode {\color {Chapter }NaturalBijectionToPcNormalizedUnitGroup}}{30}{subsection.4.4.3}
+\contentsline {subsection}{\numberline {4.4.4}\leavevmode {\color {Chapter }NaturalBijectionToNormalizedUnitGroup}}{31}{subsection.4.4.4}
+\contentsline {subsection}{\numberline {4.4.5}\leavevmode {\color {Chapter }Embedding (from group to unit group)}}{31}{subsection.4.4.5}
+\contentsline {subsection}{\numberline {4.4.6}\leavevmode {\color {Chapter }Units}}{32}{subsection.4.4.6}
 \contentsline {subsection}{\numberline {4.4.7}\leavevmode {\color {Chapter }PcUnits}}{32}{subsection.4.4.7}
-\contentsline {subsection}{\numberline {4.4.8}\leavevmode {\color {Chapter }IsGroupOfUnitsOfMagmaRing}}{32}{subsection.4.4.8}
-\contentsline {subsection}{\numberline {4.4.9}\leavevmode {\color {Chapter }IsUnitGroupOfGroupRing}}{32}{subsection.4.4.9}
+\contentsline {subsection}{\numberline {4.4.8}\leavevmode {\color {Chapter }IsGroupOfUnitsOfMagmaRing}}{33}{subsection.4.4.8}
+\contentsline {subsection}{\numberline {4.4.9}\leavevmode {\color {Chapter }IsUnitGroupOfGroupRing}}{33}{subsection.4.4.9}
 \contentsline {subsection}{\numberline {4.4.10}\leavevmode {\color {Chapter }IsNormalizedUnitGroupOfGroupRing}}{33}{subsection.4.4.10}
-\contentsline {subsection}{\numberline {4.4.11}\leavevmode {\color {Chapter }UnderlyingGroupRing}}{33}{subsection.4.4.11}
-\contentsline {subsection}{\numberline {4.4.12}\leavevmode {\color {Chapter }UnitarySubgroup}}{33}{subsection.4.4.12}
+\contentsline {subsection}{\numberline {4.4.11}\leavevmode {\color {Chapter }UnderlyingGroupRing}}{34}{subsection.4.4.11}
+\contentsline {subsection}{\numberline {4.4.12}\leavevmode {\color {Chapter }UnitarySubgroup}}{34}{subsection.4.4.12}
 \contentsline {subsection}{\numberline {4.4.13}\leavevmode {\color {Chapter }BicyclicUnitGroup}}{34}{subsection.4.4.13}
-\contentsline {subsection}{\numberline {4.4.14}\leavevmode {\color {Chapter }AugmentationIdealPowerFactorGroup}}{34}{subsection.4.4.14}
-\contentsline {subsection}{\numberline {4.4.15}\leavevmode {\color {Chapter }GroupBases}}{35}{subsection.4.4.15}
-\contentsline {section}{\numberline {4.5}\leavevmode {\color {Chapter }The Lie algebra of a group algebra}}{35}{section.4.5}
-\contentsline {subsection}{\numberline {4.5.1}\leavevmode {\color {Chapter }LieAlgebraByDomain}}{35}{subsection.4.5.1}
+\contentsline {subsection}{\numberline {4.4.14}\leavevmode {\color {Chapter }GroupBases}}{35}{subsection.4.4.14}
+\contentsline {section}{\numberline {4.5}\leavevmode {\color {Chapter }The Lie algebra of a group algebra}}{36}{section.4.5}
+\contentsline {subsection}{\numberline {4.5.1}\leavevmode {\color {Chapter }LieAlgebraByDomain}}{36}{subsection.4.5.1}
 \contentsline {subsection}{\numberline {4.5.2}\leavevmode {\color {Chapter }IsLieAlgebraByAssociativeAlgebra}}{36}{subsection.4.5.2}
 \contentsline {subsection}{\numberline {4.5.3}\leavevmode {\color {Chapter }UnderlyingAssociativeAlgebra}}{36}{subsection.4.5.3}
-\contentsline {subsection}{\numberline {4.5.4}\leavevmode {\color {Chapter }NaturalBijectionToLieAlgebra}}{36}{subsection.4.5.4}
+\contentsline {subsection}{\numberline {4.5.4}\leavevmode {\color {Chapter }NaturalBijectionToLieAlgebra}}{37}{subsection.4.5.4}
 \contentsline {subsection}{\numberline {4.5.5}\leavevmode {\color {Chapter }NaturalBijectionToAssociativeAlgebra}}{37}{subsection.4.5.5}
-\contentsline {subsection}{\numberline {4.5.6}\leavevmode {\color {Chapter }IsLieAlgebraOfGroupRing}}{37}{subsection.4.5.6}
+\contentsline {subsection}{\numberline {4.5.6}\leavevmode {\color {Chapter }IsLieAlgebraOfGroupRing}}{38}{subsection.4.5.6}
 \contentsline {subsection}{\numberline {4.5.7}\leavevmode {\color {Chapter }UnderlyingGroup (of Lie algebra of a group ring)}}{38}{subsection.4.5.7}
-\contentsline {subsection}{\numberline {4.5.8}\leavevmode {\color {Chapter }Embedding}}{38}{subsection.4.5.8}
+\contentsline {subsection}{\numberline {4.5.8}\leavevmode {\color {Chapter }Embedding (from group to Lie algebra)}}{39}{subsection.4.5.8}
 \contentsline {subsection}{\numberline {4.5.9}\leavevmode {\color {Chapter }LieCentre}}{39}{subsection.4.5.9}
-\contentsline {subsection}{\numberline {4.5.10}\leavevmode {\color {Chapter }LieDerivedSubalgebra}}{39}{subsection.4.5.10}
+\contentsline {subsection}{\numberline {4.5.10}\leavevmode {\color {Chapter }LieDerivedSubalgebra}}{40}{subsection.4.5.10}
 \contentsline {subsection}{\numberline {4.5.11}\leavevmode {\color {Chapter }IsLieAbelian}}{40}{subsection.4.5.11}
-\contentsline {subsection}{\numberline {4.5.12}\leavevmode {\color {Chapter }IsLieSolvable}}{40}{subsection.4.5.12}
+\contentsline {subsection}{\numberline {4.5.12}\leavevmode {\color {Chapter }IsLieSolvable}}{41}{subsection.4.5.12}
 \contentsline {subsection}{\numberline {4.5.13}\leavevmode {\color {Chapter }IsLieNilpotent}}{41}{subsection.4.5.13}
 \contentsline {subsection}{\numberline {4.5.14}\leavevmode {\color {Chapter }IsLieMetabelian}}{41}{subsection.4.5.14}
-\contentsline {subsection}{\numberline {4.5.15}\leavevmode {\color {Chapter }IsLieCentreByMetabelian}}{41}{subsection.4.5.15}
+\contentsline {subsection}{\numberline {4.5.15}\leavevmode {\color {Chapter }IsLieCentreByMetabelian}}{42}{subsection.4.5.15}
 \contentsline {subsection}{\numberline {4.5.16}\leavevmode {\color {Chapter }CanonicalBasis}}{42}{subsection.4.5.16}
-\contentsline {subsection}{\numberline {4.5.17}\leavevmode {\color {Chapter }IsBasisOfLieAlgebraOfGroupRing}}{42}{subsection.4.5.17}
+\contentsline {subsection}{\numberline {4.5.17}\leavevmode {\color {Chapter }IsBasisOfLieAlgebraOfGroupRing}}{43}{subsection.4.5.17}
 \contentsline {subsection}{\numberline {4.5.18}\leavevmode {\color {Chapter }StructureConstantsTable}}{43}{subsection.4.5.18}
-\contentsline {subsection}{\numberline {4.5.19}\leavevmode {\color {Chapter }LieUpperNilpotencyIndex}}{43}{subsection.4.5.19}
-\contentsline {subsection}{\numberline {4.5.20}\leavevmode {\color {Chapter }LieLowerNilpotencyIndex}}{43}{subsection.4.5.20}
+\contentsline {subsection}{\numberline {4.5.19}\leavevmode {\color {Chapter }LieUpperNilpotencyIndex}}{44}{subsection.4.5.19}
+\contentsline {subsection}{\numberline {4.5.20}\leavevmode {\color {Chapter }LieLowerNilpotencyIndex}}{44}{subsection.4.5.20}
 \contentsline {subsection}{\numberline {4.5.21}\leavevmode {\color {Chapter }LieDerivedLength}}{44}{subsection.4.5.21}
-\contentsline {section}{\numberline {4.6}\leavevmode {\color {Chapter }Other commands}}{44}{section.4.6}
-\contentsline {subsection}{\numberline {4.6.1}\leavevmode {\color {Chapter }SubgroupsOfIndexTwo}}{44}{subsection.4.6.1}
+\contentsline {section}{\numberline {4.6}\leavevmode {\color {Chapter }Other commands}}{45}{section.4.6}
+\contentsline {subsection}{\numberline {4.6.1}\leavevmode {\color {Chapter }SubgroupsOfIndexTwo}}{45}{subsection.4.6.1}
 \contentsline {subsection}{\numberline {4.6.2}\leavevmode {\color {Chapter }DihedralDepth}}{45}{subsection.4.6.2}
 \contentsline {subsection}{\numberline {4.6.3}\leavevmode {\color {Chapter }DimensionBasis}}{45}{subsection.4.6.3}
-\contentsline {subsection}{\numberline {4.6.4}\leavevmode {\color {Chapter }LieDimensionSubgroups}}{45}{subsection.4.6.4}
-\contentsline {subsection}{\numberline {4.6.5}\leavevmode {\color {Chapter }LieUpperCodimensionSeries}}{46}{subsection.4.6.5}
-\contentsline {subsection}{\numberline {4.6.6}\leavevmode {\color {Chapter }LAGInfo}}{46}{subsection.4.6.6}
+\contentsline {subsection}{\numberline {4.6.4}\leavevmode {\color {Chapter }LieDimensionSubgroups}}{46}{subsection.4.6.4}
+\contentsline {subsection}{\numberline {4.6.5}\leavevmode {\color {Chapter }LieUpperCodimensionSeries (for group ring)}}{46}{subsection.4.6.5}
+\contentsline {subsection}{\numberline {4.6.6}\leavevmode {\color {Chapter }LAGInfo}}{47}{subsection.4.6.6}
 \contentsline {subsection}{\numberline {4.6.7}\leavevmode {\color {Chapter }LAGUNABuildManual}}{47}{subsection.4.6.7}
 \contentsline {subsection}{\numberline {4.6.8}\leavevmode {\color {Chapter }LAGUNABuildManualHTML}}{47}{subsection.4.6.8}

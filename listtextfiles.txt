@@ -2,7 +2,6 @@ laguna/init.g
 laguna/read.g
 laguna/README.laguna
 laguna/PackageInfo.g
-laguna/doc/chap5.txt
 laguna/doc/theory.xml
 laguna/doc/manual.bib
 laguna/doc/chap0.html
@@ -27,7 +26,8 @@ laguna/doc/chapInd.txt
 laguna/doc/manual.css
 laguna/doc/chap3.txt
 laguna/doc/chap1.html
-laguna/doc/chap5.html
+laguna/tst/manual.g
+laguna/tst/laguna.tst
 laguna/lib/laguna.gd
 laguna/lib/laguna.g
 laguna/lib/laguna.gi

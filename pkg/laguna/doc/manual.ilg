@@ -1,6 +1,6 @@
 This is makeindex, version 2.14 [02-Oct-2002] (kpathsea + Thai support).
-Scanning input file manual.idx....done (103 entries accepted, 0 rejected).
-Sorting entries....done (682 comparisons).
-Generating output file manual.ind....done (152 lines written, 0 warnings).
+Scanning input file manual.idx....done (99 entries accepted, 0 rejected).
+Sorting entries....done (655 comparisons).
+Generating output file manual.ind....done (157 lines written, 0 warnings).
 Output written in manual.ind.
 Transcript written in manual.ilg.

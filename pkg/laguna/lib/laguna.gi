@@ -5,7 +5,7 @@
 #W                                                         Richard Rossmanith
 #W                                                            Csaba Schneider
 ##
-#H  $Id: laguna.gi,v 1.57 2007/02/07 17:15:13 alexk Exp $
+#H  $Id: laguna.gi,v 1.64 2009/05/14 16:54:02 alexk Exp $
 ##
 #############################################################################
 
@@ -309,7 +309,7 @@ InstallMethod(IsUnitary,
 
 #############################################################################
 ##
-#M  IsUnit( <R>, <x> )
+#M  IsUnit( <KG>, <elt> )
 ## 
 InstallMethod (IsUnit,
         "LAGUNA: for an element of modular group algebra",
@@ -324,7 +324,7 @@ InstallMethod (IsUnit,
         
 #############################################################################
 ##
-#M  IsUnit( <x> )
+#M  IsUnit( <elt> )
 ## 
 InstallOtherMethod (IsUnit,
         "LAGUNA: for an element of modular group algebra",
@@ -367,7 +367,7 @@ InstallOtherMethod (IsUnit,
 
 #############################################################################
 ##
-#M  InverseOp( <x> )
+#M  InverseOp( <elt> )
 ## 
 InstallOtherMethod( InverseOp,
   "LAGUNA: for an element of modular group algebra",
@@ -376,8 +376,12 @@ InstallOtherMethod( InverseOp,
   0,
   function( elt )
   local inv, pow, x, u, S, a;
+  
+  if IsZero( elt ) then
+    return fail;  
+  fi; 
         
-  # if we have element of the form coefficient*group element
+  # if we have element of the form coefficient*group element,
   # or if we work in characteristic zero,
   # we switch to use standart method for magma rings
         
@@ -934,10 +938,14 @@ InstallMethod( NormalizedUnitGroup,
       SetSize(U, Size(LeftActingDomain(KG))^(Size(UnderlyingMagma(KG))-1));
       SetIsPGroup(U, true);
       SetUnderlyingGroupRing(U,KG);
+      SetPcgs( U, PcgsByPcSequence( FamilyObj(One(KG)), GeneratorsOfGroup(U) ) );
+      SetRelativeOrders( Pcgs(U), List( [ 1 .. Dimension(KG)-1 ], x -> Characteristic( LeftActingDomain(KG) ) ) );
       return U;
     fi;  
     end
     );   
+
+InstallTrueMethod( CanEasilyComputePcgs, IsNormalizedUnitGroupOfGroupRing );
 
 
 #############################################################################
@@ -955,7 +963,7 @@ InstallMethod( PcNormalizedUnitGroup,
     [ IsPModularGroupAlgebra ],
     0,
     function( KG ) 
-    local i, j, e, wb, f, rels, fgens, w, coef, k, U, z, p;
+    local i, j, e, wb, lwb, f, fgens, w, coef, k, U, z, p, coll;
 
     if not IsPrime(Size(LeftActingDomain(KG))) then
       TryNextMethod();
@@ -967,15 +975,19 @@ InstallMethod( PcNormalizedUnitGroup,
       p := Characteristic( LeftActingDomain( KG ) );
          
       wb := WeightedBasis( KG );
-         
-      f := FreeGroup( Length( wb.weightedBasis ));
+      lwb := Length( wb.weightedBasis );
+      
+      f := FreeGroup( lwb );
       fgens := GeneratorsOfGroup( f );
-      rels := [ ];
+      # rels := [ ];
     
-      Info(LAGInfo, 3, "LAGInfo: relations for ", Length(wb.weightedBasis),
+      coll:=SingleCollector( f, List( [1 .. lwb ], i -> p ) );
+      # TODO: Understand why CombinatorialCollector does not work?
+    
+      Info(LAGInfo, 3, "LAGInfo: relations for ", lwb,
                        " elements of weighted basis");     
          
-      for i in [1..Length(wb.weightedBasis)] do
+      for i in [1..lwb] do
           coef := NormalizedUnitCF( KG, (wb.weightedBasis[i]+e)^p );
           w := One( f );
           for j in [1..Length(coef)] do
@@ -983,25 +995,27 @@ InstallMethod( PcNormalizedUnitGroup,
                           w := w*fgens[j]^IntFFE( coef[j] );
                   fi;
           od;
-          Add( rels, fgens[i]^p/w );
+          # Add( rels, fgens[i]^p/w );
+          SetPower( coll, i, w );
           Info(LAGInfo, 4, i);
       od;
     
-      Info(LAGInfo, 3, "LAGInfo: commutators for ", Length(wb.weightedBasis), 
+      Info(LAGInfo, 3, "LAGInfo: commutators for ", lwb, 
                        " elements of weighted basis");     
 
       if IsCommutative(KG) then
 
-        for i in [1..Length( wb.weightedBasis )] do
-          for j in [i+1..Length( wb.weightedBasis )] do
-            Add( rels, Comm( fgens[i],fgens[j] ) );
+        for i in [1..lwb-1] do
+          for j in [i+1..lwb] do
+            # Add( rels, Comm( fgens[i],fgens[j] ) );
+            SetCommutator( coll, j, i, One(f) );
           od;
         od;
       
       else   
      
-        for i in [1..Length( wb.weightedBasis )] do
-          for j in [i+1..Length( wb.weightedBasis )] do
+        for i in [ 1 .. lwb-1 ] do
+          for j in [ i+1 .. lwb ] do
             coef := NormalizedUnitCF( KG,  
                       Comm( wb.weightedBasis[i]+e, wb.weightedBasis[j]+e ));
             w := One( f );
@@ -1010,7 +1024,8 @@ InstallMethod( PcNormalizedUnitGroup,
                   w := w*fgens[k]^IntFFE( coef[k] );
               fi;
             od;
-            Add( rels, Comm( fgens[i],fgens[j] )/w );
+            # Add( rels, Comm( fgens[i],fgens[j] )/w );
+            SetCommutator( coll, j, i, w^-1);
             Info(LAGInfo, 4, "[ ", i, " , ", j, " ]");
           od;
         od;
@@ -1019,11 +1034,11 @@ InstallMethod( PcNormalizedUnitGroup,
            
       Info(LAGInfo, 2, "LAGInfo: finished, converting to PcGroup" );
 
-      U:=PcGroupFpGroup( f/rels );
+      U:=GroupByRwsNC(coll); # before we used U:=PcGroupFpGroup( f/rels );
       SetIsGroupOfUnitsOfMagmaRing(U,false);
       SetIsNormalizedUnitGroupOfGroupRing(U,true);
       SetIsPGroup(U, true);
-      SetUnderlyingGroupRing(U,KG);     
+      SetUnderlyingGroupRing(U,KG);   
       return U;
     fi;
     end
@@ -1315,6 +1330,128 @@ InstallMethod( GroupBases,
 end);
 
 
+#############################################################################
+##
+#O  BassCyclicUnit( <ZG>, <g>, <k> )
+#O  BassCyclicUnit( <g>, <k> )
+##  
+##  Let g be an element of order n of the group G, and 1 < k < n be such that
+##  k and n are coprime, then  k^Phi(n) is congruent to 1 modulo n. The unit 
+##  b(g,k) = ( \sum_{j=0}^{k-1} g^j )^Phi(n) + ( (1-k^Phi(n))/n ) * Hat(g),
+##  where Hat(g) = g + g^2 + ... + g^n, is called a Bass cyclic unit of 
+##  the integral group ring ZG.
+##  When G is a finite nilpotent group, the group generated by the
+##  Bass cyclic units contain a subgroup of finite index in the centre
+##  of U(ZG) [E. Jespers, M.M. Parmenter and S.K. Sehgal, Central Units 
+##  Of Integral Group Rings Of Nilpotent Groups.
+##  Proc. Amer. Math. Soc. 124 (1996), no. 4, 1007--1012].
+##
+InstallMethod( BassCyclicUnit,
+    "for uderlying group element, not embedded into group ring",
+    true,
+    [ IsGroupRing, IsObject, IsPosInt ],
+    0,
+    function( ZG, g, k )
+    local n, powers, j, bcu, phi, coeff;
+    if not IsIntegers( LeftActingDomain( ZG ) ) then
+      Error( "LAGUNA : BassCyclicUnit( <ZG>, <g>, <k>  ) : \n",
+             " <ZG> must be an integral group ring \n" );
+    fi;  
+    if not g in UnderlyingGroup( ZG ) then
+      Error( "LAGUNA : BassCyclicUnit( <ZG>, <g>, <k>  ) : \n",
+             "<g> must be an elements of the UnderlyingGroup(<ZG>) \n" );    
+    fi;
+    
+    n := Order(g);
+    
+    if k>=n then 
+      Error( "LAGUNA : BassCyclicUnit( <ZG>, <g>, <k>  ) : \n",
+             "<k> must be smaller than Order(<g>) \n" );    
+    fi; 
+       
+    if not Gcd( n, k )=1 then
+      Error( "LAGUNA : BassCyclicUnit( <ZG>, <g>, <k>  ) : \n",
+             "Order(<g>) and <k> must be coprime! \n" );    
+    fi;    
+    
+    powers:=[ One(g) ];
+    
+    for j in [ 2 .. k ] do
+      powers[j] := powers[j-1]*g;
+    od;   
+    
+    bcu := ElementOfMagmaRing( FamilyObj( Zero( ZG ) ),
+                               0,
+                               List( [1..k], i -> 1),
+                               powers );
+    
+    phi := Phi( n ); 
+    bcu := bcu^phi;    
+    coeff :=  ( 1-k^phi ) / n;       
+    
+    for j in [ k+1 .. n ] do
+      powers[j] := powers[j-1]*g;
+    od;                  
+                               
+    return bcu + ElementOfMagmaRing( FamilyObj( Zero( ZG ) ),
+                                     0,
+                                     List( [1..n], i -> coeff),
+                                     powers );                           
+end);
+
+
+InstallOtherMethod( BassCyclicUnit,
+    "for uderlying group element, embedded into group ring",
+    true,
+    [ IsElementOfMagmaRingModuloRelations and IsMagmaRingObjDefaultRep, IsPosInt ],
+    0,
+    function( g, k )
+    local h, n, powers, j, bcu, phi, coeff;
+    if not ( Length( CoefficientsAndMagmaElements( g ) ) = 2 and
+                     CoefficientsAndMagmaElements( g )[2] = 1 ) then
+      Error( "LAGUNA : BassCyclicUnit( <g>, <k> ) : \n",
+             "<g> must be group element embedded into integral group ring \n");             
+    fi;     
+    
+    h := CoefficientsAndMagmaElements( g )[1];
+    n := Order( g );
+
+    if k>=n then 
+      Error( "LAGUNA : BassCyclicUnit( <ZG>, <g>, <k>  ) : \n",
+             "<k> must be smaller than Order(<g>) \n" );    
+    fi; 
+    
+    if not Gcd( n, k )=1 then
+      Error( "LAGUNA : BassCyclicUnit( <g>, <k>  ) : \n",
+             "Order(<g>) and <k> are not coprime! \n" );    
+    fi;    
+    
+    powers:=[ One(h) ];
+    
+    for j in [ 2 .. k ] do
+      powers[j] := powers[j-1]*h;
+    od;   
+    
+    bcu := ElementOfMagmaRing( FamilyObj( Zero( g ) ),
+                               0,
+                               List( [1..k], i -> 1),
+                               powers );
+    
+    phi := Phi( n ); 
+    bcu := bcu^phi;    
+    coeff :=  ( 1-k^phi ) / n;       
+    
+    for j in [ k+1 .. n ] do
+      powers[j] := powers[j-1]*h;
+    od;                  
+                               
+    return bcu + ElementOfMagmaRing( FamilyObj( Zero( g ) ),
+                                     0,
+                                     List( [1..n], i -> coeff),
+                                     powers );                           
+end);
+
+
 ##########################################################################
 ##
 #O  BicyclicUnitOfType1( <KG>, <a>, <g> )
@@ -1342,6 +1479,10 @@ InstallMethod( BicyclicUnitOfType1,
     0,
     function( KG, a, g )
     local i, ap, s, e;
+    if not a in UnderlyingGroup( KG ) or not g in UnderlyingGroup( KG ) then
+      Error( "LAGUNA : BicyclicUnitOfType1( <KG>, <a>, <g> ) : \n",
+             "<a> and <g> must be elements of the UnderlyingGroup(<KG>) \n" );    
+    fi;
     a := a^Embedding( UnderlyingGroup(KG), KG);
     g := g^Embedding( UnderlyingGroup(KG), KG);
     e := One(a);
@@ -1364,6 +1505,10 @@ InstallMethod( BicyclicUnitOfType2,
     0,
     function( KG, a, g )
     local i, ap, s, e;
+    if not a in UnderlyingGroup( KG ) or not g in UnderlyingGroup( KG ) then
+      Error( "LAGUNA : BicyclicUnitOfType2( <KG>, <a>, <g> ) : \n",
+             "<a> and <g> must be elements of the UnderlyingGroup(<KG>) \n" );    
+    fi;
     a := a^Embedding( UnderlyingGroup(KG), KG);
     g := g^Embedding( UnderlyingGroup(KG), KG);
     e := One(a);
@@ -1392,12 +1537,18 @@ end);
 ##
 InstallOtherMethod( BicyclicUnitOfType1,
     "for uderlying group elements, embedded into group ring",
-    true,
+    IsIdenticalObj, # to make sure that they are in the same group ring
     [IsElementOfMagmaRingModuloRelations and IsMagmaRingObjDefaultRep,
     IsElementOfMagmaRingModuloRelations and IsMagmaRingObjDefaultRep],
     0,
     function( a, g )
-    local i, ap, s, e;
+    local i, ap, s, e, x;
+    if not ForAll( [a,g], x -> 
+                   Length( CoefficientsAndMagmaElements( x ) )=2 and
+                   IsOne( CoefficientsAndMagmaElements( x )[2] ) ) then
+      Error( "LAGUNA : BicyclicUnitOfType1( <a>, <g> ) : \n",
+             "<a> and <g> must be group elements embedded into group ring \n");             
+    fi;                
     e := One(a);
     if IsOne(a) then
       return a;
@@ -1413,12 +1564,18 @@ end);
 
 InstallOtherMethod( BicyclicUnitOfType2,
     "for uderlying group elements, embedded into group ring",
-    true,
+    IsIdenticalObj, # to make sure that they are in the same group ring
     [IsElementOfMagmaRingModuloRelations and IsMagmaRingObjDefaultRep,
     IsElementOfMagmaRingModuloRelations and IsMagmaRingObjDefaultRep],
     0,
     function( a, g )
-    local i, ap, s, e;
+    local i, ap, s, e, x;
+    if not ForAll( [a,g], x -> 
+                   Length( CoefficientsAndMagmaElements( x ) )=2 and
+                   IsOne( CoefficientsAndMagmaElements( x )[2] ) ) then
+      Error( "LAGUNA : BicyclicUnitOfType1( <a>, <g> ) : \n",
+             "<a> and <g> must be group elements embedded into group ring \n");             
+    fi; 
     e := One(a);
     if IsOne(a) then
       return a;
