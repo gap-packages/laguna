@@ -5,7 +5,7 @@
 #W                                                         Richard Rossmanith
 #W                                                            Csaba Schneider
 ##
-#H  $Id: laguna.gi,v 1.44 2005/04/07 10:45:24 alexk Exp $
+#H  $Id: laguna.gi,v 1.57 2007/02/07 17:15:13 alexk Exp $
 ##
 #############################################################################
 
@@ -352,7 +352,7 @@ InstallOtherMethod (IsUnit,
             
           S:=Group(Support(elt)); 
           if IsPGroup(S) then
-            if PrimePGroup(S) mod Characteristic( elt ) = 0 then
+            if PrimePGroup(S) mod Characteristic( elt )=0 then
               return not Augmentation( elt ) = ZeroCoefficient( elt ) ;
             else  
               TryNextMethod(); # since our case is not modular               
@@ -437,7 +437,7 @@ InstallMethod( LeftIdealBySubgroup,
                [ IsGroupRing, IsGroup ],
                0,
 function ( KG, H )
-local G, LI, gens, g;
+local G, LI, gens, g, r, leftcosreps;
 G := UnderlyingMagma( KG );
 #
 if not IsSubgroup( G, H ) then
@@ -450,8 +450,14 @@ if G=H then
   return AugmentationIdeal( KG );
 fi;
 #
+leftcosreps := List( RightTransversal( G, H ), g -> g^-1 );
 gens := List( AsList( H ), g -> g-One( KG ) );
 SubtractSet( gens, [Zero(KG)] );
+for r in leftcosreps do
+  if r<>One(G) then
+    Append( gens, List( gens{[1..Size(H)-1]}, g -> r*g ) );
+  fi;
+od;
 if IsNormal( G, H ) then
   LI := TwoSidedIdeal( KG, gens, "basis" );
   Info( LAGInfo, 2, 
@@ -474,7 +480,7 @@ InstallMethod( RightIdealBySubgroup,
                [ IsGroupRing, IsGroup ],
                0,
 function ( KG, H )
-local G, RI, gens, g;
+local G, RI, gens, g, r, rightcosreps;
 G := UnderlyingMagma( KG );
 #
 if not IsSubgroup( G, H ) then
@@ -487,8 +493,14 @@ if G=H then
   return AugmentationIdeal( KG );
 fi;
 #
+rightcosreps:=RightTransversal( G, H );
 gens := List( AsList( H ), g -> g-One( KG ) );
 SubtractSet( gens, [Zero(KG)] );
+for r in rightcosreps do
+  if not r<>One(G) then
+    Append( gens, List( gens{[1..Size(H)-1]}, g -> g*r ) );
+  fi;
+od;
 if IsNormal( G, H ) then
   RI := TwoSidedIdeal( KG, gens, "basis" );
   Info( LAGInfo, 2, 
@@ -525,6 +537,7 @@ if G=H then
 fi;
 #
 if IsNormal( G, H ) then
+  # in this case LeftIdealBySubgroup will return two-sided ideal
   return LeftIdealBySubgroup( KG, H );
 else
   Info(LAGInfo, 1, 
@@ -812,6 +825,92 @@ InstallMethod( NormalizedUnitCF,
  
 end );
 
+########################################################################### 
+# 
+# NormalizedUnitCFmod( KG, u, k ) 
+# 
+# KG is a modular group algebra and u is a normalized unit in KG. 
+# Returns the restricted coefficient vector corresponding to the element u 
+# with respect to the "natural" polycyclic series of the normalized unit 
+# group which corresponds to the augmentation ideal filtration of KG. 
+InstallMethod( NormalizedUnitCFmod, 
+        "LAGUNA: for modular group algebra of finite p-group", 
+        true, 
+        [ IsPModularGroupAlgebra,  
+          IsElementOfMagmaRingModuloRelations and IsMagmaRingObjDefaultRep,
+          IsPosInt], 
+        0, 
+        function( KG, u, k ) 
+    local i, j, c, wb, rem, w, f, l, coef, u1, e, cl, z; 
+     
+    if not IsUnit(KG,u) then 
+      Error( "The element <u> must be invertible" ); 
+    fi; 
+     
+    if u = u^0 then 
+      return [ ]; 
+    fi; 
+     
+    c := AugmentationIdealPowerSeries( KG ); 
+    wb := WeightedBasis( KG ); 
+    e := One( KG ); 
+    z := Zero( LeftActingDomain( KG ) ); 
+     
+    rem := u; 
+     
+    cl := [ ]; 
+     
+    repeat 
+      
+      w := 1; 
+      while rem-e in c[w] do 
+        w := w+1; 
+      od; 
+      
+      w := w-1; 
+      
+      f := 1; 
+      
+      while Length( wb.weights )>= f and wb.weights[f]<w do 
+        f := f+1; 
+      od; 
+      
+      for i in [1..f-Length( cl )-1] do 
+        Add( cl, z ); 
+      od; 
+      
+      l := f; 
+      while Length( wb.weights )>= l and wb.weights[l] = w  do 
+        l := l+1; 
+      od; 
+      
+      l := l-1; 
+      
+      coef := Coefficients( BasisNC( c[w],  
+              wb.weightedBasis{[f..Length( wb.weightedBasis )]}),  
+              rem-e ); 
+      
+      u1 := One( KG ); 
+      coef := coef{[1..l-f+1]}; 
+      
+      for i in [1..l-f+1] do 
+        Add( cl, coef[i] ); 
+        if Length(cl) >= k then 
+          return cl;
+        fi;
+        if not coef[i]=z then 
+          u1 := u1*(wb.weightedBasis[f+i-1]+e)^IntFFE( coef[i] ); 
+        fi; 
+      od; 
+      
+      rem := u1^-1*rem; 
+      
+    until rem = One( KG ); 
+  
+  return cl; 
+  
+end ); 
+
 
 #############################################################################
 ##
@@ -929,6 +1028,87 @@ InstallMethod( PcNormalizedUnitGroup,
     fi;
     end
     );
+
+
+#############################################################################
+##
+#O  AugmentationIdealPowerFactorGroupOp( <KG>, <n> )
+##  
+##  Calculates the pc-presentation of the factor group of the normalized unit
+##  group V(KG) over 1+I^n, where I is the augmentation ideal of KG 
+InstallMethod( AugmentationIdealPowerFactorGroupOp, 
+  "for modular group algebra of finite p-group",
+  true,
+  [ IsPModularGroupAlgebra, IsPosInt ],
+  0,
+  function(KG,n)
+
+  local i, j, e, wb, f, rels, fgens, w, coef, cutcoef, k, U, z, p,
+        pos, cuttedBasis;
+
+  if n > AugmentationIdealNilpotencyIndex(KG) then
+    Print("Warning: calculating V(KG/I^n) for n>t(I), returning V(KG) \n");
+  fi;
+
+  if n >= AugmentationIdealNilpotencyIndex(KG) then
+    return PcNormalizedUnitGroup(KG);
+  fi;
+         
+  Info(LAGInfo, 2, "LAGInfo: Computing the pc factor group ..." );
+         
+  e := One( KG );
+  z := Zero( LeftActingDomain( KG ) );
+  p := Characteristic( LeftActingDomain( KG ) );
+         
+  wb := WeightedBasis( KG );
+  pos:=Position(wb.weights, n)-1;
+  cuttedBasis:=wb.weightedBasis{[1 .. pos]};
+             
+  f := FreeGroup( Length( cuttedBasis ));
+  fgens := GeneratorsOfGroup( f );
+  rels := [ ];
+    
+  Info(LAGInfo, 3, "LAGInfo: relations for ", Length(cuttedBasis), 
+                   " elements of cutted basis");     
+         
+  for i in [1..Length(cuttedBasis)] do
+    coef := NormalizedUnitCFmod( KG, (cuttedBasis[i]+e)^p, pos);
+    cutcoef := coef{[1..Minimum(Length(coef),pos)]};
+    w := One( f );
+    for j in [1..Length(cutcoef)] do
+      if not cutcoef[j]=z then
+        w := w*fgens[j]^IntFFE( coef[j] );
+      fi;
+    od;
+    Add( rels, fgens[i]^p/w );
+    Info(LAGInfo, 4, i);
+  od;
+    
+  Info(LAGInfo, 3, "LAGInfo: commutators for ", Length(cuttedBasis), 
+                   " elements of cutted basis");     
+         
+  for i in [1..Length(cuttedBasis )] do
+    for j in [i+1..Length(cuttedBasis )] do
+      coef := NormalizedUnitCFmod( KG, Comm( cuttedBasis[i]+e, 
+                                       cuttedBasis[j]+e ), pos);
+      cutcoef := coef{[1..Minimum(Length(coef),pos)]};		    
+      w := One( f );
+      for k in [1..Length( cutcoef )] do
+        if not cutcoef[k]=z then
+          w := w*fgens[k]^IntFFE( coef[k] );
+        fi;
+      od;
+      Add( rels, Comm( fgens[i],fgens[j] )/w );
+      Info(LAGInfo, 4, "[ ", i, " , ", j, " ]");
+    od;
+  od;
+         
+Info(LAGInfo, 2, "LAGInfo: finished, converting to PcGroup" );
+    
+U:=PcGroupFpGroup( f/rels );
+SetUnderlyingGroupRing(U,KG);     
+return U;
+end);
 
 
 #############################################################################
@@ -1137,32 +1317,34 @@ end);
 
 ##########################################################################
 ##
-#O  BicyclicUnitOfType1( <a>, <g> )
-#O  BicyclicUnitOfType2( <a>, <g> )
+#O  BicyclicUnitOfType1( <KG>, <a>, <g> )
+#O  BicyclicUnitOfType2( <KG>, <a>, <g> )
 ##
-## a and g are elements of underlying group, embedded to its group ring.
-## Returns the bicyclic units u_(a,g) corresponding to a and g. Note that
-## u_(a,g) is normally defined if a and g are elements of the underlying
-## group G, but this function does not check whether this condition holds.
+## For elements a and g of the underlying group of a group ring KG,
+## returns the bicyclic unit u_(a,g) of the appropriate type.
 ## If ord a = n, then the bicycle unit of the 1st type is defined as
 ##
 ##       u_{a,g} = 1 + (a-1) * g * ( 1 + a + a^2 + ... +a^{n-1} )
 ##
 ## and the bicycle unit of the 2nd type is defined as
 ##
-##       v_{a,g} = 1 + ( 1 + a + a^2 + ... +a^{n-1} ) * g * a 
+##       v_{a,g} = 1 + ( 1 + a + a^2 + ... +a^{n-1} ) * g * (a-1) 
 ## 
 ## u_{a,g} and v_{a,g} may coincide for some a and g, but in general
 ## this does not hold.
+## Note that u_(a,g) is defined when g does not normalize a, but this
+## function does not check this.
+##
 InstallMethod( BicyclicUnitOfType1,
-    "for uderlying group elements, embedded into group ring",
-    IsIdenticalObj,
-    [IsElementOfMagmaRingModuloRelations and IsMagmaRingObjDefaultRep,
-    IsElementOfMagmaRingModuloRelations and IsMagmaRingObjDefaultRep],
+    "for uderlying group elements, not embedded into group ring",
+    true,
+    [ IsGroupRing, IsObject, IsObject ],
     0,
-    function( a, g )
+    function( KG, a, g )
     local i, ap, s, e;
-      e := One(a);
+    a := a^Embedding( UnderlyingGroup(KG), KG);
+    g := g^Embedding( UnderlyingGroup(KG), KG);
+    e := One(a);
     if IsOne(a) then
       return a;
     fi;
@@ -1176,8 +1358,62 @@ InstallMethod( BicyclicUnitOfType1,
 end);
 
 InstallMethod( BicyclicUnitOfType2,
+    "for uderlying group elements, not embedded into group ring",
+    true,
+    [ IsGroupRing, IsObject, IsObject ],
+    0,
+    function( KG, a, g )
+    local i, ap, s, e;
+    a := a^Embedding( UnderlyingGroup(KG), KG);
+    g := g^Embedding( UnderlyingGroup(KG), KG);
+    e := One(a);
+    if IsOne(a) then
+      return a;
+    fi;
+    s := e;
+    ap := a;
+    while not IsOne(ap) do
+      s := s+ap;
+      ap := ap*a;
+    od;
+    return e+s*g*(a-e);
+end);
+
+
+##########################################################################
+##
+#O  BicyclicUnitOfType1( <a>, <g> )
+#O  BicyclicUnitOfType2( <a>, <g> )
+##
+## In this form of this function the first argument KG is omitted, and 
+## a and g are elements of underlying group, embedded to its group ring.
+## Note that u_(a,g) is defined when g does not normalize a, but this
+## function does not check this.
+##
+InstallOtherMethod( BicyclicUnitOfType1,
     "for uderlying group elements, embedded into group ring",
-    IsIdenticalObj,
+    true,
+    [IsElementOfMagmaRingModuloRelations and IsMagmaRingObjDefaultRep,
+    IsElementOfMagmaRingModuloRelations and IsMagmaRingObjDefaultRep],
+    0,
+    function( a, g )
+    local i, ap, s, e;
+    e := One(a);
+    if IsOne(a) then
+      return a;
+    fi;
+    s := e;
+    ap := a;
+    while not IsOne(ap) do
+      s := s+ap;
+      ap := ap*a;
+    od;
+    return e+(a-e)*g*s;
+end);
+
+InstallOtherMethod( BicyclicUnitOfType2,
+    "for uderlying group elements, embedded into group ring",
+    true,
     [IsElementOfMagmaRingModuloRelations and IsMagmaRingObjDefaultRep,
     IsElementOfMagmaRingModuloRelations and IsMagmaRingObjDefaultRep],
     0,
@@ -1314,7 +1550,7 @@ end);
 ##
 #############################################################################
 
-
+ 
 #############################################################################
 ##
 #M  LieAlgebraByDomain( <A> )
@@ -1382,7 +1618,7 @@ InstallMethod( LieAlgebraByDomain,
          TryNextMethod();
        fi;
   end );
- 
+
 
 InstallMethod( \in,
   "LAGUNA: for a Lie algebra that comes from an associative algebra and a Lie object",

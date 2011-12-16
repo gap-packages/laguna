@@ -5,7 +5,7 @@
 #W                                                         Richard Rossmanith
 #W                                                            Csaba Schneider
 ##
-#H  $Id: laguna.g,v 1.19 2004/09/14 08:35:43 alexk Exp $
+#H  $Id: laguna.g,v 1.22 2007/02/06 15:19:04 alexk Exp $
 ##
 #############################################################################
 
@@ -47,7 +47,7 @@ local laguna_path, laguna_main, laguna_files, laguna_bookname;
 laguna_path:=Concatenation(
                GAPInfo.PackagesInfo.("laguna")[1].InstallationPath,"/doc/");
 laguna_main:="manual.xml";
-laguna_files:=["intro.xml", "example.xml", "theory.xml", "funct.xml"];
+laguna_files:=[];
 laguna_bookname:="LAGUNA";
 MakeGAPDocDoc(laguna_path, laguna_main, laguna_files, laguna_bookname);  
 end;
@@ -62,7 +62,7 @@ local laguna_path, laguna_main, laguna_files, str, r, h;
 laguna_path:=Concatenation(
                GAPInfo.PackagesInfo.("laguna")[1].InstallationPath,"/doc/");
 laguna_main:="manual.xml";
-laguna_files:=["intro.xml", "example.xml", "theory.xml", "funct.xml"];
+laguna_files:=[];
 str:=ComposedXMLString(laguna_path, laguna_main, laguna_files);
 r:=ParseTreeXMLString(str);
 CheckAndCleanGapDocTree(r);

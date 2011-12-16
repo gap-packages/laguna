@@ -1,4 +1,4 @@
-<!-- $Id: theory.xml,v 1.10 2003/04/08 06:51:54 alexk Exp $ -->
+<!-- $Id: theory.xml,v 1.11 2005/04/19 21:32:53 alexk Exp $ -->
 <Chapter Label="Theory">
 <Heading>The basic theory behind &LAGUNA;</Heading>    
 
@@ -153,7 +153,8 @@ Clearly, a standard product is an element of the augmentation ideal
 <Display>
 \sum_{i=1}^k i(\alpha_{i,1}+\cdots+\alpha_{i,l_i}).
 </Display>
-The total number of standard products is <M>|G|-1</M>.
+The total number of standard products is <M>|G|-1</M>.
+
 
 <P/>
 

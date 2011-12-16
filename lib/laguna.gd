@@ -5,7 +5,7 @@
 #W                                                         Richard Rossmanith
 #W                                                            Csaba Schneider
 ##
-#H  @(#)$Id: laguna.gd,v 1.15 2005/04/07 10:45:24 alexk Exp $
+#H  @(#)$Id: laguna.gd,v 1.19 2006/07/26 11:38:31 alexk Exp $
 ##
 #############################################################################
 
@@ -15,7 +15,7 @@
 ##
 ##  LAGInfo
 ##  
-##  We declare new Info class for LAG algorithms. 
+##  We declare new Info class for LAGUNA algorithms. 
 ##  It has 4 levels - 0, 1 (default), 2 and 3
 ##  To change Info level to k, use command SetInfoLevel(LAGInfo, k)
 DeclareInfoClass("LAGInfo");
@@ -293,6 +293,17 @@ DeclareOperation( "NormalizedUnitCF",
                     IsElementOfMagmaRingModuloRelations and 
                     IsMagmaRingObjDefaultRep] );
 
+					  
+#############################################################################
+##
+#O  NormalizedUnitCFmod( <KG>, <u>, <k> )
+##  
+DeclareOperation( "NormalizedUnitCFmod", 
+                  [ IsPModularGroupAlgebra, 
+                    IsElementOfMagmaRingModuloRelations and 
+                    IsMagmaRingObjDefaultRep,
+                    IsPosInt] );
+
 
 #############################################################################
 ##
@@ -306,6 +317,16 @@ DeclareAttribute("NormalizedUnitGroup", IsPModularGroupAlgebra);
 #A  PcNormalizedUnitGroup( <KG> )
 ##  
 DeclareAttribute("PcNormalizedUnitGroup", IsPModularGroupAlgebra);
+
+
+#############################################################################
+##
+#O  AugmentationIdealPowerFactorGroup( <KG>, <n> )
+##  
+##  Calculates the pc-presentation of the factor group of the normalized unit
+##  group V(KG) over 1+I^n, where I is the augmentation ideal of KG 
+KeyDependentOperation( "AugmentationIdealPowerFactorGroup", 
+                        IsPModularGroupAlgebra, IsPosInt, IsPosInt );
 
 
 #############################################################################
@@ -340,31 +361,27 @@ DeclareAttribute("GroupBases", IsPModularGroupAlgebra);
 
 #############################################################################
 ##
-#O  BicyclicUnitOfType1( <a>, <g> )
-#O  BicyclicUnitOfType2( <a>, <g> )
+#O  BicyclicUnitOfType1( <KG>, <a>, <g> )
+#O  BicyclicUnitOfType2( <KG>, <a>, <g> )
 ##  
-## a and g are elements of underlying group, emebedded to its group ring.
-## Returns the bicyclic units u_(a,g) corresponding to a and g. Note that
-## u_(a,g) is normally defined if a and g are elements of the underlying
-## group G, but this function does not check whether this condition holds.
+## For elements a and g of the underlying group of a group ring KG,
+## returns the bicyclic unit u_(a,g) of the appropriate type.
 ## If ord a = n, then the bicycle unit of the 1st type is defined as
 ##
 ##       u_{a,g} = 1 + (a-1) * g * ( 1 + a + a^2 + ... +a^{n-1} )
 ##
 ## and the bicycle unit of the 2nd type is defined as
 ##
-##       v_{a,g} = 1 + ( 1 + a + a^2 + ... +a^{n-1} ) * g * a 
+##       v_{a,g} = 1 + ( 1 + a + a^2 + ... +a^{n-1} ) * g * (a-1) 
 ## 
 ## u_{a,g} and v_{a,g} may coincide for some a and g, but in general
 ## this does not hold.
 ##
 DeclareOperation("BicyclicUnitOfType1",
-       [IsElementOfMagmaRingModuloRelations and IsMagmaRingObjDefaultRep,
-        IsElementOfMagmaRingModuloRelations and IsMagmaRingObjDefaultRep]);
+       [ IsGroupRing, IsObject, IsObject ] );
 
 DeclareOperation("BicyclicUnitOfType2",
-       [IsElementOfMagmaRingModuloRelations and IsMagmaRingObjDefaultRep,
-        IsElementOfMagmaRingModuloRelations and IsMagmaRingObjDefaultRep]);
+       [ IsGroupRing, IsObject, IsObject ] );
 
 
 #############################################################################
