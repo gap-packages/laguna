@@ -5,8 +5,6 @@
 #W                                                         Richard Rossmanith
 #W                                                            Csaba Schneider
 ##
-#H  $Id: laguna.g,v 1.22 2007/02/06 15:19:04 alexk Exp $
-##
 #############################################################################
 
 
@@ -35,39 +33,6 @@ local emb;
     return w;
   end;
 return emb;
-end;
-
-
-#############################################################################
-##
-##  LAGUNABuildManual()
-##
-LAGUNABuildManual:=function()
-local laguna_path, laguna_main, laguna_files, laguna_bookname;
-laguna_path:=Concatenation(
-               GAPInfo.PackagesInfo.("laguna")[1].InstallationPath,"/doc/");
-laguna_main:="manual.xml";
-laguna_files:=[];
-laguna_bookname:="LAGUNA";
-MakeGAPDocDoc(laguna_path, laguna_main, laguna_files, laguna_bookname);  
-end;
-
-
-#############################################################################
-##
-##  LAGUNABuildManualHTML()
-##
-LAGUNABuildManualHTML:=function()
-local laguna_path, laguna_main, laguna_files, str, r, h;
-laguna_path:=Concatenation(
-               GAPInfo.PackagesInfo.("laguna")[1].InstallationPath,"/doc/");
-laguna_main:="manual.xml";
-laguna_files:=[];
-str:=ComposedXMLString(laguna_path, laguna_main, laguna_files);
-r:=ParseTreeXMLString(str);
-CheckAndCleanGapDocTree(r);
-h:=GAPDoc2HTML(r, laguna_path);
-GAPDoc2HTMLPrintHTMLFiles(h, laguna_path);
 end;
 
 

@@ -1,4 +1,4 @@
-gap> START_TEST("$Id: laguna.tst,v 1.1 2009/05/30 20:59:30 alexk Exp $");
+gap> START_TEST("laguna.tst");
 gap> List([1..5],i->IdGroup(PcNormalizedUnitGroup(GroupRing(GF(2),SmallGroup(8,i)))));
 [ [ 128, 1601 ], [ 128, 2319 ], [ 128, 170 ], [ 128, 178 ], [ 128, 2328 ] ]
 gap> G:=SmallGroup(32,6);
@@ -15,4 +15,4 @@ gap> S:=WreathProduct(CyclicGroup(2),D);
 <group of size 64 with 3 generators>
 gap> NilpotencyClassOfGroup(S);
 3
-gap> STOP_TEST( "scscp.tst", 10000 );
+gap> STOP_TEST( "laguna.tst", 10000 );

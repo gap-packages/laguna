@@ -5,8 +5,6 @@
 #W                                                         Richard Rossmanith
 #W                                                            Csaba Schneider
 ##
-#H  $Id: laguna.gi,v 1.64 2009/05/14 16:54:02 alexk Exp $
-##
 #############################################################################
 
 
@@ -234,33 +232,81 @@ end);
 
 #############################################################################
 ##
-#M  Involution( <x>, <mapping> )
+#M  Involution( <x>, <mapping_f>, <mapping_sigma> )
+##
+##  Computes the image of the element x = \sum alpha_g g under the mapping
+##  \sum alpha_g g  -> \sum alpha_g * f(x) * sigma(g)
 ## 
 InstallMethod( Involution,
+    "LAGUNA: for a group ring element, and a group endomapping of order 2 and a mapping from the group to a ring",
+    true,
+    [ IsElementOfMagmaRingModuloRelations and IsMagmaRingObjDefaultRep, 
+      IsMapping, IsMapping ], 
+    0,
+    function(x, f, sigma)
+    local i, g, coeffs, supp, e, s;
+    if Source(sigma) <> Source(f) then
+    	Error("Involution: Source(sigma) <> Source(f)");
+    elif Source(sigma) <> Range(sigma) then 
+        Error("Involution: Source(sigma) <> Range (sigma)");
+    elif Order(sigma) <> 2 then
+        Error("Involution: Order(sigma) <> 2");
+    else
+        e := One(ZeroCoefficient(x));
+        for g in GeneratorsOfGroup( Source( f ) ) do    
+            s := g^sigma;
+            if (g*s)^f <> e then
+                Error("Involution: f(g * sigma(g)) <> ", e, " for g = ", g, "\n");
+            elif (s*g)^f <> e then
+                Error("Involution: f(sigma(g) * g) <> ", e, " for g = ", g, "\n");
+            fi;
+        od;    
+    	coeffs := CoefficientsBySupport(x);
+    	supp := Support(x);
+        return ElementOfMagmaRing( FamilyObj(x), 
+                                   ZeroCoefficient(x), 
+                                   List( [ 1 .. Length(coeffs) ], i -> coeffs[i]*supp[i]^f ), 
+                                   List( supp, g -> g^sigma ) ) ;
+    fi;
+    end
+    ); 
+    
+    
+#############################################################################
+##
+#M  Involution( <x>, <mapping_sigma> )
+##
+##  Computes the image of the element x = \sum alpha_g g under the mapping
+##  \sum alpha_g g  -> \sum alpha_g * sigma(g)
+## 
+InstallOtherMethod( Involution,
     "LAGUNA: for a group ring element and a group endomapping of order 2",
     true,
     [ IsElementOfMagmaRingModuloRelations and IsMagmaRingObjDefaultRep, 
       IsMapping ], 
     0,
-    function(x,map)
+    function(x, sigma)
     local g;
-    if Source(map) <> Range(map) then 
-        Error("Involution: Source(map) <> Range (map)");
-    elif Order(map) <> 2 then
-        Error("Involution: Order(map) <> 2");
+    if Source(sigma) <> Range(sigma) then 
+        Error("Involution: Source(sigma) <> Range (sigma)");
+    elif Order(sigma) <> 2 then
+        Error("Involution: Order(sigma) <> 2");
     else
         return ElementOfMagmaRing( FamilyObj(x), 
                                    ZeroCoefficient(x), 
                                    CoefficientsBySupport(x), 
-                                   List(Support(x), g -> g^map) ) ;
+                                   List(Support(x), g -> g^sigma) ) ;
     fi;
     end
     ); 
-    
+        
 
 #############################################################################
 ##
 #M  Involution( <x> )
+##
+##  Computes the image of the element x = \sum alpha_g g under the classical
+##  involution \sum alpha_g g  -> \sum alpha_g * g^-1
 ## 
 InstallOtherMethod( Involution,
     "LAGUNA: classical involution for an element of a group ring ",
@@ -2404,16 +2450,7 @@ InstallMethod( SubgroupsOfIndexTwo,
         A:=ImagesSource(f);
         SetIsAbelian(A, true);
         subs:=Filtered(MaximalSubgroups(A), M->(2=Index(A,M)));
-        return List
-                 (
-                   subs,
-                   M->Subgroup
-                        ( G,
-                          PreImagesSet( f,
-                                        GeneratorsOfMagmaWithInverses(M)
-                                      )
-                        )
-                 );
+        return List( subs, M -> PreImagesSet(f,M) );
       else
         return [];
       fi;

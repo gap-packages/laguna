@@ -5,8 +5,6 @@
 #W                                                         Richard Rossmanith
 #W                                                            Csaba Schneider
 ##
-#H  @(#)$Id: laguna.gd,v 1.20 2007/07/15 22:31:08 alexk Exp $
-##
 #############################################################################
 
 
@@ -169,7 +167,7 @@ DeclareOperation("PartialAugmentations",
 ##  
 DeclareOperation("Involution", 
                  [IsElementOfMagmaRingModuloRelations and 
-                  IsMagmaRingObjDefaultRep, IsMapping ]);
+                  IsMagmaRingObjDefaultRep, IsMapping, IsMapping ]);
 
 
 #############################################################################
