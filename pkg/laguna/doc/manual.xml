@@ -1,22 +1,22 @@
-<?xml version="1.0" encoding="ISO-8859-1"?>
-
-<!-- $Id: manual.xml,v 1.31 2009/05/30 21:13:40 alexk Exp $ -->
+<?xml version="1.0" encoding="UTF-8"?>
 
 <!DOCTYPE Book SYSTEM "gapdoc.dtd"
-[<!ENTITY Clanguage "<Package>C</Package>">] 
-[<!ENTITY LAG "<Package>LAG</Package>">] 
-[<!ENTITY LAGUNA "<Package>LAGUNA</Package>">]
-[<!ENTITY SISYPHOS "<Package>SISYPHOS</Package>">] >
-
+    [ <!ENTITY C "<Package>C</Package>">
+      <!ENTITY LAG "<Package>LAG</Package>">
+      <!ENTITY LAGUNA "<Package>LAGUNA</Package>">
+      <!ENTITY SISYPHOS "<Package>SISYPHOS</Package>">
+      <#Include Label="PKGVERSIONDATA">      
+    ] >
+    
 <Book Name="LAGUNA">
 
 <TitlePage>
   <Title>&LAGUNA;</Title>
   <Subtitle>Lie AlGebras and UNits of group Algebras</Subtitle>
-  <Version>Version 3.5.0</Version>
+  <Version>Version &VERSION;</Version>
 
   <Author>Victor Bovdi 
-          <Email>vbovdi@math.klte.hu</Email>
+          <Email>vbovdi@science.unideb.hu</Email>
           <Address>
            Institute of Mathematics and Informatics<Br/>
 	   University of Debrecen<Br/> 
@@ -24,7 +24,7 @@
   </Author>
 
   <Author>Alexander Konovalov
-          <Email>konovalov@member.ams.org</Email>
+          <Email>alexk@mcs.st-andrews.ac.uk</Email>
 	  <Homepage>http://www.cs.st-andrews.ac.uk/&tilde;alexk/</Homepage>
           <Address>
             School of Computer Science<Br/>
@@ -34,15 +34,7 @@
           </Address> 
   </Author>
 
-  <Author>Richard Rossmanith
-          <Email>richard.rossmanith@d-fine.de</Email>
-          <Address>
-    	    d-fine GmbH<Br/>
-            Mergenthalerallee 55
-            65760 Eschborn/Frankfurt<Br/>
-            Germany
-          </Address> 
-  </Author>
+  <Author>Richard Rossmanith</Author>
 
   <Author>
   Csaba Schneider
@@ -57,7 +49,7 @@
   </Author>
 
 
-  <Date>30 May 2009</Date>
+  <Date>&RELEASEDATE;</Date>
 
 <Abstract>
 
@@ -78,14 +70,15 @@ the field of <M>p</M> elements.
 </Abstract>
 
 <Copyright>
-  &copyright; 2003-2009 by Victor Bovdi, Alexander Konovalov, 
+  &copyright; 2003-&RELEASEYEAR; by Victor Bovdi, Alexander Konovalov, 
   Richard Rossmanith, and Csaba Schneider<P/>
 
-  &LAGUNA; is free software; you can redistribute it and/or modify it 
+  &LAGUNA;  is free software; you can redistribute it and/or modify it 
   under the terms of the GNU General Public License as published by 
   the Free Software Foundation; either version 2 of the License, or 
   (at your option) any later version. For details, see the FSF's own site
-  <URL>http://www.gnu.org/licenses/gpl.html</URL>.<P/>
+  <URL>http://www.gnu.org/licenses/gpl.html</URL>.
+  <P/>
 
   If you obtained &LAGUNA;, we would be grateful for a short notification
   sent to one of the authors.<P/>
@@ -95,8 +88,8 @@ the field of <M>p</M> elements.
 
   V. Bovdi, A. Konovalov, R. Rossmanith and C. Schneider. 
   <E>LAGUNA --- Lie AlGebras and UNits of group Algebras, 
-  Version 3.5.0;</E> 2009 
-  (<URL>http://www.cs.st-andrews.ac.uk/&tilde;alexk/laguna.htm</URL>).
+  Version &VERSION;;</E> &RELEASEDATE; 
+  (<URL>http://www.cs.st-andrews.ac.uk/&tilde;alexk/laguna/</URL>).
 </Copyright>
   
 <Acknowledgements>

@@ -9,27 +9,36 @@
 <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
 <meta name="generator" content="GAPDoc2HTML" />
 <link rel="stylesheet" type="text/css" href="manual.css" />
+<script src="manual.js" type="text/javascript"></script>
+<script type="text/javascript">overwriteStyle();</script>
 </head>
-<body>
+<body class="chap3"  onload="jscontent()">
 
 
 <div class="chlinktop"><span class="chlink1">Goto Chapter: </span><a href="chap0.html">Top</a>  <a href="chap1.html">1</a>  <a href="chap2.html">2</a>  <a href="chap3.html">3</a>  <a href="chap4.html">4</a>  <a href="chapBib.html">Bib</a>  <a href="chapInd.html">Ind</a>  </div>
 
-<div class="chlinkprevnexttop">&nbsp;<a href="chap0.html">Top of Book</a>&nbsp;  &nbsp;<a href="chap2.html">Previous Chapter</a>&nbsp;  &nbsp;<a href="chap4.html">Next Chapter</a>&nbsp;  </div>
+<div class="chlinkprevnexttop">&nbsp;<a href="chap0.html">[Top of Book]</a>&nbsp;  <a href="chap0.html#contents">[Contents]</a>&nbsp;  &nbsp;<a href="chap2.html">[Previous Chapter]</a>&nbsp;  &nbsp;<a href="chap4.html">[Next Chapter]</a>&nbsp;  </div>
 
-<p><a id="X7D9FCE3A8526ACBE" name="X7D9FCE3A8526ACBE"></a></p>
-<div class="ChapSects"><a href="chap3.html#X7D9FCE3A8526ACBE">3 <span class="Heading">The basic theory behind <strong class="pkg">LAGUNA</strong></span></a>
-<div class="ContSect"><span class="nocss">&nbsp;</span><a href="chap3.html#X85C2DE1486FB45FD">3.1 <span class="Heading">Notation and definitions</span></a>
+<p id="mathjaxlink" class="pcenter"><a href="chap3_mj.html">[MathJax on]</a></p>
+<p><a id="X81154D7881F7378F" name="X81154D7881F7378F"></a></p>
+<div class="ChapSects"><a href="chap3.html#X81154D7881F7378F">3 <span class="Heading">The basic theory behind <strong class="pkg">LAGUNA</strong></span></a>
+<div class="ContSect"><span class="tocline"><span class="nocss">&nbsp;</span><a href="chap3.html#X85C2DE1486FB45FD">3.1 <span class="Heading">Notation and definitions</span></a>
+</span>
 </div>
-<div class="ContSect"><span class="nocss">&nbsp;</span><a href="chap3.html#X7E26AE6C807D7C07">3.2 <span class="Heading">p-modular group algebras</span></a>
+<div class="ContSect"><span class="tocline"><span class="nocss">&nbsp;</span><a href="chap3.html#X80A5F4BD78768C75">3.2 <span class="Heading"><span class="SimpleMath">p</span>-modular group algebras</span></a>
+</span>
 </div>
-<div class="ContSect"><span class="nocss">&nbsp;</span><a href="chap3.html#X7B74767A849D921E">3.3 <span class="Heading">Polycyclic generating set for V</span></a>
+<div class="ContSect"><span class="tocline"><span class="nocss">&nbsp;</span><a href="chap3.html#X7FB81FE082DFF909">3.3 <span class="Heading">Polycyclic generating set for <span class="SimpleMath">V</span></span></a>
+</span>
 </div>
-<div class="ContSect"><span class="nocss">&nbsp;</span><a href="chap3.html#X7DCB12F48752C17E">3.4 <span class="Heading">Computing the canonical form</span></a>
+<div class="ContSect"><span class="tocline"><span class="nocss">&nbsp;</span><a href="chap3.html#X7DCB12F48752C17E">3.4 <span class="Heading">Computing the canonical form</span></a>
+</span>
 </div>
-<div class="ContSect"><span class="nocss">&nbsp;</span><a href="chap3.html#X873F4F068759DF5D">3.5 <span class="Heading">Computing a power commutator presentation for V</span></a>
+<div class="ContSect"><span class="tocline"><span class="nocss">&nbsp;</span><a href="chap3.html#X78FD250584304FB1">3.5 <span class="Heading">Computing a power commutator presentation for <span class="SimpleMath">V</span></span></a>
+</span>
 </div>
-<div class="ContSect"><span class="nocss">&nbsp;</span><a href="chap3.html#X79183196837B7CC1">3.6 <span class="Heading">Verifying Lie properties of FG</span></a>
+<div class="ContSect"><span class="tocline"><span class="nocss">&nbsp;</span><a href="chap3.html#X7FAB1A7F87AAE7F0">3.6 <span class="Heading">Verifying Lie properties of <span class="SimpleMath">FG</span></span></a>
+</span>
 </div>
 </div>
 
@@ -41,153 +50,118 @@
 
 <h4>3.1 <span class="Heading">Notation and definitions</span></h4>
 
-<p>Let G be a group and F a field. Then the <em>group algebra</em> FG consists of the set of formal linear combinations of the form</p>
+<p>Let <span class="SimpleMath">G</span> be a group and <span class="SimpleMath">F</span> a field. Then the <em>group algebra</em> <span class="SimpleMath">FG</span> consists of the set of formal linear combinations of the form</p>
 
-<p class="pcenter"> 
-\sum_{g \in G}\alpha_g g,\qquad \alpha_g \in F
-</p>
+<p class="pcenter"> \sum_{g \in G}\alpha_g g,\qquad \alpha_g \in F</p>
 
-<p>where all but finitely many of the alpha_g are zero. The group algebra FG is an F-algebra with the obvious operations. Clearly, dim FG=|G|.</p>
+<p>where all but finitely many of the <span class="SimpleMath">α_g</span> are zero. The group algebra <span class="SimpleMath">FG</span> is an <span class="SimpleMath">F</span>-algebra with the obvious operations. Clearly, <span class="SimpleMath">dim FG=|G|</span>.</p>
 
-<p>The <em>augmentation homomorphism</em> chi : FG -&gt; F is defined by</p>
+<p>The <em>augmentation homomorphism</em> <span class="SimpleMath">χ : FG → F</span> is defined by</p>
 
-<p class="pcenter">
-\chi\left(\sum_{g \in G}\alpha_g g\right)=\sum_{g \in G}\alpha_g.
-</p>
+<p class="pcenter">\chi\left(\sum_{g \in G}\alpha_g g\right)=\sum_{g \in G}\alpha_g.</p>
 
-<p>It is easy to see that chi is indeed a homomorphism onto F. The kernel of chi is called the <em>augmentation ideal</em> of FG. The augmentation ideal is denoted A(FG), or simply A when there is no danger of confusion. It follows from the isomorphism theorems that dim A(FG)=dim FG-1=|G|-1. Another way to write the augmentation ideal is</p>
+<p>It is easy to see that <span class="SimpleMath">χ</span> is indeed a homomorphism onto <span class="SimpleMath">F</span>. The kernel of <span class="SimpleMath">χ</span> is called the <em>augmentation ideal</em> of <span class="SimpleMath">FG</span>. The augmentation ideal is denoted <span class="SimpleMath">A(FG)</span>, or simply <span class="SimpleMath">A</span> when there is no danger of confusion. It follows from the isomorphism theorems that <span class="SimpleMath">dim A(FG)=dim FG-1=|G|-1</span>. Another way to write the augmentation ideal is</p>
 
-<p class="pcenter">
-A(FG)=\left\{\sum_{g \in G}\alpha_g g\ |\ \sum_{g \in G}\alpha_g=0\right\}.
-</p>
+<p class="pcenter">A(FG)=\left\{\sum_{g \in G}\alpha_g g\ |\ \sum_{g \in G}\alpha_g=0\right\}.</p>
 
-<p>An invertible element of FG is said to be a <em>unit</em>. Clearly the elements of G and the non-zero elements of F are units. The set of units in FG is a group with respect to the multiplication of FG. The <em>unit group</em> of FG is denoted U(FG) or simply U when there is no risk of confusion. A unit u is said to be <em>normalised</em> if chi(u)=1. The set of normalised units forms a subgroup of the unit group, and is referred to as the <em>normalised unit group</em>. The normalised unit group of FG is denoted V(FG), or simply V. It is easy to prove that U(FG) = F^* x V(FG) where F^* denotes the multiplicative group of F.</p>
+<p>An invertible element of <span class="SimpleMath">FG</span> is said to be a <em>unit</em>. Clearly the elements of <span class="SimpleMath">G</span> and the non-zero elements of <span class="SimpleMath">F</span> are units. The set of units in <span class="SimpleMath">FG</span> is a group with respect to the multiplication of <span class="SimpleMath">FG</span>. The <em>unit group</em> of <span class="SimpleMath">FG</span> is denoted <span class="SimpleMath">U(FG)</span> or simply <span class="SimpleMath">U</span> when there is no risk of confusion. A unit <span class="SimpleMath">u</span> is said to be <em>normalised</em> if <span class="SimpleMath">χ(u)=1</span>. The set of normalised units forms a subgroup of the unit group, and is referred to as the <em>normalised unit group</em>. The normalised unit group of <span class="SimpleMath">FG</span> is denoted <span class="SimpleMath">V(FG)</span>, or simply <span class="SimpleMath">V</span>. It is easy to prove that <span class="SimpleMath">U(FG) = F^* × V(FG)</span> where <span class="SimpleMath">F^*</span> denotes the multiplicative group of <span class="SimpleMath">F</span>.</p>
 
-<p><a id="X7E26AE6C807D7C07" name="X7E26AE6C807D7C07"></a></p>
+<p><a id="X80A5F4BD78768C75" name="X80A5F4BD78768C75"></a></p>
 
-<h4>3.2 <span class="Heading">p-modular group algebras</span></h4>
+<h4>3.2 <span class="Heading"><span class="SimpleMath">p</span>-modular group algebras</span></h4>
 
-<p>A group algebra FG is said to be p-modular if F is the field of characteristic p, and G is a finite p-group. A lot of information about the structure of p-modular group algebras can be found in <a href="chapBib.html#biBHB">[HB82, Chapter VIII]</a>. In a p-modular group algebra we have that an element u is a unit if and only if chi(u)&lt;&gt; 0. Hence the normalised unit group V consists of all elements of FG with augmentation 1. In other words V is a coset of the augmentation ideal, namely V=1+A. This also implies that |V|=|A|=|F|^|G|-1, and so V is a finite p-group.</p>
+<p>A group algebra <span class="SimpleMath">FG</span> is said to be <span class="SimpleMath">p</span>-modular if <span class="SimpleMath">F</span> is the field of characteristic <span class="SimpleMath">p</span>, and <span class="SimpleMath">G</span> is a finite <span class="SimpleMath">p</span>-group. A lot of information about the structure of <span class="SimpleMath">p</span>-modular group algebras can be found in <a href="chapBib.html#biBHB">[HB82, Chapter VIII]</a>. In a <span class="SimpleMath">p</span>-modular group algebra we have that an element <span class="SimpleMath">u</span> is a unit if and only if <span class="SimpleMath">χ(u)≠ 0</span>. Hence the normalised unit group <span class="SimpleMath">V</span> consists of all elements of <span class="SimpleMath">FG</span> with augmentation <span class="SimpleMath">1</span>. In other words <span class="SimpleMath">V</span> is a coset of the augmentation ideal, namely <span class="SimpleMath">V=1+A</span>. This also implies that <span class="SimpleMath">|V|=|A|=|F|^|G|-1</span>, and so <span class="SimpleMath">V</span> is a finite <span class="SimpleMath">p</span>-group.</p>
 
-<p>One of the aims of the <strong class="pkg">LAGUNA</strong> package is to compute a power-commutator presentation for the normalised unit group in the case when G is a finite p-group and F is a field of p elements. Such a presentation is given by generators y_1, ..., y_|G|-1 and two types of relations: y_i^p=(y_i+1)^alpha_i,i+1} cdots (y_|G|-1)^alpha_i,|G|-1} for 1 &lt;= i &lt;= |G|-1, and [y_j,y_i]=(y_j+1)^alpha_j,i,j+1} cdots (y_|G|-1)^alpha_j,i,|G|-1} for 1 &lt;= i &lt; j &lt;= |G|-1, where the exponents alpha_i,k and alpha_i,j,k are elements of the set {0,...,p-1}. Having such a presentation, it is possible to carry out efficient computations in the finite p-group V; see <a href="chapBib.html#biBSims">[Sim94, Chapter 9]</a>.</p>
+<p>One of the aims of the <strong class="pkg">LAGUNA</strong> package is to compute a power-commutator presentation for the normalised unit group in the case when <span class="SimpleMath">G</span> is a finite <span class="SimpleMath">p</span>-group and <span class="SimpleMath">F</span> is a field of <span class="SimpleMath">p</span> elements. Such a presentation is given by generators <span class="SimpleMath">y_1, ..., y_|G|-1</span> and two types of relations: <span class="SimpleMath">y_i^p=(y_i+1)^α_i,i+1} ⋯ (y_|G|-1)^α_i,|G|-1}</span> for <span class="SimpleMath">1 ≤ i ≤ |G|-1</span>, and <span class="SimpleMath">[y_j,y_i]=(y_j+1)^α_j,i,j+1} ⋯ (y_|G|-1)^α_j,i,|G|-1}</span> for <span class="SimpleMath">1 ≤ i &lt; j ≤ |G|-1</span>, where the exponents <span class="SimpleMath">α_i,k</span> and <span class="SimpleMath">α_i,j,k</span> are elements of the set <span class="SimpleMath">{0,...,p-1}</span>. Having such a presentation, it is possible to carry out efficient computations in the finite <span class="SimpleMath">p</span>-group <span class="SimpleMath">V</span>; see <a href="chapBib.html#biBSims">[Sim94, Chapter 9]</a>.</p>
 
-<p><a id="X7B74767A849D921E" name="X7B74767A849D921E"></a></p>
+<p><a id="X7FB81FE082DFF909" name="X7FB81FE082DFF909"></a></p>
 
-<h4>3.3 <span class="Heading">Polycyclic generating set for V</span></h4>
+<h4>3.3 <span class="Heading">Polycyclic generating set for <span class="SimpleMath">V</span></span></h4>
 
-<p>Let G be a finite p-group and F the field of p elements. Our aim is to construct a power-commutator presentation for V=V(FG). We noted earlier that V=1+A, where A is the augmentation ideal. We use this piece of information and construct a polycyclic generating set for V using a suitable basis for A. Before constructing this generating set, we note that A is a nilpotent ideal in FG. In other words there is some c such that A^c&lt;&gt; 0 but A^c+1=0. Hence we can consider the following series of ideals in A:</p>
+<p>Let <span class="SimpleMath">G</span> be a finite <span class="SimpleMath">p</span>-group and <span class="SimpleMath">F</span> the field of <span class="SimpleMath">p</span> elements. Our aim is to construct a power-commutator presentation for <span class="SimpleMath">V=V(FG)</span>. We noted earlier that <span class="SimpleMath">V=1+A</span>, where <span class="SimpleMath">A</span> is the augmentation ideal. We use this piece of information and construct a polycyclic generating set for <span class="SimpleMath">V</span> using a suitable basis for <span class="SimpleMath">A</span>. Before constructing this generating set, we note that <span class="SimpleMath">A</span> is a nilpotent ideal in <span class="SimpleMath">FG</span>. In other words there is some <span class="SimpleMath">c</span> such that <span class="SimpleMath">A^c≠ 0</span> but <span class="SimpleMath">A^c+1=0</span>. Hence we can consider the following series of ideals in <span class="SimpleMath">A</span>:</p>
 
-<p class="pcenter">
-A\rhd A^2\rhd\cdots\rhd A^{c}\rhd A^{c+1}=0.
-</p>
+<p class="pcenter">A\rhd A^2\rhd\cdots\rhd A^{c}\rhd A^{c+1}=0.</p>
 
-<p>It is clear that a quotient A^i/A^i+1of this chain has trivial multiplication, that is, such a quotient is a nil-ring. The chain A^i gives rise to a series of normal subgroups in V:</p>
+<p>It is clear that a quotient <span class="SimpleMath">A^i/A^i+1</span>of this chain has trivial multiplication, that is, such a quotient is a nil-ring. The chain <span class="SimpleMath">A^i</span> gives rise to a series of normal subgroups in <span class="SimpleMath">V</span>:</p>
 
-<p class="pcenter">
-V=1+A\rhd 1+A^2\rhd\cdots\rhd 1+A^c\rhd 1+A^{c+1}=1.
-</p>
+<p class="pcenter">V=1+A\rhd 1+A^2\rhd\cdots\rhd 1+A^c\rhd 1+A^{c+1}=1.</p>
 
-<p>It is easy to see that the chain 1+A^i is central, that is, (1+A^i)/(1+A^i+1)&lt;= Z((1+A)/(1+A^i+1)).</p>
+<p>It is easy to see that the chain <span class="SimpleMath">1+A^i</span> is central, that is, <span class="SimpleMath">(1+A^i)/(1+A^i+1)≤ Z((1+A)/(1+A^i+1))</span>.</p>
 
-<p>Now we show how to compute a basis for A^i that gives a polycyclic generating set for 1+A^i. Let</p>
+<p>Now we show how to compute a basis for <span class="SimpleMath">A^i</span> that gives a polycyclic generating set for <span class="SimpleMath">1+A^i</span>. Let</p>
 
-<p class="pcenter">
-G=G_1 \rhd G_2\rhd\cdots\rhd G_{k}\rhd G_{k+1}=1
-</p>
+<p class="pcenter">G=G_1 \rhd G_2\rhd\cdots\rhd G_{k}\rhd G_{k+1}=1</p>
 
-<p>be the <em>Jennings series</em> of G. That is, G_i+1=[G_i,G]G_j^p where j is the smallest non-negative integer such that j&gt;= i/p. For all i&lt;= k select elements x_i,1,...,x_i,l_i of G_i such that {x_i,1G_i+1,...,x_i,l_iG_i+1} is a minimal generating set for the elementary abelian group G_i/G_i+1. For the Jennings series it may happen that G_i=G_i+1 for some i. In this case we choose an empty generating set for the quotient G_i/G_i+1 and l_i=0. Then the set x_1,1,...,x_1,l_1,...,x_k,1,...,x_k,l_k is said to be a <em>dimension basis</em> for G. The <em>weight</em> of a dimension basis element x_i,j is i.</p>
+<p>be the <em>Jennings series</em> of <span class="SimpleMath">G</span>. That is, <span class="SimpleMath">G_i+1=[G_i,G]G_j^p</span> where <span class="SimpleMath">j</span> is the smallest non-negative integer such that <span class="SimpleMath">j≥ i/p</span>. For all <span class="SimpleMath">i≤ k</span> select elements <span class="SimpleMath">x_i,1,...,x_i,l_i</span> of <span class="SimpleMath">G_i</span> such that <span class="SimpleMath">{x_i,1G_i+1,...,x_i,l_iG_i+1}</span> is a minimal generating set for the elementary abelian group <span class="SimpleMath">G_i/G_i+1</span>. For the Jennings series it may happen that <span class="SimpleMath">G_i=G_i+1</span> for some <span class="SimpleMath">i</span>. In this case we choose an empty generating set for the quotient <span class="SimpleMath">G_i/G_i+1</span> and <span class="SimpleMath">l_i=0</span>. Then the set <span class="SimpleMath">x_1,1,...,x_1,l_1,...,x_k,1,...,x_k,l_k</span> is said to be a <em>dimension basis</em> for <span class="SimpleMath">G</span>. The <em>weight</em> of a dimension basis element <span class="SimpleMath">x_i,j</span> is <span class="SimpleMath">i</span>.</p>
 
 <p>A non-empty product</p>
 
-<p class="pcenter">
-u=(x_{1,1}-1)^{\alpha_{1,1}}\cdots(x_{1,l_1}-1)^{\alpha_{1,l_1}}\cdots
-(x_{k,1}-1)^{\alpha_{k,1}}\cdots(x_{k,l_k}-1)^{\alpha_{k,l_k}}
-</p>
+<p class="pcenter">u=(x_{1,1}-1)^{\alpha_{1,1}}\cdots(x_{1,l_1}-1)^{\alpha_{1,l_1}}\cdots(x_{k,1}-1)^{\alpha_{k,1}}\cdots(x_{k,l_k}-1)^{\alpha_{k,l_k}}</p>
 
-<p>where 0&lt;= alpha_i,j&lt;= p-1 is said to be <em>standard</em>. Clearly, a standard product is an element of the augmentation ideal A. The weight of the standard product u is</p>
+<p>where <span class="SimpleMath">0≤ α_i,j≤ p-1</span> is said to be <em>standard</em>. Clearly, a standard product is an element of the augmentation ideal <span class="SimpleMath">A</span>. The weight of the standard product <span class="SimpleMath">u</span> is</p>
 
-<p class="pcenter">
-\sum_{i=1}^k i(\alpha_{i,1}+\cdots+\alpha_{i,l_i}).
-</p>
+<p class="pcenter">\sum_{i=1}^k i(\alpha_{i,1}+\cdots+\alpha_{i,l_i}).</p>
 
-<p>The total number of standard products is |G|-1 .</p>
+<p>The total number of standard products is <span class="SimpleMath">|G|-1</span> .</p>
 
-<p><strong class="button">Lemma (</strong><a href="chapBib.html#biBHB">[HB82, Theorem VIII.2.6]</a><strong class="button">).</strong> For i&lt;= c, the set S_i of standard products of weight at least i forms a basis for A^i. Moreover, the set 1+S_i={1+s | s in S_i} is a polycyclic generating set for 1+A^i. In particular 1+S_1 is a polycyclic generating set for V.</p>
+<p><strong class="button">Lemma (</strong><a href="chapBib.html#biBHB">[HB82, Theorem VIII.2.6]</a><strong class="button">).</strong> For <span class="SimpleMath">i≤ c</span>, the set <span class="SimpleMath">S_i</span> of standard products of weight at least <span class="SimpleMath">i</span> forms a basis for <span class="SimpleMath">A^i</span>. Moreover, the set <span class="SimpleMath">1+S_i={1+s | s ∈ S_i}</span> is a polycyclic generating set for <span class="SimpleMath">1+A^i</span>. In particular <span class="SimpleMath">1+S_1</span> is a polycyclic generating set for <span class="SimpleMath">V</span>.</p>
 
-<p>A basis for A consisting of the standard products is referred to as a <em>weighted basis</em>. Note that a weighted basis is a basis for the augmentation ideal, and not for the whole group algebra.</p>
+<p>A basis for <span class="SimpleMath">A</span> consisting of the standard products is referred to as a <em>weighted basis</em>. Note that a weighted basis is a basis for the augmentation ideal, and not for the whole group algebra.</p>
 
-<p>Let x_1,...,x_{|G|-1 denote the standard products where we choose the indices so that the weight of x_i is not larger than the weight of x_i+1 for all i, and set y_i=1+x_i. Then every element v of V can be uniquely written in the form</p>
+<p>Let <span class="SimpleMath">x_1,...,x_{|G|-1</span> denote the standard products where we choose the indices so that the weight of <span class="SimpleMath">x_i</span> is not larger than the weight of <span class="SimpleMath">x_i+1</span> for all <span class="SimpleMath">i</span>, and set <span class="SimpleMath">y_i=1+x_i</span>. Then every element <span class="SimpleMath">v</span> of <span class="SimpleMath">V</span> can be uniquely written in the form</p>
 
-<p class="pcenter">
-v=y_1^{\alpha_1}\cdots (y_{|G|-1})^{\alpha_{|G|-1}}, \quad
-\alpha_1,\ldots,\alpha_{|G|-1} \in \{0,\ldots,p-1\}.
-</p>
+<p class="pcenter">v=y_1^{\alpha_1}\cdots (y_{|G|-1})^{\alpha_{|G|-1}}, \quad\alpha_1,\ldots,\alpha_{|G|-1} \in \{0,\ldots,p-1\}.</p>
 
-<p>This expression is called the <em>canonical form</em> of v. We note that by adding a generator of F^* to the set y_1,...,y_|G|-1| we can obtain a polycyclic generating set for the unit group U.</p>
+<p>This expression is called the <em>canonical form</em> of <span class="SimpleMath">v</span>. We note that by adding a generator of <span class="SimpleMath">F^*</span> to the set <span class="SimpleMath">y_1,...,y_|G|-1|</span> we can obtain a polycyclic generating set for the unit group <span class="SimpleMath">U</span>.</p>
 
 <p><a id="X7DCB12F48752C17E" name="X7DCB12F48752C17E"></a></p>
 
 <h4>3.4 <span class="Heading">Computing the canonical form</span></h4>
 
-<p>We show how to compute the canonical form of a normalised unit with respect to the polycyclic generating set y_1,...,y_|G|-1. We use the following elementary lemma.</p>
+<p>We show how to compute the canonical form of a normalised unit with respect to the polycyclic generating set <span class="SimpleMath">y_1,...,y_|G|-1</span>. We use the following elementary lemma.</p>
 
-<p><strong class="button">Lemma.</strong> Let i&lt;= c and suppose that w in A^i. Assume that x_s_i,x_s_i+1...,x_r_i are the standard products with weight i and for s_i&lt;= j&lt;= r_i set y_j=1+x_j. Then for all alpha_s_i,...,alpha_r_iin{0,...,p-1} we have that</p>
+<p><strong class="button">Lemma.</strong> Let <span class="SimpleMath">i≤ c</span> and suppose that <span class="SimpleMath">w ∈ A^i</span>. Assume that <span class="SimpleMath">x_s_i,x_s_i+1...,x_r_i</span> are the standard products with weight <span class="SimpleMath">i</span> and for <span class="SimpleMath">s_i≤ j≤ r_i</span> set <span class="SimpleMath">y_j=1+x_j</span>. Then for all <span class="SimpleMath">α_s_i,...,α_r_i∈{0,...,p-1}</span> we have that</p>
 
-<p class="pcenter">
-w\equiv \alpha_{s_i}x_{s_i}+\cdots+\alpha_{r_i}x_{r_i}\quad \bmod \quad A^{i+1}
-</p>
+<p class="pcenter">w\equiv \alpha_{s_i}x_{s_i}+\cdots+\alpha_{r_i}x_{r_i}\quad \bmod \quad A^{i+1}</p>
 
 <p>if an only if</p>
 
-<p class="pcenter">
-1+w\equiv (y_{s_i})^{\alpha_{s_i}}\cdots (y_{r_i})^{\alpha_{r_i}}\quad \bmod
-\quad 1+A^{i+1}.
-</p>
+<p class="pcenter">1+w\equiv (y_{s_i})^{\alpha_{s_i}}\cdots (y_{r_i})^{\alpha_{r_i}}\quad \bmod\quad 1+A^{i+1}.</p>
 
-<p>Suppose that w is an element of the augmentation ideal A and 1+w is a normalised unit. Let x_1,...,x_r_1 be the standard products of weight 1, and let y_1,...,y_r_1 be the corresponding elements in the polycyclic generating set. Then using the previous lemma, we find alpha_1,...,alpha_r_1 such that</p>
+<p>Suppose that <span class="SimpleMath">w</span> is an element of the augmentation ideal <span class="SimpleMath">A</span> and <span class="SimpleMath">1+w</span> is a normalised unit. Let <span class="SimpleMath">x_1,...,x_r_1</span> be the standard products of weight 1, and let <span class="SimpleMath">y_1,...,y_r_1</span> be the corresponding elements in the polycyclic generating set. Then using the previous lemma, we find <span class="SimpleMath">α_1,...,α_r_1</span> such that</p>
 
-<p class="pcenter">
-w\equiv \alpha_{1}x_{1}+\cdots+\alpha_{r_1}x_{r_1}\quad \bmod \quad A^{2},
-</p>
+<p class="pcenter">w\equiv \alpha_{1}x_{1}+\cdots+\alpha_{r_1}x_{r_1}\quad \bmod \quad A^{2},</p>
 
 <p>and so</p>
 
-<p class="pcenter">
-1+w\equiv (y_{1})^{\alpha_{1}}\cdots (y_{r_1})^{\alpha_{r_1}}\quad \bmod
-\quad 1+A^{2}.
-</p>
+<p class="pcenter">1+w\equiv (y_{1})^{\alpha_{1}}\cdots (y_{r_1})^{\alpha_{r_1}}\quad \bmod\quad 1+A^{2}.</p>
 
-<p>Now we have that 1+w=(y_1)^alpha_1}cdots (y_r_1)^alpha_r_1}(1+w_2) for some w_2 in A^2. Then suppose that x_s_2,x_s_2+1,...,x_r_2 are the standard products of weight 2. We find alpha_s_2,...,alpha_r_2 such that</p>
+<p>Now we have that <span class="SimpleMath">1+w=(y_1)^α_1}⋯ (y_r_1)^α_r_1}(1+w_2)</span> for some <span class="SimpleMath">w_2 ∈ A^2</span>. Then suppose that <span class="SimpleMath">x_s_2,x_s_2+1,...,x_r_2</span> are the standard products of weight 2. We find <span class="SimpleMath">α_s_2,...,α_r_2</span> such that</p>
 
-<p class="pcenter">
-w_2\equiv \alpha_{s_2}x_{s_2}+\cdots+\alpha_{r_2}x_{r_2}\quad \bmod \quad A^{3}.
-</p>
+<p class="pcenter">w_2\equiv \alpha_{s_2}x_{s_2}+\cdots+\alpha_{r_2}x_{r_2}\quad \bmod \quad A^{3}.</p>
 
 <p>Then the lemma above implies that</p>
 
-<p class="pcenter">
-1+w_2\equiv (y_{s_2})^{\alpha_{s_2}}\cdots (y_{r_2})^{\alpha_{r_2}}\quad \bmod
-\quad 1+A^{3}.
-</p>
+<p class="pcenter">1+w_2\equiv (y_{s_2})^{\alpha_{s_2}}\cdots (y_{r_2})^{\alpha_{r_2}}\quad \bmod\quad 1+A^{3}.</p>
 
-<p>Thus 1+w_2=(y_s_2)^alpha_s_2}cdots (y_r_2)^alpha_r_2}(1+w_3) for some w_3 in A^3, and so 1+w=(y_1)^alpha_1}cdots (y_r_1)^alpha_r_1}(y_s_2)^alpha_s_2}cdots (y_r_2)^alpha_r_2}(1+w_3). We repeat this process, and after c steps we obtain the canonical form for the element 1+w.</p>
+<p>Thus <span class="SimpleMath">1+w_2=(y_s_2)^α_s_2}⋯ (y_r_2)^α_r_2}(1+w_3)</span> for some <span class="SimpleMath">w_3 ∈ A^3</span>, and so <span class="SimpleMath">1+w=(y_1)^α_1}⋯ (y_r_1)^α_r_1}(y_s_2)^α_s_2}⋯ (y_r_2)^α_r_2}(1+w_3)</span>. We repeat this process, and after <span class="SimpleMath">c</span> steps we obtain the canonical form for the element <span class="SimpleMath">1+w</span>.</p>
 
-<p><a id="X873F4F068759DF5D" name="X873F4F068759DF5D"></a></p>
+<p><a id="X78FD250584304FB1" name="X78FD250584304FB1"></a></p>
 
-<h4>3.5 <span class="Heading">Computing a power commutator presentation for V</span></h4>
+<h4>3.5 <span class="Heading">Computing a power commutator presentation for <span class="SimpleMath">V</span></span></h4>
 
-<p>Using the procedure in the previous section, it is easy to compute a power commutator presentation for the normalized unit group V of a p-modular group algebra over the field of p elements. First we compute the polycyclic generating sequence y_1,...,y_|G|-1 as in Section <a href="chap3.html#X7B74767A849D921E"><b>3.3</b></a>. Then for each y_i and for each y_j, y_i such that i&lt;j we compute the canonical form for y_i^p and [y_j,y_i] as described in Section <a href="chap3.html#X7DCB12F48752C17E"><b>3.4</b></a>.</p>
+<p>Using the procedure in the previous section, it is easy to compute a power commutator presentation for the normalized unit group <span class="SimpleMath">V</span> of a <span class="SimpleMath">p</span>-modular group algebra over the field of <span class="SimpleMath">p</span> elements. First we compute the polycyclic generating sequence <span class="SimpleMath">y_1,...,y_|G|-1</span> as in Section <a href="chap3.html#X7FB81FE082DFF909"><span class="RefLink">3.3</span></a>. Then for each <span class="SimpleMath">y_i</span> and for each <span class="SimpleMath">y_j, y_i</span> such that <span class="SimpleMath">i&lt;j</span> we compute the canonical form for <span class="SimpleMath">y_i^p</span> and <span class="SimpleMath">[y_j,y_i]</span> as described in Section <a href="chap3.html#X7DCB12F48752C17E"><span class="RefLink">3.4</span></a>.</p>
 
-<p>Once a power-commutator presentation for V is constructed, it is easy to obtain a polycyclic presentation for the unit group U by adding an extra central generator y corresponding to a generator of the cyclic group F^* and enforcing that y^p-1=1.</p>
+<p>Once a power-commutator presentation for <span class="SimpleMath">V</span> is constructed, it is easy to obtain a polycyclic presentation for the unit group <span class="SimpleMath">U</span> by adding an extra central generator <span class="SimpleMath">y</span> corresponding to a generator of the cyclic group <span class="SimpleMath">F^*</span> and enforcing that <span class="SimpleMath">y^p-1=1</span>.</p>
 
-<p><a id="X79183196837B7CC1" name="X79183196837B7CC1"></a></p>
+<p><a id="X7FAB1A7F87AAE7F0" name="X7FAB1A7F87AAE7F0"></a></p>
 
-<h4>3.6 <span class="Heading">Verifying Lie properties of FG</span></h4>
+<h4>3.6 <span class="Heading">Verifying Lie properties of <span class="SimpleMath">FG</span></span></h4>
 
-<p>If FG is a group algebra then one can consider the Lie bracket operation defined by [a,b]=ab-ba. Then it is well-known that FG with respect to the scalar multiplication, the addition, and the bracket operation becomes a Lie algebra over F. This Lie algebra is also denoted FG. Some Lie properties of such Lie algebras can be computed very efficiently. In particular, it can be verified whether the Lie algebra FG is nilpotent, soluble, metabelian, centre-by-metabelian. Fast algorithms that achieve these goals are described in <a href="chapBib.html#biBLR86">[LR86]</a>, <a href="chapBib.html#biBPPS73">[PPS73]</a>, and <a href="chapBib.html#biBRos00">[Ros00]</a>.</p>
+<p>If <span class="SimpleMath">FG</span> is a group algebra then one can consider the Lie bracket operation defined by <span class="SimpleMath">[a,b]=ab-ba</span>. Then it is well-known that <span class="SimpleMath">FG</span> with respect to the scalar multiplication, the addition, and the bracket operation becomes a Lie algebra over <span class="SimpleMath">F</span>. This Lie algebra is also denoted <span class="SimpleMath">FG</span>. Some Lie properties of such Lie algebras can be computed very efficiently. In particular, it can be verified whether the Lie algebra <span class="SimpleMath">FG</span> is nilpotent, soluble, metabelian, centre-by-metabelian. Fast algorithms that achieve these goals are described in <a href="chapBib.html#biBLR86">[LR86]</a>, <a href="chapBib.html#biBPPS73">[PPS73]</a>, and <a href="chapBib.html#biBRos00">[Ros00]</a>.</p>
 
 
-<div class="chlinkprevnextbot">&nbsp;<a href="chap0.html">Top of Book</a>&nbsp;  &nbsp;<a href="chap2.html">Previous Chapter</a>&nbsp;  &nbsp;<a href="chap4.html">Next Chapter</a>&nbsp;  </div>
+<div class="chlinkprevnextbot">&nbsp;<a href="chap0.html">[Top of Book]</a>&nbsp;  <a href="chap0.html#contents">[Contents]</a>&nbsp;  &nbsp;<a href="chap2.html">[Previous Chapter]</a>&nbsp;  &nbsp;<a href="chap4.html">[Next Chapter]</a>&nbsp;  </div>
 
 
 <div class="chlinkbot"><span class="chlink1">Goto Chapter: </span><a href="chap0.html">Top</a>  <a href="chap1.html">1</a>  <a href="chap2.html">2</a>  <a href="chap3.html">3</a>  <a href="chap4.html">4</a>  <a href="chapBib.html">Bib</a>  <a href="chapInd.html">Ind</a>  </div>

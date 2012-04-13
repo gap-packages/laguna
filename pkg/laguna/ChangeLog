@@ -1,5 +1,3 @@
-$Id: ChangeLog,v 1.26 2009/05/30 21:13:39 alexk Exp $
-
                     Brief history of the LAGUNA package 
 
 1.0 - 2.0 
@@ -154,4 +152,34 @@ $Id: ChangeLog,v 1.26 2009/05/30 21:13:39 alexk Exp $
     * Speeded up PcNormalizedUnit by unsing collectors
       and constructing the resulting group by GroupByRwsNC
       instead of PcGroupFpGroup
+
+3.6.0 (April 2012)
+    * Updated the package for GAP 4.5 release
     
+4.0 (in the development version)
+    The large new block related with the Modular Isomorphism Problem (MIP):
+    * Computation of MIP-related invariants of p-groups and their modular 
+      group algebras:
+      - JenningsFactors( <G> )
+      - SandlingFactorGroup( <G> )
+      - QuillenSeries( <G> )
+      - ClassSumNumbers( <G> )
+      - NumberOfConjugacyClassesPPowers( <G> )
+      - RoggenkampParameter( <G> )
+      - RoggenkampParameterForNormalSubset( <G>, <S> )
+      - KernelSize ( <KG>, <[n,m,k]> )    
+    * Tools for manipulations with MIP invariants:
+      - PrintMIPInvariants( <G> )
+      - PrintMIPInvariantsTable(<l>, <filename>)
+      - MIPInvariantsRecord( <G> ) 
+      - MIPInvariantsLibrary( <n> ) 
+      - MIPInvariantsLibraryClassification( <invlib>, <mode> )
+      - KernelSizeTest( <KG>, <KH>)
+      - MIPSplittingByKernelSize( <list>, <no>, <mode> )
+      - JenningsLieAlgebraTest ( <KG>, <KH> )
+      - MIPSplittingByJenningsLieAlgebra( <list>, <no>, <mode> )
+      - MIPSplittingReport( <list> )
+    * AugmentationIdealPowerFactorGroup(KG,n) for computation of the 
+      pc presentation of the factorgroup of the normalized unit group 
+      V(KG) over 1+I^n, where I is the augmentation ideal of KG, and 
+      NormalizedUnitCFmod for reducing this calculations modulo I^n.

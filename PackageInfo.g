@@ -5,21 +5,24 @@
 #W                                                         Richard Rossmanith
 #W                                                            Csaba Schneider
 ##
-#H  $Id: PackageInfo.g,v 1.24 2009/05/30 21:13:40 alexk Exp $
-##
 #############################################################################
 
 SetPackageInfo( rec(
 
 PackageName := "LAGUNA",
 Subtitle := "Lie AlGebras and UNits of group Algebras",
-Version := "3.5.0",
-Date := "30/05/2009",
-ArchiveURL := "http://www.cs.st-andrews.ac.uk/~alexk/laguna/laguna-3.5.0",
-ArchiveFormats := ".tar.gz .tar.bz2 -win.zip",
+Version := "3.6.0",
+Date := "12/04/2012",
+##  <#GAPDoc Label="PKGVERSIONDATA">
+##  <!ENTITY VERSION "3.6.0">
+##  <!ENTITY RELEASEDATE "12 April 2012">
+##  <!ENTITY RELEASEYEAR "2012">
+##  <#/GAPDoc>
 
-#TextFiles := ["init.g", ......],
-#BinaryFiles := ["doc/manual.dvi", ......],
+PackageWWWHome := "http://www.cs.st-andrews.ac.uk/~alexk/laguna/",
+
+ArchiveURL := Concatenation( ~.PackageWWWHome, "laguna-", ~.Version ),
+ArchiveFormats := ".tar.gz",
 
 Persons := [
   rec(
@@ -27,7 +30,7 @@ Persons := [
     FirstNames    := "Victor",
     IsAuthor      := true,
     IsMaintainer  := true,
-    Email         := "vbovdi@math.klte.hu",
+    Email         := "vbovdi@science.unideb.hu",
     PostalAddress := Concatenation( [ 
                      "Institute of Mathematics and Informatics\n", 
                      "University of Debrecen\n", 
@@ -41,7 +44,7 @@ Persons := [
     FirstNames    := "Alexander",
     IsAuthor      := true,
     IsMaintainer  := true,
-    Email         := "konovalov@member.ams.org",
+    Email         := "alexk@mcs.st-andrews.ac.uk",
     WWWHome       := "http://www.cs.st-andrews.ac.uk/~alexk/",
     PostalAddress := Concatenation( [
                      "School of Computer Science\n",
@@ -55,14 +58,7 @@ Persons := [
     LastName := "Rossmanith",
     FirstNames := "Richard",
     IsAuthor := true,
-    IsMaintainer := false,
-    Email := "richard.rossmanith@d-fine.de",
-    PostalAddress := Concatenation( [
-                     "d-fine GmbH\n",
-                     "Mergenthalerallee 55\n",
-                     "65760 Eschborn/Frankfurt, Germany" ] ),
-    Place         := "Frankfurt",
-    Institution   := "d-fine GmbH"              
+    IsMaintainer := false
      ),
   rec( 
     LastName      := "Schneider",
@@ -86,10 +82,12 @@ Status := "accepted",
 CommunicatedBy := "Herbert Pahlings (Aachen)",
 AcceptDate := "06/2003",
 
-README_URL := "http://www.cs.st-andrews.ac.uk/~alexk/laguna/README.laguna",
-PackageInfoURL := "http://www.cs.st-andrews.ac.uk/~alexk/laguna/PackageInfo.g",
+README_URL := 
+  Concatenation( ~.PackageWWWHome, "README" ),
+PackageInfoURL := 
+  Concatenation( ~.PackageWWWHome, "PackageInfo.g" ),
+  
 AbstractHTML := "The <span class=\"pkgname\">LAGUNA</span> package replaces the <span class=\"pkgname\">LAG</span> package and provides functionality for calculation of the normalized unit group of the modular group algebra of the finite p-group and for investigation of Lie algebra associated with group algebras and other associative algebras.",
-PackageWWWHome := "http://www.cs.st-andrews.ac.uk/~alexk/laguna.htm",
                   
 PackageDoc := rec(
   BookName := "LAGUNA",
@@ -102,15 +100,15 @@ PackageDoc := rec(
 ),
 
 Dependencies := rec(
-  GAP := ">=4.4",
-  NeededOtherPackages := [ ["GAPDoc", ">= 0.99999"] ],
+  GAP := ">=4.5",
+  NeededOtherPackages := [ ["GAPDoc", ">= 1.5.1"] ],
   SuggestedOtherPackages := [ ["Sophus", ">= 1.2"] ],
   ExternalConditions := []
 ),
 
 AvailabilityTest := ReturnTrue,
 Autoload := true,
-#TestFile := "tst/testall.g",
+TestFile := "tst/testall.g",
 
 Keywords := ["group ring", "modular group algebra", "Lie algebra", "unit group"]
 

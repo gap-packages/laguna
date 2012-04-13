@@ -1,99 +1,97 @@
 \indexentry{LAGUNA package@\textsf{LAGUNA} package|hyperpage}{2}
-\indexentry{SISYPHOS package@\textsf{SISYPHOS} package|hyperpage}{6}
-\indexentry{group algebra|hyperpage}{14}
-\indexentry{augmentation homomorphism|hyperpage}{14}
-\indexentry{augmentation ideal|hyperpage}{14}
-\indexentry{unit|hyperpage}{14}
-\indexentry{unit group|hyperpage}{14}
-\indexentry{normalised unit|hyperpage}{14}
-\indexentry{normalised unit group|hyperpage}{14}
-\indexentry{p-modular group algebra@$p$-modular group algebra|hyperpage}{15}
-\indexentry{power-commutator presentation|hyperpage}{15}
-\indexentry{Jennings series|hyperpage}{15}
-\indexentry{dimension basis|hyperpage}{15}
-\indexentry{weight, of dimension basis element|hyperpage}{15}
-\indexentry{standard product|hyperpage}{15}
-\indexentry{IsGroupAlgebra@\texttt  {IsGroupAlgebra}|hyperpage}{18}
-\indexentry{IsFModularGroupAlgebra@\texttt  {IsFModularGroupAlgebra}|hyperpage}{18}
-\indexentry{modular group algebra|hyperpage}{18}
-\indexentry{IsPModularGroupAlgebra@\texttt  {IsPModularGroupAlgebra}|hyperpage}{19}
-\indexentry{UnderlyingGroup@\texttt  {UnderlyingGroup}!of a group ring|hyperpage}{19}
-\indexentry{UnderlyingRing@\texttt  {UnderlyingRing}|hyperpage}{19}
-\indexentry{UnderlyingField@\texttt  {UnderlyingField}|hyperpage}{20}
-\indexentry{Support@\texttt  {Support}|hyperpage}{20}
-\indexentry{CoefficientsBySupport@\texttt  {CoefficientsBySupport}|hyperpage}{20}
-\indexentry{TraceOfMagmaRingElement@\texttt  {TraceOfMagmaRingElement}|hyperpage}{21}
-\indexentry{Length@\texttt  {Length}|hyperpage}{21}
-\indexentry{Augmentation@\texttt  {Augmentation}|hyperpage}{21}
-\indexentry{PartialAugmentations@\texttt  {PartialAugmentations}|hyperpage}{22}
-\indexentry{partial augmentation|hyperpage}{22}
-\indexentry{Involution@\texttt  {Involution}|hyperpage}{22}
-\indexentry{IsSymmetric@\texttt  {IsSymmetric}|hyperpage}{23}
-\indexentry{symmetric element|hyperpage}{23}
-\indexentry{IsUnitary@\texttt  {IsUnitary}|hyperpage}{23}
-\indexentry{unitary element|hyperpage}{23}
-\indexentry{IsUnit@\texttt  {IsUnit}|hyperpage}{23}
-\indexentry{InverseOp@\texttt  {InverseOp}|hyperpage}{24}
-\indexentry{BicyclicUnitOfType1@\texttt  {BicyclicUnitOfType1}|hyperpage}{24}
-\indexentry{BicyclicUnitOfType2@\texttt  {BicyclicUnitOfType2}|hyperpage}{24}
-\indexentry{bicyclic unit|hyperpage}{24}
-\indexentry{BassCyclicUnit@\texttt  {BassCyclicUnit}|hyperpage}{25}
-\indexentry{Bass cyclic unit|hyperpage}{25}
-\indexentry{AugmentationHomomorphism@\texttt  {AugmentationHomomorphism}|hyperpage}{25}
-\indexentry{AugmentationIdeal@\texttt  {AugmentationIdeal}|hyperpage}{26}
-\indexentry{RadicalOfAlgebra@\texttt  {RadicalOfAlgebra}|hyperpage}{26}
-\indexentry{WeightedBasis@\texttt  {WeightedBasis}|hyperpage}{27}
-\indexentry{AugmentationIdealPowerSeries@\texttt  {AugmentationIdealPowerSeries}|hyperpage}{27}
-\indexentry{AugmentationIdealNilpotencyIndex@\texttt  {AugmentationIdealNilpotencyIndex}|hyperpage}{28}
-\indexentry{AugmentationIdealOfDerivedSubgroupNilpotencyIndex@\texttt  {Augmentation}\discretionary {-}{}{}\texttt  {Ideal}\discretionary {-}{}{}\texttt  {Of}\discretionary {-}{}{}\texttt  {Derived}\discretionary {-}{}{}\texttt  {Subgroup}\discretionary {-}{}{}\texttt  {Nilpotency}\discretionary {-}{}{}\texttt  {Index}|hyperpage}{28}
-\indexentry{LeftIdealBySubgroup@\texttt  {LeftIdealBySubgroup}|hyperpage}{28}
-\indexentry{RightIdealBySubgroup@\texttt  {RightIdealBySubgroup}|hyperpage}{28}
-\indexentry{TwoSidedIdalBySubgroup@\texttt  {TwoSidedIdalBySubgroup}|hyperpage}{29}
-\indexentry{NormalizedUnitGroup@\texttt  {NormalizedUnitGroup}|hyperpage}{29}
-\indexentry{PcNormalizedUnitGroup@\texttt  {PcNormalizedUnitGroup}|hyperpage}{30}
-\indexentry{NaturalBijectionToPcNormalizedUnitGroup@\texttt  {NaturalBijectionToPcNormalizedUnitGroup}|hyperpage}{30}
-\indexentry{NaturalBijectionToNormalizedUnitGroup@\texttt  {NaturalBijectionToNormalizedUnitGroup}|hyperpage}{31}
-\indexentry{Embedding@\texttt  {Embedding}!from group to unit group|hyperpage}{31}
-\indexentry{Units@\texttt  {Units}|hyperpage}{32}
-\indexentry{PcUnits@\texttt  {PcUnits}|hyperpage}{32}
-\indexentry{IsGroupOfUnitsOfMagmaRing@\texttt  {IsGroupOfUnitsOfMagmaRing}|hyperpage}{33}
-\indexentry{IsUnitGroupOfGroupRing@\texttt  {IsUnitGroupOfGroupRing}|hyperpage}{33}
-\indexentry{IsNormalizedUnitGroupOfGroupRing@\texttt  {IsNormalizedUnitGroupOfGroupRing}|hyperpage}{33}
-\indexentry{UnderlyingGroupRing@\texttt  {UnderlyingGroupRing}|hyperpage}{34}
-\indexentry{UnitarySubgroup@\texttt  {UnitarySubgroup}|hyperpage}{34}
-\indexentry{BicyclicUnitGroup@\texttt  {BicyclicUnitGroup}|hyperpage}{34}
-\indexentry{GroupBases@\texttt  {GroupBases}|hyperpage}{35}
-\indexentry{LieAlgebraByDomain@\texttt  {LieAlgebraByDomain}|hyperpage}{36}
-\indexentry{IsLieAlgebraByAssociativeAlgebra@\texttt  {IsLieAlgebraByAssociativeAlgebra}|hyperpage}{36}
-\indexentry{UnderlyingAssociativeAlgebra@\texttt  {UnderlyingAssociativeAlgebra}|hyperpage}{36}
-\indexentry{NaturalBijectionToLieAlgebra@\texttt  {NaturalBijectionToLieAlgebra}|hyperpage}{37}
-\indexentry{NaturalBijectionToAssociativeAlgebra@\texttt  {NaturalBijectionToAssociativeAlgebra}|hyperpage}{37}
-\indexentry{IsLieAlgebraOfGroupRing@\texttt  {IsLieAlgebraOfGroupRing}|hyperpage}{38}
-\indexentry{UnderlyingGroup@\texttt  {UnderlyingGroup}!of Lie algebra of a group ring|hyperpage}{38}
-\indexentry{Embedding@\texttt  {Embedding}!from group to Lie algebra|hyperpage}{39}
-\indexentry{LieCentre@\texttt  {LieCentre}|hyperpage}{39}
-\indexentry{LieDerivedSubalgebra@\texttt  {LieDerivedSubalgebra}|hyperpage}{40}
-\indexentry{IsLieAbelian@\texttt  {IsLieAbelian}|hyperpage}{40}
-\indexentry{IsLieSolvable@\texttt  {IsLieSolvable}|hyperpage}{41}
-\indexentry{IsLieNilpotent@\texttt  {IsLieNilpotent}|hyperpage}{41}
-\indexentry{IsLieMetabelian@\texttt  {IsLieMetabelian}|hyperpage}{41}
-\indexentry{IsLieCentreByMetabelian@\texttt  {IsLieCentreByMetabelian}|hyperpage}{42}
-\indexentry{CanonicalBasis@\texttt  {CanonicalBasis}|hyperpage}{42}
-\indexentry{IsBasisOfLieAlgebraOfGroupRing@\texttt  {IsBasisOfLieAlgebraOfGroupRing}|hyperpage}{43}
-\indexentry{StructureConstantsTable@\texttt  {StructureConstantsTable}|hyperpage}{43}
-\indexentry{LieUpperNilpotencyIndex@\texttt  {LieUpperNilpotencyIndex}|hyperpage}{44}
-\indexentry{upper Lie power series|hyperpage}{44}
-\indexentry{LieLowerNilpotencyIndex@\texttt  {LieLowerNilpotencyIndex}|hyperpage}{44}
-\indexentry{lower Lie power series|hyperpage}{44}
-\indexentry{LieDerivedLength@\texttt  {LieDerivedLength}|hyperpage}{44}
-\indexentry{Lie derived series|hyperpage}{44}
-\indexentry{Lie derived length|hyperpage}{44}
-\indexentry{SubgroupsOfIndexTwo@\texttt  {SubgroupsOfIndexTwo}|hyperpage}{45}
-\indexentry{DihedralDepth@\texttt  {DihedralDepth}|hyperpage}{45}
-\indexentry{DimensionBasis@\texttt  {DimensionBasis}|hyperpage}{45}
-\indexentry{LieDimensionSubgroups@\texttt  {LieDimensionSubgroups}|hyperpage}{46}
-\indexentry{LieUpperCodimensionSeries@\texttt  {LieUpperCodimensionSeries}!for group ring|hyperpage}{46}
-\indexentry{LieUpperCodimensionSeries@\texttt  {LieUpperCodimensionSeries}!for group|hyperpage}{46}
-\indexentry{LAGInfo@\texttt  {LAGInfo}|hyperpage}{47}
-\indexentry{LAGUNABuildManual@\texttt  {LAGUNABuildManual}|hyperpage}{47}
-\indexentry{LAGUNABuildManualHTML@\texttt  {LAGUNABuildManualHTML}|hyperpage}{47}
+\indexentry{SISYPHOS package@\textsf{SISYPHOS} package|hyperpage}{4}
+\indexentry{group algebra|hyperpage}{12}
+\indexentry{augmentation homomorphism|hyperpage}{12}
+\indexentry{augmentation ideal|hyperpage}{12}
+\indexentry{unit|hyperpage}{12}
+\indexentry{unit group|hyperpage}{12}
+\indexentry{normalised unit|hyperpage}{12}
+\indexentry{normalised unit group|hyperpage}{12}
+\indexentry{p-modular group algebra@$p$-modular group algebra|hyperpage}{13}
+\indexentry{power-commutator presentation|hyperpage}{13}
+\indexentry{Jennings series|hyperpage}{13}
+\indexentry{dimension basis|hyperpage}{13}
+\indexentry{weight, of dimension basis element|hyperpage}{13}
+\indexentry{standard product|hyperpage}{13}
+\indexentry{IsGroupAlgebra@\texttt  {IsGroupAlgebra}|hyperpage}{16}
+\indexentry{IsFModularGroupAlgebra@\texttt  {IsFModularGroupAlgebra}|hyperpage}{16}
+\indexentry{modular group algebra|hyperpage}{16}
+\indexentry{IsPModularGroupAlgebra@\texttt  {IsPModularGroupAlgebra}|hyperpage}{17}
+\indexentry{UnderlyingGroup@\texttt  {UnderlyingGroup}!of a group ring|hyperpage}{17}
+\indexentry{UnderlyingRing@\texttt  {UnderlyingRing}|hyperpage}{17}
+\indexentry{UnderlyingField@\texttt  {UnderlyingField}|hyperpage}{18}
+\indexentry{Support@\texttt  {Support}|hyperpage}{18}
+\indexentry{CoefficientsBySupport@\texttt  {CoefficientsBySupport}|hyperpage}{18}
+\indexentry{TraceOfMagmaRingElement@\texttt  {TraceOfMagmaRingElement}|hyperpage}{19}
+\indexentry{Length@\texttt  {Length}|hyperpage}{19}
+\indexentry{Augmentation@\texttt  {Augmentation}|hyperpage}{19}
+\indexentry{PartialAugmentations@\texttt  {PartialAugmentations}|hyperpage}{20}
+\indexentry{partial augmentation|hyperpage}{20}
+\indexentry{Involution@\texttt  {Involution}|hyperpage}{20}
+\indexentry{IsSymmetric@\texttt  {IsSymmetric}|hyperpage}{21}
+\indexentry{symmetric element|hyperpage}{21}
+\indexentry{IsUnitary@\texttt  {IsUnitary}|hyperpage}{21}
+\indexentry{unitary element|hyperpage}{21}
+\indexentry{IsUnit@\texttt  {IsUnit}|hyperpage}{21}
+\indexentry{InverseOp@\texttt  {InverseOp}|hyperpage}{22}
+\indexentry{BicyclicUnitOfType1@\texttt  {BicyclicUnitOfType1}|hyperpage}{22}
+\indexentry{BicyclicUnitOfType2@\texttt  {BicyclicUnitOfType2}|hyperpage}{22}
+\indexentry{bicyclic unit|hyperpage}{22}
+\indexentry{BassCyclicUnit@\texttt  {BassCyclicUnit}|hyperpage}{23}
+\indexentry{Bass cyclic unit|hyperpage}{23}
+\indexentry{AugmentationHomomorphism@\texttt  {AugmentationHomomorphism}|hyperpage}{23}
+\indexentry{AugmentationIdeal@\texttt  {AugmentationIdeal}|hyperpage}{24}
+\indexentry{RadicalOfAlgebra@\texttt  {RadicalOfAlgebra}|hyperpage}{24}
+\indexentry{WeightedBasis@\texttt  {WeightedBasis}|hyperpage}{25}
+\indexentry{AugmentationIdealPowerSeries@\texttt  {AugmentationIdealPowerSeries}|hyperpage}{25}
+\indexentry{AugmentationIdealNilpotencyIndex@\texttt  {AugmentationIdealNilpotencyIndex}|hyperpage}{26}
+\indexentry{AugmentationIdealOfDerivedSubgroupNilpotencyIndex@\texttt  {Augmentation}\discretionary {-}{}{}\texttt  {Ideal}\discretionary {-}{}{}\texttt  {Of}\discretionary {-}{}{}\texttt  {Derived}\discretionary {-}{}{}\texttt  {Subgroup}\discretionary {-}{}{}\texttt  {Nilpotency}\discretionary {-}{}{}\texttt  {Index}|hyperpage}{26}
+\indexentry{LeftIdealBySubgroup@\texttt  {LeftIdealBySubgroup}|hyperpage}{26}
+\indexentry{RightIdealBySubgroup@\texttt  {RightIdealBySubgroup}|hyperpage}{26}
+\indexentry{TwoSidedIdalBySubgroup@\texttt  {TwoSidedIdalBySubgroup}|hyperpage}{27}
+\indexentry{NormalizedUnitGroup@\texttt  {NormalizedUnitGroup}|hyperpage}{27}
+\indexentry{PcNormalizedUnitGroup@\texttt  {PcNormalizedUnitGroup}|hyperpage}{28}
+\indexentry{NaturalBijectionToPcNormalizedUnitGroup@\texttt  {Natural}\discretionary {-}{}{}\texttt  {Bijection}\discretionary {-}{}{}\texttt  {To}\discretionary {-}{}{}\texttt  {Pc}\discretionary {-}{}{}\texttt  {Normalized}\discretionary {-}{}{}\texttt  {Unit}\discretionary {-}{}{}\texttt  {Group}|hyperpage}{28}
+\indexentry{NaturalBijectionToNormalizedUnitGroup@\texttt  {Natural}\discretionary {-}{}{}\texttt  {Bijection}\discretionary {-}{}{}\texttt  {To}\discretionary {-}{}{}\texttt  {Normalized}\discretionary {-}{}{}\texttt  {Unit}\discretionary {-}{}{}\texttt  {Group}|hyperpage}{29}
+\indexentry{Embedding@\texttt  {Embedding}!from group to unit group|hyperpage}{29}
+\indexentry{Units@\texttt  {Units}|hyperpage}{30}
+\indexentry{PcUnits@\texttt  {PcUnits}|hyperpage}{30}
+\indexentry{IsGroupOfUnitsOfMagmaRing@\texttt  {IsGroupOfUnitsOfMagmaRing}|hyperpage}{31}
+\indexentry{IsUnitGroupOfGroupRing@\texttt  {IsUnitGroupOfGroupRing}|hyperpage}{31}
+\indexentry{IsNormalizedUnitGroupOfGroupRing@\texttt  {IsNormalizedUnitGroupOfGroupRing}|hyperpage}{31}
+\indexentry{UnderlyingGroupRing@\texttt  {UnderlyingGroupRing}|hyperpage}{32}
+\indexentry{UnitarySubgroup@\texttt  {UnitarySubgroup}|hyperpage}{32}
+\indexentry{BicyclicUnitGroup@\texttt  {BicyclicUnitGroup}|hyperpage}{32}
+\indexentry{GroupBases@\texttt  {GroupBases}|hyperpage}{33}
+\indexentry{LieAlgebraByDomain@\texttt  {LieAlgebraByDomain}|hyperpage}{34}
+\indexentry{IsLieAlgebraByAssociativeAlgebra@\texttt  {IsLieAlgebraByAssociativeAlgebra}|hyperpage}{34}
+\indexentry{UnderlyingAssociativeAlgebra@\texttt  {UnderlyingAssociativeAlgebra}|hyperpage}{34}
+\indexentry{NaturalBijectionToLieAlgebra@\texttt  {NaturalBijectionToLieAlgebra}|hyperpage}{35}
+\indexentry{NaturalBijectionToAssociativeAlgebra@\texttt  {Natural}\discretionary {-}{}{}\texttt  {Bijection}\discretionary {-}{}{}\texttt  {To}\discretionary {-}{}{}\texttt  {Associative}\discretionary {-}{}{}\texttt  {Algebra}|hyperpage}{35}
+\indexentry{IsLieAlgebraOfGroupRing@\texttt  {IsLieAlgebraOfGroupRing}|hyperpage}{36}
+\indexentry{UnderlyingGroup@\texttt  {UnderlyingGroup}!of Lie algebra of a group ring|hyperpage}{36}
+\indexentry{Embedding@\texttt  {Embedding}!from group to Lie algebra|hyperpage}{37}
+\indexentry{LieCentre@\texttt  {LieCentre}|hyperpage}{37}
+\indexentry{LieDerivedSubalgebra@\texttt  {LieDerivedSubalgebra}|hyperpage}{38}
+\indexentry{IsLieAbelian@\texttt  {IsLieAbelian}|hyperpage}{38}
+\indexentry{IsLieSolvable@\texttt  {IsLieSolvable}|hyperpage}{39}
+\indexentry{IsLieNilpotent@\texttt  {IsLieNilpotent}|hyperpage}{39}
+\indexentry{IsLieMetabelian@\texttt  {IsLieMetabelian}|hyperpage}{39}
+\indexentry{IsLieCentreByMetabelian@\texttt  {IsLieCentreByMetabelian}|hyperpage}{40}
+\indexentry{CanonicalBasis@\texttt  {CanonicalBasis}|hyperpage}{40}
+\indexentry{IsBasisOfLieAlgebraOfGroupRing@\texttt  {IsBasisOfLieAlgebraOfGroupRing}|hyperpage}{41}
+\indexentry{StructureConstantsTable@\texttt  {StructureConstantsTable}|hyperpage}{41}
+\indexentry{LieUpperNilpotencyIndex@\texttt  {LieUpperNilpotencyIndex}|hyperpage}{42}
+\indexentry{upper Lie power series|hyperpage}{42}
+\indexentry{LieLowerNilpotencyIndex@\texttt  {LieLowerNilpotencyIndex}|hyperpage}{42}
+\indexentry{lower Lie power series|hyperpage}{42}
+\indexentry{LieDerivedLength@\texttt  {LieDerivedLength}|hyperpage}{42}
+\indexentry{Lie derived series|hyperpage}{42}
+\indexentry{Lie derived length|hyperpage}{42}
+\indexentry{SubgroupsOfIndexTwo@\texttt  {SubgroupsOfIndexTwo}|hyperpage}{43}
+\indexentry{DihedralDepth@\texttt  {DihedralDepth}|hyperpage}{43}
+\indexentry{DimensionBasis@\texttt  {DimensionBasis}|hyperpage}{43}
+\indexentry{LieDimensionSubgroups@\texttt  {LieDimensionSubgroups}|hyperpage}{44}
+\indexentry{LieUpperCodimensionSeries@\texttt  {LieUpperCodimensionSeries}!for group ring|hyperpage}{44}
+\indexentry{LieUpperCodimensionSeries@\texttt  {LieUpperCodimensionSeries}!for group|hyperpage}{44}
+\indexentry{LAGInfo@\texttt  {LAGInfo}|hyperpage}{45}

@@ -1,29 +1,17 @@
-<Chapter Label="Example">
-<Heading>A sample calculation with &LAGUNA;</Heading>
+# from paragraph [ 2, 0, 0, 4 ][ "/Users/alexk/CVSREPS/GAPDEV/pkg/laguna/doc/example.xml", 10 ]
 
-Before explaining the theory behind the &LAGUNA; package we present 
-a sample calculation to show the reader what &LAGUNA; is able 
-to compute. We will carry out some calculations in the group algebra 
-of the dihedral group of order 16 over the field of two elements. 
-First we create this modular group algebra.
 
-<Example>
-<![CDATA[
 gap> K := GF( 2 );
 GF(2)
 gap> G := DihedralGroup( 16 );
 <pc group of size 16 with 4 generators>
 gap> KG := GroupRing( K, G );
 <algebra-with-one over GF(2), with 4 generators>
-]]>
-</Example>
 
-The group algebra <Code>KG</Code> has some properties and attributes 
-that are direct consequences of its definition. These can be checked 
-very quickly.
 
-<Example>
-<![CDATA[
+# from paragraph [ 2, 0, 0, 6 ][ "/Users/alexk/CVSREPS/GAPDEV/pkg/laguna/doc/example.xml", 25 ]
+
+
 gap> IsGroupAlgebra( KG ); 
 true
 gap> IsPModularGroupAlgebra( KG );
@@ -34,38 +22,27 @@ gap> UnderlyingGroup( KG );
 <pc group of size 16 with 4 generators>
 gap> LeftActingDomain( KG );
 GF(2)
-]]>
-</Example>
 
-Since <Code>KG</Code> is naturally a group algebra, the information provided by
-<Code>LeftActingDomain</Code> can also be obtained using two other functions 
-as follows.
 
-<Example>
+# from paragraph [ 2, 0, 0, 8 ][ "/Users/alexk/CVSREPS/GAPDEV/pkg/laguna/doc/example.xml", 44 ]
+
 gap> UnderlyingRing( KG );
 GF(2)
 gap> UnderlyingField( KG );
 GF(2)
-</Example>
 
-Let us construct a certain element of the group algebra.
-For example, we take a minimal generating system of
-the group <Code>G</Code> and find the corresponding elements in
-<Code>KG</Code>.
+# from paragraph [ 2, 0, 0, 10 ][ "/Users/alexk/CVSREPS/GAPDEV/pkg/laguna/doc/example.xml", 56 ]
 
-<Example>
-<![CDATA[
+
 gap> MinimalGeneratingSet( G );
 [ f1, f2 ]
 gap> l := List( last, g -> g^Embedding( G, KG ) );
 [ (Z(2)^0)*f1, (Z(2)^0)*f2 ]
-]]>
-</Example>
 
-Now we construct an element <Code>x</Code> as follows.
 
-<Example>
-<![CDATA[
+# from paragraph [ 2, 0, 0, 12 ][ "/Users/alexk/CVSREPS/GAPDEV/pkg/laguna/doc/example.xml", 67 ]
+
+
 gap> a :=l[1]; b:=l[2]; # a and b are images of group generators in KG
 (Z(2)^0)*f1
 (Z(2)^0)*f2
@@ -73,13 +50,11 @@ gap> e := One( KG );    # for convenience, we denote the identity by e
 (Z(2)^0)*<identity> of ...
 gap> x := ( e + a ) * ( e + b ); 
 (Z(2)^0)*<identity> of ...+(Z(2)^0)*f1+(Z(2)^0)*f2+(Z(2)^0)*f1*f2  
-]]>
-</Example>
 
-We may investigate some of the basic properties of our element.
 
-<Example>
-<![CDATA[
+# from paragraph [ 2, 0, 0, 14 ][ "/Users/alexk/CVSREPS/GAPDEV/pkg/laguna/doc/example.xml", 81 ]
+
+
 gap> Support( x );
 [ <identity> of ..., f1, f2, f1*f2 ]
 gap> CoefficientsBySupport( x );
@@ -88,52 +63,38 @@ gap> Length( x );
 4
 gap> TraceOfMagmaRingElement( x );
 Z(2)^0
-]]>
-</Example>
 
-We can also calculate the augmentation of <Code>x</Code>, 
-which is defined as the sum of its coefficients.
 
-<Example>
+# from paragraph [ 2, 0, 0, 16 ][ "/Users/alexk/CVSREPS/GAPDEV/pkg/laguna/doc/example.xml", 97 ]
+
 gap> Augmentation( x );
 0*Z(2)
 gap> IsUnit( KG, x );
 false
-</Example>
 
-Since the  augmentation of <Code>x</Code> 
-is zero, <Code>x</Code> is not invertible, but
-<Code>1+x</Code> is. This is again very easy to check.
+# from paragraph [ 2, 0, 0, 18 ][ "/Users/alexk/CVSREPS/GAPDEV/pkg/laguna/doc/example.xml", 108 ]
 
-<Example>
-<![CDATA[
+
 gap> y := e + x;
 (Z(2)^0)*f1+(Z(2)^0)*f2+(Z(2)^0)*f1*f2
 gap> IsUnit( KG, y );
 true  
-]]>
-</Example>
 
-&LAGUNA; can calculate the inverse of <Code>1+x</Code> very quickly.
 
-<Example>
-<![CDATA[
+# from paragraph [ 2, 0, 0, 20 ][ "/Users/alexk/CVSREPS/GAPDEV/pkg/laguna/doc/example.xml", 119 ]
+
+
 gap> y^-1;
 (Z(2)^0)*f1+(Z(2)^0)*f2+(Z(2)^0)*f3+(Z(2)^0)*f4+(Z(2)^0)*f1*f2+(Z(2)^
 0)*f1*f3+(Z(2)^0)*f1*f4+(Z(2)^0)*f2*f4+(Z(2)^0)*f1*f2*f4+(Z(2)^0)*f2*f3*f4+(
 Z(2)^0)*f1*f2*f3*f4
 gap> y * y^-1;
 (Z(2)^0)*<identity> of ... 
-]]>
-</Example>
 
-We may also want to  check whether <Code>y</Code> is symmetric, that is, 
-whether it is invariant under the classical involution; or whether it is
-unitary, that is, whether the classical involution inverts <Code>y</Code>.
-We find that <Code>y</Code> is neither.
 
-<Example>
-<![CDATA[
+# from paragraph [ 2, 0, 0, 22 ][ "/Users/alexk/CVSREPS/GAPDEV/pkg/laguna/doc/example.xml", 135 ]
+
+
 gap> Involution( y );
 (Z(2)^0)*f1+(Z(2)^0)*f1*f2+(Z(2)^0)*f2*f3*f4
 gap> y = Involution( y );
@@ -144,106 +105,61 @@ gap> y * Involution( y );
 (Z(2)^0)*<identity> of ...+(Z(2)^0)*f2+(Z(2)^0)*f2*f3*f4  
 gap> IsUnitary( y );
 false
-]]>
-</Example>
 
-Now we calculate some 
-important ideals of <Code>KG</Code>. First we obtain the augmentation
-ideal which is the set of elements with augmentation zero. In our case the 
-augmentation ideal of <Code>KG</Code> coincides with the radical of 
-<Code>KG</Code>, and this is taken into account in &LAGUNA;.
 
-<Example>
-<![CDATA[
+# from paragraph [ 2, 0, 0, 24 ][ "/Users/alexk/CVSREPS/GAPDEV/pkg/laguna/doc/example.xml", 156 ]
+
+
 gap> AugmentationIdeal( KG );
 <two-sided ideal in <algebra-with-one over GF(2), with 4 generators>,
   (dimension 15)>
 gap> RadicalOfAlgebra( KG ) = AugmentationIdeal( KG );
 true
-]]>
-</Example>
 
-It is well-known that the augmentation ideal of <Code>KG</Code> is a 
-nilpotent ideal. Using Jennings' theory on dimension subgroups, we can 
-obtain its nilpotency index without immediate calculation of its powers. 
-This is implemented in &LAGUNA;.
 
-<Example>
+# from paragraph [ 2, 0, 0, 26 ][ "/Users/alexk/CVSREPS/GAPDEV/pkg/laguna/doc/example.xml", 171 ]
+
 gap> AugmentationIdealNilpotencyIndex( KG );
 9
-</Example>
 
-<Alt Only="LaTeX">\newpage</Alt>  
+# from paragraph [ 2, 0, 0, 28 ][ "/Users/alexk/CVSREPS/GAPDEV/pkg/laguna/doc/example.xml", 180 ]
 
-On the other hand, we can also calculate the powers of the augmentation ideal.
 
-<Example>
-<![CDATA[
 gap> AugmentationIdealPowerSeries( KG );
 [ <algebra of dimension 15 over GF(2)>, <algebra of dimension 13 over GF(2)>, 
   <algebra of dimension 11 over GF(2)>, <algebra of dimension 9 over GF(2)>, 
   <algebra of dimension 7 over GF(2)>, <algebra of dimension 5 over GF(2)>, 
   <algebra of dimension 3 over GF(2)>, <algebra of dimension 1 over GF(2)>, 
   <algebra over GF(2)> ]
-]]>
-</Example>
 
-We see that the length of this list is exactly the nilpotency index
-of the augmentation ideal of <Code>KG</Code>.
-<P/>
 
-Now let's work with the unit group of <Code>KG</Code>.
-First we calculate the normalized unit group, which is the set of elements with
-augmentation one. The generators of the unit group
-are obtained as explained in Chapter <Ref Chap="Theory"/>. 
-This can be computed very quickly, but further computation with this group 
-is very inefficient.
+# from paragraph [ 2, 0, 0, 31 ][ "/Users/alexk/CVSREPS/GAPDEV/pkg/laguna/doc/example.xml", 202 ]
 
-<Example>
-<![CDATA[
+
 gap> V := NormalizedUnitGroup( KG );
 <group of size 32768 with 15 generators>   
-]]>
-</Example>
 
-In order to make our computation in the normalised unit group efficient,  
-we calculate a power-commutator presentation for this group. 
 
-<Example>
-<![CDATA[
+# from paragraph [ 2, 0, 0, 33 ][ "/Users/alexk/CVSREPS/GAPDEV/pkg/laguna/doc/example.xml", 212 ]
+
+
 gap> W := PcNormalizedUnitGroup( KG );
 <pc group of size 32768 with 15 generators>
-]]>
-</Example>
 
-&GAP; has many efficient and practical algorithms for groups given by a
-power-commutator presentation. In order to use these
-algorithms to carry out computation in the normalised unit group, we need to
-set up isomorphisms between the outputs of <Code>NormalizedUnitGroup</Code>
-and <Code>PcNormalizedUnitGroup</Code>.
-<P/>
 
-The first isomorphism maps <Code>NormalizedUnitGroup(KG)</Code>
-onto the polycyclically presented <Code>PcNormalizedUnitGroup(PC)</Code>.
-Let's find the images of the elements of the group <Code>G</Code> 
-in <Code>W</Code>. 
+# from paragraph [ 2, 0, 0, 36 ][ "/Users/alexk/CVSREPS/GAPDEV/pkg/laguna/doc/example.xml", 231 ]
 
-<Example>
-<![CDATA[
+
 gap> t := NaturalBijectionToPcNormalizedUnitGroup( KG );
 MappingByFunction( <group of size 32768 with 15 generators>, <pc group of size\
  32768 with 15 generators>, function( x ) ... end )
 gap> List( AsList( G ), x -> ( x^Embedding( G, KG ) )^t );
 [ <identity> of ..., f2, f1, f3, f7, f1*f2*f3, f2*f3, f2*f7, f1*f3, f1*f7,
   f3*f7, f1*f2*f7, f1*f2*f3*f7, f2*f3*f7, f1*f3*f7, f1*f2 ]
-]]>
-</Example>
 
-<Alt Only="LaTeX">\newpage</Alt>  
 
-The second isomorphism is the inverse of the first.
+# from paragraph [ 2, 0, 0, 38 ][ "/Users/alexk/CVSREPS/GAPDEV/pkg/laguna/doc/example.xml", 246 ]
 
-<Example>
 gap> f := NaturalBijectionToNormalizedUnitGroup( KG );
 [ f1, f2, f3, f4, f5, f6, f7, f8, f9, f10, f11, f12, f13, f14, f15 ] ->
 [ (Z(2)^0)*f2, (Z(2)^0)*f1, (Z(2)^0)*f3,
@@ -262,13 +178,10 @@ gap> f := NaturalBijectionToNormalizedUnitGroup( KG );
     0)*f4+(Z(2)^0)*f1*f2+(Z(2)^0)*f1*f3+(Z(2)^0)*f1*f4+(Z(2)^0)*f2*f3+(Z(2)^
     0)*f2*f4+(Z(2)^0)*f3*f4+(Z(2)^0)*f1*f2*f3+(Z(2)^0)*f1*f2*f4+(Z(2)^
     0)*f1*f3*f4+(Z(2)^0)*f2*f3*f4+(Z(2)^0)*f1*f2*f3*f4 ]
-</Example>
 
-For example, we may calculate the conjugacy classes of the group <Code>W</Code>, 
-and then map their representatives back into the group algebra.
+# from paragraph [ 2, 0, 0, 40 ][ "/Users/alexk/CVSREPS/GAPDEV/pkg/laguna/doc/example.xml", 270 ]
 
-<Example>
-<![CDATA[
+
 gap> cc := ConjugacyClasses( W );;
 gap> Length( cc );
 848
@@ -278,33 +191,22 @@ gap> last^f;
 (Z(2)^0)*<identity> of ...+(Z(2)^0)*f2+(Z(2)^0)*f4+(Z(2)^0)*f1*f2+(Z(2)^
 0)*f1*f3+(Z(2)^0)*f1*f4+(Z(2)^0)*f2*f3+(Z(2)^0)*f2*f4+(Z(2)^0)*f3*f4+(Z(2)^
 0)*f1*f2*f3+(Z(2)^0)*f1*f3*f4
-]]>
-</Example>
 
-Having a power-commutator presentation of the normalised unit group, we may 
-use the full power of the &GAP; functionality for such groups. 
-For example, the lower central series can be calculated very quickly.
 
-<Example>
-<![CDATA[
+# from paragraph [ 2, 0, 0, 42 ][ "/Users/alexk/CVSREPS/GAPDEV/pkg/laguna/doc/example.xml", 288 ]
+
+
 gap> LowerCentralSeries( W );
 [ <pc group of size 32768 with 15 generators>,
   Group([ f3, f5*f8*f10*f12*f13*f14*f15, f6*f8*f12*f14*f15, f7, f9*f12,
       f10*f14, f11*f13, f13*f14, f14*f15 ]),
   Group([ f7, f9*f12, f10*f15, f11*f15, f13*f15, f14*f15 ]),
   Group([ f11*f15, f13*f15, f14*f15 ]), Group([ <identity> of ... ]) ]
-]]>
-</Example>
 
-<Alt Only="LaTeX">\newpage</Alt>  
 
-Let's now compute, for instance, a minimal system of generators of the centre of
-the normalised unit group. First we carry out the computation in the group 
-which is determined by the power-commutator presentation, then we map the 
-result into our group algebra.
+# from paragraph [ 2, 0, 0, 44 ][ "/Users/alexk/CVSREPS/GAPDEV/pkg/laguna/doc/example.xml", 306 ]
 
-<Example>
-<![CDATA[
+
 gap> C := Centre( W );
 Group([ f3*f5*f13*f15, f7, f15, f13*f15, f14*f15, f11*f13*f14*f15 ])
 gap> m := MinimalGeneratingSet( C );
@@ -322,15 +224,11 @@ gap> List( m, g -> g^f );
     0)*f2*f3*f4+(Z(2)^0)*f1*f2*f3*f4, (Z(2)^0)*<identity> of ...+(Z(2)^0)*f1+(
     Z(2)^0)*f3+(Z(2)^0)*f1*f3+(Z(2)^0)*f1*f4+(Z(2)^0)*f2*f3+(Z(2)^0)*f2*f4+(
     Z(2)^0)*f3*f4+(Z(2)^0)*f1*f3*f4 ]
-]]>
-</Example>
 
-We  finish our example by calculating some properties of the  
-Lie algebra associated with <Code>KG</Code>. 
-This example needs no further explanation.
 
-<Example>
-<![CDATA[
+# from paragraph [ 2, 0, 0, 46 ][ "/Users/alexk/CVSREPS/GAPDEV/pkg/laguna/doc/example.xml", 332 ]
+
+
 gap> L := LieAlgebra( KG );
 #I  LAGUNA package: Constructing Lie algebra ...
 <Lie algebra of dimension 16 over GF(2)>
@@ -352,7 +250,5 @@ gap> IsLieMetabelian( L );
 false
 gap> IsLieCentreByMetabelian( L );
 true
-]]>
-</Example>
 
-</Chapter>
+

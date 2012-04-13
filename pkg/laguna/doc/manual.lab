@@ -1,0 +1,127 @@
+\GAPDocLabFile{laguna}
+\makelabel{laguna:Title page}{}{X7D2C85EC87DD46E5}
+\makelabel{laguna:Abstract}{}{X7AA6C5737B711C89}
+\makelabel{laguna:Copyright}{}{X81488B807F2A1CF1}
+\makelabel{laguna:Acknowledgements}{}{X82A988D47DFAFCFA}
+\makelabel{laguna:Table of Contents}{}{X8537FEB07AF2BEC8}
+\makelabel{laguna:Introduction}{1}{X7DFB63A97E67C0A1}
+\makelabel{laguna:General aims}{1.1}{X8557083378F2A3B2}
+\makelabel{laguna:General computations in group rings}{1.2}{X790BFE667E3BEC3A}
+\makelabel{laguna:Computations in the normalized unit group}{1.3}{X7B7E5E987DBBA237}
+\makelabel{laguna:Computing Lie properties of the group algebra}{1.4}{X78B33FFF7A5D2FEF}
+\makelabel{laguna:Installation and system requirements}{1.5}{X7DB566D5785B7DBC}
+\makelabel{laguna:A sample calculation with LAGUNA}{2}{X7E9EADCA7F1D9DC8}
+\makelabel{laguna:The basic theory behind LAGUNA}{3}{X81154D7881F7378F}
+\makelabel{laguna:Notation and definitions}{3.1}{X85C2DE1486FB45FD}
+\makelabel{laguna:p-modular group algebras}{3.2}{X80A5F4BD78768C75}
+\makelabel{laguna:Polycyclic generating set for V}{3.3}{X7FB81FE082DFF909}
+\makelabel{laguna:Computing the canonical form}{3.4}{X7DCB12F48752C17E}
+\makelabel{laguna:Computing a power commutator presentation for V}{3.5}{X78FD250584304FB1}
+\makelabel{laguna:Verifying Lie properties of FG}{3.6}{X7FAB1A7F87AAE7F0}
+\makelabel{laguna:LAGUNA functions}{4}{X785535C8820CD403}
+\makelabel{laguna:General functions for group algebras}{4.1}{X7B473F157842958E}
+\makelabel{laguna:Operations with group algebra elements}{4.2}{X81DC99ED7AC03E46}
+\makelabel{laguna:Important attributes of group algebras}{4.3}{X841733AB86D30446}
+\makelabel{laguna:Computations with the unit group}{4.4}{X863248708784F94C}
+\makelabel{laguna:The Lie algebra of a group algebra}{4.5}{X783C1A3D86A6656B}
+\makelabel{laguna:Other commands}{4.6}{X7B16423A7FBED034}
+\makelabel{laguna:Bibliography}{Bib}{X7A6F98FD85F02BFE}
+\makelabel{laguna:References}{Bib}{X7A6F98FD85F02BFE}
+\makelabel{laguna:Index}{Ind}{X83A0356F839C696F}
+\makelabel{laguna:LAGUNA package}{}{X7AA6C5737B711C89}
+\makelabel{laguna:SISYPHOS package}{1.1}{X8557083378F2A3B2}
+\makelabel{laguna:group algebra}{3.1}{X85C2DE1486FB45FD}
+\makelabel{laguna:augmentation homomorphism}{3.1}{X85C2DE1486FB45FD}
+\makelabel{laguna:augmentation ideal}{3.1}{X85C2DE1486FB45FD}
+\makelabel{laguna:unit}{3.1}{X85C2DE1486FB45FD}
+\makelabel{laguna:unit group}{3.1}{X85C2DE1486FB45FD}
+\makelabel{laguna:normalised unit}{3.1}{X85C2DE1486FB45FD}
+\makelabel{laguna:normalised unit group}{3.1}{X85C2DE1486FB45FD}
+\makelabel{laguna:p-modular group algebra}{3.2}{X80A5F4BD78768C75}
+\makelabel{laguna:power-commutator presentation}{3.2}{X80A5F4BD78768C75}
+\makelabel{laguna:Jennings series}{3.3}{X7FB81FE082DFF909}
+\makelabel{laguna:dimension basis}{3.3}{X7FB81FE082DFF909}
+\makelabel{laguna:weight, of dimension basis element}{3.3}{X7FB81FE082DFF909}
+\makelabel{laguna:standard product}{3.3}{X7FB81FE082DFF909}
+\makelabel{laguna:IsGroupAlgebra}{4.1.1}{X861A702283A667DF}
+\makelabel{laguna:IsFModularGroupAlgebra}{4.1.2}{X82DBCA8F7DB21AC5}
+\makelabel{laguna:modular group algebra}{4.1.2}{X82DBCA8F7DB21AC5}
+\makelabel{laguna:IsPModularGroupAlgebra}{4.1.3}{X849599E07C38A739}
+\makelabel{laguna:UnderlyingGroup (of a group ring)}{4.1.4}{X7C966B177BB62C72}
+\makelabel{laguna:UnderlyingRing}{4.1.5}{X8534C18E7EA81CB8}
+\makelabel{laguna:UnderlyingField}{4.1.6}{X790470C48340E8F7}
+\makelabel{laguna:Support}{4.2.1}{X7B689C0284AC4296}
+\makelabel{laguna:CoefficientsBySupport}{4.2.2}{X8401D79C8678D3FA}
+\makelabel{laguna:TraceOfMagmaRingElement}{4.2.3}{X81DD298A7C06EC82}
+\makelabel{laguna:Length}{4.2.4}{X780769238600AFD1}
+\makelabel{laguna:Augmentation}{4.2.5}{X86FA17BE858F2245}
+\makelabel{laguna:PartialAugmentations}{4.2.6}{X83A318C887B3E735}
+\makelabel{laguna:partial augmentation}{4.2.6}{X83A318C887B3E735}
+\makelabel{laguna:Involution}{4.2.7}{X81EB2A0A8756372B}
+\makelabel{laguna:IsSymmetric}{4.2.8}{X82D0BA3D7D3994F6}
+\makelabel{laguna:symmetric element}{4.2.8}{X82D0BA3D7D3994F6}
+\makelabel{laguna:IsUnitary}{4.2.9}{X7990BD877E89A9EC}
+\makelabel{laguna:unitary element}{4.2.9}{X7990BD877E89A9EC}
+\makelabel{laguna:IsUnit}{4.2.10}{X85CBFBAE78DE72E8}
+\makelabel{laguna:InverseOp}{4.2.11}{X82EC4F49877D6EB1}
+\makelabel{laguna:BicyclicUnitOfType1}{4.2.12}{X7FD01F52845445EC}
+\makelabel{laguna:BicyclicUnitOfType2}{4.2.12}{X7FD01F52845445EC}
+\makelabel{laguna:bicyclic unit}{4.2.12}{X7FD01F52845445EC}
+\makelabel{laguna:BassCyclicUnit}{4.2.13}{X8631AD178508D219}
+\makelabel{laguna:Bass cyclic unit}{4.2.13}{X8631AD178508D219}
+\makelabel{laguna:AugmentationHomomorphism}{4.3.1}{X7F7FD75E84BEE0EF}
+\makelabel{laguna:AugmentationIdeal}{4.3.2}{X7B21DB3E7CD80983}
+\makelabel{laguna:RadicalOfAlgebra}{4.3.3}{X850C29907A509533}
+\makelabel{laguna:WeightedBasis}{4.3.4}{X8292BEFC7922E773}
+\makelabel{laguna:AugmentationIdealPowerSeries}{4.3.5}{X84B25D3A812A8A2E}
+\makelabel{laguna:AugmentationIdealNilpotencyIndex}{4.3.6}{X8567023A821E39A6}
+\makelabel{laguna:AugmentationIdealOfDerivedSubgroupNilpotencyIndex}{4.3.7}{X7C0D5F3C842302EC}
+\makelabel{laguna:LeftIdealBySubgroup}{4.3.8}{X837294D57E415E37}
+\makelabel{laguna:RightIdealBySubgroup}{4.3.8}{X837294D57E415E37}
+\makelabel{laguna:TwoSidedIdalBySubgroup}{4.3.8}{X837294D57E415E37}
+\makelabel{laguna:NormalizedUnitGroup}{4.4.1}{X817D5AC78754527F}
+\makelabel{laguna:PcNormalizedUnitGroup}{4.4.2}{X7D40E42A7B678598}
+\makelabel{laguna:NaturalBijectionToPcNormalizedUnitGroup}{4.4.3}{X7E08F6E87C586A36}
+\makelabel{laguna:NaturalBijectionToNormalizedUnitGroup}{4.4.4}{X83715EF37B9FA94A}
+\makelabel{laguna:Embedding (from group to unit group)}{4.4.5}{X84D64AF17941FA7F}
+\makelabel{laguna:Units}{4.4.6}{X853C045B7BA6A580}
+\makelabel{laguna:PcUnits}{4.4.7}{X7E67BDA77E5E6077}
+\makelabel{laguna:IsGroupOfUnitsOfMagmaRing}{4.4.8}{X7F2532888184CB22}
+\makelabel{laguna:IsUnitGroupOfGroupRing}{4.4.9}{X7EF9BF297A9412AB}
+\makelabel{laguna:IsNormalizedUnitGroupOfGroupRing}{4.4.10}{X82AC131384191CCE}
+\makelabel{laguna:UnderlyingGroupRing}{4.4.11}{X82DCA8A57D0D1114}
+\makelabel{laguna:UnitarySubgroup}{4.4.12}{X7A0FFABC86F89517}
+\makelabel{laguna:BicyclicUnitGroup}{4.4.13}{X859F07AE7A4D317B}
+\makelabel{laguna:GroupBases}{4.4.14}{X7A39E44D87CDF7B0}
+\makelabel{laguna:LieAlgebraByDomain}{4.5.1}{X7827B4158459DEA0}
+\makelabel{laguna:IsLieAlgebraByAssociativeAlgebra}{4.5.2}{X7AA7DA6082639B23}
+\makelabel{laguna:UnderlyingAssociativeAlgebra}{4.5.3}{X85F4712B84624DB8}
+\makelabel{laguna:NaturalBijectionToLieAlgebra}{4.5.4}{X84050A268514F2EE}
+\makelabel{laguna:NaturalBijectionToAssociativeAlgebra}{4.5.5}{X821DAFD585EA1DF3}
+\makelabel{laguna:IsLieAlgebraOfGroupRing}{4.5.6}{X78C26E3F80E55AC2}
+\makelabel{laguna:UnderlyingGroup (of Lie algebra of a group ring)}{4.5.7}{X87CCD17A790BE256}
+\makelabel{laguna:Embedding (from group to Lie algebra)}{4.5.8}{X833439F7846784B5}
+\makelabel{laguna:LieCentre}{4.5.9}{X8111F58E7DE3E25C}
+\makelabel{laguna:LieDerivedSubalgebra}{4.5.10}{X7C95C0057C977747}
+\makelabel{laguna:IsLieAbelian}{4.5.11}{X7F97D08F7B738ADE}
+\makelabel{laguna:IsLieSolvable}{4.5.12}{X859FF1B3812B8FCC}
+\makelabel{laguna:IsLieNilpotent}{4.5.13}{X78452F4E875A62A8}
+\makelabel{laguna:IsLieMetabelian}{4.5.14}{X8504EC257B764BA6}
+\makelabel{laguna:IsLieCentreByMetabelian}{4.5.15}{X7EEAA09F818CE548}
+\makelabel{laguna:CanonicalBasis}{4.5.16}{X7C8EBFF5805F8C51}
+\makelabel{laguna:IsBasisOfLieAlgebraOfGroupRing}{4.5.17}{X83026DFF8461B96D}
+\makelabel{laguna:StructureConstantsTable}{4.5.18}{X804ADF0280F67CDC}
+\makelabel{laguna:LieUpperNilpotencyIndex}{4.5.19}{X87E9411284D1A346}
+\makelabel{laguna:upper Lie power series}{4.5.19}{X87E9411284D1A346}
+\makelabel{laguna:LieLowerNilpotencyIndex}{4.5.20}{X7D71DF0579FBE1C9}
+\makelabel{laguna:lower Lie power series}{4.5.20}{X7D71DF0579FBE1C9}
+\makelabel{laguna:LieDerivedLength}{4.5.21}{X7E5950517F0CDB47}
+\makelabel{laguna:Lie derived series}{4.5.21}{X7E5950517F0CDB47}
+\makelabel{laguna:Lie derived length}{4.5.21}{X7E5950517F0CDB47}
+\makelabel{laguna:SubgroupsOfIndexTwo}{4.6.1}{X85CE6B407910F768}
+\makelabel{laguna:DihedralDepth}{4.6.2}{X7AFBD42180787A07}
+\makelabel{laguna:DimensionBasis}{4.6.3}{X7D7CD02F803FFC08}
+\makelabel{laguna:LieDimensionSubgroups}{4.6.4}{X84B7C6A38473722F}
+\makelabel{laguna:LieUpperCodimensionSeries (for group ring)}{4.6.5}{X7B2EAF81791D6C68}
+\makelabel{laguna:LieUpperCodimensionSeries (for group)}{4.6.5}{X7B2EAF81791D6C68}
+\makelabel{laguna:LAGInfo}{4.6.6}{X7E5804B881DE4FF2}

@@ -1,157 +1,156 @@
 \begin{theindex}
 
-  \item \texttt  {Augmentation}, \hyperpage{21}
-  \item augmentation homomorphism, \hyperpage{14}
-  \item augmentation ideal, \hyperpage{14}
-  \item \texttt  {AugmentationHomomorphism}, \hyperpage{25}
-  \item \texttt  {AugmentationIdeal}, \hyperpage{26}
-  \item \texttt  {AugmentationIdealNilpotencyIndex}, \hyperpage{28}
+  \item \texttt  {Augmentation}, \hyperpage{19}
+  \item augmentation homomorphism, \hyperpage{12}
+  \item augmentation ideal, \hyperpage{12}
+  \item \texttt  {AugmentationHomomorphism}, \hyperpage{23}
+  \item \texttt  {AugmentationIdeal}, \hyperpage{24}
+  \item \texttt  {AugmentationIdealNilpotencyIndex}, \hyperpage{26}
   \item \texttt  {Augmentation}\discretionary {-}{}{}\texttt  {Ideal}\discretionary {-}{}{}\texttt  {Of}\discretionary {-}{}{}\texttt  {Derived}\discretionary {-}{}{}\texttt  {Subgroup}\discretionary {-}{}{}\texttt  {Nilpotency}\discretionary {-}{}{}\texttt  {Index}, 
-		\hyperpage{28}
-  \item \texttt  {AugmentationIdealPowerSeries}, \hyperpage{27}
+		\hyperpage{26}
+  \item \texttt  {AugmentationIdealPowerSeries}, \hyperpage{25}
 
   \indexspace
 
-  \item Bass cyclic unit, \hyperpage{25}
-  \item \texttt  {BassCyclicUnit}, \hyperpage{25}
-  \item bicyclic unit, \hyperpage{24}
-  \item \texttt  {BicyclicUnitGroup}, \hyperpage{34}
-  \item \texttt  {BicyclicUnitOfType1}, \hyperpage{24}
-  \item \texttt  {BicyclicUnitOfType2}, \hyperpage{24}
+  \item Bass cyclic unit, \hyperpage{23}
+  \item \texttt  {BassCyclicUnit}, \hyperpage{23}
+  \item bicyclic unit, \hyperpage{22}
+  \item \texttt  {BicyclicUnitGroup}, \hyperpage{32}
+  \item \texttt  {BicyclicUnitOfType1}, \hyperpage{22}
+  \item \texttt  {BicyclicUnitOfType2}, \hyperpage{22}
 
   \indexspace
 
-  \item \texttt  {CanonicalBasis}, \hyperpage{42}
-  \item \texttt  {CoefficientsBySupport}, \hyperpage{20}
+  \item \texttt  {CanonicalBasis}, \hyperpage{40}
+  \item \texttt  {CoefficientsBySupport}, \hyperpage{18}
 
   \indexspace
 
-  \item \texttt  {DihedralDepth}, \hyperpage{45}
-  \item dimension basis, \hyperpage{15}
-  \item \texttt  {DimensionBasis}, \hyperpage{45}
+  \item \texttt  {DihedralDepth}, \hyperpage{43}
+  \item dimension basis, \hyperpage{13}
+  \item \texttt  {DimensionBasis}, \hyperpage{43}
 
   \indexspace
 
   \item \texttt  {Embedding}
-    \subitem from group to Lie algebra, \hyperpage{39}
-    \subitem from group to unit group, \hyperpage{31}
+    \subitem from group to Lie algebra, \hyperpage{37}
+    \subitem from group to unit group, \hyperpage{29}
 
   \indexspace
 
-  \item group algebra, \hyperpage{14}
-  \item \texttt  {GroupBases}, \hyperpage{35}
+  \item group algebra, \hyperpage{12}
+  \item \texttt  {GroupBases}, \hyperpage{33}
 
   \indexspace
 
-  \item \texttt  {InverseOp}, \hyperpage{24}
-  \item \texttt  {Involution}, \hyperpage{22}
-  \item \texttt  {IsBasisOfLieAlgebraOfGroupRing}, \hyperpage{43}
-  \item \texttt  {IsFModularGroupAlgebra}, \hyperpage{18}
-  \item \texttt  {IsGroupAlgebra}, \hyperpage{18}
-  \item \texttt  {IsGroupOfUnitsOfMagmaRing}, \hyperpage{33}
-  \item \texttt  {IsLieAbelian}, \hyperpage{40}
-  \item \texttt  {IsLieAlgebraByAssociativeAlgebra}, \hyperpage{36}
-  \item \texttt  {IsLieAlgebraOfGroupRing}, \hyperpage{38}
-  \item \texttt  {IsLieCentreByMetabelian}, \hyperpage{42}
-  \item \texttt  {IsLieMetabelian}, \hyperpage{41}
-  \item \texttt  {IsLieNilpotent}, \hyperpage{41}
-  \item \texttt  {IsLieSolvable}, \hyperpage{41}
-  \item \texttt  {IsNormalizedUnitGroupOfGroupRing}, \hyperpage{33}
-  \item \texttt  {IsPModularGroupAlgebra}, \hyperpage{19}
-  \item \texttt  {IsSymmetric}, \hyperpage{23}
-  \item \texttt  {IsUnit}, \hyperpage{23}
-  \item \texttt  {IsUnitary}, \hyperpage{23}
-  \item \texttt  {IsUnitGroupOfGroupRing}, \hyperpage{33}
+  \item \texttt  {InverseOp}, \hyperpage{22}
+  \item \texttt  {Involution}, \hyperpage{20}
+  \item \texttt  {IsBasisOfLieAlgebraOfGroupRing}, \hyperpage{41}
+  \item \texttt  {IsFModularGroupAlgebra}, \hyperpage{16}
+  \item \texttt  {IsGroupAlgebra}, \hyperpage{16}
+  \item \texttt  {IsGroupOfUnitsOfMagmaRing}, \hyperpage{31}
+  \item \texttt  {IsLieAbelian}, \hyperpage{38}
+  \item \texttt  {IsLieAlgebraByAssociativeAlgebra}, \hyperpage{34}
+  \item \texttt  {IsLieAlgebraOfGroupRing}, \hyperpage{36}
+  \item \texttt  {IsLieCentreByMetabelian}, \hyperpage{40}
+  \item \texttt  {IsLieMetabelian}, \hyperpage{39}
+  \item \texttt  {IsLieNilpotent}, \hyperpage{39}
+  \item \texttt  {IsLieSolvable}, \hyperpage{39}
+  \item \texttt  {IsNormalizedUnitGroupOfGroupRing}, \hyperpage{31}
+  \item \texttt  {IsPModularGroupAlgebra}, \hyperpage{17}
+  \item \texttt  {IsSymmetric}, \hyperpage{21}
+  \item \texttt  {IsUnit}, \hyperpage{21}
+  \item \texttt  {IsUnitary}, \hyperpage{21}
+  \item \texttt  {IsUnitGroupOfGroupRing}, \hyperpage{31}
 
   \indexspace
 
-  \item Jennings series, \hyperpage{15}
+  \item Jennings series, \hyperpage{13}
 
   \indexspace
 
-  \item \texttt  {LAGInfo}, \hyperpage{47}
+  \item \texttt  {LAGInfo}, \hyperpage{45}
   \item \textsf{LAGUNA} package, \hyperpage{2}
-  \item \texttt  {LAGUNABuildManual}, \hyperpage{47}
-  \item \texttt  {LAGUNABuildManualHTML}, \hyperpage{47}
-  \item \texttt  {LeftIdealBySubgroup}, \hyperpage{28}
-  \item \texttt  {Length}, \hyperpage{21}
-  \item Lie derived length, \hyperpage{44}
-  \item Lie derived series, \hyperpage{44}
-  \item \texttt  {LieAlgebraByDomain}, \hyperpage{36}
-  \item \texttt  {LieCentre}, \hyperpage{39}
-  \item \texttt  {LieDerivedLength}, \hyperpage{44}
-  \item \texttt  {LieDerivedSubalgebra}, \hyperpage{40}
-  \item \texttt  {LieDimensionSubgroups}, \hyperpage{46}
-  \item \texttt  {LieLowerNilpotencyIndex}, \hyperpage{44}
+  \item \texttt  {LeftIdealBySubgroup}, \hyperpage{26}
+  \item \texttt  {Length}, \hyperpage{19}
+  \item Lie derived length, \hyperpage{42}
+  \item Lie derived series, \hyperpage{42}
+  \item \texttt  {LieAlgebraByDomain}, \hyperpage{34}
+  \item \texttt  {LieCentre}, \hyperpage{37}
+  \item \texttt  {LieDerivedLength}, \hyperpage{42}
+  \item \texttt  {LieDerivedSubalgebra}, \hyperpage{38}
+  \item \texttt  {LieDimensionSubgroups}, \hyperpage{44}
+  \item \texttt  {LieLowerNilpotencyIndex}, \hyperpage{42}
   \item \texttt  {LieUpperCodimensionSeries}
-    \subitem for group, \hyperpage{46}
-    \subitem for group ring, \hyperpage{46}
-  \item \texttt  {LieUpperNilpotencyIndex}, \hyperpage{44}
-  \item lower Lie power series, \hyperpage{44}
+    \subitem for group, \hyperpage{44}
+    \subitem for group ring, \hyperpage{44}
+  \item \texttt  {LieUpperNilpotencyIndex}, \hyperpage{42}
+  \item lower Lie power series, \hyperpage{42}
 
   \indexspace
 
-  \item modular group algebra, \hyperpage{18}
+  \item modular group algebra, \hyperpage{16}
 
   \indexspace
 
-  \item \texttt  {NaturalBijectionToAssociativeAlgebra}, \hyperpage{37}
-  \item \texttt  {NaturalBijectionToLieAlgebra}, \hyperpage{37}
-  \item \texttt  {NaturalBijectionToNormalizedUnitGroup}, 
-		\hyperpage{31}
-  \item \texttt  {NaturalBijectionToPcNormalizedUnitGroup}, 
-		\hyperpage{30}
-  \item normalised unit, \hyperpage{14}
-  \item normalised unit group, \hyperpage{14}
-  \item \texttt  {NormalizedUnitGroup}, \hyperpage{29}
+  \item \texttt  {Natural}\discretionary {-}{}{}\texttt  {Bijection}\discretionary {-}{}{}\texttt  {To}\discretionary {-}{}{}\texttt  {Associative}\discretionary {-}{}{}\texttt  {Algebra}, 
+		\hyperpage{35}
+  \item \texttt  {NaturalBijectionToLieAlgebra}, \hyperpage{35}
+  \item \texttt  {Natural}\discretionary {-}{}{}\texttt  {Bijection}\discretionary {-}{}{}\texttt  {To}\discretionary {-}{}{}\texttt  {Normalized}\discretionary {-}{}{}\texttt  {Unit}\discretionary {-}{}{}\texttt  {Group}, 
+		\hyperpage{29}
+  \item \texttt  {Natural}\discretionary {-}{}{}\texttt  {Bijection}\discretionary {-}{}{}\texttt  {To}\discretionary {-}{}{}\texttt  {Pc}\discretionary {-}{}{}\texttt  {Normalized}\discretionary {-}{}{}\texttt  {Unit}\discretionary {-}{}{}\texttt  {Group}, 
+		\hyperpage{28}
+  \item normalised unit, \hyperpage{12}
+  \item normalised unit group, \hyperpage{12}
+  \item \texttt  {NormalizedUnitGroup}, \hyperpage{27}
 
   \indexspace
 
-  \item $p$-modular group algebra, \hyperpage{15}
-  \item partial augmentation, \hyperpage{22}
-  \item \texttt  {PartialAugmentations}, \hyperpage{22}
-  \item \texttt  {PcNormalizedUnitGroup}, \hyperpage{30}
-  \item \texttt  {PcUnits}, \hyperpage{32}
-  \item power-commutator presentation, \hyperpage{15}
+  \item $p$-modular group algebra, \hyperpage{13}
+  \item partial augmentation, \hyperpage{20}
+  \item \texttt  {PartialAugmentations}, \hyperpage{20}
+  \item \texttt  {PcNormalizedUnitGroup}, \hyperpage{28}
+  \item \texttt  {PcUnits}, \hyperpage{30}
+  \item power-commutator presentation, \hyperpage{13}
 
   \indexspace
 
-  \item \texttt  {RadicalOfAlgebra}, \hyperpage{26}
-  \item \texttt  {RightIdealBySubgroup}, \hyperpage{28}
+  \item \texttt  {RadicalOfAlgebra}, \hyperpage{24}
+  \item \texttt  {RightIdealBySubgroup}, \hyperpage{26}
 
   \indexspace
 
-  \item \textsf{SISYPHOS} package, \hyperpage{6}
-  \item standard product, \hyperpage{15}
-  \item \texttt  {StructureConstantsTable}, \hyperpage{43}
-  \item \texttt  {SubgroupsOfIndexTwo}, \hyperpage{45}
-  \item \texttt  {Support}, \hyperpage{20}
-  \item symmetric element, \hyperpage{23}
+  \item \textsf{SISYPHOS} package, \hyperpage{4}
+  \item standard product, \hyperpage{13}
+  \item \texttt  {StructureConstantsTable}, \hyperpage{41}
+  \item \texttt  {SubgroupsOfIndexTwo}, \hyperpage{43}
+  \item \texttt  {Support}, \hyperpage{18}
+  \item symmetric element, \hyperpage{21}
 
   \indexspace
 
-  \item \texttt  {TraceOfMagmaRingElement}, \hyperpage{21}
-  \item \texttt  {TwoSidedIdalBySubgroup}, \hyperpage{29}
+  \item \texttt  {TraceOfMagmaRingElement}, \hyperpage{19}
+  \item \texttt  {TwoSidedIdalBySubgroup}, \hyperpage{27}
 
   \indexspace
 
-  \item \texttt  {UnderlyingAssociativeAlgebra}, \hyperpage{36}
-  \item \texttt  {UnderlyingField}, \hyperpage{20}
+  \item \texttt  {UnderlyingAssociativeAlgebra}, \hyperpage{34}
+  \item \texttt  {UnderlyingField}, \hyperpage{18}
   \item \texttt  {UnderlyingGroup}
-    \subitem of a group ring, \hyperpage{19}
-    \subitem of Lie algebra of a group ring, \hyperpage{38}
-  \item \texttt  {UnderlyingGroupRing}, \hyperpage{34}
-  \item \texttt  {UnderlyingRing}, \hyperpage{19}
-  \item unit, \hyperpage{14}
-  \item unit group, \hyperpage{14}
-  \item unitary element, \hyperpage{23}
-  \item \texttt  {UnitarySubgroup}, \hyperpage{34}
-  \item \texttt  {Units}, \hyperpage{32}
-  \item upper Lie power series, \hyperpage{44}
+    \subitem of a group ring, \hyperpage{17}
+    \subitem of Lie algebra of a group ring, \hyperpage{36}
+  \item \texttt  {UnderlyingGroupRing}, \hyperpage{32}
+  \item \texttt  {UnderlyingRing}, \hyperpage{17}
+  \item unit, \hyperpage{12}
+  \item unit group, \hyperpage{12}
+  \item unitary element, \hyperpage{21}
+  \item \texttt  {UnitarySubgroup}, \hyperpage{32}
+  \item \texttt  {Units}, \hyperpage{30}
+  \item upper Lie power series, \hyperpage{42}
 
   \indexspace
 
-  \item weight, of dimension basis element, \hyperpage{15}
-  \item \texttt  {WeightedBasis}, \hyperpage{27}
+  \item weight, of dimension basis element, \hyperpage{13}
+  \item \texttt  {WeightedBasis}, \hyperpage{25}
 
 \end{theindex}
