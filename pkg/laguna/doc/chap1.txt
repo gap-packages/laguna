@@ -91,9 +91,9 @@
   site or from [7Xhttp://www.math.rwth-aachen.de/~Frank.Luebeck/GAPDoc/[107X.[133X
   
   [33X[0;0Y[5XLAGUNA[105X  is  distributed in standard formats ([11Xzoo[111X, [11Xtar.gz[111X, [11Xtar.bz2[111X, [11X-win.zip[111X)
-  and  can  be obtained from [7Xhttp://www.cs.st-andrews.ac.uk/~alexk/laguna.htm[107X.
-  To unpack the archive [11Xlaguna-X.X.X.zoo[111X you need the program [11Xunzoo[111X, which can
-  be  obtained  from  the [5XGAP[105X homepage [7Xhttp://www.gap-system.org/[107X (see section
+  and  can  be obtained from [7Xhttp://www.cs.st-andrews.ac.uk/~alexk/laguna/[107X. To
+  unpack the archive [11Xlaguna-X.X.X.zoo[111X you need the program [11Xunzoo[111X, which can be
+  obtained  from  the  [5XGAP[105X  homepage  [7Xhttp://www.gap-system.org/[107X  (see section
   `Distribution').   To  install  [5XLAGUNA[105X,  copy  this  archive  into  the  [11Xpkg[111X
   subdirectory  of  your  [5XGAP[105X4.4 installation. The subdirectory [11Xlaguna[111X will be
   created in the [11Xpkg[111X directory after the following command:[133X

@@ -48,18 +48,18 @@
 \indexentry{AugmentationIdealOfDerivedSubgroupNilpotencyIndex@\texttt  {Augmentation}\discretionary {-}{}{}\texttt  {Ideal}\discretionary {-}{}{}\texttt  {Of}\discretionary {-}{}{}\texttt  {Derived}\discretionary {-}{}{}\texttt  {Subgroup}\discretionary {-}{}{}\texttt  {Nilpotency}\discretionary {-}{}{}\texttt  {Index}|hyperpage}{26}
 \indexentry{LeftIdealBySubgroup@\texttt  {LeftIdealBySubgroup}|hyperpage}{26}
 \indexentry{RightIdealBySubgroup@\texttt  {RightIdealBySubgroup}|hyperpage}{26}
-\indexentry{TwoSidedIdalBySubgroup@\texttt  {TwoSidedIdalBySubgroup}|hyperpage}{27}
+\indexentry{TwoSidedIdalBySubgroup@\texttt  {TwoSidedIdalBySubgroup}|hyperpage}{26}
 \indexentry{NormalizedUnitGroup@\texttt  {NormalizedUnitGroup}|hyperpage}{27}
-\indexentry{PcNormalizedUnitGroup@\texttt  {PcNormalizedUnitGroup}|hyperpage}{28}
+\indexentry{PcNormalizedUnitGroup@\texttt  {PcNormalizedUnitGroup}|hyperpage}{27}
 \indexentry{NaturalBijectionToPcNormalizedUnitGroup@\texttt  {Natural}\discretionary {-}{}{}\texttt  {Bijection}\discretionary {-}{}{}\texttt  {To}\discretionary {-}{}{}\texttt  {Pc}\discretionary {-}{}{}\texttt  {Normalized}\discretionary {-}{}{}\texttt  {Unit}\discretionary {-}{}{}\texttt  {Group}|hyperpage}{28}
-\indexentry{NaturalBijectionToNormalizedUnitGroup@\texttt  {Natural}\discretionary {-}{}{}\texttt  {Bijection}\discretionary {-}{}{}\texttt  {To}\discretionary {-}{}{}\texttt  {Normalized}\discretionary {-}{}{}\texttt  {Unit}\discretionary {-}{}{}\texttt  {Group}|hyperpage}{29}
+\indexentry{NaturalBijectionToNormalizedUnitGroup@\texttt  {Natural}\discretionary {-}{}{}\texttt  {Bijection}\discretionary {-}{}{}\texttt  {To}\discretionary {-}{}{}\texttt  {Normalized}\discretionary {-}{}{}\texttt  {Unit}\discretionary {-}{}{}\texttt  {Group}|hyperpage}{28}
 \indexentry{Embedding@\texttt  {Embedding}!from group to unit group|hyperpage}{29}
-\indexentry{Units@\texttt  {Units}|hyperpage}{30}
+\indexentry{Units@\texttt  {Units}|hyperpage}{29}
 \indexentry{PcUnits@\texttt  {PcUnits}|hyperpage}{30}
-\indexentry{IsGroupOfUnitsOfMagmaRing@\texttt  {IsGroupOfUnitsOfMagmaRing}|hyperpage}{31}
+\indexentry{IsGroupOfUnitsOfMagmaRing@\texttt  {IsGroupOfUnitsOfMagmaRing}|hyperpage}{30}
 \indexentry{IsUnitGroupOfGroupRing@\texttt  {IsUnitGroupOfGroupRing}|hyperpage}{31}
 \indexentry{IsNormalizedUnitGroupOfGroupRing@\texttt  {IsNormalizedUnitGroupOfGroupRing}|hyperpage}{31}
-\indexentry{UnderlyingGroupRing@\texttt  {UnderlyingGroupRing}|hyperpage}{32}
+\indexentry{UnderlyingGroupRing@\texttt  {UnderlyingGroupRing}|hyperpage}{31}
 \indexentry{UnitarySubgroup@\texttt  {UnitarySubgroup}|hyperpage}{32}
 \indexentry{BicyclicUnitGroup@\texttt  {BicyclicUnitGroup}|hyperpage}{32}
 \indexentry{GroupBases@\texttt  {GroupBases}|hyperpage}{33}
@@ -70,19 +70,19 @@
 \indexentry{NaturalBijectionToAssociativeAlgebra@\texttt  {Natural}\discretionary {-}{}{}\texttt  {Bijection}\discretionary {-}{}{}\texttt  {To}\discretionary {-}{}{}\texttt  {Associative}\discretionary {-}{}{}\texttt  {Algebra}|hyperpage}{35}
 \indexentry{IsLieAlgebraOfGroupRing@\texttt  {IsLieAlgebraOfGroupRing}|hyperpage}{36}
 \indexentry{UnderlyingGroup@\texttt  {UnderlyingGroup}!of Lie algebra of a group ring|hyperpage}{36}
-\indexentry{Embedding@\texttt  {Embedding}!from group to Lie algebra|hyperpage}{37}
+\indexentry{Embedding@\texttt  {Embedding}!from group to Lie algebra|hyperpage}{36}
 \indexentry{LieCentre@\texttt  {LieCentre}|hyperpage}{37}
-\indexentry{LieDerivedSubalgebra@\texttt  {LieDerivedSubalgebra}|hyperpage}{38}
+\indexentry{LieDerivedSubalgebra@\texttt  {LieDerivedSubalgebra}|hyperpage}{37}
 \indexentry{IsLieAbelian@\texttt  {IsLieAbelian}|hyperpage}{38}
-\indexentry{IsLieSolvable@\texttt  {IsLieSolvable}|hyperpage}{39}
+\indexentry{IsLieSolvable@\texttt  {IsLieSolvable}|hyperpage}{38}
 \indexentry{IsLieNilpotent@\texttt  {IsLieNilpotent}|hyperpage}{39}
 \indexentry{IsLieMetabelian@\texttt  {IsLieMetabelian}|hyperpage}{39}
 \indexentry{IsLieCentreByMetabelian@\texttt  {IsLieCentreByMetabelian}|hyperpage}{40}
 \indexentry{CanonicalBasis@\texttt  {CanonicalBasis}|hyperpage}{40}
 \indexentry{IsBasisOfLieAlgebraOfGroupRing@\texttt  {IsBasisOfLieAlgebraOfGroupRing}|hyperpage}{41}
 \indexentry{StructureConstantsTable@\texttt  {StructureConstantsTable}|hyperpage}{41}
-\indexentry{LieUpperNilpotencyIndex@\texttt  {LieUpperNilpotencyIndex}|hyperpage}{42}
-\indexentry{upper Lie power series|hyperpage}{42}
+\indexentry{LieUpperNilpotencyIndex@\texttt  {LieUpperNilpotencyIndex}|hyperpage}{41}
+\indexentry{upper Lie power series|hyperpage}{41}
 \indexentry{LieLowerNilpotencyIndex@\texttt  {LieLowerNilpotencyIndex}|hyperpage}{42}
 \indexentry{lower Lie power series|hyperpage}{42}
 \indexentry{LieDerivedLength@\texttt  {LieDerivedLength}|hyperpage}{42}
@@ -94,4 +94,4 @@
 \indexentry{LieDimensionSubgroups@\texttt  {LieDimensionSubgroups}|hyperpage}{44}
 \indexentry{LieUpperCodimensionSeries@\texttt  {LieUpperCodimensionSeries}!for group ring|hyperpage}{44}
 \indexentry{LieUpperCodimensionSeries@\texttt  {LieUpperCodimensionSeries}!for group|hyperpage}{44}
-\indexentry{LAGInfo@\texttt  {LAGInfo}|hyperpage}{45}
+\indexentry{LAGInfo@\texttt  {LAGInfo}|hyperpage}{44}

@@ -270,10 +270,9 @@
     [4X[28X(Z(2)^0)*<identity> of ...+(Z(2)^0)*f1+(Z(2)^0)*f2+(Z(2)^0)*f1*f2[128X[104X
     [4X[25Xgap>[125X [27XInvolution( x );[127X[104X
     [4X[28X(Z(2)^0)*<identity> of ...+(Z(2)^0)*f1+(Z(2)^0)*f1*f2+(Z(2)^0)*f2*f3*f4[128X[104X
-    [4X[28X# let's check the action of involution on elements from the group G[128X[104X
     [4X[25Xgap>[125X [27Xl := List( MinimalGeneratingSet( G ), g -> g^Embedding( G, KG ) );[127X[104X
     [4X[28X[ (Z(2)^0)*f1, (Z(2)^0)*f2 ][128X[104X
-    [4X[25Xgap>[125X [27XList( l, Involution );[127X[104X
+    [4X[25Xgap>[125X [27XList( l, Involution ); # check how involution acts on elements of G[127X[104X
     [4X[28X[ (Z(2)^0)*f1, (Z(2)^0)*f2*f3*f4 ][128X[104X
     [4X[25Xgap>[125X [27XList( l, g -> g^-1 );[127X[104X
     [4X[28X[ (Z(2)^0)*f1, (Z(2)^0)*f2*f3*f4 ]     [128X[104X
@@ -307,10 +306,9 @@
     [4X[28X[128X[104X
     [4X[25Xgap>[125X [27XIsUnitary(x);[127X[104X
     [4X[28Xfalse[128X[104X
-    [4X[28X# let's check that elements of the group G are unitary[128X[104X
     [4X[25Xgap>[125X [27Xl:=List(MinimalGeneratingSet(G),g -> g^Embedding(G,KG));[127X[104X
     [4X[28X[ (Z(2)^0)*f1, (Z(2)^0)*f2 ][128X[104X
-    [4X[25Xgap>[125X [27XList(l,IsUnitary);[127X[104X
+    [4X[25Xgap>[125X [27XList(l,IsUnitary); # check that elements of G are unitary[127X[104X
     [4X[28X[ true, true ]   [128X[104X
     [4X[28X[128X[104X
   [4X[32X[104X
@@ -798,12 +796,10 @@
     [4X[28X[ f1, f2, f3, f4 ] -> [ f2, f1, f3, f7 ][128X[104X
     [4X[25Xgap>[125X [27XG1 := Image( f, G ); [127X[104X
     [4X[28XGroup([ f2, f1, f3, f7 ])[128X[104X
-    [4X[25Xgap>[125X [27XH := Intersection( ucs[2], G1 ); [127X[104X
+    [4X[25Xgap>[125X [27XH := Intersection( ucs[2], G1 ); # compute intersection in V(KG)[127X[104X
     [4X[28XGroup([ f3, f7, f3*f7 ])[128X[104X
-    [4X[28X# H is the intersection of G and the 3rd centre of V(KG)[128X[104X
-    [4X[25Xgap>[125X [27XT:=PreImage( f, H );[127X[104X
+    [4X[25Xgap>[125X [27XT:=PreImage( f, H );             # find its preimage in G[127X[104X
     [4X[28XGroup([ f3, f4, f3*f4 ])[128X[104X
-    [4X[28X# and T is its preimage in G[128X[104X
     [4X[25Xgap>[125X [27XIdGroup( T ); [127X[104X
     [4X[28X[ 4, 1 ][128X[104X
     [4X[28X[128X[104X
@@ -825,10 +821,8 @@
     [4X[25Xgap>[125X [27XU := Units( KG );[127X[104X
     [4X[28X#I  LAGUNA package: Computing the unit group ...[128X[104X
     [4X[28X<group of size 32768 with 15 generators>[128X[104X
-    [4X[28X# now elements of U are already in KG[128X[104X
-    [4X[25Xgap>[125X [27XGeneratorsOfGroup( U )[5];[127X[104X
-    [4X[28X(Z(2)^0)*f2+(Z(2)^0)*f3+(Z(2)^0)*f2*f3 [128X[104X
-    [4X[28X# in the next example the direct product structure is more clear [128X[104X
+    [4X[25Xgap>[125X [27XGeneratorsOfGroup( U )[5]; # now elements of U are already in KG[127X[104X
+    [4X[28X(Z(2)^0)*f2+(Z(2)^0)*f3+(Z(2)^0)*f2*f3[128X[104X
     [4X[25Xgap>[125X [27XFH := GroupRing( GF(3), SmallGroup(27,3) );[127X[104X
     [4X[28X<algebra-with-one over GF(3), with 3 generators>[128X[104X
     [4X[25Xgap>[125X [27XT := Units( FH );[127X[104X
@@ -858,7 +852,6 @@
     [4X[28X<pc group of size 32768 with 15 generators>[128X[104X
     [4X[25Xgap>[125X [27XGeneratorsOfGroup( W )[5];[127X[104X
     [4X[28Xf5   [128X[104X
-    [4X[28X# in the next example the direct product structure is more clear [128X[104X
     [4X[25Xgap>[125X [27XFH := GroupRing( GF(3), SmallGroup(27,3) );[127X[104X
     [4X[28X<algebra-with-one over GF(3), with 3 generators>[128X[104X
     [4X[25Xgap>[125X [27XT := PcUnits(FH);[127X[104X

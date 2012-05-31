@@ -98,8 +98,8 @@
 {\Huge \textbf{Lie AlGebras and UNits of group Algebras\mbox{}}}\\
 \vfill
 
-{\Huge Version 3.6.0\mbox{}}\\[1cm]
-{12 April 2012\mbox{}}\\[1cm]
+{\Huge Version 3.6.1\mbox{}}\\[1cm]
+{31 May 2012\mbox{}}\\[1cm]
 \mbox{}\\[2cm]
 {\Large \textbf{Victor Bovdi   \mbox{}}}\\
 {\Large \textbf{Alexander Konovalov    \mbox{}}}\\
@@ -164,7 +164,7 @@ details, see the FSF's own site \href{http://www.gnu.org/licenses/gpl.html} {\te
 
  If you publish a result which was partially obtained with the usage of \textsf{LAGUNA}, please cite it in the following form:
 
- V. Bovdi, A. Konovalov, R. Rossmanith and C. Schneider. \emph{LAGUNA --- Lie AlGebras and UNits of group Algebras, Version 3.6.0;} 12 April 2012 (\href{http://www.cs.st-andrews.ac.uk/~alexk/laguna.htm} {\texttt{http://www.cs.st-andrews.ac.uk/\texttt{\symbol{126}}alexk/laguna.htm}}). \mbox{}}\\[1cm]
+ V. Bovdi, A. Konovalov, R. Rossmanith and C. Schneider. \emph{LAGUNA --- Lie AlGebras and UNits of group Algebras, Version 3.6.1;} 31 May 2012 (\href{http://www.cs.st-andrews.ac.uk/~alexk/laguna/} {\texttt{http://www.cs.st-andrews.ac.uk/\texttt{\symbol{126}}alexk/laguna/}}). \mbox{}}\\[1cm]
 {\small 
 \section*{Acknowledgements}
 \logpage{[ 0, 0, 3 ]}
@@ -262,7 +262,7 @@ the type of the operating system. It is designed for \textsf{GAP}4.4 and no comp
 
  To use the \textsf{LAGUNA} online help it is necessary to install the \textsf{GAP}4 package \textsf{GAPDoc} by Frank L{\"u}beck and Max Neunh{\"o}ffer, which is available from the \textsf{GAP} site or from \href{http://www.math.rwth-aachen.de/~Frank.Luebeck/GAPDoc/} {\texttt{http://www.math.rwth-aachen.de/\texttt{\symbol{126}}Frank.Luebeck/GAPDoc/}}. 
 
- \textsf{LAGUNA} is distributed in standard formats (\texttt{zoo}, \texttt{tar.gz}, \texttt{tar.bz2}, \texttt{-win.zip}) and can be obtained from \href{http://www.cs.st-andrews.ac.uk/~alexk/laguna.htm} {\texttt{http://www.cs.st-andrews.ac.uk/\texttt{\symbol{126}}alexk/laguna.htm}}. To unpack the archive \texttt{laguna-X.X.X.zoo} you need the program \texttt{unzoo}, which can be obtained from the \textsf{GAP} homepage \href{http://www.gap-system.org/} {\texttt{http://www.gap-system.org/}} (see section `Distribution'). To install \textsf{LAGUNA}, copy this archive into the \texttt{pkg} subdirectory of your \textsf{GAP}4.4 installation. The subdirectory \texttt{laguna} will be created in the \texttt{pkg} directory after the following command: 
+ \textsf{LAGUNA} is distributed in standard formats (\texttt{zoo}, \texttt{tar.gz}, \texttt{tar.bz2}, \texttt{-win.zip}) and can be obtained from \href{http://www.cs.st-andrews.ac.uk/~alexk/laguna/} {\texttt{http://www.cs.st-andrews.ac.uk/\texttt{\symbol{126}}alexk/laguna/}}. To unpack the archive \texttt{laguna-X.X.X.zoo} you need the program \texttt{unzoo}, which can be obtained from the \textsf{GAP} homepage \href{http://www.gap-system.org/} {\texttt{http://www.gap-system.org/}} (see section `Distribution'). To install \textsf{LAGUNA}, copy this archive into the \texttt{pkg} subdirectory of your \textsf{GAP}4.4 installation. The subdirectory \texttt{laguna} will be created in the \texttt{pkg} directory after the following command: 
 
  \texttt{unzoo -x laguna-X.X.X.zoo} 
 
@@ -1023,10 +1023,9 @@ involution, induced by the mapping $ x \mapsto x^{-1}$. }
   (Z(2)^0)*<identity> of ...+(Z(2)^0)*f1+(Z(2)^0)*f2+(Z(2)^0)*f1*f2
   !gapprompt@gap>| !gapinput@Involution( x );|
   (Z(2)^0)*<identity> of ...+(Z(2)^0)*f1+(Z(2)^0)*f1*f2+(Z(2)^0)*f2*f3*f4
-  # let's check the action of involution on elements from the group G
   !gapprompt@gap>| !gapinput@l := List( MinimalGeneratingSet( G ), g -> g^Embedding( G, KG ) );|
   [ (Z(2)^0)*f1, (Z(2)^0)*f2 ]
-  !gapprompt@gap>| !gapinput@List( l, Involution );|
+  !gapprompt@gap>| !gapinput@List( l, Involution ); # check how involution acts on elements of G|
   [ (Z(2)^0)*f1, (Z(2)^0)*f2*f3*f4 ]
   !gapprompt@gap>| !gapinput@List( l, g -> g^-1 );|
   [ (Z(2)^0)*f1, (Z(2)^0)*f2*f3*f4 ]     
@@ -1071,10 +1070,9 @@ it. This property is checked here. }
   
   !gapprompt@gap>| !gapinput@IsUnitary(x);|
   false
-  # let's check that elements of the group G are unitary
   !gapprompt@gap>| !gapinput@l:=List(MinimalGeneratingSet(G),g -> g^Embedding(G,KG));|
   [ (Z(2)^0)*f1, (Z(2)^0)*f2 ]
-  !gapprompt@gap>| !gapinput@List(l,IsUnitary);|
+  !gapprompt@gap>| !gapinput@List(l,IsUnitary); # check that elements of G are unitary|
   [ true, true ]   
   
 \end{Verbatim}
@@ -1631,12 +1629,10 @@ pc-presentation
   [ f1, f2, f3, f4 ] -> [ f2, f1, f3, f7 ]
   !gapprompt@gap>| !gapinput@G1 := Image( f, G ); |
   Group([ f2, f1, f3, f7 ])
-  !gapprompt@gap>| !gapinput@H := Intersection( ucs[2], G1 ); |
+  !gapprompt@gap>| !gapinput@H := Intersection( ucs[2], G1 ); # compute intersection in V(KG)|
   Group([ f3, f7, f3*f7 ])
-  # H is the intersection of G and the 3rd centre of V(KG)
-  !gapprompt@gap>| !gapinput@T:=PreImage( f, H );|
+  !gapprompt@gap>| !gapinput@T:=PreImage( f, H );             # find its preimage in G|
   Group([ f3, f4, f3*f4 ])
-  # and T is its preimage in G
   !gapprompt@gap>| !gapinput@IdGroup( T ); |
   [ 4, 1 ]
   
@@ -1662,10 +1658,8 @@ pc-presentation
   !gapprompt@gap>| !gapinput@U := Units( KG );|
   #I  LAGUNA package: Computing the unit group ...
   <group of size 32768 with 15 generators>
-  # now elements of U are already in KG
-  !gapprompt@gap>| !gapinput@GeneratorsOfGroup( U )[5];|
-  (Z(2)^0)*f2+(Z(2)^0)*f3+(Z(2)^0)*f2*f3 
-  # in the next example the direct product structure is more clear 
+  !gapprompt@gap>| !gapinput@GeneratorsOfGroup( U )[5]; # now elements of U are already in KG|
+  (Z(2)^0)*f2+(Z(2)^0)*f3+(Z(2)^0)*f2*f3
   !gapprompt@gap>| !gapinput@FH := GroupRing( GF(3), SmallGroup(27,3) );|
   <algebra-with-one over GF(3), with 3 generators>
   !gapprompt@gap>| !gapinput@T := Units( FH );|
@@ -1701,7 +1695,6 @@ pc-presentation
   <pc group of size 32768 with 15 generators>
   !gapprompt@gap>| !gapinput@GeneratorsOfGroup( W )[5];|
   f5   
-  # in the next example the direct product structure is more clear 
   !gapprompt@gap>| !gapinput@FH := GroupRing( GF(3), SmallGroup(27,3) );|
   <algebra-with-one over GF(3), with 3 generators>
   !gapprompt@gap>| !gapinput@T := PcUnits(FH);|

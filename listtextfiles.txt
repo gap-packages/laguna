@@ -1,4 +1,5 @@
 laguna/makedocrel.g
+laguna/GPL
 laguna/README
 laguna/init.g
 laguna/read.g

@@ -375,10 +375,9 @@ Z(2)^0
 (Z(2)^0)*&lt;identity&gt; of ...+(Z(2)^0)*f1+(Z(2)^0)*f2+(Z(2)^0)*f1*f2
 <span class="GAPprompt">gap&gt;</span> <span class="GAPinput">Involution( x );</span>
 (Z(2)^0)*&lt;identity&gt; of ...+(Z(2)^0)*f1+(Z(2)^0)*f1*f2+(Z(2)^0)*f2*f3*f4
-# let's check the action of involution on elements from the group G
 <span class="GAPprompt">gap&gt;</span> <span class="GAPinput">l := List( MinimalGeneratingSet( G ), g -&gt; g^Embedding( G, KG ) );</span>
 [ (Z(2)^0)*f1, (Z(2)^0)*f2 ]
-<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">List( l, Involution );</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">List( l, Involution ); # check how involution acts on elements of G</span>
 [ (Z(2)^0)*f1, (Z(2)^0)*f2*f3*f4 ]
 <span class="GAPprompt">gap&gt;</span> <span class="GAPinput">List( l, g -&gt; g^-1 );</span>
 [ (Z(2)^0)*f1, (Z(2)^0)*f2*f3*f4 ]     
@@ -414,10 +413,9 @@ true
 
 <span class="GAPprompt">gap&gt;</span> <span class="GAPinput">IsUnitary(x);</span>
 false
-# let's check that elements of the group G are unitary
 <span class="GAPprompt">gap&gt;</span> <span class="GAPinput">l:=List(MinimalGeneratingSet(G),g -&gt; g^Embedding(G,KG));</span>
 [ (Z(2)^0)*f1, (Z(2)^0)*f2 ]
-<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">List(l,IsUnitary);</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">List(l,IsUnitary); # check that elements of G are unitary</span>
 [ true, true ]   
 
 </pre></div>
@@ -862,12 +860,10 @@ true
 [ f1, f2, f3, f4 ] -&gt; [ f2, f1, f3, f7 ]
 <span class="GAPprompt">gap&gt;</span> <span class="GAPinput">G1 := Image( f, G ); </span>
 Group([ f2, f1, f3, f7 ])
-<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">H := Intersection( ucs[2], G1 ); </span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">H := Intersection( ucs[2], G1 ); # compute intersection in V(KG)</span>
 Group([ f3, f7, f3*f7 ])
-# H is the intersection of G and the 3rd centre of V(KG)
-<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">T:=PreImage( f, H );</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">T:=PreImage( f, H );             # find its preimage in G</span>
 Group([ f3, f4, f3*f4 ])
-# and T is its preimage in G
 <span class="GAPprompt">gap&gt;</span> <span class="GAPinput">IdGroup( T ); </span>
 [ 4, 1 ]
 
@@ -888,10 +884,8 @@ Group([ f3, f4, f3*f4 ])
 <span class="GAPprompt">gap&gt;</span> <span class="GAPinput">U := Units( KG );</span>
 #I  LAGUNA package: Computing the unit group ...
 &lt;group of size 32768 with 15 generators&gt;
-# now elements of U are already in KG
-<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">GeneratorsOfGroup( U )[5];</span>
-(Z(2)^0)*f2+(Z(2)^0)*f3+(Z(2)^0)*f2*f3 
-# in the next example the direct product structure is more clear 
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">GeneratorsOfGroup( U )[5]; # now elements of U are already in KG</span>
+(Z(2)^0)*f2+(Z(2)^0)*f3+(Z(2)^0)*f2*f3
 <span class="GAPprompt">gap&gt;</span> <span class="GAPinput">FH := GroupRing( GF(3), SmallGroup(27,3) );</span>
 &lt;algebra-with-one over GF(3), with 3 generators&gt;
 <span class="GAPprompt">gap&gt;</span> <span class="GAPinput">T := Units( FH );</span>
@@ -922,7 +916,6 @@ true
 &lt;pc group of size 32768 with 15 generators&gt;
 <span class="GAPprompt">gap&gt;</span> <span class="GAPinput">GeneratorsOfGroup( W )[5];</span>
 f5   
-# in the next example the direct product structure is more clear 
 <span class="GAPprompt">gap&gt;</span> <span class="GAPinput">FH := GroupRing( GF(3), SmallGroup(27,3) );</span>
 &lt;algebra-with-one over GF(3), with 3 generators&gt;
 <span class="GAPprompt">gap&gt;</span> <span class="GAPinput">T := PcUnits(FH);</span>
