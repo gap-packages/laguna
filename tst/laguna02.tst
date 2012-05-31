@@ -1,5 +1,6 @@
-# from paragraph [ 2, 0, 0, 4 ][ "/Users/alexk/CVSREPS/GAPDEV/pkg/laguna/doc/example.xml", 10 ]
+# LAGUNA, chapter 2
 
+# [ "/Users/alexk/gap4r5p4May26/pkg/laguna/doc/example.xml", 10, 19 ]
 
 gap> K := GF( 2 );
 GF(2)
@@ -9,8 +10,7 @@ gap> KG := GroupRing( K, G );
 <algebra-with-one over GF(2), with 4 generators>
 
 
-# from paragraph [ 2, 0, 0, 6 ][ "/Users/alexk/CVSREPS/GAPDEV/pkg/laguna/doc/example.xml", 25 ]
-
+# [ "/Users/alexk/gap4r5p4May26/pkg/laguna/doc/example.xml", 25, 38 ]
 
 gap> IsGroupAlgebra( KG ); 
 true
@@ -24,15 +24,13 @@ gap> LeftActingDomain( KG );
 GF(2)
 
 
-# from paragraph [ 2, 0, 0, 8 ][ "/Users/alexk/CVSREPS/GAPDEV/pkg/laguna/doc/example.xml", 44 ]
-
+# [ "/Users/alexk/gap4r5p4May26/pkg/laguna/doc/example.xml", 44, 49 ]
 gap> UnderlyingRing( KG );
 GF(2)
 gap> UnderlyingField( KG );
 GF(2)
 
-# from paragraph [ 2, 0, 0, 10 ][ "/Users/alexk/CVSREPS/GAPDEV/pkg/laguna/doc/example.xml", 56 ]
-
+# [ "/Users/alexk/gap4r5p4May26/pkg/laguna/doc/example.xml", 56, 63 ]
 
 gap> MinimalGeneratingSet( G );
 [ f1, f2 ]
@@ -40,8 +38,7 @@ gap> l := List( last, g -> g^Embedding( G, KG ) );
 [ (Z(2)^0)*f1, (Z(2)^0)*f2 ]
 
 
-# from paragraph [ 2, 0, 0, 12 ][ "/Users/alexk/CVSREPS/GAPDEV/pkg/laguna/doc/example.xml", 67 ]
-
+# [ "/Users/alexk/gap4r5p4May26/pkg/laguna/doc/example.xml", 67, 77 ]
 
 gap> a :=l[1]; b:=l[2]; # a and b are images of group generators in KG
 (Z(2)^0)*f1
@@ -52,8 +49,7 @@ gap> x := ( e + a ) * ( e + b );
 (Z(2)^0)*<identity> of ...+(Z(2)^0)*f1+(Z(2)^0)*f2+(Z(2)^0)*f1*f2  
 
 
-# from paragraph [ 2, 0, 0, 14 ][ "/Users/alexk/CVSREPS/GAPDEV/pkg/laguna/doc/example.xml", 81 ]
-
+# [ "/Users/alexk/gap4r5p4May26/pkg/laguna/doc/example.xml", 81, 92 ]
 
 gap> Support( x );
 [ <identity> of ..., f1, f2, f1*f2 ]
@@ -65,15 +61,13 @@ gap> TraceOfMagmaRingElement( x );
 Z(2)^0
 
 
-# from paragraph [ 2, 0, 0, 16 ][ "/Users/alexk/CVSREPS/GAPDEV/pkg/laguna/doc/example.xml", 97 ]
-
+# [ "/Users/alexk/gap4r5p4May26/pkg/laguna/doc/example.xml", 97, 102 ]
 gap> Augmentation( x );
 0*Z(2)
 gap> IsUnit( KG, x );
 false
 
-# from paragraph [ 2, 0, 0, 18 ][ "/Users/alexk/CVSREPS/GAPDEV/pkg/laguna/doc/example.xml", 108 ]
-
+# [ "/Users/alexk/gap4r5p4May26/pkg/laguna/doc/example.xml", 108, 115 ]
 
 gap> y := e + x;
 (Z(2)^0)*f1+(Z(2)^0)*f2+(Z(2)^0)*f1*f2
@@ -81,8 +75,7 @@ gap> IsUnit( KG, y );
 true  
 
 
-# from paragraph [ 2, 0, 0, 20 ][ "/Users/alexk/CVSREPS/GAPDEV/pkg/laguna/doc/example.xml", 119 ]
-
+# [ "/Users/alexk/gap4r5p4May26/pkg/laguna/doc/example.xml", 119, 128 ]
 
 gap> y^-1;
 (Z(2)^0)*f1+(Z(2)^0)*f2+(Z(2)^0)*f3+(Z(2)^0)*f4+(Z(2)^0)*f1*f2+(Z(2)^
@@ -92,8 +85,7 @@ gap> y * y^-1;
 (Z(2)^0)*<identity> of ... 
 
 
-# from paragraph [ 2, 0, 0, 22 ][ "/Users/alexk/CVSREPS/GAPDEV/pkg/laguna/doc/example.xml", 135 ]
-
+# [ "/Users/alexk/gap4r5p4May26/pkg/laguna/doc/example.xml", 135, 148 ]
 
 gap> Involution( y );
 (Z(2)^0)*f1+(Z(2)^0)*f1*f2+(Z(2)^0)*f2*f3*f4
@@ -107,8 +99,7 @@ gap> IsUnitary( y );
 false
 
 
-# from paragraph [ 2, 0, 0, 24 ][ "/Users/alexk/CVSREPS/GAPDEV/pkg/laguna/doc/example.xml", 156 ]
-
+# [ "/Users/alexk/gap4r5p4May26/pkg/laguna/doc/example.xml", 156, 164 ]
 
 gap> AugmentationIdeal( KG );
 <two-sided ideal in <algebra-with-one over GF(2), with 4 generators>,
@@ -117,13 +108,11 @@ gap> RadicalOfAlgebra( KG ) = AugmentationIdeal( KG );
 true
 
 
-# from paragraph [ 2, 0, 0, 26 ][ "/Users/alexk/CVSREPS/GAPDEV/pkg/laguna/doc/example.xml", 171 ]
-
+# [ "/Users/alexk/gap4r5p4May26/pkg/laguna/doc/example.xml", 171, 174 ]
 gap> AugmentationIdealNilpotencyIndex( KG );
 9
 
-# from paragraph [ 2, 0, 0, 28 ][ "/Users/alexk/CVSREPS/GAPDEV/pkg/laguna/doc/example.xml", 180 ]
-
+# [ "/Users/alexk/gap4r5p4May26/pkg/laguna/doc/example.xml", 180, 189 ]
 
 gap> AugmentationIdealPowerSeries( KG );
 [ <algebra of dimension 15 over GF(2)>, <algebra of dimension 13 over GF(2)>, 
@@ -133,22 +122,19 @@ gap> AugmentationIdealPowerSeries( KG );
   <algebra over GF(2)> ]
 
 
-# from paragraph [ 2, 0, 0, 31 ][ "/Users/alexk/CVSREPS/GAPDEV/pkg/laguna/doc/example.xml", 202 ]
-
+# [ "/Users/alexk/gap4r5p4May26/pkg/laguna/doc/example.xml", 202, 207 ]
 
 gap> V := NormalizedUnitGroup( KG );
 <group of size 32768 with 15 generators>   
 
 
-# from paragraph [ 2, 0, 0, 33 ][ "/Users/alexk/CVSREPS/GAPDEV/pkg/laguna/doc/example.xml", 212 ]
-
+# [ "/Users/alexk/gap4r5p4May26/pkg/laguna/doc/example.xml", 212, 217 ]
 
 gap> W := PcNormalizedUnitGroup( KG );
 <pc group of size 32768 with 15 generators>
 
 
-# from paragraph [ 2, 0, 0, 36 ][ "/Users/alexk/CVSREPS/GAPDEV/pkg/laguna/doc/example.xml", 231 ]
-
+# [ "/Users/alexk/gap4r5p4May26/pkg/laguna/doc/example.xml", 231, 240 ]
 
 gap> t := NaturalBijectionToPcNormalizedUnitGroup( KG );
 MappingByFunction( <group of size 32768 with 15 generators>, <pc group of size\
@@ -158,8 +144,7 @@ gap> List( AsList( G ), x -> ( x^Embedding( G, KG ) )^t );
   f3*f7, f1*f2*f7, f1*f2*f3*f7, f2*f3*f7, f1*f3*f7, f1*f2 ]
 
 
-# from paragraph [ 2, 0, 0, 38 ][ "/Users/alexk/CVSREPS/GAPDEV/pkg/laguna/doc/example.xml", 246 ]
-
+# [ "/Users/alexk/gap4r5p4May26/pkg/laguna/doc/example.xml", 246, 265 ]
 gap> f := NaturalBijectionToNormalizedUnitGroup( KG );
 [ f1, f2, f3, f4, f5, f6, f7, f8, f9, f10, f11, f12, f13, f14, f15 ] ->
 [ (Z(2)^0)*f2, (Z(2)^0)*f1, (Z(2)^0)*f3,
@@ -179,8 +164,7 @@ gap> f := NaturalBijectionToNormalizedUnitGroup( KG );
     0)*f2*f4+(Z(2)^0)*f3*f4+(Z(2)^0)*f1*f2*f3+(Z(2)^0)*f1*f2*f4+(Z(2)^
     0)*f1*f3*f4+(Z(2)^0)*f2*f3*f4+(Z(2)^0)*f1*f2*f3*f4 ]
 
-# from paragraph [ 2, 0, 0, 40 ][ "/Users/alexk/CVSREPS/GAPDEV/pkg/laguna/doc/example.xml", 270 ]
-
+# [ "/Users/alexk/gap4r5p4May26/pkg/laguna/doc/example.xml", 270, 282 ]
 
 gap> cc := ConjugacyClasses( W );;
 gap> Length( cc );
@@ -193,8 +177,7 @@ gap> last^f;
 0)*f1*f2*f3+(Z(2)^0)*f1*f3*f4
 
 
-# from paragraph [ 2, 0, 0, 42 ][ "/Users/alexk/CVSREPS/GAPDEV/pkg/laguna/doc/example.xml", 288 ]
-
+# [ "/Users/alexk/gap4r5p4May26/pkg/laguna/doc/example.xml", 288, 297 ]
 
 gap> LowerCentralSeries( W );
 [ <pc group of size 32768 with 15 generators>,
@@ -204,8 +187,7 @@ gap> LowerCentralSeries( W );
   Group([ f11*f15, f13*f15, f14*f15 ]), Group([ <identity> of ... ]) ]
 
 
-# from paragraph [ 2, 0, 0, 44 ][ "/Users/alexk/CVSREPS/GAPDEV/pkg/laguna/doc/example.xml", 306 ]
-
+# [ "/Users/alexk/gap4r5p4May26/pkg/laguna/doc/example.xml", 306, 326 ]
 
 gap> C := Centre( W );
 Group([ f3*f5*f13*f15, f7, f15, f13*f15, f14*f15, f11*f13*f14*f15 ])
@@ -226,8 +208,7 @@ gap> List( m, g -> g^f );
     Z(2)^0)*f3*f4+(Z(2)^0)*f1*f3*f4 ]
 
 
-# from paragraph [ 2, 0, 0, 46 ][ "/Users/alexk/CVSREPS/GAPDEV/pkg/laguna/doc/example.xml", 332 ]
-
+# [ "/Users/alexk/gap4r5p4May26/pkg/laguna/doc/example.xml", 332, 356 ]
 
 gap> L := LieAlgebra( KG );
 #I  LAGUNA package: Constructing Lie algebra ...
@@ -250,5 +231,4 @@ gap> IsLieMetabelian( L );
 false
 gap> IsLieCentreByMetabelian( L );
 true
-
 

@@ -379,10 +379,9 @@ gap> x;
 (Z(2)^0)*<identity> of ...+(Z(2)^0)*f1+(Z(2)^0)*f2+(Z(2)^0)*f1*f2
 gap> Involution( x );
 (Z(2)^0)*<identity> of ...+(Z(2)^0)*f1+(Z(2)^0)*f1*f2+(Z(2)^0)*f2*f3*f4
-# let's check the action of involution on elements from the group G
 gap> l := List( MinimalGeneratingSet( G ), g -> g^Embedding( G, KG ) );
 [ (Z(2)^0)*f1, (Z(2)^0)*f2 ]
-gap> List( l, Involution );
+gap> List( l, Involution ); # check how involution acts on elements of G
 [ (Z(2)^0)*f1, (Z(2)^0)*f2*f3*f4 ]
 gap> List( l, g -> g^-1 );
 [ (Z(2)^0)*f1, (Z(2)^0)*f2*f3*f4 ]     
@@ -426,10 +425,9 @@ true
 <![CDATA[
 gap> IsUnitary(x);
 false
-# let's check that elements of the group G are unitary
 gap> l:=List(MinimalGeneratingSet(G),g -> g^Embedding(G,KG));
 [ (Z(2)^0)*f1, (Z(2)^0)*f2 ]
-gap> List(l,IsUnitary);
+gap> List(l,IsUnitary); # check that elements of G are unitary
 [ true, true ]   
 ]]>
 </Example>
@@ -1090,12 +1088,10 @@ gap> f := Embedding( G, V );
 [ f1, f2, f3, f4 ] -> [ f2, f1, f3, f7 ]
 gap> G1 := Image( f, G ); 
 Group([ f2, f1, f3, f7 ])
-gap> H := Intersection( ucs[2], G1 ); 
+gap> H := Intersection( ucs[2], G1 ); # compute intersection in V(KG)
 Group([ f3, f7, f3*f7 ])
-# H is the intersection of G and the 3rd centre of V(KG)
-gap> T:=PreImage( f, H );
+gap> T:=PreImage( f, H );             # find its preimage in G
 Group([ f3, f4, f3*f4 ])
-# and T is its preimage in G
 gap> IdGroup( T ); 
 [ 4, 1 ]
 ]]>
@@ -1122,10 +1118,8 @@ gap> IdGroup( T );
 gap> U := Units( KG );
 #I  LAGUNA package: Computing the unit group ...
 <group of size 32768 with 15 generators>
-# now elements of U are already in KG
-gap> GeneratorsOfGroup( U )[5];
-(Z(2)^0)*f2+(Z(2)^0)*f3+(Z(2)^0)*f2*f3 
-# in the next example the direct product structure is more clear 
+gap> GeneratorsOfGroup( U )[5]; # now elements of U are already in KG
+(Z(2)^0)*f2+(Z(2)^0)*f3+(Z(2)^0)*f2*f3
 gap> FH := GroupRing( GF(3), SmallGroup(27,3) );
 <algebra-with-one over GF(3), with 3 generators>
 gap> T := Units( FH );
@@ -1161,7 +1155,6 @@ gap> W := PcUnits( KG );
 <pc group of size 32768 with 15 generators>
 gap> GeneratorsOfGroup( W )[5];
 f5   
-# in the next example the direct product structure is more clear 
 gap> FH := GroupRing( GF(3), SmallGroup(27,3) );
 <algebra-with-one over GF(3), with 3 generators>
 gap> T := PcUnits(FH);
