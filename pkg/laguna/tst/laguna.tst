@@ -11,8 +11,7 @@ gap> NilpotencyClassOfGroup(V);
 4
 gap> D:=DerivedSubgroup(G);
 Group([ f3, f5 ])
-gap> S:=WreathProduct(CyclicGroup(2),D);
-<group of size 64 with 3 generators>
+gap> S:=WreathProduct(CyclicGroup(2),D);;
 gap> NilpotencyClassOfGroup(S);
 3
 gap> STOP_TEST( "laguna.tst", 10000 );
