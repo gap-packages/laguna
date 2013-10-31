@@ -619,9 +619,15 @@ InstallMethod( AugmentationIdeal,
     [ IsFModularGroupAlgebra ], 
     0,
     function(KG)
-    local gens, g;
-    gens:=List( AsList( UnderlyingMagma(KG) ), g -> g - One(KG) ); 
-    SubtractSet( gens, [ Zero( KG ) ] );
+    local e, o, gens, g;
+    gens:=[];
+    e:=One(UnderlyingMagma(KG));
+    o:=One(KG);
+    for g in UnderlyingMagma(KG) do
+      if not g=e then
+        Add(gens, g-o );
+      fi;
+    od;
     return TwoSidedIdeal(KG, gens, "basis");
     end
     ); 

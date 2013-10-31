@@ -11,7 +11,7 @@ gap> NilpotencyClassOfGroup(V);
 4
 gap> D:=DerivedSubgroup(G);
 Group([ f3, f5 ])
-gap> S:=WreathProduct(CyclicGroup(2),D);;
+gap> S:=StandardWreathProduct(CyclicGroup(2),D);;
 gap> NilpotencyClassOfGroup(S);
 3
 gap> STOP_TEST( "laguna.tst", 10000 );
