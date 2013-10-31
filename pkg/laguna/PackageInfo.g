@@ -11,11 +11,11 @@ SetPackageInfo( rec(
 
 PackageName := "LAGUNA",
 Subtitle := "Lie AlGebras and UNits of group Algebras",
-Version := "3.6.3",
-Date := "01/02/2013",
+Version := "3.6.4",
+Date := "30/10/2013",
 ##  <#GAPDoc Label="PKGVERSIONDATA">
-##  <!ENTITY VERSION "3.6.3">
-##  <!ENTITY RELEASEDATE "01 February 2013">
+##  <!ENTITY VERSION "3.6.4">
+##  <!ENTITY RELEASEDATE "30 October 2013">
 ##  <!ENTITY RELEASEYEAR "2013">
 ##  <#/GAPDoc>
 
@@ -100,7 +100,7 @@ PackageDoc := rec(
 ),
 
 Dependencies := rec(
-  GAP := ">=4.5",
+  GAP := ">=4.7",
   NeededOtherPackages := [ ["GAPDoc", ">= 1.5.1"] ],
   SuggestedOtherPackages := [ ["Sophus", ">= 1.2"] ],
   ExternalConditions := []

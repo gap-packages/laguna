@@ -6,10 +6,10 @@
                     [1XLie AlGebras and UNits of group Algebras[101X
   
   
-                                 Version 3.6.3
+                                 Version 3.6.4
   
   
-                                01 February 2013
+                                30 October 2013
   
   
                                   Victor Bovdi
@@ -81,7 +81,7 @@
   [5XLAGUNA[105X, please cite it in the following form:[133X
   
   [33X[0;0YV.  Bovdi,  A.  Konovalov,  R.  Rossmanith  and C. Schneider. [13XLAGUNA --- Lie
-  AlGebras  and  UNits  of  group  Algebras,  Version  3.6.3;[113X 01 February 2013
+  AlGebras  and  UNits  of  group  Algebras,  Version  3.6.4;[113X  30 October 2013
   ([7Xhttp://www.cs.st-andrews.ac.uk/~alexk/laguna/[107X).[133X
   
   

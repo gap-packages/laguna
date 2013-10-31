@@ -2,44 +2,47 @@
   
   [1XReferences[101X
   
-  [[20XCS06[120X]  [16XCatino,  F.  and  Spinelli,  E.[116X,  [17XLie  nilpotent  group algebras and upper Lie
-  codimension subgroups[117X, [18XComm. Algebra[118X, [19X34[119X, 10 (2006), 3859--3873.
+  [[20XCS06[120X]  [16XCatino,  F. and Spinelli, E.[116X, [17XLie nilpotent group algebras and upper
+  Lie codimension subgroups[117X, [18XComm. Algebra[118X, [19X34[119X, 10 (2006), 3859--3873.
   
-  [[20XDu92[120X]  [16XDu,  X.  K.[116X,  [17XThe centers of a radical ring[117X, [18XCanad. Math. Bull.[118X, [19X35[119X, 2 (1992),
-  174-179.
+  [[20XDu92[120X]  [16XDu,  X. K.[116X, [17XThe centers of a radical ring[117X, [18XCanad. Math. Bull.[118X, [19X35[119X, 2
+  (1992), 174-179.
   
-  [[20XHB82[120X]  [16XHuppert, B. and Blackburn, N.[116X, [17XFinite groups. II[117X, Springer-Verlag, Grundlehren
-  der  Mathematischen  Wissenschaften [Fundamental Principles of Mathematical Sciences],
-  [19X242[119X, Berlin (1982), xiii+531 pages, ((, AMD, 44)).
+  [[20XHB82[120X]  [16XHuppert,  B.  and Blackburn, N.[116X, [17XFinite groups. II[117X, Springer-Verlag,
+  Grundlehren  der  Mathematischen  Wissenschaften  [Fundamental Principles of
+  Mathematical Sciences], [19X242[119X, Berlin (1982), xiii+531 pages, ((, AMD, 44)).
   
-  [[20XJPS96[120X]  [16XJespers,  E.,  Parmenter,  M. M. and Sehgal, S. K.[116X, [17XCentral units of integral
-  group rings of nilpotent groups[117X, [18XProc. Amer. Math. Soc.[118X, [19X124[119X, 4 (1996), 1007--1012.
+  [[20XJPS96[120X]  [16XJespers,  E.,  Parmenter, M. M. and Sehgal, S. K.[116X, [17XCentral units of
+  integral  group  rings  of  nilpotent groups[117X, [18XProc. Amer. Math. Soc.[118X, [19X124[119X, 4
+  (1996), 1007--1012.
   
-  [[20XLR86[120X]  [16XLevin,  F.  and  Rosenberger,  G.[116X,  [17XLie  metabelian  group rings[117X, in Group and
-  semigroup  rings  (Johannesburg, 1985), North-Holland, North-Holland Math. Stud., [19X126[119X,
-  Amsterdam (1986), 153--161.
+  [[20XLR86[120X]  [16XLevin,  F. and Rosenberger, G.[116X, [17XLie metabelian group rings[117X, in Group
+  and semigroup rings (Johannesburg, 1985), North-Holland, North-Holland Math.
+  Stud., [19X126[119X, Amsterdam (1986), 153--161.
   
-  [[20XPPS73[120X]  [16XPassi,  I. B. S., Passman, D. S. and Sehgal, S. K.[116X, [17XLie solvable group rings[117X,
-  [18XCanad. J. Math.[118X, [19X25[119X (1973), 748--757.
+  [[20XPPS73[120X]  [16XPassi,  I.  B.  S.,  Passman, D. S. and Sehgal, S. K.[116X, [17XLie solvable
+  group rings[117X, [18XCanad. J. Math.[118X, [19X25[119X (1973), 748--757.
   
-  [[20XRos97[120X]   [16XRossmanith,   R.[116X,   [17XCentre-by-metabelian   group   algebras[117X,  Ph.D.  thesis,
+  [[20XRos97[120X]  [16XRossmanith,  R.[116X, [17XCentre-by-metabelian group algebras[117X, Ph.D. thesis,
   Friedrich-Schiller-Universit{\accent127a}t Jena (1997).
   
-  [[20XRos00[120X]   [16XRossmanith,   R.[116X,   [17XLie   centre-by-metabelian   group   algebras   in  even
+  [[20XRos00[120X]  [16XRossmanith,  R.[116X,  [17XLie  centre-by-metabelian  group algebras in even
   characteristic. I, II[117X, [18XIsrael J. Math.[118X, [19X115[119X (2000), 51--75, 77--99.
   
-  [[20XRos02[120X]  [16XRossmanith,  R.[116X,  [17XLie  centre-by-metabelian  group  algebras over commutative
-  rings[117X, [18XJ. Algebra[118X, [19X251[119X, 2 (2002), 503--508.
+  [[20XRos02[120X]   [16XRossmanith,  R.[116X,  [17XLie  centre-by-metabelian  group  algebras  over
+  commutative rings[117X, [18XJ. Algebra[118X, [19X251[119X, 2 (2002), 503--508.
   
-  [[20XSha91[120X]  [16XShalev, A.[116X, [17XLie dimension subgroups, Lie nilpotency indices, and the exponent
-  of the group of normalized units[117X, [18XJ. London Math. Soc. (2)[118X, [19X43[119X, 1 (1991), 23--36.
+  [[20XSha91[120X] [16XShalev, A.[116X, [17XLie dimension subgroups, Lie nilpotency indices, and the
+  exponent  of  the group of normalized units[117X, [18XJ. London Math. Soc. (2)[118X, [19X43[119X, 1
+  (1991), 23--36.
   
-  [[20XSim94[120X]  [16XSims, C. C.[116X, [17XComputation with finitely presented groups[117X, Cambridge University
-  Press,  Encyclopedia  of  Mathematics  and  its  Applications,  [19X48[119X,  Cambridge (1994),
-  xiii+604 pages.
+  [[20XSim94[120X]  [16XSims,  C. C.[116X, [17XComputation with finitely presented groups[117X, Cambridge
+  University  Press,  Encyclopedia  of  Mathematics  and its Applications, [19X48[119X,
+  Cambridge (1994), xiii+604 pages.
   
-  [[20XWur93[120X]  [16XWursthorn,  M.[116X,  [17XIsomorphisms of modular group algebras: an algorithm and its
-  application to groups of order 2sp 6[117X, [18XJ. Symbolic Comput.[118X, [19X15[119X, 2 (1993), 211--227.
+  [[20XWur93[120X]  [16XWursthorn, M.[116X, [17XIsomorphisms of modular group algebras: an algorithm
+  and  its  application  to  groups of order 2sp 6[117X, [18XJ. Symbolic Comput.[118X, [19X15[119X, 2
+  (1993), 211--227.
   
   
   

@@ -155,6 +155,15 @@
 
 3.6.0 (April 2012)
     * Updated the package for GAP 4.5 release
+
+3.6.1 (May 2012), 3.6.2 (January 2013), 3.6.3 (February 2013)
+    * Improved testing facilities
+
+3.6.4 (October 2013)
+    * Fixed a bug that might lead to a break loop in AugmentationIdeal 
+      (reported by Mohamed Barakat)
+    * Updated the test example for GAP 4.7 release replacing WreathProduct
+      by StandardWreathProduct
     
 4.0 (in the development version)
     The large new block related with the Modular Isomorphism Problem (MIP):
