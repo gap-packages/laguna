@@ -4,7 +4,7 @@ LoadPackage( pkgname );
 pkgdir := DirectoriesPackageLibrary( pkgname, "tst" );
 
 # Arrange testfiles as required
-testfiles := [ "laguna.tst", "laguna02.tst", "laguna04.tst" ];
+testfiles := [ "laguna.tst", "laguna02.tst", "laguna04.tst", "bugfix.tst" ];
 
 testresult:=true;
 for ff in testfiles do

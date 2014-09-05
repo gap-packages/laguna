@@ -1,23 +1,23 @@
-\BOOKMARK [0][-]{chapter.1}{Introduction}{}
-\BOOKMARK [1][-]{section.1.1}{General aims}{chapter.1}
-\BOOKMARK [1][-]{section.1.2}{General computations in group rings}{chapter.1}
-\BOOKMARK [1][-]{section.1.3}{Computations in the normalized unit group}{chapter.1}
-\BOOKMARK [1][-]{section.1.4}{Computing Lie properties of the group algebra }{chapter.1}
-\BOOKMARK [1][-]{section.1.5}{Installation and system requirements}{chapter.1}
-\BOOKMARK [0][-]{chapter.2}{A sample calculation with LAGUNA}{}
-\BOOKMARK [0][-]{chapter.3}{The basic theory behind LAGUNA}{}
-\BOOKMARK [1][-]{section.3.1}{Notation and definitions}{chapter.3}
-\BOOKMARK [1][-]{section.3.2}{p-modular group algebras}{chapter.3}
-\BOOKMARK [1][-]{section.3.3}{Polycyclic generating set for V}{chapter.3}
-\BOOKMARK [1][-]{section.3.4}{Computing the canonical form}{chapter.3}
-\BOOKMARK [1][-]{section.3.5}{Computing a power commutator presentation for V}{chapter.3}
-\BOOKMARK [1][-]{section.3.6}{Verifying Lie properties of FG}{chapter.3}
-\BOOKMARK [0][-]{chapter.4}{LAGUNA functions}{}
-\BOOKMARK [1][-]{section.4.1}{General functions for group algebras}{chapter.4}
-\BOOKMARK [1][-]{section.4.2}{Operations with group algebra elements}{chapter.4}
-\BOOKMARK [1][-]{section.4.3}{Important attributes of group algebras}{chapter.4}
-\BOOKMARK [1][-]{section.4.4}{Computations with the unit group}{chapter.4}
-\BOOKMARK [1][-]{section.4.5}{The Lie algebra of a group algebra}{chapter.4}
-\BOOKMARK [1][-]{section.4.6}{Other commands}{chapter.4}
-\BOOKMARK [0][-]{chapter*.5}{References}{}
-\BOOKMARK [0][-]{section*.6}{Index}{}
+\BOOKMARK [0][-]{chapter.1}{Introduction}{}% 1
+\BOOKMARK [1][-]{section.1.1}{General aims}{chapter.1}% 2
+\BOOKMARK [1][-]{section.1.2}{General computations in group rings}{chapter.1}% 3
+\BOOKMARK [1][-]{section.1.3}{Computations in the normalized unit group}{chapter.1}% 4
+\BOOKMARK [1][-]{section.1.4}{Computing Lie properties of the group algebra }{chapter.1}% 5
+\BOOKMARK [1][-]{section.1.5}{Installation and system requirements}{chapter.1}% 6
+\BOOKMARK [0][-]{chapter.2}{A sample calculation with LAGUNA}{}% 7
+\BOOKMARK [0][-]{chapter.3}{The basic theory behind LAGUNA}{}% 8
+\BOOKMARK [1][-]{section.3.1}{Notation and definitions}{chapter.3}% 9
+\BOOKMARK [1][-]{section.3.2}{p-modular group algebras}{chapter.3}% 10
+\BOOKMARK [1][-]{section.3.3}{Polycyclic generating set for V}{chapter.3}% 11
+\BOOKMARK [1][-]{section.3.4}{Computing the canonical form}{chapter.3}% 12
+\BOOKMARK [1][-]{section.3.5}{Computing a power commutator presentation for V}{chapter.3}% 13
+\BOOKMARK [1][-]{section.3.6}{Verifying Lie properties of FG}{chapter.3}% 14
+\BOOKMARK [0][-]{chapter.4}{LAGUNA functions}{}% 15
+\BOOKMARK [1][-]{section.4.1}{General functions for group algebras}{chapter.4}% 16
+\BOOKMARK [1][-]{section.4.2}{Operations with group algebra elements}{chapter.4}% 17
+\BOOKMARK [1][-]{section.4.3}{Important attributes of group algebras}{chapter.4}% 18
+\BOOKMARK [1][-]{section.4.4}{Computations with the unit group}{chapter.4}% 19
+\BOOKMARK [1][-]{section.4.5}{The Lie algebra of a group algebra}{chapter.4}% 20
+\BOOKMARK [1][-]{section.4.6}{Other commands}{chapter.4}% 21
+\BOOKMARK [0][-]{chapter*.5}{References}{}% 22
+\BOOKMARK [0][-]{section*.6}{Index}{}% 23

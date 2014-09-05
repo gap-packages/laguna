@@ -182,7 +182,13 @@ InstallMethod( Augmentation,
     true,
     [ IsElementOfMagmaRingModuloRelations and IsMagmaRingObjDefaultRep ], 
     0,
-    elt -> Sum( CoefficientsBySupport( elt ) ) );   
+    function(elt)
+    if Length(elt![2]) = 0 then
+      return elt![1];
+    else
+      return Sum( CoefficientsBySupport( elt ) );
+    fi;
+    end);
 
 
 #############################################################################

@@ -11,12 +11,12 @@ SetPackageInfo( rec(
 
 PackageName := "LAGUNA",
 Subtitle := "Lie AlGebras and UNits of group Algebras",
-Version := "3.6.4",
-Date := "30/10/2013",
+Version := "3.6.5",
+Date := "05/09/2014",
 ##  <#GAPDoc Label="PKGVERSIONDATA">
-##  <!ENTITY VERSION "3.6.4">
-##  <!ENTITY RELEASEDATE "30 October 2013">
-##  <!ENTITY RELEASEYEAR "2013">
+##  <!ENTITY VERSION "3.6.5">
+##  <!ENTITY RELEASEDATE "05 September 2014">
+##  <!ENTITY RELEASEYEAR "2014">
 ##  <#/GAPDoc>
 
 PackageWWWHome := "http://www.cs.st-andrews.ac.uk/~alexk/laguna/",
