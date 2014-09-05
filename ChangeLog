@@ -164,6 +164,12 @@
       (reported by Mohamed Barakat)
     * Updated the test example for GAP 4.7 release replacing WreathProduct
       by StandardWreathProduct
+
+3.6.5 (September 2014)
+    * Fixed a bug in Augmentation returning an integer zero for zero element
+      of a group ring, being calculated as the sum over an empty list.
+      Now it will properly return the zero element of the underlying ring
+      (reported by Danjoseph Quijada)
     
 4.0 (in the development version)
     The large new block related with the Modular Isomorphism Problem (MIP):
