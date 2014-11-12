@@ -170,6 +170,11 @@
       of a group ring, being calculated as the sum over an empty list.
       Now it will properly return the zero element of the underlying ring
       (reported by Danjoseph Quijada)
+
+3.7.0 (November 2014)
+    * Fixed a bug in PcPresentationOfNormalizedUnit that may cause
+      NaturalBijectionToPcNormalizedUnitGroup returning wrong results
+      for p>2 (reported by Urban Jezernik)
     
 4.0 (in the development version)
     The large new block related with the Modular Isomorphism Problem (MIP):
