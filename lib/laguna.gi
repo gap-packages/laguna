@@ -54,6 +54,7 @@ InstallImmediateMethod( IsFModularGroupAlgebra,
 InstallImmediateMethod( IsPModularGroupAlgebra,
     IsFModularGroupAlgebra, 0,
     R -> IsPGroup(UnderlyingMagma(R)) and
+         IsFinite(UnderlyingMagma(R)) and
          Characteristic(LeftActingDomain(R)) <> 0 and 
          PrimePGroup(UnderlyingMagma(R)) = 
          Characteristic(LeftActingDomain(R)) 
@@ -403,7 +404,7 @@ InstallOtherMethod (IsUnit,
 	        # characteristic p
             
           S:=Group(Support(elt)); 
-          if IsPGroup(S) then
+          if IsPGroup(S) and IsFinite(S) then
             if PrimePGroup(S) mod Characteristic( elt )=0 then
               return not Augmentation( elt ) = ZeroCoefficient( elt ) ;
             else  
@@ -447,7 +448,7 @@ InstallOtherMethod( InverseOp,
   # we check whether coefficients are from field of characteristic p
             
   S:=Group(Support(elt)); 
-    if IsPGroup(S) then
+    if IsPGroup(S) and IsFinite(S) then
       if PrimePGroup(S) mod Characteristic( elt ) = 0 then
         a:=Augmentation( elt );
         if a = ZeroCoefficient( elt ) then
@@ -995,6 +996,7 @@ InstallMethod( NormalizedUnitGroup,
       SetIsFinite(U, true);
       SetSize(U, Size(LeftActingDomain(KG))^(Size(UnderlyingMagma(KG))-1));
       SetIsPGroup(U, true);
+      SetPrimePGroup(U, Characteristic(LeftActingDomain(KG)));
       SetUnderlyingGroupRing(U,KG);
       SetPcgs( U, PcgsByPcSequence( FamilyObj(One(KG)), GeneratorsOfGroup(U) ) );
       SetRelativeOrders( Pcgs(U), List( [ 1 .. Dimension(KG)-1 ], x -> Characteristic( LeftActingDomain(KG) ) ) );
@@ -1096,6 +1098,7 @@ InstallMethod( PcNormalizedUnitGroup,
       SetIsGroupOfUnitsOfMagmaRing(U,false);
       SetIsNormalizedUnitGroupOfGroupRing(U,true);
       SetIsPGroup(U, true);
+      SetPrimePGroup(U, p);
       SetUnderlyingGroupRing(U,KG);   
       return U;
     fi;
