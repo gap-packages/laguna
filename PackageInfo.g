@@ -11,17 +11,26 @@ SetPackageInfo( rec(
 
 PackageName := "LAGUNA",
 Subtitle := "Lie AlGebras and UNits of group Algebras",
-Version := "3.7.0",
-Date := "11/11/2014",
+Version := "3.8.0",
+Date := "24/09/2017",
 ##  <#GAPDoc Label="PKGVERSIONDATA">
-##  <!ENTITY VERSION "3.7.0">
-##  <!ENTITY RELEASEDATE "11 November 2014">
-##  <!ENTITY RELEASEYEAR "2014">
+##  <!ENTITY VERSION "3.8.0">
+##  <!ENTITY RELEASEDATE "24 September 2017">
+##  <!ENTITY RELEASEYEAR "2017">
 ##  <#/GAPDoc>
 
-PackageWWWHome := "http://www.cs.st-andrews.ac.uk/~alexk/laguna/",
+SourceRepository := rec(
+    Type := "git",
+    URL := Concatenation( "https://github.com/gap-packages/", LowercaseString(~.PackageName) ),
+),
+IssueTrackerURL := Concatenation( ~.SourceRepository.URL, "/issues" ),
+PackageWWWHome  := Concatenation( "https://gap-packages.github.io/", LowercaseString(~.PackageName) ),
+README_URL      := Concatenation( ~.PackageWWWHome, "/README.md" ),
+PackageInfoURL  := Concatenation( ~.PackageWWWHome, "/PackageInfo.g" ),
+ArchiveURL      := Concatenation( ~.SourceRepository.URL,
+                                 "/releases/download/v", ~.Version,
+                                 "/", LowercaseString(~.PackageName), "-", ~.Version ),
 
-ArchiveURL := Concatenation( ~.PackageWWWHome, "laguna-", ~.Version ),
 ArchiveFormats := ".tar.gz",
 
 Persons := [
@@ -44,8 +53,8 @@ Persons := [
     FirstNames    := "Alexander",
     IsAuthor      := true,
     IsMaintainer  := true,
-    Email         := "alexk@mcs.st-andrews.ac.uk",
-    WWWHome       := "http://www.cs.st-andrews.ac.uk/~alexk/",
+    Email         := "alexander.konovalov@st-andrews.ac.uk",
+    WWWHome       := "https://alexk.host.cs.st-andrews.ac.uk",
     PostalAddress := Concatenation( [
                      "School of Computer Science\n",
                      "University of St Andrews\n",
@@ -82,11 +91,6 @@ Status := "accepted",
 CommunicatedBy := "Herbert Pahlings (Aachen)",
 AcceptDate := "06/2003",
 
-README_URL := 
-  Concatenation( ~.PackageWWWHome, "README" ),
-PackageInfoURL := 
-  Concatenation( ~.PackageWWWHome, "PackageInfo.g" ),
-  
 AbstractHTML := "The <span class=\"pkgname\">LAGUNA</span> package replaces the <span class=\"pkgname\">LAG</span> package and provides functionality for calculation of the normalized unit group of the modular group algebra of the finite p-group and for investigation of Lie algebra associated with group algebras and other associative algebras.",
                   
 PackageDoc := rec(
@@ -100,14 +104,13 @@ PackageDoc := rec(
 ),
 
 Dependencies := rec(
-  GAP := ">=4.7",
+  GAP := ">=4.8",
   NeededOtherPackages := [ ["GAPDoc", ">= 1.5.1"] ],
   SuggestedOtherPackages := [ ["Sophus", ">= 1.2"] ],
   ExternalConditions := []
 ),
 
 AvailabilityTest := ReturnTrue,
-Autoload := true,
 TestFile := "tst/testall.g",
 
 Keywords := ["group ring", "modular group algebra", "Lie algebra", "unit group"]
