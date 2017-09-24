@@ -1522,11 +1522,11 @@ Sym( [ 1 .. 3 ] )
 gap> t := NaturalBijectionToLieAlgebra( FG );; 
 #I  LAGUNA package: Constructing Lie algebra ...
 gap> a := Random( FG );
-(Z(2)^0)*()+(Z(2)^0)*(1,2,3)+(Z(2)^0)*(1,3,2)+(Z(2)^0)*(1,3)
+(Z(2)^0)*(1,2,3)+(Z(2)^0)*(1,3,2)+(Z(2)^0)*(1,3)
 gap> a * a;                     # product in the associative algebra
-(Z(2)^0)*(1,2,3)+(Z(2)^0)*(1,3,2)
+(Z(2)^0)*()+(Z(2)^0)*(1,2,3)+(Z(2)^0)*(1,3,2)
 gap> b := a^t;
-LieObject( (Z(2)^0)*()+(Z(2)^0)*(1,2,3)+(Z(2)^0)*(1,3,2)+(Z(2)^0)*(1,3) )
+LieObject( (Z(2)^0)*(1,2,3)+(Z(2)^0)*(1,3,2)+(Z(2)^0)*(1,3) )
 gap> b * b; # product in the Lie algebra (commutator) - must be zero!
 LieObject( <zero> of ... )
 ]]>
