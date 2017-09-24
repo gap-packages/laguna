@@ -1,9 +1,7 @@
-                           The LAGUNA Package
-                           ------------------
+# GAP package LAGUNA
 
 The  title  "LAGUNA"   stands  for  "Lie  AlGebras  and  UNits  of  group
-Algebras".   This is the new name of the GAP4 package LAG,  which is thus
-replaced by LAGUNA. 
+Algebras". 
 
 LAGUNA  extends  GAP  functionality  for  computations  in  group  rings.
 Besides  computing some general  properties and attributes of group rings 
@@ -13,30 +11,15 @@ group  satisfies  certain  Lie  properties;  and  it  can  calculate  the
 structure  of the  normalized unit group  of a group algebra  of a finite 
 p-group over the field of p elements. 
 
-             System requirements and installation of LAGUNA
-             ----------------------------------------------
-
 LAGUNA  does not  use  external binaries  and,  therefore,  works without
-restrictions  on the type  of the  operating system.  It is  designed for
-GAP4.4 and no compatibility with previous releases of GAP4 is guaranteed. 
+restrictions  on the type  of the  operating system.  It is redistributed
+with and is loaded by default. If it is not loaded due to the specific 
+user settings, load it using the following command:
 
-To use  LAGUNA online help  it is necessary  to install  the GAP4 package 
-GAPDoc by Frank Luebeck and Max Neunhoeffer,  which is available from the 
-GAP site or http://www.math.rwth-aachen.de/~Frank.Luebeck/GAPDoc/.
-
-LAGUNA is distributed in standard formats(zoo,tar.gz,tar.bz2,-win.zip)and
-can be obtained from http://www.cs.st-andrews.ac.uk/~alexk/laguna.htm. To 
-unpack the archive `laguna-X.X.X.zoo' you need the program `unzoo', which  
-can be  obtained  from  the GAP homepage  http://www.gap-system.org/ (see 
-section `Distribution'). To install  LAGUNA,  copy this archive  into the
-`pkg' subdirectory of your GAP4.4 installation. The subdirectory `laguna' 
-will be created  in the `pkg' directory after the following command:
-
-  unzoo -x laguna-X.X.X.zoo
+    gap> LoadPackage("laguna");
 
 
-                       History and Acknowledgements
-                       ----------------------------
+## History and Acknowledgements
 
 Some of the features of  LAGUNA were already included in the GAP4 package
 LAG  written  by the third  author,  Richard Rossmanith.  The three other
@@ -67,8 +50,4 @@ See the file ChangeLog  for the details about changes  introduced in each
 LAGUNA release.
 
 
-Victor Bovdi
-Alexander Konovalov
-Richard Rossmanith
-and
-Csaba Schneider
+Victor Bovdi, Alexander Konovalov, Richard Rossmanith and Csaba Schneider
