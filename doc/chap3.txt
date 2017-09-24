@@ -11,8 +11,9 @@
   set of formal linear combinations of the form[133X
   
   
-        [33X[1;6Y[24X[33X[0;0Y\sum_{g \in G}\alpha_g g,\qquad \alpha_g \in F[133X [124X[133X
+  [24X[33X[0;6Y\sum_{g \in G}\alpha_g g,\qquad \alpha_g \in F[133X
   
+  [124X
   
   [33X[0;0Ywhere  all but finitely many of the [22Xα_g[122X are zero. The group algebra [22XFG[122X is an
   [22XF[122X-algebra with the obvious operations. Clearly, [22Xdim FG=|G|[122X.[133X
@@ -20,8 +21,9 @@
   [33X[0;0YThe [13Xaugmentation homomorphism[113X [22Xχ : FG → F[122X is defined by[133X
   
   
-        [33X[1;6Y[24X[33X[0;0Y\chi\left(\sum_{g \in G}\alpha_g g\right)=\sum_{g \in G}\alpha_g.[133X [124X[133X
+  [24X[33X[0;6Y\chi\left(\sum_{g \in G}\alpha_g g\right)=\sum_{g \in G}\alpha_g.[133X
   
+  [124X
   
   [33X[0;0YIt is easy to see that [22Xχ[122X is indeed a homomorphism onto [22XF[122X. The kernel of [22Xχ[122X is
   called  the  [13Xaugmentation  ideal[113X  of  [22XFG[122X.  The augmentation ideal is denoted
@@ -30,9 +32,9 @@
   augmentation ideal is[133X
   
   
-        [33X[1;6Y[24X[33X[0;0YA(FG)=\left\{\sum_{g \in G}\alpha_g g\ |\ \sum_{g \in
-        G}\alpha_g=0\right\}.[133X [124X[133X
+  [24X[33X[0;6YA(FG)=\left\{\sum_{g \in G}\alpha_g g\ |\ \sum_{g \in G}\alpha_g=0\right\}.[133X
   
+  [124X
   
   [33X[0;0YAn  invertible element of [22XFG[122X is said to be a [13Xunit[113X. Clearly the elements of [22XG[122X
   and  the non-zero elements of [22XF[122X are units. The set of units in [22XFG[122X is a group
@@ -77,16 +79,18 @@
   Hence we can consider the following series of ideals in [22XA[122X:[133X
   
   
-        [33X[1;6Y[24X[33X[0;0YA\rhd A^2\rhd\cdots\rhd A^{c}\rhd A^{c+1}=0.[133X [124X[133X
+  [24X[33X[0;6YA\rhd A^2\rhd\cdots\rhd A^{c}\rhd A^{c+1}=0.[133X
   
+  [124X
   
   [33X[0;0YIt   is   clear   that   a  quotient  [22XA^i/A^i+1[122Xof  this  chain  has  trivial
   multiplication,  that is, such a quotient is a nil-ring. The chain [22XA^i[122X gives
   rise to a series of normal subgroups in [22XV[122X:[133X
   
   
-        [33X[1;6Y[24X[33X[0;0YV=1+A\rhd 1+A^2\rhd\cdots\rhd 1+A^c\rhd 1+A^{c+1}=1.[133X [124X[133X
+  [24X[33X[0;6YV=1+A\rhd 1+A^2\rhd\cdots\rhd 1+A^c\rhd 1+A^{c+1}=1.[133X
   
+  [124X
   
   [33X[0;0YIt   is   easy   to   see   that  the  chain  [22X1+A^i[122X  is  central,  that  is,
   [22X(1+A^i)/(1+A^i+1)≤ Z((1+A)/(1+A^i+1))[122X.[133X
@@ -95,8 +99,9 @@
   generating set for [22X1+A^i[122X. Let[133X
   
   
-        [33X[1;6Y[24X[33X[0;0YG=G_1 \rhd G_2\rhd\cdots\rhd G_{k}\rhd G_{k+1}=1[133X [124X[133X
+  [24X[33X[0;6YG=G_1 \rhd G_2\rhd\cdots\rhd G_{k}\rhd G_{k+1}=1[133X
   
+  [124X
   
   [33X[0;0Ybe  the  [13XJennings  series[113X  of  [22XG[122X. That is, [22XG_i+1=[G_i,G]G_j^p[122X where [22Xj[122X is the
   smallest non-negative integer such that [22Xj≥ i/p[122X. For all [22Xi≤ k[122X select elements
@@ -110,17 +115,19 @@
   [33X[0;0YA non-empty product[133X
   
   
-        [33X[1;6Y[24X[33X[0;0Yu=(x_{1,1}-1)^{\alpha_{1,1}}\cdots(x_{1,l_1}-1)^{\alpha_{1,l_1}}\cdots
-        (x_{k,1}-1)^{\alpha_{k,1}}\cdots(x_{k,l_k}-1)^{\alpha_{k,l_k}}[133X [124X[133X
+  [24X[33X[0;6Yu=(x_{1,1}-1)^{\alpha_{1,1}}\cdots(x_{1,l_1}-1)^{\alpha_{1,l_1}}\cdots
+  (x_{k,1}-1)^{\alpha_{k,1}}\cdots(x_{k,l_k}-1)^{\alpha_{k,l_k}}[133X
   
+  [124X
   
   [33X[0;0Ywhere  [22X0≤  α_i,j≤ p-1[122X is said to be [13Xstandard[113X. Clearly, a standard product is
   an element of the augmentation ideal [22XA[122X. The weight of the standard product [22Xu[122X
   is[133X
   
   
-        [33X[1;6Y[24X[33X[0;0Y\sum_{i=1}^k i(\alpha_{i,1}+\cdots+\alpha_{i,l_i}).[133X [124X[133X
+  [24X[33X[0;6Y\sum_{i=1}^k i(\alpha_{i,1}+\cdots+\alpha_{i,l_i}).[133X
   
+  [124X
   
   [33X[0;0YThe total number of standard products is [22X|G|-1[122X .[133X
   
@@ -139,9 +146,10 @@
   in the form[133X
   
   
-        [33X[1;6Y[24X[33X[0;0Yv=y_1^{\alpha_1}\cdots (y_{|G|-1})^{\alpha_{|G|-1}}, \quad
-        \alpha_1,\ldots,\alpha_{|G|-1} \in \{0,\ldots,p-1\}.[133X [124X[133X
+  [24X[33X[0;6Yv=y_1^{\alpha_1}\cdots          (y_{|G|-1})^{\alpha_{|G|-1}},          \quad
+  \alpha_1,\ldots,\alpha_{|G|-1} \in \{0,\ldots,p-1\}.[133X
   
+  [124X
   
   [33X[0;0YThis  expression is called the [13Xcanonical form[113X of [22Xv[122X. We note that by adding a
   generator  of  [22XF^*[122X  to  the  set [22Xy_1,...,y_|G|-1|[122X we can obtain a polycyclic
@@ -159,16 +167,18 @@
   Then for all [22Xα_s_i,...,α_r_i∈{0,...,p-1}[122X we have that[133X
   
   
-        [33X[1;6Y[24X[33X[0;0Yw\equiv \alpha_{s_i}x_{s_i}+\cdots+\alpha_{r_i}x_{r_i}\quad \bmod
-        \quad A^{i+1}[133X [124X[133X
+  [24X[33X[0;6Yw\equiv   \alpha_{s_i}x_{s_i}+\cdots+\alpha_{r_i}x_{r_i}\quad   \bmod  \quad
+  A^{i+1}[133X
   
+  [124X
   
   [33X[0;0Yif an only if[133X
   
   
-        [33X[1;6Y[24X[33X[0;0Y1+w\equiv (y_{s_i})^{\alpha_{s_i}}\cdots (y_{r_i})^{\alpha_{r_i}}\quad
-        \bmod \quad 1+A^{i+1}.[133X [124X[133X
+  [24X[33X[0;6Y1+w\equiv (y_{s_i})^{\alpha_{s_i}}\cdots (y_{r_i})^{\alpha_{r_i}}\quad \bmod
+  \quad 1+A^{i+1}.[133X
   
+  [124X
   
   [33X[0;0YSuppose  that  [22Xw[122X  is  an  element  of  the augmentation ideal [22XA[122X and [22X1+w[122X is a
   normalised unit. Let [22Xx_1,...,x_r_1[122X be the standard products of weight 1, and
@@ -176,32 +186,35 @@
   set. Then using the previous lemma, we find [22Xα_1,...,α_r_1[122X such that[133X
   
   
-        [33X[1;6Y[24X[33X[0;0Yw\equiv \alpha_{1}x_{1}+\cdots+\alpha_{r_1}x_{r_1}\quad \bmod \quad
-        A^{2},[133X [124X[133X
+  [24X[33X[0;6Yw\equiv \alpha_{1}x_{1}+\cdots+\alpha_{r_1}x_{r_1}\quad \bmod \quad A^{2},[133X
   
+  [124X
   
   [33X[0;0Yand so[133X
   
   
-        [33X[1;6Y[24X[33X[0;0Y1+w\equiv (y_{1})^{\alpha_{1}}\cdots (y_{r_1})^{\alpha_{r_1}}\quad
-        \bmod \quad 1+A^{2}.[133X [124X[133X
+  [24X[33X[0;6Y1+w\equiv   (y_{1})^{\alpha_{1}}\cdots  (y_{r_1})^{\alpha_{r_1}}\quad  \bmod
+  \quad 1+A^{2}.[133X
   
+  [124X
   
   [33X[0;0YNow  we  have that [22X1+w=(y_1)^α_1}⋯ (y_r_1)^α_r_1}(1+w_2)[122X for some [22Xw_2 ∈ A^2[122X.
   Then  suppose  that  [22Xx_s_2,x_s_2+1,...,x_r_2[122X  are  the  standard products of
   weight 2. We find [22Xα_s_2,...,α_r_2[122X such that[133X
   
   
-        [33X[1;6Y[24X[33X[0;0Yw_2\equiv \alpha_{s_2}x_{s_2}+\cdots+\alpha_{r_2}x_{r_2}\quad \bmod
-        \quad A^{3}.[133X [124X[133X
+  [24X[33X[0;6Yw_2\equiv  \alpha_{s_2}x_{s_2}+\cdots+\alpha_{r_2}x_{r_2}\quad  \bmod  \quad
+  A^{3}.[133X
   
+  [124X
   
   [33X[0;0YThen the lemma above implies that[133X
   
   
-        [33X[1;6Y[24X[33X[0;0Y1+w_2\equiv (y_{s_2})^{\alpha_{s_2}}\cdots
-        (y_{r_2})^{\alpha_{r_2}}\quad \bmod \quad 1+A^{3}.[133X [124X[133X
+  [24X[33X[0;6Y1+w_2\equiv   (y_{s_2})^{\alpha_{s_2}}\cdots   (y_{r_2})^{\alpha_{r_2}}\quad
+  \bmod \quad 1+A^{3}.[133X
   
+  [124X
   
   [33X[0;0YThus  [22X1+w_2=(y_s_2)^α_s_2}⋯ (y_r_2)^α_r_2}(1+w_3)[122X for some [22Xw_3 ∈ A^3[122X, and so
   [22X1+w=(y_1)^α_1}⋯   (y_r_1)^α_r_1}(y_s_2)^α_s_2}⋯   (y_r_2)^α_r_2}(1+w_3)[122X.  We
