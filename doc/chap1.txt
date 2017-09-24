@@ -1,0 +1,102 @@
+  
+  [1X1 [33X[0;0YIntroduction[133X[101X
+  
+  
+  [1X1.1 [33X[0;0YGeneral aims[133X[101X
+  
+  [33X[0;0Y[5XLAGUNA[105X -- [12XL[112Xie [12XA[112Xl[12XG[112Xebras and [12XUN[112Xits of group [12XA[112Xlgebras -- is the new name of the
+  [5XGAP[105X4 package [5XLAG[105X. The [5XLAG[105X package arose as a byproduct of the third author's
+  PhD  thesis  [Ros97].  Its  first version was ported to [5XGAP[105X4 and was brought
+  into  the  standard  [5XGAP[105X4  package  format during his visit to St Andrews in
+  September 1998.[133X
+  
+  [33X[0;0YThe  main objective of [5XLAG[105X is to deal with Lie algebras associated with some
+  associative  algebras,  and,  in particular, Lie algebras of group algebras.
+  Using  [5XLAG[105X it is possible to verify some properties or calculate certain Lie
+  ideals  of  such  Lie  algebras  very  efficiently,  due  to  their  special
+  structure. In the current version of [5XLAGUNA[105X the main part of the Lie algebra
+  functionality is heavily built on the previous [5XLAG[105X releases.[133X
+  
+  [33X[0;0YThe  [5XGAP[105X4 package [5XLAGUNA[105X also extends the [5XGAP[105X functionality for calculations
+  with units of modular group algebras. In particular, using this package, one
+  can  check  whether an element of such a group algebra is invertible. [5XLAGUNA[105X
+  also  contains  an implementation of an efficient algorithm to calculate the
+  (normalized)  unit  group  of the group algebra of a finite [22Xp[122X-group over the
+  field  of [22Xp[122X elements. Thus, the present version of [5XLAGUNA[105X provides a part of
+  the  functionality  of  the  [5XSISYPHOS[105X program, which was developed by Martin
+  Wursthorn to study the modular isomorphism problem; see [Wur93].[133X
+  
+  [33X[0;0YThe   corresponding  functions  of  [5XLAGUNA[105X  use  the  same  algorithmic  and
+  theoretical  approach  as those in [5XSISYPHOS[105X. The reason why we reimplemented
+  the  normalised unit group algorithms in the [5XLAGUNA[105X package is that [5XSISYPHOS[105X
+  has  no  interface  to  [5XGAP[105X4, and, even in [5XGAP[105X3, it is cumbersome to use the
+  [5XSISYPHOS[105X  output for further computation with the normalised unit group. For
+  instance, using [5XSISYPHOS[105X with its [5XGAP[105X3 interface, it is difficult to embed a
+  finite  [22Xp[122X-group into the normalized unit group of its group algebra over the
+  field of [22Xp[122X elements, but this can easily be done with [5XLAGUNA[105X.[133X
+  
+  
+  [1X1.2 [33X[0;0YGeneral computations in group rings[133X[101X
+  
+  [33X[0;0YThe  [5XLAGUNA[105X  package  provides  a  set  of functions to carry out some basic
+  computations  with a group ring and its elements. Among other things, [5XLAGUNA[105X
+  provides  elementary  functions  to  compute  such basic notions as support,
+  length,  trace and augmentation of an element. For modular group algebras of
+  finite  [22Xp[122X-groups  [5XLAGUNA[105X  is  able  to  calculate the power-structure of the
+  augmentation  ideal,  which is useful for the construction of the normalised
+  unit group; see Sections [14X4.1[114X--[14X4.3[114X for more details.[133X
+  
+  
+  [1X1.3 [33X[0;0YComputations in the normalized unit group[133X[101X
+  
+  [33X[0;0YOne of the aims of the [5XLAGUNA[105X package is to carry out efficient computations
+  in  the  normalised unit group of the group algebra [22XFG[122X of a finite [22Xp[122X-group [22XG[122X
+  over the field [22XF[122X of [22Xp[122X elements. If [22XU[122X is the unit group of [22XFG[122X then it is easy
+  to  see  that  [22XU[122X  is  the  direct product of [22XF^*[122X and [22XV(FG)[122X, where [22XF^*[122X is the
+  multiplicative  group  of  [22XF[122X,  and [22XV(FG)[122X is the group of normalised units. A
+  unit  of  [22XFG[122X  of the form [22Xα_1 ⋅ g_1 + α_2 ⋅ g_2 + ⋯ + α_k ⋅ g_k[122X with [22Xα_i ∈ F[122X
+  and [22Xg_i ∈ G[122X is said to be normalised if the sum [22Xα_1 + α_2 + ⋯ + α_k[122X is equal
+  to [22X1[122X.[133X
+  
+  [33X[0;0YIt  is  well-known that the normalised unit group [22XV[122X has order [22X|F|^|G|-1[122X, and
+  so  [22XV[122X  is  a finite [22Xp[122X-group. Thus computing [22XV[122X efficiently means to compute a
+  polycyclic  presentation  for  [22XV[122X. For the theory of polycyclic presentations
+  refer  to  [Sim94, Chapter 9]. For this computation we use an algorithm that
+  was  also  used in the [5XSISYPHOS[105X package. For a brief description see Chapter
+  [14X3[114X. The functions that compute the structure of the normalised unit group are
+  described in Section [14X4.4[114X.[133X
+  
+  
+  [1X1.4 [33X[0;0YComputing Lie properties of the group algebra[133X[101X
+  
+  [33X[0;0YThe  functions  that  are  used to compute Lie properties of [22Xp[122X-modular group
+  algebras  were already included in the previous versions of [5XLAG[105X. The bracket
+  operation  [22X[⋅,⋅][122X  on a [22Xp[122X-modular group algebra [22XFG[122X is defined by [22X[a,b]=ab-ba[122X.
+  It  is  well-known  and  very  easy  to  check  that [22X(FG, +, [⋅,⋅])[122X is a Lie
+  algebra.  Then  we may ask what kind of Lie algebra properties are satisfied
+  by  [22XFG[122X.  The  results  in  [LR86], [PPS73], and [Ros00] give fast, practical
+  algorithms  to  check  whether  the  Lie  algebra  [22XFG[122X is abelian, nilpotent,
+  soluble,  centre-by-metabelian,  etc.  The  functions  that  implement these
+  algorithms are described in Section [14X4.5[114X.[133X
+  
+  
+  [1X1.5 [33X[0;0YInstallation and system requirements[133X[101X
+  
+  [33X[0;0Y[5XLAGUNA[105X  does  not  use  external  binaries  and,  therefore,  works  without
+  restrictions  on the type of the operating system. It is designed for [5XGAP[105X4.4
+  and no compatibility with previous releases of [5XGAP[105X4 is guaranteed.[133X
+  
+  [33X[0;0YTo  use  the  [5XLAGUNA[105X online help it is necessary to install the [5XGAP[105X4 package
+  [5XGAPDoc[105X  by  Frank Lübeck and Max Neunhöffer, which is available from the [5XGAP[105X
+  site or from [7Xhttp://www.math.rwth-aachen.de/~Frank.Luebeck/GAPDoc/[107X.[133X
+  
+  [33X[0;0Y[5XLAGUNA[105X  is  distributed in standard formats ([11Xzoo[111X, [11Xtar.gz[111X, [11Xtar.bz2[111X, [11X-win.zip[111X)
+  and  can  be obtained from [7Xhttp://www.cs.st-andrews.ac.uk/~alexk/laguna/[107X. To
+  unpack the archive [11Xlaguna-X.X.X.zoo[111X you need the program [11Xunzoo[111X, which can be
+  obtained  from  the  [5XGAP[105X  homepage  [7Xhttp://www.gap-system.org/[107X  (see section
+  `Distribution').   To  install  [5XLAGUNA[105X,  copy  this  archive  into  the  [11Xpkg[111X
+  subdirectory  of  your  [5XGAP[105X4.4 installation. The subdirectory [11Xlaguna[111X will be
+  created in the [11Xpkg[111X directory after the following command:[133X
+  
+  [33X[0;0Y[10Xunzoo -x laguna-X.X.X.zoo[110X[133X
+  

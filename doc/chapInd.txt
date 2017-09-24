@@ -1,0 +1,104 @@
+  
+  
+  [1XIndex[101X
+  
+  [2XAugmentation[102X  4.2-5
+  augmentation homomorphism  3.1
+  augmentation ideal  3.1
+  [2XAugmentationHomomorphism[102X  4.3-1
+  [2XAugmentationIdeal[102X  4.3-2
+  [2XAugmentationIdealNilpotencyIndex[102X  4.3-6
+  [2XAugmentationIdealOfDerivedSubgroupNilpotencyIndex[102X  4.3-7
+  [2XAugmentationIdealPowerSeries[102X  4.3-5
+  Bass cyclic unit  4.2-13
+  [2XBassCyclicUnit[102X  4.2-13
+  bicyclic unit  4.2-12
+  [2XBicyclicUnitGroup[102X  4.4-13
+  [2XBicyclicUnitOfType1[102X  4.2-12
+  [2XBicyclicUnitOfType2[102X  4.2-12
+  [2XCanonicalBasis[102X  4.5-16
+  [2XCoefficientsBySupport[102X  4.2-2
+  [2XDihedralDepth[102X  4.6-2
+  dimension basis  3.3
+  [2XDimensionBasis[102X  4.6-3
+  [2XEmbedding[102X (from group to unit group)  4.4-5
+  [2XEmbedding[102X (from group to Lie algebra)  4.5-8
+  group algebra  3.1
+  [2XGroupBases[102X  4.4-14
+  [2XInverseOp[102X  4.2-11
+  [2XInvolution[102X  4.2-7
+  [2XIsBasisOfLieAlgebraOfGroupRing[102X  4.5-17
+  [2XIsFModularGroupAlgebra[102X  4.1-2
+  [2XIsGroupAlgebra[102X  4.1-1
+  [2XIsGroupOfUnitsOfMagmaRing[102X  4.4-8
+  [2XIsLieAbelian[102X  4.5-11
+  [2XIsLieAlgebraByAssociativeAlgebra[102X  4.5-2
+  [2XIsLieAlgebraOfGroupRing[102X  4.5-6
+  [2XIsLieCentreByMetabelian[102X  4.5-15
+  [2XIsLieMetabelian[102X  4.5-14
+  [2XIsLieNilpotent[102X  4.5-13
+  [2XIsLieSolvable[102X  4.5-12
+  [2XIsNormalizedUnitGroupOfGroupRing[102X  4.4-10
+  [2XIsPModularGroupAlgebra[102X  4.1-3
+  [2XIsSymmetric[102X  4.2-8
+  [2XIsUnit[102X  4.2-10
+  [2XIsUnitary[102X  4.2-9
+  [2XIsUnitGroupOfGroupRing[102X  4.4-9
+  Jennings series  3.3
+  [2XLAGInfo[102X  4.6-6
+  [5XLAGUNA[105X package  .-1
+  [2XLeftIdealBySubgroup[102X  4.3-8
+  [2XLength[102X  4.2-4
+  Lie derived length  4.5-21
+  Lie derived series  4.5-21
+  [2XLieAlgebraByDomain[102X  4.5-1
+  [2XLieCentre[102X  4.5-9
+  [2XLieDerivedLength[102X  4.5-21
+  [2XLieDerivedSubalgebra[102X  4.5-10
+  [2XLieDimensionSubgroups[102X  4.6-4
+  [2XLieLowerNilpotencyIndex[102X  4.5-20
+  [2XLieUpperCodimensionSeries[102X (for group ring)  4.6-5
+  [2XLieUpperCodimensionSeries[102X (for group)  4.6-5
+  [2XLieUpperNilpotencyIndex[102X  4.5-19
+  lower Lie power series  4.5-20
+  modular group algebra  4.1-2
+  [2XNaturalBijectionToAssociativeAlgebra[102X  4.5-5
+  [2XNaturalBijectionToLieAlgebra[102X  4.5-4
+  [2XNaturalBijectionToNormalizedUnitGroup[102X  4.4-4
+  [2XNaturalBijectionToPcNormalizedUnitGroup[102X  4.4-3
+  normalised unit  3.1
+  normalised unit group  3.1
+  [2XNormalizedUnitGroup[102X  4.4-1
+  [22Xp[122X-modular group algebra  3.2
+  partial augmentation  4.2-6
+  [2XPartialAugmentations[102X  4.2-6
+  [2XPcNormalizedUnitGroup[102X  4.4-2
+  [2XPcUnits[102X  4.4-7
+  power-commutator presentation  3.2
+  [2XRadicalOfAlgebra[102X  4.3-3
+  [2XRightIdealBySubgroup[102X  4.3-8
+  [5XSISYPHOS[105X package  1.1
+  standard product  3.3
+  [2XStructureConstantsTable[102X  4.5-18
+  [2XSubgroupsOfIndexTwo[102X  4.6-1
+  [2XSupport[102X  4.2-1
+  symmetric element  4.2-8
+  [2XTraceOfMagmaRingElement[102X  4.2-3
+  [2XTwoSidedIdalBySubgroup[102X  4.3-8
+  [2XUnderlyingAssociativeAlgebra[102X  4.5-3
+  [2XUnderlyingField[102X  4.1-6
+  [2XUnderlyingGroup[102X (of a group ring)  4.1-4
+  [2XUnderlyingGroup[102X (of Lie algebra of a group ring)  4.5-7
+  [2XUnderlyingGroupRing[102X  4.4-11
+  [2XUnderlyingRing[102X  4.1-5
+  unit  3.1
+  unit group  3.1
+  unitary element  4.2-9
+  [2XUnitarySubgroup[102X  4.4-12
+  [2XUnits[102X  4.4-6
+  upper Lie power series  4.5-19
+  weight, of dimension basis element  3.3
+  [2XWeightedBasis[102X  4.3-4
+  
+  
+  -------------------------------------------------------

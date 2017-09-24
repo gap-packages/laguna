@@ -1,0 +1,237 @@
+  
+  [1X3 [33X[0;0YThe basic theory behind [5XLAGUNA[105X[101X[1X[133X[101X
+  
+  [33X[0;0YIn this chapter we describe the theory that is behind the algorithms used by
+  [5XLAGUNA[105X.[133X
+  
+  
+  [1X3.1 [33X[0;0YNotation and definitions[133X[101X
+  
+  [33X[0;0YLet  [22XG[122X  be  a group and [22XF[122X a field. Then the [13Xgroup algebra[113X [22XFG[122X consists of the
+  set of formal linear combinations of the form[133X
+  
+  
+        [33X[1;6Y[24X[33X[0;0Y\sum_{g \in G}\alpha_g g,\qquad \alpha_g \in F[133X [124X[133X
+  
+  
+  [33X[0;0Ywhere  all but finitely many of the [22Xα_g[122X are zero. The group algebra [22XFG[122X is an
+  [22XF[122X-algebra with the obvious operations. Clearly, [22Xdim FG=|G|[122X.[133X
+  
+  [33X[0;0YThe [13Xaugmentation homomorphism[113X [22Xχ : FG → F[122X is defined by[133X
+  
+  
+        [33X[1;6Y[24X[33X[0;0Y\chi\left(\sum_{g \in G}\alpha_g g\right)=\sum_{g \in G}\alpha_g.[133X [124X[133X
+  
+  
+  [33X[0;0YIt is easy to see that [22Xχ[122X is indeed a homomorphism onto [22XF[122X. The kernel of [22Xχ[122X is
+  called  the  [13Xaugmentation  ideal[113X  of  [22XFG[122X.  The augmentation ideal is denoted
+  [22XA(FG)[122X, or simply [22XA[122X when there is no danger of confusion. It follows from the
+  isomorphism theorems that [22Xdim A(FG)=dim FG-1=|G|-1[122X. Another way to write the
+  augmentation ideal is[133X
+  
+  
+        [33X[1;6Y[24X[33X[0;0YA(FG)=\left\{\sum_{g \in G}\alpha_g g\ |\ \sum_{g \in
+        G}\alpha_g=0\right\}.[133X [124X[133X
+  
+  
+  [33X[0;0YAn  invertible element of [22XFG[122X is said to be a [13Xunit[113X. Clearly the elements of [22XG[122X
+  and  the non-zero elements of [22XF[122X are units. The set of units in [22XFG[122X is a group
+  with  respect  to  the multiplication of [22XFG[122X. The [13Xunit group[113X of [22XFG[122X is denoted
+  [22XU(FG)[122X or simply [22XU[122X when there is no risk of confusion. A unit [22Xu[122X is said to be
+  [13Xnormalised[113X  if  [22Xχ(u)=1[122X.  The set of normalised units forms a subgroup of the
+  unit  group, and is referred to as the [13Xnormalised unit group[113X. The normalised
+  unit  group  of  [22XFG[122X  is denoted [22XV(FG)[122X, or simply [22XV[122X. It is easy to prove that
+  [22XU(FG) = F^* × V(FG)[122X where [22XF^*[122X denotes the multiplicative group of [22XF[122X.[133X
+  
+  
+  [1X3.2 [33X[0;0Y[22Xp[122X[101X[1X-modular group algebras[133X[101X
+  
+  [33X[0;0YA  group  algebra  [22XFG[122X  is  said  to  be  [22Xp[122X-modular  if  [22XF[122X  is  the  field of
+  characteristic  [22Xp[122X, and [22XG[122X is a finite [22Xp[122X-group. A lot of information about the
+  structure  of [22Xp[122X-modular group algebras can be found in [HB82, Chapter VIII].
+  In a [22Xp[122X-modular group algebra we have that an element [22Xu[122X is a unit if and only
+  if [22Xχ(u)≠ 0[122X. Hence the normalised unit group [22XV[122X consists of all elements of [22XFG[122X
+  with  augmentation [22X1[122X. In other words [22XV[122X is a coset of the augmentation ideal,
+  namely [22XV=1+A[122X. This also implies that [22X|V|=|A|=|F|^|G|-1[122X, and so [22XV[122X is a finite
+  [22Xp[122X-group.[133X
+  
+  [33X[0;0YOne  of  the  aims  of  the  [5XLAGUNA[105X package is to compute a power-commutator
+  presentation  for  the  normalised unit group in the case when [22XG[122X is a finite
+  [22Xp[122X-group  and  [22XF[122X  is  a  field of [22Xp[122X elements. Such a presentation is given by
+  generators    [22Xy_1,    ...,    y_|G|-1[122X    and   two   types   of   relations:
+  [22Xy_i^p=(y_i+1)^α_i,i+1}  ⋯  (y_|G|-1)^α_i,|G|-1}[122X  for  [22X1  ≤  i  ≤  |G|-1[122X, and
+  [22X[y_j,y_i]=(y_j+1)^α_j,i,j+1} ⋯ (y_|G|-1)^α_j,i,|G|-1}[122X for [22X1 ≤ i < j ≤ |G|-1[122X,
+  where  the  exponents [22Xα_i,k[122X and [22Xα_i,j,k[122X are elements of the set [22X{0,...,p-1}[122X.
+  Having   such  a  presentation,  it  is  possible  to  carry  out  efficient
+  computations in the finite [22Xp[122X-group [22XV[122X; see [Sim94, Chapter 9].[133X
+  
+  
+  [1X3.3 [33X[0;0YPolycyclic generating set for [22XV[122X[101X[1X[133X[101X
+  
+  [33X[0;0YLet  [22XG[122X  be  a  finite  [22Xp[122X-group  and [22XF[122X the field of [22Xp[122X elements. Our aim is to
+  construct a power-commutator presentation for [22XV=V(FG)[122X. We noted earlier that
+  [22XV=1+A[122X,  where  [22XA[122X is the augmentation ideal. We use this piece of information
+  and  construct  a polycyclic generating set for [22XV[122X using a suitable basis for
+  [22XA[122X.  Before  constructing  this generating set, we note that [22XA[122X is a nilpotent
+  ideal  in  [22XFG[122X.  In other words there is some [22Xc[122X such that [22XA^c≠ 0[122X but [22XA^c+1=0[122X.
+  Hence we can consider the following series of ideals in [22XA[122X:[133X
+  
+  
+        [33X[1;6Y[24X[33X[0;0YA\rhd A^2\rhd\cdots\rhd A^{c}\rhd A^{c+1}=0.[133X [124X[133X
+  
+  
+  [33X[0;0YIt   is   clear   that   a  quotient  [22XA^i/A^i+1[122Xof  this  chain  has  trivial
+  multiplication,  that is, such a quotient is a nil-ring. The chain [22XA^i[122X gives
+  rise to a series of normal subgroups in [22XV[122X:[133X
+  
+  
+        [33X[1;6Y[24X[33X[0;0YV=1+A\rhd 1+A^2\rhd\cdots\rhd 1+A^c\rhd 1+A^{c+1}=1.[133X [124X[133X
+  
+  
+  [33X[0;0YIt   is   easy   to   see   that  the  chain  [22X1+A^i[122X  is  central,  that  is,
+  [22X(1+A^i)/(1+A^i+1)≤ Z((1+A)/(1+A^i+1))[122X.[133X
+  
+  [33X[0;0YNow  we  show  how  to  compute  a  basis  for  [22XA^i[122X  that gives a polycyclic
+  generating set for [22X1+A^i[122X. Let[133X
+  
+  
+        [33X[1;6Y[24X[33X[0;0YG=G_1 \rhd G_2\rhd\cdots\rhd G_{k}\rhd G_{k+1}=1[133X [124X[133X
+  
+  
+  [33X[0;0Ybe  the  [13XJennings  series[113X  of  [22XG[122X. That is, [22XG_i+1=[G_i,G]G_j^p[122X where [22Xj[122X is the
+  smallest non-negative integer such that [22Xj≥ i/p[122X. For all [22Xi≤ k[122X select elements
+  [22Xx_i,1,...,x_i,l_i[122X  of  [22XG_i[122X  such  that  [22X{x_i,1G_i+1,...,x_i,l_iG_i+1}[122X  is  a
+  minimal  generating  set for the elementary abelian group [22XG_i/G_i+1[122X. For the
+  Jennings  series  it  may  happen that [22XG_i=G_i+1[122X for some [22Xi[122X. In this case we
+  choose  an  empty  generating set for the quotient [22XG_i/G_i+1[122X and [22Xl_i=0[122X. Then
+  the  set  [22Xx_1,1,...,x_1,l_1,...,x_k,1,...,x_k,l_k[122X  is said to be a [13Xdimension
+  basis[113X for [22XG[122X. The [13Xweight[113X of a dimension basis element [22Xx_i,j[122X is [22Xi[122X.[133X
+  
+  [33X[0;0YA non-empty product[133X
+  
+  
+        [33X[1;6Y[24X[33X[0;0Yu=(x_{1,1}-1)^{\alpha_{1,1}}\cdots(x_{1,l_1}-1)^{\alpha_{1,l_1}}\cdots
+        (x_{k,1}-1)^{\alpha_{k,1}}\cdots(x_{k,l_k}-1)^{\alpha_{k,l_k}}[133X [124X[133X
+  
+  
+  [33X[0;0Ywhere  [22X0≤  α_i,j≤ p-1[122X is said to be [13Xstandard[113X. Clearly, a standard product is
+  an element of the augmentation ideal [22XA[122X. The weight of the standard product [22Xu[122X
+  is[133X
+  
+  
+        [33X[1;6Y[24X[33X[0;0Y\sum_{i=1}^k i(\alpha_{i,1}+\cdots+\alpha_{i,l_i}).[133X [124X[133X
+  
+  
+  [33X[0;0YThe total number of standard products is [22X|G|-1[122X .[133X
+  
+  [33X[0;0Y[12XLemma ([112X[HB82, Theorem VIII.2.6][12X).[112X For [22Xi≤ c[122X, the set [22XS_i[122X of standard products
+  of weight at least [22Xi[122X forms a basis for [22XA^i[122X. Moreover, the set [22X1+S_i={1+s | s
+  ∈  S_i}[122X  is  a polycyclic generating set for [22X1+A^i[122X. In particular [22X1+S_1[122X is a
+  polycyclic generating set for [22XV[122X.[133X
+  
+  [33X[0;0YA  basis  for  [22XA[122X  consisting  of  the  standard products is referred to as a
+  [13Xweighted  basis[113X.  Note that a weighted basis is a basis for the augmentation
+  ideal, and not for the whole group algebra.[133X
+  
+  [33X[0;0YLet  [22Xx_1,...,x_{|G|-1[122X  denote  the  standard  products  where  we choose the
+  indices so that the weight of [22Xx_i[122X is not larger than the weight of [22Xx_i+1[122X for
+  all  [22Xi[122X, and set [22Xy_i=1+x_i[122X. Then every element [22Xv[122X of [22XV[122X can be uniquely written
+  in the form[133X
+  
+  
+        [33X[1;6Y[24X[33X[0;0Yv=y_1^{\alpha_1}\cdots (y_{|G|-1})^{\alpha_{|G|-1}}, \quad
+        \alpha_1,\ldots,\alpha_{|G|-1} \in \{0,\ldots,p-1\}.[133X [124X[133X
+  
+  
+  [33X[0;0YThis  expression is called the [13Xcanonical form[113X of [22Xv[122X. We note that by adding a
+  generator  of  [22XF^*[122X  to  the  set [22Xy_1,...,y_|G|-1|[122X we can obtain a polycyclic
+  generating set for the unit group [22XU[122X.[133X
+  
+  
+  [1X3.4 [33X[0;0YComputing the canonical form[133X[101X
+  
+  [33X[0;0YWe  show how to compute the canonical form of a normalised unit with respect
+  to  the  polycyclic  generating  set  [22Xy_1,...,y_|G|-1[122X.  We use the following
+  elementary lemma.[133X
+  
+  [33X[0;0Y[12XLemma.[112X Let [22Xi≤ c[122X and suppose that [22Xw ∈ A^i[122X. Assume that [22Xx_s_i,x_s_i+1...,x_r_i[122X
+  are  the  standard products with weight [22Xi[122X and for [22Xs_i≤ j≤ r_i[122X set [22Xy_j=1+x_j[122X.
+  Then for all [22Xα_s_i,...,α_r_i∈{0,...,p-1}[122X we have that[133X
+  
+  
+        [33X[1;6Y[24X[33X[0;0Yw\equiv \alpha_{s_i}x_{s_i}+\cdots+\alpha_{r_i}x_{r_i}\quad \bmod
+        \quad A^{i+1}[133X [124X[133X
+  
+  
+  [33X[0;0Yif an only if[133X
+  
+  
+        [33X[1;6Y[24X[33X[0;0Y1+w\equiv (y_{s_i})^{\alpha_{s_i}}\cdots (y_{r_i})^{\alpha_{r_i}}\quad
+        \bmod \quad 1+A^{i+1}.[133X [124X[133X
+  
+  
+  [33X[0;0YSuppose  that  [22Xw[122X  is  an  element  of  the augmentation ideal [22XA[122X and [22X1+w[122X is a
+  normalised unit. Let [22Xx_1,...,x_r_1[122X be the standard products of weight 1, and
+  let [22Xy_1,...,y_r_1[122X be the corresponding elements in the polycyclic generating
+  set. Then using the previous lemma, we find [22Xα_1,...,α_r_1[122X such that[133X
+  
+  
+        [33X[1;6Y[24X[33X[0;0Yw\equiv \alpha_{1}x_{1}+\cdots+\alpha_{r_1}x_{r_1}\quad \bmod \quad
+        A^{2},[133X [124X[133X
+  
+  
+  [33X[0;0Yand so[133X
+  
+  
+        [33X[1;6Y[24X[33X[0;0Y1+w\equiv (y_{1})^{\alpha_{1}}\cdots (y_{r_1})^{\alpha_{r_1}}\quad
+        \bmod \quad 1+A^{2}.[133X [124X[133X
+  
+  
+  [33X[0;0YNow  we  have that [22X1+w=(y_1)^α_1}⋯ (y_r_1)^α_r_1}(1+w_2)[122X for some [22Xw_2 ∈ A^2[122X.
+  Then  suppose  that  [22Xx_s_2,x_s_2+1,...,x_r_2[122X  are  the  standard products of
+  weight 2. We find [22Xα_s_2,...,α_r_2[122X such that[133X
+  
+  
+        [33X[1;6Y[24X[33X[0;0Yw_2\equiv \alpha_{s_2}x_{s_2}+\cdots+\alpha_{r_2}x_{r_2}\quad \bmod
+        \quad A^{3}.[133X [124X[133X
+  
+  
+  [33X[0;0YThen the lemma above implies that[133X
+  
+  
+        [33X[1;6Y[24X[33X[0;0Y1+w_2\equiv (y_{s_2})^{\alpha_{s_2}}\cdots
+        (y_{r_2})^{\alpha_{r_2}}\quad \bmod \quad 1+A^{3}.[133X [124X[133X
+  
+  
+  [33X[0;0YThus  [22X1+w_2=(y_s_2)^α_s_2}⋯ (y_r_2)^α_r_2}(1+w_3)[122X for some [22Xw_3 ∈ A^3[122X, and so
+  [22X1+w=(y_1)^α_1}⋯   (y_r_1)^α_r_1}(y_s_2)^α_s_2}⋯   (y_r_2)^α_r_2}(1+w_3)[122X.  We
+  repeat  this process, and after [22Xc[122X steps we obtain the canonical form for the
+  element [22X1+w[122X.[133X
+  
+  
+  [1X3.5 [33X[0;0YComputing a power commutator presentation for [22XV[122X[101X[1X[133X[101X
+  
+  [33X[0;0YUsing  the  procedure in the previous section, it is easy to compute a power
+  commutator presentation for the normalized unit group [22XV[122X of a [22Xp[122X-modular group
+  algebra  over  the  field  of  [22Xp[122X  elements.  First we compute the polycyclic
+  generating sequence [22Xy_1,...,y_|G|-1[122X as in Section [14X3.3[114X. Then for each [22Xy_i[122X and
+  for  each [22Xy_j, y_i[122X such that [22Xi<j[122X we compute the canonical form for [22Xy_i^p[122X and
+  [22X[y_j,y_i][122X as described in Section [14X3.4[114X.[133X
+  
+  [33X[0;0YOnce  a  power-commutator  presentation  for [22XV[122X is constructed, it is easy to
+  obtain  a  polycyclic  presentation  for the unit group [22XU[122X by adding an extra
+  central generator [22Xy[122X corresponding to a generator of the cyclic group [22XF^*[122X and
+  enforcing that [22Xy^p-1=1[122X.[133X
+  
+  
+  [1X3.6 [33X[0;0YVerifying Lie properties of [22XFG[122X[101X[1X[133X[101X
+  
+  [33X[0;0YIf  [22XFG[122X  is  a  group algebra then one can consider the Lie bracket operation
+  defined  by  [22X[a,b]=ab-ba[122X.  Then it is well-known that [22XFG[122X with respect to the
+  scalar multiplication, the addition, and the bracket operation becomes a Lie
+  algebra  over [22XF[122X. This Lie algebra is also denoted [22XFG[122X. Some Lie properties of
+  such Lie algebras can be computed very efficiently. In particular, it can be
+  verified  whether  the  Lie  algebra  [22XFG[122X  is nilpotent, soluble, metabelian,
+  centre-by-metabelian. Fast algorithms that achieve these goals are described
+  in [LR86], [PPS73], and [Ros00].[133X
+  

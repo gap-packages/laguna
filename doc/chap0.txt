@@ -1,1 +1,211 @@
-Placeholder
+  
+  
+                                     [1X[5XLAGUNA[105X[101X
+  
+  
+                    [1XLie AlGebras and UNits of group Algebras[101X
+  
+  
+                                 Version 3.8.0
+  
+  
+                               24 September 2017
+  
+  
+                                  Victor Bovdi
+  
+                              Alexander Konovalov
+  
+                               Richard Rossmanith
+  
+                                Csaba Schneider
+  
+  
+  
+  Victor Bovdi
+      Email:    [7Xmailto:vbovdi@science.unideb.hu[107X
+      Address:  [33X[0;14YInstitute of Mathematics and Informatics[133X
+                [33X[0;14YUniversity of Debrecen[133X
+                [33X[0;14YP.O.Box 12, Debrecen, H-4010 Hungary[133X
+  
+  
+  Alexander Konovalov
+      Email:    [7Xmailto:alexander.konovalov@st-andrews.ac.uk[107X
+      Homepage: [7Xhttps://alexk.host.cs.st-andrews.ac.uk[107X
+      Address:  [33X[0;14YSchool of Computer Science[133X
+                [33X[0;14YUniversity of St Andrews[133X
+                [33X[0;14YJack Cole Building, North Haugh,[133X
+                [33X[0;14YSt Andrews, Fife, KY16 9SX, Scotland[133X
+  
+  
+  Csaba Schneider
+      Email:    [7Xmailto:csaba.schneider@sztaki.hu[107X
+      Homepage: [7Xhttp://www.sztaki.hu/~schneider[107X
+      Address:  [33X[0;14YInformatics Laboratory[133X
+                [33X[0;14YComputer and Automation Research Institute[133X
+                [33X[0;14YThe Hungarian Academy of Sciences[133X
+                [33X[0;14Y1111 Budapest, Lagymanyosi u. 11, Hungary[133X
+  
+  
+  
+  -------------------------------------------------------
+  [1XAbstract[101X
+  [33X[0;0YThe   title  ``[5XLAGUNA[105X''  stands  for  ``[12XL[112Xie  [12XA[112Xl[12XG[112Xebras  and  [12XUN[112Xits  of  group
+  [12XA[112Xlgebras''.  This  is  the  new  name of the [5XGAP[105X4 package [5XLAG[105X, which is thus
+  replaced by [5XLAGUNA[105X.[133X
+  
+  [33X[0;0Y[5XLAGUNA[105X  extends  the  [5XGAP[105X  functionality  for  computations  in group rings.
+  Besides  computing some general properties and attributes of group rings and
+  their  elements,  [5XLAGUNA[105X  is able to perform two main kinds of computations.
+  Namely,  it  can  verify whether a group algebra of a finite group satisfies
+  certain Lie properties; and it can calculate the structure of the normalized
+  unit  group  of  a  group  algebra  of  a finite [22Xp[122X-group over the field of [22Xp[122X
+  elements.[133X
+  
+  
+  -------------------------------------------------------
+  [1XCopyright[101X
+  [33X[0;0Y©  2003-2017  by  Victor Bovdi, Alexander Konovalov, Richard Rossmanith, and
+  Csaba Schneider[133X
+  
+  [33X[0;0Y[5XLAGUNA[105X  is free software; you can redistribute it and/or modify it under the
+  terms  of  the  GNU General Public License as published by the Free Software
+  Foundation;  either  version 2 of the License, or (at your option) any later
+  version.      For      details,      see      the     FSF's     own     site
+  [7Xhttp://www.gnu.org/licenses/gpl.html[107X.[133X
+  
+  [33X[0;0YIf  you  obtained [5XLAGUNA[105X, we would be grateful for a short notification sent
+  to one of the authors.[133X
+  
+  [33X[0;0YIf  you  publish  a  result  which  was partially obtained with the usage of
+  [5XLAGUNA[105X, please cite it in the following form:[133X
+  
+  [33X[0;0YV.  Bovdi,  A.  Konovalov,  R.  Rossmanith  and C. Schneider. [13XLAGUNA --- Lie
+  AlGebras  and  UNits  of  group  Algebras,  Version 3.8.0;[113X 24 September 2017
+  ([7Xhttp://www.cs.st-andrews.ac.uk/~alexk/laguna/[107X).[133X
+  
+  
+  -------------------------------------------------------
+  [1XAcknowledgements[101X
+  [33X[0;0YSome of the features of [5XLAGUNA[105X were already included in the [5XGAP[105X4 package [5XLAG[105X
+  written  by  the  third  author, Richard Rossmanith. The three other authors
+  first  would like to thank Greg Gamble for maintaining [5XLAG[105X and for upgrading
+  it from version 2.0 to version 2.1, and Richard Rossmanith for allowing them
+  to  update  and  extend  the  [5XLAG[105X  package. We are also grateful to Wolfgang
+  Kimmerle  for  organizing  the workshop ``Computational Group and Group Ring
+  Theory''  (University of Stuttgart, 28--29 November, 2002), which allowed us
+  to  meet  and  have  fruitful  discussions that led towards the final [5XLAGUNA[105X
+  release.[133X
+  
+  [33X[0;0YWe  are  all  very  grateful  to the members of the [5XGAP[105X team: Thomas Breuer,
+  Willem  de Graaf, Alexander Hulpke, Stefan Kohl, Steve Linton, Frank Lübeck,
+  Max Neunhöffer and many other colleagues for helpful comments and advise. We
+  acknowledge very much Herbert Pahlings for communicating the package and the
+  referee for careful testing [5XLAGUNA[105X and useful suggestions.[133X
+  
+  [33X[0;0YA  part  of  the  work  on  upgrading  [5XLAG[105X to [5XLAGUNA[105X was done in 2002 during
+  Alexander   Konovalov's   visits  to  Debrecen,  St  Andrews  and  Stuttgart
+  Universities.  He  would like to express his gratitude to Adalbert Bovdi and
+  Victor  Bovdi,  Colin  Campbell, Edmund Robertson and Steve Linton, Wolfgang
+  Kimmerle, Martin Hertweck and Stefan Kohl for their warm hospitality, and to
+  the  NATO Science Fellowship Program, to the London Mathematical Society and
+  to the DAAD for the support of these visits.[133X
+  
+  
+  -------------------------------------------------------
+  
+  
+  [1XContents (LAGUNA)[101X
+  
+  1 [33X[0;0YIntroduction[133X
+    1.1 [33X[0;0YGeneral aims[133X
+    1.2 [33X[0;0YGeneral computations in group rings[133X
+    1.3 [33X[0;0YComputations in the normalized unit group[133X
+    1.4 [33X[0;0YComputing Lie properties of the group algebra[133X
+    1.5 [33X[0;0YInstallation and system requirements[133X
+  2 [33X[0;0YA sample calculation with [5XLAGUNA[105X[133X
+  3 [33X[0;0YThe basic theory behind [5XLAGUNA[105X[133X
+    3.1 [33X[0;0YNotation and definitions[133X
+    3.2 [33X[0;0Y[22Xp[122X-modular group algebras[133X
+    3.3 [33X[0;0YPolycyclic generating set for [22XV[122X[133X
+    3.4 [33X[0;0YComputing the canonical form[133X
+    3.5 [33X[0;0YComputing a power commutator presentation for [22XV[122X[133X
+    3.6 [33X[0;0YVerifying Lie properties of [22XFG[122X[133X
+  4 [33X[0;0Y[5XLAGUNA[105X functions[133X
+    4.1 [33X[0;0YGeneral functions for group algebras[133X
+      4.1-1 IsGroupAlgebra
+      4.1-2 IsFModularGroupAlgebra
+      4.1-3 IsPModularGroupAlgebra
+      4.1-4 UnderlyingGroup
+      4.1-5 UnderlyingRing
+      4.1-6 UnderlyingField
+    4.2 [33X[0;0YOperations with group algebra elements[133X
+      4.2-1 Support
+      4.2-2 CoefficientsBySupport
+      4.2-3 TraceOfMagmaRingElement
+      4.2-4 Length
+      4.2-5 Augmentation
+      4.2-6 PartialAugmentations
+      4.2-7 Involution
+      4.2-8 IsSymmetric
+      4.2-9 IsUnitary
+      4.2-10 IsUnit
+      4.2-11 InverseOp
+      4.2-12 BicyclicUnitOfType1
+      4.2-13 BassCyclicUnit
+    4.3 [33X[0;0YImportant attributes of group algebras[133X
+      4.3-1 AugmentationHomomorphism
+      4.3-2 AugmentationIdeal
+      4.3-3 RadicalOfAlgebra
+      4.3-4 WeightedBasis
+      4.3-5 AugmentationIdealPowerSeries
+      4.3-6 AugmentationIdealNilpotencyIndex
+      4.3-7 AugmentationIdealOfDerivedSubgroupNilpotencyIndex
+      4.3-8 LeftIdealBySubgroup
+    4.4 [33X[0;0YComputations with the unit group[133X
+      4.4-1 NormalizedUnitGroup
+      4.4-2 PcNormalizedUnitGroup
+      4.4-3 NaturalBijectionToPcNormalizedUnitGroup
+      4.4-4 NaturalBijectionToNormalizedUnitGroup
+      4.4-5 Embedding
+      4.4-6 Units
+      4.4-7 PcUnits
+      4.4-8 IsGroupOfUnitsOfMagmaRing
+      4.4-9 IsUnitGroupOfGroupRing
+      4.4-10 IsNormalizedUnitGroupOfGroupRing
+      4.4-11 UnderlyingGroupRing
+      4.4-12 UnitarySubgroup
+      4.4-13 BicyclicUnitGroup
+      4.4-14 GroupBases
+    4.5 [33X[0;0YThe Lie algebra of a group algebra[133X
+      4.5-1 LieAlgebraByDomain
+      4.5-2 IsLieAlgebraByAssociativeAlgebra
+      4.5-3 UnderlyingAssociativeAlgebra
+      4.5-4 NaturalBijectionToLieAlgebra
+      4.5-5 NaturalBijectionToAssociativeAlgebra
+      4.5-6 IsLieAlgebraOfGroupRing
+      4.5-7 UnderlyingGroup
+      4.5-8 Embedding
+      4.5-9 LieCentre
+      4.5-10 LieDerivedSubalgebra
+      4.5-11 IsLieAbelian
+      4.5-12 IsLieSolvable
+      4.5-13 IsLieNilpotent
+      4.5-14 IsLieMetabelian
+      4.5-15 IsLieCentreByMetabelian
+      4.5-16 CanonicalBasis
+      4.5-17 IsBasisOfLieAlgebraOfGroupRing
+      4.5-18 StructureConstantsTable
+      4.5-19 LieUpperNilpotencyIndex
+      4.5-20 LieLowerNilpotencyIndex
+      4.5-21 LieDerivedLength
+    4.6 [33X[0;0YOther commands[133X
+      4.6-1 SubgroupsOfIndexTwo
+      4.6-2 DihedralDepth
+      4.6-3 DimensionBasis
+      4.6-4 LieDimensionSubgroups
+      4.6-5 LieUpperCodimensionSeries
+      4.6-6 LAGInfo
+  
+  
+  [32X

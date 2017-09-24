@@ -1,0 +1,339 @@
+  
+  [1X2 [33X[0;0YA sample calculation with [5XLAGUNA[105X[101X[1X[133X[101X
+  
+  [33X[0;0YBefore  explaining  the theory behind the [5XLAGUNA[105X package we present a sample
+  calculation to show the reader what [5XLAGUNA[105X is able to compute. We will carry
+  out some calculations in the group algebra of the dihedral group of order 16
+  over the field of two elements. First we create this modular group algebra.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[28X[128X[104X
+    [4X[25Xgap>[125X [27XK := GF( 2 );[127X[104X
+    [4X[28XGF(2)[128X[104X
+    [4X[25Xgap>[125X [27XG := DihedralGroup( 16 );[127X[104X
+    [4X[28X<pc group of size 16 with 4 generators>[128X[104X
+    [4X[25Xgap>[125X [27XKG := GroupRing( K, G );[127X[104X
+    [4X[28X<algebra-with-one over GF(2), with 4 generators>[128X[104X
+    [4X[28X[128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YThe  group  algebra  [10XKG[110X  has  some properties and attributes that are direct
+  consequences of its definition. These can be checked very quickly.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[28X[128X[104X
+    [4X[25Xgap>[125X [27XIsGroupAlgebra( KG ); [127X[104X
+    [4X[28Xtrue[128X[104X
+    [4X[25Xgap>[125X [27XIsPModularGroupAlgebra( KG );[127X[104X
+    [4X[28Xtrue[128X[104X
+    [4X[25Xgap>[125X [27XIsFModularGroupAlgebra( KG );[127X[104X
+    [4X[28Xtrue[128X[104X
+    [4X[25Xgap>[125X [27XUnderlyingGroup( KG );[127X[104X
+    [4X[28X<pc group of size 16 with 4 generators>[128X[104X
+    [4X[25Xgap>[125X [27XLeftActingDomain( KG );[127X[104X
+    [4X[28XGF(2)[128X[104X
+    [4X[28X[128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YSince  [10XKG[110X  is  naturally  a  group  algebra,  the  information  provided  by
+  [10XLeftActingDomain[110X can also be obtained using two other functions as follows.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XUnderlyingRing( KG );[127X[104X
+    [4X[28XGF(2)[128X[104X
+    [4X[25Xgap>[125X [27XUnderlyingField( KG );[127X[104X
+    [4X[28XGF(2)[128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YLet  us  construct  a  certain element of the group algebra. For example, we
+  take  a  minimal generating system of the group [10XG[110X and find the corresponding
+  elements in [10XKG[110X.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[28X[128X[104X
+    [4X[25Xgap>[125X [27XMinimalGeneratingSet( G );[127X[104X
+    [4X[28X[ f1, f2 ][128X[104X
+    [4X[25Xgap>[125X [27Xl := List( last, g -> g^Embedding( G, KG ) );[127X[104X
+    [4X[28X[ (Z(2)^0)*f1, (Z(2)^0)*f2 ][128X[104X
+    [4X[28X[128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YNow we construct an element [10Xx[110X as follows.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[28X[128X[104X
+    [4X[25Xgap>[125X [27Xa :=l[1]; b:=l[2]; # a and b are images of group generators in KG[127X[104X
+    [4X[28X(Z(2)^0)*f1[128X[104X
+    [4X[28X(Z(2)^0)*f2[128X[104X
+    [4X[25Xgap>[125X [27Xe := One( KG );    # for convenience, we denote the identity by e[127X[104X
+    [4X[28X(Z(2)^0)*<identity> of ...[128X[104X
+    [4X[25Xgap>[125X [27Xx := ( e + a ) * ( e + b ); [127X[104X
+    [4X[28X(Z(2)^0)*<identity> of ...+(Z(2)^0)*f1+(Z(2)^0)*f2+(Z(2)^0)*f1*f2  [128X[104X
+    [4X[28X[128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YWe may investigate some of the basic properties of our element.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[28X[128X[104X
+    [4X[25Xgap>[125X [27XSupport( x );[127X[104X
+    [4X[28X[ <identity> of ..., f1, f2, f1*f2 ][128X[104X
+    [4X[25Xgap>[125X [27XCoefficientsBySupport( x );[127X[104X
+    [4X[28X[ Z(2)^0, Z(2)^0, Z(2)^0, Z(2)^0 ][128X[104X
+    [4X[25Xgap>[125X [27XLength( x );[127X[104X
+    [4X[28X4[128X[104X
+    [4X[25Xgap>[125X [27XTraceOfMagmaRingElement( x );[127X[104X
+    [4X[28XZ(2)^0[128X[104X
+    [4X[28X[128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YWe  can also calculate the augmentation of [10Xx[110X, which is defined as the sum of
+  its coefficients.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XAugmentation( x );[127X[104X
+    [4X[28X0*Z(2)[128X[104X
+    [4X[25Xgap>[125X [27XIsUnit( KG, x );[127X[104X
+    [4X[28Xfalse[128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YSince  the  augmentation of [10Xx[110X is zero, [10Xx[110X is not invertible, but [10X1+x[110X is. This
+  is again very easy to check.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[28X[128X[104X
+    [4X[25Xgap>[125X [27Xy := e + x;[127X[104X
+    [4X[28X(Z(2)^0)*f1+(Z(2)^0)*f2+(Z(2)^0)*f1*f2[128X[104X
+    [4X[25Xgap>[125X [27XIsUnit( KG, y );[127X[104X
+    [4X[28Xtrue  [128X[104X
+    [4X[28X[128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0Y[5XLAGUNA[105X can calculate the inverse of [10X1+x[110X very quickly.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[28X[128X[104X
+    [4X[25Xgap>[125X [27Xy^-1;[127X[104X
+    [4X[28X(Z(2)^0)*f1+(Z(2)^0)*f2+(Z(2)^0)*f3+(Z(2)^0)*f4+(Z(2)^0)*f1*f2+(Z(2)^[128X[104X
+    [4X[28X0)*f1*f3+(Z(2)^0)*f1*f4+(Z(2)^0)*f2*f4+(Z(2)^0)*f1*f2*f4+(Z(2)^0)*f2*f3*f4+([128X[104X
+    [4X[28XZ(2)^0)*f1*f2*f3*f4[128X[104X
+    [4X[25Xgap>[125X [27Xy * y^-1;[127X[104X
+    [4X[28X(Z(2)^0)*<identity> of ... [128X[104X
+    [4X[28X[128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YWe  may  also  want  to check whether [10Xy[110X is symmetric, that is, whether it is
+  invariant under the classical involution; or whether it is unitary, that is,
+  whether the classical involution inverts [10Xy[110X. We find that [10Xy[110X is neither.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[28X[128X[104X
+    [4X[25Xgap>[125X [27XInvolution( y );[127X[104X
+    [4X[28X(Z(2)^0)*f1+(Z(2)^0)*f1*f2+(Z(2)^0)*f2*f3*f4[128X[104X
+    [4X[25Xgap>[125X [27Xy = Involution( y );[127X[104X
+    [4X[28Xfalse[128X[104X
+    [4X[25Xgap>[125X [27XIsSymmetric( y );[127X[104X
+    [4X[28Xfalse[128X[104X
+    [4X[25Xgap>[125X [27Xy * Involution( y );[127X[104X
+    [4X[28X(Z(2)^0)*<identity> of ...+(Z(2)^0)*f2+(Z(2)^0)*f2*f3*f4  [128X[104X
+    [4X[25Xgap>[125X [27XIsUnitary( y );[127X[104X
+    [4X[28Xfalse[128X[104X
+    [4X[28X[128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YNow  we  calculate  some  important  ideals  of  [10XKG[110X.  First  we  obtain  the
+  augmentation  ideal  which is the set of elements with augmentation zero. In
+  our  case the augmentation ideal of [10XKG[110X coincides with the radical of [10XKG[110X, and
+  this is taken into account in [5XLAGUNA[105X.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[28X[128X[104X
+    [4X[25Xgap>[125X [27XAugmentationIdeal( KG );[127X[104X
+    [4X[28X<two-sided ideal in <algebra-with-one over GF(2), with 4 generators>,[128X[104X
+    [4X[28X  (dimension 15)>[128X[104X
+    [4X[25Xgap>[125X [27XRadicalOfAlgebra( KG ) = AugmentationIdeal( KG );[127X[104X
+    [4X[28Xtrue[128X[104X
+    [4X[28X[128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YIt  is  well-known  that  the augmentation ideal of [10XKG[110X is a nilpotent ideal.
+  Using  Jennings' theory on dimension subgroups, we can obtain its nilpotency
+  index  without  immediate  calculation of its powers. This is implemented in
+  [5XLAGUNA[105X.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27XAugmentationIdealNilpotencyIndex( KG );[127X[104X
+    [4X[28X9[128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YOn  the  other  hand,  we  can also calculate the powers of the augmentation
+  ideal.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[28X[128X[104X
+    [4X[25Xgap>[125X [27XAugmentationIdealPowerSeries( KG );[127X[104X
+    [4X[28X[ <algebra of dimension 15 over GF(2)>, <algebra of dimension 13 over GF(2)>, [128X[104X
+    [4X[28X  <algebra of dimension 11 over GF(2)>, <algebra of dimension 9 over GF(2)>, [128X[104X
+    [4X[28X  <algebra of dimension 7 over GF(2)>, <algebra of dimension 5 over GF(2)>, [128X[104X
+    [4X[28X  <algebra of dimension 3 over GF(2)>, <algebra of dimension 1 over GF(2)>, [128X[104X
+    [4X[28X  <algebra over GF(2)> ][128X[104X
+    [4X[28X[128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YWe  see  that the length of this list is exactly the nilpotency index of the
+  augmentation ideal of [10XKG[110X.[133X
+  
+  [33X[0;0YNow  let's work with the unit group of [10XKG[110X. First we calculate the normalized
+  unit  group,  which  is  the  set  of  elements  with  augmentation one. The
+  generators  of  the  unit group are obtained as explained in Chapter [14X3[114X. This
+  can  be  computed  very  quickly, but further computation with this group is
+  very inefficient.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[28X[128X[104X
+    [4X[25Xgap>[125X [27XV := NormalizedUnitGroup( KG );[127X[104X
+    [4X[28X<group of size 32768 with 15 generators>   [128X[104X
+    [4X[28X[128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YIn  order to make our computation in the normalised unit group efficient, we
+  calculate a power-commutator presentation for this group.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[28X[128X[104X
+    [4X[25Xgap>[125X [27XW := PcNormalizedUnitGroup( KG );[127X[104X
+    [4X[28X<pc group of size 32768 with 15 generators>[128X[104X
+    [4X[28X[128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0Y[5XGAP[105X  has  many  efficient  and  practical  algorithms  for groups given by a
+  power-commutator presentation. In order to use these algorithms to carry out
+  computation  in  the  normalised  unit group, we need to set up isomorphisms
+  between the outputs of [10XNormalizedUnitGroup[110X and [10XPcNormalizedUnitGroup[110X.[133X
+  
+  [33X[0;0YThe  first  isomorphism maps [10XNormalizedUnitGroup(KG)[110X onto the polycyclically
+  presented  [10XPcNormalizedUnitGroup(PC)[110X.  Let's find the images of the elements
+  of the group [10XG[110X in [10XW[110X.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[28X[128X[104X
+    [4X[25Xgap>[125X [27Xt := NaturalBijectionToPcNormalizedUnitGroup( KG );[127X[104X
+    [4X[28XMappingByFunction( <group of size 32768 with 15 generators>, <pc group of size\[128X[104X
+    [4X[28X 32768 with 15 generators>, function( x ) ... end )[128X[104X
+    [4X[25Xgap>[125X [27XList( AsList( G ), x -> ( x^Embedding( G, KG ) )^t );[127X[104X
+    [4X[28X[ <identity> of ..., f2, f1, f3, f7, f1*f2*f3, f2*f3, f2*f7, f1*f3, f1*f7,[128X[104X
+    [4X[28X  f3*f7, f1*f2*f7, f1*f2*f3*f7, f2*f3*f7, f1*f3*f7, f1*f2 ][128X[104X
+    [4X[28X[128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YThe second isomorphism is the inverse of the first.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[25Xgap>[125X [27Xf := NaturalBijectionToNormalizedUnitGroup( KG );[127X[104X
+    [4X[28X[ f1, f2, f3, f4, f5, f6, f7, f8, f9, f10, f11, f12, f13, f14, f15 ] ->[128X[104X
+    [4X[28X[ (Z(2)^0)*f2, (Z(2)^0)*f1, (Z(2)^0)*f3,[128X[104X
+    [4X[28X  (Z(2)^0)*f1+(Z(2)^0)*f2+(Z(2)^0)*f1*f2,[128X[104X
+    [4X[28X  (Z(2)^0)*f2+(Z(2)^0)*f3+(Z(2)^0)*f2*f3,[128X[104X
+    [4X[28X  (Z(2)^0)*f1+(Z(2)^0)*f3+(Z(2)^0)*f1*f3, (Z(2)^0)*f4,[128X[104X
+    [4X[28X  (Z(2)^0)*f1+(Z(2)^0)*f2+(Z(2)^0)*f3+(Z(2)^0)*f1*f2+(Z(2)^0)*f1*f3+(Z(2)^[128X[104X
+    [4X[28X    0)*f2*f3+(Z(2)^0)*f1*f2*f3, (Z(2)^0)*f2+(Z(2)^0)*f4+(Z(2)^0)*f2*f4,[128X[104X
+    [4X[28X  (Z(2)^0)*f1+(Z(2)^0)*f4+(Z(2)^0)*f1*f4,[128X[104X
+    [4X[28X  (Z(2)^0)*f3+(Z(2)^0)*f4+(Z(2)^0)*f3*f4,[128X[104X
+    [4X[28X  (Z(2)^0)*f1+(Z(2)^0)*f2+(Z(2)^0)*f4+(Z(2)^0)*f1*f2+(Z(2)^0)*f1*f4+(Z(2)^[128X[104X
+    [4X[28X    0)*f2*f4+(Z(2)^0)*f1*f2*f4, (Z(2)^0)*f2+(Z(2)^0)*f3+(Z(2)^0)*f4+(Z(2)^[128X[104X
+    [4X[28X    0)*f2*f3+(Z(2)^0)*f2*f4+(Z(2)^0)*f3*f4+(Z(2)^0)*f2*f3*f4,[128X[104X
+    [4X[28X  (Z(2)^0)*f1+(Z(2)^0)*f3+(Z(2)^0)*f4+(Z(2)^0)*f1*f3+(Z(2)^0)*f1*f4+(Z(2)^[128X[104X
+    [4X[28X    0)*f3*f4+(Z(2)^0)*f1*f3*f4, (Z(2)^0)*f1+(Z(2)^0)*f2+(Z(2)^0)*f3+(Z(2)^[128X[104X
+    [4X[28X    0)*f4+(Z(2)^0)*f1*f2+(Z(2)^0)*f1*f3+(Z(2)^0)*f1*f4+(Z(2)^0)*f2*f3+(Z(2)^[128X[104X
+    [4X[28X    0)*f2*f4+(Z(2)^0)*f3*f4+(Z(2)^0)*f1*f2*f3+(Z(2)^0)*f1*f2*f4+(Z(2)^[128X[104X
+    [4X[28X    0)*f1*f3*f4+(Z(2)^0)*f2*f3*f4+(Z(2)^0)*f1*f2*f3*f4 ][128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YFor example, we may calculate the conjugacy classes of the group [10XW[110X, and then
+  map their representatives back into the group algebra.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[28X[128X[104X
+    [4X[25Xgap>[125X [27Xcc := ConjugacyClasses( W );;[127X[104X
+    [4X[25Xgap>[125X [27XLength( cc );[127X[104X
+    [4X[28X848[128X[104X
+    [4X[25Xgap>[125X [27XRepresentative( cc[ Length( cc ) ] );[127X[104X
+    [4X[28Xf1*f2*f4*f6*f12*f15[128X[104X
+    [4X[25Xgap>[125X [27Xlast^f;[127X[104X
+    [4X[28X(Z(2)^0)*<identity> of ...+(Z(2)^0)*f2+(Z(2)^0)*f4+(Z(2)^0)*f1*f2+(Z(2)^[128X[104X
+    [4X[28X0)*f1*f3+(Z(2)^0)*f1*f4+(Z(2)^0)*f2*f3+(Z(2)^0)*f2*f4+(Z(2)^0)*f3*f4+(Z(2)^[128X[104X
+    [4X[28X0)*f1*f2*f3+(Z(2)^0)*f1*f3*f4[128X[104X
+    [4X[28X[128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YHaving  a power-commutator presentation of the normalised unit group, we may
+  use  the  full  power of the [5XGAP[105X functionality for such groups. For example,
+  the lower central series can be calculated very quickly.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[28X[128X[104X
+    [4X[25Xgap>[125X [27XLowerCentralSeries( W );[127X[104X
+    [4X[28X[ <pc group of size 32768 with 15 generators>,[128X[104X
+    [4X[28X  Group([ f3, f5*f8*f10*f12*f13*f14*f15, f6*f8*f12*f14*f15, f7, f9*f12,[128X[104X
+    [4X[28X      f10*f14, f11*f13, f13*f14, f14*f15 ]),[128X[104X
+    [4X[28X  Group([ f7, f9*f12, f10*f15, f11*f15, f13*f15, f14*f15 ]),[128X[104X
+    [4X[28X  Group([ f11*f15, f13*f15, f14*f15 ]), Group([ <identity> of ... ]) ][128X[104X
+    [4X[28X[128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YLet's  now  compute,  for  instance,  a  minimal system of generators of the
+  centre  of  the normalised unit group. First we carry out the computation in
+  the  group which is determined by the power-commutator presentation, then we
+  map the result into our group algebra.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[28X[128X[104X
+    [4X[25Xgap>[125X [27XC := Centre( W );[127X[104X
+    [4X[28XGroup([ f3*f5*f13*f15, f7, f15, f13*f15, f14*f15, f11*f13*f14*f15 ])[128X[104X
+    [4X[25Xgap>[125X [27Xm := MinimalGeneratingSet( C );[127X[104X
+    [4X[28X[ f7*f13*f14*f15, f13*f14*f15, f7*f11*f14*f15, f15, f3*f5*f14 ][128X[104X
+    [4X[25Xgap>[125X [27XList( m, g -> g^f );[127X[104X
+    [4X[28X[ (Z(2)^0)*<identity> of ...+(Z(2)^0)*f3+(Z(2)^0)*f1*f2+(Z(2)^0)*f3*f4+(Z(2)^[128X[104X
+    [4X[28X    0)*f1*f2*f3+(Z(2)^0)*f1*f2*f4+(Z(2)^0)*f1*f2*f3*f4,[128X[104X
+    [4X[28X  (Z(2)^0)*f3+(Z(2)^0)*f4+(Z(2)^0)*f1*f2+(Z(2)^0)*f3*f4+(Z(2)^0)*f1*f2*f3+([128X[104X
+    [4X[28X    Z(2)^0)*f1*f2*f4+(Z(2)^0)*f1*f2*f3*f4, (Z(2)^0)*<identity> of ...+(Z(2)^[128X[104X
+    [4X[28X    0)*f2+(Z(2)^0)*f3+(Z(2)^0)*f1*f2+(Z(2)^0)*f2*f3+(Z(2)^0)*f2*f4+(Z(2)^[128X[104X
+    [4X[28X    0)*f3*f4+(Z(2)^0)*f1*f2*f3+(Z(2)^0)*f1*f2*f4+(Z(2)^0)*f2*f3*f4+(Z(2)^[128X[104X
+    [4X[28X    0)*f1*f2*f3*f4, (Z(2)^0)*f1+(Z(2)^0)*f2+(Z(2)^0)*f3+(Z(2)^0)*f4+(Z(2)^[128X[104X
+    [4X[28X    0)*f1*f2+(Z(2)^0)*f1*f3+(Z(2)^0)*f1*f4+(Z(2)^0)*f2*f3+(Z(2)^0)*f2*f4+([128X[104X
+    [4X[28X    Z(2)^0)*f3*f4+(Z(2)^0)*f1*f2*f3+(Z(2)^0)*f1*f2*f4+(Z(2)^0)*f1*f3*f4+(Z(2)^[128X[104X
+    [4X[28X    0)*f2*f3*f4+(Z(2)^0)*f1*f2*f3*f4, (Z(2)^0)*<identity> of ...+(Z(2)^0)*f1+([128X[104X
+    [4X[28X    Z(2)^0)*f3+(Z(2)^0)*f1*f3+(Z(2)^0)*f1*f4+(Z(2)^0)*f2*f3+(Z(2)^0)*f2*f4+([128X[104X
+    [4X[28X    Z(2)^0)*f3*f4+(Z(2)^0)*f1*f3*f4 ][128X[104X
+    [4X[28X[128X[104X
+  [4X[32X[104X
+  
+  [33X[0;0YWe  finish  our  example  by  calculating some properties of the Lie algebra
+  associated with [10XKG[110X. This example needs no further explanation.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[28X[128X[104X
+    [4X[25Xgap>[125X [27XL := LieAlgebra( KG );[127X[104X
+    [4X[28X#I  LAGUNA package: Constructing Lie algebra ...[128X[104X
+    [4X[28X<Lie algebra of dimension 16 over GF(2)>[128X[104X
+    [4X[25Xgap>[125X [27XD := LieDerivedSubalgebra( L );[127X[104X
+    [4X[28X#I  LAGUNA package: Computing the Lie derived subalgebra ...[128X[104X
+    [4X[28X<Lie algebra of dimension 9 over GF(2)>[128X[104X
+    [4X[25Xgap>[125X [27XLC := LieCentre( L );[127X[104X
+    [4X[28X<Lie algebra of dimension 7 over GF(2)>[128X[104X
+    [4X[25Xgap>[125X [27XLieLowerNilpotencyIndex( KG );[127X[104X
+    [4X[28X5[128X[104X
+    [4X[25Xgap>[125X [27XLieUpperNilpotencyIndex( KG );[127X[104X
+    [4X[28X5[128X[104X
+    [4X[25Xgap>[125X [27XIsLieAbelian( L );[127X[104X
+    [4X[28Xfalse[128X[104X
+    [4X[25Xgap>[125X [27XIsLieSolvable( L );[127X[104X
+    [4X[28X#I  LAGUNA package: Checking Lie solvability ...[128X[104X
+    [4X[28Xtrue[128X[104X
+    [4X[25Xgap>[125X [27XIsLieMetabelian( L );[127X[104X
+    [4X[28Xfalse[128X[104X
+    [4X[25Xgap>[125X [27XIsLieCentreByMetabelian( L );[127X[104X
+    [4X[28Xtrue[128X[104X
+    [4X[28X[128X[104X
+  [4X[32X[104X
+  
