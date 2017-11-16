@@ -1077,13 +1077,7 @@ gap> KG := GroupRing( GF( 2 ), G );
 <algebra-with-one over GF(2), with 4 generators>
 gap> V:=PcNormalizedUnitGroup( KG );
 <pc group of size 32768 with 15 generators>
-gap> ucs := UpperCentralSeries( V );
-[ <pc group of size 32768 with 15 generators>,
-  <pc group of size 4096 with 12 generators>,
-  Group([ f3*f5*f13*f15, f7, f15, f13*f15, f14*f15, f11*f13*f14*f15, f12,
-      f9*f12, f10 ]),
-  Group([ f3*f5*f13*f15, f7, f15, f13*f15, f14*f15, f11*f13*f14*f15 ]),
-  Group([  ]) ]
+gap> ucs := UpperCentralSeries( V );;
 gap> f := Embedding( G, V );
 [ f1, f2, f3, f4 ] -> [ f2, f1, f3, f7 ]
 gap> G1 := Image( f, G ); 
@@ -1397,16 +1391,12 @@ gap> KD8 := GroupRing( GF( 2 ), D8 );
 gap> gb := GroupBases( KD8 );;
 gap> Length( gb );
 32
-gap> gb[1];
-[ (Z(2)^0)*<identity> of ..., (Z(2)^0)*f3,
-  (Z(2)^0)*f1*f2+(Z(2)^0)*f2*f3+(Z(2)^0)*f1*f2*f3,
-  (Z(2)^0)*f2+(Z(2)^0)*f1*f2+(Z(2)^0)*f1*f2*f3,
-  (Z(2)^0)*<identity> of ...+(Z(2)^0)*f2+(Z(2)^0)*f3+(Z(2)^0)*f2*f3+(Z(2)^
-    0)*f1*f2*f3, (Z(2)^0)*f2+(Z(2)^0)*f1*f3+(Z(2)^0)*f2*f3,
-  (Z(2)^0)*<identity> of ...+(Z(2)^0)*f2+(Z(2)^0)*f3+(Z(2)^0)*f1*f2+(Z(2)^
-    0)*f2*f3, (Z(2)^0)*f1+(Z(2)^0)*f2+(Z(2)^0)*f2*f3 ]
-gap> Length( last );
+gap> Length( gb[1] );
 8    
+gap> gb[1][1];
+(Z(2)^0)*<identity> of ...
+gap> ForAll(gb, b -> IdGroup(Group(b))=[8,3]);
+true
 ]]>
 </Example>
 </Section>

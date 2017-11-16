@@ -42,10 +42,12 @@ Since <Code>KG</Code> is naturally a group algebra, the information provided by
 as follows.
 
 <Example>
+<![CDATA[
 gap> UnderlyingRing( KG );
 GF(2)
 gap> UnderlyingField( KG );
 GF(2)
+]]>
 </Example>
 
 Let us construct a certain element of the group algebra.
@@ -95,10 +97,12 @@ We can also calculate the augmentation of <Code>x</Code>,
 which is defined as the sum of its coefficients.
 
 <Example>
+<![CDATA[
 gap> Augmentation( x );
 0*Z(2)
 gap> IsUnit( KG, x );
 false
+]]>
 </Example>
 
 Since the  augmentation of <Code>x</Code> 
@@ -169,8 +173,10 @@ obtain its nilpotency index without immediate calculation of its powers.
 This is implemented in &LAGUNA;.
 
 <Example>
+<![CDATA[
 gap> AugmentationIdealNilpotencyIndex( KG );
 9
+]]>
 </Example>
 
 <Alt Only="LaTeX">\newpage</Alt>  
@@ -233,6 +239,8 @@ in <Code>W</Code>.
 gap> t := NaturalBijectionToPcNormalizedUnitGroup( KG );
 MappingByFunction( <group of size 32768 with 15 generators>, <pc group of size\
  32768 with 15 generators>, function( x ) ... end )
+gap> Image(t) = W;
+true
 gap> List( AsList( G ), x -> ( x^Embedding( G, KG ) )^t );
 [ <identity> of ..., f2, f1, f3, f7, f1*f2*f3, f2*f3, f2*f7, f1*f3, f1*f7,
   f3*f7, f1*f2*f7, f1*f2*f3*f7, f2*f3*f7, f1*f3*f7, f1*f2 ]
@@ -244,24 +252,11 @@ gap> List( AsList( G ), x -> ( x^Embedding( G, KG ) )^t );
 The second isomorphism is the inverse of the first.
 
 <Example>
-gap> f := NaturalBijectionToNormalizedUnitGroup( KG );
-[ f1, f2, f3, f4, f5, f6, f7, f8, f9, f10, f11, f12, f13, f14, f15 ] ->
-[ (Z(2)^0)*f2, (Z(2)^0)*f1, (Z(2)^0)*f3,
-  (Z(2)^0)*f1+(Z(2)^0)*f2+(Z(2)^0)*f1*f2,
-  (Z(2)^0)*f2+(Z(2)^0)*f3+(Z(2)^0)*f2*f3,
-  (Z(2)^0)*f1+(Z(2)^0)*f3+(Z(2)^0)*f1*f3, (Z(2)^0)*f4,
-  (Z(2)^0)*f1+(Z(2)^0)*f2+(Z(2)^0)*f3+(Z(2)^0)*f1*f2+(Z(2)^0)*f1*f3+(Z(2)^
-    0)*f2*f3+(Z(2)^0)*f1*f2*f3, (Z(2)^0)*f2+(Z(2)^0)*f4+(Z(2)^0)*f2*f4,
-  (Z(2)^0)*f1+(Z(2)^0)*f4+(Z(2)^0)*f1*f4,
-  (Z(2)^0)*f3+(Z(2)^0)*f4+(Z(2)^0)*f3*f4,
-  (Z(2)^0)*f1+(Z(2)^0)*f2+(Z(2)^0)*f4+(Z(2)^0)*f1*f2+(Z(2)^0)*f1*f4+(Z(2)^
-    0)*f2*f4+(Z(2)^0)*f1*f2*f4, (Z(2)^0)*f2+(Z(2)^0)*f3+(Z(2)^0)*f4+(Z(2)^
-    0)*f2*f3+(Z(2)^0)*f2*f4+(Z(2)^0)*f3*f4+(Z(2)^0)*f2*f3*f4,
-  (Z(2)^0)*f1+(Z(2)^0)*f3+(Z(2)^0)*f4+(Z(2)^0)*f1*f3+(Z(2)^0)*f1*f4+(Z(2)^
-    0)*f3*f4+(Z(2)^0)*f1*f3*f4, (Z(2)^0)*f1+(Z(2)^0)*f2+(Z(2)^0)*f3+(Z(2)^
-    0)*f4+(Z(2)^0)*f1*f2+(Z(2)^0)*f1*f3+(Z(2)^0)*f1*f4+(Z(2)^0)*f2*f3+(Z(2)^
-    0)*f2*f4+(Z(2)^0)*f3*f4+(Z(2)^0)*f1*f2*f3+(Z(2)^0)*f1*f2*f4+(Z(2)^
-    0)*f1*f3*f4+(Z(2)^0)*f2*f3*f4+(Z(2)^0)*f1*f2*f3*f4 ]
+<![CDATA[
+gap> f := NaturalBijectionToNormalizedUnitGroup( KG );;
+gap> Image(f) = V;
+true
+]]>
 </Example>
 
 For example, we may calculate the conjugacy classes of the group <Code>W</Code>, 
@@ -305,8 +300,7 @@ result into our group algebra.
 
 <Example>
 <![CDATA[
-gap> C := Centre( W );
-Group([ f3*f5*f13*f15, f7, f15, f13*f15, f14*f15, f11*f13*f14*f15 ])
+gap> C := Centre( W );;
 gap> m := MinimalGeneratingSet( C );
 [ f7*f13*f14*f15, f13*f14*f15, f7*f11*f14*f15, f15, f3*f5*f14 ]
 gap> List( m, g -> g^f );

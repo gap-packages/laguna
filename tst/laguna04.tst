@@ -315,7 +315,7 @@ gap> w^t;
 gap> GeneratorsOfGroup( W )[4]^t = GeneratorsOfGroup( V )[4];
 true     
 
-# laguna/doc/funct.xml:1072-1098
+# laguna/doc/funct.xml:1072-1092
 
 gap> G := DihedralGroup( 16 );
 <pc group of size 16 with 4 generators>
@@ -323,13 +323,7 @@ gap> KG := GroupRing( GF( 2 ), G );
 <algebra-with-one over GF(2), with 4 generators>
 gap> V:=PcNormalizedUnitGroup( KG );
 <pc group of size 32768 with 15 generators>
-gap> ucs := UpperCentralSeries( V );
-[ <pc group of size 32768 with 15 generators>,
-  <pc group of size 4096 with 12 generators>,
-  Group([ f3*f5*f13*f15, f7, f15, f13*f15, f14*f15, f11*f13*f14*f15, f12,
-      f9*f12, f10 ]),
-  Group([ f3*f5*f13*f15, f7, f15, f13*f15, f14*f15, f11*f13*f14*f15 ]),
-  Group([  ]) ]
+gap> ucs := UpperCentralSeries( V );;
 gap> f := Embedding( G, V );
 [ f1, f2, f3, f4 ] -> [ f2, f1, f3, f7 ]
 gap> G1 := Image( f, G ); 
@@ -341,7 +335,7 @@ Group([ f3, f4, f3*f4 ])
 gap> IdGroup( T ); 
 [ 4, 1 ]
 
-# laguna/doc/funct.xml:1116-1135
+# laguna/doc/funct.xml:1110-1129
 
 gap> U := Units( KG );
 #I  LAGUNA package: Computing the unit group ...
@@ -360,7 +354,7 @@ false
 gap> x[1] * x[2] in FH; # how to get the corresponding element of FH
 true 
 
-# laguna/doc/funct.xml:1152-1165
+# laguna/doc/funct.xml:1146-1159
 
 gap> W := PcUnits( KG );
 <pc group of size 32768 with 15 generators>
@@ -373,28 +367,28 @@ gap> T := PcUnits(FH);
 gap> x := GeneratorsOfGroup( T )[2];
 DirectProductElement( [ Z(3)^0, f1 ] )                      
 
-# laguna/doc/funct.xml:1180-1187
+# laguna/doc/funct.xml:1174-1181
 
 gap> IsGroupOfUnitsOfMagmaRing( NormalizedUnitGroup( KG ) );
 true
 gap> IsGroupOfUnitsOfMagmaRing( Units( KG ) );
 true     
 
-# laguna/doc/funct.xml:1202-1209
+# laguna/doc/funct.xml:1196-1203
 
 gap> IsUnitGroupOfGroupRing( Units( KG ) );
 true
 gap> IsUnitGroupOfGroupRing( PcUnits( KG ) );
 true     
 
-# laguna/doc/funct.xml:1225-1232
+# laguna/doc/funct.xml:1219-1226
 
 gap> IsNormalizedUnitGroupOfGroupRing( NormalizedUnitGroup( KG ) );
 true
 gap> IsNormalizedUnitGroupOfGroupRing( PcNormalizedUnitGroup( KG ) );
 true     
 
-# laguna/doc/funct.xml:1253-1264
+# laguna/doc/funct.xml:1247-1258
 
 gap> UnderlyingGroupRing( Units( KG ) );
 <algebra-with-one of dimension 16 over GF(2)>
@@ -405,7 +399,7 @@ gap> UnderlyingGroupRing( NormalizedUnitGroup( KG ) );
 gap> UnderlyingGroupRing( PcNormalizedUnitGroup( KG ) );
 <algebra-with-one of dimension 16 over GF(2)>
 
-# laguna/doc/funct.xml:1286-1305
+# laguna/doc/funct.xml:1280-1299
 
 gap> KG := GroupRing( GF( 2 ), DihedralGroup( 8 ) );
 <algebra-with-one over GF(2), with 3 generators>
@@ -424,7 +418,7 @@ gap> IdGroup( HV );
 gap> Image(NaturalBijectionToPcNormalizedUnitGroup( KG ), HU ) = HV;
 true
 
-# laguna/doc/funct.xml:1329-1348
+# laguna/doc/funct.xml:1323-1342
 
 gap> KG := GroupRing( GF( 2 ), DihedralGroup( 8 ) );
 <algebra-with-one over GF(2), with 3 generators>
@@ -443,7 +437,7 @@ gap> IdGroup( BV );
 gap> Image( NaturalBijectionToPcNormalizedUnitGroup( KG ), BU ) = BV;
 true
 
-# laguna/doc/funct.xml:1389-1411
+# laguna/doc/funct.xml:1383-1401
 
 gap> D8 := DihedralGroup( 8 );
 <pc group of size 8 with 3 generators>
@@ -454,18 +448,14 @@ gap> KD8 := GroupRing( GF( 2 ), D8 );
 gap> gb := GroupBases( KD8 );;
 gap> Length( gb );
 32
-gap> gb[1];
-[ (Z(2)^0)*<identity> of ..., (Z(2)^0)*f3,
-  (Z(2)^0)*f1*f2+(Z(2)^0)*f2*f3+(Z(2)^0)*f1*f2*f3,
-  (Z(2)^0)*f2+(Z(2)^0)*f1*f2+(Z(2)^0)*f1*f2*f3,
-  (Z(2)^0)*<identity> of ...+(Z(2)^0)*f2+(Z(2)^0)*f3+(Z(2)^0)*f2*f3+(Z(2)^
-    0)*f1*f2*f3, (Z(2)^0)*f2+(Z(2)^0)*f1*f3+(Z(2)^0)*f2*f3,
-  (Z(2)^0)*<identity> of ...+(Z(2)^0)*f2+(Z(2)^0)*f3+(Z(2)^0)*f1*f2+(Z(2)^
-    0)*f2*f3, (Z(2)^0)*f1+(Z(2)^0)*f2+(Z(2)^0)*f2*f3 ]
-gap> Length( last );
+gap> Length( gb[1] );
 8    
+gap> gb[1][1];
+(Z(2)^0)*<identity> of ...
+gap> ForAll(gb, b -> IdGroup(Group(b))=[8,3]);
+true
 
-# laguna/doc/funct.xml:1437-1445
+# laguna/doc/funct.xml:1427-1435
 
 gap> G := SymmetricGroup(3);; FG := GroupRing( GF( 2 ), G );
 <algebra-with-one over GF(2), with 2 generators>
@@ -473,7 +463,7 @@ gap> L := LieAlgebra( FG );
 #I  LAGUNA package: Constructing Lie algebra ...
 <Lie algebra over GF(2)>
 
-# laguna/doc/funct.xml:1459-1469
+# laguna/doc/funct.xml:1449-1459
 
 gap> KG := GroupRing( GF(3), DihedralGroup(16) );
 <algebra-with-one over GF(3), with 4 generators>
@@ -483,7 +473,7 @@ gap> L := LieAlgebra ( KG );
 gap> IsLieAlgebraByAssociativeAlgebra( L );
 true
 
-# laguna/doc/funct.xml:1485-1497
+# laguna/doc/funct.xml:1475-1487
 
 gap> KG := GroupRing( GF(2), DihedralGroup(16) ); 
 <algebra-with-one over GF(2), with 4 generators>
@@ -495,7 +485,7 @@ gap> UnderlyingAssociativeAlgebra( L );
 gap> last = KG;
 true  
 
-# laguna/doc/funct.xml:1516-1533
+# laguna/doc/funct.xml:1506-1523
 
 gap> F := GF( 2 ); G := SymmetricGroup( 3 ); FG := GroupRing( F, G );
 GF(2)
@@ -512,7 +502,7 @@ LieObject( (Z(2)^0)*(1,2,3)+(Z(2)^0)*(1,3,2)+(Z(2)^0)*(1,3) )
 gap> b * b; # product in the Lie algebra (commutator) - must be zero!
 LieObject( <zero> of ... )
 
-# laguna/doc/funct.xml:1545-1557
+# laguna/doc/funct.xml:1535-1547
 
 gap> G := SymmetricGroup(3); FG := GroupRing( GF( 2 ), G );
 Sym( [ 1 .. 3 ] )
@@ -524,7 +514,7 @@ gap> s := NaturalBijectionToAssociativeAlgebra( L );;
 gap> InverseGeneralMapping( s ) = NaturalBijectionToLieAlgebra( FG );
 true   
 
-# laguna/doc/funct.xml:1572-1584
+# laguna/doc/funct.xml:1562-1574
 
 gap> F := GF( 2 ); G := SymmetricGroup( 3 ); FG := GroupRing( F, G );
 GF(2)
@@ -536,7 +526,7 @@ gap> L := LieAlgebra( FG );
 gap> IsLieAlgebraOfGroupRing( L );
 true   
 
-# laguna/doc/funct.xml:1602-1616
+# laguna/doc/funct.xml:1592-1606
 
 gap> F := GF( 2 ); G := SymmetricGroup( 3 ); FG := GroupRing( F, G );
 GF(2)
@@ -550,7 +540,7 @@ Sym( [ 1 .. 3 ] )
 gap> LeftActingDomain( L );
 GF(2)   
 
-# laguna/doc/funct.xml:1637-1650
+# laguna/doc/funct.xml:1627-1640
 
 gap> F := GF( 2 ); G := SymmetricGroup( 3 ); FG := GroupRing( F, G );
 GF(2)
@@ -563,7 +553,7 @@ gap> f := Embedding( G, L );;
 gap> (1,2)^f + (1,3)^f;
 LieObject( (Z(2)^0)*(1,2)+(Z(2)^0)*(1,3) )   
 
-# laguna/doc/funct.xml:1668-1688
+# laguna/doc/funct.xml:1658-1678
 
 gap> G := SmallGroup( 256, 400 ); FG := GroupRing( GF( 2 ), G ); 
 <pc group of size 256 with 8 generators>
@@ -583,7 +573,7 @@ gap> c := Dimension( C ); d := Dimension( D ); l := Dimension( L );
 gap> c + d = l; # This is always the case for Lie algebras of group algebras! 
 true
 
-# laguna/doc/funct.xml:1705-1725
+# laguna/doc/funct.xml:1695-1715
 
 gap> G := SmallGroup( 256, 400 ); FG := GroupRing( GF( 2 ), G ); 
 <pc group of size 256 with 8 generators>
@@ -603,7 +593,7 @@ gap> l := Dimension( L ); c := Dimension( C ); d := Dimension( D );
 gap> c + d = l; # This is always the case for Lie algebras of group algebras!
 true
 
-# laguna/doc/funct.xml:1738-1753
+# laguna/doc/funct.xml:1728-1743
 
 gap> G := SymmetricGroup( 3 ); FG := GroupRing( GF( 2 ), G); 
 Sym( [ 1 .. 3 ] )
@@ -618,7 +608,7 @@ true
 gap> IsLieAbelian( L ); # Instead, IsLieAbelian is the correct command.
 false   
 
-# laguna/doc/funct.xml:1769-1784
+# laguna/doc/funct.xml:1759-1774
 
 gap> G := SmallGroup( 256, 400 ); FG := GroupRing( GF( 2 ), G ); 
 <pc group of size 256 with 8 generators>
@@ -633,7 +623,7 @@ gap> List( LieDerivedSeries( L ), Dimension ); # This is very slow.
 #I  LAGUNA package: Computing the Lie derived subalgebra ...
 [ 256, 228, 189, 71, 0 ]   
 
-# laguna/doc/funct.xml:1800-1815
+# laguna/doc/funct.xml:1790-1805
 
 gap> G := SmallGroup( 256, 400 ); FG := GroupRing( GF( 2 ), G ); 
 <pc group of size 256 with 8 generators>
@@ -648,7 +638,7 @@ gap> List( LieLowerCentralSeries( L ), Dimension ); # This is very slow.
 #I  LAGUNA package: Computing the Lie derived subalgebra ...
 [ 256, 228, 222, 210, 191, 167, 138, 107, 76, 54, 29, 15, 6, 0 ]   
 
-# laguna/doc/funct.xml:1831-1842
+# laguna/doc/funct.xml:1821-1832
 
 gap> G := SmallGroup( 256, 400 ); FG := GroupRing( GF( 2 ), G ); 
 <pc group of size 256 with 8 generators>
@@ -659,7 +649,7 @@ gap> L := LieAlgebra( FG );
 gap> IsLieMetabelian( L );
 false   
 
-# laguna/doc/funct.xml:1859-1872
+# laguna/doc/funct.xml:1849-1862
 
 gap> G := SymmetricGroup( 3 ); FG := GroupRing( GF( 2 ), G ); 
 Sym( [ 1 .. 3 ] )
@@ -672,7 +662,7 @@ false
 gap> IsLieCentreByMetabelian( L );
 true   
 
-# laguna/doc/funct.xml:1890-1905
+# laguna/doc/funct.xml:1880-1895
 
 gap> G := SymmetricGroup( 3 ); FG := GroupRing( GF( 2 ), G ); 
 Sym( [ 1 .. 3 ] )
@@ -687,7 +677,7 @@ gap> Elements( B );
   LieObject( (Z(2)^0)*(1,2) ), LieObject( (Z(2)^0)*(1,2,3) ),
   LieObject( (Z(2)^0)*(1,3,2) ), LieObject( (Z(2)^0)*(1,3) ) ]
 
-# laguna/doc/funct.xml:1920-1933
+# laguna/doc/funct.xml:1910-1923
 
 gap> G := SymmetricGroup( 3 ); FG := GroupRing( GF( 2 ), G ); 
 Sym( [ 1 .. 3 ] )
@@ -700,7 +690,7 @@ CanonicalBasis( <Lie algebra of dimension 6 over GF(2)> )
 gap> IsBasisOfLieAlgebraOfGroupRing( B );
 true   
 
-# laguna/doc/funct.xml:1948-1963
+# laguna/doc/funct.xml:1938-1953
 
 gap> G := CyclicGroup( 2 ); FG := GroupRing( GF( 2 ), G ); 
 <pc group of size 2 with 1 generators>
@@ -715,21 +705,21 @@ gap> StructureConstantsTable( B );
 [ [ [ [  ], [  ] ], [ [  ], [  ] ] ], [ [ [  ], [  ] ], [ [  ], [  ] ] ], -1, 
   0*Z(2) ]  
 
-# laguna/doc/funct.xml:1987-1994
+# laguna/doc/funct.xml:1977-1984
 
 gap> KG := GroupRing( GF( 2 ), DihedralGroup( 16 ) );
 <algebra-with-one over GF(2), with 4 generators>
 gap> LieUpperNilpotencyIndex( KG );
 5      
 
-# laguna/doc/funct.xml:2024-2031
+# laguna/doc/funct.xml:2014-2021
 
 gap> KG := GroupRing( GF( 2 ), DihedralGroup( 16 ) );
 <algebra-with-one over GF(2), with 4 generators>
 gap> LieLowerNilpotencyIndex( KG );
 5     
 
-# laguna/doc/funct.xml:2052-2062
+# laguna/doc/funct.xml:2042-2052
 
 gap> KG := GroupRing( GF ( 2 ), DihedralGroup( 16 ) );;
 gap> L := LieAlgebra( KG );
@@ -739,12 +729,12 @@ gap> LieDerivedLength( L );
 #I  LAGUNA package: Computing the Lie derived subalgebra ...
 3                                                            
 
-# laguna/doc/funct.xml:2084-2089
+# laguna/doc/funct.xml:2074-2079
 
 gap> SubgroupsOfIndexTwo( DihedralGroup( 16 ) );
 [ Group([ f3, f4, f1 ]), Group([ f3, f4, f2 ]), Group([ f3, f4, f1*f2 ]) ]
 
-# laguna/doc/funct.xml:2105-2114
+# laguna/doc/funct.xml:2095-2104
 
 gap> KD8 := GroupRing( GF(2), DihedralGroup( 8 ) );
 <algebra-with-one over GF(2), with 3 generators>
@@ -753,14 +743,14 @@ gap> UD8 := PcNormalizedUnitGroup( KD8 );
 gap> DihedralDepth( UD8 );
 2      
 
-# laguna/doc/funct.xml:2132-2139
+# laguna/doc/funct.xml:2122-2129
 
 gap> G := DihedralGroup( 16 );
 <pc group of size 16 with 4 generators>  
 gap> DimensionBasis( G );
 rec( dimensionBasis := [ f1, f2, f3, f4 ], weights := [ 1, 1, 2, 4 ] )    
 
-# laguna/doc/funct.xml:2160-2168
+# laguna/doc/funct.xml:2150-2158
 
 gap> G := DihedralGroup( 16 );
 <pc group of size 16 with 4 generators>  
@@ -768,7 +758,7 @@ gap> LieDimensionSubgroups( G );
 [ <pc group of size 16 with 4 generators>, Group([ f3, f4 ]), Group([ f4 ]),
   Group([ <identity> of ... ]) ]     
 
-# laguna/doc/funct.xml:2202-2215
+# laguna/doc/funct.xml:2192-2205
 
 gap> G := DihedralGroup(16);
 <pc group of size 16 with 4 generators>
@@ -781,7 +771,7 @@ gap> LieUpperCodimensionSeries( G );
 [ Group([ f1, f2, f3, f4 ]), Group([ f3, f4, f3*f4 ]), Group([ f4 ]), 
   Group([ f4 ]), Group([  ]) ]
 
-# laguna/doc/funct.xml:2228-2244
+# laguna/doc/funct.xml:2218-2234
 
 gap> SetInfoLevel( LAGInfo, 2 );
 gap> KD8 := GroupRing( GF( 2 ), DihedralGroup( 8 ) );

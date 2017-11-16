@@ -25,4 +25,5 @@ false
 gap> (g.1^emb)^f; ((g.1^2)^emb)^f;
 f1
 f1^2
+gap> SetInfoLevel(LAGInfo,1);
 gap> STOP_TEST( "laguna.tst", 10000 );
