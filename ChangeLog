@@ -175,7 +175,24 @@
     * Fixed a bug in PcPresentationOfNormalizedUnit that may cause
       NaturalBijectionToPcNormalizedUnitGroup returning wrong results
       for p>2 (reported by Urban Jezernik)
+
+3.8.0 (September 2017)
+    * Migration to GitHub
+    * Switch to modern two-argument variant of ReadPackage
+    * Some tweaks to p-groups related code:
+      - always call SetPrimePGroup right after SetIsPGroup
+      - do not rely on p-groups being finite; instead, explicitly
+        check finiteness
+    * Renamed some files for consistency
+    * Switch to TestDirectory
     
+3.9.0 (April 2018)
+    * Fix the ordering of weighted basis elements:
+      - now after sorting elements of the weighted basis by their weights,
+        elements of the same weight will be sorted (w.r.t. `<`). This will
+        ensure that their order does not rely on the treatment of elements
+        of the same weight by the sorting algorithm.
+
 4.0 (in the development version)
     The large new block related with the Modular Isomorphism Problem (MIP):
     * Computation of MIP-related invariants of p-groups and their modular 
