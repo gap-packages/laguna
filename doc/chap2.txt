@@ -39,10 +39,12 @@
   [10XLeftActingDomain[110X can also be obtained using two other functions as follows.[133X
   
   [4X[32X  Example  [32X[104X
+    [4X[28X[128X[104X
     [4X[25Xgap>[125X [27XUnderlyingRing( KG );[127X[104X
     [4X[28XGF(2)[128X[104X
     [4X[25Xgap>[125X [27XUnderlyingField( KG );[127X[104X
     [4X[28XGF(2)[128X[104X
+    [4X[28X[128X[104X
   [4X[32X[104X
   
   [33X[0;0YLet  us  construct  a  certain element of the group algebra. For example, we
@@ -91,10 +93,12 @@
   its coefficients.[133X
   
   [4X[32X  Example  [32X[104X
+    [4X[28X[128X[104X
     [4X[25Xgap>[125X [27XAugmentation( x );[127X[104X
     [4X[28X0*Z(2)[128X[104X
     [4X[25Xgap>[125X [27XIsUnit( KG, x );[127X[104X
     [4X[28Xfalse[128X[104X
+    [4X[28X[128X[104X
   [4X[32X[104X
   
   [33X[0;0YSince  the  augmentation of [10Xx[110X is zero, [10Xx[110X is not invertible, but [10X1+x[110X is. This
@@ -162,8 +166,10 @@
   [5XLAGUNA[105X.[133X
   
   [4X[32X  Example  [32X[104X
+    [4X[28X[128X[104X
     [4X[25Xgap>[125X [27XAugmentationIdealNilpotencyIndex( KG );[127X[104X
     [4X[28X9[128X[104X
+    [4X[28X[128X[104X
   [4X[32X[104X
   
   [33X[0;0YOn  the  other  hand,  we  can also calculate the powers of the augmentation
@@ -220,33 +226,22 @@
     [4X[25Xgap>[125X [27Xt := NaturalBijectionToPcNormalizedUnitGroup( KG );[127X[104X
     [4X[28XMappingByFunction( <group of size 32768 with 15 generators>, <pc group of size\[128X[104X
     [4X[28X 32768 with 15 generators>, function( x ) ... end )[128X[104X
+    [4X[25Xgap>[125X [27XImage(t) = W;[127X[104X
+    [4X[28Xtrue[128X[104X
     [4X[25Xgap>[125X [27XList( AsList( G ), x -> ( x^Embedding( G, KG ) )^t );[127X[104X
-    [4X[28X[ <identity> of ..., f2, f1, f3, f7, f1*f2*f3, f2*f3, f2*f7, f1*f3, f1*f7,[128X[104X
-    [4X[28X  f3*f7, f1*f2*f7, f1*f2*f3*f7, f2*f3*f7, f1*f3*f7, f1*f2 ][128X[104X
+    [4X[28X[ <identity> of ..., f1, f2, f4, f8, f1*f2, f1*f4, f1*f8, f2*f4, f2*f8, [128X[104X
+    [4X[28X  f4*f8, f1*f2*f4, f1*f2*f8, f1*f4*f8, f2*f4*f8, f1*f2*f4*f8 ][128X[104X
     [4X[28X[128X[104X
   [4X[32X[104X
   
   [33X[0;0YThe second isomorphism is the inverse of the first.[133X
   
   [4X[32X  Example  [32X[104X
-    [4X[25Xgap>[125X [27Xf := NaturalBijectionToNormalizedUnitGroup( KG );[127X[104X
-    [4X[28X[ f1, f2, f3, f4, f5, f6, f7, f8, f9, f10, f11, f12, f13, f14, f15 ] ->[128X[104X
-    [4X[28X[ (Z(2)^0)*f2, (Z(2)^0)*f1, (Z(2)^0)*f3,[128X[104X
-    [4X[28X  (Z(2)^0)*f1+(Z(2)^0)*f2+(Z(2)^0)*f1*f2,[128X[104X
-    [4X[28X  (Z(2)^0)*f2+(Z(2)^0)*f3+(Z(2)^0)*f2*f3,[128X[104X
-    [4X[28X  (Z(2)^0)*f1+(Z(2)^0)*f3+(Z(2)^0)*f1*f3, (Z(2)^0)*f4,[128X[104X
-    [4X[28X  (Z(2)^0)*f1+(Z(2)^0)*f2+(Z(2)^0)*f3+(Z(2)^0)*f1*f2+(Z(2)^0)*f1*f3+(Z(2)^[128X[104X
-    [4X[28X    0)*f2*f3+(Z(2)^0)*f1*f2*f3, (Z(2)^0)*f2+(Z(2)^0)*f4+(Z(2)^0)*f2*f4,[128X[104X
-    [4X[28X  (Z(2)^0)*f1+(Z(2)^0)*f4+(Z(2)^0)*f1*f4,[128X[104X
-    [4X[28X  (Z(2)^0)*f3+(Z(2)^0)*f4+(Z(2)^0)*f3*f4,[128X[104X
-    [4X[28X  (Z(2)^0)*f1+(Z(2)^0)*f2+(Z(2)^0)*f4+(Z(2)^0)*f1*f2+(Z(2)^0)*f1*f4+(Z(2)^[128X[104X
-    [4X[28X    0)*f2*f4+(Z(2)^0)*f1*f2*f4, (Z(2)^0)*f2+(Z(2)^0)*f3+(Z(2)^0)*f4+(Z(2)^[128X[104X
-    [4X[28X    0)*f2*f3+(Z(2)^0)*f2*f4+(Z(2)^0)*f3*f4+(Z(2)^0)*f2*f3*f4,[128X[104X
-    [4X[28X  (Z(2)^0)*f1+(Z(2)^0)*f3+(Z(2)^0)*f4+(Z(2)^0)*f1*f3+(Z(2)^0)*f1*f4+(Z(2)^[128X[104X
-    [4X[28X    0)*f3*f4+(Z(2)^0)*f1*f3*f4, (Z(2)^0)*f1+(Z(2)^0)*f2+(Z(2)^0)*f3+(Z(2)^[128X[104X
-    [4X[28X    0)*f4+(Z(2)^0)*f1*f2+(Z(2)^0)*f1*f3+(Z(2)^0)*f1*f4+(Z(2)^0)*f2*f3+(Z(2)^[128X[104X
-    [4X[28X    0)*f2*f4+(Z(2)^0)*f3*f4+(Z(2)^0)*f1*f2*f3+(Z(2)^0)*f1*f2*f4+(Z(2)^[128X[104X
-    [4X[28X    0)*f1*f3*f4+(Z(2)^0)*f2*f3*f4+(Z(2)^0)*f1*f2*f3*f4 ][128X[104X
+    [4X[28X[128X[104X
+    [4X[25Xgap>[125X [27Xf := NaturalBijectionToNormalizedUnitGroup( KG );;[127X[104X
+    [4X[25Xgap>[125X [27XImage(f) = V;[127X[104X
+    [4X[28Xtrue[128X[104X
+    [4X[28X[128X[104X
   [4X[32X[104X
   
   [33X[0;0YFor example, we may calculate the conjugacy classes of the group [10XW[110X, and then
@@ -258,11 +253,10 @@
     [4X[25Xgap>[125X [27XLength( cc );[127X[104X
     [4X[28X848[128X[104X
     [4X[25Xgap>[125X [27XRepresentative( cc[ Length( cc ) ] );[127X[104X
-    [4X[28Xf1*f2*f4*f6*f12*f15[128X[104X
+    [4X[28Xf1*f2*f3*f6*f10*f13[128X[104X
     [4X[25Xgap>[125X [27Xlast^f;[127X[104X
-    [4X[28X(Z(2)^0)*<identity> of ...+(Z(2)^0)*f2+(Z(2)^0)*f4+(Z(2)^0)*f1*f2+(Z(2)^[128X[104X
-    [4X[28X0)*f1*f3+(Z(2)^0)*f1*f4+(Z(2)^0)*f2*f3+(Z(2)^0)*f2*f4+(Z(2)^0)*f3*f4+(Z(2)^[128X[104X
-    [4X[28X0)*f1*f2*f3+(Z(2)^0)*f1*f3*f4[128X[104X
+    [4X[28X(Z(2)^0)*<identity> of ...+(Z(2)^0)*f1*f2+(Z(2)^0)*f1*f3+(Z(2)^0)*f1*f4+(Z(2)^[128X[104X
+    [4X[28X0)*f2*f3+(Z(2)^0)*f1*f2*f3+(Z(2)^0)*f1*f3*f4[128X[104X
     [4X[28X[128X[104X
   [4X[32X[104X
   
@@ -273,11 +267,11 @@
   [4X[32X  Example  [32X[104X
     [4X[28X[128X[104X
     [4X[25Xgap>[125X [27XLowerCentralSeries( W );[127X[104X
-    [4X[28X[ <pc group of size 32768 with 15 generators>,[128X[104X
-    [4X[28X  Group([ f3, f5*f8*f10*f12*f13*f14*f15, f6*f8*f12*f14*f15, f7, f9*f12,[128X[104X
-    [4X[28X      f10*f14, f11*f13, f13*f14, f14*f15 ]),[128X[104X
-    [4X[28X  Group([ f7, f9*f12, f10*f15, f11*f15, f13*f15, f14*f15 ]),[128X[104X
-    [4X[28X  Group([ f11*f15, f13*f15, f14*f15 ]), Group([ <identity> of ... ]) ][128X[104X
+    [4X[28X[ <pc group of size 32768 with 15 generators>, [128X[104X
+    [4X[28X  Group([ f4*f8, f5*f7*f11*f13*f15, f6*f7*f9*f11*f13*f14*f15, f8, f9*f13, [128X[104X
+    [4X[28X      f10*f11, f12*f13, f13*f15, f14*f15 ]), [128X[104X
+    [4X[28X  Group([ f8, f9*f15, f10*f11, f12*f15, f13*f15, f14*f15 ]), [128X[104X
+    [4X[28X  Group([ f12*f15, f13*f15, f14*f15 ]), Group([ <identity> of ... ]) ][128X[104X
     [4X[28X[128X[104X
   [4X[32X[104X
   
@@ -288,23 +282,22 @@
   
   [4X[32X  Example  [32X[104X
     [4X[28X[128X[104X
-    [4X[25Xgap>[125X [27XC := Centre( W );[127X[104X
-    [4X[28XGroup([ f3*f5*f13*f15, f7, f15, f13*f15, f14*f15, f11*f13*f14*f15 ])[128X[104X
+    [4X[25Xgap>[125X [27XC := Centre( W );;[127X[104X
     [4X[25Xgap>[125X [27Xm := MinimalGeneratingSet( C );[127X[104X
-    [4X[28X[ f7*f13*f14*f15, f13*f14*f15, f7*f11*f14*f15, f15, f3*f5*f14 ][128X[104X
+    [4X[28X[ f8*f13*f14*f15, f13*f14*f15, f8*f12*f14*f15, f15, f4*f6*f8*f13 ][128X[104X
     [4X[25Xgap>[125X [27XList( m, g -> g^f );[127X[104X
     [4X[28X[ (Z(2)^0)*<identity> of ...+(Z(2)^0)*f3+(Z(2)^0)*f1*f2+(Z(2)^0)*f3*f4+(Z(2)^[128X[104X
-    [4X[28X    0)*f1*f2*f3+(Z(2)^0)*f1*f2*f4+(Z(2)^0)*f1*f2*f3*f4,[128X[104X
+    [4X[28X    0)*f1*f2*f3+(Z(2)^0)*f1*f2*f4+(Z(2)^0)*f1*f2*f3*f4, [128X[104X
     [4X[28X  (Z(2)^0)*f3+(Z(2)^0)*f4+(Z(2)^0)*f1*f2+(Z(2)^0)*f3*f4+(Z(2)^0)*f1*f2*f3+([128X[104X
     [4X[28X    Z(2)^0)*f1*f2*f4+(Z(2)^0)*f1*f2*f3*f4, (Z(2)^0)*<identity> of ...+(Z(2)^[128X[104X
-    [4X[28X    0)*f2+(Z(2)^0)*f3+(Z(2)^0)*f1*f2+(Z(2)^0)*f2*f3+(Z(2)^0)*f2*f4+(Z(2)^[128X[104X
-    [4X[28X    0)*f3*f4+(Z(2)^0)*f1*f2*f3+(Z(2)^0)*f1*f2*f4+(Z(2)^0)*f2*f3*f4+(Z(2)^[128X[104X
+    [4X[28X    0)*f1+(Z(2)^0)*f3+(Z(2)^0)*f1*f2+(Z(2)^0)*f1*f3+(Z(2)^0)*f1*f4+(Z(2)^[128X[104X
+    [4X[28X    0)*f3*f4+(Z(2)^0)*f1*f2*f3+(Z(2)^0)*f1*f2*f4+(Z(2)^0)*f1*f3*f4+(Z(2)^[128X[104X
     [4X[28X    0)*f1*f2*f3*f4, (Z(2)^0)*f1+(Z(2)^0)*f2+(Z(2)^0)*f3+(Z(2)^0)*f4+(Z(2)^[128X[104X
     [4X[28X    0)*f1*f2+(Z(2)^0)*f1*f3+(Z(2)^0)*f1*f4+(Z(2)^0)*f2*f3+(Z(2)^0)*f2*f4+([128X[104X
     [4X[28X    Z(2)^0)*f3*f4+(Z(2)^0)*f1*f2*f3+(Z(2)^0)*f1*f2*f4+(Z(2)^0)*f1*f3*f4+(Z(2)^[128X[104X
-    [4X[28X    0)*f2*f3*f4+(Z(2)^0)*f1*f2*f3*f4, (Z(2)^0)*<identity> of ...+(Z(2)^0)*f1+([128X[104X
-    [4X[28X    Z(2)^0)*f3+(Z(2)^0)*f1*f3+(Z(2)^0)*f1*f4+(Z(2)^0)*f2*f3+(Z(2)^0)*f2*f4+([128X[104X
-    [4X[28X    Z(2)^0)*f3*f4+(Z(2)^0)*f1*f3*f4 ][128X[104X
+    [4X[28X    0)*f2*f3*f4+(Z(2)^0)*f1*f2*f3*f4, (Z(2)^0)*f1+(Z(2)^0)*f2+(Z(2)^0)*f3+([128X[104X
+    [4X[28X    Z(2)^0)*f4+(Z(2)^0)*f1*f3+(Z(2)^0)*f1*f4+(Z(2)^0)*f3*f4+(Z(2)^[128X[104X
+    [4X[28X    0)*f1*f3*f4+(Z(2)^0)*f2*f3*f4 ][128X[104X
     [4X[28X[128X[104X
   [4X[32X[104X
   

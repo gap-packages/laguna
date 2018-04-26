@@ -1,6 +1,6 @@
 name: LAGUNA
-version: 3.8.0
-date: 2017-09-24
+version: 3.9.0
+date: 2017-04-26
 description: |
     Lie AlGebras and UNits of group Algebras
 
@@ -39,7 +39,7 @@ packageinfo: https://gap-packages.github.io/laguna/PackageInfo.g
 
 downloads:
     - name: .tar.gz
-      url: https://github.com/gap-packages/laguna/releases/download/v3.8.0/laguna-3.8.0.tar.gz
+      url: https://github.com/gap-packages/laguna/releases/download/v3.9.0/laguna-3.9.0.tar.gz
 
 abstract: |
     The <span class="pkgname">LAGUNA</span> package replaces the <span class="pkgname">LAG</span> package and provides functionality for calculation of the normalized unit group of the modular group algebra of the finite p-group and for investigation of Lie algebra associated with group algebras and other associative algebras.

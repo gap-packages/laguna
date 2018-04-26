@@ -6,7 +6,7 @@
   
   [1X4.1-1 IsGroupAlgebra[101X
   
-  [29X[2XIsGroupAlgebra[102X( [3XKG[103X ) [32X property
+  [33X[1;0Y[29X[2XIsGroupAlgebra[102X( [3XKG[103X ) [32X property[133X
   
   [33X[0;0YA  group  ring  over a field is called a group algebra. For a group ring [3XKG[103X,
   [10XIsGroupAlgebra[110X  returns [9Xtrue[109X, if the underlying ring of [3XKG[103X is a field; [9Xfalse[109X
@@ -24,7 +24,7 @@
   
   [1X4.1-2 IsFModularGroupAlgebra[101X
   
-  [29X[2XIsFModularGroupAlgebra[102X( [3XKG[103X ) [32X property
+  [33X[1;0Y[29X[2XIsFModularGroupAlgebra[102X( [3XKG[103X ) [32X property[133X
   
   [33X[0;0YA  group  algebra [22XKG[122X over a field [22XK[122X is called [13Xmodular[113X, if the characteristic
   of  the  field [22XK[122X divides the order of some element in [22XG[122X. For a group algebra
@@ -44,7 +44,7 @@
   
   [1X4.1-3 IsPModularGroupAlgebra[101X
   
-  [29X[2XIsPModularGroupAlgebra[102X( [3XKG[103X ) [32X property
+  [33X[1;0Y[29X[2XIsPModularGroupAlgebra[102X( [3XKG[103X ) [32X property[133X
   
   [33X[0;0YA  group  algebra  [22XKG[122X  is  said  to  be  [22Xp[122X-modular,  if  [22XK[122X  is  a  field  of
   characteristic [22Xp[122X and [22XG[122X is a finite [22Xp[122X-group for the same prime [22Xp[122X. For a group
@@ -64,7 +64,7 @@
   
   [1X4.1-4 UnderlyingGroup[101X
   
-  [29X[2XUnderlyingGroup[102X( [3XKG[103X ) [32X attribute
+  [33X[1;0Y[29X[2XUnderlyingGroup[102X( [3XKG[103X ) [32X attribute[133X
   [6XReturns:[106X  [33X[0;10Ythe underlying group of a group ring[133X
   
   [33X[0;0YThis  attribute  stores the underlying group of a group ring [3XKG[103X. In fact, it
@@ -82,7 +82,7 @@
   
   [1X4.1-5 UnderlyingRing[101X
   
-  [29X[2XUnderlyingRing[102X( [3XKG[103X ) [32X attribute
+  [33X[1;0Y[29X[2XUnderlyingRing[102X( [3XKG[103X ) [32X attribute[133X
   [6XReturns:[106X  [33X[0;10Ythe underlying ring of a group ring[133X
   
   [33X[0;0YThis  attribute  stores  the underlying ring of a group ring [3XKG[103X. In fact, it
@@ -100,7 +100,7 @@
   
   [1X4.1-6 UnderlyingField[101X
   
-  [29X[2XUnderlyingField[102X( [3XKG[103X ) [32X attribute
+  [33X[1;0Y[29X[2XUnderlyingField[102X( [3XKG[103X ) [32X attribute[133X
   [6XReturns:[106X  [33X[0;10Ythe underlying field of a group algebra[133X
   
   [33X[0;0YThis  attribute  stores the underlying field of a group algebra [3XKG[103X. In fact,
@@ -122,7 +122,7 @@
   
   [1X4.2-1 Support[101X
   
-  [29X[2XSupport[102X( [3Xx[103X ) [32X attribute
+  [33X[1;0Y[29X[2XSupport[102X( [3Xx[103X ) [32X attribute[133X
   [6XReturns:[106X  [33X[0;10Ysupport of x as a list of elements of the underlying group[133X
   
   [33X[0;0YReturns  the  support  of  a group ring element [3Xx[103X. The support of a non-zero
@@ -152,7 +152,7 @@
   
   [1X4.2-2 CoefficientsBySupport[101X
   
-  [29X[2XCoefficientsBySupport[102X( [3Xx[103X ) [32X attribute
+  [33X[1;0Y[29X[2XCoefficientsBySupport[102X( [3Xx[103X ) [32X attribute[133X
   [6XReturns:[106X  [33X[0;10Ycoefficients  of  support  elements  as  list  of  elements of the
             underlying ring[133X
   
@@ -171,7 +171,7 @@
   
   [1X4.2-3 TraceOfMagmaRingElement[101X
   
-  [29X[2XTraceOfMagmaRingElement[102X( [3Xx[103X ) [32X attribute
+  [33X[1;0Y[29X[2XTraceOfMagmaRingElement[102X( [3Xx[103X ) [32X attribute[133X
   [6XReturns:[106X  [33X[0;10Yan element of the underlying ring[133X
   
   [33X[0;0YReturns  the trace of a group ring element [3Xx[103X. By definition, the trace of an
@@ -190,7 +190,7 @@
   
   [1X4.2-4 Length[101X
   
-  [29X[2XLength[102X( [3Xx[103X ) [32X attribute
+  [33X[1;0Y[29X[2XLength[102X( [3Xx[103X ) [32X attribute[133X
   
   [33X[0;0YThe  length  of  an  element  of  a group ring [3Xx[103X is defined as the number of
   elements in its support. This method is also applicable to elements of magma
@@ -207,7 +207,7 @@
   
   [1X4.2-5 Augmentation[101X
   
-  [29X[2XAugmentation[102X( [3Xx[103X ) [32X attribute
+  [33X[1;0Y[29X[2XAugmentation[102X( [3Xx[103X ) [32X attribute[133X
   [6XReturns:[106X  [33X[0;10Ythe sum of coefficients of a group ring element[133X
   
   [33X[0;0YThe augmentation of a group ring element [22Xx = α_1 ⋅ g_1 + α_2 ⋅ g_2 + ⋯ + α_k
@@ -225,7 +225,7 @@
   
   [1X4.2-6 PartialAugmentations[101X
   
-  [29X[2XPartialAugmentations[102X( [3XKG[103X, [3Xx[103X ) [32X operation
+  [33X[1;0Y[29X[2XPartialAugmentations[102X( [3XKG[103X, [3Xx[103X ) [32X operation[133X
   [6XReturns:[106X  [33X[0;10Ya  list  of  partial  augmentations  and a list of conjugacy class
             representatives[133X
   
@@ -249,7 +249,7 @@
   
   [1X4.2-7 Involution[101X
   
-  [29X[2XInvolution[102X( [3Xx[103X[[, [3Xf[103X], [3Xs[103X] ) [32X operation
+  [33X[1;0Y[29X[2XInvolution[102X( [3Xx[103X[[, [3Xf[103X], [3Xs[103X] ) [32X operation[133X
   [6XReturns:[106X  [33X[0;10Yan element of a group ring[133X
   
   [33X[0;0YLet  [22XKG[122X  be  a  group ring, [22Xf[122X be a homomorphism from the group [22XG[122X to the unit
@@ -281,7 +281,7 @@
   
   [1X4.2-8 IsSymmetric[101X
   
-  [29X[2XIsSymmetric[102X( [3Xx[103X ) [32X attribute
+  [33X[1;0Y[29X[2XIsSymmetric[102X( [3Xx[103X ) [32X attribute[133X
   
   [33X[0;0YAn  element  of  a  group  ring is called [13Xsymmetric[113X if it is fixed under the
   classical involution. This property is checked here.[133X
@@ -297,7 +297,7 @@
   
   [1X4.2-9 IsUnitary[101X
   
-  [29X[2XIsUnitary[102X( [3Xx[103X ) [32X attribute
+  [33X[1;0Y[29X[2XIsUnitary[102X( [3Xx[103X ) [32X attribute[133X
   
   [33X[0;0YA unit of a group ring is called unitary if the classical involution inverts
   it. This property is checked here.[133X
@@ -315,7 +315,7 @@
   
   [1X4.2-10 IsUnit[101X
   
-  [29X[2XIsUnit[102X( [[3XKG[103X, ][3Xx[103X ) [32X method
+  [33X[1;0Y[29X[2XIsUnit[102X( [[3XKG[103X, ][3Xx[103X ) [32X method[133X
   
   [33X[0;0YThis  method  improves  a  standard  [5XGAP[105X  functionality  for  modular  group
   algebras.[133X
@@ -346,7 +346,7 @@
   
   [1X4.2-11 InverseOp[101X
   
-  [29X[2XInverseOp[102X( [3Xx[103X ) [32X method
+  [33X[1;0Y[29X[2XInverseOp[102X( [3Xx[103X ) [32X method[133X
   [6XReturns:[106X  [33X[0;10Ythe inverse element of an element of a group ring[133X
   
   [33X[0;0YThis  method  improves  a  standard  [5XGAP[105X  functionality  for  modular  group
@@ -368,8 +368,8 @@
   
   [1X4.2-12 BicyclicUnitOfType1[101X
   
-  [29X[2XBicyclicUnitOfType1[102X( [[3XKG[103X, ][3Xa[103X, [3Xg[103X ) [32X operation
-  [29X[2XBicyclicUnitOfType2[102X( [[3XKG[103X, ][3Xa[103X, [3Xg[103X ) [32X operation
+  [33X[1;0Y[29X[2XBicyclicUnitOfType1[102X( [[3XKG[103X, ][3Xa[103X, [3Xg[103X ) [32X operation[133X
+  [33X[1;0Y[29X[2XBicyclicUnitOfType2[102X( [[3XKG[103X, ][3Xa[103X, [3Xg[103X ) [32X operation[133X
   [6XReturns:[106X  [33X[0;10Yan element of a group ring[133X
   
   [33X[0;0Ylet  [22Xa[122X  be  an element of order [22Xn[122X of a group [22XG[122X. We put [22Xα = 1 + a + a^2 + ...
@@ -406,7 +406,7 @@
   
   [1X4.2-13 BassCyclicUnit[101X
   
-  [29X[2XBassCyclicUnit[102X( [[3XZG[103X, ][3Xg[103X, [3Xk[103X ) [32X operation
+  [33X[1;0Y[29X[2XBassCyclicUnit[102X( [[3XZG[103X, ][3Xg[103X, [3Xk[103X ) [32X operation[133X
   [6XReturns:[106X  [33X[0;10Yan element of a group ring[133X
   
   [33X[0;0YLet  [3Xg[103X be an element of order [22Xn[122X of the group [22XG[122X, and 1 < [3Xk[103X < [22Xn[122X be such that [3Xk[103X
@@ -441,7 +441,7 @@
   
   [1X4.3-1 AugmentationHomomorphism[101X
   
-  [29X[2XAugmentationHomomorphism[102X( [3XKG[103X ) [32X attribute
+  [33X[1;0Y[29X[2XAugmentationHomomorphism[102X( [3XKG[103X ) [32X attribute[133X
   [6XReturns:[106X  [33X[0;10Ya homomorphism from a group ring to the underlying ring[133X
   
   [33X[0;0YThe  mapping which maps an element of a group ring [22XKG[122X to its augmentation is
@@ -478,7 +478,7 @@
   
   [1X4.3-2 AugmentationIdeal[101X
   
-  [29X[2XAugmentationIdeal[102X( [3XKG[103X ) [32X attribute
+  [33X[1;0Y[29X[2XAugmentationIdeal[102X( [3XKG[103X ) [32X attribute[133X
   [6XReturns:[106X  [33X[0;10Yan ideal of a group ring[133X
   
   [33X[0;0YIf  [22XKG[122X  is  a  group ring, then its augmentation ideal [22XA[122X is generated by all
@@ -499,7 +499,7 @@
   
   [1X4.3-3 RadicalOfAlgebra[101X
   
-  [29X[2XRadicalOfAlgebra[102X( [3XKG[103X ) [32X attribute
+  [33X[1;0Y[29X[2XRadicalOfAlgebra[102X( [3XKG[103X ) [32X attribute[133X
   [6XReturns:[106X  [33X[0;10Yan ideal of a group algebra[133X
   
   [33X[0;0YThis method improves a standard [5XGAP[105X functionality for modular group algebras
@@ -522,7 +522,7 @@
   
   [1X4.3-4 WeightedBasis[101X
   
-  [29X[2XWeightedBasis[102X( [3XKG[103X ) [32X attribute
+  [33X[1;0Y[29X[2XWeightedBasis[102X( [3XKG[103X ) [32X attribute[133X
   [6XReturns:[106X  [33X[0;10Ya  record  of  two  components:  weighted basis elements and their
             weights[133X
   
@@ -550,17 +550,17 @@
     [4X[25Xgap>[125X [27XKG := GroupRing( GF( 2 ), ElementaryAbelianGroup( 4 ) );[127X[104X
     [4X[28X<algebra-with-one over GF(2), with 2 generators>[128X[104X
     [4X[25Xgap>[125X [27XWeightedBasis( KG );[127X[104X
-    [4X[28Xrec([128X[104X
-    [4X[28X  weightedBasis := [ (Z(2)^0)*<identity> of ...+(Z(2)^0)*f2,[128X[104X
-    [4X[28X      (Z(2)^0)*<identity> of ...+(Z(2)^0)*f1,[128X[104X
-    [4X[28X      (Z(2)^0)*<identity> of ...+(Z(2)^0)*f1+(Z(2)^0)*f2+(Z(2)^0)*f1*f2 ],[128X[104X
+    [4X[28Xrec( [128X[104X
+    [4X[28X  weightedBasis := [ (Z(2)^0)*<identity> of ...+(Z(2)^0)*f1, [128X[104X
+    [4X[28X      (Z(2)^0)*<identity> of ...+(Z(2)^0)*f2, [128X[104X
+    [4X[28X      (Z(2)^0)*<identity> of ...+(Z(2)^0)*f1+(Z(2)^0)*f2+(Z(2)^0)*f1*f2 ], [128X[104X
     [4X[28X  weights := [ 1, 1, 2 ] )[128X[104X
     [4X[28X[128X[104X
   [4X[32X[104X
   
   [1X4.3-5 AugmentationIdealPowerSeries[101X
   
-  [29X[2XAugmentationIdealPowerSeries[102X( [3XKG[103X ) [32X attribute
+  [33X[1;0Y[29X[2XAugmentationIdealPowerSeries[102X( [3XKG[103X ) [32X attribute[133X
   [6XReturns:[106X  [33X[0;10Ya list of ideals of a group algebra[133X
   
   [33X[0;0YThe  argument  [3XKG[103X  is  a  [22Xp[122X-modular group algebra. The method returns a list
@@ -585,7 +585,7 @@
   
   [1X4.3-6 AugmentationIdealNilpotencyIndex[101X
   
-  [29X[2XAugmentationIdealNilpotencyIndex[102X( [3XKG[103X ) [32X attribute
+  [33X[1;0Y[29X[2XAugmentationIdealNilpotencyIndex[102X( [3XKG[103X ) [32X attribute[133X
   
   [33X[0;0YFor  the [22Xp[122X-modular group algebra [3XKG[103X the method returns the smallest number [22Xn[122X
   such  that  [22XA^n=0[122X, where [22XA[122X is the augmentation ideal of [3XKG[103X. This can be done
@@ -603,7 +603,7 @@
   
   [1X4.3-7 AugmentationIdealOfDerivedSubgroupNilpotencyIndex[101X
   
-  [29X[2XAugmentationIdealOfDerivedSubgroupNilpotencyIndex[102X( [3XKG[103X ) [32X attribute
+  [33X[1;0Y[29X[2XAugmentationIdealOfDerivedSubgroupNilpotencyIndex[102X( [3XKG[103X ) [32X attribute[133X
   
   [33X[0;0YFor  the  [22Xp[122X-modular  group  algebra  [3XKG[103X this attribute stores the nilpotency
   index of the augmentation ideal of [22XKG'[122X where [22XG'[122X denotes the derived subgroup
@@ -626,9 +626,9 @@
   
   [1X4.3-8 LeftIdealBySubgroup[101X
   
-  [29X[2XLeftIdealBySubgroup[102X( [3XKG[103X, [3XH[103X ) [32X operation
-  [29X[2XRightIdealBySubgroup[102X( [3XKG[103X, [3XH[103X ) [32X operation
-  [29X[2XTwoSidedIdalBySubgroup[102X( [3XKG[103X, [3XH[103X ) [32X operation
+  [33X[1;0Y[29X[2XLeftIdealBySubgroup[102X( [3XKG[103X, [3XH[103X ) [32X operation[133X
+  [33X[1;0Y[29X[2XRightIdealBySubgroup[102X( [3XKG[103X, [3XH[103X ) [32X operation[133X
+  [33X[1;0Y[29X[2XTwoSidedIdalBySubgroup[102X( [3XKG[103X, [3XH[103X ) [32X operation[133X
   [6XReturns:[106X  [33X[0;10Yan ideal of a group ring[133X
   
   [33X[0;0YLet  [3XKG[103X be a group ring of a group [22XG[122X over the ring [22XK[122X, and [3XH[103X be a subgroup of
@@ -673,7 +673,7 @@
   
   [1X4.4-1 NormalizedUnitGroup[101X
   
-  [29X[2XNormalizedUnitGroup[102X( [3XKG[103X ) [32X attribute
+  [33X[1;0Y[29X[2XNormalizedUnitGroup[102X( [3XKG[103X ) [32X attribute[133X
   [6XReturns:[106X  [33X[0;10Ya group generated by group algebra elements[133X
   
   [33X[0;0YDetermines  the  normalized  unit group of a [22Xp[122X-modular group algebra [3XKG[103X over
@@ -690,13 +690,13 @@
     [4X[25Xgap>[125X [27XV := NormalizedUnitGroup( KG );[127X[104X
     [4X[28X<group of size 32768 with 15 generators>[128X[104X
     [4X[25Xgap>[125X [27Xu := GeneratorsOfGroup( V )[4];[127X[104X
-    [4X[28X(Z(2)^0)*f1+(Z(2)^0)*f2+(Z(2)^0)*f1*f2  [128X[104X
+    [4X[28X(Z(2)^0)*f3  [128X[104X
     [4X[28X[128X[104X
   [4X[32X[104X
   
   [1X4.4-2 PcNormalizedUnitGroup[101X
   
-  [29X[2XPcNormalizedUnitGroup[102X( [3XKG[103X ) [32X attribute
+  [33X[1;0Y[29X[2XPcNormalizedUnitGroup[102X( [3XKG[103X ) [32X attribute[133X
   [6XReturns:[106X  [33X[0;10Ya group given by power-commutator presentation[133X
   
   [33X[0;0YThe  argument  [3XKG[103X is a [22Xp[122X-modular group algebra over the field of [22Xp[122X elements.
@@ -716,7 +716,7 @@
   
   [1X4.4-3 NaturalBijectionToPcNormalizedUnitGroup[101X
   
-  [29X[2XNaturalBijectionToPcNormalizedUnitGroup[102X( [3XKG[103X ) [32X attribute
+  [33X[1;0Y[29X[2XNaturalBijectionToPcNormalizedUnitGroup[102X( [3XKG[103X ) [32X attribute[133X
   [6XReturns:[106X  [33X[0;10Ya homomorphism of groups[133X
   
   [33X[0;0YThe  normalised unit group of a [22Xp[122X-modular group algebra [22XKG[122X over the field of
@@ -748,7 +748,7 @@
   
   [1X4.4-4 NaturalBijectionToNormalizedUnitGroup[101X
   
-  [29X[2XNaturalBijectionToNormalizedUnitGroup[102X( [3XKG[103X ) [32X attribute
+  [33X[1;0Y[29X[2XNaturalBijectionToNormalizedUnitGroup[102X( [3XKG[103X ) [32X attribute[133X
   [6XReturns:[106X  [33X[0;10Ya homomorphism of groups[133X
   
   [33X[0;0YFor  a [22Xp[122X-modular group algebra [3XKG[103X over the field of [22Xp[122X elements this function
@@ -760,7 +760,7 @@
     [4X[25Xgap>[125X [27Xt := NaturalBijectionToNormalizedUnitGroup(KG);;[127X[104X
     [4X[25Xgap>[125X [27Xw := GeneratorsOfGroup(W)[4];;[127X[104X
     [4X[25Xgap>[125X [27Xw^t;[127X[104X
-    [4X[28X(Z(2)^0)*f1+(Z(2)^0)*f2+(Z(2)^0)*f1*f2    [128X[104X
+    [4X[28X(Z(2)^0)*f3    [128X[104X
     [4X[25Xgap>[125X [27XGeneratorsOfGroup( W )[4]^t = GeneratorsOfGroup( V )[4];[127X[104X
     [4X[28Xtrue     [128X[104X
     [4X[28X[128X[104X
@@ -768,7 +768,7 @@
   
   [1X4.4-5 Embedding[101X
   
-  [29X[2XEmbedding[102X( [3XH[103X, [3XV[103X ) [32X operation
+  [33X[1;0Y[29X[2XEmbedding[102X( [3XH[103X, [3XV[103X ) [32X operation[133X
   [6XReturns:[106X  [33X[0;10Ya homomorphism from an underlying group to a normalized unit group
             in pc-presentation[133X
   
@@ -786,19 +786,13 @@
     [4X[28X<algebra-with-one over GF(2), with 4 generators>[128X[104X
     [4X[25Xgap>[125X [27XV:=PcNormalizedUnitGroup( KG );[127X[104X
     [4X[28X<pc group of size 32768 with 15 generators>[128X[104X
-    [4X[25Xgap>[125X [27Xucs := UpperCentralSeries( V );[127X[104X
-    [4X[28X[ <pc group of size 32768 with 15 generators>,[128X[104X
-    [4X[28X  <pc group of size 4096 with 12 generators>,[128X[104X
-    [4X[28X  Group([ f3*f5*f13*f15, f7, f15, f13*f15, f14*f15, f11*f13*f14*f15, f12,[128X[104X
-    [4X[28X      f9*f12, f10 ]),[128X[104X
-    [4X[28X  Group([ f3*f5*f13*f15, f7, f15, f13*f15, f14*f15, f11*f13*f14*f15 ]),[128X[104X
-    [4X[28X  Group([  ]) ][128X[104X
+    [4X[25Xgap>[125X [27Xucs := UpperCentralSeries( V );;[127X[104X
     [4X[25Xgap>[125X [27Xf := Embedding( G, V );[127X[104X
-    [4X[28X[ f1, f2, f3, f4 ] -> [ f2, f1, f3, f7 ][128X[104X
+    [4X[28X[ f1, f2, f3, f4 ] -> [ f1, f2, f4, f8 ][128X[104X
     [4X[25Xgap>[125X [27XG1 := Image( f, G ); [127X[104X
-    [4X[28XGroup([ f2, f1, f3, f7 ])[128X[104X
+    [4X[28XGroup([ f1, f2, f4, f8 ])[128X[104X
     [4X[25Xgap>[125X [27XH := Intersection( ucs[2], G1 ); # compute intersection in V(KG)[127X[104X
-    [4X[28XGroup([ f3, f7, f3*f7 ])[128X[104X
+    [4X[28XGroup([ f4, f8, f4*f8 ])[128X[104X
     [4X[25Xgap>[125X [27XT:=PreImage( f, H );             # find its preimage in G[127X[104X
     [4X[28XGroup([ f3, f4, f3*f4 ])[128X[104X
     [4X[25Xgap>[125X [27XIdGroup( T ); [127X[104X
@@ -808,7 +802,7 @@
   
   [1X4.4-6 Units[101X
   
-  [29X[2XUnits[102X( [3XKG[103X ) [32X attribute
+  [33X[1;0Y[29X[2XUnits[102X( [3XKG[103X ) [32X attribute[133X
   [6XReturns:[106X  [33X[0;10Ythe unit group of a group ring[133X
   
   [33X[0;0YThis  improves  a  standard  [5XGAP[105X functionality for modular group algebras of
@@ -823,7 +817,7 @@
     [4X[28X#I  LAGUNA package: Computing the unit group ...[128X[104X
     [4X[28X<group of size 32768 with 15 generators>[128X[104X
     [4X[25Xgap>[125X [27XGeneratorsOfGroup( U )[5]; # now elements of U are already in KG[127X[104X
-    [4X[28X(Z(2)^0)*f2+(Z(2)^0)*f3+(Z(2)^0)*f2*f3[128X[104X
+    [4X[28X(Z(2)^0)*f1+(Z(2)^0)*f3+(Z(2)^0)*f1*f3[128X[104X
     [4X[25Xgap>[125X [27XFH := GroupRing( GF(3), SmallGroup(27,3) );[127X[104X
     [4X[28X<algebra-with-one over GF(3), with 3 generators>[128X[104X
     [4X[25Xgap>[125X [27XT := Units( FH );[127X[104X
@@ -840,7 +834,7 @@
   
   [1X4.4-7 PcUnits[101X
   
-  [29X[2XPcUnits[102X( [3XKG[103X ) [32X attribute
+  [33X[1;0Y[29X[2XPcUnits[102X( [3XKG[103X ) [32X attribute[133X
   [6XReturns:[106X  [33X[0;10Ya group given by power-commutator presentation[133X
   
   [33X[0;0YReturns  the  unit  group  of  [3XKG[103X  as  a  direct  product  of  [10XUnits(K)[110X  and
@@ -864,7 +858,7 @@
   
   [1X4.4-8 IsGroupOfUnitsOfMagmaRing[101X
   
-  [29X[2XIsGroupOfUnitsOfMagmaRing[102X( [3XU[103X ) [32X property
+  [33X[1;0Y[29X[2XIsGroupOfUnitsOfMagmaRing[102X( [3XU[103X ) [32X property[133X
   
   [33X[0;0YThis  property  will be automatically set [9Xtrue[109X, if [3XU[103X is a group generated by
   some units of a magma ring, including [10XUnits(KG)[110X and [10XNormalizedUnitgroup(KG)[110X.
@@ -881,7 +875,7 @@
   
   [1X4.4-9 IsUnitGroupOfGroupRing[101X
   
-  [29X[2XIsUnitGroupOfGroupRing[102X( [3XU[103X ) [32X property
+  [33X[1;0Y[29X[2XIsUnitGroupOfGroupRing[102X( [3XU[103X ) [32X property[133X
   
   [33X[0;0YThis  property  will  be automatically set [9Xtrue[109X, if [3XU[103X is the unit group of a
   [22Xp[122X-modular  group  algebra,  obtained  either by [10XUnits(KG)[110X or by [10XPcUnits(KG)[110X.
@@ -898,7 +892,7 @@
   
   [1X4.4-10 IsNormalizedUnitGroupOfGroupRing[101X
   
-  [29X[2XIsNormalizedUnitGroupOfGroupRing[102X( [3XU[103X ) [32X property
+  [33X[1;0Y[29X[2XIsNormalizedUnitGroupOfGroupRing[102X( [3XU[103X ) [32X property[133X
   
   [33X[0;0YThis  property  will  be automatically set [9Xtrue[109X, if [3XU[103X is the normalized unit
   group    of    a    [22Xp[122X-modular    group    algebra,    obtained   either   by
@@ -916,7 +910,7 @@
   
   [1X4.4-11 UnderlyingGroupRing[101X
   
-  [29X[2XUnderlyingGroupRing[102X( [3XU[103X ) [32X attribute
+  [33X[1;0Y[29X[2XUnderlyingGroupRing[102X( [3XU[103X ) [32X attribute[133X
   [6XReturns:[106X  [33X[0;10Ya group ring[133X
   
   [33X[0;0YIf [3XU[103X is the (normalized) unit group of a [22Xp[122X-modular group algebra [22XKG[122X obtained
@@ -939,7 +933,7 @@
   
   [1X4.4-12 UnitarySubgroup[101X
   
-  [29X[2XUnitarySubgroup[102X( [3XU[103X ) [32X attribute
+  [33X[1;0Y[29X[2XUnitarySubgroup[102X( [3XU[103X ) [32X attribute[133X
   [6XReturns:[106X  [33X[0;10Ythe subgroup of the unit group[133X
   
   [33X[0;0YLet  [3XU[103X  be  the normalized unit group of a group ring in either natural (see
@@ -971,7 +965,7 @@
   
   [1X4.4-13 BicyclicUnitGroup[101X
   
-  [29X[2XBicyclicUnitGroup[102X( [3XU[103X ) [32X attribute
+  [33X[1;0Y[29X[2XBicyclicUnitGroup[102X( [3XU[103X ) [32X attribute[133X
   [6XReturns:[106X  [33X[0;10Ythe subgroup of the unit group, generated by bicyclic units[133X
   
   [33X[0;0YLet  [3XU[103X  be  the normalized unit group of a group ring in either natural (see
@@ -994,7 +988,7 @@
     [4X[25Xgap>[125X [27XV := PcNormalizedUnitGroup( KG );[127X[104X
     [4X[28X<pc group of size 128 with 7 generators>[128X[104X
     [4X[25Xgap>[125X [27XBV := BicyclicUnitGroup( V );[127X[104X
-    [4X[28XGroup([ f5*f6, f6*f7 ])[128X[104X
+    [4X[28XGroup([ f5*f6, f5*f7 ])[128X[104X
     [4X[25Xgap>[125X [27XIdGroup( BV );[127X[104X
     [4X[28X[ 4, 2 ][128X[104X
     [4X[25Xgap>[125X [27XImage( NaturalBijectionToPcNormalizedUnitGroup( KG ), BU ) = BV;[127X[104X
@@ -1004,7 +998,7 @@
   
   [1X4.4-14 GroupBases[101X
   
-  [29X[2XGroupBases[102X( [3XKG[103X ) [32X attribute
+  [33X[1;0Y[29X[2XGroupBases[102X( [3XKG[103X ) [32X attribute[133X
   [6XReturns:[106X  [33X[0;10Ya list of lists of group rings elements[133X
   
   [33X[0;0YThe  subgroup  [22XB[122X  of  the  normalized  unit group of the group algebra [22XKG[122X is
@@ -1024,16 +1018,12 @@
     [4X[25Xgap>[125X [27Xgb := GroupBases( KD8 );;[127X[104X
     [4X[25Xgap>[125X [27XLength( gb );[127X[104X
     [4X[28X32[128X[104X
-    [4X[25Xgap>[125X [27Xgb[1];[127X[104X
-    [4X[28X[ (Z(2)^0)*<identity> of ..., (Z(2)^0)*f3,[128X[104X
-    [4X[28X  (Z(2)^0)*f1*f2+(Z(2)^0)*f2*f3+(Z(2)^0)*f1*f2*f3,[128X[104X
-    [4X[28X  (Z(2)^0)*f2+(Z(2)^0)*f1*f2+(Z(2)^0)*f1*f2*f3,[128X[104X
-    [4X[28X  (Z(2)^0)*<identity> of ...+(Z(2)^0)*f2+(Z(2)^0)*f3+(Z(2)^0)*f2*f3+(Z(2)^[128X[104X
-    [4X[28X    0)*f1*f2*f3, (Z(2)^0)*f2+(Z(2)^0)*f1*f3+(Z(2)^0)*f2*f3,[128X[104X
-    [4X[28X  (Z(2)^0)*<identity> of ...+(Z(2)^0)*f2+(Z(2)^0)*f3+(Z(2)^0)*f1*f2+(Z(2)^[128X[104X
-    [4X[28X    0)*f2*f3, (Z(2)^0)*f1+(Z(2)^0)*f2+(Z(2)^0)*f2*f3 ][128X[104X
-    [4X[25Xgap>[125X [27XLength( last );[127X[104X
+    [4X[25Xgap>[125X [27XLength( gb[1] );[127X[104X
     [4X[28X8    [128X[104X
+    [4X[25Xgap>[125X [27Xgb[1][1];[127X[104X
+    [4X[28X(Z(2)^0)*<identity> of ...[128X[104X
+    [4X[25Xgap>[125X [27XForAll(gb, b -> IdGroup(Group(b))=[8,3]);[127X[104X
+    [4X[28Xtrue[128X[104X
     [4X[28X[128X[104X
   [4X[32X[104X
   
@@ -1042,7 +1032,7 @@
   
   [1X4.5-1 LieAlgebraByDomain[101X
   
-  [29X[2XLieAlgebraByDomain[102X( [3XA[103X ) [32X method
+  [33X[1;0Y[29X[2XLieAlgebraByDomain[102X( [3XA[103X ) [32X method[133X
   
   [33X[0;0YThis  method  takes  a  group  algebra  as  its argument, and constructs its
   associated  Lie  algebra  in  which  the  product  is the bracket operation:
@@ -1064,7 +1054,7 @@
   
   [1X4.5-2 IsLieAlgebraByAssociativeAlgebra[101X
   
-  [29X[2XIsLieAlgebraByAssociativeAlgebra[102X( [3XL[103X ) [32X Category
+  [33X[1;0Y[29X[2XIsLieAlgebraByAssociativeAlgebra[102X( [3XL[103X ) [32X Category[133X
   
   [33X[0;0YThis  category  signifies  that the Lie algebra [3XL[103X was constructed as the Lie
   algebra  associated  with  an associative algebra (this piece of information
@@ -1084,7 +1074,7 @@
   
   [1X4.5-3 UnderlyingAssociativeAlgebra[101X
   
-  [29X[2XUnderlyingAssociativeAlgebra[102X( [3XL[103X ) [32X attribute
+  [33X[1;0Y[29X[2XUnderlyingAssociativeAlgebra[102X( [3XL[103X ) [32X attribute[133X
   [6XReturns:[106X  [33X[0;10Ythe underlying associative algebra of a Lie algebra[133X
   
   [33X[0;0YIf  a  Lie  algebra  [3XL[103X  is  constructed from an associative algebra, then it
@@ -1106,7 +1096,7 @@
   
   [1X4.5-4 NaturalBijectionToLieAlgebra[101X
   
-  [29X[2XNaturalBijectionToLieAlgebra[102X( [3XA[103X ) [32X attribute
+  [33X[1;0Y[29X[2XNaturalBijectionToLieAlgebra[102X( [3XA[103X ) [32X attribute[133X
   [6XReturns:[106X  [33X[0;10Ya mapping[133X
   
   [33X[0;0YThe  natural  linear  bijection  between  the  (isomorphic,  but  not equal)
@@ -1123,11 +1113,11 @@
     [4X[25Xgap>[125X [27Xt := NaturalBijectionToLieAlgebra( FG );; [127X[104X
     [4X[28X#I  LAGUNA package: Constructing Lie algebra ...[128X[104X
     [4X[25Xgap>[125X [27Xa := Random( FG );[127X[104X
-    [4X[28X(Z(2)^0)*(1,2,3)+(Z(2)^0)*(1,3,2)+(Z(2)^0)*(1,3)[128X[104X
+    [4X[28X(Z(2)^0)*()+(Z(2)^0)*(2,3)+(Z(2)^0)*(1,2)+(Z(2)^0)*(1,2,3)[128X[104X
     [4X[25Xgap>[125X [27Xa * a;                     # product in the associative algebra[127X[104X
-    [4X[28X(Z(2)^0)*()+(Z(2)^0)*(1,2,3)+(Z(2)^0)*(1,3,2)[128X[104X
+    [4X[28X(Z(2)^0)*()+(Z(2)^0)*(2,3)+(Z(2)^0)*(1,2)+(Z(2)^0)*(1,2,3)[128X[104X
     [4X[25Xgap>[125X [27Xb := a^t;[127X[104X
-    [4X[28XLieObject( (Z(2)^0)*(1,2,3)+(Z(2)^0)*(1,3,2)+(Z(2)^0)*(1,3) )[128X[104X
+    [4X[28XLieObject( (Z(2)^0)*()+(Z(2)^0)*(2,3)+(Z(2)^0)*(1,2)+(Z(2)^0)*(1,2,3) )[128X[104X
     [4X[25Xgap>[125X [27Xb * b; # product in the Lie algebra (commutator) - must be zero![127X[104X
     [4X[28XLieObject( <zero> of ... )[128X[104X
     [4X[28X[128X[104X
@@ -1135,7 +1125,7 @@
   
   [1X4.5-5 NaturalBijectionToAssociativeAlgebra[101X
   
-  [29X[2XNaturalBijectionToAssociativeAlgebra[102X( [3XL[103X ) [32X attribute
+  [33X[1;0Y[29X[2XNaturalBijectionToAssociativeAlgebra[102X( [3XL[103X ) [32X attribute[133X
   
   [33X[0;0YThis is the inverse of the previous linear bijection, stored as an attribute
   of the Lie algebra [3XL[103X.[133X
@@ -1156,7 +1146,7 @@
   
   [1X4.5-6 IsLieAlgebraOfGroupRing[101X
   
-  [29X[2XIsLieAlgebraOfGroupRing[102X( [3XL[103X ) [32X property
+  [33X[1;0Y[29X[2XIsLieAlgebraOfGroupRing[102X( [3XL[103X ) [32X property[133X
   
   [33X[0;0YIf  a Lie algebra [3XL[103X is constructed from an associative algebra which happens
   to be in fact a group ring, it has many nice properties that can be used for
@@ -1178,7 +1168,7 @@
   
   [1X4.5-7 UnderlyingGroup[101X
   
-  [29X[2XUnderlyingGroup[102X( [3XL[103X ) [32X attribute
+  [33X[1;0Y[29X[2XUnderlyingGroup[102X( [3XL[103X ) [32X attribute[133X
   [6XReturns:[106X  [33X[0;10Ythe underlying group[133X
   
   [33X[0;0YThe  underlying  group  of  a Lie algebra [3XL[103X that is constructed from a group
@@ -1203,7 +1193,7 @@
   
   [1X4.5-8 Embedding[101X
   
-  [29X[2XEmbedding[102X( [3XU[103X, [3XL[103X ) [32X operation
+  [33X[1;0Y[29X[2XEmbedding[102X( [3XU[103X, [3XL[103X ) [32X operation[133X
   [6XReturns:[106X  [33X[0;10Ya mapping, which is a composition of two mappings[133X
   
   [33X[0;0YLet  [22XFG[122X  be  a  group  ring,  let [3XU[103X be a submagma of [22XG[122X, and let [3XL[103X be the Lie
@@ -1228,7 +1218,7 @@
   
   [1X4.5-9 LieCentre[101X
   
-  [29X[2XLieCentre[102X( [3XL[103X ) [32X method
+  [33X[1;0Y[29X[2XLieCentre[102X( [3XL[103X ) [32X method[133X
   [6XReturns:[106X  [33X[0;10Ya Lie algebra[133X
   
   [33X[0;0YThe  centre  of  the Lie algebra associated with a group ring corresponds to
@@ -1260,7 +1250,7 @@
   
   [1X4.5-10 LieDerivedSubalgebra[101X
   
-  [29X[2XLieDerivedSubalgebra[102X( [3XL[103X ) [32X method
+  [33X[1;0Y[29X[2XLieDerivedSubalgebra[102X( [3XL[103X ) [32X method[133X
   [6XReturns:[106X  [33X[0;10Ya Lie algebra[133X
   
   [33X[0;0YIf  [3XL[103X  is  the  Lie  algebra  associated with a group ring, then this method
@@ -1291,7 +1281,7 @@
   
   [1X4.5-11 IsLieAbelian[101X
   
-  [29X[2XIsLieAbelian[102X( [3XL[103X ) [32X method
+  [33X[1;0Y[29X[2XIsLieAbelian[102X( [3XL[103X ) [32X method[133X
   
   [33X[0;0YThe Lie algebra [3XL[103X of an associative algebra [22XA[122X is Lie abelian, if and only if
   [22XA[122X is abelian, so this method refers to [10XIsAbelian( A )[110X.[133X
@@ -1315,7 +1305,7 @@
   
   [1X4.5-12 IsLieSolvable[101X
   
-  [29X[2XIsLieSolvable[102X( [3XL[103X ) [32X method
+  [33X[1;0Y[29X[2XIsLieSolvable[102X( [3XL[103X ) [32X method[133X
   
   [33X[0;0YIn [PPS73] Passi, Passman, and Sehgal have classified all groups [22XG[122X such that
   the Lie algebra associated with the group ring is solvable. This method uses
@@ -1341,7 +1331,7 @@
   
   [1X4.5-13 IsLieNilpotent[101X
   
-  [29X[2XIsLieNilpotent[102X( [3XL[103X ) [32X method
+  [33X[1;0Y[29X[2XIsLieNilpotent[102X( [3XL[103X ) [32X method[133X
   
   [33X[0;0YIn [PPS73] Passi, Passman, and Sehgal have classified all groups [22XG[122X such that
   the Lie algebra associated with the group ring is Lie nilpotent. This method
@@ -1367,7 +1357,7 @@
   
   [1X4.5-14 IsLieMetabelian[101X
   
-  [29X[2XIsLieMetabelian[102X( [3XL[103X ) [32X property
+  [33X[1;0Y[29X[2XIsLieMetabelian[102X( [3XL[103X ) [32X property[133X
   
   [33X[0;0YIn  [LR86]  Levin and Rosenberger have classified all groups [22XG[122X such that the
   Lie  algebra  associated  with the group ring is Lie metabelian. This method
@@ -1389,7 +1379,7 @@
   
   [1X4.5-15 IsLieCentreByMetabelian[101X
   
-  [29X[2XIsLieCentreByMetabelian[102X( [3XL[103X ) [32X property
+  [33X[1;0Y[29X[2XIsLieCentreByMetabelian[102X( [3XL[103X ) [32X property[133X
   
   [33X[0;0YIn  [Ros02]  the  third  author of this package classified all groups [22XG[122X such
   that   the   Lie   algebra   associated   with   the   group   ring  is  Lie
@@ -1414,7 +1404,7 @@
   
   [1X4.5-16 CanonicalBasis[101X
   
-  [29X[2XCanonicalBasis[102X( [3XL[103X ) [32X method
+  [33X[1;0Y[29X[2XCanonicalBasis[102X( [3XL[103X ) [32X method[133X
   [6XReturns:[106X  [33X[0;10Ybasis of a Lie algebra[133X
   
   [33X[0;0YThe  canonical  basis  of a group algebra [22XFG[122X is formed by the elements of [22XG[122X.
@@ -1440,7 +1430,7 @@
   
   [1X4.5-17 IsBasisOfLieAlgebraOfGroupRing[101X
   
-  [29X[2XIsBasisOfLieAlgebraOfGroupRing[102X( [3XB[103X ) [32X property
+  [33X[1;0Y[29X[2XIsBasisOfLieAlgebraOfGroupRing[102X( [3XB[103X ) [32X property[133X
   
   [33X[0;0YA  basis  [3XB[103X  has  this property if the preimages of the basis vectors in the
   group algebra form a group. It can be verified if a basis has this property.
@@ -1464,7 +1454,7 @@
   
   [1X4.5-18 StructureConstantsTable[101X
   
-  [29X[2XStructureConstantsTable[102X( [3XB[103X ) [32X method
+  [33X[1;0Y[29X[2XStructureConstantsTable[102X( [3XB[103X ) [32X method[133X
   
   [33X[0;0YA very fast implementation for calculating the structure constants table for
   the Lie algebra [10XL[110X associated with a group ring with respect to its canonical
@@ -1489,7 +1479,7 @@
   
   [1X4.5-19 LieUpperNilpotencyIndex[101X
   
-  [29X[2XLieUpperNilpotencyIndex[102X( [3XKG[103X ) [32X attribute
+  [33X[1;0Y[29X[2XLieUpperNilpotencyIndex[102X( [3XKG[103X ) [32X attribute[133X
   
   [33X[0;0YIn  a  modular  group  algebra  [22XKG[122X  the [13Xupper Lie power series[113X is defined as
   follows:   [22XKG^(1)=KG[122X,  [22XKG^(n+1)[122X  is  the  associative  ideal,  generated  by
@@ -1511,7 +1501,7 @@
   
   [1X4.5-20 LieLowerNilpotencyIndex[101X
   
-  [29X[2XLieLowerNilpotencyIndex[102X( [3XKG[103X ) [32X attribute
+  [33X[1;0Y[29X[2XLieLowerNilpotencyIndex[102X( [3XKG[103X ) [32X attribute[133X
   
   [33X[0;0YIn  a  modular  group  algebra  [22XKG[122X  the [13Xlower Lie power series[113X is defined as
   follows:  [22XKG^[n][122X  is  the  associative ideal, generated by all (left-normed)
@@ -1538,7 +1528,7 @@
   
   [1X4.5-21 LieDerivedLength[101X
   
-  [29X[2XLieDerivedLength[102X( [3XL[103X ) [32X attribute
+  [33X[1;0Y[29X[2XLieDerivedLength[102X( [3XL[103X ) [32X attribute[133X
   
   [33X[0;0YLet  [22XL[122X  be a Lie algebra. The [13XLie derived series[113X of [22XL[122X is defined as follows:
   [22Xδ^[0](L)  =  L[122X  and  [22Xδ^[n](L)  =  [δ^[n-1](L),  δ^[n-1](L)][122X. [22XL[122X is called Lie
@@ -1563,7 +1553,7 @@
   
   [1X4.6-1 SubgroupsOfIndexTwo[101X
   
-  [29X[2XSubgroupsOfIndexTwo[102X( [3XG[103X ) [32X attribute
+  [33X[1;0Y[29X[2XSubgroupsOfIndexTwo[102X( [3XG[103X ) [32X attribute[133X
   
   [33X[0;0YReturns  a  list  of  subgroups  of  [22XG[122X  with  index  two. Such subgroups are
   important for the investigation of the Lie structure of the group algebra [22XKG[122X
@@ -1578,7 +1568,7 @@
   
   [1X4.6-2 DihedralDepth[101X
   
-  [29X[2XDihedralDepth[102X( [3XU[103X ) [32X method
+  [33X[1;0Y[29X[2XDihedralDepth[102X( [3XU[103X ) [32X method[133X
   
   [33X[0;0YFor  a  finite  2-group [3XU[103X, the function returns its [13Xdihedral depth[113X, which is
   defined  to  be  the  maximal  number  [22Xd[122X  such  that  [3XU[103X  contains a subgroup
@@ -1597,7 +1587,7 @@
   
   [1X4.6-3 DimensionBasis[101X
   
-  [29X[2XDimensionBasis[102X( [3XG[103X ) [32X method
+  [33X[1;0Y[29X[2XDimensionBasis[102X( [3XG[103X ) [32X method[133X
   [6XReturns:[106X  [33X[0;10Yrecord  with  two  components:  `dimensionBasis'  (list  of  group
             elements) and `weights' (list of weights)[133X
   
@@ -1615,7 +1605,7 @@
   
   [1X4.6-4 LieDimensionSubgroups[101X
   
-  [29X[2XLieDimensionSubgroups[102X( [3XG[103X ) [32X attribute
+  [33X[1;0Y[29X[2XLieDimensionSubgroups[102X( [3XG[103X ) [32X attribute[133X
   [6XReturns:[106X  [33X[0;10Ylist of subgroups[133X
   
   [33X[0;0YFor  a  finite [22Xp[122X-group [3XG[103X, returns the series of its Lie dimension subgroups.
@@ -1635,8 +1625,8 @@
   
   [1X4.6-5 LieUpperCodimensionSeries[101X
   
-  [29X[2XLieUpperCodimensionSeries[102X( [3XKG[103X ) [32X attribute
-  [29X[2XLieUpperCodimensionSeries[102X( [3XG[103X ) [32X attribute
+  [33X[1;0Y[29X[2XLieUpperCodimensionSeries[102X( [3XKG[103X ) [32X attribute[133X
+  [33X[1;0Y[29X[2XLieUpperCodimensionSeries[102X( [3XG[103X ) [32X attribute[133X
   [6XReturns:[106X  [33X[0;10Ylist of subgroups[133X
   
   [33X[0;0YA  notion of upper Lie codimension subgroups was introduced in [CS06]. For a
@@ -1667,7 +1657,7 @@
   
   [1X4.6-6 LAGInfo[101X
   
-  [29X[2XLAGInfo[102X[32X info class
+  [33X[1;0Y[29X[2XLAGInfo[102X[32X info class[133X
   
   [33X[0;0Y[10XLAGInfo[110X is a special Info class for [5XLAGUNA[105X algorithms. It has 5 levels: 0, 1
   (default),   2,   3   and  4.  To  change  info  level  to  [10Xk[110X,  use  command

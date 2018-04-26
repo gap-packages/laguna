@@ -62,10 +62,12 @@ GF(2)
 
 
 <div class="example"><pre>
+
 <span class="GAPprompt">gap&gt;</span> <span class="GAPinput">UnderlyingRing( KG );</span>
 GF(2)
 <span class="GAPprompt">gap&gt;</span> <span class="GAPinput">UnderlyingField( KG );</span>
 GF(2)
+
 </pre></div>
 
 <p>Let us construct a certain element of the group algebra. For example, we take a minimal generating system of the group <code class="code">G</code> and find the corresponding elements in <code class="code">KG</code>.</p>
@@ -115,10 +117,12 @@ Z(2)^0
 
 
 <div class="example"><pre>
+
 <span class="GAPprompt">gap&gt;</span> <span class="GAPinput">Augmentation( x );</span>
 0*Z(2)
 <span class="GAPprompt">gap&gt;</span> <span class="GAPinput">IsUnit( KG, x );</span>
 false
+
 </pre></div>
 
 <p>Since the augmentation of <code class="code">x</code> is zero, <code class="code">x</code> is not invertible, but <code class="code">1+x</code> is. This is again very easy to check.</p>
@@ -182,8 +186,10 @@ true
 
 
 <div class="example"><pre>
+
 <span class="GAPprompt">gap&gt;</span> <span class="GAPinput">AugmentationIdealNilpotencyIndex( KG );</span>
 9
+
 </pre></div>
 
 <p>On the other hand, we can also calculate the powers of the augmentation ideal.</p>
@@ -232,9 +238,11 @@ true
 <span class="GAPprompt">gap&gt;</span> <span class="GAPinput">t := NaturalBijectionToPcNormalizedUnitGroup( KG );</span>
 MappingByFunction( &lt;group of size 32768 with 15 generators&gt;, &lt;pc group of size\
  32768 with 15 generators&gt;, function( x ) ... end )
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">Image(t) = W;</span>
+true
 <span class="GAPprompt">gap&gt;</span> <span class="GAPinput">List( AsList( G ), x -&gt; ( x^Embedding( G, KG ) )^t );</span>
-[ &lt;identity&gt; of ..., f2, f1, f3, f7, f1*f2*f3, f2*f3, f2*f7, f1*f3, f1*f7,
-  f3*f7, f1*f2*f7, f1*f2*f3*f7, f2*f3*f7, f1*f3*f7, f1*f2 ]
+[ &lt;identity&gt; of ..., f1, f2, f4, f8, f1*f2, f1*f4, f1*f8, f2*f4, f2*f8, 
+  f4*f8, f1*f2*f4, f1*f2*f8, f1*f4*f8, f2*f4*f8, f1*f2*f4*f8 ]
 
 </pre></div>
 
@@ -242,24 +250,11 @@ MappingByFunction( &lt;group of size 32768 with 15 generators&gt;, &lt;pc group 
 
 
 <div class="example"><pre>
-<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">f := NaturalBijectionToNormalizedUnitGroup( KG );</span>
-[ f1, f2, f3, f4, f5, f6, f7, f8, f9, f10, f11, f12, f13, f14, f15 ] -&gt;
-[ (Z(2)^0)*f2, (Z(2)^0)*f1, (Z(2)^0)*f3,
-  (Z(2)^0)*f1+(Z(2)^0)*f2+(Z(2)^0)*f1*f2,
-  (Z(2)^0)*f2+(Z(2)^0)*f3+(Z(2)^0)*f2*f3,
-  (Z(2)^0)*f1+(Z(2)^0)*f3+(Z(2)^0)*f1*f3, (Z(2)^0)*f4,
-  (Z(2)^0)*f1+(Z(2)^0)*f2+(Z(2)^0)*f3+(Z(2)^0)*f1*f2+(Z(2)^0)*f1*f3+(Z(2)^
-    0)*f2*f3+(Z(2)^0)*f1*f2*f3, (Z(2)^0)*f2+(Z(2)^0)*f4+(Z(2)^0)*f2*f4,
-  (Z(2)^0)*f1+(Z(2)^0)*f4+(Z(2)^0)*f1*f4,
-  (Z(2)^0)*f3+(Z(2)^0)*f4+(Z(2)^0)*f3*f4,
-  (Z(2)^0)*f1+(Z(2)^0)*f2+(Z(2)^0)*f4+(Z(2)^0)*f1*f2+(Z(2)^0)*f1*f4+(Z(2)^
-    0)*f2*f4+(Z(2)^0)*f1*f2*f4, (Z(2)^0)*f2+(Z(2)^0)*f3+(Z(2)^0)*f4+(Z(2)^
-    0)*f2*f3+(Z(2)^0)*f2*f4+(Z(2)^0)*f3*f4+(Z(2)^0)*f2*f3*f4,
-  (Z(2)^0)*f1+(Z(2)^0)*f3+(Z(2)^0)*f4+(Z(2)^0)*f1*f3+(Z(2)^0)*f1*f4+(Z(2)^
-    0)*f3*f4+(Z(2)^0)*f1*f3*f4, (Z(2)^0)*f1+(Z(2)^0)*f2+(Z(2)^0)*f3+(Z(2)^
-    0)*f4+(Z(2)^0)*f1*f2+(Z(2)^0)*f1*f3+(Z(2)^0)*f1*f4+(Z(2)^0)*f2*f3+(Z(2)^
-    0)*f2*f4+(Z(2)^0)*f3*f4+(Z(2)^0)*f1*f2*f3+(Z(2)^0)*f1*f2*f4+(Z(2)^
-    0)*f1*f3*f4+(Z(2)^0)*f2*f3*f4+(Z(2)^0)*f1*f2*f3*f4 ]
+
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">f := NaturalBijectionToNormalizedUnitGroup( KG );;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">Image(f) = V;</span>
+true
+
 </pre></div>
 
 <p>For example, we may calculate the conjugacy classes of the group <code class="code">W</code>, and then map their representatives back into the group algebra.</p>
@@ -271,11 +266,10 @@ MappingByFunction( &lt;group of size 32768 with 15 generators&gt;, &lt;pc group 
 <span class="GAPprompt">gap&gt;</span> <span class="GAPinput">Length( cc );</span>
 848
 <span class="GAPprompt">gap&gt;</span> <span class="GAPinput">Representative( cc[ Length( cc ) ] );</span>
-f1*f2*f4*f6*f12*f15
+f1*f2*f3*f6*f10*f13
 <span class="GAPprompt">gap&gt;</span> <span class="GAPinput">last^f;</span>
-(Z(2)^0)*&lt;identity&gt; of ...+(Z(2)^0)*f2+(Z(2)^0)*f4+(Z(2)^0)*f1*f2+(Z(2)^
-0)*f1*f3+(Z(2)^0)*f1*f4+(Z(2)^0)*f2*f3+(Z(2)^0)*f2*f4+(Z(2)^0)*f3*f4+(Z(2)^
-0)*f1*f2*f3+(Z(2)^0)*f1*f3*f4
+(Z(2)^0)*&lt;identity&gt; of ...+(Z(2)^0)*f1*f2+(Z(2)^0)*f1*f3+(Z(2)^0)*f1*f4+(Z(2)^
+0)*f2*f3+(Z(2)^0)*f1*f2*f3+(Z(2)^0)*f1*f3*f4
 
 </pre></div>
 
@@ -285,11 +279,11 @@ f1*f2*f4*f6*f12*f15
 <div class="example"><pre>
 
 <span class="GAPprompt">gap&gt;</span> <span class="GAPinput">LowerCentralSeries( W );</span>
-[ &lt;pc group of size 32768 with 15 generators&gt;,
-  Group([ f3, f5*f8*f10*f12*f13*f14*f15, f6*f8*f12*f14*f15, f7, f9*f12,
-      f10*f14, f11*f13, f13*f14, f14*f15 ]),
-  Group([ f7, f9*f12, f10*f15, f11*f15, f13*f15, f14*f15 ]),
-  Group([ f11*f15, f13*f15, f14*f15 ]), Group([ &lt;identity&gt; of ... ]) ]
+[ &lt;pc group of size 32768 with 15 generators&gt;, 
+  Group([ f4*f8, f5*f7*f11*f13*f15, f6*f7*f9*f11*f13*f14*f15, f8, f9*f13, 
+      f10*f11, f12*f13, f13*f15, f14*f15 ]), 
+  Group([ f8, f9*f15, f10*f11, f12*f15, f13*f15, f14*f15 ]), 
+  Group([ f12*f15, f13*f15, f14*f15 ]), Group([ &lt;identity&gt; of ... ]) ]
 
 </pre></div>
 
@@ -298,23 +292,22 @@ f1*f2*f4*f6*f12*f15
 
 <div class="example"><pre>
 
-<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">C := Centre( W );</span>
-Group([ f3*f5*f13*f15, f7, f15, f13*f15, f14*f15, f11*f13*f14*f15 ])
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">C := Centre( W );;</span>
 <span class="GAPprompt">gap&gt;</span> <span class="GAPinput">m := MinimalGeneratingSet( C );</span>
-[ f7*f13*f14*f15, f13*f14*f15, f7*f11*f14*f15, f15, f3*f5*f14 ]
+[ f8*f13*f14*f15, f13*f14*f15, f8*f12*f14*f15, f15, f4*f6*f8*f13 ]
 <span class="GAPprompt">gap&gt;</span> <span class="GAPinput">List( m, g -&gt; g^f );</span>
 [ (Z(2)^0)*&lt;identity&gt; of ...+(Z(2)^0)*f3+(Z(2)^0)*f1*f2+(Z(2)^0)*f3*f4+(Z(2)^
-    0)*f1*f2*f3+(Z(2)^0)*f1*f2*f4+(Z(2)^0)*f1*f2*f3*f4,
+    0)*f1*f2*f3+(Z(2)^0)*f1*f2*f4+(Z(2)^0)*f1*f2*f3*f4, 
   (Z(2)^0)*f3+(Z(2)^0)*f4+(Z(2)^0)*f1*f2+(Z(2)^0)*f3*f4+(Z(2)^0)*f1*f2*f3+(
     Z(2)^0)*f1*f2*f4+(Z(2)^0)*f1*f2*f3*f4, (Z(2)^0)*&lt;identity&gt; of ...+(Z(2)^
-    0)*f2+(Z(2)^0)*f3+(Z(2)^0)*f1*f2+(Z(2)^0)*f2*f3+(Z(2)^0)*f2*f4+(Z(2)^
-    0)*f3*f4+(Z(2)^0)*f1*f2*f3+(Z(2)^0)*f1*f2*f4+(Z(2)^0)*f2*f3*f4+(Z(2)^
+    0)*f1+(Z(2)^0)*f3+(Z(2)^0)*f1*f2+(Z(2)^0)*f1*f3+(Z(2)^0)*f1*f4+(Z(2)^
+    0)*f3*f4+(Z(2)^0)*f1*f2*f3+(Z(2)^0)*f1*f2*f4+(Z(2)^0)*f1*f3*f4+(Z(2)^
     0)*f1*f2*f3*f4, (Z(2)^0)*f1+(Z(2)^0)*f2+(Z(2)^0)*f3+(Z(2)^0)*f4+(Z(2)^
     0)*f1*f2+(Z(2)^0)*f1*f3+(Z(2)^0)*f1*f4+(Z(2)^0)*f2*f3+(Z(2)^0)*f2*f4+(
     Z(2)^0)*f3*f4+(Z(2)^0)*f1*f2*f3+(Z(2)^0)*f1*f2*f4+(Z(2)^0)*f1*f3*f4+(Z(2)^
-    0)*f2*f3*f4+(Z(2)^0)*f1*f2*f3*f4, (Z(2)^0)*&lt;identity&gt; of ...+(Z(2)^0)*f1+(
-    Z(2)^0)*f3+(Z(2)^0)*f1*f3+(Z(2)^0)*f1*f4+(Z(2)^0)*f2*f3+(Z(2)^0)*f2*f4+(
-    Z(2)^0)*f3*f4+(Z(2)^0)*f1*f3*f4 ]
+    0)*f2*f3*f4+(Z(2)^0)*f1*f2*f3*f4, (Z(2)^0)*f1+(Z(2)^0)*f2+(Z(2)^0)*f3+(
+    Z(2)^0)*f4+(Z(2)^0)*f1*f3+(Z(2)^0)*f1*f4+(Z(2)^0)*f3*f4+(Z(2)^
+    0)*f1*f3*f4+(Z(2)^0)*f2*f3*f4 ]
 
 </pre></div>
 
