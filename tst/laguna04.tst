@@ -219,10 +219,10 @@ true
 gap> KG := GroupRing( GF( 2 ), ElementaryAbelianGroup( 4 ) );
 <algebra-with-one over GF(2), with 2 generators>
 gap> WeightedBasis( KG );
-rec(
-  weightedBasis := [ (Z(2)^0)*<identity> of ...+(Z(2)^0)*f2,
-      (Z(2)^0)*<identity> of ...+(Z(2)^0)*f1,
-      (Z(2)^0)*<identity> of ...+(Z(2)^0)*f1+(Z(2)^0)*f2+(Z(2)^0)*f1*f2 ],
+rec( 
+  weightedBasis := [ (Z(2)^0)*<identity> of ...+(Z(2)^0)*f1, 
+      (Z(2)^0)*<identity> of ...+(Z(2)^0)*f2, 
+      (Z(2)^0)*<identity> of ...+(Z(2)^0)*f1+(Z(2)^0)*f2+(Z(2)^0)*f1*f2 ], 
   weights := [ 1, 1, 2 ] )
 
 # laguna/doc/funct.xml:794-807
@@ -286,7 +286,7 @@ gap> KG := GroupRing( GF( 2 ), DihedralGroup( 16 ) );
 gap> V := NormalizedUnitGroup( KG );
 <group of size 32768 with 15 generators>
 gap> u := GeneratorsOfGroup( V )[4];
-(Z(2)^0)*f1+(Z(2)^0)*f2+(Z(2)^0)*f1*f2  
+(Z(2)^0)*f3  
 
 # laguna/doc/funct.xml:973-980
 
@@ -311,7 +311,7 @@ true
 gap> t := NaturalBijectionToNormalizedUnitGroup(KG);;
 gap> w := GeneratorsOfGroup(W)[4];;
 gap> w^t;
-(Z(2)^0)*f1+(Z(2)^0)*f2+(Z(2)^0)*f1*f2    
+(Z(2)^0)*f3    
 gap> GeneratorsOfGroup( W )[4]^t = GeneratorsOfGroup( V )[4];
 true     
 
@@ -325,11 +325,11 @@ gap> V:=PcNormalizedUnitGroup( KG );
 <pc group of size 32768 with 15 generators>
 gap> ucs := UpperCentralSeries( V );;
 gap> f := Embedding( G, V );
-[ f1, f2, f3, f4 ] -> [ f2, f1, f3, f7 ]
+[ f1, f2, f3, f4 ] -> [ f1, f2, f4, f8 ]
 gap> G1 := Image( f, G ); 
-Group([ f2, f1, f3, f7 ])
+Group([ f1, f2, f4, f8 ])
 gap> H := Intersection( ucs[2], G1 ); # compute intersection in V(KG)
-Group([ f3, f7, f3*f7 ])
+Group([ f4, f8, f4*f8 ])
 gap> T:=PreImage( f, H );             # find its preimage in G
 Group([ f3, f4, f3*f4 ])
 gap> IdGroup( T ); 
@@ -341,7 +341,7 @@ gap> U := Units( KG );
 #I  LAGUNA package: Computing the unit group ...
 <group of size 32768 with 15 generators>
 gap> GeneratorsOfGroup( U )[5]; # now elements of U are already in KG
-(Z(2)^0)*f2+(Z(2)^0)*f3+(Z(2)^0)*f2*f3
+(Z(2)^0)*f1+(Z(2)^0)*f3+(Z(2)^0)*f1*f3
 gap> FH := GroupRing( GF(3), SmallGroup(27,3) );
 <algebra-with-one over GF(3), with 3 generators>
 gap> T := Units( FH );
@@ -431,7 +431,7 @@ gap> IdGroup( BU );
 gap> V := PcNormalizedUnitGroup( KG );
 <pc group of size 128 with 7 generators>
 gap> BV := BicyclicUnitGroup( V );
-Group([ f5*f6, f6*f7 ])
+Group([ f5*f6, f5*f7 ])
 gap> IdGroup( BV );
 [ 4, 2 ]
 gap> Image( NaturalBijectionToPcNormalizedUnitGroup( KG ), BU ) = BV;
@@ -494,11 +494,11 @@ Sym( [ 1 .. 3 ] )
 gap> t := NaturalBijectionToLieAlgebra( FG );; 
 #I  LAGUNA package: Constructing Lie algebra ...
 gap> a := Random( FG );
-(Z(2)^0)*(1,2,3)+(Z(2)^0)*(1,3,2)+(Z(2)^0)*(1,3)
+(Z(2)^0)*()+(Z(2)^0)*(2,3)+(Z(2)^0)*(1,2)+(Z(2)^0)*(1,2,3)
 gap> a * a;                     # product in the associative algebra
-(Z(2)^0)*()+(Z(2)^0)*(1,2,3)+(Z(2)^0)*(1,3,2)
+(Z(2)^0)*()+(Z(2)^0)*(2,3)+(Z(2)^0)*(1,2)+(Z(2)^0)*(1,2,3)
 gap> b := a^t;
-LieObject( (Z(2)^0)*(1,2,3)+(Z(2)^0)*(1,3,2)+(Z(2)^0)*(1,3) )
+LieObject( (Z(2)^0)*()+(Z(2)^0)*(2,3)+(Z(2)^0)*(1,2)+(Z(2)^0)*(1,2,3) )
 gap> b * b; # product in the Lie algebra (commutator) - must be zero!
 LieObject( <zero> of ... )
 

@@ -659,7 +659,7 @@ InstallMethod( WeightedBasis,
     [ IsPModularGroupAlgebra ],
     0,
     function(KG)
-        local G, gens, jb, jw, i, k, wb, wbe, c, emb, weight, weights;
+        local G, gens, jb, jw, i, k, wb, wbe, c, emb, weight, weights, pos;
      
         Info(LAGInfo, 2, "LAGInfo: Calculating weighted basis ..." );
          
@@ -690,8 +690,16 @@ InstallMethod( WeightedBasis,
                 Add( wb, wbe );
                 Add( weights, weight );
             od;
-                 
+
+            # Order elements of the weighted basis by their weights.
+            # Then fix the ordering of elements of the same weight
             SortParallel( weights, wb );
+            for k in [ 1 .. Maximum( weights) ] do
+              pos := Positions(weights,k);
+              if Length(pos) > 1 then
+                wb{pos}:=AsSSortedList(wb{pos});
+              fi;
+            od;
                  
             Info(LAGInfo, 2, "LAGInfo: Weighted basis finished !" );
                  

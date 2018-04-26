@@ -134,8 +134,8 @@ MappingByFunction( <group of size 32768 with 15 generators>, <pc group of size\
 gap> Image(t) = W;
 true
 gap> List( AsList( G ), x -> ( x^Embedding( G, KG ) )^t );
-[ <identity> of ..., f2, f1, f3, f7, f1*f2*f3, f2*f3, f2*f7, f1*f3, f1*f7,
-  f3*f7, f1*f2*f7, f1*f2*f3*f7, f2*f3*f7, f1*f3*f7, f1*f2 ]
+[ <identity> of ..., f1, f2, f4, f8, f1*f2, f1*f4, f1*f8, f2*f4, f2*f8, 
+  f4*f8, f1*f2*f4, f1*f2*f8, f1*f4*f8, f2*f4*f8, f1*f2*f4*f8 ]
 
 # laguna/doc/example.xml:254-260
 
@@ -143,47 +143,46 @@ gap> f := NaturalBijectionToNormalizedUnitGroup( KG );;
 gap> Image(f) = V;
 true
 
-# laguna/doc/example.xml:265-277
+# laguna/doc/example.xml:265-276
 
 gap> cc := ConjugacyClasses( W );;
 gap> Length( cc );
 848
 gap> Representative( cc[ Length( cc ) ] );
-f1*f2*f4*f6*f12*f15
+f1*f2*f3*f6*f10*f13
 gap> last^f;
-(Z(2)^0)*<identity> of ...+(Z(2)^0)*f2+(Z(2)^0)*f4+(Z(2)^0)*f1*f2+(Z(2)^
-0)*f1*f3+(Z(2)^0)*f1*f4+(Z(2)^0)*f2*f3+(Z(2)^0)*f2*f4+(Z(2)^0)*f3*f4+(Z(2)^
-0)*f1*f2*f3+(Z(2)^0)*f1*f3*f4
+(Z(2)^0)*<identity> of ...+(Z(2)^0)*f1*f2+(Z(2)^0)*f1*f3+(Z(2)^0)*f1*f4+(Z(2)^
+0)*f2*f3+(Z(2)^0)*f1*f2*f3+(Z(2)^0)*f1*f3*f4
 
-# laguna/doc/example.xml:283-292
+# laguna/doc/example.xml:282-291
 
 gap> LowerCentralSeries( W );
-[ <pc group of size 32768 with 15 generators>,
-  Group([ f3, f5*f8*f10*f12*f13*f14*f15, f6*f8*f12*f14*f15, f7, f9*f12,
-      f10*f14, f11*f13, f13*f14, f14*f15 ]),
-  Group([ f7, f9*f12, f10*f15, f11*f15, f13*f15, f14*f15 ]),
-  Group([ f11*f15, f13*f15, f14*f15 ]), Group([ <identity> of ... ]) ]
+[ <pc group of size 32768 with 15 generators>, 
+  Group([ f4*f8, f5*f7*f11*f13*f15, f6*f7*f9*f11*f13*f14*f15, f8, f9*f13, 
+      f10*f11, f12*f13, f13*f15, f14*f15 ]), 
+  Group([ f8, f9*f15, f10*f11, f12*f15, f13*f15, f14*f15 ]), 
+  Group([ f12*f15, f13*f15, f14*f15 ]), Group([ <identity> of ... ]) ]
 
-# laguna/doc/example.xml:301-320
+# laguna/doc/example.xml:300-319
 
 gap> C := Centre( W );;
 gap> m := MinimalGeneratingSet( C );
-[ f7*f13*f14*f15, f13*f14*f15, f7*f11*f14*f15, f15, f3*f5*f14 ]
+[ f8*f13*f14*f15, f13*f14*f15, f8*f12*f14*f15, f15, f4*f6*f8*f13 ]
 gap> List( m, g -> g^f );
 [ (Z(2)^0)*<identity> of ...+(Z(2)^0)*f3+(Z(2)^0)*f1*f2+(Z(2)^0)*f3*f4+(Z(2)^
-    0)*f1*f2*f3+(Z(2)^0)*f1*f2*f4+(Z(2)^0)*f1*f2*f3*f4,
+    0)*f1*f2*f3+(Z(2)^0)*f1*f2*f4+(Z(2)^0)*f1*f2*f3*f4, 
   (Z(2)^0)*f3+(Z(2)^0)*f4+(Z(2)^0)*f1*f2+(Z(2)^0)*f3*f4+(Z(2)^0)*f1*f2*f3+(
     Z(2)^0)*f1*f2*f4+(Z(2)^0)*f1*f2*f3*f4, (Z(2)^0)*<identity> of ...+(Z(2)^
-    0)*f2+(Z(2)^0)*f3+(Z(2)^0)*f1*f2+(Z(2)^0)*f2*f3+(Z(2)^0)*f2*f4+(Z(2)^
-    0)*f3*f4+(Z(2)^0)*f1*f2*f3+(Z(2)^0)*f1*f2*f4+(Z(2)^0)*f2*f3*f4+(Z(2)^
+    0)*f1+(Z(2)^0)*f3+(Z(2)^0)*f1*f2+(Z(2)^0)*f1*f3+(Z(2)^0)*f1*f4+(Z(2)^
+    0)*f3*f4+(Z(2)^0)*f1*f2*f3+(Z(2)^0)*f1*f2*f4+(Z(2)^0)*f1*f3*f4+(Z(2)^
     0)*f1*f2*f3*f4, (Z(2)^0)*f1+(Z(2)^0)*f2+(Z(2)^0)*f3+(Z(2)^0)*f4+(Z(2)^
     0)*f1*f2+(Z(2)^0)*f1*f3+(Z(2)^0)*f1*f4+(Z(2)^0)*f2*f3+(Z(2)^0)*f2*f4+(
     Z(2)^0)*f3*f4+(Z(2)^0)*f1*f2*f3+(Z(2)^0)*f1*f2*f4+(Z(2)^0)*f1*f3*f4+(Z(2)^
-    0)*f2*f3*f4+(Z(2)^0)*f1*f2*f3*f4, (Z(2)^0)*<identity> of ...+(Z(2)^0)*f1+(
-    Z(2)^0)*f3+(Z(2)^0)*f1*f3+(Z(2)^0)*f1*f4+(Z(2)^0)*f2*f3+(Z(2)^0)*f2*f4+(
-    Z(2)^0)*f3*f4+(Z(2)^0)*f1*f3*f4 ]
+    0)*f2*f3*f4+(Z(2)^0)*f1*f2*f3*f4, (Z(2)^0)*f1+(Z(2)^0)*f2+(Z(2)^0)*f3+(
+    Z(2)^0)*f4+(Z(2)^0)*f1*f3+(Z(2)^0)*f1*f4+(Z(2)^0)*f3*f4+(Z(2)^
+    0)*f1*f3*f4+(Z(2)^0)*f2*f3*f4 ]
 
-# laguna/doc/example.xml:326-350
+# laguna/doc/example.xml:325-349
 
 gap> L := LieAlgebra( KG );
 #I  LAGUNA package: Constructing Lie algebra ...
