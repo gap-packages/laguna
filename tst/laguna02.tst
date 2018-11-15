@@ -114,7 +114,7 @@ gap> AugmentationIdealPowerSeries( KG );
   <algebra of dimension 11 over GF(2)>, <algebra of dimension 9 over GF(2)>, 
   <algebra of dimension 7 over GF(2)>, <algebra of dimension 5 over GF(2)>, 
   <algebra of dimension 3 over GF(2)>, <algebra of dimension 1 over GF(2)>, 
-  <algebra over GF(2)> ]
+  <algebra of dimension 0 over GF(2)> ]
 
 # laguna/doc/example.xml:208-213
 
