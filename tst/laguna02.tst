@@ -107,26 +107,27 @@ true
 gap> AugmentationIdealNilpotencyIndex( KG );
 9
 
-# laguna/doc/example.xml:186-195
+# laguna/doc/example.xml:186-196
 
-gap> AugmentationIdealPowerSeries( KG );
-[ <algebra of dimension 15 over GF(2)>, <algebra of dimension 13 over GF(2)>, 
-  <algebra of dimension 11 over GF(2)>, <algebra of dimension 9 over GF(2)>, 
-  <algebra of dimension 7 over GF(2)>, <algebra of dimension 5 over GF(2)>, 
-  <algebra of dimension 3 over GF(2)>, <algebra of dimension 1 over GF(2)>, 
-  <algebra over GF(2)> ]
+gap> s := AugmentationIdealPowerSeries( KG );;
+gap> s[2];
+<algebra of dimension 13 over GF(2)>
+gap> List(s,Dimension);
+[ 15, 13, 11, 9, 7, 5, 3, 1, 0 ]
+gap> Length(s);
+9
 
-# laguna/doc/example.xml:208-213
+# laguna/doc/example.xml:209-214
 
 gap> V := NormalizedUnitGroup( KG );
 <group of size 32768 with 15 generators>   
 
-# laguna/doc/example.xml:218-223
+# laguna/doc/example.xml:219-224
 
 gap> W := PcNormalizedUnitGroup( KG );
 <pc group of size 32768 with 15 generators>
 
-# laguna/doc/example.xml:237-248
+# laguna/doc/example.xml:238-249
 
 gap> t := NaturalBijectionToPcNormalizedUnitGroup( KG );
 MappingByFunction( <group of size 32768 with 15 generators>, <pc group of size\
@@ -137,13 +138,13 @@ gap> List( AsList( G ), x -> ( x^Embedding( G, KG ) )^t );
 [ <identity> of ..., f1, f2, f4, f8, f1*f2, f1*f4, f1*f8, f2*f4, f2*f8, 
   f4*f8, f1*f2*f4, f1*f2*f8, f1*f4*f8, f2*f4*f8, f1*f2*f4*f8 ]
 
-# laguna/doc/example.xml:254-260
+# laguna/doc/example.xml:255-261
 
 gap> f := NaturalBijectionToNormalizedUnitGroup( KG );;
 gap> Image(f) = V;
 true
 
-# laguna/doc/example.xml:265-276
+# laguna/doc/example.xml:266-277
 
 gap> cc := ConjugacyClasses( W );;
 gap> Length( cc );
@@ -154,7 +155,7 @@ gap> last^f;
 (Z(2)^0)*<identity> of ...+(Z(2)^0)*f1*f2+(Z(2)^0)*f1*f3+(Z(2)^0)*f1*f4+(Z(2)^
 0)*f2*f3+(Z(2)^0)*f1*f2*f3+(Z(2)^0)*f1*f3*f4
 
-# laguna/doc/example.xml:282-291
+# laguna/doc/example.xml:283-292
 
 gap> LowerCentralSeries( W );
 [ <pc group of size 32768 with 15 generators>, 
@@ -163,7 +164,7 @@ gap> LowerCentralSeries( W );
   Group([ f8, f9*f15, f10*f11, f12*f15, f13*f15, f14*f15 ]), 
   Group([ f12*f15, f13*f15, f14*f15 ]), Group([ <identity> of ... ]) ]
 
-# laguna/doc/example.xml:300-319
+# laguna/doc/example.xml:301-320
 
 gap> C := Centre( W );;
 gap> m := MinimalGeneratingSet( C );
@@ -182,7 +183,7 @@ gap> List( m, g -> g^f );
     Z(2)^0)*f4+(Z(2)^0)*f1*f3+(Z(2)^0)*f1*f4+(Z(2)^0)*f3*f4+(Z(2)^
     0)*f1*f3*f4+(Z(2)^0)*f2*f3*f4 ]
 
-# laguna/doc/example.xml:325-349
+# laguna/doc/example.xml:326-350
 
 gap> L := LieAlgebra( KG );
 #I  LAGUNA package: Constructing Lie algebra ...
