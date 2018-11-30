@@ -193,6 +193,9 @@
         ensure that their order does not rely on the treatment of elements
         of the same weight by the sorting algorithm.
 
+3.9.1 (November 2018)
+    * Improved reproducibility of `AugmentationIdealPowerSeries` example.
+
 4.0 (in the development version)
     The large new block related with the Modular Isomorphism Problem (MIP):
     * Computation of MIP-related invariants of p-groups and their modular 
