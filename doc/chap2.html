@@ -197,12 +197,13 @@ true
 
 <div class="example"><pre>
 
-<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">AugmentationIdealPowerSeries( KG );</span>
-[ &lt;algebra of dimension 15 over GF(2)&gt;, &lt;algebra of dimension 13 over GF(2)&gt;, 
-  &lt;algebra of dimension 11 over GF(2)&gt;, &lt;algebra of dimension 9 over GF(2)&gt;, 
-  &lt;algebra of dimension 7 over GF(2)&gt;, &lt;algebra of dimension 5 over GF(2)&gt;, 
-  &lt;algebra of dimension 3 over GF(2)&gt;, &lt;algebra of dimension 1 over GF(2)&gt;, 
-  &lt;algebra over GF(2)&gt; ]
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">s := AugmentationIdealPowerSeries( KG );;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">s[2];</span>
+&lt;algebra of dimension 13 over GF(2)&gt;
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">List(s,Dimension);</span>
+[ 15, 13, 11, 9, 7, 5, 3, 1, 0 ]
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">Length(s);</span>
+9
 
 </pre></div>
 
