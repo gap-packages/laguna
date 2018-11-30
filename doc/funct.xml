@@ -795,14 +795,13 @@ rec(
 <![CDATA[
 gap> KG := GroupRing( GF( 2 ), DihedralGroup( 16 ) );
 <algebra-with-one over GF(2), with 4 generators>
-gap> AugmentationIdealPowerSeries( KG );
-[ <algebra of dimension 15 over GF(2)>, <algebra of dimension 13 over GF(2)>,
-  <algebra of dimension 11 over GF(2)>, <algebra of dimension 9 over GF(2)>,
-  <algebra of dimension 7 over GF(2)>, <algebra of dimension 5 over GF(2)>,
-  <algebra of dimension 3 over GF(2)>, <algebra of dimension 1 over GF(2)>,
-  <algebra over GF(2)> ]
-gap> Length(last);
-9      
+gap> s := AugmentationIdealPowerSeries( KG );;
+gap> s[2];
+<algebra of dimension 13 over GF(2)>
+gap> List(s,Dimension);
+[ 15, 13, 11, 9, 7, 5, 3, 1, 0 ]
+gap> Length(s);
+9
 ]]>
 </Example>
 
