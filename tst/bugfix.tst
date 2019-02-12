@@ -25,5 +25,15 @@ false
 gap> (g.1^emb)^f; ((g.1^2)^emb)^f;
 f1
 f1^2
+
+# 2019/02/12 (Reported by Gábor Horváth)
+gap> fg := GroupRing(GF(4), DihedralGroup(8));;
+gap> x := (Z(2)^0)*fg.2*fg.3+(Z(2^2))*fg.1*fg.2*fg.3;;
+gap> Inverse(x);
+(Z(2^2)^2)*f2+(Z(2)^0)*f1*f2*f3
+gap> IsOne(x * Inverse(x));
+true
+
+#
 gap> SetInfoLevel(LAGInfo,1);
 gap> STOP_TEST( "laguna.tst", 10000 );
