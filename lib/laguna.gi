@@ -465,7 +465,7 @@ InstallOtherMethod( InverseOp,
             pow := pow * (-x);
           od;
 
-          return a*inv;
+          return a^-1*inv;
         fi; 
       else        
         TryNextMethod(); # since our case is not modular                  
