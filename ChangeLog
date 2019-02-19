@@ -196,6 +196,9 @@
 3.9.1 (November 2018)
     * Improved reproducibility of `AugmentationIdealPowerSeries` example.
 
+3.9.2 (February 2019)
+    * Fix a bug in `Inverse` for non-normalized units.
+
 4.0 (in the development version)
     The large new block related with the Modular Isomorphism Problem (MIP):
     * Computation of MIP-related invariants of p-groups and their modular 
