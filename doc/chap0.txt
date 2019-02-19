@@ -6,10 +6,10 @@
                     [1XLie AlGebras and UNits of group Algebras[101X
   
   
-                                 Version 3.9.1
+                                 Version 3.9.2
   
   
-                                30 November 2018
+                                19 February 2019
   
   
                                   Victor Bovdi
@@ -65,7 +65,7 @@
   
   -------------------------------------------------------
   [1XCopyright[101X
-  [33X[0;0Y©  2003-2018  by  Victor Bovdi, Alexander Konovalov, Richard Rossmanith, and
+  [33X[0;0Y©  2003-2019  by  Victor Bovdi, Alexander Konovalov, Richard Rossmanith, and
   Csaba Schneider[133X
   
   [33X[0;0Y[5XLAGUNA[105X  is free software; you can redistribute it and/or modify it under the
@@ -81,7 +81,7 @@
   [5XLAGUNA[105X, please cite it in the following form:[133X
   
   [33X[0;0YV.  Bovdi,  A.  Konovalov,  R.  Rossmanith  and C. Schneider. [13XLAGUNA --- Lie
-  AlGebras  and  UNits  of  group  Algebras,  Version  3.9.1;[113X 30 November 2018
+  AlGebras  and  UNits  of  group  Algebras,  Version  3.9.2;[113X 19 February 2019
   ([7Xhttp://www.cs.st-andrews.ac.uk/~alexk/laguna/[107X).[133X
   
   
