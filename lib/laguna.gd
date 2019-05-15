@@ -35,6 +35,7 @@ DeclareInfoClass("LAGInfo");
 ##  will be determined automatically for every group ring, created by
 ##  the function `GroupRing'
 DeclareProperty("IsGroupAlgebra", IsGroupRing);
+InstallTrueMethod(IsGroupRing, IsGroupAlgebra);
 
 
 #############################################################################
@@ -46,6 +47,7 @@ DeclareProperty("IsGroupAlgebra", IsGroupRing);
 ##  will be determined automatically for every group ring, created by
 ##  the function `GroupRing'
 DeclareProperty("IsFModularGroupAlgebra", IsGroupAlgebra);
+InstallTrueMethod(IsGroupAlgebra, IsFModularGroupAlgebra);
 
 
 #############################################################################
@@ -56,6 +58,7 @@ DeclareProperty("IsFModularGroupAlgebra", IsGroupAlgebra);
 ##  This property will be determined automatically for every group ring, 
 ##  created by the function `GroupRing'
 DeclareProperty("IsPModularGroupAlgebra", IsFModularGroupAlgebra);
+InstallTrueMethod(IsGroupAlgebra, IsPModularGroupAlgebra);
 
 
 #############################################################################
@@ -259,6 +262,7 @@ DeclareAttribute("AugmentationIdealOfDerivedSubgroupNilpotencyIndex",
 #P  IsGroupOfUnitsOfMagmaRing( <U> )
 ##  
 DeclareProperty("IsGroupOfUnitsOfMagmaRing", IsGroup);
+InstallTrueMethod(IsGroup, IsGroupOfUnitsOfMagmaRing);
 
 
 #############################################################################
