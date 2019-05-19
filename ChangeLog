@@ -199,6 +199,13 @@
 3.9.2 (February 2019)
     * Fix a bug in `Inverse` for non-normalized units.
 
+3.9.3 (May 2019)
+    * Add several trivial implications. They make various "hidden" 
+      implications created by DeclareProperty explicit, thus fixing 
+      a bunch of warnings that show up if one starts the upcoming
+      GAP 4.11 with the `-N` command line option, and then loads the
+      package.
+
 4.0 (in the development version)
     The large new block related with the Modular Isomorphism Problem (MIP):
     * Computation of MIP-related invariants of p-groups and their modular 
