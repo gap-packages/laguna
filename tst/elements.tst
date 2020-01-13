@@ -26,4 +26,10 @@ gap> TraceOfMagmaRingElement( x );
 Z(2)^0
 gap> TraceOfMagmaRingElement( x - e );
 0*Z(2)
+gap> Involution(x);
+(Z(2)^0)*<identity> of ...+(Z(2)^0)*f1+(Z(2)^0)*f1*f2+(Z(2)^0)*f2*f3*f4
+gap> y := x + Involution( x );
+(Z(2)^0)*f2+(Z(2)^0)*f2*f3*f4
+gap> y = Involution( y );
+true
 gap> STOP_TEST("elements.tst");
