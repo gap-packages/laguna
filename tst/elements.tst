@@ -32,4 +32,8 @@ gap> y := x + Involution( x );
 (Z(2)^0)*f2+(Z(2)^0)*f2*f3*f4
 gap> y = Involution( y );
 true
+gap> IsUnit(x);
+false
+gap> IsUnit(x+e);
+true
 gap> STOP_TEST("elements.tst");
