@@ -37,21 +37,48 @@ false
 gap> IsUnit(x+e);
 true
 gap> m:=MinimalGeneratingSet(G);;
-gap> BicyclicUnitOfType1(KG, m[1], m[2]);
-(Z(2)^0)*<identity> of ...+(Z(2)^0)*f2+(Z(2)^0)*f1*f2+(Z(2)^
-0)*f2*f3*f4+(Z(2)^0)*f1*f2*f3*f4
-gap> BicyclicUnitOfType1(KG, m[1], m[2]^2);
-(Z(2)^0)*<identity> of ...+(Z(2)^0)*f3+(Z(2)^0)*f1*f3+(Z(2)^
-0)*f3*f4+(Z(2)^0)*f1*f3*f4
+gap> u:=BicyclicUnitOfType1(KG, m[1], m[2]);
+(Z(2)^0)*<identity> of ...+(Z(2)^0)*f2+(Z(2)^0)*f1*f2+(Z(2)^0)*f2*f3*f4+(Z(2)^
+0)*f1*f2*f3*f4
+gap> Order(u);
+2
+gap> u:=BicyclicUnitOfType1(KG, m[1], m[2]^2);
+(Z(2)^0)*<identity> of ...+(Z(2)^0)*f3+(Z(2)^0)*f1*f3+(Z(2)^0)*f3*f4+(Z(2)^
+0)*f1*f3*f4
 gap> IsUnit(BicyclicUnitOfType1(KG, m[1], m[2]^2));
 true
+gap> Order(u);
+2
 gap> IsUnit(BicyclicUnitOfType1(KG, m[1], m[2]^3));
 true
 gap> BicyclicUnitOfType1(KG, m[1], m[2]^4);
 (Z(2)^0)*<identity> of ...
-gap> u:=BicyclicUnitOfType1(KG, m[1], m[2]*m[1]);
-(Z(2)^0)*<identity> of ...+(Z(2)^0)*f2+(Z(2)^0)*f1*f2+(Z(2)^
-0)*f2*f3*f4+(Z(2)^0)*f1*f2*f3*f4
+gap> u:=BicyclicUnitOfType1(KG, m[1], m[1]*m[2]);
+(Z(2)^0)*<identity> of ...+(Z(2)^0)*f2+(Z(2)^0)*f1*f2+(Z(2)^0)*f2*f3*f4+(Z(2)^
+0)*f1*f2*f3*f4
 gap> IsUnit(u);
 true
+gap> Order(u);
+2
+gap> u:=BicyclicUnitOfType2(KG, m[1], m[2]);
+(Z(2)^0)*<identity> of ...+(Z(2)^0)*f2+(Z(2)^0)*f1*f2+(Z(2)^0)*f2*f3*f4+(Z(2)^
+0)*f1*f2*f3*f4
+gap> Order(u);
+2
+gap> u:=BicyclicUnitOfType2(KG, m[1], m[2]^2);
+(Z(2)^0)*<identity> of ...+(Z(2)^0)*f3+(Z(2)^0)*f1*f3+(Z(2)^0)*f3*f4+(Z(2)^
+0)*f1*f3*f4
+gap> Order(u);
+2
+gap> IsUnit(BicyclicUnitOfType2(KG, m[1], m[2]^3));
+true
+gap> BicyclicUnitOfType2(KG, m[1], m[2]^4);
+(Z(2)^0)*<identity> of ...
+gap> u:=BicyclicUnitOfType2(KG, m[1], m[1]*m[2]);
+(Z(2)^0)*<identity> of ...+(Z(2)^0)*f2+(Z(2)^0)*f1*f2+(Z(2)^0)*f2*f3*f4+(Z(2)^
+0)*f1*f2*f3*f4
+gap> IsUnit(u);
+true
+gap> Order(u);
+2
 gap> STOP_TEST("elements.tst");
