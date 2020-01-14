@@ -1,6 +1,17 @@
 gap> START_TEST("elements.tst");
 
 # setting up the example
+gap> g := AllSmallGroups(27)[4];;
+gap> f := GF(3);;
+gap> fg := GroupRing(f,g);;
+gap> m := MinimalGeneratingSet(g);;
+gap> e1 := Embedding(g,fg);;
+gap> l := List(m, x->x^(Embedding(g,fg)));;
+gap> e := Identity(fg);;
+gap> u := e + (Z(3)^2)*(l[1]) + (Z(3)^2)*(l[2]);;
+gap> v := e + (Z(3)^2)*((m[1]^(-1))^e1) + (Z(3)^2)*((m[2]^(-1))^e1);;
+gap> Involution(u) = v;
+true
 gap> K := GF( 2 );
 GF(2)
 gap> G := DihedralGroup( 16 );
