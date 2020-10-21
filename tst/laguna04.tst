@@ -696,11 +696,9 @@ CanonicalBasis( <Lie algebra of dimension 6 over GF(2)> )
 gap> IsBasisOfLieAlgebraOfGroupRing( B );
 true   
 
-# doc/funct.xml:1937-1952
+# doc/funct.xml:1937-1950
 
-gap> G := CyclicGroup( 2 ); FG := GroupRing( GF( 2 ), G ); 
-<pc group of size 2 with 1 generators>
-<algebra-with-one over GF(2), with 1 generators>
+gap> G := CyclicGroup( 2 );; FG := GroupRing( GF( 2 ), G );;
 gap> L := LieAlgebra( FG );
 #I  LAGUNA package: Constructing Lie algebra ...
 <Lie algebra over GF(2)>
@@ -711,21 +709,21 @@ gap> StructureConstantsTable( B );
 [ [ [ [  ], [  ] ], [ [  ], [  ] ] ], [ [ [  ], [  ] ], [ [  ], [  ] ] ], -1, 
   0*Z(2) ]  
 
-# doc/funct.xml:1976-1983
+# doc/funct.xml:1974-1981
 
 gap> KG := GroupRing( GF( 2 ), DihedralGroup( 16 ) );
 <algebra-with-one over GF(2), with 4 generators>
 gap> LieUpperNilpotencyIndex( KG );
 5      
 
-# doc/funct.xml:2013-2020
+# doc/funct.xml:2011-2018
 
 gap> KG := GroupRing( GF( 2 ), DihedralGroup( 16 ) );
 <algebra-with-one over GF(2), with 4 generators>
 gap> LieLowerNilpotencyIndex( KG );
 5     
 
-# doc/funct.xml:2041-2051
+# doc/funct.xml:2039-2049
 
 gap> KG := GroupRing( GF ( 2 ), DihedralGroup( 16 ) );;
 gap> L := LieAlgebra( KG );
@@ -735,12 +733,12 @@ gap> LieDerivedLength( L );
 #I  LAGUNA package: Computing the Lie derived subalgebra ...
 3                                                            
 
-# doc/funct.xml:2073-2078
+# doc/funct.xml:2071-2076
 
 gap> SubgroupsOfIndexTwo( DihedralGroup( 16 ) );
 [ Group([ f3, f4, f1 ]), Group([ f3, f4, f2 ]), Group([ f3, f4, f1*f2 ]) ]
 
-# doc/funct.xml:2094-2103
+# doc/funct.xml:2092-2101
 
 gap> KD8 := GroupRing( GF(2), DihedralGroup( 8 ) );
 <algebra-with-one over GF(2), with 3 generators>
@@ -749,14 +747,14 @@ gap> UD8 := PcNormalizedUnitGroup( KD8 );
 gap> DihedralDepth( UD8 );
 2      
 
-# doc/funct.xml:2121-2128
+# doc/funct.xml:2119-2126
 
 gap> G := DihedralGroup( 16 );
 <pc group of size 16 with 4 generators>  
 gap> DimensionBasis( G );
 rec( dimensionBasis := [ f1, f2, f3, f4 ], weights := [ 1, 1, 2, 4 ] )    
 
-# doc/funct.xml:2149-2157
+# doc/funct.xml:2147-2155
 
 gap> G := DihedralGroup( 16 );
 <pc group of size 16 with 4 generators>  
@@ -764,7 +762,7 @@ gap> LieDimensionSubgroups( G );
 [ <pc group of size 16 with 4 generators>, Group([ f3, f4 ]), Group([ f4 ]),
   Group([ <identity> of ... ]) ]     
 
-# doc/funct.xml:2191-2204
+# doc/funct.xml:2189-2202
 
 gap> G := DihedralGroup(16);
 <pc group of size 16 with 4 generators>
@@ -777,7 +775,7 @@ gap> LieUpperCodimensionSeries( G );
 [ Group([ f1, f2, f3, f4 ]), Group([ f3, f4, f3*f4 ]), Group([ f4 ]), 
   Group([ f4 ]), Group([  ]) ]
 
-# doc/funct.xml:2217-2233
+# doc/funct.xml:2215-2231
 
 gap> SetInfoLevel( LAGInfo, 2 );
 gap> KD8 := GroupRing( GF( 2 ), DihedralGroup( 8 ) );
