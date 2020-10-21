@@ -1936,9 +1936,7 @@ true
 
 <Example>
 <![CDATA[
-gap> G := CyclicGroup( 2 ); FG := GroupRing( GF( 2 ), G ); 
-<pc group of size 2 with 1 generators>
-<algebra-with-one over GF(2), with 1 generators>
+gap> G := CyclicGroup( 2 );; FG := GroupRing( GF( 2 ), G );;
 gap> L := LieAlgebra( FG );
 #I  LAGUNA package: Constructing Lie algebra ...
 <Lie algebra over GF(2)>
