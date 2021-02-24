@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.com/gap-packages/laguna.svg?branch=master)](https://travis-ci.com/gap-packages/laguna)
+[![Build Status](https://github.com/gap-packages/laguna/workflows/CI/badge.svg?branch=master)](https://github.com/gap-packages/laguna/actions?query=workflow%3ACI+branch%3Amaster)
 [![Code Coverage](https://codecov.io/github/gap-packages/laguna/coverage.svg?branch=master&token=)](https://codecov.io/gh/gap-packages/laguna)
 
 # GAP package LAGUNA
