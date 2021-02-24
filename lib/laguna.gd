@@ -269,14 +269,14 @@ InstallTrueMethod(IsGroup, IsGroupOfUnitsOfMagmaRing);
 ##
 #P  IsUnitGroupOfGroupRing( <U> )
 ##  
-DeclareProperty("IsUnitGroupOfGroupRing", IsGroupOfUnitsOfMagmaRing);
+DeclareCategory("IsUnitGroupOfGroupRing", IsGroupOfUnitsOfMagmaRing);
 
 
 #############################################################################
 ##
 #P  IsNormalizedUnitGroupOfGroupRing( <U> )
 ##  
-DeclareProperty("IsNormalizedUnitGroupOfGroupRing", IsGroupOfUnitsOfMagmaRing);
+DeclareCategory("IsNormalizedUnitGroupOfGroupRing", IsGroupOfUnitsOfMagmaRing);
 
 
 #############################################################################
