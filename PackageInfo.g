@@ -101,7 +101,6 @@ PackageDoc := rec(
   PDFFile := "doc/manual.pdf",
   SixFile := "doc/manual.six",
   LongTitle := "Lie AlGebras and UNits of group Algebras",
-  Autoload := true
 ),
 
 Dependencies := rec(
