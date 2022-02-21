@@ -998,8 +998,8 @@ InstallMethod( NormalizedUnitGroup,
       TryNextMethod();
     else
       U := Group( List ( WeightedBasis(KG).weightedBasis, x -> One(KG)+x ) );
-      SetIsGroupOfUnitsOfMagmaRing(U,true);
-      SetIsNormalizedUnitGroupOfGroupRing(U,true);
+      SetFilterObj(U, IsGroupOfUnitsOfMagmaRing);
+      SetFilterObj(U, IsNormalizedUnitGroupOfGroupRing);
       SetIsCommutative(U, IsCommutative(UnderlyingMagma(KG)));
       SetIsFinite(U, true);
       SetSize(U, Size(LeftActingDomain(KG))^(Size(UnderlyingMagma(KG))-1));
@@ -1103,8 +1103,8 @@ InstallMethod( PcNormalizedUnitGroup,
       Info(LAGInfo, 2, "LAGInfo: finished, converting to PcGroup" );
 
       U:=GroupByRwsNC(coll); # before we used U:=PcGroupFpGroup( f/rels );
-      SetIsGroupOfUnitsOfMagmaRing(U,false);
-      SetIsNormalizedUnitGroupOfGroupRing(U,true);
+      ResetFilterObj(U, IsGroupOfUnitsOfMagmaRing);
+      SetFilterObj(U, IsNormalizedUnitGroupOfGroupRing);
       SetIsPGroup(U, true);
       SetPrimePGroup(U, p);
       SetUnderlyingGroupRing(U,KG);   
@@ -1216,8 +1216,8 @@ InstallMethod( Units,
       else
           U:=DirectProduct( K, NormalizedUnitGroup(KG) );
       fi;
-      SetIsGroupOfUnitsOfMagmaRing(U,true);
-      SetIsUnitGroupOfGroupRing(U,true);
+      SetFilterObj(U, IsGroupOfUnitsOfMagmaRing);
+      SetFilterObj(U, IsUnitGroupOfGroupRing);
       SetIsCommutative(U, IsCommutative(UnderlyingMagma(KG)));
       SetIsFinite(U, true);
       SetSize( U, Size(Units(LeftActingDomain(KG))) * 
@@ -1249,8 +1249,8 @@ InstallMethod( PcUnits,
       else
           U:=DirectProduct( K, PcNormalizedUnitGroup(KG) );
       fi;
-      SetIsGroupOfUnitsOfMagmaRing(U,false);
-      SetIsUnitGroupOfGroupRing(U,true);
+      ResetFilterObj(U, IsGroupOfUnitsOfMagmaRing);
+      SetFilterObj(U, IsUnitGroupOfGroupRing);
       SetUnderlyingGroupRing(U,KG);
       return U;
     fi;  
@@ -1345,7 +1345,7 @@ InstallMethod( Random,
         x:=Random(KG);
       until IsUnit(KG,x);
       return One(KG) + x - Augmentation( x ) * One(KG);
-    elif IsUnitGroupOfGroupRing then
+    elif IsUnitGroupOfGroupRing(U) then
       KG:=UnderlyingGroupRing( U );
       repeat
         x:=Random(KG);

@@ -261,22 +261,21 @@ DeclareAttribute("AugmentationIdealOfDerivedSubgroupNilpotencyIndex",
 ##
 #P  IsGroupOfUnitsOfMagmaRing( <U> )
 ##  
-DeclareProperty("IsGroupOfUnitsOfMagmaRing", IsGroup);
-InstallTrueMethod(IsGroup, IsGroupOfUnitsOfMagmaRing);
+DeclareCategory("IsGroupOfUnitsOfMagmaRing", IsGroup);
 
 
 #############################################################################
 ##
 #P  IsUnitGroupOfGroupRing( <U> )
 ##  
-DeclareProperty("IsUnitGroupOfGroupRing", IsGroupOfUnitsOfMagmaRing);
+DeclareCategory("IsUnitGroupOfGroupRing", IsGroup);
 
 
 #############################################################################
 ##
 #P  IsNormalizedUnitGroupOfGroupRing( <U> )
 ##  
-DeclareProperty("IsNormalizedUnitGroupOfGroupRing", IsGroupOfUnitsOfMagmaRing);
+DeclareCategory("IsNormalizedUnitGroupOfGroupRing", IsGroup);
 
 
 #############################################################################

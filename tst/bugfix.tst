@@ -34,6 +34,16 @@ gap> Inverse(x);
 gap> IsOne(x * Inverse(x));
 true
 
+# 2022-02-21: call to MaximalSubgroupClassReps used to fail
+# see https://github.com/gap-system/gap/issues/3599
+gap> R:= GroupRing(GF(2), SymmetricGroup(3));
+<algebra-with-one over GF(2), with 2 generators>
+gap> UR:= Units(R);
+<group with 3 generators>
+gap> max:= MaximalSubgroupClassReps(UR);
+[ <group of size 6 with 2 generators>, <group of size 6 with 2 generators>, 
+  <group of size 6 with 2 generators>, <group of size 4 with 2 generators> ]
+
 #
 gap> SetInfoLevel(LAGInfo,1);
 gap> STOP_TEST( "laguna.tst", 10000 );
