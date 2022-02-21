@@ -179,7 +179,7 @@ DeclareOperation("Involution",
 ##  
 ##  An element of a group ring is called symmetric if it is fixed under the 
 ##  classical involution
-DeclareAttribute("IsSymmetric", 
+DeclareProperty("IsSymmetric", 
                   IsElementOfMagmaRingModuloRelations and
 		  IsMagmaRingObjDefaultRep );
 
@@ -190,7 +190,7 @@ DeclareAttribute("IsSymmetric",
 ##  
 ##  An unit of a group ring is called unitary if x^-1 = Involution(x) * eps,
 ##  where eps is an invertible element from an underlying ring
-DeclareAttribute("IsUnitary", 
+DeclareProperty("IsUnitary", 
                   IsElementOfMagmaRingModuloRelations and
 		  IsMagmaRingObjDefaultRep );
 
