@@ -11,13 +11,13 @@ SetPackageInfo( rec(
 
 PackageName := "LAGUNA",
 Subtitle := "Lie AlGebras and UNits of group Algebras",
-Version := "3.9.3",
-Date := "19/05/2019", # dd/mm/yyyy format
+Version := "3.9.4",
+Date := "23/02/2022", # dd/mm/yyyy format
 License := "GPL-2.0-or-later",
 ##  <#GAPDoc Label="PKGVERSIONDATA">
-##  <!ENTITY VERSION "3.9.3">
-##  <!ENTITY RELEASEDATE "19 May 2019">
-##  <!ENTITY RELEASEYEAR "2019">
+##  <!ENTITY VERSION "3.9.4">
+##  <!ENTITY RELEASEDATE "23 February 2022">
+##  <!ENTITY RELEASEYEAR "2022">
 ##  <#/GAPDoc>
 
 SourceRepository := rec(

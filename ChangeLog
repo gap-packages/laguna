@@ -206,6 +206,19 @@
       GAP 4.11 with the `-N` command line option, and then loads the
       package.
 
+3.9.4 (February 2022)
+    A collection of fixes contributed by Max Horn:
+    * Turn `IsGroupOfUnitsOfMagmaRing`, `IsUnitGroupOfGroupRing` and
+      `IsNormalizedUnitGroupOfGroupRing` properties into categories.
+    * Fix a typo in a method for `Random` [detected after a bug report
+      by @EricSwartz].
+    * Turn `IsSymmetric`, `IsUnitary` into properties [reported by
+      @jesselansdown]
+    * Add a set of trivial implications, to make various "hidden"
+      implications created by DeclareProperty explicit, thus fixing
+    a bunch of warnings that show up if one starts GAP 4.11 with the
+      `-N` command line option, and then loads this package.
+
 4.0 (in the development version)
     The large new block related with the Modular Isomorphism Problem (MIP):
     * Computation of MIP-related invariants of p-groups and their modular 
