@@ -179,9 +179,18 @@ DeclareOperation("Involution",
 ##  
 ##  An element of a group ring is called symmetric if it is fixed under the 
 ##  classical involution
+if IsBound(IsSymmetric) and IsAttribute(IsSymmetric) then
+# TODO: until other packages declaring `IsSymmetric` as an attribute are
+# updated to declare it as a property, we need to declare it as an attribute
+# here, too.
+DeclareAttribute("IsSymmetric", 
+                  IsElementOfMagmaRingModuloRelations and
+		  IsMagmaRingObjDefaultRep );
+else
 DeclareProperty("IsSymmetric", 
                   IsElementOfMagmaRingModuloRelations and
 		  IsMagmaRingObjDefaultRep );
+fi;
 
 
 #############################################################################
