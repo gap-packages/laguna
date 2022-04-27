@@ -35,7 +35,7 @@ jobs:
         with:
           GAPBRANCH: ${{ matrix.gap-branch }}
       - uses: gap-actions/build-pkg@v1
-      - uses: gap-actions/run-pkg-tests@e05c1cea584cdfc9f201762cb950058fea2206c7
+      - uses: gap-actions/run-pkg-tests@de9c958b937864c39199408689e1e78a56f95ca0
       - uses: gap-actions/process-coverage@v2
       - uses: codecov/codecov-action@v2
 
