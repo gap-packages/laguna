@@ -84,19 +84,18 @@
   
   [33X[0;0Y[5XLAGUNA[105X  does  not  use  external  binaries  and,  therefore,  works  without
   restrictions  on the type of the operating system. It is designed for [5XGAP[105X4.4
-  and no compatibility with previous releases of [5XGAP[105X4 is guaranteed.[133X
+  or later and no compatibility with previous releases of [5XGAP[105X4 is guaranteed.[133X
   
   [33X[0;0YTo  use  the  [5XLAGUNA[105X online help it is necessary to install the [5XGAP[105X4 package
   [5XGAPDoc[105X  by  Frank Lübeck and Max Neunhöffer, which is available from the [5XGAP[105X
-  site or from [7Xhttp://www.math.rwth-aachen.de/~Frank.Luebeck/GAPDoc/[107X.[133X
+  site or from [7Xhttps://www.math.rwth-aachen.de/~Frank.Luebeck/GAPDoc/[107X.[133X
   
-  [33X[0;0Y[5XLAGUNA[105X  is  distributed in standard formats ([11Xzoo[111X, [11Xtar.gz[111X, [11Xtar.bz2[111X, [11X-win.zip[111X)
-  and  can  be obtained from [7Xhttp://www.cs.st-andrews.ac.uk/~alexk/laguna/[107X. To
-  unpack the archive [11Xlaguna-X.X.X.zoo[111X you need the program [11Xunzoo[111X, which can be
-  obtained  from  the  [5XGAP[105X  homepage  [7Xhttp://www.gap-system.org/[107X  (see section
-  `Distribution').   To  install  [5XLAGUNA[105X,  copy  this  archive  into  the  [11Xpkg[111X
-  subdirectory  of  your  [5XGAP[105X4.4 installation. The subdirectory [11Xlaguna[111X will be
-  created in the [11Xpkg[111X directory after the following command:[133X
+  [33X[0;0Y[5XLAGUNA[105X  is  distributed  as  a  [11Xtar.gz[111X archive file and can be obtained from
+  [7Xhttps://gap-packages.github.io/laguna/[107X.     To     unpack     the    archive
+  [11Xlaguna-X.X.X.tar.gz[111X  you  need the program [11Xtar[111X. To install [5XLAGUNA[105X, copy this
+  archive   into   the   [11Xpkg[111X  subdirectory  of  your  [5XGAP[105X4  installation.  The
+  subdirectory [11Xlaguna[111X will be created in the [11Xpkg[111X directory after the following
+  command:[133X
   
-  [33X[0;0Y[10Xunzoo -x laguna-X.X.X.zoo[110X[133X
+  [33X[0;0Y[10Xtar -xf laguna-X.X.X.tar.gz[110X[133X
   

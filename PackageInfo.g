@@ -1,7 +1,7 @@
 #############################################################################
 ##
 #W  PackageInfo.g              The LAGUNA package                Viktor Bovdi
-#W                                                        Alexander Konovalov
+#W                                                         Olexandr Konovalov
 #W                                                         Richard Rossmanith
 #W                                                            Csaba Schneider
 ##
@@ -11,12 +11,12 @@ SetPackageInfo( rec(
 
 PackageName := "LAGUNA",
 Subtitle := "Lie AlGebras and UNits of group Algebras",
-Version := "3.9.4",
-Date := "23/02/2022", # dd/mm/yyyy format
+Version := "3.9.5",
+Date := "27/04/2022", # dd/mm/yyyy format
 License := "GPL-2.0-or-later",
 ##  <#GAPDoc Label="PKGVERSIONDATA">
-##  <!ENTITY VERSION "3.9.4">
-##  <!ENTITY RELEASEDATE "23 February 2022">
+##  <!ENTITY VERSION "3.9.5">
+##  <!ENTITY RELEASEDATE "27 April 2022">
 ##  <!ENTITY RELEASEYEAR "2022">
 ##  <#/GAPDoc>
 
@@ -51,11 +51,11 @@ Persons := [
      ),
   rec(
     LastName      := "Konovalov",
-    FirstNames    := "Alexander",
+    FirstNames    := "Olexandr",
     IsAuthor      := true,
     IsMaintainer  := true,
-    Email         := "alexander.konovalov@st-andrews.ac.uk",
-    WWWHome       := "https://alexk.host.cs.st-andrews.ac.uk",
+    Email         := "obk1@st-andrews.ac.uk",
+    WWWHome       := "https://alex-konovalov.github.io/",
     PostalAddress := Concatenation( [
                      "School of Computer Science\n",
                      "University of St Andrews\n",

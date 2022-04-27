@@ -6,15 +6,15 @@
                     [1XLie AlGebras and UNits of group Algebras[101X
   
   
-                                 Version 3.9.4
+                                 Version 3.9.5
   
   
-                                23 February 2022
+                                 27 April 2022
   
   
                                   Victor Bovdi
   
-                              Alexander Konovalov
+                               Olexandr Konovalov
   
                                Richard Rossmanith
   
@@ -29,9 +29,9 @@
                 [33X[0;14YP.O.Box 12, Debrecen, H-4010 Hungary[133X
   
   
-  Alexander Konovalov
-      Email:    [7Xmailto:alexander.konovalov@st-andrews.ac.uk[107X
-      Homepage: [7Xhttps://alexk.host.cs.st-andrews.ac.uk[107X
+  Olexandr Konovalov
+      Email:    [7Xmailto:obk1@st-andrews.ac.uk[107X
+      Homepage: [7Xhttps://alex-konovalov.github.io/[107X
       Address:  [33X[0;14YSchool of Computer Science[133X
                 [33X[0;14YUniversity of St Andrews[133X
                 [33X[0;14YJack Cole Building, North Haugh,[133X
@@ -65,14 +65,14 @@
   
   -------------------------------------------------------
   [1XCopyright[101X
-  [33X[0;0Y©  2003-2022  by  Victor Bovdi, Alexander Konovalov, Richard Rossmanith, and
+  [33X[0;0Y©  2003-2022  by  Victor  Bovdi, Olexandr Konovalov, Richard Rossmanith, and
   Csaba Schneider[133X
   
   [33X[0;0Y[5XLAGUNA[105X  is free software; you can redistribute it and/or modify it under the
   terms  of  the  GNU General Public License as published by the Free Software
   Foundation;  either  version 2 of the License, or (at your option) any later
   version.      For      details,      see      the     FSF's     own     site
-  [7Xhttp://www.gnu.org/licenses/gpl.html[107X.[133X
+  [7Xhttps://www.gnu.org/licenses/gpl.html[107X.[133X
   
   [33X[0;0YIf  you  obtained [5XLAGUNA[105X, we would be grateful for a short notification sent
   to one of the authors.[133X
@@ -80,9 +80,9 @@
   [33X[0;0YIf  you  publish  a  result  which  was partially obtained with the usage of
   [5XLAGUNA[105X, please cite it in the following form:[133X
   
-  [33X[0;0YV.  Bovdi,  A.  Konovalov,  R.  Rossmanith  and C. Schneider. [13XLAGUNA --- Lie
-  AlGebras  and  UNits  of  group  Algebras,  Version  3.9.4;[113X 23 February 2022
-  ([7Xhttp://www.cs.st-andrews.ac.uk/~alexk/laguna/[107X).[133X
+  [33X[0;0YV.  Bovdi,  O.  Konovalov,  R.  Rossmanith  and C. Schneider. [13XLAGUNA --- Lie
+  AlGebras  and  UNits  of  group  Algebras,  Version  3.9.5;[113X  27  April  2022
+  ([7Xhttps://gap-packages.github.io/laguna/[107X).[133X
   
   
   -------------------------------------------------------
@@ -104,7 +104,7 @@
   referee for careful testing [5XLAGUNA[105X and useful suggestions.[133X
   
   [33X[0;0YA  part  of  the  work  on  upgrading  [5XLAG[105X to [5XLAGUNA[105X was done in 2002 during
-  Alexander   Konovalov's   visits  to  Debrecen,  St  Andrews  and  Stuttgart
+  Olexandr   Konovalov's   visits   to  Debrecen,  St  Andrews  and  Stuttgart
   Universities.  He  would like to express his gratitude to Adalbert Bovdi and
   Victor  Bovdi,  Colin  Campbell, Edmund Robertson and Steve Linton, Wolfgang
   Kimmerle, Martin Hertweck and Stefan Kohl for their warm hospitality, and to
