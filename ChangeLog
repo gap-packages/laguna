@@ -219,6 +219,9 @@
     a bunch of warnings that show up if one starts GAP 4.11 with the
       `-N` command line option, and then loads this package.
 
+3.9.5 (April 2022)
+    * Updates and fixes in metadata and documentation
+
 4.0 (in the development version)
     The large new block related with the Modular Isomorphism Problem (MIP):
     * Computation of MIP-related invariants of p-groups and their modular 
