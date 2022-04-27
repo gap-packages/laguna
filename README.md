@@ -42,7 +42,7 @@ the  package  and  the  referee  for careful testing  LAGUNA  and  useful
 suggestions.
 
 A part of the work on upgrading LAG  to  LAGUNA was  done  in 2002 during
-Alexander  Konovalov's  visits  to  Debrecen,  St.Andrews  and  Stuttgart 
+Olexandr  Konovalov's  visits  to  Debrecen,  St Andrews  and   Stuttgart 
 Universities.  He would like to express his gratitude  to  Adalbert Bovdi
 and  Victor Bovdi,  Colin  Campbell,  Edmund Robertson and  Steve Linton,
 Wolfgang  Kimmerle,  Martin  Hertweck  and  Stefan  Kohl  for  their warm
@@ -53,4 +53,4 @@ See the file ChangeLog  for the details about changes  introduced in each
 LAGUNA release.
 
 
-Victor Bovdi, Alexander Konovalov, Richard Rossmanith and Csaba Schneider
+Victor Bovdi, Olexandr Konovalov, Richard Rossmanith and Csaba Schneider

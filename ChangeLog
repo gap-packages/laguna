@@ -80,7 +80,7 @@
       - DihedralDepth
     * Defined new info class - LAGInfo with info levels 0, 1, 2 and 3
 
-    -- Victor Bovdi, Alexander Konovalov, Csaba Schneider, March 2003.
+    -- Victor Bovdi, Olexandr Konovalov, Csaba Schneider, March 2003.
 
 3.1 * Accepted version of the LAGUNA package (June 2003) 
       - improved documentation

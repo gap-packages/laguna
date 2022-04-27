@@ -23,9 +23,9 @@
 	   P.O.Box 12, Debrecen, H-4010 Hungary	   </Address>
   </Author>
 
-  <Author>Alexander Konovalov
-          <Email>alexander.konovalov@st-andrews.ac.uk</Email>
-	  <Homepage>https://alexk.host.cs.st-andrews.ac.uk</Homepage>
+  <Author>Olexandr Konovalov
+          <Email>obk1@st-andrews.ac.uk</Email>
+	  <Homepage>https://alex-konovalov.github.io/</Homepage>
           <Address>
             School of Computer Science<Br/>
             University of St Andrews<Br/>
@@ -70,7 +70,7 @@ the field of <M>p</M> elements.
 </Abstract>
 
 <Copyright>
-  &copyright; 2003-&RELEASEYEAR; by Victor Bovdi, Alexander Konovalov, 
+  &copyright; 2003-&RELEASEYEAR; by Victor Bovdi, Olexandr Konovalov, 
   Richard Rossmanith, and Csaba Schneider<P/>
 
   &LAGUNA;  is free software; you can redistribute it and/or modify it 
@@ -86,10 +86,10 @@ the field of <M>p</M> elements.
   If you publish a result which was partially obtained with the usage of
   &LAGUNA;, please cite it in the following form:<P/>
 
-  V. Bovdi, A. Konovalov, R. Rossmanith and C. Schneider. 
+  V. Bovdi, O. Konovalov, R. Rossmanith and C. Schneider. 
   <E>LAGUNA --- Lie AlGebras and UNits of group Algebras, 
   Version &VERSION;;</E> &RELEASEDATE; 
-  (<URL>http://www.cs.st-andrews.ac.uk/&tilde;alexk/laguna/</URL>).
+  (<URL>https://gap-packages.github.io/laguna/</URL>).
 </Copyright>
   
 <Acknowledgements>
@@ -117,7 +117,7 @@ We acknowledge very much Herbert Pahlings for communicating the package
 and the referee for careful testing &LAGUNA; and useful suggestions.       
 <P/> 
 A part of the work on upgrading &LAG; to &LAGUNA; was done in 2002 during
-Alexander Konovalov's visits to Debrecen, St Andrews and Stuttgart 
+Olexandr Konovalov's visits to Debrecen, St Andrews and Stuttgart 
 Universities.
 He would like to express his gratitude to Adalbert Bovdi and
 Victor Bovdi, Colin Campbell, Edmund Robertson and Steve Linton,

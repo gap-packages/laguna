@@ -1,7 +1,7 @@
 #############################################################################
 ##
 #W  PackageInfo.g              The LAGUNA package                Viktor Bovdi
-#W                                                        Alexander Konovalov
+#W                                                         Olexandr Konovalov
 #W                                                         Richard Rossmanith
 #W                                                            Csaba Schneider
 ##
@@ -51,11 +51,11 @@ Persons := [
      ),
   rec(
     LastName      := "Konovalov",
-    FirstNames    := "Alexander",
+    FirstNames    := "Olexandr",
     IsAuthor      := true,
     IsMaintainer  := true,
-    Email         := "alexander.konovalov@st-andrews.ac.uk",
-    WWWHome       := "https://alexk.host.cs.st-andrews.ac.uk",
+    Email         := "obk1@st-andrews.ac.uk",
+    WWWHome       := "https://alex-konovalov.github.io/",
     PostalAddress := Concatenation( [
                      "School of Computer Science\n",
                      "University of St Andrews\n",

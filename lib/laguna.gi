@@ -1,7 +1,7 @@
 #############################################################################
 ##  
 #W  laguna.gi                The LAGUNA package                  Viktor Bovdi
-#W                                                        Alexander Konovalov
+#W                                                         Olexandr Konovalov
 #W                                                         Richard Rossmanith
 #W                                                            Csaba Schneider
 ##

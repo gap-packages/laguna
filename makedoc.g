@@ -1,6 +1,6 @@
 ###########################################################################
 ##
-#W makedoc.g                The LAGUNA package          Alexander Konovalov
+#W makedoc.g                The LAGUNA package           Olexandr Konovalov
 ##
 ###########################################################################
 
