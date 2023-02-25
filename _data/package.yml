@@ -1,6 +1,6 @@
 name: LAGUNA
-version: 3.9.5
-date: 2022-04-27
+version: 3.9.6
+date: 2023-02-25
 description: |
     Lie AlGebras and UNits of group Algebras
 
@@ -8,7 +8,7 @@ authors:
     - name: Victor Bovdi
       url: mailto:vbovdi@science.unideb.hu
     - name: Olexandr Konovalov
-      url: https://alex-konovalov.github.io/
+      url: https://olexandr-konovalov.github.io/
     - name: Richard Rossmanith
     - name: Csaba Schneider
       url: http://www.sztaki.hu/~schneider
@@ -17,7 +17,7 @@ maintainers:
     - name: Victor Bovdi
       url: mailto:vbovdi@science.unideb.hu
     - name: Olexandr Konovalov
-      url: https://alex-konovalov.github.io/
+      url: https://olexandr-konovalov.github.io/
     - name: Csaba Schneider
       url: http://www.sztaki.hu/~schneider
 
@@ -39,11 +39,11 @@ packageinfo: https://gap-packages.github.io/laguna/PackageInfo.g
 
 downloads:
     - name: .tar.gz
-      url: https://github.com/gap-packages/laguna/releases/download/v3.9.5/laguna-3.9.5.tar.gz
+      url: https://github.com/gap-packages/laguna/releases/download/v3.9.6/laguna-3.9.6.tar.gz
 
 abstract: |
     The <span class="pkgname">LAGUNA</span> package replaces the <span class="pkgname">LAG</span> package and provides functionality for calculation of the normalized unit group of the modular group algebra of the finite p-group and for investigation of Lie algebra associated with group algebras and other associative algebras.
 
 status: accepted
-doc-html: doc/chap0.html
+doc-html: doc/chap0_mj.html
 doc-pdf: doc/manual.pdf

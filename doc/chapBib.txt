@@ -10,7 +10,7 @@
   
   [[20XHB82[120X]  [16XHuppert,  B.  and Blackburn, N.[116X, [17XFinite groups. II[117X, Springer-Verlag,
   Grundlehren  der  Mathematischen  Wissenschaften  [Fundamental Principles of
-  Mathematical Sciences], [19X242[119X, Berlin (1982), xiii+531 pages, ((, AMD, 44)).
+  Mathematical Sciences], [19X242[119X, Berlin (1982), xiii+531 pages, (, AMD, 44).
   
   [[20XJPS96[120X]  [16XJespers,  E.,  Parmenter, M. M. and Sehgal, S. K.[116X, [17XCentral units of
   integral  group  rings  of  nilpotent groups[117X, [18XProc. Amer. Math. Soc.[118X, [19X124[119X, 4
