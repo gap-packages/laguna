@@ -9,4 +9,3 @@
 
 # read the actual code. 
 ReadPackage("laguna", "lib/laguna.gi");
-ReadPackage("laguna", "lib/mip.gi");
