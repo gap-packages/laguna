@@ -222,30 +222,8 @@
 3.9.5 (April 2022)
     * Updates and fixes in metadata and documentation
 
-4.0 (in the development version)
-    The large new block related with the Modular Isomorphism Problem (MIP):
-    * Computation of MIP-related invariants of p-groups and their modular 
-      group algebras:
-      - JenningsFactors( <G> )
-      - SandlingFactorGroup( <G> )
-      - QuillenSeries( <G> )
-      - ClassSumNumbers( <G> )
-      - NumberOfConjugacyClassesPPowers( <G> )
-      - RoggenkampParameter( <G> )
-      - RoggenkampParameterForNormalSubset( <G>, <S> )
-      - KernelSize ( <KG>, <[n,m,k]> )    
-    * Tools for manipulations with MIP invariants:
-      - PrintMIPInvariants( <G> )
-      - PrintMIPInvariantsTable(<l>, <filename>)
-      - MIPInvariantsRecord( <G> ) 
-      - MIPInvariantsLibrary( <n> ) 
-      - MIPInvariantsLibraryClassification( <invlib>, <mode> )
-      - KernelSizeTest( <KG>, <KH>)
-      - MIPSplittingByKernelSize( <list>, <no>, <mode> )
-      - JenningsLieAlgebraTest ( <KG>, <KH> )
-      - MIPSplittingByJenningsLieAlgebra( <list>, <no>, <mode> )
-      - MIPSplittingReport( <list> )
-    * AugmentationIdealPowerFactorGroup(KG,n) for computation of the 
-      pc presentation of the factorgroup of the normalized unit group 
-      V(KG) over 1+I^n, where I is the augmentation ideal of KG, and 
-      NormalizedUnitCFmod for reducing this calculations modulo I^n.
+3.9.6 (February 2023)
+    * Updates in package metadata
+
+3.9.7 (July 2024)
+    * Various janitorial changes
