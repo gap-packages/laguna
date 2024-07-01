@@ -46,7 +46,7 @@
   [2XIsUnitGroupOfGroupRing[102X 4.4-9 
   Jennings series 3.3 
   [2XLAGInfo[102X 4.6-6 
-  [5XLAGUNA[105X package .-1 
+  [5XLAGUNA[105X package 0.0-1 
   [2XLeftIdealBySubgroup[102X 4.3-8 
   [2XLength[102X 4.2-4 
   Lie derived length 4.5-21 

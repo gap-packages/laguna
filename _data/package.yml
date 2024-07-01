@@ -1,7 +1,7 @@
 name: LAGUNA
-version: "3.9.6"
+version: "3.9.7"
 license: "GPL-2.0-or-later"
-date: 2023-02-25
+date: 2024-07-01
 description: |
     Lie AlGebras and UNits of group Algebras
 
@@ -27,7 +27,7 @@ GAP: ">=4.9"
 needed-pkgs:
     - name: "GAPDoc"
       version: ">= 1.6.1"
-      url: "http://www.math.rwth-aachen.de/~Frank.Luebeck/GAPDoc"
+      url: "https://www.math.rwth-aachen.de/~Frank.Luebeck/GAPDoc"
 
 suggested-pkgs:
     - name: "Sophus"
@@ -40,7 +40,7 @@ packageinfo: https://gap-packages.github.io/laguna/PackageInfo.g
 
 downloads:
     - name: .tar.gz
-      url: https://github.com/gap-packages/laguna/releases/download/v3.9.6/laguna-3.9.6.tar.gz
+      url: https://github.com/gap-packages/laguna/releases/download/v3.9.7/laguna-3.9.7.tar.gz
 
 abstract: |
     The <span class="pkgname">LAGUNA</span> package replaces the <span class="pkgname">LAG</span> package and provides functionality for calculation of the normalized unit group of the modular group algebra of the finite p-group and for investigation of Lie algebra associated with group algebras and other associative algebras.
@@ -52,29 +52,29 @@ keywords: |
     group ring, modular group algebra, Lie algebra, unit group.
 citeas: |
     <p class='BibEntry'>
-    [<span class='BibKey'>BKRS23</span>]   <b class='BibAuthor'>Bovdi, V., Konovalov, O., Rossmanith, R. and Schneider, C.</b>,
+    [<span class='BibKey'>BKRS24</span>]   <b class='BibAuthor'>Bovdi, V., Konovalov, O., Rossmanith, R. and Schneider, C.</b>,
      <i class='BibTitle'>LAGUNA, Lie AlGebras and UNits of group Algebras,
-             Version 3.9.6</i>
-     (<span class='BibYear'>2023</span>)<br />
-    (<span class='BibNote'>Refereed GAP package</span>),
+             Version 3.9.7</i>
+     (<span class='BibYear'>2024</span>)<br />
+    (<span class='BibNote'>GAP package</span>),
     <span class='BibHowpublished'><a href="https://gap-packages.github.io/laguna">https://gap-packages.github.io/laguna</a></span>.
     </p>
     
 
 bibtex: |
-    @misc{ LAGUNA3.9.6,
+    @misc{ LAGUNA,
       author =           {Bovdi,  V.  and  Konovalov,  O. and Rossmanith, R. and
                           Schneider, C.},
       title =            {{LAGUNA},  Lie  AlGebras  and UNits of group Algebras,
-                          {V}ersion 3.9.6},
-      month =            {Feb},
-      year =             {2023},
-      note =             {Refereed GAP package},
+                          {V}ersion 3.9.7},
+      month =            {Jul},
+      year =             {2024},
+      note =             {GAP package},
       howpublished =     {\href          {https://gap-packages.github.io/laguna}
-                          {\texttt{https://gap-packages.github.io/}\discretionary
+                          {\texttt{https://gap\texttt{\symbol{45}}packages.github.io/}\discretionary
                           {}{}{}\texttt{laguna}}},
       keywords =         {group  ring;  modular group algebra; Lie algebra; unit
                           group},
-      printedkey =       {BKRS23}
+      printedkey =       {BKRS24}
     }
 
