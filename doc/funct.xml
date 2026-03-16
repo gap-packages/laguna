@@ -20,14 +20,12 @@
    </Description>
 </ManSection>
 
-<Example>
-<![CDATA[
+<Example><![CDATA[
 gap> IsGroupAlgebra( GroupRing( GF( 2 ), DihedralGroup( 16 ) ) );
 true
 gap> IsGroupAlgebra( GroupRing( Integers, DihedralGroup( 16 ) ) );
 false      
-]]>
-</Example>
+]]></Example>
 
 
 <ManSection>
@@ -50,14 +48,12 @@ false
    </Description>
 </ManSection>
 
-<Example>
-<![CDATA[
+<Example><![CDATA[
 gap> IsFModularGroupAlgebra( GroupRing( GF( 2 ), SymmetricGroup( 6 ) ) );
 true
 gap> IsFModularGroupAlgebra( GroupRing( GF( 2 ), CyclicGroup( 3 ) ) );
 false  
-]]>
-</Example>
+]]></Example>
 
 
 <ManSection>
@@ -80,14 +76,12 @@ false
    </Description>
 </ManSection>
 
-<Example>
-<![CDATA[
+<Example><![CDATA[
 gap> IsPModularGroupAlgebra( GroupRing( GF( 2 ), DihedralGroup( 16 ) ) );
 true
 gap> IsPModularGroupAlgebra( GroupRing( GF( 2 ), SymmetricGroup( 6 ) ) );
 false        
-]]>
-</Example>
+]]></Example>
 
 
 <ManSection>
@@ -106,14 +100,12 @@ false
    </Description>
 </ManSection>
 
-<Example>
-<![CDATA[
+<Example><![CDATA[
 gap> KG := GroupRing( GF ( 2 ), DihedralGroup( 16 ) );
 <algebra-with-one over GF(2), with 4 generators>
 gap> G := UnderlyingGroup( KG );
 <pc group of size 16 with 4 generators>  
-]]>
-</Example>
+]]></Example>
 
 
 <ManSection>
@@ -131,14 +123,12 @@ gap> G := UnderlyingGroup( KG );
    </Description>
 </ManSection>
 
-<Example>
-<![CDATA[
+<Example><![CDATA[
 gap> KG := GroupRing( GF( 2 ), DihedralGroup( 16 ) );
 <algebra-with-one over GF(2), with 4 generators>
 gap> UnderlyingRing( KG );
 GF(2)     
-]]>
-</Example>
+]]></Example>
 
 
 <ManSection>
@@ -156,14 +146,12 @@ GF(2)
    </Description>
 </ManSection>
 
-<Example>
-<![CDATA[
+<Example><![CDATA[
 gap> KG := GroupRing( GF( 2 ), DihedralGroup( 16 ) );
 <algebra-with-one over GF(2), with 4 generators>
 gap> UnderlyingField( KG );
 GF(2)    
-]]>
-</Example>
+]]></Example>
 </Section>
 
 <!-- ######################################################### -->
@@ -189,8 +177,7 @@ GF(2)
    </Description>
 </ManSection>
 
-<Example>
-<![CDATA[
+<Example><![CDATA[
 # First we create an element x to use in in the series of examples.
 # We map the minimal generating system of the group G to its group algebra
 # and denote their images as a and b
@@ -205,8 +192,7 @@ gap> x := ( e + a ) * ( e + b );
 (Z(2)^0)*<identity> of ...+(Z(2)^0)*f1+(Z(2)^0)*f2+(Z(2)^0)*f1*f2
 gap> Support( x );
 [ <identity> of ..., f1, f2, f1*f2 ]     
-]]>
-</Example>
+]]></Example>
 
 
 <ManSection>
@@ -225,14 +211,12 @@ gap> Support( x );
    </Description>
 </ManSection>
 
-<Example>
-<![CDATA[
+<Example><![CDATA[
 gap> x;
 (Z(2)^0)*<identity> of ...+(Z(2)^0)*f1+(Z(2)^0)*f2+(Z(2)^0)*f1*f2
 gap> CoefficientsBySupport( x );
 [ Z(2)^0, Z(2)^0, Z(2)^0, Z(2)^0 ]   
-]]>
-</Example>
+]]></Example>
 
 
 <ManSection>
@@ -254,14 +238,12 @@ gap> CoefficientsBySupport( x );
    </Description>
 </ManSection>
 
-<Example>
-<![CDATA[
+<Example><![CDATA[
 gap> x;
 (Z(2)^0)*<identity> of ...+(Z(2)^0)*f1+(Z(2)^0)*f2+(Z(2)^0)*f1*f2
 gap> TraceOfMagmaRingElement( x );
 Z(2)^0        
-]]>
-</Example>
+]]></Example>
 
 
 <ManSection>
@@ -276,14 +258,12 @@ Z(2)^0
    </Description>
 </ManSection>
 
-<Example>
-<![CDATA[
+<Example><![CDATA[
 gap> x;
 (Z(2)^0)*<identity> of ...+(Z(2)^0)*f1+(Z(2)^0)*f2+(Z(2)^0)*f1*f2
 gap> Length( x );
 4     
-]]>
-</Example>
+]]></Example>
 
 
 <ManSection>
@@ -301,14 +281,12 @@ gap> Length( x );
    </Description>
 </ManSection>
 
-<Example>
-<![CDATA[
+<Example><![CDATA[
 gap> x;
 (Z(2)^0)*<identity> of ...+(Z(2)^0)*f1+(Z(2)^0)*f2+(Z(2)^0)*f1*f2
 gap> Augmentation( x );
 0*Z(2)     
-]]>
-</Example>
+]]></Example>
 
 
 <ManSection>
@@ -336,15 +314,13 @@ gap> Augmentation( x );
    </Description>
 </ManSection>
 
-<Example>
-<![CDATA[
+<Example><![CDATA[
 gap> y := x + a*b^2;
 (Z(2)^0)*<identity> of ...+(Z(2)^0)*f1+(Z(2)^0)*f2+(Z(2)^0)*f1*f2+(Z(2)^
 0)*f1*f3
 gap> PartialAugmentations( KG, y );
 [ [ Z(2)^0, 0*Z(2), Z(2)^0, Z(2)^0 ], [ <identity> of ..., f1, f2, f1*f2 ] ]    
-]]>
-</Example>
+]]></Example>
 
 <ManSection>
    <Oper Name="Involution" 
@@ -373,8 +349,7 @@ gap> PartialAugmentations( KG, y );
    </Description>
 </ManSection>
 
-<Example>
-<![CDATA[
+<Example><![CDATA[
 gap> x;
 (Z(2)^0)*<identity> of ...+(Z(2)^0)*f1+(Z(2)^0)*f2+(Z(2)^0)*f1*f2
 gap> Involution( x );
@@ -385,8 +360,7 @@ gap> List( l, Involution ); # check how involution acts on elements of G
 [ (Z(2)^0)*f1, (Z(2)^0)*f2*f3*f4 ]
 gap> List( l, g -> g^-1 );
 [ (Z(2)^0)*f1, (Z(2)^0)*f2*f3*f4 ]     
-]]>
-</Example>
+]]></Example>
 
 
 <ManSection>
@@ -400,14 +374,12 @@ gap> List( l, g -> g^-1 );
    </Description>
 </ManSection>
 
-<Example>
-<![CDATA[
+<Example><![CDATA[
 gap> IsSymmetric( x );
 false
 gap> IsSymmetric( x * Involution( x ) );
 true     
-]]>
-</Example>
+]]></Example>
 
 
 <ManSection>
@@ -421,16 +393,14 @@ true
    </Description>
 </ManSection>
 
-<Example>
-<![CDATA[
+<Example><![CDATA[
 gap> IsUnitary(x);
 false
 gap> l:=List(MinimalGeneratingSet(G),g -> g^Embedding(G,KG));
 [ (Z(2)^0)*f1, (Z(2)^0)*f2 ]
 gap> List(l,IsUnitary); # check that elements of G are unitary
 [ true, true ]   
-]]>
-</Example>
+]]></Example>
 
 
 <ManSection>
@@ -459,8 +429,7 @@ gap> List(l,IsUnitary); # check that elements of G are unitary
 </ManSection>
 
 
-<Example>
-<![CDATA[
+<Example><![CDATA[
 gap> x;
 (Z(2)^0)*<identity> of ...+(Z(2)^0)*f1+(Z(2)^0)*f2+(Z(2)^0)*f1*f2
 gap> IsUnit( KG, x ); # clearly, is not a unit due to augmentation zero
@@ -469,8 +438,7 @@ gap> y := One( KG ) + x; # this should give a unit
 (Z(2)^0)*f1+(Z(2)^0)*f2+(Z(2)^0)*f1*f2
 gap> IsUnit( KG, y );
 true       
-]]>
-</Example>
+]]></Example>
 
 
 <ManSection>
@@ -488,8 +456,7 @@ true
    </Description>
 </ManSection>
 
-<Example>
-<![CDATA[
+<Example><![CDATA[
 gap> y;
 (Z(2)^0)*f1+(Z(2)^0)*f2+(Z(2)^0)*f1*f2
 gap> y^-1;
@@ -498,8 +465,7 @@ gap> y^-1;
 Z(2)^0)*f1*f2*f3*f4
 gap> y * y^-1;
 (Z(2)^0)*<identity> of ...    
-]]>
-</Example>
+]]></Example>
 
 
 <ManSection>
@@ -541,8 +507,7 @@ gap> y * y^-1;
     </Description>
 </ManSection>
 
-<Example>
-<![CDATA[
+<Example><![CDATA[
 gap> G := SmallGroup(32,6);
 <pc group of size 32 with 5 generators>
 gap> KG := GroupRing( GF(2), G );
@@ -557,8 +522,7 @@ gap> g := List( g, x -> x^Embedding( G, KG ) );
 [ (Z(2)^0)*f1, (Z(2)^0)*f2 ]
 gap> BicyclicUnitOfType1(g[1],g[2]) = BicyclicUnitOfType2(g[1],g[2]);
 false                                                                       
-]]>
-</Example>
+]]></Example>
 
 
 <ManSection>
@@ -595,8 +559,7 @@ false
     </Description>
 </ManSection>
 
-<Example>
-<![CDATA[
+<Example><![CDATA[
 gap> S := SymmetricGroup( 5 );;
 gap> ZS := GroupRing( Integers, S );;
 gap> f := Embedding( S, ZS );;
@@ -604,8 +567,7 @@ gap> BassCyclicUnit( ZS, (1,3,2,5,4) , 3 );
 (1)*()+(-2)*(1,2,4,3,5)+(-2)*(1,3,2,5,4)+(3)*(1,4,5,2,3)+(1)*(1,5,3,4,2)
 gap> BassCyclicUnit( (1,3,2,5,4)^f, 3 ); 
 (1)*()+(-2)*(1,2,4,3,5)+(-2)*(1,3,2,5,4)+(3)*(1,4,5,2,3)+(1)*(1,5,3,4,2)
-]]>
-</Example>
+]]></Example>
 
 </Section>
 
@@ -637,8 +599,7 @@ gap> BassCyclicUnit( (1,3,2,5,4)^f, 3 );
    </Description>
 </ManSection>
 
-<Example>
-<![CDATA[
+<Example><![CDATA[
 gap> F := GF( 2 ); G := SymmetricGroup( 3 ); FG := GroupRing( F, G );
 GF(2)
 Sym( [ 1 .. 3 ] )
@@ -658,8 +619,7 @@ gap> Augmentation(x); Augmentation(y); Augmentation( x + y ); # this is faster
 Z(2)^0
 Z(2)^0
 0*Z(2)   
-]]>
-</Example>
+]]></Example>
 
 
 <ManSection>
@@ -681,15 +641,13 @@ Z(2)^0
    </Description>
 </ManSection>
 
-<Example>
-<![CDATA[
+<Example><![CDATA[
 gap> KG := GroupRing( GF( 2 ), DihedralGroup( 16 ) );
 <algebra-with-one over GF(2), with 4 generators>
 gap> AugmentationIdeal( KG );
 <two-sided ideal in <algebra-with-one over GF(2), with 4 generators>,
   (dimension 15)>
-]]>
-</Example>
+]]></Example>
 
 
 <ManSection>
@@ -709,8 +667,7 @@ gap> AugmentationIdeal( KG );
    </Description>
 </ManSection>
 
-<Example>
-<![CDATA[
+<Example><![CDATA[
 gap> KG := GroupRing( GF( 2 ), DihedralGroup( 16 ) );
 <algebra-with-one over GF(2), with 4 generators>
 gap> RadicalOfAlgebra( KG );
@@ -718,8 +675,7 @@ gap> RadicalOfAlgebra( KG );
   (dimension 15)>
 gap> RadicalOfAlgebra( KG ) = AugmentationIdeal( KG );
 true     
-]]>
-</Example>
+]]></Example>
 
 
 <ManSection>
@@ -760,8 +716,7 @@ true
    </Description>
 </ManSection>
 
-<Example>
-<![CDATA[
+<Example><![CDATA[
 gap> KG := GroupRing( GF( 2 ), ElementaryAbelianGroup( 4 ) );
 <algebra-with-one over GF(2), with 2 generators>
 gap> WeightedBasis( KG );
@@ -770,8 +725,7 @@ rec(
       (Z(2)^0)*<identity> of ...+(Z(2)^0)*f2, 
       (Z(2)^0)*<identity> of ...+(Z(2)^0)*f1+(Z(2)^0)*f2+(Z(2)^0)*f1*f2 ], 
   weights := [ 1, 1, 2 ] )
-]]>
-</Example>
+]]></Example>
 
 
 <ManSection>
@@ -791,8 +745,7 @@ rec(
    </Description>
 </ManSection>
 
-<Example>
-<![CDATA[
+<Example><![CDATA[
 gap> KG := GroupRing( GF( 2 ), DihedralGroup( 16 ) );
 <algebra-with-one over GF(2), with 4 generators>
 gap> s := AugmentationIdealPowerSeries( KG );;
@@ -802,8 +755,7 @@ gap> List(s,Dimension);
 [ 15, 13, 11, 9, 7, 5, 3, 1, 0 ]
 gap> Length(s);
 9
-]]>
-</Example>
+]]></Example>
 
 
 <ManSection>
@@ -820,14 +772,12 @@ gap> Length(s);
    </Description>
 </ManSection>
 
-<Example>
-<![CDATA[
+<Example><![CDATA[
 gap> KG := GroupRing( GF( 2 ), DihedralGroup( 16 ) );
 <algebra-with-one over GF(2), with 4 generators>
 gap> AugmentationIdealNilpotencyIndex( KG );
 9      
-]]>
-</Example>
+]]></Example>
 
 
 <ManSection>
@@ -842,8 +792,7 @@ gap> AugmentationIdealNilpotencyIndex( KG );
    </Description>
 </ManSection>
 
-<Example>
-<![CDATA[
+<Example><![CDATA[
 gap> KG := GroupRing( GF( 2 ), DihedralGroup( 16 ) );
 <algebra-with-one over GF(2), with 4 generators>
 gap> AugmentationIdealOfDerivedSubgroupNilpotencyIndex( KG );
@@ -854,8 +803,7 @@ gap> KD := GroupRing( GF( 2 ), D );
 <algebra-with-one over GF(2), with 2 generators>
 gap> AugmentationIdealNilpotencyIndex( KD );
 4       
-]]>
-</Example>
+]]></Example>
 
 
 <ManSection>
@@ -890,8 +838,7 @@ gap> AugmentationIdealNilpotencyIndex( KD );
    </Description>
 </ManSection>
 
-<Example>
-<![CDATA[
+<Example><![CDATA[
 gap> KG := GroupRing( GF(2), DihedralGroup(16) );
 <algebra-with-one over GF(2), with 4 generators>
 gap> G := DihedralGroup(16);
@@ -910,8 +857,7 @@ false
 gap> LeftIdealBySubgroup( KG, H );
 <left ideal in <algebra-with-one over GF(2), with 4 generators>, (dimension 8
  )>
-]]>
-</Example>
+]]></Example>
 
 
 </Section>
@@ -940,16 +886,14 @@ gap> LeftIdealBySubgroup( KG, H );
    </Description>
 </ManSection>
 
-<Example>
-<![CDATA[
+<Example><![CDATA[
 gap> KG := GroupRing( GF( 2 ), DihedralGroup( 16 ) );
 <algebra-with-one over GF(2), with 4 generators>
 gap> V := NormalizedUnitGroup( KG );
 <group of size 32768 with 15 generators>
 gap> u := GeneratorsOfGroup( V )[4];
 (Z(2)^0)*f3  
-]]>
-</Example>
+]]></Example>
 
 
 <ManSection>
@@ -969,14 +913,12 @@ gap> u := GeneratorsOfGroup( V )[4];
    </Description>
 </ManSection>
 
-<Example>
-<![CDATA[
+<Example><![CDATA[
 gap> W := PcNormalizedUnitGroup( KG );
 <pc group of size 32768 with 15 generators>
 gap> w := GeneratorsOfGroup( W )[4];
 f4       
-]]>
-</Example>
+]]></Example>
 
 
 <ManSection>
@@ -1009,8 +951,7 @@ f4
    </Description>
 </ManSection>
 
-<Example>
-<![CDATA[
+<Example><![CDATA[
 gap> f := NaturalBijectionToPcNormalizedUnitGroup( KG );
 MappingByFunction( <group of size 32768 with 15 generators>, <pc group of size\
  32768 with 15 generators>, function( x ) ... end )
@@ -1019,8 +960,7 @@ gap> u^f;
 f4   
 gap> GeneratorsOfGroup( V )[4]^f = GeneratorsOfGroup( W )[4];
 true      
-]]>
-</Example>
+]]></Example>
 
 
 <ManSection>
@@ -1037,16 +977,14 @@ true
    </Description>
 </ManSection>
 
-<Example>
-<![CDATA[
+<Example><![CDATA[
 gap> t := NaturalBijectionToNormalizedUnitGroup(KG);;
 gap> w := GeneratorsOfGroup(W)[4];;
 gap> w^t;
 (Z(2)^0)*f3    
 gap> GeneratorsOfGroup( W )[4]^t = GeneratorsOfGroup( V )[4];
 true     
-]]>
-</Example>
+]]></Example>
 
 
 <ManSection>
@@ -1068,8 +1006,7 @@ true
    </Description>
 </ManSection>
 
-<Example>
-<![CDATA[
+<Example><![CDATA[
 gap> G := DihedralGroup( 16 );
 <pc group of size 16 with 4 generators>
 gap> KG := GroupRing( GF( 2 ), G );
@@ -1087,8 +1024,7 @@ gap> T:=PreImage( f, H );             # find its preimage in G
 Group([ f3, f4, f3*f4 ])
 gap> IdGroup( T ); 
 [ 4, 1 ]
-]]>
-</Example>
+]]></Example>
 
 <ManSection>
    <Attr Name="Units" 
@@ -1106,8 +1042,7 @@ gap> IdGroup( T );
    </Description>
 </ManSection>
 
-<Example>
-<![CDATA[
+<Example><![CDATA[
 gap> U := Units( KG );
 #I  LAGUNA package: Computing the unit group ...
 <group of size 32768 with 15 generators>
@@ -1124,8 +1059,7 @@ gap> x in FH;
 false
 gap> x[1] * x[2] in FH; # how to get the corresponding element of FH
 true 
-]]>
-</Example>
+]]></Example>
 
 
 <ManSection>
@@ -1142,8 +1076,7 @@ true
    </Description>
 </ManSection>
 
-<Example>
-<![CDATA[
+<Example><![CDATA[
 gap> W := PcUnits( KG );
 <pc group of size 32768 with 15 generators>
 gap> GeneratorsOfGroup( W )[5];
@@ -1154,8 +1087,7 @@ gap> T := PcUnits(FH);
 <group of size 5083731656658 with 27 generators>
 gap> x := GeneratorsOfGroup( T )[2];
 DirectProductElement( [ Z(3)^0, f1 ] )                      
-]]>
-</Example>
+]]></Example>
 
 
 <ManSection>
@@ -1168,14 +1100,12 @@ DirectProductElement( [ Z(3)^0, f1 ] )
    </Description>
 </ManSection>
 
-<Example>
-<![CDATA[
+<Example><![CDATA[
 gap> IsGroupOfUnitsOfMagmaRing( NormalizedUnitGroup( KG ) );
 true
 gap> IsGroupOfUnitsOfMagmaRing( Units( KG ) );
 true     
-]]>
-</Example>
+]]></Example>
 
 
 <ManSection>
@@ -1190,14 +1120,12 @@ true
    </Description>
 </ManSection>
 
-<Example>
-<![CDATA[
+<Example><![CDATA[
 gap> IsUnitGroupOfGroupRing( Units( KG ) );
 true
 gap> IsUnitGroupOfGroupRing( PcUnits( KG ) );
 true     
-]]>
-</Example>
+]]></Example>
 
 
 <ManSection>
@@ -1212,14 +1140,12 @@ true
    </Description>
 </ManSection>
 
-<Example>
-<![CDATA[
+<Example><![CDATA[
 gap> IsNormalizedUnitGroupOfGroupRing( NormalizedUnitGroup( KG ) );
 true
 gap> IsNormalizedUnitGroupOfGroupRing( PcNormalizedUnitGroup( KG ) );
 true     
-]]>
-</Example>
+]]></Example>
 
 
 <ManSection>
@@ -1240,8 +1166,7 @@ true
    </Description>
 </ManSection>
 
-<Example>
-<![CDATA[
+<Example><![CDATA[
 gap> UnderlyingGroupRing( Units( KG ) );
 <algebra-with-one of dimension 16 over GF(2)>
 gap> UnderlyingGroupRing( PcUnits( KG ) );
@@ -1250,8 +1175,7 @@ gap> UnderlyingGroupRing( NormalizedUnitGroup( KG ) );
 <algebra-with-one of dimension 16 over GF(2)>
 gap> UnderlyingGroupRing( PcNormalizedUnitGroup( KG ) );
 <algebra-with-one of dimension 16 over GF(2)>
-]]>
-</Example>
+]]></Example>
 
 
 <ManSection>
@@ -1273,8 +1197,7 @@ gap> UnderlyingGroupRing( PcNormalizedUnitGroup( KG ) );
    </Description>
 </ManSection>
 
-<Example>
-<![CDATA[
+<Example><![CDATA[
 gap> KG := GroupRing( GF( 2 ), DihedralGroup( 8 ) );
 <algebra-with-one over GF(2), with 3 generators>
 gap> U := NormalizedUnitGroup( KG );
@@ -1291,8 +1214,7 @@ gap> IdGroup( HV );
 [ 64, 261 ]
 gap> Image(NaturalBijectionToPcNormalizedUnitGroup( KG ), HU ) = HV;
 true
-]]>
-</Example>
+]]></Example>
 
 
 <ManSection>
@@ -1316,8 +1238,7 @@ true
    </Description>
 </ManSection>
 
-<Example>
-<![CDATA[
+<Example><![CDATA[
 gap> KG := GroupRing( GF( 2 ), DihedralGroup( 8 ) );
 <algebra-with-one over GF(2), with 3 generators>
 gap> U := NormalizedUnitGroup( KG );
@@ -1334,8 +1255,7 @@ gap> IdGroup( BV );
 [ 4, 2 ]
 gap> Image( NaturalBijectionToPcNormalizedUnitGroup( KG ), BU ) = BV;
 true
-]]>
-</Example>
+]]></Example>
 
 <!--
 <ManSection>
@@ -1349,10 +1269,8 @@ true
    </Description>
 </ManSection>
 
-<Example>
-<![CDATA[
-]]>
-</Example>
+<Example><![CDATA[
+]]></Example>
 -->
 
 
@@ -1376,8 +1294,7 @@ true
 </ManSection>
 
 
-<Example>
-<![CDATA[
+<Example><![CDATA[
 gap> D8 := DihedralGroup( 8 );
 <pc group of size 8 with 3 generators>
 gap> K := GF(2);
@@ -1393,8 +1310,7 @@ gap> gb[1][1];
 (Z(2)^0)*<identity> of ...
 gap> ForAll(gb, b -> IdGroup(Group(b))=[8,3]);
 true
-]]>
-</Example>
+]]></Example>
 </Section>
 
 <!-- ######################################################### -->
@@ -1420,15 +1336,13 @@ true
    </Description>
 </ManSection>
 
-<Example>
-<![CDATA[
+<Example><![CDATA[
 gap> G := SymmetricGroup(3);; FG := GroupRing( GF( 2 ), G );
 <algebra-with-one over GF(2), with 2 generators>
 gap> L := LieAlgebra( FG );
 #I  LAGUNA package: Constructing Lie algebra ...
 <Lie algebra over GF(2)>
-]]>
-</Example>
+]]></Example>
 
 
 <ManSection>
@@ -1442,8 +1356,7 @@ gap> L := LieAlgebra( FG );
    </Description>
 </ManSection>
 
-<Example>
-<![CDATA[
+<Example><![CDATA[
 gap> KG := GroupRing( GF(3), DihedralGroup(16) );
 <algebra-with-one over GF(3), with 4 generators>
 gap> L := LieAlgebra ( KG );
@@ -1451,8 +1364,7 @@ gap> L := LieAlgebra ( KG );
 <Lie algebra over GF(3)>
 gap> IsLieAlgebraByAssociativeAlgebra( L );
 true
-]]>
-</Example>
+]]></Example>
 
 
 <ManSection>
@@ -1468,8 +1380,7 @@ true
    </Description>
 </ManSection>
 
-<Example>
-<![CDATA[
+<Example><![CDATA[
 gap> KG := GroupRing( GF(2), DihedralGroup(16) ); 
 <algebra-with-one over GF(2), with 4 generators>
 gap> L := LieAlgebra ( KG );
@@ -1479,8 +1390,7 @@ gap> UnderlyingAssociativeAlgebra( L );
 <algebra-with-one over GF(2), with 4 generators>
 gap> last = KG;
 true  
-]]>
-</Example>
+]]></Example>
 
 
 <ManSection>
@@ -1499,8 +1409,7 @@ true
    </Description>
 </ManSection>
 
-<Example>
-<![CDATA[
+<Example><![CDATA[
 gap> F := GF( 2 ); G := SymmetricGroup( 3 ); FG := GroupRing( F, G );
 GF(2)
 Sym( [ 1 .. 3 ] )
@@ -1515,8 +1424,7 @@ gap> b := a^t;
 LieObject( (Z(2)^0)*()+(Z(2)^0)*(2,3)+(Z(2)^0)*(1,2)+(Z(2)^0)*(1,2,3) )
 gap> b * b; # product in the Lie algebra (commutator) - must be zero!
 LieObject( <zero> of ... )
-]]>
-</Example>
+]]></Example>
 
 
 <ManSection>
@@ -1528,8 +1436,7 @@ LieObject( <zero> of ... )
    </Description>
 </ManSection>
 
-<Example>
-<![CDATA[
+<Example><![CDATA[
 gap> G := SymmetricGroup(3); FG := GroupRing( GF( 2 ), G );
 Sym( [ 1 .. 3 ] )
 <algebra-with-one over GF(2), with 2 generators>
@@ -1539,8 +1446,7 @@ gap> L := LieAlgebra( FG );
 gap> s := NaturalBijectionToAssociativeAlgebra( L );;
 gap> InverseGeneralMapping( s ) = NaturalBijectionToLieAlgebra( FG );
 true   
-]]>
-</Example>
+]]></Example>
 
 
 <ManSection>
@@ -1555,8 +1461,7 @@ true
 </ManSection>
 
 
-<Example>
-<![CDATA[
+<Example><![CDATA[
 gap> F := GF( 2 ); G := SymmetricGroup( 3 ); FG := GroupRing( F, G );
 GF(2)
 Sym( [ 1 .. 3 ] )
@@ -1566,8 +1471,7 @@ gap> L := LieAlgebra( FG );
 <Lie algebra over GF(2)>
 gap> IsLieAlgebraOfGroupRing( L );
 true   
-]]>
-</Example>
+]]></Example>
 
 
 <ManSection>
@@ -1585,8 +1489,7 @@ true
    </Description>
 </ManSection>
 
-<Example>
-<![CDATA[
+<Example><![CDATA[
 gap> F := GF( 2 ); G := SymmetricGroup( 3 ); FG := GroupRing( F, G );
 GF(2)
 Sym( [ 1 .. 3 ] )
@@ -1598,8 +1501,7 @@ gap> UnderlyingGroup( L );
 Sym( [ 1 .. 3 ] )
 gap> LeftActingDomain( L );
 GF(2)   
-]]>
-</Example>
+]]></Example>
 
 
 <ManSection>
@@ -1620,8 +1522,7 @@ GF(2)
    </Description>
 </ManSection>
 
-<Example>
-<![CDATA[
+<Example><![CDATA[
 gap> F := GF( 2 ); G := SymmetricGroup( 3 ); FG := GroupRing( F, G );
 GF(2)
 Sym( [ 1 .. 3 ] )
@@ -1632,8 +1533,7 @@ gap> L := LieAlgebra( FG );
 gap> f := Embedding( G, L );;
 gap> (1,2)^f + (1,3)^f;
 LieObject( (Z(2)^0)*(1,2)+(Z(2)^0)*(1,3) )   
-]]>
-</Example>
+]]></Example>
 
 
 <ManSection>
@@ -1651,8 +1551,7 @@ LieObject( (Z(2)^0)*(1,2)+(Z(2)^0)*(1,3) )
    </Description>
 </ManSection>
 
-<Example>
-<![CDATA[
+<Example><![CDATA[
 gap> G := SmallGroup( 256, 400 ); FG := GroupRing( GF( 2 ), G ); 
 <pc group of size 256 with 8 generators>
 <algebra-with-one over GF(2), with 8 generators>
@@ -1670,8 +1569,7 @@ gap> c := Dimension( C ); d := Dimension( D ); l := Dimension( L );
 256
 gap> c + d = l; # This is always the case for Lie algebras of group algebras! 
 true
-]]>
-</Example>
+]]></Example>
 
 
 <ManSection>
@@ -1688,8 +1586,7 @@ true
    </Description>
 </ManSection>
 
-<Example>
-<![CDATA[
+<Example><![CDATA[
 gap> G := SmallGroup( 256, 400 ); FG := GroupRing( GF( 2 ), G ); 
 <pc group of size 256 with 8 generators>
 <algebra-with-one over GF(2), with 8 generators>
@@ -1707,8 +1604,7 @@ gap> l := Dimension( L ); c := Dimension( C ); d := Dimension( D );
 228
 gap> c + d = l; # This is always the case for Lie algebras of group algebras!
 true
-]]>
-</Example>
+]]></Example>
 
 
 <ManSection>
@@ -1721,8 +1617,7 @@ true
    </Description>
 </ManSection>
 
-<Example>
-<![CDATA[
+<Example><![CDATA[
 gap> G := SymmetricGroup( 3 ); FG := GroupRing( GF( 2 ), G); 
 Sym( [ 1 .. 3 ] )
 <algebra-with-one over GF(2), with 2 generators>
@@ -1735,8 +1630,7 @@ gap> IsAbelian( L );    # This command should not be used for Lie algebras!
 true                    
 gap> IsLieAbelian( L ); # Instead, IsLieAbelian is the correct command.
 false   
-]]>
-</Example>
+]]></Example>
 
 
 <ManSection>
@@ -1752,8 +1646,7 @@ false
    </Description>
 </ManSection>
 
-<Example>
-<![CDATA[
+<Example><![CDATA[
 gap> G := SmallGroup( 256, 400 ); FG := GroupRing( GF( 2 ), G ); 
 <pc group of size 256 with 8 generators>
 <algebra-with-one over GF(2), with 8 generators>
@@ -1766,8 +1659,7 @@ true
 gap> List( LieDerivedSeries( L ), Dimension ); # This is very slow.
 #I  LAGUNA package: Computing the Lie derived subalgebra ...
 [ 256, 228, 189, 71, 0 ]   
-]]>
-</Example>
+]]></Example>
 
 
 <ManSection>
@@ -1783,8 +1675,7 @@ gap> List( LieDerivedSeries( L ), Dimension ); # This is very slow.
    </Description>
 </ManSection>
 
-<Example>
-<![CDATA[
+<Example><![CDATA[
 gap> G := SmallGroup( 256, 400 ); FG := GroupRing( GF( 2 ), G ); 
 <pc group of size 256 with 8 generators>
 <algebra-with-one over GF(2), with 8 generators>
@@ -1797,8 +1688,7 @@ true
 gap> List( LieLowerCentralSeries( L ), Dimension ); # This is very slow.
 #I  LAGUNA package: Computing the Lie derived subalgebra ...
 [ 256, 228, 222, 210, 191, 167, 138, 107, 76, 54, 29, 15, 6, 0 ]   
-]]>
-</Example>
+]]></Example>
 
 
 <ManSection>
@@ -1814,8 +1704,7 @@ gap> List( LieLowerCentralSeries( L ), Dimension ); # This is very slow.
    </Description>
 </ManSection>
 
-<Example>
-<![CDATA[
+<Example><![CDATA[
 gap> G := SmallGroup( 256, 400 ); FG := GroupRing( GF( 2 ), G ); 
 <pc group of size 256 with 8 generators>
 <algebra-with-one over GF(2), with 8 generators>
@@ -1824,8 +1713,7 @@ gap> L := LieAlgebra( FG );
 <Lie algebra over GF(2)>
 gap> IsLieMetabelian( L );
 false   
-]]>
-</Example>
+]]></Example>
 
 
 <ManSection>
@@ -1842,8 +1730,7 @@ false
    </Description>
 </ManSection>
 
-<Example>
-<![CDATA[
+<Example><![CDATA[
 gap> G := SymmetricGroup( 3 ); FG := GroupRing( GF( 2 ), G ); 
 Sym( [ 1 .. 3 ] )
 <algebra-with-one over GF(2), with 2 generators>
@@ -1854,8 +1741,7 @@ gap> IsLieMetabelian( L );
 false
 gap> IsLieCentreByMetabelian( L );
 true   
-]]>
-</Example>
+]]></Example>
 
 
 <ManSection>
@@ -1873,8 +1759,7 @@ true
    </Description>
 </ManSection>
 
-<Example>
-<![CDATA[
+<Example><![CDATA[
 gap> G := SymmetricGroup( 3 ); FG := GroupRing( GF( 2 ), G ); 
 Sym( [ 1 .. 3 ] )
 <algebra-with-one over GF(2), with 2 generators>
@@ -1887,8 +1772,7 @@ gap> Elements( B );
 [ LieObject( (Z(2)^0)*() ), LieObject( (Z(2)^0)*(2,3) ),
   LieObject( (Z(2)^0)*(1,2) ), LieObject( (Z(2)^0)*(1,2,3) ),
   LieObject( (Z(2)^0)*(1,3,2) ), LieObject( (Z(2)^0)*(1,3) ) ]
-]]>
-</Example>
+]]></Example>
 
 
 <ManSection>
@@ -1903,8 +1787,7 @@ gap> Elements( B );
    </Description>
 </ManSection>
 
-<Example>
-<![CDATA[
+<Example><![CDATA[
 gap> G := SymmetricGroup( 3 ); FG := GroupRing( GF( 2 ), G ); 
 Sym( [ 1 .. 3 ] )
 <algebra-with-one over GF(2), with 2 generators>
@@ -1915,8 +1798,7 @@ gap> B := CanonicalBasis( L );
 CanonicalBasis( <Lie algebra of dimension 6 over GF(2)> )
 gap> IsBasisOfLieAlgebraOfGroupRing( B );
 true   
-]]>
-</Example>
+]]></Example>
 
 
 <ManSection>
@@ -1931,8 +1813,7 @@ true
    </Description>
 </ManSection>
 
-<Example>
-<![CDATA[
+<Example><![CDATA[
 gap> G := CyclicGroup( 2 );; FG := GroupRing( GF( 2 ), G );;
 gap> L := LieAlgebra( FG );
 #I  LAGUNA package: Constructing Lie algebra ...
@@ -1943,8 +1824,7 @@ gap> StructureConstantsTable( B );
 #I  LAGUNA package: Computing the structure constants table ...   
 [ [ [ [  ], [  ] ], [ [  ], [  ] ] ], [ [ [  ], [  ] ], [ [  ], [  ] ] ], -1, 
   0*Z(2) ]  
-]]>
-</Example>
+]]></Example>
 
 
 <ManSection>
@@ -1968,14 +1848,12 @@ gap> StructureConstantsTable( B );
    </Description>
 </ManSection>
 
-<Example>
-<![CDATA[
+<Example><![CDATA[
 gap> KG := GroupRing( GF( 2 ), DihedralGroup( 16 ) );
 <algebra-with-one over GF(2), with 4 generators>
 gap> LieUpperNilpotencyIndex( KG );
 5      
-]]>
-</Example>
+]]></Example>
 
 
 <ManSection>
@@ -2005,14 +1883,12 @@ gap> LieUpperNilpotencyIndex( KG );
    </Description>
 </ManSection>
 
-<Example>
-<![CDATA[
+<Example><![CDATA[
 gap> KG := GroupRing( GF( 2 ), DihedralGroup( 16 ) );
 <algebra-with-one over GF(2), with 4 generators>
 gap> LieLowerNilpotencyIndex( KG );
 5     
-]]>
-</Example>
+]]></Example>
 
 
 <ManSection>
@@ -2033,8 +1909,7 @@ gap> LieLowerNilpotencyIndex( KG );
    </Description>
 </ManSection>
 
-<Example>
-<![CDATA[
+<Example><![CDATA[
 gap> KG := GroupRing( GF ( 2 ), DihedralGroup( 16 ) );;
 gap> L := LieAlgebra( KG );
 #I  LAGUNA package: Constructing Lie algebra ...
@@ -2042,8 +1917,7 @@ gap> L := LieAlgebra( KG );
 gap> LieDerivedLength( L );
 #I  LAGUNA package: Computing the Lie derived subalgebra ...
 3                                                            
-]]>
-</Example>
+]]></Example>
 
 </Section>
 
@@ -2065,12 +1939,10 @@ gap> LieDerivedLength( L );
    </Description>
 </ManSection>
 
-<Example>
-<![CDATA[
+<Example><![CDATA[
 gap> SubgroupsOfIndexTwo( DihedralGroup( 16 ) );
 [ Group([ f3, f4, f1 ]), Group([ f3, f4, f2 ]), Group([ f3, f4, f1*f2 ]) ]
-]]>
-</Example>
+]]></Example>
 
 
 <ManSection>
@@ -2086,16 +1958,14 @@ gap> SubgroupsOfIndexTwo( DihedralGroup( 16 ) );
    </Description>
 </ManSection>
 
-<Example>
-<![CDATA[
+<Example><![CDATA[
 gap> KD8 := GroupRing( GF(2), DihedralGroup( 8 ) );
 <algebra-with-one over GF(2), with 3 generators>
 gap> UD8 := PcNormalizedUnitGroup( KD8 );
 <pc group of size 128 with 7 generators>
 gap> DihedralDepth( UD8 );
 2      
-]]>
-</Example>
+]]></Example>
 
 
 <ManSection>
@@ -2113,14 +1983,12 @@ gap> DihedralDepth( UD8 );
    </Description>
 </ManSection>
 
-<Example>
-<![CDATA[
+<Example><![CDATA[
 gap> G := DihedralGroup( 16 );
 <pc group of size 16 with 4 generators>  
 gap> DimensionBasis( G );
 rec( dimensionBasis := [ f1, f2, f3, f4 ], weights := [ 1, 1, 2, 4 ] )    
-]]>
-</Example>
+]]></Example>
 
 
 <ManSection>
@@ -2141,15 +2009,13 @@ rec( dimensionBasis := [ f1, f2, f3, f4 ], weights := [ 1, 1, 2, 4 ] )
    </Description>
 </ManSection>
 
-<Example>
-<![CDATA[
+<Example><![CDATA[
 gap> G := DihedralGroup( 16 );
 <pc group of size 16 with 4 generators>  
 gap> LieDimensionSubgroups( G );
 [ <pc group of size 16 with 4 generators>, Group([ f3, f4 ]), Group([ f4 ]),
   Group([ <identity> of ... ]) ]     
-]]>
-</Example>
+]]></Example>
 
 
 <ManSection>
@@ -2183,8 +2049,7 @@ gap> LieDimensionSubgroups( G );
    </Description>
 </ManSection>
 
-<Example>
-<![CDATA[
+<Example><![CDATA[
 gap> G := DihedralGroup(16);
 <pc group of size 16 with 4 generators>
 gap> KG := GroupRing( GF(2), G );
@@ -2195,8 +2060,7 @@ gap> LieUpperCodimensionSeries( KG );
 gap> LieUpperCodimensionSeries( G );
 [ Group([ f1, f2, f3, f4 ]), Group([ f3, f4, f3*f4 ]), Group([ f4 ]), 
   Group([ f4 ]), Group([  ]) ]
-]]>
-</Example>
+]]></Example>
 
 
 <ManSection>
@@ -2209,8 +2073,7 @@ gap> LieUpperCodimensionSeries( G );
    </Description>
 </ManSection>
 
-<Example>
-<![CDATA[
+<Example><![CDATA[
 gap> SetInfoLevel( LAGInfo, 2 );
 gap> KD8 := GroupRing( GF( 2 ), DihedralGroup( 8 ) );
 <algebra-with-one over GF(2), with 3 generators>
@@ -2224,8 +2087,7 @@ gap> UD8 := PcNormalizedUnitGroup( KD8 );
 #I  LAGInfo: Filtration finished !
 #I  LAGInfo: finished, converting to PcGroup
 <pc group of size 128 with 7 generators>     
-]]>
-</Example>
+]]></Example>
 
 </Section>
 
