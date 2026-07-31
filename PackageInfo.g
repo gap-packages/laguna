@@ -105,8 +105,9 @@ PackageDoc := rec(
 
 Dependencies := rec(
   GAP := ">=4.9",
-  NeededOtherPackages := [ ["GAPDoc", ">= 1.6.1"] ],
+  NeededOtherPackages := [],
   SuggestedOtherPackages := [ ["Sophus", ">= 1.24"] ],
+  TestPackages := [ ["SmallGrp", ">= 1.0"] ],
   ExternalConditions := []
 ),
 
