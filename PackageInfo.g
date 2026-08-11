@@ -11,8 +11,8 @@ SetPackageInfo( rec(
 
 PackageName := "LAGUNA",
 Subtitle := "Lie AlGebras and UNits of group Algebras",
-Version := "3.9.7",
-Date := "01/07/2024", # dd/mm/yyyy format
+Version := "3.10.0",
+Date := "11/08/2026", # dd/mm/yyyy format
 License := "GPL-2.0-or-later",
 
 SourceRepository := rec(
