@@ -1,4 +1,5 @@
 LoadPackage( "laguna" );
+LoadPackage( "smallgrp" ); # the tests use SmallGroup, IdGroup and AllSmallGroups
 
 TestDirectory(DirectoriesPackageLibrary( "laguna", "tst" ),
   rec(exitGAP     := true,
