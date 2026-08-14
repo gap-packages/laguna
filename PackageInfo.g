@@ -1,133 +1,103 @@
 #############################################################################
+##  
+##  Demo PackageInfo.g for the GitHubPagesForGAP
 ##
-#W  PackageInfo.g              The LAGUNA package                Viktor Bovdi
-#W                                                         Olexandr Konovalov
-#W                                                         Richard Rossmanith
-#W                                                            Csaba Schneider
-##
-#############################################################################
 
 SetPackageInfo( rec(
 
-PackageName := "LAGUNA",
-Subtitle := "Lie AlGebras and UNits of group Algebras",
-Version := "3.10.0",
-Date := "11/08/2026", # dd/mm/yyyy format
-License := "GPL-2.0-or-later",
+PackageName := "GitHubPagesForGAP",
 
-SourceRepository := rec(
-    Type := "git",
-    URL := Concatenation( "https://github.com/gap-packages/", LowercaseString(~.PackageName) ),
-),
-IssueTrackerURL := Concatenation( ~.SourceRepository.URL, "/issues" ),
-PackageWWWHome  := Concatenation( "https://gap-packages.github.io/", LowercaseString(~.PackageName) ),
-README_URL      := Concatenation( ~.PackageWWWHome, "/README.md" ),
-PackageInfoURL  := Concatenation( ~.PackageWWWHome, "/PackageInfo.g" ),
-ArchiveURL      := Concatenation( ~.SourceRepository.URL,
-                                 "/releases/download/v", ~.Version,
-                                 "/", LowercaseString(~.PackageName), "-", ~.Version ),
-
-ArchiveFormats := ".tar.gz",
+Subtitle := "A GitHub Pages generator for GAP packages",
+Version := "0.4",
+Date := "10/04/2025", # dd/mm/yyyy format
+License := "0BSD",
 
 Persons := [
   rec(
-    LastName      := "Bovdi",
-    FirstNames    := "Victor",
+    LastName      := "Horn",
+    FirstNames    := "Max",
     IsAuthor      := true,
     IsMaintainer  := true,
-    Email         := "vbovdi@science.unideb.hu",
-    PostalAddress := Concatenation( [ 
-                     "Institute of Mathematics and Informatics\n", 
-                     "University of Debrecen\n", 
-                     "P.O.Box 12, Debrecen\n", 
-                     "H-4010 Hungary" ] ),
-    Place         := "Debrecen",
-    Institution   := "University of Debrecen"
-     ),
+    Email         := "mhorn@rptu.de",
+    WWWHome       := "https://www.quendi.de/math",
+    GitHubUsername:= "fingolfin",
+    PostalAddress := Concatenation(
+                       "Fachbereich Mathematik\n",
+                       "RPTU Kaiserslautern-Landau\n",
+                       "Gottlieb-Daimler-Straße 48\n",
+                       "67663 Kaiserslautern\n",
+                       "Germany" ),
+    Place         := "Kaiserslautern, Germany",
+    Institution   := "RPTU Kaiserslautern-Landau"
+  ),
+
   rec(
-    LastName      := "Konovalov",
-    FirstNames    := "Olexandr",
+    LastName      := "Thor",
+    FirstNames    := "A. U.",
     IsAuthor      := true,
-    IsMaintainer  := true,
-    Email         := "obk1@st-andrews.ac.uk",
-    WWWHome       := "https://olexandr-konovalov.github.io/",
-    PostalAddress := Concatenation( [
-                     "School of Computer Science\n",
-                     "University of St Andrews\n",
-                     "Jack Cole Building, North Haugh,\n",
-                     "St Andrews, Fife, KY16 9SX, Scotland" ] ),
-    Place         := "St Andrews",
-    Institution   := "University of St Andrews"
-     ),
+    IsMaintainer  := false,
+    #Email         := "author@example.com",
+  ),
+
   rec(
-    LastName := "Rossmanith",
-    FirstNames := "Richard",
-    IsAuthor := true,
-    IsMaintainer := false
-     ),
-  rec( 
-    LastName      := "Schneider",
-    FirstNames    := "Csaba",
-    IsAuthor      := true,
+    LastName      := "Itor",
+    FirstNames    := "Jan",
+    IsAuthor      := false,
     IsMaintainer  := true,
-    Email         := "csaba.schneider@sztaki.hu",
-    WWWHome       := "http://www.sztaki.hu/~schneider",
-    PostalAddress := Concatenation( [
-                     "Csaba Schneider\n",
-                     "Informatics Laboratory\n",
-                     "Computer and Automation Research Institute\n",
-                     "The Hungarian Academy of Sciences\n",
-	                 "1111 Budapest, Lagymanyosi u. 11, Hungary" ]),
-    Place         := "Budapest",
-    Institution   := "Computer and Automation Research Institute"
-     )
+    #Email         := "janitor@example.com",
+  ),
 ],
 
-Status := "accepted",
-CommunicatedBy := "Herbert Pahlings (Aachen)",
-AcceptDate := "06/2003",
+Status := "other",
 
-AbstractHTML := "The <span class=\"pkgname\">LAGUNA</span> package replaces the <span class=\"pkgname\">LAG</span> package and provides functionality for calculation of the normalized unit group of the modular group algebra of the finite p-group and for investigation of Lie algebra associated with group algebras and other associative algebras.",
-                  
+# The following are not strictly necessary in your own PackageInfo.g
+# (in the sense that update.g only looks at the usual fields
+# like PackageWWWHome, ArchiveURL etc.). But they are convenient
+# if you use exactly the scheme for your package website that we propose.
+GithubUser := "gap-system",
+GithubRepository := ~.PackageName,
+GithubWWW := Concatenation("https://github.com/", ~.GithubUser, "/", ~.GithubRepository),
+
+PackageWWWHome := Concatenation("https://", ~.GithubUser, ".github.io/", ~.GithubRepository, "/"),
+README_URL     := Concatenation( ~.PackageWWWHome, "README.md" ),
+PackageInfoURL := Concatenation( ~.PackageWWWHome, "PackageInfo.g" ),
+# The following assumes you are using the Github releases system. If not, adjust
+# it accordingly.
+ArchiveURL     := Concatenation(~.GithubWWW,
+                    "/releases/download/v", ~.Version, "/",
+                    ~.GithubRepository, "-", ~.Version),
+
+ArchiveFormats := ".tar.gz .tar.bz2",
+
+AbstractHTML := 
+  "This is a pseudo package that contains no actual\
+  <span class=\"pkgname\">GAP</span> code. Instead, it is a template for other\
+  GAP packages that allows to quickly setup GitHub Pages.",
+
 PackageDoc := rec(
-  BookName := "LAGUNA",
+  BookName  := "GitHubPagesForGAP",
   ArchiveURLSubset := ["doc"],
-  HTMLStart := "doc/chap0_mj.html",
-  PDFFile := "doc/manual.pdf",
-  SixFile := "doc/manual.six",
-  LongTitle := "Lie AlGebras and UNits of group Algebras",
+  HTMLStart := "doc/chap0.html",
+  PDFFile   := "doc/manual.pdf",
+  SixFile   := "doc/manual.six",
+  LongTitle := "A GitHub Pages generator for GAP packages",
 ),
 
+# The following dependencies are fake and for testing / demo purposes
 Dependencies := rec(
-  GAP := ">=4.9",
-  NeededOtherPackages := [],
-  SuggestedOtherPackages := [ ["Sophus", ">= 1.24"] ],
-  TestPackages := [ ["SmallGrp", ">= 1.0"] ],
+  GAP := ">=4.8.1",
+  NeededOtherPackages := [
+    ["GAPDoc", ">= 1.2"],
+    ["IO", ">= 4.1"],
+  ],
+  SuggestedOtherPackages := [["orb", ">= 4.2"]],
   ExternalConditions := []
 ),
 
 AvailabilityTest := ReturnTrue,
-TestFile := "tst/testall.g",
 
-Keywords := ["group ring", "modular group algebra", "Lie algebra", "unit group"],
-
-AutoDoc := rec(
-    entities := rec(
-        C := "<Package>C</Package>",
-        LAG := "<Package>LAG</Package>",
-        SISYPHOS := "<Package>SISYPHOS</Package>",
-        VERSION := ~.Version,
-        RELEASEYEAR := ~.Date{[7..10]},
-        RELEASEDATE := function(date)
-          local day, month, year, allMonths;
-          day := Int(date{[1,2]});
-          month := Int(date{[4,5]});
-          year := Int(date{[7..10]});
-          allMonths := [ "January", "February", "March", "April", "May", "June", "July",
-                         "August", "September", "October", "November", "December"];
-          return Concatenation(String(day)," ", allMonths[month], " ", String(year));
-        end(~.Date),
-    ),
-),
+Keywords := ["GitHub Pages", "GAP"]
 
 ));
+
+
