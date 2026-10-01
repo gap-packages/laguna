@@ -49,7 +49,7 @@ Wolfgang  Kimmerle,  Martin  Hertweck  and  Stefan  Kohl  for  their warm
 hospitality, and to the NATO Science Fellowship Programme, to the  London
 Mathematical Society and to the DAAD for the support of this visits.
 
-See the file ChangeLog  for the details about changes  introduced in each 
+See the file CHANGES.md  for the details about changes  introduced in each 
 LAGUNA release.
 
 
